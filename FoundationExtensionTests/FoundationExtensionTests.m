@@ -30,6 +30,17 @@
     STAssertTrue([[[self classObject] name] isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", [[self classObject] name]);
 }
 
+- (void)testStringFormat {
+    {
+        NSString *formatted = [@"%d %d %d" format0:nil, 10, 9, 8];
+        STAssertTrue([formatted isEqualToString:@"10 9 8"], @"formatted was: %@", formatted);
+    }
+    {
+//        NSString *formatted = [@"%@ %d %s" format:@"Hello", 10, "World"];
+//        STAssertTrue([formatted isEqualToString:@"Hello 10 World"], @"formatted was: %@", formatted);
+    }
+}
+
 - (void)testHexadecimal
 {
     NSData *data = [@"SAMPLE" dataUsingEncoding:NSUTF8StringEncoding];

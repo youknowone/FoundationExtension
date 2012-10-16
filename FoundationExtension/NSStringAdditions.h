@@ -8,6 +8,9 @@
 
 @interface NSString (FoundationExtension)
 
+//- (NSString *)format:(id)first, ...;
+- (NSString *)format0:(id)dummyLikeNil, ...;
+
 + (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
 + (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 + (NSString *)stringWithUTF8Data:(NSData *)data;

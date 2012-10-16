@@ -10,16 +10,24 @@
 
 @implementation NSString (FoundationExtension)
 
+- (NSString *)format0:(id)dummy, ... {
+    va_list args;
+	va_start(args, dummy);
+	NSString *result = [NSString stringWithFormat:self arguments:args];
+	va_end(args);
+	return result;
+}
+
 + (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList {
-	return [[[self allocWithZone:NULL] initWithFormat:format arguments:argList] autorelease];
+	return [[[self alloc] initWithFormat:format arguments:argList] autorelease];
 }
 
 + (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
-	return [[[self allocWithZone:NULL] initWithData:data encoding:encoding] autorelease];
+	return [[[self alloc] initWithData:data encoding:encoding] autorelease];
 }
 			
 + (NSString *)stringWithUTF8Data:(NSData *)data {
-	return [[[self allocWithZone:NULL] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	return [[[self alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 }
 	 
 - (NSString *) stringByAddingPercentEscapesUsingUTF8Encoding {

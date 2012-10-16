@@ -1,0 +1,21 @@
+FoundationExtension
+
+Abstract
+
+This library includes small Cocoa/UIKit extensions make your codes short.
+
+
+How to use
+
+1. Compiled library
+	1. build project
+	2. add FoundationExtension or UIKitExtension target as dependency
+	if UIKitExtension:
+		3. add '-force_load <path_for_libUIKitExtension.a> to 'other linker flags'
+			If you don't use any features about category, skip this
+			This is bug of linker for non-i386 archietecture
+2. Directy source
+	1. add files what you need to your project
+	This way may help you to reduce complex jobs
+
+

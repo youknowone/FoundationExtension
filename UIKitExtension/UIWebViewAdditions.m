@@ -11,11 +11,11 @@
 @implementation UIWebView (FoundationExtension)
 
 - (void)loadRequestForURL:(NSURL *)URL {
-	[self loadRequest:[NSURLRequest requestWithURL:URL]];
+    [self loadRequest:[NSURLRequest requestWithURL:URL]];
 }
-	 
+
 - (void)loadRequestForFilePath:(NSString *)filePath {
-	[self loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]];
-}		 
+    [self loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]];
+}
 
 @end

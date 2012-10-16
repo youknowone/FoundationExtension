@@ -11,7 +11,7 @@
 @implementation UIView (FoundationExtension)
 
 - (UIImage *)capturedImage {
-	return nil;
+    return nil;
 }
 
 @end

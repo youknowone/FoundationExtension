@@ -6,7 +6,7 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-@interface UIView (FoundationExtension) 
+@interface UIView (FoundationExtension)
 
 - (UIImage *)capturedImage;
 

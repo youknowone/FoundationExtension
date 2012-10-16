@@ -7,11 +7,11 @@
 //
 
 typedef enum {
-	ICDeviceTypeUnknown = 0,
-	ICDeviceTypePad    = 1,
-	ICDeviceTypePhone  = 2,
-	ICDeviceTypePod    = 3,
-}	ICDeviceType;
+    ICDeviceTypeUnknown = 0,
+    ICDeviceTypePad    = 1,
+    ICDeviceTypePhone  = 2,
+    ICDeviceTypePod    = 3,
+}    ICDeviceType;
 #define ICDeviceTypeIsIPhoneOrIPodMask 2
 #define ICDeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType&ICDeviceTypeIsIPhoneOrIPodMask)>>1)
 

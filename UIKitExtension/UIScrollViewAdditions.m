@@ -12,17 +12,17 @@
 @implementation UIScrollView (FoundationExtension)
 
 - (CGRect) contentFrame {
-	CGRect f;
-	f.origin = self.frame.origin;
-	f.size = self.contentSize;
-	return f;
+    CGRect f;
+    f.origin = self.frame.origin;
+    f.size = self.contentSize;
+    return f;
 }
 
 - (CGRect) contentBounds {
-	CGRect f;
-	f.origin = CGPointZero;
-	f.size = self.contentSize;
-	return f;
+    CGRect f;
+    f.origin = CGPointZero;
+    f.size = self.contentSize;
+    return f;
 }
 
 @end

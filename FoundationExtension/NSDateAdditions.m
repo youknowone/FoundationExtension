@@ -12,7 +12,7 @@
 
 - (NSDateComponents *)components {
     return [[NSCalendar currentCalendar] components:NSEraCalendarUnit
-            | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit 
+            | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
             | NSHourCalendarUnit | NSMinuteCalendarUnit| NSSecondCalendarUnit
             | NSWeekCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit
             | NSQuarterCalendarUnit //| NSCalendarCalendarUnit | NSTimeZoneCalendarUnit

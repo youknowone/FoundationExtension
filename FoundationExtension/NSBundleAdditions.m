@@ -9,21 +9,21 @@
 #import "NSBundleAdditions.h"
 
 NSString *NSResourceDirectory(void) {
-	return [[NSBundle mainBundle] resourcePath];
+    return [[NSBundle mainBundle] resourcePath];
 }
 
 NSString *NSPathForResourceFile(NSString *filename) {
-	return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
+    return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
 }
 
-@implementation NSBundle (FoundationExtension) 
+@implementation NSBundle (FoundationExtension)
 
 - (NSString *)pathForResourceFile:(NSString *)filename {
-	return [[NSBundle mainBundle] pathForResource:filename ofType:@""];
+    return [[NSBundle mainBundle] pathForResource:filename ofType:@""];
 }
 
 - (NSString *)pathForResource:(NSString *)filename {
-	return [self pathForResourceFile:filename];
+    return [self pathForResourceFile:filename];
 }
 
 @end

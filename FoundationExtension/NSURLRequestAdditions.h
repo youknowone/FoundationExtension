@@ -67,8 +67,8 @@
 
 
 @interface NSAURLRequestHTTPBodyMultiPartFormPostFormatter : NSObject {
-	NSMutableData *_body;
-	NSStringEncoding _encoding;
+    NSMutableData *_body;
+    NSStringEncoding _encoding;
 }
 
 - (id)initWithEncoding:(NSStringEncoding)encoding;

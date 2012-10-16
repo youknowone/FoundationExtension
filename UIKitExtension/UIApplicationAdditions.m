@@ -16,7 +16,7 @@
 
 - (CGSize) statusBarSizeForOrientation:(UIInterfaceOrientation)orientation {
     if ( UIInterfaceOrientationIsPortrait(orientation) ) return self.statusBarFrame.size;
-	return CGSizeMake(self.statusBarFrame.size.height, self.statusBarFrame.size.width);
+    return CGSizeMake(self.statusBarFrame.size.height, self.statusBarFrame.size.width);
 }
 
 @end

@@ -11,7 +11,7 @@
 
 @interface FoundationExtensionTests : SenTestCase {
 @private
-    
+
 }
 
 @end

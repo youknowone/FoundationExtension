@@ -49,8 +49,8 @@
 }
 
 - (id)initSmartURLWithPath:(NSString *)path {
-	if ([path hasHTTPPrefix]) {
-		return [self initWithString:path];
+    if ([path hasHTTPPrefix]) {
+        return [self initWithString:path];
     }
     if ([path hasPrefix:@"res://"]) {
         return [self initResourceURLWithPath:path];
@@ -76,59 +76,59 @@
 // deprecated methods
 
 - (id)initWithAbstractPath:(NSString *)path {
-	return [self initSmartURLWithPath:path];
+    return [self initSmartURLWithPath:path];
 }
 
 - (id)initWithAbstractFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	self = [self initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return self;
+    va_list args;
+    va_start(args, format);
+    self = [self initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return self;
 }
 
 - (id)initWithFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	self = [self initWithString:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return self;
+    va_list args;
+    va_start(args, format);
+    self = [self initWithString:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return self;
 }
 
 - (id)initFileURLWithFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	self = [self initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return self;
+    va_list args;
+    va_start(args, format);
+    self = [self initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return self;
 }
 
 + (NSURL *)URLWithFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	NSURL *url = [[self alloc] initWithString:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return [url autorelease];
+    va_list args;
+    va_start(args, format);
+    NSURL *url = [[self alloc] initWithString:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return [url autorelease];
 }
 
 + (NSURL *)URLWithAbstractPath:(NSString *)path {
-	return [[[self alloc] initWithAbstractPath:path] autorelease];
+    return [[[self alloc] initWithAbstractPath:path] autorelease];
 }
 
 + (NSURL *)URLWithAbstractFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	NSURL *url = [[self alloc] initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return [url autorelease];	
+    va_list args;
+    va_start(args, format);
+    NSURL *url = [[self alloc] initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return [url autorelease];
 }
 
 + (NSURL *)fileURLWithFormat:(NSString *)format, ... {
-	va_list args;
-	va_start(args, format);
-	NSURL *url = [[self alloc] initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
-	va_end(args);
-	return [url autorelease];
+    va_list args;
+    va_start(args, format);
+    NSURL *url = [[self alloc] initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return [url autorelease];
 }
 
 @end
@@ -136,9 +136,9 @@
 @implementation NSString (FoundationExtensionNSURLAdditions)
 
 - (BOOL)hasHTTPPrefix {
-	NSString *regexkey = @"^https?://.*";	
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
-	return [predicate evaluateWithObject:self];	
+    NSString *regexkey = @"^https?://.*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
+    return [predicate evaluateWithObject:self];
 }
 
 - (BOOL)hasSmartURLPrefix {
@@ -146,12 +146,12 @@
 }
 
 - (NSString *)URLProtocol {
-	NSString *regexkey = @"^[a-zA-Z]*://.*";
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
-	if (![predicate evaluateWithObject:self])
-		return nil;
-	NSRange delemeterRange = [self rangeOfString:@"://"];
-	return [self substringFromIndex:0 length:delemeterRange.location];
+    NSString *regexkey = @"^[a-zA-Z]*://.*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
+    if (![predicate evaluateWithObject:self])
+        return nil;
+    NSRange delemeterRange = [self rangeOfString:@"://"];
+    return [self substringFromIndex:0 length:delemeterRange.location];
 }
 
 - (NSURL *)URL {

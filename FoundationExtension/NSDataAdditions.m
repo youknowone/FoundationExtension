@@ -13,47 +13,47 @@
 @implementation NSData (FoundationExtension)
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path {
-	return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
+    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path {
-	return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
+    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
 }
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-	return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
+    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-	return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
+    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
 }
 
 - (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-	[request setHTTPPostBody:bodyDictionary encoding:encoding];
-	id result = [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
+    [request setHTTPPostBody:bodyDictionary encoding:encoding];
+    id result = [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
     [request release];
     return result;
 }
 
 + (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-	return [[[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding] autorelease];
+    return [[[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding] autorelease];
 }
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request {
-	return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
+    return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
 }
 
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request {
-	return [[[self alloc] initWithContentsOfURLRequest:request] autorelease];
+    return [[[self alloc] initWithContentsOfURLRequest:request] autorelease];
 }
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
-	return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:error]];
+    return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:error]];
 }
 
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
-	return [[[self alloc] initWithContentsOfURLRequest:request error:error] autorelease];
+    return [[[self alloc] initWithContentsOfURLRequest:request error:error] autorelease];
 }
 
 static const char NSDataAdditionsHexDigits[] = "0123456789abcdef";
@@ -61,19 +61,19 @@ static const char NSDataAdditionsHexDigits[] = "0123456789abcdef";
     const unsigned char *bytes = self.bytes;
     NSUInteger length = self.length;
     char *buffer = (char *)malloc(length * 2 + 1);
-	char *pointer = buffer;
-    
-	for (NSInteger i = 0; i < length; i++) {
-		const unsigned char c = *bytes; bytes++;
-		*pointer = NSDataAdditionsHexDigits[(c >> 4) & 0xF]; pointer++;
-		*pointer = NSDataAdditionsHexDigits[c & 0xF]; pointer++;
-	}
-	*pointer = 0;
-	
-	return [[[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSASCIIStringEncoding freeWhenDone:YES] autorelease];
+    char *pointer = buffer;
+
+    for (NSInteger i = 0; i < length; i++) {
+        const unsigned char c = *bytes; bytes++;
+        *pointer = NSDataAdditionsHexDigits[(c >> 4) & 0xF]; pointer++;
+        *pointer = NSDataAdditionsHexDigits[c & 0xF]; pointer++;
+    }
+    *pointer = 0;
+
+    return [[[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSASCIIStringEncoding freeWhenDone:YES] autorelease];
 }
 
-static const char NSDataAdditionsHexBytes[0x100] = 
+static const char NSDataAdditionsHexBytes[0x100] =
 //0           4           8          12          16
 {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 16
  -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 32
@@ -91,15 +91,15 @@ static const char NSDataAdditionsHexBytes[0x100] =
     NSUInteger length = hexData.length;
     char *buffer = (char *)malloc(length / 2 + 1);
     char *pointer = buffer;
-    
-	for (NSInteger i = 0; i < length; i++) {
+
+    for (NSInteger i = 0; i < length; i++) {
         unsigned char c = NSDataAdditionsHexBytes[*bytes] << 4; bytes++;
         c += NSDataAdditionsHexBytes[*bytes]; bytes++;
-		*pointer = c; pointer++;
-	}
-	*pointer = 0;
-	
-	return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];    
+        *pointer = c; pointer++;
+    }
+    *pointer = 0;
+
+    return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];
 }
 
 + (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal {

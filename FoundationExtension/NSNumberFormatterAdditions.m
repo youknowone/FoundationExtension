@@ -14,25 +14,25 @@
 @dynamic locale;
 
 + (NSNumberFormatter *)formatter {
-	return [[self alloc] autorelease];
+    return [[self alloc] autorelease];
 }
 
 - (id)initWithNumberStyle:(NSNumberFormatterStyle)style {
-	self = [self init];
-	[self setNumberStyle:style];
-	return self;
+    self = [self init];
+    [self setNumberStyle:style];
+    return self;
 }
 
 + (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style {
-	return [[[self alloc] initWithNumberStyle:style] autorelease];
+    return [[[self alloc] initWithNumberStyle:style] autorelease];
 }
 
 + (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number {
-	return [[self formatterWithNumberStyle:NSNumberFormatterDecimalStyle] stringFromNumber:number];
+    return [[self formatterWithNumberStyle:NSNumberFormatterDecimalStyle] stringFromNumber:number];
 }
 
 + (NSString *)formattedStringByDecimalStyleForInteger:(NSInteger)integer {
-	return [self formattedStringByDecimalStyleForNumber:[NSNumber numberWithInteger:integer]];
+    return [self formattedStringByDecimalStyleForNumber:[NSNumber numberWithInteger:integer]];
 }
 
 @end

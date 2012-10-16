@@ -12,7 +12,7 @@
 
 + (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line {
     UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", [NSString stringWithUTF8String:filename], line]
-                                                message:log 
+                                                message:log
                                                 delegate:nil
                                        cancelButtonTitle:NSLocalizedStringFromTable(@"OK", @"common", @"")
                                        otherButtonTitles:nil];
@@ -22,14 +22,14 @@
 
 
 - (id)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
-	self = [self initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
-	return self;
+    self = [self initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
+    return self;
 }
 
 + (UIAlertView *)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
-	UIAlertView *alert = [[self alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
-	[alert show];
-	return [alert autorelease];
+    UIAlertView *alert = [[self alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
+    [alert show];
+    return [alert autorelease];
 }
 
 @end

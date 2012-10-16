@@ -11,7 +11,7 @@
 
 @interface UIKitExtensionTests : SenTestCase {
 @private
-    
+
 }
 
 @end

@@ -13,27 +13,70 @@
 #import "NSStringAdditions.h"
 #import "NSURLAdditions.h"
 
+#include "debug.h"
+
 @implementation NSURL (ICAdditions)
 
-- (id)initWithAbstractPath:(NSString *)path {
-	if ( [path hasURLPrefix] )
+- (id)initResourceURLWithPath:(NSString *)path {
+    if (path == nil) {
+        [self release];
+        return nil;
+    }
+    NSString *prefix = @"res://";
+    if ([path hasPrefix:prefix]) {
+        path = [path substringFromIndex:prefix.length];
+    }
+    NSString *resPath = [[NSBundle mainBundle] pathForResourceFile:path];
+    if (resPath == nil) {
+        resPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:path]; // iPhoneOS3 support
+    }
+    dlog(PATH_DEBUG, @"abstract resource path: %@", resPath);
+    return [self initFileURLWithPath:resPath];
+}
+
+- (id)initConfigurationURLWithPath:(NSString *)path {
+    if (path == nil) {
+        [self release];
+        return nil;
+    }
+    NSString *prefix = @"conf://";
+    if ([path hasPrefix:prefix]) {
+        path = [path substringFromIndex:prefix.length];
+    }
+    NSString *confPath = NSPathForUserConfigurationFile(path);
+    dlog(PATH_DEBUG, @"abstract configuration path: %@", confPath);
+    return [self initFileURLWithPath:confPath];
+}
+
+- (id)initSmartURLWithPath:(NSString *)path {
+	if ([path hasHTTPPrefix]) {
 		return [self initWithString:path];
-	NSString *resKey = @"res://";
-	if ( [path hasPrefix:resKey] ) {
-		NSString *pathPart = [path substringFromIndex:[resKey length]];
-		NSString *resPath = [[NSBundle mainBundle] pathForResourceFile:pathPart];
-		if ( resPath != nil ) {
-			path = resPath;
-		} else {
-			path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:pathPart]; // iPhoneOS3 support
-		}
-		dlog(PATH_DEBUG, @"abstract resource path: %@", path);
-	}
-	NSString *confKey = @"conf://";
-	if ( [path hasPrefix:confKey] ) {
-		path = NSPathForUserConfigurationFile([path substringFromIndex:[confKey length]]);
-	}
-	return [self initFileURLWithPath:path];
+    }
+    if ([path hasPrefix:@"res://"]) {
+        return [self initResourceURLWithPath:path];
+    }
+    if ([path hasPrefix:@"conf://"]) {
+        return [self initConfigurationURLWithPath:path];
+    }
+    return [self initFileURLWithPath:path];
+}
+
++ (id)resourceURLWithPath:(NSString *)path {
+    return [[[self alloc] initResourceURLWithPath:path] autorelease];
+}
+
++ (id)configurationURLWithPath:(NSString *)path {
+    return [[[self alloc] initConfigurationURLWithPath:path] autorelease];
+}
+
++ (id)smartURLWithPath:(NSString *)path {
+    return [[[self alloc] initSmartURLWithPath:path] autorelease];
+}
+
+// deprecated methods
+
+- (id)initWithAbstractPath:(NSString *)path {
+	return [self initSmartURLWithPath:path];
 }
 
 - (id)initWithAbstractFormat:(NSString *)format, ... {
@@ -63,19 +106,19 @@
 + (NSURL *)URLWithFormat:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
-	NSURL *url = [[self allocWithZone:NULL] initWithString:[NSString stringWithFormat:format arguments:args]];
+	NSURL *url = [[self alloc] initWithString:[NSString stringWithFormat:format arguments:args]];
 	va_end(args);
 	return [url autorelease];
 }
 
 + (NSURL *)URLWithAbstractPath:(NSString *)path {
-	return [[[self allocWithZone:NULL] initWithAbstractPath:path] autorelease];
+	return [[[self alloc] initWithAbstractPath:path] autorelease];
 }
 
 + (NSURL *)URLWithAbstractFormat:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
-	NSURL *url = [[self allocWithZone:NULL] initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
+	NSURL *url = [[self alloc] initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
 	va_end(args);
 	return [url autorelease];	
 }
@@ -83,7 +126,7 @@
 + (NSURL *)fileURLWithFormat:(NSString *)format, ... {
 	va_list args;
 	va_start(args, format);
-	NSURL *url = [[self allocWithZone:NULL] initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
+	NSURL *url = [[self alloc] initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
 	va_end(args);
 	return [url autorelease];
 }
@@ -92,13 +135,17 @@
 
 @implementation NSString (FoundationExtensionNSURLAdditions)
 
-- (BOOL)hasURLPrefix {
+- (BOOL)hasHTTPPrefix {
 	NSString *regexkey = @"^https?://.*";	
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
 	return [predicate evaluateWithObject:self];	
 }
 
-- (NSString *)pathProtocol {
+- (BOOL)hasSmartURLPrefix {
+    return [self hasHTTPPrefix] || [self hasPrefix:@"res://"] || [self hasPrefix:@"conf://"];
+}
+
+- (NSString *)URLProtocol {
 	NSString *regexkey = @"^[a-zA-Z]*://.*";
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
 	if (![predicate evaluateWithObject:self])
@@ -115,8 +162,30 @@
     return [NSURL fileURLWithPath:self];
 }
 
+- (NSURL *)resourceURL {
+    return [NSURL resourceURLWithPath:self];
+}
+
+- (NSURL *)configurationURL {
+    return [NSURL configurationURLWithPath:self];
+}
+
 - (NSURL *)smartURL {
-    return [NSURL URLWithAbstractPath:self];
+    return [NSURL smartURLWithPath:self];
+}
+
+// deprecated methods
+
+- (NSString *)pathProtocol {
+    return [self URLProtocol];
+}
+
+- (BOOL)hasURLPrefix {
+    return [self hasHTTPPrefix];
+}
+
+- (NSURL *)abstractURL {
+    return [self smartURL];
 }
 
 @end

@@ -6,7 +6,8 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+// avoid 'class' keyword. there must be good way, NSObject.h is using.
+#ifndef __cplusplus
 
 @interface NSAClass: NSObject {
     Class _class;
@@ -20,3 +21,5 @@
 - (NSString *)name;
 
 @end
+
+#endif

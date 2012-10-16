@@ -6,6 +6,8 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #import <FoundationExtension/NSObjectAdditions.h>
 #import <FoundationExtension/NSArrayAdditions.h>
 #import <FoundationExtension/NSBundleAdditions.h>

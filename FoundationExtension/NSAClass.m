@@ -13,6 +13,10 @@
 @implementation NSAClass
 
 - (id)initWithClass:(Class)class {
+    if (class == nil) {
+        [self release];
+        return nil;
+    }
     self = [super init];
     if (self != nil) {
         self->_class = class;
@@ -24,8 +28,28 @@
     return [[[self alloc] initWithClass:class] autorelease];
 }
 
+- (const char *)UTF8Name {
+    return class_getName(self->_class);
+}
+
 - (NSString *)name {
     return [NSString stringWithUTF8String:class_getName(self->_class)];
+}
+
+- (Class)superclass {
+    return class_getSuperclass(self->_class);
+}
+
+- (NSAClass *)superclassObject {
+    return [[self class] classWithClass:class_getSuperclass(self->_class)];
+}
+
++ (id)classWithUTF8Name:(const char *)name {
+    return [self classWithClass:objc_getClass(name)];
+}
+
++ (id)classWithName:(NSString *)name {
+    return [self classWithUTF8Name:name.UTF8String];
 }
 
 @end

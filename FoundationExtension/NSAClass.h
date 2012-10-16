@@ -14,11 +14,16 @@
 }
 
 @property(nonatomic, readonly) Class class;
+@property(nonatomic, readonly) const char *UTF8Name;
+@property(nonatomic, readonly) NSString *name;
+@property(nonatomic, readonly) Class superclass;
+@property(nonatomic, readonly) NSAClass *superclassObject;
 
 - (id)initWithClass:(Class)class;
 + (id)classWithClass:(Class)class;
 
-- (NSString *)name;
++ (id)classWithUTF8Name:(const char *)name;
++ (id)classWithName:(NSString *)name;
 
 @end
 

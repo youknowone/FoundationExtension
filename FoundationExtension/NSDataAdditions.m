@@ -17,7 +17,7 @@
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path {
-	return [[[self allocWithZone:NULL] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
+	return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
 }
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
@@ -25,7 +25,7 @@
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-	return [[[self allocWithZone:NULL] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
+	return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
 }
 
 - (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
@@ -37,7 +37,7 @@
 }
 
 + (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-	return [[[self allocWithZone:NULL] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding] autorelease];
+	return [[[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding] autorelease];
 }
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request {
@@ -45,7 +45,7 @@
 }
 
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request {
-	return [[[self allocWithZone:NULL] initWithContentsOfURLRequest:request] autorelease];
+	return [[[self alloc] initWithContentsOfURLRequest:request] autorelease];
 }
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
@@ -53,7 +53,7 @@
 }
 
 + (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
-	return [[[self allocWithZone:NULL] initWithContentsOfURLRequest:request error:error] autorelease];
+	return [[[self alloc] initWithContentsOfURLRequest:request error:error] autorelease];
 }
 
 static const char NSDataAdditionsHexDigits[] = "0123456789abcdef";

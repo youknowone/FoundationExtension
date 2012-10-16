@@ -17,7 +17,7 @@
 }
 
 + (id) dictionaryWithData:(NSData *)data {
-	return [[[self allocWithZone:NULL] initWithData:data] autorelease];
+	return [[[self alloc] initWithData:data] autorelease];
 }
 
 - (id) initWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error {
@@ -36,7 +36,7 @@
 }
 
 + (id) dictionaryWithData:(NSData *)data options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error {
-	return [[[self allocWithZone:NULL] initWithData:data options:opt format:format error:error] autorelease];
+	return [[[self alloc] initWithData:data options:opt format:format error:error] autorelease];
 }
 
 - (id) initWithContentsOfURLRequest:(NSURLRequest *)request {
@@ -44,7 +44,7 @@
 }
 
 + (id) dictionaryWithContentsOfURLRequest:(NSURLRequest *)request {
-	return [[[self allocWithZone:NULL] initWithContentsOfURLRequest:request options:0 format:NULL error:NULL] autorelease];
+	return [[[self alloc] initWithContentsOfURLRequest:request options:0 format:NULL error:NULL] autorelease];
 }
 		
 - (id) initWithContentsOfURLRequest:(NSURLRequest *)request options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error {
@@ -57,7 +57,7 @@
 }
 
 + (id) dictionaryWithContentsOfURLRequest:(NSURLRequest *)request options:(NSPropertyListReadOptions)opt format:(NSPropertyListFormat *)format error:(NSError **)error {
-	return [[[self allocWithZone:NULL] initWithContentsOfURLRequest:request options:opt format:format error:error] autorelease];
+	return [[[self alloc] initWithContentsOfURLRequest:request options:opt format:format error:error] autorelease];
 }
 
 @end

@@ -24,7 +24,7 @@
 }
 
 + (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style {
-	return [[[self allocWithZone:NULL] initWithNumberStyle:style] autorelease];
+	return [[[self alloc] initWithNumberStyle:style] autorelease];
 }
 
 + (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number {

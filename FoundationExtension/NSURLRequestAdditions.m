@@ -58,7 +58,7 @@
 + (id)URLRequestWithURLFormat:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
-    NSURLRequest *request = [[self allocWithZone:NULL] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:format arguments:args]]];
+    NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
     return [request autorelease];
 }
@@ -70,7 +70,7 @@
 + (id)URLRequestWithFilePathFormat:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
-    NSURLRequest *request = [[self allocWithZone:NULL] initWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:format arguments:args]]];
+    NSURLRequest *request = [[self alloc] initWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
     return [request autorelease];
 }
@@ -82,7 +82,7 @@
 + (id)URLRequestWithAbstractPathFormat:(NSString *)format, ... {
     va_list args;
     va_start(args, format);
-    NSURLRequest *request = [[self allocWithZone:NULL] initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
+    NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
     return [request autorelease];
 }

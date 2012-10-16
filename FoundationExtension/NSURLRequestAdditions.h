@@ -25,17 +25,19 @@
 @property(readonly) BOOL HTTPShouldHandleCookies;
 @property(readonly) BOOL HTTPShouldUsePipelining;
 
-- (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-- (id)initWithFilePath:(NSString *)filePath;
-- (id)initWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-- (id)initWithAbstractPath:(NSString *)filePath;
-- (id)initWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
+// deprecated shortcuts. Use initWithURL:
 
-+ (id)URLRequestWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (id)URLRequestWithFilePath:(NSString *)filepath;
-+ (id)URLRequestWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
-+ (id)URLRequestWithAbstractPath:(NSString *)filePath;
-+ (id)URLRequestWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2);
+- (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+- (id)initWithFilePath:(NSString *)filePath __deprecated;
+- (id)initWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+- (id)initWithAbstractPath:(NSString *)filePath __deprecated;
+- (id)initWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+
++ (id)URLRequestWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
++ (id)URLRequestWithFilePath:(NSString *)filepath __deprecated;
++ (id)URLRequestWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
++ (id)URLRequestWithAbstractPath:(NSString *)filePath __deprecated;
++ (id)URLRequestWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 
 @end
 

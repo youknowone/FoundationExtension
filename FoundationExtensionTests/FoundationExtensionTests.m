@@ -36,8 +36,16 @@
         STAssertTrue([formatted isEqualToString:@"10 9 8"], @"formatted was: %@", formatted);
     }
     {
-//        NSString *formatted = [@"%@ %d %s" format:@"Hello", 10, "World"];
-//        STAssertTrue([formatted isEqualToString:@"Hello 10 World"], @"formatted was: %@", formatted);
+        NSString *formatted = [@"%@ %d %s" format:@"Hello", 10, "World"];
+        STAssertTrue([formatted isEqualToString:@"Hello 10 World"], @"formatted was: %@", formatted);
+    }
+    {
+        NSString *formatted = [@"%@" format:@"Hello"];
+        STAssertTrue([formatted isEqualToString:@"Hello"], @"formatted was: %@", formatted);
+    }
+    {
+        NSString *formatted = [@"%%%%%@" format:@"Hello"];
+        STAssertTrue([formatted isEqualToString:@"%%Hello"], @"formatted was: %@", formatted);
     }
 }
 

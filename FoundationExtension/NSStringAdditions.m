@@ -10,6 +10,38 @@
 
 @implementation NSString (FoundationExtension)
 
+// slow! proof of concept
+- (NSString *)format:(id)first, ... {
+    NSUInteger len = self.length;
+    NSUInteger index = 0;
+    BOOL passed = NO;
+    do {
+        unichar chr = [self characterAtIndex:index];
+        if (chr == '%') {
+            if (passed) {
+                if ([self characterAtIndex:index - 1] == '%') {
+                    passed = NO;
+                } else {
+                    break;
+                }
+            } else {
+                passed = YES;
+            }
+        }
+        index += 1;
+    } while (index < len);
+
+    if (index == len) {
+        return [NSString stringWithFormat:self, first];
+    } else {
+        va_list args;
+        va_start(args, first);
+        NSString *result = [[NSString stringWithFormat:[self substringToIndex:index], first] stringByAppendingString:[NSString stringWithFormat:[self substringFromIndex:index] arguments:args]];
+        va_end(args);
+        return result;
+    }
+}
+
 - (NSString *)format0:(id)dummy, ... {
     va_list args;
     va_start(args, dummy);

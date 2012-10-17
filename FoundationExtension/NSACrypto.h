@@ -14,6 +14,8 @@
 - (NSString *)digestStringByMD5;
 - (NSString *)digestStringBySHA1;
 
+- (NSString *)base64String;
+
 @end
 
 // string conversion wrapper of NSData (FoundationExtensionCrypto)

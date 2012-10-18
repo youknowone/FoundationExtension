@@ -9,15 +9,18 @@
 @interface NSData (FoundationExtension)
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
-+ (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request;
++ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request;
 
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error;
-+ (NSData *)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error;
++ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error;
 
 - (NSString *)hexadecimalString;
 - (id)initWithHexadecimalString:(NSString *)hexadecimal;
-+ (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal;
++ (id)dataWithHexadecimalString:(NSString *)hexadecimal;
 
+- (NSString *)base64String;
+- (id)initWithBase64String:(NSString *)base64;
++ (id)dataWithBase64String:(NSString *)base64;
 
 // deprecation: use NSString -smartURL
 - (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;

@@ -8,13 +8,18 @@
 
 @interface NSData (FoundationExtensionCrypto)
 
+- (NSData *)digestByMD2;
+- (NSData *)digestByMD4;
 - (NSData *)digestByMD5;
 - (NSData *)digestBySHA1;
+- (NSData *)digestBySHA224;
+- (NSData *)digestBySHA256;
+- (NSData *)digestBySHA384;
+- (NSData *)digestBySHA512;
 
-- (NSString *)digestStringByMD5;
-- (NSString *)digestStringBySHA1;
-
-- (NSString *)base64String;
+// deprecated by alternative method. use -hexadecimalString
+- (NSString *)digestStringByMD5 __deprecated;
+- (NSString *)digestStringBySHA1 __deprecated;
 
 @end
 
@@ -24,7 +29,8 @@
 - (NSData *)digestByMD5;
 - (NSData *)digestBySHA1;
 
-- (NSString *)digestStringByMD5;
-- (NSString *)digestStringBySHA1;
+// deprecated by alternative method. use -hexadecimalString
+- (NSString *)digestStringByMD5 __deprecated;
+- (NSString *)digestStringBySHA1 __deprecated;
 
 @end

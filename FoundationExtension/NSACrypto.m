@@ -13,16 +13,44 @@
 
 @implementation NSData (FoundationExtensionCrypto)
 
+typedef unsigned char * (*CC_DIGEST_FUNCTION)(const void *, CC_LONG, unsigned char *);
+
+static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest, CC_LONG digestLength) {
+    unsigned char *buf = malloc(digestLength);
+    digest(data.bytes, (CC_LONG)data.length, buf);
+    return [NSData dataWithBytesNoCopy:buf length:digestLength];
+}
+
+- (NSData *)digestByMD2 {
+    return NSDataCommonCryptoDigest(self, CC_MD2, CC_MD2_DIGEST_LENGTH);
+}
+
+- (NSData *)digestByMD4 {
+    return NSDataCommonCryptoDigest(self, CC_MD4, CC_MD4_DIGEST_LENGTH);
+}
+
 - (NSData *)digestByMD5 {
-    unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([self bytes], (CC_LONG)[self length], hashedChars);
-    return [NSData dataWithBytes:hashedChars length:CC_MD5_DIGEST_LENGTH];
+    return NSDataCommonCryptoDigest(self, CC_MD5, CC_MD5_DIGEST_LENGTH);
 }
 
 - (NSData *)digestBySHA1 {
-    unsigned char hashedChars[CC_SHA1_DIGEST_LENGTH];
-    CC_SHA1([self bytes], (CC_LONG)[self length], hashedChars);
-    return [NSData dataWithBytes:hashedChars length:CC_SHA1_DIGEST_LENGTH];
+    return NSDataCommonCryptoDigest(self, CC_SHA1, CC_SHA1_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA224 {
+    return NSDataCommonCryptoDigest(self, CC_SHA224, CC_SHA224_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA256 {
+    return NSDataCommonCryptoDigest(self, CC_SHA256, CC_SHA256_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA384 {
+    return NSDataCommonCryptoDigest(self, CC_SHA384, CC_SHA384_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA512 {
+    return NSDataCommonCryptoDigest(self, CC_SHA512, CC_SHA512_DIGEST_LENGTH);
 }
 
 - (NSString *)digestStringByMD5 {
@@ -42,55 +70,6 @@
         [result appendFormat:@"%02x", *(hashedChars+i)];
     }
     return [result autorelease];
-}
-
-char NSDataBase64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
-static void NSDataBase64EncodeData(const char *input, char *output) {
-    output[0] = NSDataBase64EncodingTable[((input[0] & 0xfc) >> 2)];
-    output[1] = NSDataBase64EncodingTable[((input[0] & 0x03) << 4) | ((input[1] & 0xf0) >> 4)];
-    output[2] = NSDataBase64EncodingTable[((input[1] & 0x0f) << 2) | ((input[2] & 0xc0) >> 6)];
-    output[3] = NSDataBase64EncodingTable[((input[2] & 0x3f)     )];
-}
-
-- (NSString *)base64String {
-    NSUInteger inlen = self.length;
-    if (inlen == 0) {
-        return @"";
-    }
-    NSUInteger roughlen = (inlen * 4) / 3;
-    NSUInteger outlen = 4 * ((roughlen / 4) + ((roughlen % 4) != 0));
-    char *outbuf = malloc(outlen + 1);
-    outbuf[outlen] = 0;
-    
-    const char *inbytes = self.bytes;
-    const char *inendian = inbytes + inlen;
-    char *inpos = (char *)inbytes;
-    
-    char *outpos = outbuf;
-    
-    while (inendian - inpos >= 3) {
-        NSDataBase64EncodeData(inpos, outpos);
-        inpos += 3;
-        outpos += 4;
-    }
-    
-    NSInteger taillen = inendian - inpos;
-    dassert(taillen >= 0);
-    if (taillen) {
-        char tailbuf[3];
-        tailbuf[0] = inpos[0];
-        tailbuf[1] = inpos[0] ? inpos[1] : 0;
-        tailbuf[2] = 0;
-        NSDataBase64EncodeData(tailbuf, outpos);
-        if (!inpos[0]) {
-            outpos[2] = '=';
-        }
-        outpos[3] = '=';
-        dassert(outpos + 4 == outbuf + outlen);
-    }
-
-    return [[[NSString alloc] initWithBytesNoCopy:outbuf length:outlen encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
 }
 
 @end

@@ -12,6 +12,6 @@ FOUNDATION_EXTERN NSString *NSPathForResourceFile(NSString *filename);
 @interface NSBundle (FoundationExtension)
 
 - (NSString *) pathForResourceFile:(NSString *)filename;
-- (NSString *) pathForResource:(NSString *)filename; // legacy
+- (NSString *) pathForResource:(NSString *)filename __deprecated;
 
 @end

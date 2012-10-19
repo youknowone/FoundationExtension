@@ -38,13 +38,13 @@
  *  @seealso -initWithData:
  *  @seealso +arrayWithData:
  */
-- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
+- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!
  *  @brief Creates and returns an array containing the contents of data. (plist)
  *  @availability Available in OS X v10.6 and later.
  *  @see -initWithData:options:format:error:
  */
-+ (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error NS_AVAILABLE(10_6, 4_0);
++ (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 /*!
  *  @brief Initializes a newly allocated array by placing in it the objects enumerated in a given enumerator.

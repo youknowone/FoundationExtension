@@ -13,14 +13,12 @@
  *  @param data
  *      An NSData object containing bytes of plist file representation.
  *  @return An array initialized to contain the contents in data. Returns nil if the contents of the request can’t be parsed into an array. The returned object might be different than the original receiver.
- *  @availability Available in OS X v10.6 and later.
  *  @seealso -initWithData:options:format:error:
  *  @seealso +arrayWithData:options:format:error:
  */
 - (id)initWithData:(NSData *)data;
 /*!
  *  @brief Creates and returns an array containing the contents of data. (plist)
- *  @availability Available in OS X v10.6 and later.
  *  @see -initWithData:
  */
 + (id)arrayWithData:(NSData *)data;
@@ -34,14 +32,12 @@
  *  @param error
  *      If the method does not complete successfully, upon return contains an NSError object that describes the problem.
  *  @return An array initialized to contain the contents in data. Returns nil if the contents of the request can’t be parsed into an array. The returned object might be different than the original receiver.
- *  @availability Available in OS X v10.6 and later.
  *  @seealso -initWithData:
  *  @seealso +arrayWithData:
  */
 - (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!
  *  @brief Creates and returns an array containing the contents of data. (plist)
- *  @availability Available in OS X v10.6 and later.
  *  @see -initWithData:options:format:error:
  */
 + (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;

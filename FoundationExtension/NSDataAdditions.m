@@ -12,23 +12,7 @@
 
 #include "debug.h"
 
-@implementation NSData (FoundationExtension)
-
-- (id)initWithContentsOfAbstractPath:(NSString *)path {
-    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
-}
-
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path {
-    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
-}
-
-- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
-}
-
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
-}
+@implementation NSData (FoundationExtensionCreation)
 
 - (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -58,7 +42,28 @@
     return [[[self alloc] initWithContentsOfURLRequest:request error:error] autorelease];
 }
 
-const char NSDataHexadecimalEncodingTable[16] = "0123456789abcdef";
+- (id)initWithContentsOfAbstractPath:(NSString *)path {
+    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
+}
+
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path {
+    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
+}
+
+- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
+    return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
+}
+
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
+    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
+}
+
+@end
+
+
+@implementation NSData (FoundationExtensionSerialization)
+
+const char NSDataAdditionsHexadecimalEncodingTable[16] = "0123456789abcdef";
 
 - (NSString *)hexadecimalString {
     NSUInteger length = self.length;
@@ -69,13 +74,13 @@ const char NSDataHexadecimalEncodingTable[16] = "0123456789abcdef";
     char *outpos = buffer;
     
     for ( ; inpos < inendian; inpos += 1, outpos += 2) {
-        *(outpos + 0) = NSDataHexadecimalEncodingTable[*inpos >> 4];
-        *(outpos + 1) = NSDataHexadecimalEncodingTable[*inpos & 0x0f];
+        *(outpos + 0) = NSDataAdditionsHexadecimalEncodingTable[*inpos >> 4];
+        *(outpos + 1) = NSDataAdditionsHexadecimalEncodingTable[*inpos & 0x0f];
     }
     return [[[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
 }
 
-static const char NSDataAdditionsHexBytes[0x100] =
+static const char NSDataAdditionsHexadecimalDecodingTable[0x80] =
 //0           4           8          12          16
 {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 16
  -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,// 32
@@ -91,15 +96,14 @@ static const char NSDataAdditionsHexBytes[0x100] =
     NSData *hexData = [hexadecimal dataUsingEncoding:NSASCIIStringEncoding];
     const unsigned char *bytes = hexData.bytes;
     NSUInteger length = hexData.length;
-    char *buffer = (char *)malloc(length / 2 + 1);
+    const unsigned char *endian = bytes + length;
+    
+    char *buffer = (char *)malloc(length / 2);
     char *pointer = buffer;
 
-    for (NSInteger i = 0; i < length; i++) {
-        unsigned char c = NSDataAdditionsHexBytes[*bytes] << 4; bytes++;
-        c += NSDataAdditionsHexBytes[*bytes]; bytes++;
-        *pointer = c; pointer++;
+    for (unsigned char *pos = (unsigned char *)bytes; pos < endian; pos += 2, pointer += 1) {
+        *pointer = (NSDataAdditionsHexadecimalDecodingTable[*pos] << 4) + NSDataAdditionsHexadecimalDecodingTable[*(pos+1)];
     }
-    *pointer = 0;
 
     return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];
 }
@@ -109,13 +113,13 @@ static const char NSDataAdditionsHexBytes[0x100] =
 }
 
 
-char NSDataBase64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+char NSDataAdditionsBase64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
-    output[0] = NSDataBase64EncodingTable[((input[0] & 0xfc) >> 2)];
-    output[1] = NSDataBase64EncodingTable[((input[0] & 0x03) << 4) | ((input[1] & 0xf0) >> 4)];
-    output[2] = NSDataBase64EncodingTable[((input[1] & 0x0f) << 2) | ((input[2] & 0xc0) >> 6)];
-    output[3] = NSDataBase64EncodingTable[((input[2] & 0x3f)     )];
+static void NSDataAdditionsBase64EncodeData(const unsigned char *input, char *output) {
+    output[0] = NSDataAdditionsBase64EncodingTable[((input[0] & 0xfc) >> 2)];
+    output[1] = NSDataAdditionsBase64EncodingTable[((input[0] & 0x03) << 4) | ((input[1] & 0xf0) >> 4)];
+    output[2] = NSDataAdditionsBase64EncodingTable[((input[1] & 0x0f) << 2) | ((input[2] & 0xc0) >> 6)];
+    output[3] = NSDataAdditionsBase64EncodingTable[((input[2] & 0x3f)     )];
 }
 
 - (NSString *)base64String {
@@ -134,7 +138,7 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
     char *outpos = outbuf;
     
     while (inendian - inpos >= 3) {
-        NSDataBase64EncodeData(inpos, outpos);
+        NSDataAdditionsBase64EncodeData(inpos, outpos);
         inpos += 3;
         outpos += 4;
     }
@@ -146,7 +150,7 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
         tailbuf[0] = inpos[0];
         tailbuf[1] = taillen == 2 ? inpos[1] : 0;
         tailbuf[2] = 0;
-        NSDataBase64EncodeData(tailbuf, outpos);
+        NSDataAdditionsBase64EncodeData(tailbuf, outpos);
         if (taillen != 2) {
             outpos[2] = '=';
         }
@@ -157,7 +161,7 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
     return [[[NSString alloc] initWithBytesNoCopy:outbuf length:outlen encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
 }
 
-unsigned char NSDataBase64DecodingTable[0x80] = {
+unsigned char NSDataAdditionsBase64DecodingTable[0x80] = {
 //   0   1   2   3   4   5   6   7   8   9   a   b   c   d   e   f
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, // 0x10
     -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, // 0x20
@@ -169,16 +173,16 @@ unsigned char NSDataBase64DecodingTable[0x80] = {
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1, // 0x80
 };
 
-static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
-    unsigned char tmp1 = NSDataBase64DecodingTable[input[0]];
+static void NSDataAdditionsBase64DecodeData(const char *input, unsigned char *output) {
+    unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[input[0]];
     dassert(tmp1 != 0xff);
-    unsigned char tmp2 = NSDataBase64DecodingTable[input[1]];
+    unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[input[1]];
     dassert(tmp2 != 0xff);
     output[0] = (tmp1 << 2) | (tmp2 >> 4);
-    tmp1 = NSDataBase64DecodingTable[input[2]];
+    tmp1 = NSDataAdditionsBase64DecodingTable[input[2]];
     dassert(tmp1 != 0xff);
     output[1] = (tmp2 << 4) | (tmp1 >> 2);
-    tmp2 = NSDataBase64DecodingTable[input[3]];
+    tmp2 = NSDataAdditionsBase64DecodingTable[input[3]];
     dassert(tmp2 != 0xff);
     output[2] = (tmp1 << 6) | (tmp2);
 }
@@ -214,7 +218,7 @@ static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
     unsigned char *outpos = buffer;
     
     while (inendian - inpos >= 4) {
-        NSDataBase64DecodeData(inpos, outpos);
+        NSDataAdditionsBase64DecodeData(inpos, outpos);
         inpos += 4;
         outpos += 3;
     }
@@ -222,11 +226,11 @@ static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
     NSInteger taillen = inendian - inpos;
     dassert(taillen > 0);
     if (taillen) {
-        unsigned char tmp1 = NSDataBase64DecodingTable[inpos[0]];
-        unsigned char tmp2 = NSDataBase64DecodingTable[inpos[1]];
+        unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[inpos[0]];
+        unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[inpos[1]];
         outpos[0] = (tmp1 << 2) + (tmp2 >> 4);
         if (taillen == 3) {
-            tmp1 = NSDataBase64DecodingTable[inpos[2]];
+            tmp1 = NSDataAdditionsBase64DecodingTable[inpos[2]];
             outpos[1] = (tmp2 << 4) + (tmp1 >> 2);
         }
     }

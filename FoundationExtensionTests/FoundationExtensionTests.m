@@ -73,7 +73,7 @@
     NSData *data = [@"SAMPLE" dataUsingEncoding:NSUTF8StringEncoding];
     STAssertTrue([[data hexadecimalString] isEqual:@"53414d504c45"], @"hexadecimal encode");
 
-    STAssertTrue([@"SAMPLE" isEqual:[NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]], @"hexadecimal decode");
+    STAssertTrue([@"SAMPLE" isEqual:[NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]], @"hexadecimal decode: %@", [NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]);
 }
 
 @end

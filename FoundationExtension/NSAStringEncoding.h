@@ -6,7 +6,9 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-//! @header This header defines various NSString encoding codes.
+/*!
+ *  @header NSAStringEncoding.h This defines various NSString encoding codes.
+ */
 
 enum {
     //  NSMacOSRomanStringEncoding          = 0x80000000,

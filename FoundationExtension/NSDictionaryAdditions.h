@@ -6,6 +6,14 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header NSDictionaryAdditions.h NSDictionary extension
+ */
+
+/*!
+ *  @brief Creation methods extension
+ */
+
 @interface NSDictionary (FoundationExtension)
 
 /*!

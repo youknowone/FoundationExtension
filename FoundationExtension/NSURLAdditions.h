@@ -6,6 +6,13 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header NSURLAdditions.h NSURL extensions
+ */
+
+/*!
+ *  @brief Creation method extension
+ */
 @interface NSURL (FoundationExtension)
 
 - (id)initResourceURLWithPath:(NSString *)path;
@@ -34,6 +41,9 @@
 
 @end
 
+/*!
+ *  @brief NSString shortcut to create NSURL
+ */
 @interface NSString (FoundationExtensionNSURLAdditions)
 
 - (BOOL)hasHTTPPrefix;

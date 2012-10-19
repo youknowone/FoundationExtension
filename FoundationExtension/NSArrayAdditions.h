@@ -6,6 +6,13 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header NSArrayAdditions.h NSArray extension
+ */
+
+/*!
+ *  @brief Creation methods extension
+ */
 @interface NSArray (FoundationExtensionCreation)
 
 /*!
@@ -104,6 +111,9 @@
 @end
 
 
+/*!
+ *  @brief NSNumber shortcut extension
+ */
 @interface NSArray (FoundationExtensionNSNumber)
 
 /*!
@@ -129,6 +139,9 @@
 @end
 
 
+/*!
+ *  @brief NSNumber shortcut extension
+ */
 @interface NSMutableArray (FoundationExtensionNSNumber)
 
 /*!

@@ -6,6 +6,14 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header NSDataAdditions.h NSData extension
+ */
+
+/*!
+ *  @brief Creation methods extension
+ */
+
 @interface NSData (FoundationExtensionCreation)
 
 /*!

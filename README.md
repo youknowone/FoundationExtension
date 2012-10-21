@@ -1,15 +1,24 @@
 @mainpage
 
 # FoundationExtension
-This library includes small Cocoa/UIKit extensions make your codes short.
+This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
+
+ * Many common snippets in a method call.
+ * Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention. 
 
 See document on [Github] (http://youknowone.github.com/FoundationExtension)
+
+# Download
+
+    git clone git://github.com/youknowone/FoundationExtension.git
+    cd FoundationExtension
+    git submodule update --init
 
 # How to use
 * Compiled library
   1. build project
-  1. add FoundationExtension or UIKitExtension target as dependency
-  1. if UIKitExtension: add '-force\_load {path\_for\_libUIKitExtension.a}' to 'other linker flags'
+  2. add FoundationExtension or UIKitExtension target as dependency
+  3. if UIKitExtension: add '-force\_load {path\_for\_libUIKitExtension.a}' to 'other linker flags'
 * Directy source
   1. add files what you need to your project
 
@@ -49,7 +58,7 @@ FoundationExtension
     
 ## get NSData from Multipart Form POST
 Foundation
-  * Meh...
+  * No way.
 
 FoundationExtension
 
@@ -86,7 +95,7 @@ FoundationExtension
     
 ## How about base 12 string?
 Foundation
-  * Meh...
+  * Why should foundation has this?
 
 FoundationExtension
 
@@ -107,7 +116,7 @@ FoundationExtension
     
 ## plist dictionary decode from HTTP post request
 Foundation
-  * Meh... (get data from NSURLRequest, and from NSData.. huh?)
+  * Get data from NSURLRequest. Ehh.. so what can I do now? (Use NSPropertyListSerialization)
 
 FoundationExtension
 

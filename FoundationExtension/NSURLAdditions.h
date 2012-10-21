@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSURLAdditions.h NSURL extensions
+ *  @headerfile NSURLAdditions.h NSURL extensions
  */
 
 /*!
@@ -43,7 +43,7 @@
 /*!
  *  @brief Initializes a newly created NSURL referencing any URL decodable by protocol prefix.
  *  @param path
- *      The path that the NSURL object will represent. path should contains known protocol prefix or be a valid system path. If path begins with the prefix 'http://' or 'https://', it would be  initialized with @link -initWithString: @/link. If path begins with the prefix 'res://', it would be initialized with @link -initResourceURLWithPath: @/link. If path begins with the prefix 'conf://', it would be initialized with @link -initConfigurationURLWithPath: @/link. Else path should be a valid system path. It would be initialized with @link -initFileURLWithPath: @/link
+ *      The path that the NSURL object will represent. path should contains known protocol prefix or be a valid system path. If path begins with the prefix "http://" or "https://", it would be  initialized with '-initWithString:'. If path begins with the prefix "res://", it would be initialized with '-initResourceURLWithPath:'. If path begins with the prefix "conf://", it would be initialized with '-initConfigurationURLWithPath:'. Else path should be a valid system path. It would be initialized with '-initFileURLWithPath:'
  *  @return An NSURL object initialized with path based on protocol prefix.
  */
 - (id)initSmartURLWithPath:(NSString *)path;

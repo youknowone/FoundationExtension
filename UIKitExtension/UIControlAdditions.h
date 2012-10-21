@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /*!
- *  @header UIControlAdditions.h UIControl extension and internal protocol.
+ *  @headerfile UIControlAdditions.h UIControl extension and internal protocol.
  */
 
 @interface UIControl (FoundationExtension)

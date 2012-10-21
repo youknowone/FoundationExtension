@@ -1,5 +1,9 @@
+@mainpage
+
 # FoundationExtension
 This library includes small Cocoa/UIKit extensions make your codes short.
+
+See document on [Github] (http://youknowone.github.com/FoundationExtension)
 
 # How to use
 * Compiled library

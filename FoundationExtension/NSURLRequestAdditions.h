@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSURLRequestAdditions.h NSURLRequest extension
+ *  @headerfile NSURLRequestAdditions.h NSURLRequest extension
  */
 
 /*!
@@ -148,14 +148,14 @@
 
 /*!
  *  @brief Appends body data endian.
- *  @discussion This should be called once after last data is appended.
+ *  @details This should be called once after last data is appended.
  */
 - (void)appendBodyDataEndian;
 
 /*!
  *  @brief Returns body data.
  *  @return Returns body data.
- *  @discussion This should be called after -appendBodyDataEndian is called.
+ *  @details This should be called after -appendBodyDataEndian is called.
  */
 - (NSData *)HTTPBody;
 

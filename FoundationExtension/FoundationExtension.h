@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header FoundationExtension.h Foundation extension with common shortcuts.
+ *  @headerfile FoundationExtension.h Foundation extension with common shortcuts.
  */
 
 #import <Foundation/Foundation.h>

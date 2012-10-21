@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header UIKitExtension.h UIKit extension with common shortcuts.
+ *  @headerfile UIKitExtension.h UIKit extension with common shortcuts.
  */
 
 #import <Foundation/Foundation.h>

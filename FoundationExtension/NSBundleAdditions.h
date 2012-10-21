@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSBundleAdditions.h NSBundle extension
+ *  @headerfile NSBundleAdditions.h NSBundle extension
  */
 
 /*!

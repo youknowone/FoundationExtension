@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSTimerAdditions.h NSTimer shortcuts. Unclear conventioned.
+ *  @headerfile NSTimerAdditions.h NSTimer shortcuts. Unclear conventioned.
  */
 
 @interface NSTimer (FoundationExtension)

@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSACrypto.h CommonCrypto shortcuts.
+ *  @headerfile NSACrypto.h CommonCrypto shortcuts.
  */
 
 /*!

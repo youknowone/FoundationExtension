@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSAStringEncoding.h This defines various NSString encoding codes.
+ *  @headerfile NSAStringEncoding.h This defines various NSString encoding codes.
  */
 
 enum {

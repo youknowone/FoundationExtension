@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSObjectAdditions.h NSObject extension
+ *  @headerfile NSObjectAdditions.h NSObject extension
  */
 
 @interface NSObject (FoundationExtension)
@@ -26,18 +26,25 @@
  *  @brief Invokes a method of the receiver with 3 parameter
  *  @param aSelector
  *      A selector that identifies the method to invoke. The method should take 3 argument of type id.
- *  @seealso -performSelector:withObject:
- *  @seealso -performSelector:withObject:withObject:
- *  @seealso -performSelector:withObject:withObject:withObject:withObject:
+ *  @param object1 a parameter
+ *  @param object2 a parameter
+ *  @param object3 a parameter
+ *  @see -performSelector:withObject:
+ *  @see -performSelector:withObject:withObject:
+ *  @see -performSelector:withObject:withObject:withObject:withObject:
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3;
 /*!
  *  @brief Invokes a method of the receiver with 4 parameter
  *  @param aSelector
  *      A selector that identifies the method to invoke. The method should take 4 argument of type id.
- *  @seealso -performSelector:withObject:
- *  @seealso -performSelector:withObject:withObject:
- *  @seealso -performSelector:withObject:withObject:withObject:
+ *  @param object1 a parameter
+ *  @param object2 a parameter
+ *  @param object3 a parameter
+ *  @param object4 a parameter
+ *  @see -performSelector:withObject:
+ *  @see -performSelector:withObject:withObject:
+ *  @see -performSelector:withObject:withObject:withObject:
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4;
 

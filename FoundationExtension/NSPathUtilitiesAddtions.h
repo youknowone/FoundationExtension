@@ -30,13 +30,13 @@ FOUNDATION_EXTERN NSString *NSPathForHomeFileForUser(NSString *filename, NSStrin
 
 /*!
  *  @brief Returns user configuration directory.
- *  @discussion For OS X, this returns ~/Library. For iOS, this returns ~/Documents. This is used for smart URL prefix 'conf://'
+ *  @details For OS X, this returns ~/Library. For iOS, this returns ~/Documents. This is used for smart URL prefix 'conf://'
  *  @see NSSearchPathForDirectoriesInDomains
  */
 FOUNDATION_EXTERN NSString *NSUserConfigurationDirectory(void);
 /*!
  *  @brief Returns user configuration file.
- *  @discussion For OS X, this returns ~/Library. For iOS, this returns ~/Documents. This is used for smart URL prefix 'conf://'
+ *  @details For OS X, this returns ~/Library. For iOS, this returns ~/Documents. This is used for smart URL prefix 'conf://'
  *  @see NSSearchPathForDirectoriesInDomains
  */
 FOUNDATION_EXTERN NSString *NSPathForUserConfigurationFile(NSString *filename);

@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSDataAdditions.h NSData extension
+ *  @headerfile NSDataAdditions.h NSData extension
  */
 
 /*!
@@ -21,8 +21,8 @@
  *  @param request
  *      The URLRequest from which to read data.
  *  @return An NSData object initialized with the data from contents specified by request. The returned object might be different than the original receiver.
- *  @seealso -initWithContentsOfURLRequest:error:
- *  @seealso +dataWithContentsOfURLRequest:error:
+ *  @see -initWithContentsOfURLRequest:error:
+ *  @see +dataWithContentsOfURLRequest:error:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
@@ -38,8 +38,8 @@
  *  @param errorPtr
  *      If there is an error reading in the data, upon return contains an NSError object that describes the problem.
  *  @return An NSData object initialized with the data from contents specified by request. The returned object might be different than the original receiver.
- *  @seealso -initWithContentsOfURLRequest:
- *  @seealso +dataWithContentsOfURLRequest:
+ *  @see -initWithContentsOfURLRequest:
+ *  @see +dataWithContentsOfURLRequest:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
 /*!

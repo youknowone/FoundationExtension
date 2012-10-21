@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header UIWebViewAdditions.h UIWebView extension
+ *  @headerfile UIWebViewAdditions.h UIWebView extension
  */
 
 /*!

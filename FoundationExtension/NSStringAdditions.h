@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header NSStringAdditions.h NSString extensions
+ *  @headerfile NSStringAdditions.h NSString extensions
  */
 
 /*!
@@ -17,13 +17,13 @@
 
 /*!
  *  @brief Creates and returns an NSString object initialized by using a given format string as a template into which the remaining argument values are substituted according to the user’s default locale.
- *  @seealso -initWithFormat:arguments:
+ *  @see -initWithFormat:arguments:
  */
 + (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using a given encoding.
- *  @seealso -initWithData:encoding:
+ *  @see -initWithData:encoding:
  */
 + (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 
@@ -39,9 +39,9 @@
  *  @param first, ...
  *      A comma-separated list of arguments to substitute into format. first should be id type.
  *  @return A string created by using self as a template into which the argument values are substituted according to the canonical locale.
- *  @discussion This requires first argument type to be id. And implementation of this is not optimized enough so this is slow for some case. To avoid this problems, use @link -format0: @/link .
- *  @seealso -format0:
- *  @seealso +stringWithFormat:
+ *  @details This requires first argument type to be id. And implementation of this is not optimized enough so this is slow for some case. To avoid this problems, use '-format0:'.
+ *  @see -format0:
+ *  @see +stringWithFormat:
  */
 - (NSString *)format:(id)first, ...;
 /*!
@@ -51,9 +51,9 @@
  *  @param ...
  *      A comma-separated list of arguments to substitute into format.
  *  @return A string created by using self as a template into which the remaining argument values are substituted according to the canonical locale.
- *  @discussion This ignores first argument. Pass anything.
- *  @seealso -format:
- *  @seealso +stringWithFormat:
+ *  @details This ignores first argument. Pass anything.
+ *  @see -format:
+ *  @see +stringWithFormat:
  */
 - (NSString *)format0:(id)dummyLikeNil, ...;
 
@@ -64,7 +64,7 @@
  *  @param length
  *      A length. The summation of this value and from index must lie within the bounds of the receiver, or be equal to the length of the receiver.
  *  @return new string containing the characters of the receiver from the one at from index with given length.
- *  @seealso -substringWithRange:
+ *  @see -substringWithRange:
  */
 - (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length;
 /*!
@@ -74,7 +74,7 @@
  *  @param to
 *       An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
  *  @return new string containing the characters of the receiver from the one at from index to to index.
- *  @seealso -substringWithRange:
+ *  @see -substringWithRange:
  */
 - (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
 
@@ -87,25 +87,25 @@
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
- *  @seealso -initWithData:encoding:
- *  @seealso +stringWithData:encoding:
+ *  @see -initWithData:encoding:
+ *  @see +stringWithData:encoding:
  */
 + (NSString *)stringWithUTF8Data:(NSData *)data;
 
 /*!
  *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
- *  @seealso stringByAddingPercentEscapesUsingEncoding:
+ *  @see stringByAddingPercentEscapesUsingEncoding:
  */
 - (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;
 /*!
  *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
- *  @seealso stringByReplacingPercentEscapesUsingEncoding:
+ *  @see stringByReplacingPercentEscapesUsingEncoding:
  */
 - (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;
 
 /*!
  *  @brief Returns an NSData object containing a representation of the receiver encoded using UTF8 encoding.
- *  @seealso dataUsingEncoding:
+ *  @see dataUsingEncoding:
  */
 - (NSData *)dataUsingUTF8Encoding;
 
@@ -121,14 +121,14 @@
  *  @param radix
  *      Base radix of text reperesentation.
  *  @return The NSInteger value of the receiver’s text with given base radix.
- *  @seealso -integerValue
+ *  @see -integerValue
  */
 - (NSInteger)integerValueBase:(NSInteger)radix;
 /*!
  *  @brief Returns the NSInteger value of the receiver’s text by 16 base.
  *  @return The NSInteger value of the receiver’s text with 16 base.
- *  @seealso -integerValue
- *  @seealso -integerValueBase:
+ *  @see -integerValue
+ *  @see -integerValueBase:
  */
 - (NSInteger)hexadecimalValue;
 

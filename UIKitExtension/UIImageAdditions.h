@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header UIImageAdditions.h UIImage extension.
+ *  @headerfile UIImageAdditions.h UIImage extension.
  */
 
 /*!
@@ -17,7 +17,7 @@
 
 /*!
  *  @brief Resized image by given size.
- *  @discussion This method depends on CoreGraphics.
+ *  @details This method depends on CoreGraphics.
  */
 - (UIImage *)imageByResizingToSize:(CGSize)size;
 

@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @header UIScrolViewAdditions.h UIScrollView extension
+ *  @headerfile UIScrolViewAdditions.h UIScrollView extension
  */
 
 /*!

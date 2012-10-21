@@ -21,14 +21,8 @@
 }
 
 - (id) initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
-    NSArray *contents;
-    //TODO: check deployment version
-    if ( [NSPropertyListSerialization respondsToSelector:@selector(propertyListWithData:options:format:error:)] ) {
-        contents = [NSPropertyListSerialization propertyListWithData:data options:0 format:format error:error];
-    } else { // support os < osx10.6 or ios4.0
-        contents = [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
-    }
-    if (contents==nil) {
+    NSArray *contents = [data propertyListObjectUsingFormat:format error:error];
+    if (contents == nil) {
         [self release];
         return nil;
     }

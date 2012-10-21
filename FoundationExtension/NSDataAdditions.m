@@ -63,6 +63,15 @@
 
 @implementation NSData (FoundationExtensionSerialization)
 
+- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error {
+    if ([NSPropertyListSerialization respondsToSelector:@selector(propertyListWithData:options:format:error:)]) {
+        return [NSPropertyListSerialization propertyListWithData:self options:0 format:format error:error];
+    }
+
+    // support os < osx10.6 or ios4.0
+    return [NSPropertyListSerialization propertyListFromData:self mutabilityOption:NSPropertyListImmutable format:format errorDescription:NULL];
+}
+
 const char NSDataAdditionsHexadecimalEncodingTable[16] = "0123456789abcdef";
 
 - (NSString *)hexadecimalString {

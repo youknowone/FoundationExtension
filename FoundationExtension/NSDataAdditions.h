@@ -64,12 +64,49 @@
 
 @interface NSData (FoundationExtensionSerialization)
 
+/*!
+ *  @brief Deserialize property list data to object.
+ *  @param format
+ *      A property list format. Possible values for format are described in 'NSPropertyListFormat'.
+ *  @param error
+ *      If the method does not complete successfully, upon return contains an NSError object that describes the problem.
+ *  @return Property list object. Usually NSArray or NSDictionary.
+ *  @see NSPropertyListSerialization
+ */
+- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error;
+
+/*!
+ *  @brief Serialized string in hexadecimal format.
+ *  @return Hexadecimal string.
+ */
 - (NSString *)hexadecimalString;
+/*!
+ *  @brief Initialize with deserialized data from hexadecimal string.
+ *  @param hexadecimal
+ *      Hexadecimal string.
+ */
 - (id)initWithHexadecimalString:(NSString *)hexadecimal;
+/*!
+ *  @brief Creates and returns deserialized data from hexadecimal string.
+ *  @see -initWithHexadecimalString:
+ */
 + (id)dataWithHexadecimalString:(NSString *)hexadecimal;
 
+/*!
+ *  @brief Serialized string in base64 format.
+ *  @return base64 string.
+ */
 - (NSString *)base64String;
+/*!
+ *  @brief Initialize with deserialized data from base64 string.
+ *  @param base64
+ *      base64 string.
+ */
 - (id)initWithBase64String:(NSString *)base64;
+/*!
+ *  @brief Creates and returns deserialized data from base64 string.
+ *  @see -initWithBase64String:
+ */
 + (id)dataWithBase64String:(NSString *)base64;
 
 @end

@@ -6,15 +6,19 @@
 //  Copyright (c) 2012 youknowone.org All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+/*!
+ *  @header UIKitExtension.h UIKit extension with common shortcuts.
+ */
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #import <FoundationExtension/FoundationExtension.h>
+
 #import <UIKitExtension/UIAlertViewAdditions.h>
 #import <UIKitExtension/UIApplicationAdditions.h>
 #import <UIKitExtension/UIColorAdditions.h>
 #import <UIKitExtension/UIDeviceAdditions.h>
 #import <UIKitExtension/UIImageAdditions.h>
 #import <UIKitExtension/UIControlAdditions.h>
-#import <UIKitExtension/UIViewAdditions.h>
 #import <UIKitExtension/UIScrollViewAdditions.h>

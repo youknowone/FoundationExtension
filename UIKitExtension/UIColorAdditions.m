@@ -11,7 +11,7 @@
 
 NSDictionary *FoundationExtensionUIColorNameTable = nil;
 
-@implementation UIColor (FoundationExtension)
+@implementation UIColor (FoundationExtensionHTML)
 
 - (UIColor *)initWithHTMLHexExpression16:(NSString *)code {
     return [self initWithRed:[[code substringFromIndex:1 length:1] hexadecimalValue]/15.0f
@@ -101,11 +101,6 @@ NSDictionary *FoundationExtensionUIColorNameTable = nil;
 
 + (UIColor *)colorWithHTMLExpression:(NSString *)code {
     return [[[self alloc] initWithHTMLExpression:code] autorelease];
-}
-
-+ (UIColor *)colorByHtmlColor:(NSString *)color {
-    // deprecated
-    return [self colorWithHTMLExpression:color];
 }
 
 @end

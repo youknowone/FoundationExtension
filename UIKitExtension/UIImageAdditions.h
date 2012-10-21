@@ -6,9 +6,19 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header UIImageAdditions.h UIImage extension.
+ */
 
+/*!
+ *  @brief UIImage extension
+ */
 @interface UIImage (FoundationExtension)
 
-- (UIImage *) imageByResizingToSize:(CGSize)size;
+/*!
+ *  @brief Resized image by given size.
+ *  @discussion This method depends on CoreGraphics.
+ */
+- (UIImage *)imageByResizingToSize:(CGSize)size;
 
 @end

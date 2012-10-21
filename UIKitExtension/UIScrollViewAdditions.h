@@ -6,9 +6,22 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header UIScrolViewAdditions.h UIScrollView extension
+ */
+
+/*!
+ *  @brief UIScrollView shortcuts
+ */
 @interface UIScrollView (FoundationExtension)
 
+/*!
+ *  @brief frame representation for -contentSize
+ */
 @property(nonatomic, readonly) CGRect contentFrame;
+/*!
+ *  @brief bounds representation for -contentSize
+ */
 @property(nonatomic, readonly) CGRect contentBounds;
 
 @end

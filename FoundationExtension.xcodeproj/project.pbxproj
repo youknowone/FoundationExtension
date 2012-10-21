@@ -29,7 +29,6 @@
 		3868F7DA162D9CDE00C31163 /* UIDeviceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7CD162D9CDE00C31163 /* UIDeviceAdditions.m */; };
 		3868F7DB162D9CDE00C31163 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7CF162D9CDE00C31163 /* UIImageAdditions.m */; };
 		3868F7DC162D9CDE00C31163 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */; };
-		3868F7DD162D9CDE00C31163 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D3162D9CDE00C31163 /* UIViewAdditions.m */; };
 		3868F7DE162D9CDE00C31163 /* UIWebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */; };
 		3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */; };
 		3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
@@ -150,8 +149,6 @@
 		3868F7CF162D9CDE00C31163 /* UIImageAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageAdditions.m; sourceTree = "<group>"; };
 		3868F7D0162D9CDE00C31163 /* UIScrollViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIScrollViewAdditions.h; sourceTree = "<group>"; };
 		3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIScrollViewAdditions.m; sourceTree = "<group>"; };
-		3868F7D2162D9CDE00C31163 /* UIViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAdditions.h; sourceTree = "<group>"; };
-		3868F7D3162D9CDE00C31163 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		3868F7D4162D9CDE00C31163 /* UIWebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewAdditions.h; sourceTree = "<group>"; };
 		3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewAdditions.m; sourceTree = "<group>"; };
 		3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionCppTests.h; sourceTree = "<group>"; };
@@ -380,8 +377,6 @@
 				3868F7CF162D9CDE00C31163 /* UIImageAdditions.m */,
 				3868F7D0162D9CDE00C31163 /* UIScrollViewAdditions.h */,
 				3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */,
-				3868F7D2162D9CDE00C31163 /* UIViewAdditions.h */,
-				3868F7D3162D9CDE00C31163 /* UIViewAdditions.m */,
 				3868F7D4162D9CDE00C31163 /* UIWebViewAdditions.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */,
 				38730448133732DE004C8E89 /* Tests */,
@@ -639,7 +634,6 @@
 				3868F7DA162D9CDE00C31163 /* UIDeviceAdditions.m in Sources */,
 				3868F7DB162D9CDE00C31163 /* UIImageAdditions.m in Sources */,
 				3868F7DC162D9CDE00C31163 /* UIScrollViewAdditions.m in Sources */,
-				3868F7DD162D9CDE00C31163 /* UIViewAdditions.m in Sources */,
 				3868F7DE162D9CDE00C31163 /* UIWebViewAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

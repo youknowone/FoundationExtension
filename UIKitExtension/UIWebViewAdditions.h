@@ -6,9 +6,22 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+/*!
+ *  @header UIWebViewAdditions.h UIWebView extension
+ */
+
+/*!
+ *  @brief UIWebView extension
+ */
 @interface UIWebView (FoundationExtension)
 
+/*!
+ *  @brief Creates URLRequest from given URL and call -loadRequest:
+ *  @see loadRequest:
+ */
 - (void)loadRequestForURL:(NSURL *)URL;
-- (void)loadRequestForFilePath:(NSString *)filePath;
+
+// use NSString -fileURL
+- (void)loadRequestForFilePath:(NSString *)filePath __deprecated;
 
 @end

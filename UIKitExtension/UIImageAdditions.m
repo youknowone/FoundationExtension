@@ -6,9 +6,8 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#import "NSACrypto.h"
-#import "NSPathUtilitiesAddtions.h"
-#import "NSURLAdditions.h"
+#import <CoreGraphics/CoreGraphics.h>
+
 #import "UIImageAdditions.h"
 
 @implementation UIImage (FoundationExtension)

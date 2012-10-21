@@ -17,7 +17,9 @@ typedef enum {
 
 @interface UIDevice (FoundationExtension)
 
-+ (NSString *)uniqueIdentifier;
 + (ICDeviceType)currentDeviceType;
+
+// implementation api is deprecated
++ (NSString *)uniqueIdentifier __deprecated;
 
 @end

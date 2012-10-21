@@ -30,6 +30,12 @@
     STAssertTrue([[[self classObject] name] isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", [[self classObject] name]);
 }
 
+- (void)testClassShortcut {
+    NSString *aString = [[[NSAClass classWithClass:[NSString class]] alloc] initWithString:@"hi"];
+
+    STAssertTrue([aString isEqualToString:@"hi"], @"");
+}
+
 - (void)testStringFormat {
     {
         NSString *formatted = [@"%d %d %d" format0:nil, 10, 9, 8];

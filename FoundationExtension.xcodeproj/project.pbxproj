@@ -31,6 +31,8 @@
 		3868F7DC162D9CDE00C31163 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */; };
 		3868F7DD162D9CDE00C31163 /* UIViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D3162D9CDE00C31163 /* UIViewAdditions.m */; };
 		3868F7DE162D9CDE00C31163 /* UIWebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */; };
+		3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */; };
+		3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
@@ -152,6 +154,8 @@
 		3868F7D3162D9CDE00C31163 /* UIViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAdditions.m; sourceTree = "<group>"; };
 		3868F7D4162D9CDE00C31163 /* UIWebViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewAdditions.h; sourceTree = "<group>"; };
 		3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewAdditions.m; sourceTree = "<group>"; };
+		3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionCppTests.h; sourceTree = "<group>"; };
+		3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FoundationExtensionCppTests.mm; sourceTree = "<group>"; };
 		38730441133732DE004C8E89 /* UIKitExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873044A133732DE004C8E89 /* UIKitExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIKitExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		3873044E133732DE004C8E89 /* UIKitExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 			children = (
 				383764F113373155007072FD /* FoundationExtensionTests.h */,
 				383764F313373155007072FD /* FoundationExtensionTests.m */,
+				3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */,
+				3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */,
 				383764EB13373155007072FD /* Supporting Files */,
 			);
 			name = Tests;
@@ -415,6 +421,7 @@
 				3868F3BF162885D300C31163 /* NSADataObject.h in Headers */,
 				3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */,
 				3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */,
+				3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +620,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */,
+				3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

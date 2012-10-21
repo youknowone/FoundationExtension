@@ -8,7 +8,20 @@
 
 #import "NSStringAdditions.h"
 
-@implementation NSString (FoundationExtension)
+@implementation NSString (FoundationExtensionCreations)
+
++ (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList {
+    return [[[self alloc] initWithFormat:format arguments:argList] autorelease];
+}
+
++ (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
+    return [[[self alloc] initWithData:data encoding:encoding] autorelease];
+}
+
+@end
+
+
+@implementation NSString (FoundationExtensionShortcuts)
 
 // slow! proof of concept
 - (NSString *)format:(id)first, ... {
@@ -50,13 +63,18 @@
     return result;
 }
 
-+ (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList {
-    return [[[self alloc] initWithFormat:format arguments:argList] autorelease];
+- (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length {
+    return [self substringWithRange:NSMakeRange(from, length)];
 }
 
-+ (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
-    return [[[self alloc] initWithData:data encoding:encoding] autorelease];
+- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
+    return [self substringWithRange:NSMakeRange(from, to - from)];
 }
+
+@end
+
+
+@implementation NSString (FoundationExtensionUTF8)
 
 + (NSString *)stringWithUTF8Data:(NSData *)data {
     return [[[self alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
@@ -73,6 +91,11 @@
 - (NSData *) dataUsingUTF8Encoding {
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
+
+@end
+
+
+@implementation NSString (FoundationExtensionNumericValues)
 
 - (NSInteger)integerValueBase:(NSInteger)radix {
     NSUInteger result = 0;
@@ -95,14 +118,6 @@
 
 - (NSInteger)hexadecimalValue {
     return [self integerValueBase:16];
-}
-
-- (NSString *) substringFromIndex:(NSUInteger)from length:(NSUInteger)length {
-    return [[self substringFromIndex:from] substringToIndex:length];
-}
-
-- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to {
-    return [[self substringToIndex:to] substringFromIndex:from];
 }
 
 @end

@@ -8,18 +8,18 @@
 
 #import "NSBundleAdditions.h"
 
-NSString *NSResourceDirectory(void) {
+NSString *NSMainBundleResourceDirectory(void) {
     return [[NSBundle mainBundle] resourcePath];
 }
 
-NSString *NSPathForResourceFile(NSString *filename) {
+NSString *NSMainBundleResourcePathForFile(NSString *filename) {
     return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
 }
 
 @implementation NSBundle (FoundationExtension)
 
 - (NSString *)pathForResourceFile:(NSString *)filename {
-    return [[NSBundle mainBundle] pathForResource:filename ofType:@""];
+    return [self pathForResource:filename ofType:@""];
 }
 
 - (NSString *)pathForResource:(NSString *)filename {

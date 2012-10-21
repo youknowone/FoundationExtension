@@ -10,16 +10,20 @@
  *  @header NSObjectAdditions.h NSObject extension
  */
 
-@class NSAClass;
-
 @interface NSObject (FoundationExtension)
 
-@property(nonatomic, readonly) NSAClass *classObject;
-@property(nonatomic, readonly) const char *UTF8ClassName;
+/*!
+ *  @brief Return class name of object
+ */
 @property(nonatomic, readonly) NSString *className;
 
 /*!
- *  @brief  Invokes a method of the receiver with 3 parameter
+ *  @brief Return class name of class
+ */
++ (NSString *)className;
+
+/*!
+ *  @brief Invokes a method of the receiver with 3 parameter
  *  @param aSelector
  *      A selector that identifies the method to invoke. The method should take 3 argument of type id.
  *  @seealso -performSelector:withObject:
@@ -28,7 +32,7 @@
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3;
 /*!
- *  @brief  Invokes a method of the receiver with 4 parameter
+ *  @brief Invokes a method of the receiver with 4 parameter
  *  @param aSelector
  *      A selector that identifies the method to invoke. The method should take 4 argument of type id.
  *  @seealso -performSelector:withObject:

@@ -11,6 +11,7 @@
 #import "NSAClass.h"
 
 @implementation NSAClass
+@synthesize class=_class;
 
 - (id)initWithClass:(Class)class {
     if (class == nil) {
@@ -50,6 +51,28 @@
 
 + (id)classWithName:(NSString *)name {
     return [self classWithUTF8Name:name.UTF8String];
+}
+
+@end
+
+
+@implementation NSAClass (ClassShortcuts)
+
+- (id)alloc {
+    return [self->_class alloc];
+}
+
+- (id)allocWithZone:(NSZone *)zone {
+    return [self->_class allocWithZone:zone];
+}
+
+@end
+
+
+@implementation NSObject (NSAClass)
+
+- (NSAClass *)classObject {
+    return [NSAClass classWithClass:self.class];
 }
 
 @end

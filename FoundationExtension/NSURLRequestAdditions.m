@@ -10,7 +10,8 @@
 #import "NSURLAdditions.h"
 #import "NSURLRequestAdditions.h"
 
-@implementation NSURLRequest (FoundationExtension)
+@implementation NSURLRequest (FoundationExtensionProperty)
+
 @dynamic cachePolicy, timeoutInterval;
 #if TARGET_OS_IPHONE
 @dynamic networkServiceType;
@@ -22,6 +23,11 @@
 @dynamic HTTPBodyStream;
 #endif
 @dynamic HTTPShouldHandleCookies, HTTPShouldUsePipelining;
+
+@end
+
+
+@implementation NSURLRequest (FoundationExtensionCreations)
 
 - (id)initWithURLFormat:(NSString *)format, ... {
     va_list args;
@@ -90,7 +96,8 @@
 @end
 
 
-@implementation NSMutableURLRequest (FoundationExtension)
+@implementation NSMutableURLRequest (FoundationExtensionProperty)
+
 @dynamic cachePolicy, timeoutInterval;
 #if TARGET_OS_IPHONE
 @dynamic networkServiceType;
@@ -102,6 +109,11 @@
 @dynamic HTTPBodyStream;
 #endif
 @dynamic HTTPShouldHandleCookies, HTTPShouldUsePipelining;
+
+@end
+
+
+@implementation NSMutableURLRequest (FoundationExtensionPost)
 
 - (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     self.HTTPMethod = @"POST";
@@ -124,14 +136,25 @@
 
 @interface NSAURLRequestHTTPBodyMultiPartFormPostFormatter ()
 
-+ (NSString *)bodyBoundaryString;
-- (NSString *)bodyBoundaryString;
-+ (NSData *)bodyBoundaryWithEncoding:(NSStringEncoding)encoding;
-- (NSData *)bodyBoundary;
+- (void)_appendBodyBoundaryWithEncoding:(NSStringEncoding)encoding;
+
++ (NSString *)_bodyBoundaryString;
+- (NSString *)_bodyBoundaryString;
++ (NSData *)_bodyBoundaryWithEncoding:(NSStringEncoding)encoding;
+- (NSData *)_bodyBoundary;
 
 @end
 
 @implementation NSAURLRequestHTTPBodyMultiPartFormPostFormatter
+
+- (id)init {
+    self = [super init];
+    if (self != nil) {
+        _encoding = NSUTF8StringEncoding;
+        _body = [[NSMutableData alloc] init];
+    }
+    return self;
+}
 
 - (id)initWithEncoding:(NSStringEncoding)anEncoding {
     self = [super init];
@@ -147,9 +170,13 @@
     [super dealloc];
 }
 
+- (void)_appendBodyBoundaryWithEncoding:(NSStringEncoding)encoding {
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self _bodyBoundaryString]] dataUsingEncoding:encoding]];
+}
+
 - (void)appendBodyDataToFieldName:(NSString *)fieldName text:(NSString *)textData encoding:(NSStringEncoding)tempEncoding {
-    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:tempEncoding]];
-    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:tempEncoding]];
+    [self _appendBodyBoundaryWithEncoding:tempEncoding];
+    [_body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:tempEncoding]];
     [_body appendData:[@"Content-Type: application/text\r\n\r\n" dataUsingEncoding:tempEncoding]];
     [_body appendData:[textData dataUsingEncoding:tempEncoding]];
 }
@@ -159,21 +186,21 @@
 }
 
 - (void)appendBodyDataToFieldName:(NSString *)fieldName data:(NSData *)data {
-    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
-    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:_encoding]];
+    [self _appendBodyBoundaryWithEncoding:self->_encoding];
+    [_body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n", fieldName] dataUsingEncoding:_encoding]];
     [_body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:_encoding]];
     [_body appendData:data];
 }
 
 - (void)appendBodyDataToFieldName:(NSString *)fieldName fileName:(NSString *)fileName data:(NSData *)data {
-    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
-    [_body appendData:[[NSString stringWithFormat:@"Content-DiICosition: form-data; name=\"%@\"; filename=\"%@\"\r\n", fieldName, fileName] dataUsingEncoding:_encoding]];
+    [self _appendBodyBoundaryWithEncoding:self->_encoding];
+    [_body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n", fieldName, fileName] dataUsingEncoding:_encoding]];
     [_body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:_encoding]];
     [_body appendData:data];
 }
 
 - (void)appendBodyDataEndian {
-    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", [self bodyBoundaryString]] dataUsingEncoding:_encoding]];
+    [_body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", [self _bodyBoundaryString]] dataUsingEncoding:_encoding]];
 }
 
 - (NSData *)HTTPBody {
@@ -182,20 +209,20 @@
 
 #pragma mark private methods
 
-+ (NSString *)bodyBoundaryString {
++ (NSString *)_bodyBoundaryString {
     return @"---------------------------14737809831466499882746641449";
 }
 
-- (NSString *)bodyBoundaryString {
-    return [[self class] bodyBoundaryString];
+- (NSString *)_bodyBoundaryString {
+    return [[self class] _bodyBoundaryString];
 }
 
-+ (NSData *)bodyBoundaryWithEncoding:(NSStringEncoding)encoding {
-    return [[self bodyBoundaryString] dataUsingEncoding:encoding];
++ (NSData *)_bodyBoundaryWithEncoding:(NSStringEncoding)encoding {
+    return [[self _bodyBoundaryString] dataUsingEncoding:encoding];
 }
 
-- (NSData *)bodyBoundary {
-    return [[self class] bodyBoundaryWithEncoding:_encoding];
+- (NSData *)_bodyBoundary {
+    return [[self class] _bodyBoundaryWithEncoding:_encoding];
 }
 
 @end

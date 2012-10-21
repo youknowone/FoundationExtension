@@ -6,12 +6,30 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-FOUNDATION_EXTERN NSString *NSResourceDirectory(void);
-FOUNDATION_EXTERN NSString *NSPathForResourceFile(NSString *filename);
+/*!
+ *  @header NSBundleAdditions.h NSBundle extension
+ */
 
+/*!
+ *  @brief Returns directory path for main bundle.
+ */
+FOUNDATION_EXTERN NSString *NSMainBundleResourceDirectory(void);
+/*!
+ *  @brief Returns file path in resource directory for main bundle.
+ */
+FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename);
+
+/*!
+ *  @brief NSBundle extensions
+ */
 @interface NSBundle (FoundationExtension)
 
-- (NSString *) pathForResourceFile:(NSString *)filename;
-- (NSString *) pathForResource:(NSString *)filename __deprecated;
+/*!
+ *  @brief Returns resource file path for given filename.
+ */
+- (NSString *)pathForResourceFile:(NSString *)filename;
+
+// deprecated by renaming
+- (NSString *)pathForResource:(NSString *)filename __deprecated;
 
 @end

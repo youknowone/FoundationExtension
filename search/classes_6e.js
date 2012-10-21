@@ -21,7 +21,7 @@ var searchData=
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../category_n_s_object_07_n_s_a_class_08.html',1,'']]],
   ['nsstring_28foundationextensioncreations_29',['NSString(FoundationExtensionCreations)',['../category_n_s_string_07_foundation_extension_creations_08.html',1,'']]],
   ['nsstring_28foundationextensioncrypto_29',['NSString(FoundationExtensionCrypto)',['../category_n_s_string_07_foundation_extension_crypto_08.html',1,'']]],
-  ['nsstring_28foundationextensionnsurladditions_29',['NSString(FoundationExtensionNSURLAdditions)',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html',1,'']]],
+  ['nsstring_28foundationextensionnsurl_29',['NSString(FoundationExtensionNSURL)',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html',1,'']]],
   ['nsstring_28foundationextensionnumericvalues_29',['NSString(FoundationExtensionNumericValues)',['../category_n_s_string_07_foundation_extension_numeric_values_08.html',1,'']]],
   ['nsstring_28foundationextensionshortcuts_29',['NSString(FoundationExtensionShortcuts)',['../category_n_s_string_07_foundation_extension_shortcuts_08.html',1,'']]],
   ['nsstring_28foundationextensionutf8_29',['NSString(FoundationExtensionUTF8)',['../category_n_s_string_07_foundation_extension_u_t_f8_08.html',1,'']]],

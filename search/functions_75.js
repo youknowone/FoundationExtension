@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['url',['URL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#a6e0bcd5be3bddffbd7283606921e5b0a',1,'NSString(FoundationExtensionNSURLAdditions)']]],
-  ['urlprotocol',['URLProtocol',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#a49b442f2c343c44180fd509078e6a767',1,'NSString(FoundationExtensionNSURLAdditions)']]],
+  ['url',['URL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a962f567ccfd445bf07ccc694e4ddfb85',1,'NSString(FoundationExtensionNSURL)']]],
+  ['urlprotocol',['URLProtocol',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#aeaccd3f91c9284b0fb557918c16d0088',1,'NSString(FoundationExtensionNSURL)']]],
   ['urlrequestwithabstractpath_3a',['URLRequestWithAbstractPath:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a6d7d99e78d472f03b24ac3d23ce21696',1,'NSURLRequest(FoundationExtensionCreations)']]],
   ['urlrequestwithabstractpathformat_3a',['URLRequestWithAbstractPathFormat:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a77347f4776020cd3a08375bc74aa1a1c',1,'NSURLRequest(FoundationExtensionCreations)']]],
   ['urlrequestwithfilepath_3a',['URLRequestWithFilePath:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a0f88e1a0fd71c5dcf807f7681b7e044b',1,'NSURLRequest(FoundationExtensionCreations)']]],

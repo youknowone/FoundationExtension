@@ -10,7 +10,7 @@ var searchData=
   ['colorwithhtmlhexexpression16a_3a',['colorWithHTMLHexExpression16a:',['../category_u_i_color_07_foundation_extension_h_t_m_l_08.html#a9faa0dc19aa4da839001236187ce6c73',1,'UIColor(FoundationExtensionHTML)']]],
   ['colorwithhtmlhexexpression32_3a',['colorWithHTMLHexExpression32:',['../category_u_i_color_07_foundation_extension_h_t_m_l_08.html#a88e20a29b4067a9ba266232f2a521d79',1,'UIColor(FoundationExtensionHTML)']]],
   ['colorwithhtmlhexexpression32a_3a',['colorWithHTMLHexExpression32a:',['../category_u_i_color_07_foundation_extension_h_t_m_l_08.html#a29b9a79b741b0c2b065dbab6be5b91b7',1,'UIColor(FoundationExtensionHTML)']]],
-  ['configurationurl',['configurationURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#a4cec2a54a4d1875116059fc72d11a842',1,'NSString(FoundationExtensionNSURLAdditions)']]],
+  ['configurationurl',['configurationURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#aa415c4062fc061e54a77b10f8b4c2968',1,'NSString(FoundationExtensionNSURL)']]],
   ['configurationurlwithpath_3a',['configurationURLWithPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a89fd1c41abacefad247c83633d20cb1f',1,'NSURL(FoundationExtension)']]],
   ['currentdevicetype',['currentDeviceType',['../category_u_i_device_07_foundation_extension_08.html#abda9bf741e6b406037e34d852e033dde',1,'UIDevice(FoundationExtension)']]]
 ];

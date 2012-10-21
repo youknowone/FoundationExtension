@@ -79,17 +79,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>FoundationExtension</h1>
-<p>This library includes small Cocoa/UIKit extensions make your codes short.</p>
+<p>This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.</p>
+<ul>
+<li>Many common snippets in a method call.</li>
+<li>Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention.</li>
+</ul>
 <p>See document on <a href="http://youknowone.github.com/FoundationExtension">Github</a></p>
-<h1>How to use</h1>
+<h1>Download</h1>
+<pre class="fragment">git clone git://github.com/youknowone/FoundationExtension.git
+cd FoundationExtension
+git submodule update --init
+</pre><h1>How to use</h1>
 <ul>
 <li>Compiled library<ol type="1">
 <li>build project</li>
-</ol>
-<ol type="1">
 <li>add FoundationExtension or UIKitExtension target as dependency</li>
-</ol>
-<ol type="1">
 <li>if UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
 </ol>
 </li>
@@ -124,7 +128,7 @@ NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse
 </pre><h2>get NSData from Multipart Form POST</h2>
 <p>Foundation</p>
 <ul>
-<li>Meh...</li>
+<li>No way.</li>
 </ul>
 <p>FoundationExtension </p>
 <pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
@@ -151,7 +155,7 @@ sscanf(string.UTF8String, "%x", &amp;value);
 </pre><h2>How about base 12 string?</h2>
 <p>Foundation</p>
 <ul>
-<li>Meh...</li>
+<li>Why should foundation has this?</li>
 </ul>
 <p>FoundationExtension </p>
 <pre class="fragment">NSInteger value = [string integetValueBase:12];
@@ -167,7 +171,7 @@ for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ )
 </pre><h2>plist dictionary decode from HTTP post request</h2>
 <p>Foundation</p>
 <ul>
-<li>Meh... (get data from NSURLRequest, and from NSData.. huh?)</li>
+<li>Get data from NSURLRequest. Ehh.. so what can I do now? (Use NSPropertyListSerialization)</li>
 </ul>
 <p>FoundationExtension </p>
 <pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
@@ -179,7 +183,7 @@ NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
 <pre class="fragment">UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];</pre> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 22 2012 04:15:37 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

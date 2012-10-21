@@ -96,43 +96,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_creation_08.html">   17</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionCreation)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;- (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_creation_08.html">   12</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionCreation)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;- (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// deprecation: use NSString -smartURL</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">// deprecation: use -initWithCOntentsOfURLRequest:</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;- (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;+ (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;+ (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_serialization_08.html">   65</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionSerialization)</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;- (NSString *)hexadecimalString;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;- (id)initWithHexadecimalString:(NSString *)hexadecimal;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;+ (id)dataWithHexadecimalString:(NSString *)hexadecimal;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (NSString *)base64String;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;- (id)initWithBase64String:(NSString *)base64;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;+ (id)dataWithBase64String:(NSString *)base64;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_serialization_08.html">   64</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionSerialization)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (NSString *)hexadecimalString;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (id)initWithHexadecimalString:(NSString *)hexadecimal;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;+ (id)dataWithHexadecimalString:(NSString *)hexadecimal;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;- (NSString *)base64String;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;- (id)initWithBase64String:(NSString *)base64;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;+ (id)dataWithBase64String:(NSString *)base64;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 22 2012 04:15:36 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

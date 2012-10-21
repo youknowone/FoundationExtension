@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fileurl',['fileURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#a134a28230084abecd04e3a7fab4c5ef9',1,'NSString(FoundationExtensionNSURLAdditions)']]],
+  ['fileurl',['fileURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a4d29b8e3178ff3b79df45358df41caa4',1,'NSString(FoundationExtensionNSURL)']]],
   ['fileurlwithformat_3a',['fileURLWithFormat:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a538a979738d048e90f87cdca66c849d8',1,'NSURL(FoundationExtension)']]],
   ['format0_3a',['format0:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#a98e24c83c23f923080c0438673019f87',1,'NSString(FoundationExtensionShortcuts)']]],
   ['format_3a',['format:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#ad889bd35393bb42fba5d181d6db24a2c',1,'NSString(FoundationExtensionShortcuts)']]],

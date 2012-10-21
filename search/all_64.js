@@ -9,6 +9,7 @@ var searchData=
   ['datawithcontentsofurlrequest_3aerror_3a',['dataWithContentsOfURLRequest:error:',['../category_n_s_data_07_foundation_extension_creation_08.html#acadda0d81e18ba0894f0fcaa3429cabb',1,'NSData(FoundationExtensionCreation)']]],
   ['datawithhexadecimalstring_3a',['dataWithHexadecimalString:',['../category_n_s_data_07_foundation_extension_serialization_08.html#a0531f1cb793611606668e4f15183d41e',1,'NSData(FoundationExtensionSerialization)']]],
   ['delayedtimerwithtimeinterval_3atarget_3aselector_3a',['delayedTimerWithTimeInterval:target:selector:',['../category_n_s_timer_07_foundation_extension_08.html#aabb4a946c4ce105e7a5b949ce31ca13d',1,'NSTimer(FoundationExtension)']]],
+  ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
   ['dictionarywithcontentsofurlrequest_3a',['dictionaryWithContentsOfURLRequest:',['../category_n_s_dictionary_07_foundation_extension_08.html#a5eef6f44838abb47c47139f25d4bd106',1,'NSDictionary(FoundationExtension)']]],
   ['dictionarywithcontentsofurlrequest_3aformat_3aerror_3a',['dictionaryWithContentsOfURLRequest:format:error:',['../category_n_s_dictionary_07_foundation_extension_08.html#a0791b0f5fe752f04e2d671c803238e8c',1,'NSDictionary(FoundationExtension)']]],
   ['dictionarywithdata_3a',['dictionaryWithData:',['../category_n_s_dictionary_07_foundation_extension_08.html#a5d8b16ea646d075046b3cbdd6e1c784a',1,'NSDictionary(FoundationExtension)']]],

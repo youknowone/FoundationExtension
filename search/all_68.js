@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['hashttpprefix',['hasHTTPPrefix',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#aea8086093b06c58a4b9b7c229d197e17',1,'NSString(FoundationExtensionNSURLAdditions)']]],
-  ['hassmarturlprefix',['hasSmartURLPrefix',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_additions_08.html#aed392a83625901d327946df97efa2b25',1,'NSString(FoundationExtensionNSURLAdditions)']]],
+  ['hashttpprefix',['hasHTTPPrefix',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a6125df9a3fdb194ce71b395b55106036',1,'NSString(FoundationExtensionNSURL)']]],
+  ['hassmarturlprefix',['hasSmartURLPrefix',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#aa66dc15d1c7621209fc176aca5659ea3',1,'NSString(FoundationExtensionNSURL)']]],
   ['hexadecimalstring',['hexadecimalString',['../category_n_s_data_07_foundation_extension_serialization_08.html#ad37a765f30fff7b84cb5c3b7765d653a',1,'NSData(FoundationExtensionSerialization)']]],
   ['hexadecimalvalue',['hexadecimalValue',['../category_n_s_string_07_foundation_extension_numeric_values_08.html#ad7a4c6f3b34ff8992d69a451e1661b04',1,'NSString(FoundationExtensionNumericValues)']]],
   ['httpbody',['HTTPBody',['../category_n_s_u_r_l_request_07_foundation_extension_property_08.html#aef6d70129be1e3f2de43f957c6cb8dc6',1,'NSURLRequest(FoundationExtensionProperty)::HTTPBody()'],['../category_n_s_mutable_u_r_l_request_07_foundation_extension_property_08.html#a315b214c82a0c2aef51938347415857d',1,'NSMutableURLRequest(FoundationExtensionProperty)::HTTPBody()'],['../interface_n_s_a_u_r_l_request_h_t_t_p_body_multi_part_form_post_formatter.html#a1f556487ffd3b2f62cffbeeb60f440b9',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter::HTTPBody()']]],

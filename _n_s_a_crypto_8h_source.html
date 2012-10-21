@@ -96,38 +96,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_crypto_08.html">   16</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionCrypto)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;- (NSData *)digestByMD2;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (NSData *)digestByMD4;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;- (NSData *)digestByMD5;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;- (NSData *)digestBySHA1;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (NSData *)digestBySHA224;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (NSData *)digestBySHA256;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (NSData *)digestBySHA384;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (NSData *)digestBySHA512;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// deprecated by alternative method. use -hexadecimalString</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (NSString *)digestStringBySHA1 __deprecated;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// string conversion wrapper of NSData (FoundationExtensionCrypto)</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_crypto_08.html">   58</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionCrypto)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;- (NSData *)digestByMD5;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (NSData *)digestBySHA1;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// deprecated by alternative method. use -hexadecimalString</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_data_07_foundation_extension_crypto_08.html">   12</a></span>&#160;<span class="keyword">@interface </span>NSData (FoundationExtensionCrypto)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- (NSData *)digestByMD2;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;- (NSData *)digestByMD4;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (NSData *)digestByMD5;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;- (NSData *)digestBySHA1;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;- (NSData *)digestBySHA224;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (NSData *)digestBySHA256;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;- (NSData *)digestBySHA384;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;- (NSData *)digestBySHA512;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;- (NSString *)digestStringBySHA1 __deprecated;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_crypto_08.html">   57</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionCrypto)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;- (NSData *)digestByMD5;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;- (NSData *)digestBySHA1;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;- (NSString *)digestStringBySHA1 __deprecated;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 22 2012 04:15:36 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.2
 </small></address>

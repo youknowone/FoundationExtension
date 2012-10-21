@@ -6,10 +6,6 @@
 //  Copyright (c) 2012 youknowone.org All rights reserved.
 //
 
-/*!
- *  @headerfile UIKitExtension.h UIKit extension with common shortcuts.
- */
-
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 

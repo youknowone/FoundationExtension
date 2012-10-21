@@ -133,7 +133,7 @@
 
 @end
 
-@implementation NSString (FoundationExtensionNSURLAdditions)
+@implementation NSString (FoundationExtensionNSURL)
 
 - (BOOL)hasHTTPPrefix {
     NSString *regexkey = @"^https?://.*";

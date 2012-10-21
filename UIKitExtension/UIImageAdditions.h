@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile UIImageAdditions.h UIImage extension.
- */
-
-/*!
  *  @brief UIImage extension
  */
 @interface UIImage (FoundationExtension)

@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-/*!
- *  @headerfile UIControlAdditions.h UIControl extension and internal protocol.
- */
-
 @interface UIControl (FoundationExtension)
 
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event;

@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile UIWebViewAdditions.h UIWebView extension
- */
-
-/*!
  *  @brief UIWebView extension
  */
 @interface UIWebView (FoundationExtension)
@@ -21,7 +17,7 @@
  */
 - (void)loadRequestForURL:(NSURL *)URL;
 
-// use NSString -fileURL
+//! @deprecated use NSString::fileURL
 - (void)loadRequestForFilePath:(NSString *)filePath __deprecated;
 
 @end

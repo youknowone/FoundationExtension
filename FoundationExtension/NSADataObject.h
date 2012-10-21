@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSADataObject.h Common data container.
- */
-
-/*!
  *  @brief Data container for 2 objects.
  */
 @interface NSATuple: NSObject {
@@ -42,7 +38,7 @@
 - (id)initWithFirst:(id)first second:(id)second;
 /*!
  *  @brief Creates and returns a tuple containing first as first object and second as second object.
- *  @see -initWithFirst:second:
+ *  @see initWithFirst:second:
  */
 + (id)tupleWithFirst:(id)first second:(id)second;
 
@@ -91,7 +87,7 @@
 - (id)initWithFirst:(id)first second:(id)second third:(id)third;
 /*!
  *  @brief Creates and returns a triple containing first as first object, second as second object and third as third object.
- *  @see -initWithFirst:second:third:
+ *  @see initWithFirst:second:third:
  */
 + (id)tripleWithFirst:(id)first second:(id)second third:(id)third;
 

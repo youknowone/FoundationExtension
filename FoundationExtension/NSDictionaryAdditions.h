@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSDictionaryAdditions.h NSDictionary extension
- */
-
-/*!
  *  @brief Creation methods extension
  */
 
@@ -21,13 +17,13 @@
  *  @param data
  *      An NSData object containing bytes of plist file representation.
  *  @return A dictionary initialized to contain the contents in data. Returns nil if the contents of the request can’t be parsed into a dictionary. The returned object might be different than the original receiver.
- *  @see -initWithData:options:format:error:
- *  @see +dictionaryWithData:options:format:error:
+ *  @see initWithData:options:format:error:
+ *  @see dictionaryWithData:options:format:error:
  */
 - (id)initWithData:(NSData *)data;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of data. (plist)
- *  @see -initWithData:
+ *  @see initWithData:
  */
 + (id)dictionaryWithData:(NSData *)data;
 
@@ -40,13 +36,13 @@
  *  @param error
  *      If the method does not complete successfully, upon return contains an NSError object that describes the problem.
  *  @return A dictionary initialized to contain the contents in data. Returns nil if the contents of the request can’t be parsed into a dictionary. The returned object might be different than the original receiver.
- *  @see -initWithData:
- *  @see +dictionaryWithData:
+ *  @see initWithData:
+ *  @see dictionaryWithData:
  */
 - (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of data. (plist)
- *  @see -initWithData:options:format:error:
+ *  @see initWithData:options:format:error:
  */
 + (id)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
@@ -55,8 +51,8 @@
  *  @param request
  *      The URLRequest of a file containing a string representation of a dictionary produced by the '-writeToURL:atomically:' method.
  *  @return A dictionary initialized to contain the contents specified by request. Returns nil if the location can’t be opened or if the contents of the request can’t be parsed into a dictionary. The returned object might be different than the original receiver.
- *  @see -initWithContentsOfURLRequest:format:error:
- *  @see +dictionaryWithContentsOfURLRequest:format:error:
+ *  @see initWithContentsOfURLRequest:format:error:
+ *  @see dictionaryWithContentsOfURLRequest:format:error:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
@@ -74,8 +70,8 @@
  *  @param error
  *      If the method does not complete successfully, upon return contains an NSError object that describes the problem.
  *  @result A dictionary initialized to contain the contents specified by request. Returns nil if the location can’t be opened or if the contents of the request can’t be parsed into a dictionary. The returned object might be different than the original receiver.
- *  @see -initWithContentsOfURLRequest:
- *  @see +dictionaryWithContentsOfURLRequest:
+ *  @see initWithContentsOfURLRequest:
+ *  @see dictionaryWithContentsOfURLRequest:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!

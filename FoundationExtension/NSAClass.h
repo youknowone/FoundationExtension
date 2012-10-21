@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSAClass.h <objc/runtime.h> object wrapper.
- */
-
-/*!
  *  @brief Object wrapper for <objc/runtime.h>
  */
 @interface NSAClass: NSObject {
@@ -35,7 +31,7 @@
 /*!
  *  @brief Returns class name.
  *  @see class_getName
- *  @see -UTF8Name
+ *  @see UTF8Name
  */
 @property(nonatomic, readonly) NSString *name;
 

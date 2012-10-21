@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSURLAdditions.h NSURL extensions
- */
-
-/*!
  *  @brief Creation method extension
  */
 @interface NSURL (FoundationExtension)
@@ -49,24 +45,27 @@
 - (id)initSmartURLWithPath:(NSString *)path;
 /*!
  *  @brief Initializes and returns a newly created NSURL referencing any URL decodable by protocol prefix.
- *  @see -initSmartURLWithPath:
+ *  @see initSmartURLWithPath:
  */
 + (id)smartURLWithPath:(NSString *)path;
 
-// abstract renamed abstract-> smart
+//! @deprecated Use #initSmartURLWithPath:
 - (id)initWithAbstractPath:(NSString *)path __deprecated;
 
-// format shortcut deprecations
-// use as like below:
-// [NSURL URLWithFormat:@"http://github.com/%@", @"youknowone"]
-// => [@"http://github.com/%@" format0:nil, @"youknowone"].URL
+//! @deprecated Use NSString::smartURL and NSString::format:...
 - (id)initWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use NSString::URL and NSString::format:...
 - (id)initWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use NSString::fileURL and NSString::format:...
 - (id)initFileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 
+//! @deprecated Use NSString::smartURL
 + (NSURL *)URLWithAbstractPath:(NSString *)path __deprecated;
+//! @deprecated Use NSString::smartURL and NSString::format:...
 + (NSURL *)URLWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use NSString::URL and NSString::format:...
 + (NSURL *)URLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use NSString::fileURL and NSString::format:...
 + (NSURL *)fileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 
 @end
@@ -74,18 +73,18 @@
 /*!
  *  @brief NSString shortcut to create NSURL
  */
-@interface NSString (FoundationExtensionNSURLAdditions)
+@interface NSString (FoundationExtensionNSURL)
 
 /*!
  *  @brief Returns a Boolean value that indicates whether 'http://' or 'https://' matches the beginning characters of the receiver.
  *  @return YES if 'http://' or 'https://' matches the beginning characters of the receiver, otherwise NO. Returns NO if aString is empty.
- *  @see -hasPrefix:
+ *  @see hasPrefix:
  */
 - (BOOL)hasHTTPPrefix;
 /*!
  *  @brief Returns a Boolean value that indicates whether 'http://', 'https://', 'res://' or 'conf://' matches the beginning characters of the receiver.
  *  @return YES if 'http://', 'https://', 'res://' or 'conf://' matches the beginning characters of the receiver, otherwise NO. Returns NO if aString is empty.
- *  @see -hasPrefix:
+ *  @see hasPrefix:
  */
 - (BOOL)hasSmartURLPrefix;
 
@@ -120,11 +119,11 @@
  */
 - (NSURL *)smartURL;
 
-// abstract renamed abstract -> smart
+//! @deprecated Use #smartURL
 - (NSURL *)abstractURL __deprecated;
-// renamed hasURLPrefix -> hasHTTPPrefix
+//! @deprecated Use #hasHTTPPrefix
 - (BOOL)hasURLPrefix __deprecated;
-// renamed pathProtocol -> URLProtocol
+//! @deprecated Use #URLProtocol
 - (NSString *)pathProtocol;
 
 @end

@@ -6,10 +6,6 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-/*!
- *  @headerfile NSAStringEncoding.h This defines various NSString encoding codes.
- */
-
 enum {
     //  NSMacOSRomanStringEncoding          = 0x80000000,
     NSMacOSJapaneseStringEncoding           = 0x80000001,

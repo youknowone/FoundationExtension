@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile UIScrolViewAdditions.h UIScrollView extension
- */
-
-/*!
  *  @brief UIScrollView shortcuts
  */
 @interface UIScrollView (FoundationExtension)

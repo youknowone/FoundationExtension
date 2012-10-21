@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSURLRequestAdditions.h NSURLRequest extension
- */
-
-/*!
  *  @brief NSURLRequest property shortcut for readonly getter methods
  */
 @interface NSURLRequest (FoundationExtensionProperty)
@@ -36,9 +32,9 @@
 
 /*!
  *  @brief deprecated creation shortcuts
+ *  @deprecated Use initWithURL:
  */
 @interface NSURLRequest (FoundationExtensionCreations)
-// deprecated shortcuts. Use initWithURL:
 
 - (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 - (id)initWithFilePath:(NSString *)filePath __deprecated;

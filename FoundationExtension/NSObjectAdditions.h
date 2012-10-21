@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @headerfile NSObjectAdditions.h NSObject extension
+ *  @brief NSObject extensions
  */
 
 @interface NSObject (FoundationExtension)
@@ -29,9 +29,9 @@
  *  @param object1 a parameter
  *  @param object2 a parameter
  *  @param object3 a parameter
- *  @see -performSelector:withObject:
- *  @see -performSelector:withObject:withObject:
- *  @see -performSelector:withObject:withObject:withObject:withObject:
+ *  @see performSelector:withObject:
+ *  @see performSelector:withObject:withObject:
+ *  @see performSelector:withObject:withObject:withObject:withObject:
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3;
 /*!
@@ -42,9 +42,9 @@
  *  @param object2 a parameter
  *  @param object3 a parameter
  *  @param object4 a parameter
- *  @see -performSelector:withObject:
- *  @see -performSelector:withObject:withObject:
- *  @see -performSelector:withObject:withObject:withObject:
+ *  @see performSelector:withObject:
+ *  @see performSelector:withObject:withObject:
+ *  @see performSelector:withObject:withObject:withObject:
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4;
 

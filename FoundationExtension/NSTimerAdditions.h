@@ -6,10 +6,6 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-/*!
- *  @headerfile NSTimerAdditions.h NSTimer shortcuts. Unclear conventioned.
- */
-
 @interface NSTimer (FoundationExtension)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector;

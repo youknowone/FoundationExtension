@@ -6,10 +6,6 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-/*!
- *  @headerfile FoundationExtension.h Foundation extension with common shortcuts.
- */
-
 #import <Foundation/Foundation.h>
 
 #import <FoundationExtension/NSObjectAdditions.h>

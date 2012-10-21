@@ -7,13 +7,8 @@
 //
 
 /*!
- *  @headerfile NSDataAdditions.h NSData extension
- */
-
-/*!
  *  @brief Creation methods extension
  */
-
 @interface NSData (FoundationExtensionCreation)
 
 /*!
@@ -21,13 +16,13 @@
  *  @param request
  *      The URLRequest from which to read data.
  *  @return An NSData object initialized with the data from contents specified by request. The returned object might be different than the original receiver.
- *  @see -initWithContentsOfURLRequest:error:
- *  @see +dataWithContentsOfURLRequest:error:
+ *  @see initWithContentsOfURLRequest:error:
+ *  @see dataWithContentsOfURLRequest:error:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
- *  @see -initWithContentsOfURLRequest:
+ *  @see initWithContentsOfURLRequest:
  */
 + (id)dataWithContentsOfURLRequest:(NSURLRequest *)request;
 
@@ -38,25 +33,29 @@
  *  @param errorPtr
  *      If there is an error reading in the data, upon return contains an NSError object that describes the problem.
  *  @return An NSData object initialized with the data from contents specified by request. The returned object might be different than the original receiver.
- *  @see -initWithContentsOfURLRequest:
- *  @see +dataWithContentsOfURLRequest:
+ *  @see initWithContentsOfURLRequest:
+ *  @see dataWithContentsOfURLRequest:
  */
 - (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
- *  @see -initWithContentsOfURLRequest:error:
+ *  @see initWithContentsOfURLRequest:error:
  */
 + (id)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
 
-// deprecation: use NSString -smartURL
+//! @deprecated Use initWithContentOfURL: and NSString::smartURL
 - (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;
+//! @deprecated Use dataWithContentOfURL: and NSString::-smartURL
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;
 
+//! @deprecated Use initWithContentOfURL:options:error and NSString::-smartURL
 - (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
+//! @deprecated Use dataWithContentOfURL:options:error and NSString::-smartURL
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
 
-// deprecation: use -initWithCOntentsOfURLRequest:
+//! @deprecated Use initWithContentsOfURLRequest: with NSMutableURLRequest
 - (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
+//! @deprecated Use dataWithContentsOfURLRequest: with NSMutableURLRequest
 + (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 
 @end
@@ -88,7 +87,7 @@
 - (id)initWithHexadecimalString:(NSString *)hexadecimal;
 /*!
  *  @brief Creates and returns deserialized data from hexadecimal string.
- *  @see -initWithHexadecimalString:
+ *  @see initWithHexadecimalString:
  */
 + (id)dataWithHexadecimalString:(NSString *)hexadecimal;
 
@@ -105,7 +104,7 @@
 - (id)initWithBase64String:(NSString *)base64;
 /*!
  *  @brief Creates and returns deserialized data from base64 string.
- *  @see -initWithBase64String:
+ *  @see initWithBase64String:
  */
 + (id)dataWithBase64String:(NSString *)base64;
 

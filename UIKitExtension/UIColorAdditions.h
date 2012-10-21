@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile UIColorAdditions.h UIColor extension
- */
-
-/*!
  *  @brief UIColor HTML color creations
  */
 @interface UIColor (FoundationExtensionHTML)

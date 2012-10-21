@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSACrypto.h CommonCrypto shortcuts.
- */
-
-/*!
  *  @brief Shortcuts for CommonCrypto digest.
  */
 @interface NSData (FoundationExtensionCrypto)
@@ -48,20 +44,24 @@
  */
 - (NSData *)digestBySHA512;
 
-// deprecated by alternative method. use -hexadecimalString
+//! @deprecated Use NSString::hexadecimalString
 - (NSString *)digestStringByMD5 __deprecated;
+//! @deprecated Use NSString::hexadecimalString
 - (NSString *)digestStringBySHA1 __deprecated;
 
 @end
 
-// string conversion wrapper of NSData (FoundationExtensionCrypto)
+/*!
+ *  @brief Shortcuts for CommonCrypto digest.
+ */
 @interface NSString (FoundationExtensionCrypto)
 
 - (NSData *)digestByMD5;
 - (NSData *)digestBySHA1;
 
-// deprecated by alternative method. use -hexadecimalString
+//! @deprecated Use NSString::hexadecimalString
 - (NSString *)digestStringByMD5 __deprecated;
+//! @deprecated Use NSString::hexadecimalString
 - (NSString *)digestStringBySHA1 __deprecated;
 
 @end

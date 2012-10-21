@@ -7,10 +7,6 @@
 //
 
 /*!
- *  @headerfile NSBundleAdditions.h NSBundle extension
- */
-
-/*!
  *  @brief Returns directory path for main bundle.
  */
 FOUNDATION_EXTERN NSString *NSMainBundleResourceDirectory(void);
@@ -29,7 +25,7 @@ FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename);
  */
 - (NSString *)pathForResourceFile:(NSString *)filename;
 
-// deprecated by renaming
+//! @deprecated Use -pathForResourceFile:
 - (NSString *)pathForResource:(NSString *)filename __deprecated;
 
 @end

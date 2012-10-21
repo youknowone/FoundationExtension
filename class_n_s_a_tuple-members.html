@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>FoundationExtension: Main Page</title>
+<title>FoundationExtension: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,9 +36,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -58,7 +58,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,110 +79,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">FoundationExtension Documentation</div>  </div>
+<div class="title">NSATuple Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>FoundationExtension</h1>
-<p>This library includes small Cocoa/UIKit extensions make your codes short.</p>
-<p>See document on <a href="http://youknowone.github.com/FoundationExtension">Github</a></p>
-<h1>How to use</h1>
-<ul>
-<li>Compiled library<ol type="1">
-<li>build project</li>
-</ol>
-<ol type="1">
-<li>add FoundationExtension or UIKitExtension target as dependency</li>
-</ol>
-<ol type="1">
-<li>if UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
-</ol>
-</li>
-<li>Directy source<ol type="1">
-<li>add files what you need to your project</li>
-</ol>
-</li>
-</ul>
-<h1>Why useful</h1>
-<p>Make your code short! Do not allow evil objc to make your code verbose. This library includes many shortcuts for common work.</p>
-<h2>NSData from URL</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *URLString = [NSSring stringWithFormat:@"http://"HOST_URL"/api/%@", key];
-NSURL *URL = [NSURL URLWithString:URLString];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSURL *URL = [[@"http://"HOST_URL"/api/%@" format:key] URL];
-</pre><h2>performSelector, with 3 object</h2>
-<p>Foundation</p>
-<ul>
-<li>No way. You should use &lt;objc/runtime.h&gt;</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">[obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
-</pre><h2>get NSData from post request</h2>
-<p>Foundation </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMethod:@"POST"];
-[request setHTTPBody:@"field1=value1"];
-NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSData *data = [NSData dataWithContentsOfURL:URL postBody:@"field1":@"value1"} encoding:NSUTF8StringEncoding];
-</pre><h2>get NSData from Multipart Form POST</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMultiPartFormPostBody:@"filename":data} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-</pre><h2>get class name</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *className = obj.classObject.name;
-</pre><h2>encode base64 string (especially for IAP)</h2>
-<p>Foundation</p>
-<ul>
-<li>No way.</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSString *base64String = [data base64String];
-</pre><h2>get hexadecimal value from base 16 string</h2>
-<p>Foundation </p>
-<pre class="fragment">int value;
-sscanf(string.UTF8String, "%x", &amp;value);
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string hexadecimalValue];
-</pre><h2>How about base 12 string?</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string integetValueBase:12];
-</pre><h2>md5 hash</h2>
-<p>Foundation </p>
-<pre class="fragment">unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
-CC_MD5([data bytes], (CC_LONG)[self length], hashedChars);
-NSMutableString *result = [[NSMutableString alloc] init];
-for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ )
-    [result appendFormat:@"%02x", *(hashedChars+i)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *result = [data digestStringByMD5];
-</pre><h2>plist dictionary decode from HTTP post request</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh... (get data from NSURLRequest, and from NSData.. huh?)</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPPostBody:@"key1":@"value1"} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
-</pre><h2>UIColor from HTML color code</h2>
-<p>FoundationExtension </p>
-<pre class="fragment">UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];</pre> </div></div><!-- contents -->
+
+<p>This is the complete list of members for <a class="el" href="interface_n_s_a_tuple.html">NSATuple</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html#ae6bce12a000bbfbc59cd5fcd824c0032">_first</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html#a22b3b12675184c2492850cbc45a6dd72">_second</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html#af53b89f629a1ba13551b515668a3bede">first</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_n_s_a_tuple.html#a3be13c7ef1f57b5a4b66ba86ddcb2e18">initWithFirst:second:</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html#a4e7ef7db32eb78a92064347422857f76">second</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"></td></tr>
+  <tr><td class="entry">-&#160;</td><td><a class="el" href="interface_n_s_a_tuple.html#a37d153589567ad1444f1fa4378d1d307">swap</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry">+&#160;</td><td><a class="el" href="interface_n_s_a_tuple.html#a93b9ba4f09e28f22bae82ab84b72fdf1">tuple</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry">+&#160;</td><td><a class="el" href="interface_n_s_a_tuple.html#a965fca01afa981949fba7b711d0f81ab">tupleWithFirst:second:</a></td><td class="entry"><a class="el" href="interface_n_s_a_tuple.html">NSATuple</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+</table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>FoundationExtension: Main Page</title>
+<title>FoundationExtension: NSMutableURLRequest(FoundationExtensionPost) Category Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,9 +36,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -58,7 +58,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,110 +79,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="category_n_s_mutable_u_r_l_request_07_foundation_extension_post_08-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">FoundationExtension Documentation</div>  </div>
+<div class="title">NSMutableURLRequest(FoundationExtensionPost) Category Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>FoundationExtension</h1>
-<p>This library includes small Cocoa/UIKit extensions make your codes short.</p>
-<p>See document on <a href="http://youknowone.github.com/FoundationExtension">Github</a></p>
-<h1>How to use</h1>
-<ul>
-<li>Compiled library<ol type="1">
-<li>build project</li>
-</ol>
-<ol type="1">
-<li>add FoundationExtension or UIKitExtension target as dependency</li>
-</ol>
-<ol type="1">
-<li>if UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
-</ol>
-</li>
-<li>Directy source<ol type="1">
-<li>add files what you need to your project</li>
-</ol>
-</li>
+
+<p>NSMutableURLRequest POST extension.  
+ <a href="category_n_s_mutable_u_r_l_request_07_foundation_extension_post_08.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="_n_s_u_r_l_request_additions_8h_source.html">NSURLRequestAdditions.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a98252c627365042ea0024dbdfbf16804"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_n_s_mutable_u_r_l_request_07_foundation_extension_post_08.html#a98252c627365042ea0024dbdfbf16804">setHTTPPostBody:encoding:</a></td></tr>
+<tr class="memdesc:a98252c627365042ea0024dbdfbf16804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format.  <a href="#a98252c627365042ea0024dbdfbf16804"></a><br/></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>NSMutableURLRequest POST extension. </p>
+</div><h2>Member Function Documentation</h2>
+<a class="anchor" id="a98252c627365042ea0024dbdfbf16804"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) setHTTPPostBody: </td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>bodyDictionary</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">encoding:</td>
+          <td></td>
+          <td class="paramtype">(NSStringEncoding)&#160;</td>
+          <td class="paramname"><em>encoding</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bodyDictionary</td><td>The new request body of the receiver to the specified data from dictionary with url form encoding. Objects should be NSString compatible objects only. </td></tr>
+    <tr><td class="paramname">encoding</td><td>String encoding of bodyDictionary values. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd>setHTTPBody: </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this category was generated from the following file:<ul>
+<li>FoundationExtension/<a class="el" href="_n_s_u_r_l_request_additions_8h_source.html">NSURLRequestAdditions.h</a></li>
 </ul>
-<h1>Why useful</h1>
-<p>Make your code short! Do not allow evil objc to make your code verbose. This library includes many shortcuts for common work.</p>
-<h2>NSData from URL</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *URLString = [NSSring stringWithFormat:@"http://"HOST_URL"/api/%@", key];
-NSURL *URL = [NSURL URLWithString:URLString];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSURL *URL = [[@"http://"HOST_URL"/api/%@" format:key] URL];
-</pre><h2>performSelector, with 3 object</h2>
-<p>Foundation</p>
-<ul>
-<li>No way. You should use &lt;objc/runtime.h&gt;</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">[obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
-</pre><h2>get NSData from post request</h2>
-<p>Foundation </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMethod:@"POST"];
-[request setHTTPBody:@"field1=value1"];
-NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSData *data = [NSData dataWithContentsOfURL:URL postBody:@"field1":@"value1"} encoding:NSUTF8StringEncoding];
-</pre><h2>get NSData from Multipart Form POST</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMultiPartFormPostBody:@"filename":data} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-</pre><h2>get class name</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *className = obj.classObject.name;
-</pre><h2>encode base64 string (especially for IAP)</h2>
-<p>Foundation</p>
-<ul>
-<li>No way.</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSString *base64String = [data base64String];
-</pre><h2>get hexadecimal value from base 16 string</h2>
-<p>Foundation </p>
-<pre class="fragment">int value;
-sscanf(string.UTF8String, "%x", &amp;value);
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string hexadecimalValue];
-</pre><h2>How about base 12 string?</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string integetValueBase:12];
-</pre><h2>md5 hash</h2>
-<p>Foundation </p>
-<pre class="fragment">unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
-CC_MD5([data bytes], (CC_LONG)[self length], hashedChars);
-NSMutableString *result = [[NSMutableString alloc] init];
-for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ )
-    [result appendFormat:@"%02x", *(hashedChars+i)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *result = [data digestStringByMD5];
-</pre><h2>plist dictionary decode from HTTP post request</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh... (get data from NSURLRequest, and from NSData.. huh?)</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPPostBody:@"key1":@"value1"} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
-</pre><h2>UIColor from HTML color code</h2>
-<p>FoundationExtension </p>
-<pre class="fragment">UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];</pre> </div></div><!-- contents -->
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">

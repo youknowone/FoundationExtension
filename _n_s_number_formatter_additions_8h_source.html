@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>FoundationExtension: Main Page</title>
+<title>FoundationExtension: FoundationExtension/NSNumberFormatterAdditions.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -36,10 +36,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
-      <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -58,7 +58,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
-</div><!-- top -->
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -73,110 +78,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_a2bad244285ac6d8198735cc6224c7c2.html">FoundationExtension</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">FoundationExtension Documentation</div>  </div>
+<div class="title">NSNumberFormatterAdditions.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>FoundationExtension</h1>
-<p>This library includes small Cocoa/UIKit extensions make your codes short.</p>
-<p>See document on <a href="http://youknowone.github.com/FoundationExtension">Github</a></p>
-<h1>How to use</h1>
-<ul>
-<li>Compiled library<ol type="1">
-<li>build project</li>
-</ol>
-<ol type="1">
-<li>add FoundationExtension or UIKitExtension target as dependency</li>
-</ol>
-<ol type="1">
-<li>if UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
-</ol>
-</li>
-<li>Directy source<ol type="1">
-<li>add files what you need to your project</li>
-</ol>
-</li>
-</ul>
-<h1>Why useful</h1>
-<p>Make your code short! Do not allow evil objc to make your code verbose. This library includes many shortcuts for common work.</p>
-<h2>NSData from URL</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *URLString = [NSSring stringWithFormat:@"http://"HOST_URL"/api/%@", key];
-NSURL *URL = [NSURL URLWithString:URLString];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSURL *URL = [[@"http://"HOST_URL"/api/%@" format:key] URL];
-</pre><h2>performSelector, with 3 object</h2>
-<p>Foundation</p>
-<ul>
-<li>No way. You should use &lt;objc/runtime.h&gt;</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">[obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
-</pre><h2>get NSData from post request</h2>
-<p>Foundation </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMethod:@"POST"];
-[request setHTTPBody:@"field1=value1"];
-NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSData *data = [NSData dataWithContentsOfURL:URL postBody:@"field1":@"value1"} encoding:NSUTF8StringEncoding];
-</pre><h2>get NSData from Multipart Form POST</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPMultiPartFormPostBody:@"filename":data} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-</pre><h2>get class name</h2>
-<p>Foundation </p>
-<pre class="fragment">NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *className = obj.classObject.name;
-</pre><h2>encode base64 string (especially for IAP)</h2>
-<p>Foundation</p>
-<ul>
-<li>No way.</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSString *base64String = [data base64String];
-</pre><h2>get hexadecimal value from base 16 string</h2>
-<p>Foundation </p>
-<pre class="fragment">int value;
-sscanf(string.UTF8String, "%x", &amp;value);
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string hexadecimalValue];
-</pre><h2>How about base 12 string?</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh...</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSInteger value = [string integetValueBase:12];
-</pre><h2>md5 hash</h2>
-<p>Foundation </p>
-<pre class="fragment">unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
-CC_MD5([data bytes], (CC_LONG)[self length], hashedChars);
-NSMutableString *result = [[NSMutableString alloc] init];
-for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ )
-    [result appendFormat:@"%02x", *(hashedChars+i)];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *result = [data digestStringByMD5];
-</pre><h2>plist dictionary decode from HTTP post request</h2>
-<p>Foundation</p>
-<ul>
-<li>Meh... (get data from NSURLRequest, and from NSData.. huh?)</li>
-</ul>
-<p>FoundationExtension </p>
-<pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
-[request setHTTPPostBody:@"key1":@"value1"} encoding:NSUTF8StringEncoding];
-NSData *data = [NSData dataWithContentOfURLRequest:request];
-NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
-</pre><h2>UIColor from HTML color code</h2>
-<p>FoundationExtension </p>
-<pre class="fragment">UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];</pre> </div></div><!-- contents -->
+<a href="_n_s_number_formatter_additions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  NSNumberFormatterAdditions.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  FoundationExtension</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by youknowone on 10. 11. 1..</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html">    9</a></span>&#160;<span class="keyword">@interface </span>NSNumberFormatter (FoundationExtension)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#a4e3e4ee021e4030393dc24d56dd7b75f">   11</a></span>&#160;<span class="keyword">@property</span>(assign) NSNumberFormatterStyle numberStyle;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#af5653a7ed52e6fbef666e0c3214b413b">   12</a></span>&#160;<span class="keyword">@property</span>(assign) BOOL generatesDecimalNumbers;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#a1fbefabd238e2edf5ee2be28594129ae">   13</a></span>&#160;<span class="keyword">@property</span>(assign) NSLocale *locale;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;+ (NSNumberFormatter *)formatter;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;- (id)initWithNumberStyle:(NSNumberFormatterStyle)style;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;+ (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;+ (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;+ (NSString *)formattedStringByDecimalStyleForInteger:(NSInteger)integer;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@end</span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Mon Oct 22 2012 02:12:30 for FoundationExtension by &#160;<a href="http://www.doxygen.org/index.html">

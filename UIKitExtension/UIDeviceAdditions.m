@@ -8,6 +8,8 @@
 
 #import "UIDeviceAdditions.h"
 
+#import "debug.h"
+
 @implementation UIDevice (FoundationExtension)
 
 + (NSString *)uniqueIdentifier {

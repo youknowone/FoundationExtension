@@ -37,6 +37,19 @@
 		38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
 		38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3873044F133732DE004C8E89 /* UIKitExtensionTests.h */; };
 		38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38730451133732DE004C8E89 /* UIKitExtensionTests.m */; };
+		38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
+		38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
+		38A90FDD163591F7001DB09E /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequestAdditions.m */; };
+		38A90FDE163591FC001DB09E /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURLAdditions.m */; };
+		38A90FDF163591FF001DB09E /* NSTimerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A60161AD9AE00C5CE06 /* NSTimerAdditions.m */; };
+		38A90FE016359201001DB09E /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSStringAdditions.m */; };
+		38A90FE116359202001DB09E /* NSPathUtilitiesAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilitiesAddtions.m */; };
+		38A90FE216359208001DB09E /* NSNumberFormatterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatterAdditions.m */; };
+		38A90FE31635920B001DB09E /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionaryAdditions.m */; };
+		38A90FE41635920D001DB09E /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDateAdditions.m */; };
+		38A90FE51635920F001DB09E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSDataAdditions.m */; };
+		38A90FE616359211001DB09E /* NSBundleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundleAdditions.m */; };
+		38A90FE716359213001DB09E /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArrayAdditions.m */; };
 		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
@@ -69,6 +82,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		38A90FD916358FBD001DB09E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38C98B52161AE30300C4A389;
+			remoteInfo = UIKitExtension;
+		};
 		38C7A98C1495181800381910 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 383764CB13373154007072FD /* Project object */;
@@ -179,6 +199,7 @@
 				38730442133732DE004C8E89 /* UIKit.framework in Frameworks */,
 				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
 				38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */,
+				38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +456,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				38A90FDA16358FBD001DB09E /* PBXTargetDependency */,
 			);
 			name = UIKitExtensionTests;
 			productName = UIKitExtensionTests;
@@ -585,6 +607,7 @@
 			files = (
 				38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */,
 				382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */,
+				38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,12 +658,28 @@
 				3868F7DB162D9CDE00C31163 /* UIImageAdditions.m in Sources */,
 				3868F7DC162D9CDE00C31163 /* UIScrollViewAdditions.m in Sources */,
 				3868F7DE162D9CDE00C31163 /* UIWebViewAdditions.m in Sources */,
+				38A90FDD163591F7001DB09E /* NSURLRequestAdditions.m in Sources */,
+				38A90FDE163591FC001DB09E /* NSURLAdditions.m in Sources */,
+				38A90FDF163591FF001DB09E /* NSTimerAdditions.m in Sources */,
+				38A90FE016359201001DB09E /* NSStringAdditions.m in Sources */,
+				38A90FE116359202001DB09E /* NSPathUtilitiesAddtions.m in Sources */,
+				38A90FE216359208001DB09E /* NSNumberFormatterAdditions.m in Sources */,
+				38A90FE31635920B001DB09E /* NSDictionaryAdditions.m in Sources */,
+				38A90FE41635920D001DB09E /* NSDateAdditions.m in Sources */,
+				38A90FE51635920F001DB09E /* NSDataAdditions.m in Sources */,
+				38A90FE616359211001DB09E /* NSBundleAdditions.m in Sources */,
+				38A90FE716359213001DB09E /* NSArrayAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		38A90FDA16358FBD001DB09E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38C98B52161AE30300C4A389 /* UIKitExtension */;
+			targetProxy = 38A90FD916358FBD001DB09E /* PBXContainerItemProxy */;
+		};
 		38C7A98D1495181800381910 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38C7A9711495181800381910 /* FoundationExtension */;
@@ -686,7 +725,8 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
-					"-all_load",
+					"-force_load",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/libUIKitExtension.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -708,7 +748,8 @@
 				OTHER_LDFLAGS = (
 					"-framework",
 					SenTestingKit,
-					"-all_load",
+					"-force_load",
+					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/libUIKitExtension.a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

@@ -9,7 +9,7 @@
 #import "UIScrollViewAdditions.h"
 
 
-@implementation UIScrollView (FoundationExtension)
+@implementation UIScrollView (UIKitExtension)
 
 - (CGRect) contentFrame {
     CGRect f;

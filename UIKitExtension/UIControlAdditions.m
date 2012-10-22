@@ -8,7 +8,7 @@
 
 #import "UIControlAdditions.h"
 
-@implementation UIControl (FoundationExtension)
+@implementation UIControl (UIKitExtension)
 
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event {
     NSArray *targets = [[self allTargets] allObjects];

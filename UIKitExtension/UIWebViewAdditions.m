@@ -8,7 +8,7 @@
 
 #import "UIWebViewAdditions.h"
 
-@implementation UIWebView (FoundationExtension)
+@implementation UIWebView (UIKitExtension)
 
 - (void)loadRequestForURL:(NSURL *)URL {
     [self loadRequest:[NSURLRequest requestWithURL:URL]];

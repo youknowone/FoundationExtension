@@ -9,7 +9,7 @@
 /*!
  *  @brief UIScrollView shortcuts
  */
-@interface UIScrollView (FoundationExtension)
+@interface UIScrollView (UIKitExtension)
 
 /*!
  *  @brief frame representation for -contentSize

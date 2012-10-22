@@ -9,7 +9,7 @@
 /*!
  *  @brief UIImage extension
  */
-@interface UIImage (FoundationExtension)
+@interface UIImage (UIKitExtension)
 
 /*!
  *  @brief Resized image by given size.

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIControl (FoundationExtension)
+@interface UIControl (UIKitExtension)
 
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event;
 

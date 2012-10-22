@@ -10,7 +10,7 @@
 
 #import "UIImageAdditions.h"
 
-@implementation UIImage (FoundationExtension)
+@implementation UIImage (UIKitExtension)
 
 - (UIImage *)imageByResizingToSize:(CGSize)size {
     CGRect thumbRect = CGRectZero;

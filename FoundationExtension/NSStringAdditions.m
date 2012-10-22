@@ -18,6 +18,29 @@
     return [[[self alloc] initWithData:data encoding:encoding] autorelease];
 }
 
+- (id)initWithConcatnatingStrings:(NSString *)first, ... {
+    NSMutableArray *array = [NSMutableArray array];
+    va_list args;
+    va_start(args, first);
+    for (NSString *component = first; component != nil; component = va_arg(args, NSString *)) {
+        [array addObject:component];
+    }
+    va_end(args);
+    // OMG... what's the best?
+    return [self initWithString:[array componentsJoinedByString:@""]];
+}
+
++ (id)stringWithConcatnatingStrings:(NSString *)first, ... {
+    NSMutableArray *array = [NSMutableArray array];
+    va_list args;
+    va_start(args, first);
+    for (NSString *component = first; component != nil; component = va_arg(args, NSString *)) {
+        [array addObject:component];
+    }
+    va_end(args);
+    return [array componentsJoinedByString:@""];
+}
+
 @end
 
 
@@ -118,6 +141,35 @@
 
 - (NSInteger)hexadecimalValue {
     return [self integerValueBase:16];
+}
+
+@end
+
+
+@implementation NSMutableString (FoundationExtensionShortcuts)
+
+- (id)initWithConcatnatingStrings:(NSString *)first, ... {
+    self = [self initWithString:first];
+    if (self != nil) {
+        va_list args;
+        va_start(args, first);
+        for (NSString *component = va_arg(args, NSString *); component != nil; component = va_arg(args, NSString *)) {
+            [self appendString:component];
+        }
+        va_end(args);
+    }
+    return self;
+}
+
++ (id)stringWithConcatnatingStrings:(NSString *)first, ... {
+    NSMutableString *aString = [self stringWithString:first];
+    va_list args;
+    va_start(args, first);
+    for (NSString *component = va_arg(args, NSString *); component != nil; component = va_arg(args, NSString *)) {
+        [aString appendString:component];
+    }
+    va_end(args);
+    return aString;
 }
 
 @end

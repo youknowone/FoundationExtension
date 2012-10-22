@@ -15,13 +15,23 @@
  *  @brief Creates and returns an NSString object initialized by using a given format string as a template into which the remaining argument values are substituted according to the user’s default locale.
  *  @see initWithFormat:arguments:
  */
-+ (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
++ (id)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using a given encoding.
  *  @see initWithData:encoding:
  */
-+ (NSString *)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
++ (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
+
+/*!
+ *  @brief Initialize an NSString object with concatnating given arguments.
+ */
+- (id)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
+
+/*!
+ *  @brief Creates and returns an NSString object with concatnating given arguments.
+ */
++ (id)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end
 

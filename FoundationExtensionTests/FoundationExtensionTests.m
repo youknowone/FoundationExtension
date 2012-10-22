@@ -55,6 +55,12 @@
     }
 }
 
+- (void)testStringConcatnation {
+    NSString *concat = [NSString stringWithConcatnatingStrings:@"Hello, ", @"World!", nil];
+
+    STAssertTrue([concat isEqualToString:@"Hello, World!"], @"");
+}
+
 - (void)testHexadecimalString {
     NSData *data = [NSData dataWithBytes:"\0aa\0" length:4];
     NSString *result = [data hexadecimalString];

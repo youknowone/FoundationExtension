@@ -76,12 +76,49 @@ static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest,
 
 @implementation NSString (FoundationExtensionCrypto)
 
+static NSData *NSStringCommonCryptoDigest(NSString *string, NSStringEncoding encoding, CC_DIGEST_FUNCTION digest, CC_LONG digestLength) {
+    NSData *data = [string dataUsingEncoding:encoding];
+    return NSDataCommonCryptoDigest(data, digest, digestLength);
+}
+
+- (NSData *)digestByMD2UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_MD2, CC_MD2_DIGEST_LENGTH);
+}
+
+- (NSData *)digestByMD4UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_MD4, CC_MD4_DIGEST_LENGTH);
+}
+
+- (NSData *)digestByMD5UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_MD5, CC_MD5_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA1UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_SHA1, CC_SHA1_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA224UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_SHA224, CC_SHA224_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA256UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_SHA256, CC_SHA256_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA384UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_SHA384, CC_SHA384_DIGEST_LENGTH);
+}
+
+- (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding {
+    return NSStringCommonCryptoDigest(self, encoding, CC_SHA512, CC_SHA512_DIGEST_LENGTH);
+}
+
 - (NSData *)digestByMD5 {
-    return [[self dataUsingEncoding:NSUTF8StringEncoding] digestByMD5];
+    return [self digestByMD5UsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSData *)digestBySHA1 {
-    return [[self dataUsingEncoding:NSUTF8StringEncoding] digestBySHA1];
+    return [self digestBySHA1UsingEncoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)digestStringByMD5 {

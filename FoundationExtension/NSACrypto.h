@@ -56,9 +56,43 @@
  */
 @interface NSString (FoundationExtensionCrypto)
 
-- (NSData *)digestByMD5;
-- (NSData *)digestBySHA1;
+/*!
+ *  @brief MD2 digest.
+ */
+- (NSData *)digestByMD2UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief MD4 digest.
+ */
+- (NSData *)digestByMD4UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief MD5 digest.
+ */
+- (NSData *)digestByMD5UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief SHA1 digest.
+ */
+- (NSData *)digestBySHA1UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief SHA224 digest.
+ */
+- (NSData *)digestBySHA224UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief SSH256 digest.
+ */
+- (NSData *)digestBySHA256UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief SSH384 digest.
+ */
+- (NSData *)digestBySHA384UsingEncoding:(NSStringEncoding)encoding;
+/*!
+ *  @brief SSH512 digest.
+ */
+- (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding;
 
+//! @deprecated Use -digestByMD5:encoding:
+- (NSData *)digestByMD5 __deprecated;
+//! @deprecated Use -digestBySHA1:encoding:
+- (NSData *)digestBySHA1 __deprecated;
 //! @deprecated Use NSString::hexadecimalString
 - (NSString *)digestStringByMD5 __deprecated;
 //! @deprecated Use NSString::hexadecimalString

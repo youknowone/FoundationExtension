@@ -10,7 +10,7 @@
 #import "NSDataAdditions.h"
 #import "NSDictionaryAdditions.h"
 
-@implementation NSDictionary (FoundationExtension)
+@implementation NSDictionary (FoundationExtensionCreation)
 
 - (id)initWithData:(NSData *)data {
     return [self initWithData:data format:NULL error:NULL];
@@ -52,6 +52,15 @@
 
 + (id)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
     return [[[self alloc] initWithContentsOfURLRequest:request format:format error:error] autorelease];
+}
+
+@end
+
+
+@implementation NSDictionary (FoundationExtensionShortcuts)
+
+- (BOOL)containsKey:(id)key {
+    return [self.allKeys containsObject:key];
 }
 
 @end

@@ -9,8 +9,7 @@
 /*!
  *  @brief Creation methods extension
  */
-
-@interface NSDictionary (FoundationExtension)
+@interface NSDictionary (FoundationExtensionCreation)
 
 /*!
  *  @brief Initializes a newly allocated dictionary with the contents of data. (plist)
@@ -79,5 +78,20 @@
  *  @see initWithContentsOfURLRequest:format:error:
  */
 + (id)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
+
+@end
+
+/*!
+ *  @brief Common shortcuts
+ */
+@interface NSDictionary (FoundationExtensionShortcuts)
+
+/*!
+ *  @brief Returns if dictionary has a given key.
+ *  @param key
+ *      A key to test dictionary has it.
+ *  @return YES if key exists. Or NO.
+ */
+- (BOOL)containsKey:(id)key;
 
 @end

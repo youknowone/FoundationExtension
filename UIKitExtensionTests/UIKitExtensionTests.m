@@ -25,4 +25,8 @@
     [super tearDown];
 }
 
+- (void)testUIColor {
+    STAssertNotNil([UIColor self], @""); // test initialize
+}
+
 @end

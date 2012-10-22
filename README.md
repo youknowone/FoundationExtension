@@ -129,3 +129,6 @@ FoundationExtension
 FoundationExtension
     
     UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];
+
+## For more
+See the document! [http://youknowone.github.com/FoundationExtension] (http://youknowone.github.com/FoundationExtension)

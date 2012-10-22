@@ -92,13 +92,18 @@ git submodule update --init
 </pre><h1>How to use</h1>
 <ul>
 <li>Compiled library<ol type="1">
-<li>build project</li>
-<li>add FoundationExtension or UIKitExtension target as dependency</li>
-<li>if UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
+<li>Build project</li>
+<li>Add FoundationExtension or UIKitExtension target as dependency</li>
+<li>If UIKitExtension: add '-force_load {path_for_libUIKitExtension.a}' to 'other linker flags'</li>
 </ol>
 </li>
 <li>Directy source<ol type="1">
-<li>add files what you need to your project</li>
+<li>Add files what you need to your project</li>
+</ol>
+</li>
+<li>CocoaPod<ol type="1">
+<li>Visit and follow <a href="http://cocoapods.org/">http://cocoapods.org/</a></li>
+<li>Add '-force_load {path_for_libPods.a}' to 'other linker flags'</li>
 </ol>
 </li>
 </ul>

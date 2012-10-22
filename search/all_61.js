@@ -4,6 +4,7 @@ var searchData=
   ['allhttpheaderfields',['allHTTPHeaderFields',['../category_n_s_u_r_l_request_07_foundation_extension_property_08.html#aa7aa4439287476b9ee63991430b3e9b8',1,'NSURLRequest(FoundationExtensionProperty)::allHTTPHeaderFields()'],['../category_n_s_mutable_u_r_l_request_07_foundation_extension_property_08.html#a00e8b32509e5f7bba180470f6e5939d4',1,'NSMutableURLRequest(FoundationExtensionProperty)::allHTTPHeaderFields()']]],
   ['alloc',['alloc',['../interface_n_s_a_class.html#a759bb36d92410759b17b7204ef94a570',1,'NSAClass']]],
   ['allocwithzone_3a',['allocWithZone:',['../interface_n_s_a_class.html#ab9e3b5291a3aabb79dcd787612bee0a7',1,'NSAClass']]],
+  ['alpha',['alpha',['../interface_u_i_a_color_components.html#aa957c44c9aa8a76c1cf1c59982f5ac18',1,'UIAColorComponents']]],
   ['appendbodydataendian',['appendBodyDataEndian',['../interface_n_s_a_u_r_l_request_h_t_t_p_body_multi_part_form_post_formatter.html#ae3c48fb2dc27427880907afcc7384e0e',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['appendbodydatatofieldname_3adata_3a',['appendBodyDataToFieldName:data:',['../interface_n_s_a_u_r_l_request_h_t_t_p_body_multi_part_form_post_formatter.html#a173d37fdecf954d7379759ea3a0bb304',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['appendbodydatatofieldname_3afilename_3adata_3a',['appendBodyDataToFieldName:fileName:data:',['../interface_n_s_a_u_r_l_request_h_t_t_p_body_multi_part_form_post_formatter.html#a57f3621a620f08698585585b0bfb26d5',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],

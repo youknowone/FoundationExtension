@@ -114,13 +114,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_crypto_08.html">   57</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionCrypto)</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;- (NSData *)digestByMD5;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;- (NSData *)digestBySHA1;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;- (NSString *)digestStringBySHA1 __deprecated;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (NSData *)digestByMD2UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;- (NSData *)digestByMD4UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;- (NSData *)digestByMD5UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;- (NSData *)digestBySHA1UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (NSData *)digestBySHA224UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;- (NSData *)digestBySHA256UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;- (NSData *)digestBySHA384UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;- (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;- (NSData *)digestByMD5 __deprecated;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (NSData *)digestBySHA1 __deprecated;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (NSString *)digestStringByMD5 __deprecated;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (NSString *)digestStringBySHA1 __deprecated;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

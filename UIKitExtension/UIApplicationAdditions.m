@@ -10,6 +10,19 @@
 
 @implementation UIApplication (FoundationExtension)
 
+// this should be private method?
+- (CGRect)statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        return self.statusBarFrame;
+    }
+    CGRect rawFrame = self.statusBarFrame;
+    return CGRectMake(rawFrame.origin.y, rawFrame.origin.x, rawFrame.size.height, rawFrame.size.width);
+}
+
+- (CGRect)statusBarFrameForCurrentOrientation {
+    return [self statusBarFrameForOrientation:self.statusBarOrientation];
+}
+
 - (CGSize) statusBarOrientationReducedSize {
     return [self statusBarSizeForOrientation:self.statusBarOrientation];
 }

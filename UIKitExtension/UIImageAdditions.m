@@ -13,28 +13,10 @@
 @implementation UIImage (UIKitExtension)
 
 - (UIImage *)imageByResizingToSize:(CGSize)size {
-    CGRect thumbRect = CGRectZero;
-    thumbRect.size = size;
-    CGImageRef imageRef = [self CGImage];
-
-    CGContextRef bitmap = CGBitmapContextCreate(
-                                                NULL,
-                                                (size_t)thumbRect.size.width,        // width
-                                                (size_t)thumbRect.size.height,        // height
-                                                CGImageGetBitsPerComponent(imageRef),
-                                                CGImageGetBytesPerRow(imageRef),    // rowbytes
-                                                CGImageGetColorSpace(imageRef),
-                                                CGImageGetBitmapInfo(imageRef)
-                                                );
-
-    CGContextDrawImage(bitmap, thumbRect, imageRef);
-
-    CGImageRef    ref = CGBitmapContextCreateImage(bitmap);
-    UIImage *result = [UIImage imageWithCGImage:ref];
-
-    CGContextRelease(bitmap);    // ok if NULL
-    CGImageRelease(ref);
-
+    UIGraphicsBeginImageContext(size);
+    [self drawInRect:CGRectMake(.0, .0, size.width, size.height)];
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     return result;
 }
 

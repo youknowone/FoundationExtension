@@ -121,7 +121,7 @@
 @implementation NSString (FoundationExtensionNumericValues)
 
 - (NSInteger)integerValueBase:(NSInteger)radix {
-    NSUInteger result = 0;
+    NSInteger result = 0;
     for ( NSUInteger i=0; i < [self length]; i++ ) {
         result *= radix;
         unichar digit = [self characterAtIndex:i];

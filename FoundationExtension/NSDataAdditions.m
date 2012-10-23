@@ -107,11 +107,11 @@ static const char NSDataAdditionsHexadecimalDecodingTable[0x80] =
     NSUInteger length = hexData.length;
     const unsigned char *endian = bytes + length;
     
-    char *buffer = (char *)malloc(length / 2);
-    char *pointer = buffer;
+    unsigned char *buffer = (unsigned char *)malloc(length / 2);
+    unsigned char *pointer = buffer;
 
     for (unsigned char *pos = (unsigned char *)bytes; pos < endian; pos += 2, pointer += 1) {
-        *pointer = (NSDataAdditionsHexadecimalDecodingTable[*pos] << 4) + NSDataAdditionsHexadecimalDecodingTable[*(pos+1)];
+        *pointer = (unsigned char)(NSDataAdditionsHexadecimalDecodingTable[*pos] << 4) + NSDataAdditionsHexadecimalDecodingTable[*(pos+1)];
     }
 
     return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];
@@ -183,17 +183,17 @@ unsigned char NSDataAdditionsBase64DecodingTable[0x80] = {
 };
 
 static void NSDataAdditionsBase64DecodeData(const char *input, unsigned char *output) {
-    unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[input[0]];
+    unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[(int)input[0]];
     dassert(tmp1 != 0xff);
-    unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[input[1]];
+    unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[(int)input[1]];
     dassert(tmp2 != 0xff);
-    output[0] = (tmp1 << 2) | (tmp2 >> 4);
-    tmp1 = NSDataAdditionsBase64DecodingTable[input[2]];
+    output[0] = (char)(tmp1 << 2) | (tmp2 >> 4);
+    tmp1 = NSDataAdditionsBase64DecodingTable[(int)input[2]];
     dassert(tmp1 != 0xff);
-    output[1] = (tmp2 << 4) | (tmp1 >> 2);
-    tmp2 = NSDataAdditionsBase64DecodingTable[input[3]];
+    output[1] = (char)(tmp2 << 4) | (tmp1 >> 2);
+    tmp2 = NSDataAdditionsBase64DecodingTable[(int)input[3]];
     dassert(tmp2 != 0xff);
-    output[2] = (tmp1 << 6) | (tmp2);
+    output[2] = (char)(tmp1 << 6) | (tmp2);
 }
 
 - (id)initWithBase64String:(NSString *)base64 {
@@ -235,12 +235,12 @@ static void NSDataAdditionsBase64DecodeData(const char *input, unsigned char *ou
     NSInteger taillen = inendian - inpos;
     dassert(taillen > 0);
     if (taillen) {
-        unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[inpos[0]];
-        unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[inpos[1]];
-        outpos[0] = (tmp1 << 2) + (tmp2 >> 4);
+        unsigned char tmp1 = NSDataAdditionsBase64DecodingTable[(int)inpos[0]];
+        unsigned char tmp2 = NSDataAdditionsBase64DecodingTable[(int)inpos[1]];
+        outpos[0] = (unsigned char)(tmp1 << 2) + (tmp2 >> 4);
         if (taillen == 3) {
-            tmp1 = NSDataAdditionsBase64DecodingTable[inpos[2]];
-            outpos[1] = (tmp2 << 4) + (tmp1 >> 2);
+            tmp1 = NSDataAdditionsBase64DecodingTable[(int)inpos[2]];
+            outpos[1] = (unsigned char)(tmp2 << 4) + (tmp1 >> 2);
         }
     }
     

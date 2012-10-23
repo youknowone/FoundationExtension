@@ -10,6 +10,15 @@
 
 #import "NSAClass.h"
 
+
+@interface NSAMethod ()
+
+- (id)initWithMethod:(Method)method;
++ (id)methodWithMethod:(Method)method;
+
+@end
+
+
 @implementation NSAClass
 @synthesize class=_class;
 
@@ -53,6 +62,18 @@
     return [self classWithUTF8Name:name.UTF8String];
 }
 
+- (Method)methodForSelector:(SEL)selector {
+    return class_getInstanceMethod(self->_class, selector);
+}
+
+- (NSAMethod *)methodObjectForSelector:(SEL)selector {
+    return [NSAMethod methodWithMethod:class_getInstanceMethod(self->_class, selector)];
+}
+
+- (IMP)methodImplementationForSelector:(SEL)selector {
+    return class_getMethodImplementation(self->_class, selector);
+}
+
 @end
 
 
@@ -73,6 +94,32 @@
 
 - (NSAClass *)classObject {
     return [NSAClass classWithClass:self.class];
+}
+
+@end
+
+
+@implementation NSAMethod
+@synthesize method=_method;
+
+- (id)initWithMethod:(Method)method  {
+    self = [super init];
+    if (self != nil) {
+        self->_method = method;
+    }
+    return self;
+}
+
++ (id)methodWithMethod:(Method)method {
+    return [[[self alloc] initWithMethod:method] autorelease];
+}
+
+- (IMP)implementation {
+    return method_getImplementation(self->_method);
+}
+
+- (void)setImplementation:(IMP)implementation {
+    method_setImplementation(self->_method, implementation);
 }
 
 @end

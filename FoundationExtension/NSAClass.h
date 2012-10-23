@@ -6,8 +6,12 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#import <objc/runtime.h>
+
+@class NSAMethod;
+
 /*!
- *  @brief Object wrapper for <objc/runtime.h>
+ *  @brief Object wrapper for <objc/runtime.h> Class
  */
 @interface NSAClass: NSObject {
     Class _class;
@@ -62,9 +66,29 @@
  */
 + (id)classWithName:(NSString *)name;
 
+/*!
+ *  @brief Returns Method from given selector;
+ *  @see class_getInstanceMethod
+ */
+- (Method)methodForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns Method from given selector;
+ *  @see class_getInstanceMethod
+ */
+- (NSAMethod *)methodObjectForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns IMP from given method
+ *  @see class_getMethodImplementation
+ */
+- (IMP)methodImplementationForSelector:(SEL)selector;
+
 @end
 
-
+/*!
+ *  @brief Class methods shortcuts
+ */
 @interface NSAClass (ClassShortcuts)
 
 /*!
@@ -91,3 +115,17 @@
 @property(nonatomic, readonly) NSAClass *classObject;
 
 @end
+
+/*!
+ *  @brief Object wrapper for Method
+ */
+@interface NSAMethod : NSObject {
+    Method _method;
+}
+//! @brief wrapped value
+@property(nonatomic, readonly) Method method;
+//! @brief mapped implementation
+@property(nonatomic, assign) IMP implementation;
+
+@end
+

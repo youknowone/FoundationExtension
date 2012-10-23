@@ -36,6 +36,19 @@
     STAssertTrue([aString isEqualToString:@"hi"], @"");
 }
 
+- (int)return0 { return 0; }
+- (int)return1 { return 1; }
+
+- (void)testClassMethod {
+    STAssertEquals(0, [self return0], @"");
+    STAssertEquals(1, [self return1], @"");
+
+    NSAMethod *m0 = [self.classObject methodObjectForSelector:@selector(return0)];
+    NSAMethod *m1 = [self.classObject methodObjectForSelector:@selector(return1)];
+    m0.implementation = m1.implementation;
+    STAssertEquals(1, [self return0], @"");
+}
+
 - (void)testStringFormat {
     {
         NSString *formatted = [@"%d %d %d" format0:nil, 10, 9, 8];

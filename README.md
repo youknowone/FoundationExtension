@@ -18,12 +18,12 @@ See document on [Github] (http://youknowone.github.com/FoundationExtension)
 * Compiled library
   1. Build project
   2. Add FoundationExtension or UIKitExtension target as dependency
-  3. If UIKitExtension: add '-force\_load {path\_for\_libUIKitExtension.a}' to 'other linker flags'
 * Directy source
   1. Add files what you need to your project
 * CocoaPod
   1. Visit and follow http://cocoapods.org/
-  2. Add '-force\_load {path\_for\_libPods.a}' to 'other linker flags'
+
+If your compiler is gcc or old clang, add '-force\_load' to static library.
 
 # Why useful
 Make your code short! Do not allow evil objc to make your code verbose.

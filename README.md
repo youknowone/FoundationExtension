@@ -133,5 +133,13 @@ FoundationExtension
     
     UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];
 
+## Change implementation to new one
+FoundationExtension
+
+    NSAClass *c = obj.classObject;
+    [c methodObjectForSelector:@selector(method1)].implementation
+      = [c methodObjectForSelector:@selector(method2)].implementation;
+    // now [obj method1] is [obj method2]
+
 ## For more
 See the document! [http://youknowone.github.com/FoundationExtension] (http://youknowone.github.com/FoundationExtension)

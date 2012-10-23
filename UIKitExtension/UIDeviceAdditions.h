@@ -19,7 +19,7 @@ typedef enum {
 
 + (ICDeviceType)currentDeviceType;
 
-// implementation api is deprecated
+//! @deprecated deprecated by implementation deprecation
 + (NSString *)uniqueIdentifier __deprecated;
 
 @end

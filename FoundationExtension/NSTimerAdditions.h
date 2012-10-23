@@ -6,6 +6,7 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+// not recomenned to use.
 @interface NSTimer (FoundationExtension)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector;

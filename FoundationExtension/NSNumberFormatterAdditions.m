@@ -8,18 +8,20 @@
 
 #import "NSNumberFormatterAdditions.h"
 
-@implementation NSNumberFormatter (FoundationExtension)
+@implementation NSNumberFormatter (FoundationExtensionShortcut)
 @dynamic numberStyle;
 @dynamic generatesDecimalNumbers;
 @dynamic locale;
 
 + (NSNumberFormatter *)formatter {
-    return [[self alloc] autorelease];
+    return [[[self alloc] init] autorelease];
 }
 
 - (id)initWithNumberStyle:(NSNumberFormatterStyle)style {
     self = [self init];
-    [self setNumberStyle:style];
+    if (self != nil) {
+        [self setNumberStyle:style];
+    }
     return self;
 }
 

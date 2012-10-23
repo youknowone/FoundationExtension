@@ -90,39 +90,48 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>UIApplication extensions.  
+ <a href="category_u_i_application_07_foundation_extension_08.html#details">More...</a></p>
+
 <p><code>#import &lt;<a class="el" href="_u_i_application_additions_8h_source.html">UIApplicationAdditions.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a784feeb0aa2ebffb6d4ef28b1e92fd0e"><td class="memItemLeft" align="right" valign="top">(CGSize)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_u_i_application_07_foundation_extension_08.html#a784feeb0aa2ebffb6d4ef28b1e92fd0e">statusBarOrientationReducedSize</a></td></tr>
-<tr class="memitem:a72f5eb8ead628288148c8c7ddead6b1a"><td class="memItemLeft" align="right" valign="top">(CGSize)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_u_i_application_07_foundation_extension_08.html#a72f5eb8ead628288148c8c7ddead6b1a">statusBarSizeForOrientation:</a></td></tr>
+<tr class="memitem:a0fa42796d452ff4e55d9b84f7498d927"><td class="memItemLeft" align="right" valign="top">(CGRect)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_u_i_application_07_foundation_extension_08.html#a0fa42796d452ff4e55d9b84f7498d927">statusBarFrameForOrientation:</a></td></tr>
+<tr class="memdesc:a0fa42796d452ff4e55d9b84f7498d927"><td class="mdescLeft">&#160;</td><td class="mdescRight">statusbar size calculated for a given orientation  <a href="#a0fa42796d452ff4e55d9b84f7498d927"></a><br/></td></tr>
+<tr class="memitem:a6593a5f5580ffcf82a68a28e6e1150f6"><td class="memItemLeft" align="right" valign="top">(CGSize)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_u_i_application_07_foundation_extension_08.html#a6593a5f5580ffcf82a68a28e6e1150f6">__deprecated</a></td></tr>
+<tr class="memitem:ac61052d0ea51a29b7f096b5955f4a0bb"><td class="memItemLeft" align="right" valign="top">(CGSize)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="category_u_i_application_07_foundation_extension_08.html#ac61052d0ea51a29b7f096b5955f4a0bb">statusBarSizeForOrientation:</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:aa095e29acae5047fd506047cb6eee7d1"><td class="memItemLeft" align="right" valign="top">CGSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_u_i_application_07_foundation_extension_08.html#aa095e29acae5047fd506047cb6eee7d1">statusBarOrientationReducedSize</a></td></tr>
+<tr class="memitem:ab302e25b2b90ac7e104f4e526f07651b"><td class="memItemLeft" align="right" valign="top">CGRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="category_u_i_application_07_foundation_extension_08.html#ab302e25b2b90ac7e104f4e526f07651b">statusBarFrameForCurrentOrientation</a></td></tr>
+<tr class="memdesc:ab302e25b2b90ac7e104f4e526f07651b"><td class="mdescLeft">&#160;</td><td class="mdescRight">statusbar size calculated for current orientation  <a href="#ab302e25b2b90ac7e104f4e526f07651b"></a><br/></td></tr>
 </table>
-<h2>Member Function Documentation</h2>
-<a class="anchor" id="a784feeb0aa2ebffb6d4ef28b1e92fd0e"></a>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>UIApplication extensions. </p>
+</div><h2>Member Function Documentation</h2>
+<a class="anchor" id="a6593a5f5580ffcf82a68a28e6e1150f6"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (CGSize) statusBarOrientationReducedSize </td>
+          <td class="memname">- (CGSize) __deprecated </td>
           <td></td>
           <td class="paramname"></td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000026">Deprecated:</a></b></dt><dd>Use statusBarFrameForCurrentOrientation </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a72f5eb8ead628288148c8c7ddead6b1a"></a>
+<a class="anchor" id="a0fa42796d452ff4e55d9b84f7498d927"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (CGSize) statusBarSizeForOrientation: </td>
+          <td class="memname">- (CGRect) statusBarFrameForOrientation: </td>
           <td></td>
           <td class="paramtype">(UIInterfaceOrientation)&#160;</td>
           <td class="paramname"><em>orientation</em></td>
@@ -131,10 +140,29 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>statusbar size calculated for a given orientation </p>
+
+</div>
+</div>
+<a class="anchor" id="ac61052d0ea51a29b7f096b5955f4a0bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (CGSize) statusBarSizeForOrientation: </td>
+          <td></td>
+          <td class="paramtype">(UIInterfaceOrientation)&#160;</td>
+          <td class="paramname"><em>__deprecated</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use statusBarFrameForOrientation: </dd></dl>
+
 </div>
 </div>
 <h2>Property Documentation</h2>
-<a class="anchor" id="aa095e29acae5047fd506047cb6eee7d1"></a>
+<a class="anchor" id="ab302e25b2b90ac7e104f4e526f07651b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -142,7 +170,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">- (CGSize) statusBarOrientationReducedSize</td>
+          <td class="memname">- (CGRect) statusBarFrameForCurrentOrientation</td>
         </tr>
       </table>
   </td>
@@ -151,6 +179,8 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>statusbar size calculated for current orientation </p>
 
 </div>
 </div>

@@ -5,6 +5,7 @@ var searchData=
   ['nsaclass_2eh',['NSAClass.h',['../_n_s_a_class_8h.html',1,'']]],
   ['nsacrypto_2eh',['NSACrypto.h',['../_n_s_a_crypto_8h.html',1,'']]],
   ['nsadataobject_2eh',['NSADataObject.h',['../_n_s_a_data_object_8h.html',1,'']]],
+  ['nsamethod',['NSAMethod',['../interface_n_s_a_method.html',1,'']]],
   ['nsarray_28foundationextensioncreation_29',['NSArray(FoundationExtensionCreation)',['../category_n_s_array_07_foundation_extension_creation_08.html',1,'']]],
   ['nsarray_28foundationextensionnsnumber_29',['NSArray(FoundationExtensionNSNumber)',['../category_n_s_array_07_foundation_extension_n_s_number_08.html',1,'']]],
   ['nsarrayadditions_2eh',['NSArrayAdditions.h',['../_n_s_array_additions_8h.html',1,'']]],
@@ -148,7 +149,7 @@ var searchData=
   ['nsmutableurlrequest_28ichttpmultipartformpostrequest_29',['NSMutableURLRequest(ICHTTPMultiPartFormPostRequest)',['../category_n_s_mutable_u_r_l_request_07_i_c_h_t_t_p_multi_part_form_post_request_08.html',1,'']]],
   ['nsnextstepjapanesestringencoding',['NSNextStepJapaneseStringEncoding',['../_n_s_a_string_encoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba377b4eb1bbd18c78f8a3a317f78b3088',1,'NSAStringEncoding.h']]],
   ['nsnextsteplatinstringencoding',['NSNextStepLatinStringEncoding',['../_n_s_a_string_encoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55babb2b710980f8932b6616de5b87c930af',1,'NSAStringEncoding.h']]],
-  ['nsnumberformatter_28foundationextension_29',['NSNumberFormatter(FoundationExtension)',['../category_n_s_number_formatter_07_foundation_extension_08.html',1,'']]],
+  ['nsnumberformatter_28foundationextensionshortcut_29',['NSNumberFormatter(FoundationExtensionShortcut)',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html',1,'']]],
   ['nsnumberformatteradditions_2eh',['NSNumberFormatterAdditions.h',['../_n_s_number_formatter_additions_8h.html',1,'']]],
   ['nsobject_28foundationextension_29',['NSObject(FoundationExtension)',['../category_n_s_object_07_foundation_extension_08.html',1,'']]],
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../category_n_s_object_07_n_s_a_class_08.html',1,'']]],
@@ -191,5 +192,5 @@ var searchData=
   ['nswindowslatin2stringencoding',['NSWindowsLatin2StringEncoding',['../_n_s_a_string_encoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba346d20288a6f74def0f175d2e4472952',1,'NSAStringEncoding.h']]],
   ['nswindowslatin5stringencoding',['NSWindowsLatin5StringEncoding',['../_n_s_a_string_encoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6ba615f1288cecea291e7103a7d85c74',1,'NSAStringEncoding.h']]],
   ['nswindowsvietnamesestringencoding',['NSWindowsVietnameseStringEncoding',['../_n_s_a_string_encoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba7587aac1d8b064cc980193d02bcc6fe9',1,'NSAStringEncoding.h']]],
-  ['numberstyle',['numberStyle',['../category_n_s_number_formatter_07_foundation_extension_08.html#a4e3e4ee021e4030393dc24d56dd7b75f',1,'NSNumberFormatter(FoundationExtension)']]]
+  ['numberstyle',['numberStyle',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#aa6b6a8f6df73ce8d3a6892cb2318f7b6',1,'NSNumberFormatter(FoundationExtensionShortcut)']]]
 ];

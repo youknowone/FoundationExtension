@@ -38,7 +38,7 @@ var searchData=
   ['initwithhtmlhexexpression16a_3a',['initWithHTMLHexExpression16a:',['../category_u_i_color_07_u_i_kit_extension_h_t_m_l_08.html#a8451b2cc9bb59aef43b782846bd1d1ac',1,'UIColor(UIKitExtensionHTML)']]],
   ['initwithhtmlhexexpression32_3a',['initWithHTMLHexExpression32:',['../category_u_i_color_07_u_i_kit_extension_h_t_m_l_08.html#a2889f1b5eee33cbbe49be6ed6c668a17',1,'UIColor(UIKitExtensionHTML)']]],
   ['initwithhtmlhexexpression32a_3a',['initWithHTMLHexExpression32a:',['../category_u_i_color_07_u_i_kit_extension_h_t_m_l_08.html#a117bbc07f55d031b7dd5976cb2107bab',1,'UIColor(UIKitExtensionHTML)']]],
-  ['initwithnumberstyle_3a',['initWithNumberStyle:',['../category_n_s_number_formatter_07_foundation_extension_08.html#a8b3be614cbabafdd293f3caf30f707e3',1,'NSNumberFormatter(FoundationExtension)']]],
+  ['initwithnumberstyle_3a',['initWithNumberStyle:',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#a1c5fc5b953416f1e20725367c5c377e4',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
   ['initwithurlformat_3a',['initWithURLFormat:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#af1fc5f2e9a2189e3ccd1370e20eaeafe',1,'NSURLRequest(FoundationExtensionCreations)']]],
   ['insertinteger_3aatindex_3a',['insertInteger:atIndex:',['../category_n_s_mutable_array_07_foundation_extension_n_s_number_08.html#aca14e16a8da87906eade957c66dc0a6f',1,'NSMutableArray(FoundationExtensionNSNumber)']]],
   ['integeratindex_3a',['integerAtIndex:',['../category_n_s_array_07_foundation_extension_n_s_number_08.html#abd639c1049e1d7ccbdf225a9f8669d0d',1,'NSArray(FoundationExtensionNSNumber)']]],

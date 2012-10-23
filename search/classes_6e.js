@@ -1,6 +1,7 @@
 var searchData=
 [
   ['nsaclass',['NSAClass',['../interface_n_s_a_class.html',1,'']]],
+  ['nsamethod',['NSAMethod',['../interface_n_s_a_method.html',1,'']]],
   ['nsarray_28foundationextensioncreation_29',['NSArray(FoundationExtensionCreation)',['../category_n_s_array_07_foundation_extension_creation_08.html',1,'']]],
   ['nsarray_28foundationextensionnsnumber_29',['NSArray(FoundationExtensionNSNumber)',['../category_n_s_array_07_foundation_extension_n_s_number_08.html',1,'']]],
   ['nsatriple',['NSATriple',['../interface_n_s_a_triple.html',1,'']]],
@@ -17,7 +18,7 @@ var searchData=
   ['nsmutableurlrequest_28foundationextensionpost_29',['NSMutableURLRequest(FoundationExtensionPost)',['../category_n_s_mutable_u_r_l_request_07_foundation_extension_post_08.html',1,'']]],
   ['nsmutableurlrequest_28foundationextensionproperty_29',['NSMutableURLRequest(FoundationExtensionProperty)',['../category_n_s_mutable_u_r_l_request_07_foundation_extension_property_08.html',1,'']]],
   ['nsmutableurlrequest_28ichttpmultipartformpostrequest_29',['NSMutableURLRequest(ICHTTPMultiPartFormPostRequest)',['../category_n_s_mutable_u_r_l_request_07_i_c_h_t_t_p_multi_part_form_post_request_08.html',1,'']]],
-  ['nsnumberformatter_28foundationextension_29',['NSNumberFormatter(FoundationExtension)',['../category_n_s_number_formatter_07_foundation_extension_08.html',1,'']]],
+  ['nsnumberformatter_28foundationextensionshortcut_29',['NSNumberFormatter(FoundationExtensionShortcut)',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html',1,'']]],
   ['nsobject_28foundationextension_29',['NSObject(FoundationExtension)',['../category_n_s_object_07_foundation_extension_08.html',1,'']]],
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../category_n_s_object_07_n_s_a_class_08.html',1,'']]],
   ['nsstring_28foundationextensioncreations_29',['NSString(FoundationExtensionCreations)',['../category_n_s_string_07_foundation_extension_creations_08.html',1,'']]],

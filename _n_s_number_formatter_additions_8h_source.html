@@ -96,20 +96,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html">    9</a></span>&#160;<span class="keyword">@interface </span>NSNumberFormatter (FoundationExtension)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#a4e3e4ee021e4030393dc24d56dd7b75f">   11</a></span>&#160;<span class="keyword">@property</span>(assign) NSNumberFormatterStyle numberStyle;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#af5653a7ed52e6fbef666e0c3214b413b">   12</a></span>&#160;<span class="keyword">@property</span>(assign) BOOL generatesDecimalNumbers;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_08.html#a1fbefabd238e2edf5ee2be28594129ae">   13</a></span>&#160;<span class="keyword">@property</span>(assign) NSLocale *locale;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;+ (NSNumberFormatter *)formatter;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;- (id)initWithNumberStyle:(NSNumberFormatterStyle)style;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;+ (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_shortcut_08.html">   10</a></span>&#160;<span class="keyword">@interface </span>NSNumberFormatter (FoundationExtensionShortcut)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#aa6b6a8f6df73ce8d3a6892cb2318f7b6">   13</a></span>&#160;<span class="keyword">@property</span>(assign) NSNumberFormatterStyle numberStyle;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#a3a627561d1eb50842a297d56a9e4ab7c">   15</a></span>&#160;<span class="keyword">@property</span>(assign) BOOL generatesDecimalNumbers;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#add576d1aed68fd376584983a7ae72db2">   17</a></span>&#160;<span class="keyword">@property</span>(assign) NSLocale *locale;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;+ (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;+ (NSString *)formattedStringByDecimalStyleForInteger:(NSInteger)integer;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;+ (NSNumberFormatter *)formatter;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (id)initWithNumberStyle:(NSNumberFormatterStyle)style;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;+ (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;+ (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;+ (NSString *)formattedStringByDecimalStyleForInteger:(NSInteger)integer;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

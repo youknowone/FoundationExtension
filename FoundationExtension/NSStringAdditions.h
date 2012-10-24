@@ -117,6 +117,25 @@
 
 @end
 
+
+/*!
+ *  @brief Extensions of NSStringPathExtensions
+ */
+@interface NSString (FoundationExtensionPathExtensions)
+
+/*!
+ *  @brief Returns a new string made by appending to the receiver a given string.
+ *  @param format
+ *      A format string.
+ *  @param ...
+ *      A comma-separated list of arguments to substitute into format.
+ *  @see stringByAppendingPathComponent:
+ */
+- (NSString *)stringByAppendingPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
+
+@end
+
+
 /*!
  *  @brief Numeric value decoder
  */

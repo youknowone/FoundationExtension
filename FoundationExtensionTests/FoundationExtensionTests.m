@@ -66,6 +66,11 @@
         NSString *formatted = [@"%%%%%@" format:@"Hello"];
         STAssertTrue([formatted isEqualToString:@"%%Hello"], @"formatted was: %@", formatted);
     }
+    {
+        NSString *aPath = @"/tmp";
+        NSString *test = [aPath stringByAppendingPathFormat:@"/%@/%@", @"dir", @"file.ext"];
+        STAssertTrue([test isEqualToString:@"/tmp/dir/file.ext"], @"result: %@", test);
+    }
 }
 
 - (void)testStringConcatnation {

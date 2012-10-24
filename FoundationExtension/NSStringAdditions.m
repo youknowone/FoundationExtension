@@ -118,6 +118,19 @@
 @end
 
 
+@implementation NSString (FoundationExtensionPathExtensions)
+
+- (NSString *)stringByAppendingPathFormat:(NSString *)format, ... {
+    va_list args;
+    va_start(args, format);
+    NSString *result = [self stringByAppendingPathComponent:[NSString stringWithFormat:format arguments:args]];
+    va_end(args);
+    return result;
+}
+
+@end
+
+
 @implementation NSString (FoundationExtensionNumericValues)
 
 - (NSInteger)integerValueBase:(NSInteger)radix {

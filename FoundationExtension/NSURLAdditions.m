@@ -48,6 +48,20 @@
     return [self initFileURLWithPath:confPath];
 }
 
+- (id)initTemporaryURLWithPath:(NSString *)path {
+    if (path == nil) {
+        [self release];
+        return nil;
+    }
+    NSString *prefix = @"tmp://";
+    if ([path hasPrefix:prefix]) {
+        path = [path substringFromIndex:prefix.length];
+    }
+    NSString *confPath = NSPathForUserConfigurationFile(path);
+    dlog(PATH_DEBUG, @"abstract configuration path: %@", confPath);
+    return [self initFileURLWithPath:confPath];
+}
+
 - (id)initSmartURLWithPath:(NSString *)path {
     if ([path hasHTTPPrefix]) {
         return [self initWithString:path];
@@ -56,6 +70,9 @@
         return [self initResourceURLWithPath:path];
     }
     if ([path hasPrefix:@"conf://"]) {
+        return [self initConfigurationURLWithPath:path];
+    }
+    if ([path hasPrefix:@"tmp://"]) {
         return [self initConfigurationURLWithPath:path];
     }
     return [self initFileURLWithPath:path];
@@ -67,6 +84,10 @@
 
 + (id)configurationURLWithPath:(NSString *)path {
     return [[[self alloc] initConfigurationURLWithPath:path] autorelease];
+}
+
++ (id)temporaryURLWithPath:(NSString *)path {
+    return [[[self alloc] initTemporaryURLWithPath:path] autorelease];
 }
 
 + (id)smartURLWithPath:(NSString *)path {
@@ -133,6 +154,7 @@
 
 @end
 
+
 @implementation NSString (FoundationExtensionNSURL)
 
 - (BOOL)hasHTTPPrefix {
@@ -168,6 +190,10 @@
 
 - (NSURL *)configurationURL {
     return [NSURL configurationURLWithPath:self];
+}
+
+- (NSURL *)temporaryURL {
+    return [NSURL temporaryURLWithPath:self];
 }
 
 - (NSURL *)smartURL {

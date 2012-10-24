@@ -23,6 +23,7 @@
  *  @see initResourceURLWithPath:
  */
 + (id)resourceURLWithPath:(NSString *)path;
+
 /*!
  *  @brief Initializes a newly created NSURL referencing the local file or directory at path based on configuration directory.
  *  @param path
@@ -35,6 +36,19 @@
  *  @see initConfigurationURLWithPath:
  */
 + (id)configurationURLWithPath:(NSString *)path;
+
+/*!
+ *  @brief Initializes a newly created NSURL referencing the local file or directory at path based on temporary directory.
+ *  @param path
+ *      The path that the NSURL object will represent. path should be a valid system path. If path begins with the prefix 'conf://', it will be removed. path should be a relative path from temporary directory
+ *  @return An NSURL object initialized with path based on temporary directory.
+ */
+- (id)initTemporaryURLWithPath:(NSString *)path;
+/*!
+ *  @brief Initializes and returns a newly created NSURL object as a file URL with a specified path based on temporary directory.
+ *  @see initTemporaryURLWithPath:
+ */
++ (id)temporaryURLWithPath:(NSString *)path;
 
 /*!
  *  @brief Initializes a newly created NSURL referencing any URL decodable by protocol prefix.
@@ -113,6 +127,11 @@
  *  @return Result of NSURL -configurationURLWithPath:
  */
 - (NSURL *)configurationURL;
+/*!
+ *  @brief Returns a temporary URL from self value.
+ *  @return Result of NSURL -temporaryURLWithPath:
+ */
+- (NSURL *)temporaryURL;
 /*!
  *  @brief Returns a smart URL from self value.
  *  @return Result of NSURL -smartURLWithPath:

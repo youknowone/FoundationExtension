@@ -40,3 +40,20 @@ FOUNDATION_EXTERN NSString *NSUserConfigurationDirectory(void);
  *  @see NSSearchPathForDirectoriesInDomains
  */
 FOUNDATION_EXTERN NSString *NSPathForUserConfigurationFile(NSString *filename);
+
+/*!
+ *  @brief Returns file path relative to home directory.
+ *  @see NSHomeDirectory
+ */
+FOUNDATION_EXTERN NSString *NSPathForTempFile(NSString *filename);
+/*!
+ *  @brief Returns file path relative to home directory for user.
+ *  @see NSHomeDirectoryForUser
+ */
+FOUNDATION_EXTERN NSString *NSPathForHomeFileForUser(NSString *filename, NSString *userName);
+
+/*!
+ *  @brief Returns file path relative to temporary directory.
+ *  @see NSTemporaryDirectory
+ */
+FOUNDATION_EXTERN NSString *NSPathForTemporaryFile(NSString *filename);

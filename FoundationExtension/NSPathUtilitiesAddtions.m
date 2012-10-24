@@ -35,3 +35,7 @@ NSString *NSUserConfigurationDirectory(void) {
 NSString *NSPathForUserConfigurationFile(NSString *filename) {
     return [NSUserConfigurationDirectory() stringByAppendingPathComponent:filename];
 }
+
+NSString *NSPathForTemporaryFile(NSString *filename) {
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:filename];
+}

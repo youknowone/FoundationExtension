@@ -87,11 +87,11 @@
 @interface NSDictionary (FoundationExtensionShortcuts)
 
 /*!
- *  @brief Returns if dictionary has a given key.
- *  @param key
+ *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.
+ *  @param aKey
  *      A key to test dictionary has it.
- *  @return YES if key exists. Or NO.
+ *  @return YES if aKey is present in the dictionary, otherwise NO.
  */
-- (BOOL)containsKey:(id)key;
+- (BOOL)containsKey:(id)aKey;
 
 @end

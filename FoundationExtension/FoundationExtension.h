@@ -16,11 +16,14 @@
 #import <FoundationExtension/NSDictionaryAdditions.h>
 #import <FoundationExtension/NSNumberFormatterAdditions.h>
 #import <FoundationExtension/NSPathUtilitiesAddtions.h>
-//#import <FoundationExtension/NSStringEncodingAdditions.h>
 #import <FoundationExtension/NSStringAdditions.h>
 #import <FoundationExtension/NSTimerAdditions.h>
 #import <FoundationExtension/NSURLAdditions.h>
 #import <FoundationExtension/NSURLRequestAdditions.h>
+
+#import <FoundationExtension/NSAArray.h>
+#import <FoundationExtension/NSADictionary.h>
 #import <FoundationExtension/NSAClass.h>
 #import <FoundationExtension/NSADataObject.h>
 #import <FoundationExtension/NSACrypto.h>
+//#import <FoundationExtension/NSStringEncodingAdditions.h>

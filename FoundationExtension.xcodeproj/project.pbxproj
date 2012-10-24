@@ -95,6 +95,16 @@
 		38F0683B1636F8C9002723AB /* UITDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F068391636F8C9002723AB /* UITDetailViewController_iPhone.xib */; };
 		38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F0683C1636F8C9002723AB /* UITDetailViewController_iPad.xib */; };
 		38F068441636F9FA002723AB /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
+		38F0697A163839D2002723AB /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; };
+		38F0697B163839D2002723AB /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
+		38F0697C163839D2002723AB /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
+		38F0698016383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
+		38F0698116383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
+		38F06987163841F6002723AB /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
+		38F06988163841F6002723AB /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
+		38F0698B16384E40002723AB /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; };
+		38F0698C16384E40002723AB /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
+		38F0698D16384E40002723AB /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +240,14 @@
 		38F068371636F8C9002723AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UITMasterViewController_iPad.xib; sourceTree = "<group>"; };
 		38F0683A1636F8C9002723AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UITDetailViewController_iPhone.xib; sourceTree = "<group>"; };
 		38F0683D1636F8C9002723AB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UITDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		38F06978163839D2002723AB /* NSAArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAArray.h; sourceTree = "<group>"; };
+		38F06979163839D2002723AB /* NSAArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAArray.m; sourceTree = "<group>"; };
+		38F0697E16383A4B002723AB /* FoundationExtensionCoreFoundationTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionCoreFoundationTest.h; sourceTree = "<group>"; };
+		38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionCoreFoundationTest.m; sourceTree = "<group>"; };
+		38F06985163841F5002723AB /* FoundationTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationTests.h; sourceTree = "<group>"; };
+		38F06986163841F6002723AB /* FoundationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundationTests.m; sourceTree = "<group>"; };
+		38F0698916384E3E002723AB /* NSADictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSADictionary.h; sourceTree = "<group>"; };
+		38F0698A16384E3F002723AB /* NSADictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSADictionary.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,8 +343,12 @@
 		383764EA13373155007072FD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				38F06985163841F5002723AB /* FoundationTests.h */,
+				38F06986163841F6002723AB /* FoundationTests.m */,
 				383764F113373155007072FD /* FoundationExtensionTests.h */,
 				383764F313373155007072FD /* FoundationExtensionTests.m */,
+				38F0697E16383A4B002723AB /* FoundationExtensionCoreFoundationTest.h */,
+				38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */,
 				3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */,
 				3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */,
 				383764EB13373155007072FD /* Supporting Files */,
@@ -373,6 +395,10 @@
 				38660A62161AD9AE00C5CE06 /* NSURLAdditions.m */,
 				38660A63161AD9AE00C5CE06 /* NSURLRequestAdditions.h */,
 				38660A64161AD9AE00C5CE06 /* NSURLRequestAdditions.m */,
+				38F06978163839D2002723AB /* NSAArray.h */,
+				38F06979163839D2002723AB /* NSAArray.m */,
+				38F0698916384E3E002723AB /* NSADictionary.h */,
+				38F0698A16384E3F002723AB /* NSADictionary.m */,
 				38660A5E161AD9AE00C5CE06 /* NSAStringEncoding.h */,
 				3868F7B7162D58ED00C31163 /* NSAClass.h */,
 				3868F7B8162D58ED00C31163 /* NSAClass.m */,
@@ -524,6 +550,8 @@
 				3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */,
 				3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */,
 				3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */,
+				38F0697A163839D2002723AB /* NSAArray.h in Headers */,
+				38F0698B16384E40002723AB /* NSADictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +756,8 @@
 				38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */,
 				382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */,
 				38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */,
+				38F0698116383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */,
+				38F06988163841F6002723AB /* FoundationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -750,6 +780,8 @@
 				3868F3C2162885D300C31163 /* NSADataObject.m in Sources */,
 				3868F7B4162D57EB00C31163 /* NSObjectAdditions.m in Sources */,
 				3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */,
+				38F0697B163839D2002723AB /* NSAArray.m in Sources */,
+				38F0698C16384E40002723AB /* NSADictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +791,8 @@
 			files = (
 				382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */,
 				3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */,
+				38F0698016383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */,
+				38F06987163841F6002723AB /* FoundationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +823,8 @@
 				38A90FE51635920F001DB09E /* NSDataAdditions.m in Sources */,
 				38A90FE616359211001DB09E /* NSBundleAdditions.m in Sources */,
 				38A90FE716359213001DB09E /* NSArrayAdditions.m in Sources */,
+				38F0697C163839D2002723AB /* NSAArray.m in Sources */,
+				38F0698D16384E40002723AB /* NSADictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1221,6 +1257,7 @@
 				38F068411636F8C9002723AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@ var searchData=
   ['initnoticewithtitle_3amessage_3acancelbuttontitle_3a',['initNoticeWithTitle:message:cancelButtonTitle:',['../category_u_i_alert_view_07_foundation_extension_08.html#a5e36cb902c7e8b68d1718f32b8791e52',1,'UIAlertView(FoundationExtension)']]],
   ['initresourceurlwithpath_3a',['initResourceURLWithPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a2b93036df71bd6e5ed5e4486bd7a189c',1,'NSURL(FoundationExtension)']]],
   ['initsmarturlwithpath_3a',['initSmartURLWithPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a10a4d000f17b83e88a0885df8737b098',1,'NSURL(FoundationExtension)']]],
+  ['inittemporaryurlwithpath_3a',['initTemporaryURLWithPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#ae27f1da514a4c5de4017e42ea868a26d',1,'NSURL(FoundationExtension)']]],
   ['initwith32bitcolor_3a',['initWith32bitColor:',['../category_u_i_color_07_u_i_kit_extension_08.html#ab415827c76ff79cc1d9dbed56881ea74',1,'UIColor(UIKitExtension)']]],
   ['initwith8bitred_3agreen_3ablue_3aalpha_3a',['initWith8bitRed:green:blue:alpha:',['../category_u_i_color_07_u_i_kit_extension_08.html#a9582cb9e0a39271323a5d006692c6c40',1,'UIColor(UIKitExtension)']]],
   ['initwithabstractformat_3a',['initWithAbstractFormat:',['../category_n_s_u_r_l_07_foundation_extension_08.html#acf43ce6dbd5bb5185230f3749128a29a',1,'NSURL(FoundationExtension)']]],

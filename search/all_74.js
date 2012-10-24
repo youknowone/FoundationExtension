@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['temporaryurl',['temporaryURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a710bc85f672810819b853e3bff13bac4',1,'NSString(FoundationExtensionNSURL)']]],
+  ['temporaryurlwithpath_3a',['temporaryURLWithPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a1652eee4a388606b333878d4a78fa88f',1,'NSURL(FoundationExtension)']]],
   ['third',['third',['../interface_n_s_a_triple.html#adb9e9042aab45ea1539c9addb67549c0',1,'NSATriple']]],
   ['timeoutinterval',['timeoutInterval',['../category_n_s_u_r_l_request_07_foundation_extension_property_08.html#a507ecbb941f445a3596bc1813a03505e',1,'NSURLRequest(FoundationExtensionProperty)::timeoutInterval()'],['../category_n_s_mutable_u_r_l_request_07_foundation_extension_property_08.html#a12769213782f5fad683ab849a3891109',1,'NSMutableURLRequest(FoundationExtensionProperty)::timeoutInterval()']]],
   ['touchesbegan_3awithevent_3a',['touchesBegan:withEvent:',['../protocol_u_i_control_touch_events-p.html#a1fe6c6c8fd44a0b1851d58bad0c4fafe',1,'UIControlTouchEvents-p']]],

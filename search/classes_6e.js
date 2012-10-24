@@ -1,9 +1,15 @@
 var searchData=
 [
+  ['nsaarray',['NSAArray',['../interface_n_s_a_array.html',1,'']]],
   ['nsaclass',['NSAClass',['../interface_n_s_a_class.html',1,'']]],
+  ['nsadictionary',['NSADictionary',['../interface_n_s_a_dictionary.html',1,'']]],
   ['nsamethod',['NSAMethod',['../interface_n_s_a_method.html',1,'']]],
+  ['nsamutablearray',['NSAMutableArray',['../interface_n_s_a_mutable_array.html',1,'']]],
+  ['nsamutabledictionary',['NSAMutableDictionary',['../interface_n_s_a_mutable_dictionary.html',1,'']]],
+  ['nsamutablestring',['NSAMutableString',['../interface_n_s_a_mutable_string.html',1,'']]],
   ['nsarray_28foundationextensioncreation_29',['NSArray(FoundationExtensionCreation)',['../category_n_s_array_07_foundation_extension_creation_08.html',1,'']]],
   ['nsarray_28foundationextensionnsnumber_29',['NSArray(FoundationExtensionNSNumber)',['../category_n_s_array_07_foundation_extension_n_s_number_08.html',1,'']]],
+  ['nsastring',['NSAString',['../interface_n_s_a_string.html',1,'']]],
   ['nsatriple',['NSATriple',['../interface_n_s_a_triple.html',1,'']]],
   ['nsatuple',['NSATuple',['../interface_n_s_a_tuple.html',1,'']]],
   ['nsaurlrequesthttpbodymultipartformpostformatter',['NSAURLRequestHTTPBodyMultiPartFormPostFormatter',['../interface_n_s_a_u_r_l_request_h_t_t_p_body_multi_part_form_post_formatter.html',1,'']]],
@@ -25,6 +31,7 @@ var searchData=
   ['nsstring_28foundationextensioncrypto_29',['NSString(FoundationExtensionCrypto)',['../category_n_s_string_07_foundation_extension_crypto_08.html',1,'']]],
   ['nsstring_28foundationextensionnsurl_29',['NSString(FoundationExtensionNSURL)',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html',1,'']]],
   ['nsstring_28foundationextensionnumericvalues_29',['NSString(FoundationExtensionNumericValues)',['../category_n_s_string_07_foundation_extension_numeric_values_08.html',1,'']]],
+  ['nsstring_28foundationextensionpathextensions_29',['NSString(FoundationExtensionPathExtensions)',['../category_n_s_string_07_foundation_extension_path_extensions_08.html',1,'']]],
   ['nsstring_28foundationextensionshortcuts_29',['NSString(FoundationExtensionShortcuts)',['../category_n_s_string_07_foundation_extension_shortcuts_08.html',1,'']]],
   ['nsstring_28foundationextensionutf8_29',['NSString(FoundationExtensionUTF8)',['../category_n_s_string_07_foundation_extension_u_t_f8_08.html',1,'']]],
   ['nstimer_28foundationextension_29',['NSTimer(FoundationExtension)',['../category_n_s_timer_07_foundation_extension_08.html',1,'']]],

@@ -99,4 +99,43 @@
     STAssertEquals(copy.class, obj.class, @"");
 }
 
+- (void)testString {
+    NSAString *obj;
+    NSURL *tmpURL = @"tmp://test.plist".temporaryURL;
+
+    obj = [[[NSAString alloc] init] autorelease];
+    STAssertEquals(0, (int)obj.length, @"");
+
+    obj = [NSAString string];
+    STAssertEquals(0, (int)obj.length, @"");
+
+    obj = [NSAString stringWithString:@"12345"];
+    STAssertEquals(5, (int)obj.length, @"");
+
+    [obj writeToURL:tmpURL atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    NSAString *obj2 = [NSAString stringWithContentsOfURL:tmpURL encoding:NSUTF8StringEncoding error:NULL];
+
+    STAssertEquals(obj.length, obj2.length, @"");
+    STAssertEquals([obj characterAtIndex:0], (unichar)'1', @"");
+
+    NSString *sub = [obj substringWithRange:NSMakeRange(1, 3)];
+    STAssertEquals(3, (int)sub.length, @"");
+    NSString *solution = @"234";
+    STAssertTrue([sub isEqual:solution], @"");
+    STAssertEquals(sub.class, NSAString.class, @"");
+
+    STAssertEquals([obj characterAtIndex:3], (unichar)'4', @"");
+
+    NSAString *copy = [obj copy];
+    STAssertFalse(copy == obj, @"");
+    STAssertEquals(copy.length, obj.length, @"");
+    STAssertEquals(copy.class, obj.class, @"");
+
+    NSAMutableString *mobj = [NSAMutableString string];
+    STAssertEquals(0, (int)mobj.length, @"");
+
+    [mobj appendString:@"hi"];
+    STAssertEquals(2, (int)mobj.length, @"");
+}
+
 @end

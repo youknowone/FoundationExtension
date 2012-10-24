@@ -23,6 +23,7 @@
 
 #import <FoundationExtension/NSAArray.h>
 #import <FoundationExtension/NSADictionary.h>
+#import <FoundationExtension/NSAString.h>
 #import <FoundationExtension/NSAClass.h>
 #import <FoundationExtension/NSADataObject.h>
 #import <FoundationExtension/NSACrypto.h>

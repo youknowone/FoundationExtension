@@ -2,7 +2,7 @@
 //  NSDictionaryAdditions.h
 //  FoundationExtension
 //
-//  Created by youknowone on 11. 1. 24..
+//  Created by Jeong YunWon on 11. 1. 24..
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 

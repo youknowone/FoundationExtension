@@ -2,7 +2,7 @@
 //  NSStringAdditions.h
 //  FoundationExtension
 //
-//  Created by youknowone on 10. 10. 17..
+//  Created by Jeong YunWon on 10. 10. 17..
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  FoundationTests.h
 //  FoundationExtension
 //
-//  Created by youknowone on 12. 10. 25..
+//  Created by Jeong YunWon on 12. 10. 25..
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 

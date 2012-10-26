@@ -2,7 +2,7 @@
 //  NSArrayAdditions.h
 //  FoundationExtension
 //
-//  Created by youknowone on 11. 1. 25..
+//  Created by Jeong YunWon on 11. 1. 25..
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 

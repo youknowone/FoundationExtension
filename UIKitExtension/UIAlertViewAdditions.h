@@ -2,7 +2,7 @@
 //  UIAlertViewAdditions.h
 //  FoundationExtension
 //
-//  Created by youknowone on 10. 3. 6..
+//  Created by Jeong YunWon on 10. 3. 6..
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 

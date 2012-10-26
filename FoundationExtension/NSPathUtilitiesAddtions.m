@@ -2,7 +2,7 @@
 //  NSPathUtilitiesAddtions.m
 //  FoundationExtension
 //
-//  Created by youknowone on 10. 11. 2..
+//  Created by Jeong YunWon on 10. 11. 2..
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  NSADataObject.m
 //  FoundationExtension
 //
-//  Created by youknowone on 12. 3. 30..
+//  Created by Jeong YunWon on 12. 3. 30..
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 

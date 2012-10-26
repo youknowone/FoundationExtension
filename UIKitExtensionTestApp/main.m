@@ -2,7 +2,7 @@
 //  main.m
 //  UIKitExtensionTestApp
 //
-//  Created by youknowone on 12. 10. 24..
+//  Created by Jeong YunWon on 12. 10. 24..
 //  Copyright (c) 2012년 youknowone.org. All rights reserved.
 //
 

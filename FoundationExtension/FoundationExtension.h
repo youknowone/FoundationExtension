@@ -2,7 +2,7 @@
 //  FoundationExtension.h
 //  FoundationExtension
 //
-//  Created by youknowone on 10. 11. 1..
+//  Created by Jeong YunWon on 10. 11. 1..
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 

@@ -57,9 +57,9 @@
     if ([path hasPrefix:prefix]) {
         path = [path substringFromIndex:prefix.length];
     }
-    NSString *confPath = NSPathForUserConfigurationFile(path);
-    dlog(PATH_DEBUG, @"abstract configuration path: %@", confPath);
-    return [self initFileURLWithPath:confPath];
+    NSString *tempPath = NSPathForTemporaryFile(path);
+    dlog(PATH_DEBUG, @"abstract temporary path: %@", tempPath);
+    return [self initFileURLWithPath:tempPath];
 }
 
 - (id)initSmartURLWithPath:(NSString *)path {

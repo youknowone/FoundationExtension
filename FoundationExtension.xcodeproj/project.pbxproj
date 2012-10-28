@@ -10,16 +10,61 @@
 		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
-		3868F3B8162885D300C31163 /* NSACrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACrypto.h */; };
+		3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
+		3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
+		3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
+		3855B041163CF2B1005584CD /* CocoaExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; };
+		3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B049163CF2B1005584CD /* CocoaExtensionTests.m */; };
+		3855B053163D41F9005584CD /* FSEventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B051163D41F9005584CD /* FSEventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B054163D41F9005584CD /* FSEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B052163D41F9005584CD /* FSEventStream.m */; };
+		3855B055163D4200005584CD /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B056163D4200005584CD /* NSArrayAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArrayAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B057163D4200005584CD /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArrayAdditions.m */; };
+		3855B058163D4200005584CD /* NSBundleAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A50161AD9AE00C5CE06 /* NSBundleAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B059163D4200005584CD /* NSBundleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundleAdditions.m */; };
+		3855B05A163D4200005584CD /* NSDataAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A52161AD9AE00C5CE06 /* NSDataAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B05B163D4200005584CD /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSDataAdditions.m */; };
+		3855B05C163D4200005584CD /* NSDateAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A54161AD9AE00C5CE06 /* NSDateAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B05D163D4200005584CD /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDateAdditions.m */; };
+		3855B05E163D4200005584CD /* NSDictionaryAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A56161AD9AE00C5CE06 /* NSDictionaryAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B05F163D4200005584CD /* NSDictionaryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionaryAdditions.m */; };
+		3855B060163D4200005584CD /* NSNumberFormatterAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A58161AD9AE00C5CE06 /* NSNumberFormatterAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B061163D4200005584CD /* NSNumberFormatterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatterAdditions.m */; };
+		3855B062163D4200005584CD /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B063163D4200005584CD /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
+		3855B064163D4200005584CD /* NSPathUtilitiesAddtions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5A161AD9AE00C5CE06 /* NSPathUtilitiesAddtions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B065163D4200005584CD /* NSPathUtilitiesAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilitiesAddtions.m */; };
+		3855B066163D4200005584CD /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5C161AD9AE00C5CE06 /* NSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B067163D4200005584CD /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSStringAdditions.m */; };
+		3855B068163D4200005584CD /* NSTimerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5F161AD9AE00C5CE06 /* NSTimerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B069163D4200005584CD /* NSTimerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A60161AD9AE00C5CE06 /* NSTimerAdditions.m */; };
+		3855B06A163D4200005584CD /* NSURLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A61161AD9AE00C5CE06 /* NSURLAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B06B163D4200005584CD /* NSURLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURLAdditions.m */; };
+		3855B06C163D4200005584CD /* NSURLRequestAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A63161AD9AE00C5CE06 /* NSURLRequestAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B06D163D4200005584CD /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequestAdditions.m */; };
+		3855B06E163D4200005584CD /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B06F163D4200005584CD /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
+		3855B070163D4200005584CD /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B071163D4200005584CD /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
+		3855B072163D4200005584CD /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B073163D4200005584CD /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
+		3855B074163D4200005584CD /* NSAStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5E161AD9AE00C5CE06 /* NSAStringEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B075163D4200005584CD /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B076163D4200005584CD /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3855B077163D4200005584CD /* NSACrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B078163D4200005584CD /* NSACrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACrypto.m */; };
+		3855B079163D4200005584CD /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B07A163D4200005584CD /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
+		3868F3B8162885D300C31163 /* NSACrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F3BB162885D300C31163 /* NSACrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACrypto.m */; };
 		3868F3BC162885D300C31163 /* NSACrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACrypto.m */; };
-		3868F3BF162885D300C31163 /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; };
+		3868F3BF162885D300C31163 /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F3C2162885D300C31163 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
 		3868F3C3162885D300C31163 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
-		3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; };
+		3868F7B1162D57EB00C31163 /* NSObjectAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObjectAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F7B4162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
 		3868F7B5162D57EB00C31163 /* NSObjectAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObjectAdditions.m */; };
-		3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; };
+		3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
 		3868F7BE162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
 		3868F7D6162D9CDE00C31163 /* UIAlertViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7C5162D9CDE00C31163 /* UIAlertViewAdditions.m */; };
@@ -30,7 +75,7 @@
 		3868F7DB162D9CDE00C31163 /* UIImageAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7CF162D9CDE00C31163 /* UIImageAdditions.m */; };
 		3868F7DC162D9CDE00C31163 /* UIScrollViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */; };
 		3868F7DE162D9CDE00C31163 /* UIWebViewAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */; };
-		3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */; };
+		3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
@@ -79,6 +124,7 @@
 		38C98B34161ADAD700C4A389 /* NSURLRequestAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequestAdditions.m */; };
 		38C98B54161AE30300C4A389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38C98B59161AE30300C4A389 /* UIKitExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38C98B58161AE30300C4A389 /* UIKitExtension.h */; };
+		38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B034163CF2B1005584CD /* CocoaExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F068181636F8C8002723AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38F068191636F8C8002723AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38F0681A1636F8C8002723AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
@@ -95,22 +141,29 @@
 		38F0683B1636F8C9002723AB /* UITDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F068391636F8C9002723AB /* UITDetailViewController_iPhone.xib */; };
 		38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F0683C1636F8C9002723AB /* UITDetailViewController_iPad.xib */; };
 		38F068441636F9FA002723AB /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
-		38F0697A163839D2002723AB /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; };
+		38F0697A163839D2002723AB /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F0697B163839D2002723AB /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
 		38F0697C163839D2002723AB /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
 		38F0698016383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
 		38F0698116383A4B002723AB /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
 		38F06987163841F6002723AB /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
 		38F06988163841F6002723AB /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
-		38F0698B16384E40002723AB /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; };
+		38F0698B16384E40002723AB /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F0698C16384E40002723AB /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
 		38F0698D16384E40002723AB /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
-		38F0699016385752002723AB /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; };
+		38F0699016385752002723AB /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F0699116385752002723AB /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
 		38F0699216385752002723AB /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3855B03F163CF2B1005584CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3855B02A163CF2B1005584CD;
+			remoteInfo = CocoaExtension;
+		};
 		38A90FD916358FBD001DB09E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 383764CB13373154007072FD /* Project object */;
@@ -155,6 +208,16 @@
 		383764F013373155007072FD /* FoundationExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		383764F113373155007072FD /* FoundationExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionTests.h; sourceTree = "<group>"; };
 		383764F313373155007072FD /* FoundationExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionTests.m; sourceTree = "<group>"; };
+		3855B02B163CF2B1005584CD /* CocoaExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3855B02F163CF2B1005584CD /* CocoaExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtension-Info.plist"; sourceTree = "<group>"; };
+		3855B033163CF2B1005584CD /* CocoaExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtension-Prefix.pch"; sourceTree = "<group>"; };
+		3855B034163CF2B1005584CD /* CocoaExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaExtension.h; sourceTree = "<group>"; };
+		3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3855B044163CF2B1005584CD /* CocoaExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionTests-Info.plist"; sourceTree = "<group>"; };
+		3855B048163CF2B1005584CD /* CocoaExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaExtensionTests.h; sourceTree = "<group>"; };
+		3855B049163CF2B1005584CD /* CocoaExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaExtensionTests.m; sourceTree = "<group>"; };
+		3855B051163D41F9005584CD /* FSEventStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSEventStream.h; sourceTree = "<group>"; };
+		3855B052163D41F9005584CD /* FSEventStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSEventStream.m; sourceTree = "<group>"; };
 		38660A24161AD86000C5CE06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38660A41161AD8D700C5CE06 /* FoundationExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationExtension-Prefix.pch"; sourceTree = "<group>"; };
 		38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtension.h; sourceTree = "<group>"; };
@@ -256,6 +319,24 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3855B027163CF2B1005584CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3855B038163CF2B1005584CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */,
+				3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */,
+				3855B041163CF2B1005584CD /* CocoaExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3873043D133732DE004C8E89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -312,6 +393,7 @@
 			children = (
 				3868F3B01628801600C31163 /* cdebug */,
 				38660A3B161AD8D700C5CE06 /* FoundationExtension */,
+				3855B02D163CF2B1005584CD /* CocoaExtension */,
 				38C98B55161AE30300C4A389 /* UIKitExtension */,
 				38F0681B1636F8C8002723AB /* UIKitExtensionTestApp */,
 				383764D613373154007072FD /* Frameworks */,
@@ -327,6 +409,8 @@
 				38C7A9881495181800381910 /* FoundationExtensionTests.octest */,
 				38C98B53161AE30300C4A389 /* libUIKitExtension.a */,
 				38F068161636F8C8002723AB /* UIKitExtensionTestApp.app */,
+				3855B02B163CF2B1005584CD /* CocoaExtension.framework */,
+				3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -367,6 +451,45 @@
 			children = (
 				383764EC13373155007072FD /* FoundationExtensionTests-Info.plist */,
 				383764F013373155007072FD /* FoundationExtensionTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3855B02D163CF2B1005584CD /* CocoaExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3855B034163CF2B1005584CD /* CocoaExtension.h */,
+				3855B051163D41F9005584CD /* FSEventStream.h */,
+				3855B052163D41F9005584CD /* FSEventStream.m */,
+				3855B02E163CF2B1005584CD /* Supporting Files */,
+				3855B042163CF2B1005584CD /* CocoaExtensionTests */,
+			);
+			path = CocoaExtension;
+			sourceTree = "<group>";
+		};
+		3855B02E163CF2B1005584CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3855B02F163CF2B1005584CD /* CocoaExtension-Info.plist */,
+				3855B033163CF2B1005584CD /* CocoaExtension-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3855B042163CF2B1005584CD /* CocoaExtensionTests */ = {
+			isa = PBXGroup;
+			children = (
+				3855B048163CF2B1005584CD /* CocoaExtensionTests.h */,
+				3855B049163CF2B1005584CD /* CocoaExtensionTests.m */,
+				3855B043163CF2B1005584CD /* Supporting Files */,
+			);
+			path = CocoaExtensionTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		3855B043163CF2B1005584CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3855B044163CF2B1005584CD /* CocoaExtensionTests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -535,6 +658,35 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		3855B028163CF2B1005584CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3855B055163D4200005584CD /* FoundationExtension.h in Headers */,
+				3855B056163D4200005584CD /* NSArrayAdditions.h in Headers */,
+				3855B058163D4200005584CD /* NSBundleAdditions.h in Headers */,
+				3855B05A163D4200005584CD /* NSDataAdditions.h in Headers */,
+				3855B05C163D4200005584CD /* NSDateAdditions.h in Headers */,
+				3855B05E163D4200005584CD /* NSDictionaryAdditions.h in Headers */,
+				3855B060163D4200005584CD /* NSNumberFormatterAdditions.h in Headers */,
+				3855B062163D4200005584CD /* NSObjectAdditions.h in Headers */,
+				3855B064163D4200005584CD /* NSPathUtilitiesAddtions.h in Headers */,
+				3855B066163D4200005584CD /* NSStringAdditions.h in Headers */,
+				3855B068163D4200005584CD /* NSTimerAdditions.h in Headers */,
+				3855B06A163D4200005584CD /* NSURLAdditions.h in Headers */,
+				3855B06C163D4200005584CD /* NSURLRequestAdditions.h in Headers */,
+				3855B06E163D4200005584CD /* NSAArray.h in Headers */,
+				3855B070163D4200005584CD /* NSADictionary.h in Headers */,
+				3855B072163D4200005584CD /* NSAString.h in Headers */,
+				3855B074163D4200005584CD /* NSAStringEncoding.h in Headers */,
+				3855B075163D4200005584CD /* NSAClass.h in Headers */,
+				3855B077163D4200005584CD /* NSACrypto.h in Headers */,
+				3855B079163D4200005584CD /* NSADataObject.h in Headers */,
+				38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */,
+				3855B053163D41F9005584CD /* FSEventStream.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38C7A96F1495181800381910 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -566,6 +718,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3855B02A163CF2B1005584CD /* CocoaExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3855B04B163CF2B1005584CD /* Build configuration list for PBXNativeTarget "CocoaExtension" */;
+			buildPhases = (
+				3855B026163CF2B1005584CD /* Sources */,
+				3855B027163CF2B1005584CD /* Frameworks */,
+				3855B028163CF2B1005584CD /* Headers */,
+				3855B029163CF2B1005584CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaExtension;
+			productName = CocoaExtension;
+			productReference = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3855B03B163CF2B1005584CD /* CocoaExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3855B04E163CF2B1005584CD /* Build configuration list for PBXNativeTarget "CocoaExtensionTests" */;
+			buildPhases = (
+				3855B037163CF2B1005584CD /* Sources */,
+				3855B038163CF2B1005584CD /* Frameworks */,
+				3855B039163CF2B1005584CD /* Resources */,
+				3855B03A163CF2B1005584CD /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3855B040163CF2B1005584CD /* PBXTargetDependency */,
+			);
+			name = CocoaExtensionTests;
+			productName = CocoaExtensionTests;
+			productReference = 3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		38730440133732DE004C8E89 /* UIKitExtensionTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38730458133732DE004C8E89 /* Build configuration list for PBXNativeTarget "UIKitExtensionTests" */;
@@ -680,6 +869,8 @@
 			targets = (
 				38C7A9711495181800381910 /* FoundationExtension */,
 				38C7A9871495181800381910 /* FoundationExtensionTests */,
+				3855B02A163CF2B1005584CD /* CocoaExtension */,
+				3855B03B163CF2B1005584CD /* CocoaExtensionTests */,
 				38C98B52161AE30300C4A389 /* UIKitExtension */,
 				38730440133732DE004C8E89 /* UIKitExtensionTests */,
 				38F068151636F8C8002723AB /* UIKitExtensionTestApp */,
@@ -688,6 +879,20 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3855B029163CF2B1005584CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3855B039163CF2B1005584CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3873043E133732DE004C8E89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -728,6 +933,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3855B03A163CF2B1005584CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		3873043F133732DE004C8E89 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -757,6 +975,40 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3855B026163CF2B1005584CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3855B054163D41F9005584CD /* FSEventStream.m in Sources */,
+				3855B057163D4200005584CD /* NSArrayAdditions.m in Sources */,
+				3855B059163D4200005584CD /* NSBundleAdditions.m in Sources */,
+				3855B05B163D4200005584CD /* NSDataAdditions.m in Sources */,
+				3855B05D163D4200005584CD /* NSDateAdditions.m in Sources */,
+				3855B05F163D4200005584CD /* NSDictionaryAdditions.m in Sources */,
+				3855B061163D4200005584CD /* NSNumberFormatterAdditions.m in Sources */,
+				3855B063163D4200005584CD /* NSObjectAdditions.m in Sources */,
+				3855B065163D4200005584CD /* NSPathUtilitiesAddtions.m in Sources */,
+				3855B067163D4200005584CD /* NSStringAdditions.m in Sources */,
+				3855B069163D4200005584CD /* NSTimerAdditions.m in Sources */,
+				3855B06B163D4200005584CD /* NSURLAdditions.m in Sources */,
+				3855B06D163D4200005584CD /* NSURLRequestAdditions.m in Sources */,
+				3855B06F163D4200005584CD /* NSAArray.m in Sources */,
+				3855B071163D4200005584CD /* NSADictionary.m in Sources */,
+				3855B073163D4200005584CD /* NSAString.m in Sources */,
+				3855B076163D4200005584CD /* NSAClass.m in Sources */,
+				3855B078163D4200005584CD /* NSACrypto.m in Sources */,
+				3855B07A163D4200005584CD /* NSADataObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3855B037163CF2B1005584CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3873043C133732DE004C8E89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -852,6 +1104,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3855B040163CF2B1005584CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3855B02A163CF2B1005584CD /* CocoaExtension */;
+			targetProxy = 3855B03F163CF2B1005584CD /* PBXContainerItemProxy */;
+		};
 		38A90FDA16358FBD001DB09E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38C98B52161AE30300C4A389 /* UIKitExtension */;
@@ -979,6 +1236,108 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = .;
 				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		3855B04C163CF2B1005584CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		3855B04D163CF2B1005584CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
+				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		3855B04F163CF2B1005584CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3855B050163CF2B1005584CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
+				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1220,6 +1579,24 @@
 			buildConfigurations = (
 				383764F513373155007072FD /* Debug */,
 				383764F613373155007072FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3855B04B163CF2B1005584CD /* Build configuration list for PBXNativeTarget "CocoaExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3855B04C163CF2B1005584CD /* Debug */,
+				3855B04D163CF2B1005584CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3855B04E163CF2B1005584CD /* Build configuration list for PBXNativeTarget "CocoaExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3855B04F163CF2B1005584CD /* Debug */,
+				3855B050163CF2B1005584CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

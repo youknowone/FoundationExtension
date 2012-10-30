@@ -68,7 +68,23 @@ FoundationExtension
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMultiPartFormPostBody:@{@"filename":data} encoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithContentOfURLRequest:request];
-    
+
+## truncate objects in array
+Foundation
+
+    NSMutableArray *newArray = [NSMutableArray array];
+    for (NSString *s in array) {
+        [newArray addObject:[s substringToIndex:20]];
+    }
+
+FoundationExtension NSArray
+
+    NSArray *newArray = [array arrayByMappingOperation:^(NSString *obj){ [obj substringToIndex:20]; }];
+
+FoundationExtension NSMutableArray
+
+    [array map::^(NSString *obj){ [obj substringToIndex:20]; }];
+
 ## get class name
 Foundation
 

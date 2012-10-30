@@ -7,6 +7,11 @@
 //
 
 /*!
+ *  @file
+ *  @brief See @ref CoreFoundation-Subclass for concept of these objects.
+ */
+
+/*!
  *  @brief Subclass available string implementation.
  *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */

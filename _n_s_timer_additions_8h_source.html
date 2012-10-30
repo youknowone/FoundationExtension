@@ -92,18 +92,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  NSTimerAdditions.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  FoundationExtension</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by youknowone on 10. 10. 5..</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Jeong YunWon on 10. 10. 5..</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// not recomenned to use.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="code" href="category_n_s_timer_07_foundation_extension_08.html">   10</a></span>&#160;<span class="keyword">@interface </span>NSTimer (FoundationExtension)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;+ (NSTimer *)zeroDelayedTimerWithTarget:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;+ (NSTimer *)zeroDelayedTimerWithTarget:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector userInfo:(<span class="keywordtype">id</span>)userInfo;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;+ (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_timer_07_foundation_extension_n_s_run_loop_08.html">   12</a></span>&#160;<span class="keyword">@interface </span>NSTimer (FoundationExtensionNSRunLoop)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- (void)schedule;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="code" href="protocol_n_s_a_timer_delegate-p.html">   33</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocol_n_s_a_timer_delegate-p.html" title="NSTimer delegate interface protocol.">NSATimerDelegate</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;- (void)timerFired:(NSTimer *)timer;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;- (BOOL)timerShouldRepeat:(NSTimer *)timer;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="category_n_s_timer_07_foundation_extension_delegate_08.html">   50</a></span>&#160;<span class="keyword">@interface </span>NSTimer (FoundationExtensionDelegate)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;- (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_n_s_a_timer_delegate-p.html" title="NSTimer delegate interface protocol.">NSATimerDelegate</a>&gt;)delegate;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;+ (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(<span class="keywordtype">id</span>&lt;<a class="code" href="protocol_n_s_a_timer_delegate-p.html" title="NSTimer delegate interface protocol.">NSATimerDelegate</a>&gt;)delegate;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">// not recomenned to use.</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="category_n_s_timer_07_foundation_extension_shortcuts_08.html">   64</a></span>&#160;<span class="keyword">@interface </span>NSTimer (FoundationExtensionShortcuts)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;+ (NSTimer *)zeroDelayedTimerWithTarget:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;+ (NSTimer *)zeroDelayedTimerWithTarget:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector userInfo:(<span class="keywordtype">id</span>)userInfo;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;+ (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(<span class="keywordtype">id</span>)aTarget selector:(<span class="keywordtype">SEL</span>)aSelector;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -8,7 +8,7 @@ var searchData=
   ['datawithcontentsofurlrequest_3a',['dataWithContentsOfURLRequest:',['../category_n_s_data_07_foundation_extension_creation_08.html#a076ac0d744f9c5eaba301c560734e066',1,'NSData(FoundationExtensionCreation)']]],
   ['datawithcontentsofurlrequest_3aerror_3a',['dataWithContentsOfURLRequest:error:',['../category_n_s_data_07_foundation_extension_creation_08.html#acadda0d81e18ba0894f0fcaa3429cabb',1,'NSData(FoundationExtensionCreation)']]],
   ['datawithhexadecimalstring_3a',['dataWithHexadecimalString:',['../category_n_s_data_07_foundation_extension_serialization_08.html#a0531f1cb793611606668e4f15183d41e',1,'NSData(FoundationExtensionSerialization)']]],
-  ['delayedtimerwithtimeinterval_3atarget_3aselector_3a',['delayedTimerWithTimeInterval:target:selector:',['../category_n_s_timer_07_foundation_extension_08.html#aabb4a946c4ce105e7a5b949ce31ca13d',1,'NSTimer(FoundationExtension)']]],
+  ['delayedtimerwithtimeinterval_3atarget_3aselector_3a',['delayedTimerWithTimeInterval:target:selector:',['../category_n_s_timer_07_foundation_extension_shortcuts_08.html#a139aa64369e9a48e850a92c59604029a',1,'NSTimer(FoundationExtensionShortcuts)']]],
   ['deprecated_20list',['Deprecated List',['../deprecated.html',1,'']]],
   ['dictionarywithcontentsofurlrequest_3a',['dictionaryWithContentsOfURLRequest:',['../category_n_s_dictionary_07_foundation_extension_creation_08.html#a2eaa3f07887102e2e4cb0a1336d61d50',1,'NSDictionary(FoundationExtensionCreation)']]],
   ['dictionarywithcontentsofurlrequest_3aformat_3aerror_3a',['dictionaryWithContentsOfURLRequest:format:error:',['../category_n_s_dictionary_07_foundation_extension_creation_08.html#a59ef39d45383efb0fed0ddf378533f5a',1,'NSDictionary(FoundationExtensionCreation)']]],

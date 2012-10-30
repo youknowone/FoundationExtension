@@ -138,6 +138,16 @@ NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse
 <pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
 [request setHTTPMultiPartFormPostBody:@"filename":data} encoding:NSUTF8StringEncoding];
 NSData *data = [NSData dataWithContentOfURLRequest:request];
+</pre><h2>truncate objects in array</h2>
+<p>Foundation </p>
+<pre class="fragment">NSMutableArray *newArray = [NSMutableArray array];
+for (NSString *s in array) {
+    [newArray addObject:[s substringToIndex:20]];
+}
+</pre><p>FoundationExtension NSArray </p>
+<pre class="fragment">NSArray *newArray = [array arrayByMappingOperation:^(NSString *obj){ [obj substringToIndex:20]; }];
+</pre><p>FoundationExtension NSMutableArray </p>
+<pre class="fragment">[array map::^(NSString *obj){ [obj substringToIndex:20]; }];
 </pre><h2>get class name</h2>
 <p>Foundation </p>
 <pre class="fragment">NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];

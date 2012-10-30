@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['schedule',['schedule',['../category_n_s_timer_07_foundation_extension_n_s_run_loop_08.html#a59a1c362e8129ca255323be6acc3edb8',1,'NSTimer(FoundationExtensionNSRunLoop)']]],
+  ['scheduledtimerwithtimeinterval_3adelegate_3a',['scheduledTimerWithTimeInterval:delegate:',['../category_n_s_timer_07_foundation_extension_delegate_08.html#aaee43f1419d93b7167e67043b823e5bd',1,'NSTimer(FoundationExtensionDelegate)']]],
+  ['schedulewithrunloop_3amode_3a',['scheduleWithRunLoop:mode:',['../category_n_s_timer_07_foundation_extension_n_s_run_loop_08.html#a1e22d9582c8d9e578d27c46895f6c568',1,'NSTimer(FoundationExtensionNSRunLoop)']]],
   ['sendactionsforcontrolevents_3awithevent_3a',['sendActionsForControlEvents:withEvent:',['../category_u_i_control_07_u_i_kit_extension_08.html#ab2250ef3c3bd1f6085097930ab117a0f',1,'UIControl(UIKitExtension)']]],
   ['sethttpmultipartformpostbody_3aencoding_3a',['setHTTPMultiPartFormPostBody:encoding:',['../category_n_s_mutable_u_r_l_request_07_i_c_h_t_t_p_multi_part_form_post_request_08.html#afed623f7c1f3ac7140f47a3cc1300cd5',1,'NSMutableURLRequest(ICHTTPMultiPartFormPostRequest)']]],
   ['sethttppostbody_3aencoding_3a',['setHTTPPostBody:encoding:',['../category_n_s_mutable_u_r_l_request_07_foundation_extension_post_08.html#a98252c627365042ea0024dbdfbf16804',1,'NSMutableURLRequest(FoundationExtensionPost)']]],
@@ -15,8 +18,9 @@ var searchData=
   ['stringwithconcatnatingstrings_3a',['stringWithConcatnatingStrings:',['../category_n_s_string_07_foundation_extension_creations_08.html#adbf6aaaa9b7ddc5d726165a8fac5a766',1,'NSString(FoundationExtensionCreations)']]],
   ['stringwithdata_3aencoding_3a',['stringWithData:encoding:',['../category_n_s_string_07_foundation_extension_creations_08.html#ae21234ce4f86c9de15aba7f4f1ee92e1',1,'NSString(FoundationExtensionCreations)']]],
   ['stringwithformat_3aarguments_3a',['stringWithFormat:arguments:',['../category_n_s_string_07_foundation_extension_creations_08.html#ab23b28a84db3f56c8eb6ad787ea70478',1,'NSString(FoundationExtensionCreations)']]],
+  ['stringwithinteger_3a',['stringWithInteger:',['../category_n_s_string_07_foundation_extension_creations_08.html#a2fcb5bd162c065171bc4974ada091f3b',1,'NSString(FoundationExtensionCreations)']]],
   ['stringwithutf8data_3a',['stringWithUTF8Data:',['../category_n_s_string_07_foundation_extension_u_t_f8_08.html#a82e080dffa05f96dc498112086d5aa67',1,'NSString(FoundationExtensionUTF8)']]],
   ['substringfromindex_3alength_3a',['substringFromIndex:length:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#a51ac2ce2aeed3b36d12ed8646237ccee',1,'NSString(FoundationExtensionShortcuts)']]],
   ['substringfromindex_3atoindex_3a',['substringFromIndex:toIndex:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#a8d053b769703a59885bd9cff184a3455',1,'NSString(FoundationExtensionShortcuts)']]],
-  ['swap',['swap',['../interface_n_s_a_tuple.html#a37d153589567ad1444f1fa4378d1d307',1,'NSATuple']]]
+  ['swap',['swap',['../interface_n_s_a_mutable_tuple.html#a2ceec4aeed382e4ff120b06901590945',1,'NSAMutableTuple']]]
 ];

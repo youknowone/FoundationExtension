@@ -92,57 +92,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  NSStringAdditions.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  FoundationExtension</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by youknowone on 10. 10. 17..</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Jeong YunWon on 10. 10. 17..</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright 2010 youknowone.org All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_creations_08.html">   12</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionCreations)</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;+ (id)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;+ (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;- (id)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;+ (id)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_shortcuts_08.html">   41</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionShortcuts)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;- (NSString *)format:(<span class="keywordtype">id</span>)first, ...;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;- (NSString *)format0:(<span class="keywordtype">id</span>)dummyLikeNil, ...;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_u_t_f8_08.html">   92</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionUTF8)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;+ (NSString *)stringWithUTF8Data:(NSData *)data;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;- (NSData *)dataUsingUTF8Encoding;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;- (id)initWithInteger:(NSInteger)value;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;+ (id)stringWithInteger:(NSInteger)value;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;+ (id)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;- (id)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;+ (id)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_shortcuts_08.html">   50</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionShortcuts)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (NSString *)format:(<span class="keywordtype">id</span>)first, ...;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;- (NSString *)format0:(<span class="keywordtype">id</span>)dummyLikeNil, ...;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_u_t_f8_08.html">  101</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionUTF8)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;+ (NSString *)stringWithUTF8Data:(NSData *)data;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_path_extensions_08.html">  124</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionPathExtensions)</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;- (NSString *)stringByAppendingPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_numeric_values_08.html">  142</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionNumericValues)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;- (NSInteger)integerValueBase:(NSInteger)radix;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;- (NSInteger)hexadecimalValue;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;- (NSData *)dataUsingUTF8Encoding;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_path_extensions_08.html">  133</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionPathExtensions)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;- (NSString *)stringByAppendingPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="code" href="category_n_s_string_07_foundation_extension_numeric_values_08.html">  151</a></span>&#160;<span class="keyword">@interface </span>NSString (FoundationExtensionNumericValues)</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;- (NSInteger)integerValueBase:(NSInteger)radix;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;- (NSInteger)hexadecimalValue;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['fileurl',['fileURL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a4d29b8e3178ff3b79df45358df41caa4',1,'NSString(FoundationExtensionNSURL)']]],
-  ['fileurlwithformat_3a',['fileURLWithFormat:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a538a979738d048e90f87cdca66c849d8',1,'NSURL(FoundationExtension)']]],
-  ['first',['first',['../interface_n_s_a_tuple.html#af53b89f629a1ba13551b515668a3bede',1,'NSATuple::first()'],['../interface_n_s_a_mutable_tuple.html#a4d94bff9a09d669fe0e2e3376043e6aa',1,'NSAMutableTuple::first()'],['../interface_n_s_a_triple.html#ab519a532a2bcd5fac34fa297a7d09164',1,'NSATriple::first()'],['../interface_n_s_a_mutable_triple.html#a4e1270cab9b096a38d328ba2c1cf3bab',1,'NSAMutableTriple::first()']]],
-  ['format0_3a',['format0:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#a98e24c83c23f923080c0438673019f87',1,'NSString(FoundationExtensionShortcuts)']]],
-  ['format_3a',['format:',['../category_n_s_string_07_foundation_extension_shortcuts_08.html#ad889bd35393bb42fba5d181d6db24a2c',1,'NSString(FoundationExtensionShortcuts)']]],
-  ['formattedstringbydecimalstyleforinteger_3a',['formattedStringByDecimalStyleForInteger:',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#aad2073bd73c83f8d622f6d974a81af76',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
-  ['formattedstringbydecimalstylefornumber_3a',['formattedStringByDecimalStyleForNumber:',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#a27a3dbdc3c422aa28a8ea79ad4fbabc4',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
-  ['formatter',['formatter',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#a0a25f9334583969d9b63ed98f3bb50ba',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
-  ['formatterwithnumberstyle_3a',['formatterWithNumberStyle:',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#aea1a5989ada8212c1fd85a86cc8f644c',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
-  ['foundationextension_2eh',['FoundationExtension.h',['../_foundation_extension_8h.html',1,'']]]
+  ['fileurl',['fileURL',['../categoryNSString_07FE__NSURL_08.html#a4bcfdea722e1c9348e0d1230dc261a28',1,'NSString(FE_NSURL)']]],
+  ['fileurlwithformat_3a',['fileURLWithFormat:',['../categoryNSURL_07FE__Creations_08.html#a8f18cd44c6f939cf1376c2cf6974343a',1,'NSURL(FE_Creations)']]],
+  ['filter_3a',['filter:',['../categoryNSMutableArray_07FE__Functional_08.html#a8686f43e4f1403fcbb5c81e35b143d01',1,'NSMutableArray(FE_Functional)']]],
+  ['first',['first',['../interfaceNSATuple.html#af53b89f629a1ba13551b515668a3bede',1,'NSATuple::first()'],['../interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa',1,'NSAMutableTuple::first()'],['../interfaceNSATriple.html#ab519a532a2bcd5fac34fa297a7d09164',1,'NSATriple::first()'],['../interfaceNSAMutableTriple.html#a4e1270cab9b096a38d328ba2c1cf3bab',1,'NSAMutableTriple::first()']]],
+  ['flushasync',['flushAsync',['../interfaceFSEventStream.html#a92da08a35b794e29e479c6d9b1476e38',1,'FSEventStream']]],
+  ['flushsync',['flushSync',['../interfaceFSEventStream.html#a155eb08448202e68e0a7b5e5e5efe7aa',1,'FSEventStream']]],
+  ['format0_3a',['format0:',['../categoryNSString_07FE__Shortcuts_08.html#af17ebaac232dc72fbc73b8b61189f1ef',1,'NSString(FE_Shortcuts)']]],
+  ['format_3a',['format:',['../categoryNSString_07FE__Shortcuts_08.html#a9162edfb63138f1901703f87f04795ff',1,'NSString(FE_Shortcuts)']]],
+  ['formattedstringbydecimalstyleforinteger_3a',['formattedStringByDecimalStyleForInteger:',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#a64b36e4f40795b3ffdc26aaf91c386ad',1,'NSNumberFormatter(FE_Shortcuts)']]],
+  ['formattedstringbydecimalstylefornumber_3a',['formattedStringByDecimalStyleForNumber:',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#a3ba36f43ce6092866caacd4797bc95d5',1,'NSNumberFormatter(FE_Shortcuts)']]],
+  ['formatter',['formatter',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#a3c1be41feb4cca8f367a9237694ca18c',1,'NSNumberFormatter(FE_Shortcuts)']]],
+  ['formatterwithnumberstyle_3a',['formatterWithNumberStyle:',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#ad9c979f8a153a888889c7ceb26b9cd5e',1,'NSNumberFormatter(FE_Shortcuts)']]],
+  ['foundationextension_2eh',['FoundationExtension.h',['../FoundationExtension_8h.html',1,'']]],
+  ['fseventstream',['FSEventStream',['../interfaceFSEventStream.html',1,'']]],
+  ['fseventstream_2eh',['FSEventStream.h',['../FSEventStream_8h.html',1,'']]],
+  ['fseventstreamdelegate_2dp',['FSEventStreamDelegate-p',['../protocolFSEventStreamDelegate-p.html',1,'']]],
+  ['foundationextension',['FoundationExtension',['../index.html',1,'']]]
 ];

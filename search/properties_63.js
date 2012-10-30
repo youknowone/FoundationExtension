@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['cachepolicy',['cachePolicy',['../category_n_s_u_r_l_request_07_foundation_extension_property_08.html#a48e423b7febaaeb6af82933f4b774cc2',1,'NSURLRequest(FoundationExtensionProperty)::cachePolicy()'],['../category_n_s_mutable_u_r_l_request_07_foundation_extension_property_08.html#a8037ffb9cb54eaf3662710828c6f113e',1,'NSMutableURLRequest(FoundationExtensionProperty)::cachePolicy()']]],
-  ['class',['class',['../interface_n_s_a_class.html#a11ba277d9a6cce42a132878d5ca8de5d',1,'NSAClass']]],
-  ['classname',['className',['../category_n_s_object_07_foundation_extension_08.html#a45a457f9a9cadcfd67c9b6b1bc0ea5c6',1,'NSObject(FoundationExtension)']]],
-  ['classobject',['classObject',['../category_n_s_object_07_n_s_a_class_08.html#a7d7667d78d7afd2feea4d98bddeb14fd',1,'NSObject(NSAClass)']]],
-  ['components',['components',['../category_n_s_date_07_foundation_extension_08.html#a355f29e0ec94d7874dab4c32ca9aa52c',1,'NSDate(FoundationExtension)::components()'],['../category_u_i_color_07_u_i_kit_extension_08.html#abcf6110777153fa9ce347af17b56465d',1,'UIColor(UIKitExtension)::components()']]],
-  ['contentbounds',['contentBounds',['../category_u_i_scroll_view_07_u_i_kit_extension_08.html#ae8b864e6676370d9a5f534e3f8101b4d',1,'UIScrollView(UIKitExtension)']]],
-  ['contentframe',['contentFrame',['../category_u_i_scroll_view_07_u_i_kit_extension_08.html#a80e08693e898e82b57439fea1a1fb603',1,'UIScrollView(UIKitExtension)']]]
+  ['cachepolicy',['cachePolicy',['../categoryNSURLRequest_07FE__Properties_08.html#ac62490809657102cd09b50a0af5fa118',1,'NSURLRequest(FE_Properties)::cachePolicy()'],['../categoryNSMutableURLRequest_07FE__Properties_08.html#a39ceacb4388be51db01c32c724114b8d',1,'NSMutableURLRequest(FE_Properties)::cachePolicy()']]],
+  ['class',['class',['../interfaceNSAClass.html#a11ba277d9a6cce42a132878d5ca8de5d',1,'NSAClass']]],
+  ['classname',['className',['../categoryNSObject_07FE__ObjCRuntime_08.html#aea44a066f4fd7f73a97ae24ef32810e9',1,'NSObject(FE_ObjCRuntime)']]],
+  ['classobject',['classObject',['../categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd',1,'NSObject(NSAClass)']]],
+  ['components',['components',['../categoryNSDate_07FE__Shortcuts_08.html#a8d4d4f33a1c191d385e357b31fd51618',1,'NSDate(FE_Shortcuts)::components()'],['../categoryUIColor_07FE__Shortcuts_08.html#ab5234396d5b3345be668962ada24b5b0',1,'UIColor(FE_Shortcuts)::components()']]],
+  ['contentbounds',['contentBounds',['../categoryUIScrollView_07FE__Shortcuts_08.html#ab0a57a17e863972b46e87a631dfda616',1,'UIScrollView(FE_Shortcuts)']]],
+  ['contentframe',['contentFrame',['../categoryUIScrollView_07FE__Shortcuts_08.html#a3d115888df4dc7c8e1723412c4bed9d0',1,'UIScrollView(FE_Shortcuts)']]]
 ];

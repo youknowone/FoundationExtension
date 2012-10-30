@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['base64string',['base64String',['../category_n_s_data_07_foundation_extension_serialization_08.html#ab711a47264686848156ede93998e0301',1,'NSData(FoundationExtensionSerialization)']]]
+  ['base64string',['base64String',['../categoryNSData_07FE__Serialization_08.html#aecc909fbc85d9d711255acc943084b1d',1,'NSData(FE_Serialization)']]]
 ];

@@ -1,14 +1,15 @@
 var searchData=
 [
-  ['uiacolorcomponents',['UIAColorComponents',['../interface_u_i_a_color_components.html',1,'']]],
-  ['uialertview_28foundationextension_29',['UIAlertView(FoundationExtension)',['../category_u_i_alert_view_07_foundation_extension_08.html',1,'']]],
-  ['uiapplication_28foundationextension_29',['UIApplication(FoundationExtension)',['../category_u_i_application_07_foundation_extension_08.html',1,'']]],
-  ['uicolor_28uikitextension_29',['UIColor(UIKitExtension)',['../category_u_i_color_07_u_i_kit_extension_08.html',1,'']]],
-  ['uicolor_28uikitextensionhtml_29',['UIColor(UIKitExtensionHTML)',['../category_u_i_color_07_u_i_kit_extension_h_t_m_l_08.html',1,'']]],
-  ['uicontrol_28uikitextension_29',['UIControl(UIKitExtension)',['../category_u_i_control_07_u_i_kit_extension_08.html',1,'']]],
-  ['uicontroltouchevents_2dp',['UIControlTouchEvents-p',['../protocol_u_i_control_touch_events-p.html',1,'']]],
-  ['uidevice_28foundationextension_29',['UIDevice(FoundationExtension)',['../category_u_i_device_07_foundation_extension_08.html',1,'']]],
-  ['uiimage_28uikitextension_29',['UIImage(UIKitExtension)',['../category_u_i_image_07_u_i_kit_extension_08.html',1,'']]],
-  ['uiscrollview_28uikitextension_29',['UIScrollView(UIKitExtension)',['../category_u_i_scroll_view_07_u_i_kit_extension_08.html',1,'']]],
-  ['uiwebview_28uikitextension_29',['UIWebView(UIKitExtension)',['../category_u_i_web_view_07_u_i_kit_extension_08.html',1,'']]]
+  ['uiacolorcomponents',['UIAColorComponents',['../interfaceUIAColorComponents.html',1,'']]],
+  ['uialertview_28fe_5fshortcuts_29',['UIAlertView(FE_Shortcuts)',['../categoryUIAlertView_07FE__Shortcuts_08.html',1,'']]],
+  ['uiapplication_28fe_5fshortcuts_29',['UIApplication(FE_Shortcuts)',['../categoryUIApplication_07FE__Shortcuts_08.html',1,'']]],
+  ['uicolor_28fe_5fcreations_29',['UIColor(FE_Creations)',['../categoryUIColor_07FE__Creations_08.html',1,'']]],
+  ['uicolor_28fe_5fhtmlcolor_29',['UIColor(FE_HTMLColor)',['../categoryUIColor_07FE__HTMLColor_08.html',1,'']]],
+  ['uicolor_28fe_5fshortcuts_29',['UIColor(FE_Shortcuts)',['../categoryUIColor_07FE__Shortcuts_08.html',1,'']]],
+  ['uicontrol_28fe_5fshortcuts_29',['UIControl(FE_Shortcuts)',['../categoryUIControl_07FE__Shortcuts_08.html',1,'']]],
+  ['uicontroltouchevents_2dp',['UIControlTouchEvents-p',['../protocolUIControlTouchEvents-p.html',1,'']]],
+  ['uidevice_28fe_5fshortcuts_29',['UIDevice(FE_Shortcuts)',['../categoryUIDevice_07FE__Shortcuts_08.html',1,'']]],
+  ['uiimage_28fe_5fimageprocess_29',['UIImage(FE_ImageProcess)',['../categoryUIImage_07FE__ImageProcess_08.html',1,'']]],
+  ['uiscrollview_28fe_5fshortcuts_29',['UIScrollView(FE_Shortcuts)',['../categoryUIScrollView_07FE__Shortcuts_08.html',1,'']]],
+  ['uiwebview_28fe_5fshortcuts_29',['UIWebView(FE_Shortcuts)',['../categoryUIWebView_07FE__Shortcuts_08.html',1,'']]]
 ];

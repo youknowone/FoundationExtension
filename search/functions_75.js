@@ -1,13 +1,14 @@
 var searchData=
 [
-  ['url',['URL',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#a962f567ccfd445bf07ccc694e4ddfb85',1,'NSString(FoundationExtensionNSURL)']]],
-  ['urlprotocol',['URLProtocol',['../category_n_s_string_07_foundation_extension_n_s_u_r_l_08.html#aeaccd3f91c9284b0fb557918c16d0088',1,'NSString(FoundationExtensionNSURL)']]],
-  ['urlrequestwithabstractpath_3a',['URLRequestWithAbstractPath:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a6d7d99e78d472f03b24ac3d23ce21696',1,'NSURLRequest(FoundationExtensionCreations)']]],
-  ['urlrequestwithabstractpathformat_3a',['URLRequestWithAbstractPathFormat:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a77347f4776020cd3a08375bc74aa1a1c',1,'NSURLRequest(FoundationExtensionCreations)']]],
-  ['urlrequestwithfilepath_3a',['URLRequestWithFilePath:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a0f88e1a0fd71c5dcf807f7681b7e044b',1,'NSURLRequest(FoundationExtensionCreations)']]],
-  ['urlrequestwithfilepathformat_3a',['URLRequestWithFilePathFormat:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a188f92f64cd7d6ada3252d5138dc5080',1,'NSURLRequest(FoundationExtensionCreations)']]],
-  ['urlrequestwithurlformat_3a',['URLRequestWithURLFormat:',['../category_n_s_u_r_l_request_07_foundation_extension_creations_08.html#a99b49e0dbce48a3d968eb7f59cdef466',1,'NSURLRequest(FoundationExtensionCreations)']]],
-  ['urlwithabstractformat_3a',['URLWithAbstractFormat:',['../category_n_s_u_r_l_07_foundation_extension_08.html#ab5e001ac143a083e9a8f7e86e81d79ba',1,'NSURL(FoundationExtension)']]],
-  ['urlwithabstractpath_3a',['URLWithAbstractPath:',['../category_n_s_u_r_l_07_foundation_extension_08.html#a8a06b6ab314599cc40b7f8f90119f531',1,'NSURL(FoundationExtension)']]],
-  ['urlwithformat_3a',['URLWithFormat:',['../category_n_s_u_r_l_07_foundation_extension_08.html#ae90d21e4e6e8238d794f2856196d9f5a',1,'NSURL(FoundationExtension)']]]
+  ['unschedulefromrunloop_3amode_3a',['unscheduleFromRunLoop:mode:',['../interfaceFSEventStream.html#a6bceb8706017180552ddab5829cc78ea',1,'FSEventStream']]],
+  ['url',['URL',['../categoryNSString_07FE__NSURL_08.html#a0a5b80b3f4f5f5bde7101bf09eda17bf',1,'NSString(FE_NSURL)']]],
+  ['urlprotocol',['URLProtocol',['../categoryNSString_07FE__NSURL_08.html#ab18faa0d69d13592f7bbb7b5b9d86abc',1,'NSString(FE_NSURL)']]],
+  ['urlrequestwithabstractpath_3a',['URLRequestWithAbstractPath:',['../categoryNSURLRequest_07FE__Creations_08.html#af6d65231c81ace4407bbc9a0fdef22b0',1,'NSURLRequest(FE_Creations)']]],
+  ['urlrequestwithabstractpathformat_3a',['URLRequestWithAbstractPathFormat:',['../categoryNSURLRequest_07FE__Creations_08.html#a889d2c3e2ee8c9613b06d136374d0e3c',1,'NSURLRequest(FE_Creations)']]],
+  ['urlrequestwithfilepath_3a',['URLRequestWithFilePath:',['../categoryNSURLRequest_07FE__Creations_08.html#a4360dbef005b6d2df3a3ed94ed939f77',1,'NSURLRequest(FE_Creations)']]],
+  ['urlrequestwithfilepathformat_3a',['URLRequestWithFilePathFormat:',['../categoryNSURLRequest_07FE__Creations_08.html#acb4af6cf1cb0e90fe711660e12e18854',1,'NSURLRequest(FE_Creations)']]],
+  ['urlrequestwithurlformat_3a',['URLRequestWithURLFormat:',['../categoryNSURLRequest_07FE__Creations_08.html#a08735093419d12efb20e40ed5ebdf440',1,'NSURLRequest(FE_Creations)']]],
+  ['urlwithabstractformat_3a',['URLWithAbstractFormat:',['../categoryNSURL_07FE__Creations_08.html#acce7189005b1e207cfbfe43405858bde',1,'NSURL(FE_Creations)']]],
+  ['urlwithabstractpath_3a',['URLWithAbstractPath:',['../categoryNSURL_07FE__Creations_08.html#a6ff66796d5f9a0e465547655fa25f942',1,'NSURL(FE_Creations)']]],
+  ['urlwithformat_3a',['URLWithFormat:',['../categoryNSURL_07FE__Creations_08.html#a483c13281e29ae777a69b509c8b5a79b',1,'NSURL(FE_Creations)']]]
 ];

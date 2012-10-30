@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['generatesdecimalnumbers',['generatesDecimalNumbers',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#a3a627561d1eb50842a297d56a9e4ab7c',1,'NSNumberFormatter(FoundationExtensionShortcut)']]],
-  ['green',['green',['../interface_u_i_a_color_components.html#abad7c9f82ec55100dbef3b1dc5ef2e15',1,'UIAColorComponents']]]
+  ['generatesdecimalnumbers',['generatesDecimalNumbers',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#ac1ed4c52928a48f334920de3ffdb509c',1,'NSNumberFormatter(FE_Shortcuts)']]],
+  ['green',['green',['../interfaceUIAColorComponents.html#abad7c9f82ec55100dbef3b1dc5ef2e15',1,'UIAColorComponents']]]
 ];

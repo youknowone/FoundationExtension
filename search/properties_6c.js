@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['locale',['locale',['../category_n_s_number_formatter_07_foundation_extension_shortcut_08.html#add576d1aed68fd376584983a7ae72db2',1,'NSNumberFormatter(FoundationExtensionShortcut)']]]
+  ['latesteventid',['latestEventId',['../interfaceFSEventStream.html#ab05ac605476cc94a97ddc2ea7db15962',1,'FSEventStream']]],
+  ['locale',['locale',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#a55d970773391c38bf27e52befa255aed',1,'NSNumberFormatter(FE_Shortcuts)']]]
 ];

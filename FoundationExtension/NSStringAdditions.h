@@ -12,6 +12,15 @@
 @interface NSString (FoundationExtensionCreations)
 
 /*!
+ *  @brief Initialize an NSString from integer value.
+ */
+- (id)initWithInteger:(NSInteger)value;
+/*!
+ *  @brief Creates and returns an NSString from integer value.
+ */
++ (id)stringWithInteger:(NSInteger)value;
+
+/*!
  *  @brief Creates and returns an NSString object initialized by using a given format string as a template into which the remaining argument values are substituted according to the user’s default locale.
  *  @see initWithFormat:arguments:
  */

@@ -10,6 +10,20 @@
 
 @implementation NSString (FoundationExtensionCreations)
 
+- (id)initWithInteger:(NSInteger)value {
+    #ifdef __LP64__
+        #define __NSINTEGER_FORMAT @"%ld"
+    #else
+        #define __NSINTEGER_FORMAT @"%d"
+    #endif
+    return [self initWithFormat:__NSINTEGER_FORMAT, value];
+    #undef __NSINTEGER_FORMAT
+}
+
++ (id)stringWithInteger:(NSInteger)value {
+    return [[[self alloc] initWithInteger:value] autorelease];
+}
+
 + (NSString *)stringWithFormat:(NSString *)format arguments:(va_list)argList {
     return [[[self alloc] initWithFormat:format arguments:argList] autorelease];
 }

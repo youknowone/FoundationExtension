@@ -8,6 +8,8 @@
 
 #import "FSEventStream.h"
 
+#include "debug.h"
+
 @interface FSEventStream ()
 
 // NOTE: These can be replaced with FSEventStreamCreateContext retain/release callback

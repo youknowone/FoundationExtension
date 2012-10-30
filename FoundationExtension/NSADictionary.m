@@ -8,6 +8,8 @@
 
 #import "NSADictionary.h"
 
+#include "debug.h"
+
 @interface NSADictionary ()
 
 - (id)initWithImplementationDelegate:(id)impl;

@@ -8,6 +8,8 @@
 
 #import "NSAString.h"
 
+#include "debug.h"
+
 @interface NSAString ()
 
 - (id)initWithImplementationDelegate:(id)impl;

@@ -8,6 +8,8 @@
 
 #import "NSAArray.h"
 
+#include "debug.h"
+
 @interface NSAArray ()
 
 - (id)initWithImplementationDelegate:(id)impl;

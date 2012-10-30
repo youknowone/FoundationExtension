@@ -395,7 +395,6 @@
 				38660A3B161AD8D700C5CE06 /* FoundationExtension */,
 				3855B02D163CF2B1005584CD /* CocoaExtension */,
 				38C98B55161AE30300C4A389 /* UIKitExtension */,
-				38F0681B1636F8C8002723AB /* UIKitExtensionTestApp */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
 			);
@@ -611,6 +610,7 @@
 				3868F7D4162D9CDE00C31163 /* UIWebViewAdditions.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */,
 				38730448133732DE004C8E89 /* Tests */,
+				38F0681B1636F8C8002723AB /* TestApp */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -623,7 +623,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		38F0681B1636F8C8002723AB /* UIKitExtensionTestApp */ = {
+		38F0681B1636F8C8002723AB /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
 				38F068241636F8C8002723AB /* UITAppDelegate.h */,
@@ -638,8 +638,9 @@
 				38F0683C1636F8C9002723AB /* UITDetailViewController_iPad.xib */,
 				38F0681C1636F8C8002723AB /* Supporting Files */,
 			);
+			name = TestApp;
 			path = UIKitExtensionTestApp;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		38F0681C1636F8C8002723AB /* Supporting Files */ = {
 			isa = PBXGroup;

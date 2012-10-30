@@ -8,22 +8,60 @@
 
 #import "NSTimerAdditions.h"
 
-@implementation NSTimer (FoundationExtension)
+@implementation NSTimer (FoundationExtensionNSRunLoop)
+
+- (void)schedule {
+    [self scheduleWithRunLoop:[NSRunLoop currentRunLoop] mode:NSDefaultRunLoopMode];
+}
+
+- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode {
+    [[NSRunLoop currentRunLoop] addTimer:self forMode:mode];
+}
+
+@end
+
+
+@implementation NSTimer (FoundationExtensionDelegate)
+
+static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
+    id<NSATimerDelegate> delegate = info;
+    [delegate timerFired:(NSTimer *)timer];
+    if (![delegate timerShouldRepeat:(NSTimer *)timer]) {
+        CFRunLoopTimerInvalidate(timer);
+    };
+}
+
+- (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id)delegate {
+    CFRunLoopTimerContext context = {0, delegate, NULL, NULL, NULL};
+    self = (NSTimer *)CFRunLoopTimerCreate(kCFAllocatorDefault, [date timeIntervalSinceReferenceDate], ti, 0, 0, &NSTimerDelegateCallback, &context);
+    return self;
+}
+
++ (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSATimerDelegate>)delegate {
+    NSTimer *timer = [[self alloc] initWithFireDate:[NSDate date] interval:ti delegate:delegate];
+    [timer schedule];
+    return timer;
+}
+
+@end
+
+
+@implementation NSTimer (FoundationExtensionShortcuts)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector {
     return [self scheduledTimerWithTimeInterval:0.0
-                                            target:aTarget
-                                          selector:aSelector
-                                          userInfo:nil
-                                           repeats:NO];
+                                         target:aTarget
+                                       selector:aSelector
+                                       userInfo:nil
+                                        repeats:NO];
 }
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo {
     return [self scheduledTimerWithTimeInterval:0.0
-                                            target:aTarget
-                                          selector:aSelector
-                                          userInfo:userInfo
-                                           repeats:NO];
+                                         target:aTarget
+                                       selector:aSelector
+                                       userInfo:userInfo
+                                        repeats:NO];
 }
 
 + (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector {

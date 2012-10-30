@@ -18,7 +18,7 @@ FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename);
 /*!
  *  @brief NSBundle extensions
  */
-@interface NSBundle (FoundationExtension)
+@interface NSBundle (FE_Shortcuts)
 
 /*!
  *  @brief Returns resource file path for given filename.

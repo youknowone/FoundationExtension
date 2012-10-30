@@ -9,7 +9,7 @@
 /*!
  *  @brief Shortcuts for CommonCrypto digest.
  */
-@interface NSData (FoundationExtensionCrypto)
+@interface NSData (FE_CommonCrypto)
 
 /*!
  *  @brief MD2 digest.
@@ -54,7 +54,7 @@
 /*!
  *  @brief Shortcuts for CommonCrypto digest.
  */
-@interface NSString (FoundationExtensionCrypto)
+@interface NSString (FE_CommonCrypto)
 
 /*!
  *  @brief MD2 digest.

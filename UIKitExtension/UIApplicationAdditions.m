@@ -8,7 +8,7 @@
 
 #import "UIApplicationAdditions.h"
 
-@implementation UIApplication (FoundationExtension)
+@implementation UIApplication (FE_Shortcuts)
 
 // this should be private method?
 - (CGRect)statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {

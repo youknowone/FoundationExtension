@@ -11,7 +11,7 @@
 
 #import "debug.h"
 
-@implementation NSData (FoundationExtensionCrypto)
+@implementation NSData (FE_CommonCrypto)
 
 typedef unsigned char * (*CC_DIGEST_FUNCTION)(const void *, CC_LONG, unsigned char *);
 
@@ -74,7 +74,7 @@ static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest,
 
 @end
 
-@implementation NSString (FoundationExtensionCrypto)
+@implementation NSString (FE_CommonCrypto)
 
 static NSData *NSStringCommonCryptoDigest(NSString *string, NSStringEncoding encoding, CC_DIGEST_FUNCTION digest, CC_LONG digestLength) {
     NSData *data = [string dataUsingEncoding:encoding];

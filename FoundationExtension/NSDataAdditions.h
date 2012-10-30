@@ -9,7 +9,7 @@
 /*!
  *  @brief Creation methods extension
  */
-@interface NSData (FoundationExtensionCreation)
+@interface NSData (FE_Creations)
 
 /*!
  *  @brief Initializes a newly allocated data object initialized with the data from the result specified by a given request.
@@ -61,7 +61,10 @@
 @end
 
 
-@interface NSData (FoundationExtensionSerialization)
+/*!
+ *  @brief NSData serialization/deserialization extension.
+ */
+@interface NSData (FE_Serialization)
 
 /*!
  *  @brief Deserialize property list data to object.

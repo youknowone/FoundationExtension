@@ -9,7 +9,7 @@
 /*!
  *  @brief UIImage extension
  */
-@interface UIImage (UIKitExtension)
+@interface UIImage (FE_ImageProcess)
 
 /*!
  *  @brief Resized image by given size.

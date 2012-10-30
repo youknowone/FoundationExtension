@@ -9,7 +9,7 @@
 /*!
  *  @brief NSURLRequest property shortcut for readonly getter methods
  */
-@interface NSURLRequest (FoundationExtensionProperty)
+@interface NSURLRequest (FE_Properties)
 
 @property(readonly) NSURL *URL;
 @property(readonly) NSURLRequestCachePolicy cachePolicy;
@@ -34,7 +34,7 @@
  *  @brief deprecated creation shortcuts
  *  @deprecated Use initWithURL:
  */
-@interface NSURLRequest (FoundationExtensionCreations)
+@interface NSURLRequest (FE_Creations)
 
 - (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 - (id)initWithFilePath:(NSString *)filePath __deprecated;
@@ -53,7 +53,7 @@
 /*!
  *  @brief NSURLRequest property shortcut for readonly getter methods
  */
-@interface NSMutableURLRequest (FoundationExtensionProperty)
+@interface NSMutableURLRequest (FE_Properties)
 
 @property(retain) NSURL *URL;
 @property NSURLRequestCachePolicy cachePolicy;
@@ -77,7 +77,7 @@
 /*!
  *  @brief NSMutableURLRequest POST extension
  */
-@interface NSMutableURLRequest (FoundationExtensionPost)
+@interface NSMutableURLRequest (FE_HTTPMethod)
 
 /*!
  *  @brief Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format.
@@ -160,7 +160,7 @@
 /*!
  *  @brief NSURLRequest Multipart Form POST extension
  */
-@interface NSMutableURLRequest (ICHTTPMultiPartFormPostRequest)
+@interface NSMutableURLRequest (FE_NSAURLRequestHTTPBodyMultiPartFormPostFormatter)
 
 /*!
  *  @brief Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as multipart form post format.

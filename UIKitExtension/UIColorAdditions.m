@@ -10,11 +10,16 @@
 #import "UIColorAdditions.h"
 
 
-@implementation UIColor (UIKitExtension)
+@implementation UIColor (FE_Shortcuts)
 
 - (UIAColorComponents *)components {
     return [UIAColorComponents componentsWithColor:self];
 }
+
+@end
+
+
+@implementation UIColor (FE_Creations)
 
 - (id)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
     return [self initWithRed:red/255.0f
@@ -43,7 +48,7 @@
 
 NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
-@implementation UIColor (UIKitExtensionHTML)
+@implementation UIColor (FE_HTMLColor)
 
 - (UIColor *)initWithHTMLHexExpression16:(NSString *)code {
     return [self initWithRed:[[code substringFromIndex:1 length:1] hexadecimalValue]/15.0f

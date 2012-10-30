@@ -6,6 +6,42 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+/*!
+ *  @page Map/Filter/Reduce
+ *  @brief This document describes basic concept of functional tools: Map/Filter/Reduce
+ *
+ *  FoundationExtension adds small functional programming tools, called Map, Filter and Reduce.
+ *  These are useful when used with array.
+ *  
+ *  In short:
+ *  - Map applies a function to all items.
+ *  - Filter filters some items by a function.
+ *  - Reduce derive a value from items.
+ *
+ *  If you are not familliar with this concept, see python document below - because I referenced it too:
+ *
+ *      http://docs.python.org/2/tutorial/datastructures.html#functional-programming-tools
+ *
+ *  If you are playing with array,
+ *  @see @ref NSArray(FE_Functional)
+ *  @see @ref NSMutableArray(FE_Functional)
+ *
+ *  If you are playing with enumerator,
+ *  @see NSAMap
+ *  @see NSAFilter
+ *  @see NSAMapFilter
+ *  @see NSAReduce
+ *  @see NSAReduceWithInitialObject
+ *
+ *  About files,
+ *  @see NSAFunctional.h
+ */
+
+/*!
+ *  @file
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ */
+
 #if NS_BLOCKS_AVAILABLE
 
 /*!
@@ -54,7 +90,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObject
 FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter);
 
 /*!
- *  @brief Apply operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value. Uses first and second value as seed.
+ *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value. Uses first and second value as seed.
  *  @details Given enumerator must enumerate more than a object.
  *  @param enumerator
  *      Input object source enumerator.
@@ -65,7 +101,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPic
  */
 FOUNDATION_EXTERN id NSAReduce(NSEnumerator *enumerator, NSAObjectBinaryOperator operation);
 /*!
- *  @brief Apply operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value.
+ *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value.
  *  @details Given enumerator must enumerate more than a object.
  *  @param enumerator
  *      Input object source enumerator.
@@ -78,32 +114,39 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 
 /*!
- *  @brief Functional feature extension.
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @see NSAFunctional.h
+ *  @see @ref NSMutableArray(FE_Functional)
  */
-@interface NSArray (FoundationExtensionFunctional)
+@interface NSArray (FE_Functional)
 
 /*!
  *  @brief Maps mapper to objects and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMap @endlink
  *  @see NSAMap
  */
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper;
 /*!
  *  @brief Maps mapper to objects and filters nil result and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMapFilter @endlink
  *  @see NSAMapFilter
  */
 - (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper;
 /*!
- *  @brief Filter objects and returns result as array.
+ *  @brief Filters objects and returns result as array.
+ *  @details Shallow wrapper of @link NSAFilter @endlink
  *  @see NSAFilter
  */
 - (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter;
 /*!
- *  @brief Reduce objects and returns the result.
+ *  @brief Reduces objects and returns the result.
+ *  @details Shallow wrapper of @link NSAReduce @endlink
  *  @see NSAReduce
  */
 - (id)reduce:(NSAObjectBinaryOperator)reduce;
 /*!
- *  @brief Reduce objects and returns the result.
+ *  @brief Reduces objects and returns the result.
+ *  @details Shallow wrapper of @link NSAReduceWithInitialObject @endlink
  *  @see NSAReduceWithInitialObject
  */
 - (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject;
@@ -112,25 +155,27 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 
 /*!
- *  @brief Functional feature extension.
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @see NSAFunctional.h
+ *  @see @ref NSArray(FE_Functional)
  */
-@interface NSMutableArray (FoundationExtensionFunctional)
+@interface NSMutableArray (FE_Functional)
 
 /*!
- *  @brief Maps objects
+ *  @brief Applies mapper to every item and replace original item to new one.
  *  @see NSAMap
  */
 - (void)map:(NSAObjectUnaryOperator)mapper;
 /*!
- *  @brief Maps objects and remove nil
+ *  @brief Applies mapper to every item and replace original item to new one or remove if new one is nil.
  *  @see NSAMapFilter
  */
 - (void)mapFilter:(NSAObjectUnaryOperator)mapper;
 /*!
- *  @brief Filter objects
+ *  @brief Applies filter to every item and remove it if result is NO.
  *  @see NSAFilter
  */
-- (void)filter:(NSAObjectPicker)mapper;
+- (void)filter:(NSAObjectPicker)filter;
 
 @end
 

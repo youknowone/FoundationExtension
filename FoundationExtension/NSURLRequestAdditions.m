@@ -10,7 +10,7 @@
 #import "NSURLAdditions.h"
 #import "NSURLRequestAdditions.h"
 
-@implementation NSURLRequest (FoundationExtensionProperty)
+@implementation NSURLRequest (FE_Properties)
 
 @dynamic cachePolicy, timeoutInterval;
 #if TARGET_OS_IPHONE
@@ -27,7 +27,7 @@
 @end
 
 
-@implementation NSURLRequest (FoundationExtensionCreations)
+@implementation NSURLRequest (FE_Creations)
 
 - (id)initWithURLFormat:(NSString *)format, ... {
     va_list args;
@@ -96,7 +96,7 @@
 @end
 
 
-@implementation NSMutableURLRequest (FoundationExtensionProperty)
+@implementation NSMutableURLRequest (FE_Properties)
 
 @dynamic cachePolicy, timeoutInterval;
 #if TARGET_OS_IPHONE
@@ -113,7 +113,7 @@
 @end
 
 
-@implementation NSMutableURLRequest (FoundationExtensionPost)
+@implementation NSMutableURLRequest (FE_HTTPMethod)
 
 - (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     self.HTTPMethod = @"POST";
@@ -227,7 +227,7 @@
 
 @end
 
-@implementation NSMutableURLRequest (ICHTTPMultiPartFormPostRequest)
+@implementation NSMutableURLRequest (FE_NSAURLRequestHTTPBodyMultiPartFormPostFormatter)
 
 - (void)setHTTPMultiPartFormPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     self.HTTPMethod = @"POST";

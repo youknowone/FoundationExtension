@@ -9,7 +9,7 @@
 /*!
  *  @brief Creation method extension
  */
-@interface NSString (FoundationExtensionCreations)
+@interface NSString (FE_Creations)
 
 /*!
  *  @brief Initialize an NSString from integer value.
@@ -47,7 +47,7 @@
 /*!
  *  @brief NSString method shortcuts
  */
-@interface NSString (FoundationExtensionShortcuts)
+@interface NSString (FE_Shortcuts)
 
 /*!
  *  @brief Returns a string made by using self as a format string template into which the argument values are substituted.
@@ -98,7 +98,7 @@
 /*!
  *  @brief Shortcut for UTF8
  */
-@interface NSString (FoundationExtensionUTF8)
+@interface NSString (FE_UTF8Shortcuts)
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
@@ -130,7 +130,7 @@
 /*!
  *  @brief Extensions of NSStringPathExtensions
  */
-@interface NSString (FoundationExtensionPathExtensions)
+@interface NSString (FE_NSPathUtilities)
 
 /*!
  *  @brief Returns a new string made by appending to the receiver a given string.
@@ -148,7 +148,7 @@
 /*!
  *  @brief Numeric value decoder
  */
-@interface NSString (FoundationExtensionNumericValues)
+@interface NSString (FE_NumericValues)
 
 /*!
  *  @brief Returns the NSInteger value of the receiver’s text by given base radix.

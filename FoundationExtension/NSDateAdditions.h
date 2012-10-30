@@ -6,7 +6,7 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-@interface NSDate (FoundationExtension)
+@interface NSDate (FE_Shortcuts)
 
 @property(readonly) NSDateComponents *components;
 

@@ -7,7 +7,8 @@
 //
 
 /*!
- *  @brief Subclass available string implementation;
+ *  @brief Subclass available string implementation.
+ *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSAString : NSString {
     NSString *_impl;
@@ -17,7 +18,8 @@
 
 
 /*!
- *  @brief Subclass available mutable string implementation;
+ *  @brief Subclass available mutable string implementation.
+ *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSAMutableString : NSMutableString {
     NSMutableString *_impl;

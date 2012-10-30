@@ -10,14 +10,14 @@
 
 #import "debug.h"
 
-@implementation UIDevice (FoundationExtension)
+@implementation UIDevice (FE_Shortcuts)
 
 + (NSString *)uniqueIdentifier {
     return [[UIDevice currentDevice] uniqueIdentifier];
 }
 
-ICDeviceType _deviceType;
-+ (ICDeviceType) currentDeviceType {
+UIADeviceType _deviceType;
++ (UIADeviceType) currentDeviceType {
     return _deviceType;
 }
 
@@ -26,23 +26,23 @@ ICDeviceType _deviceType;
         // FIXME: use device constant to define these
         UIDevice *currentDevice = [UIDevice currentDevice];
         if ( [[currentDevice model] isEqualToString:@"iPhone"] ) {
-            _deviceType = ICDeviceTypePhone;
+            _deviceType = UIADeviceTypePhone;
         } else if ( [[currentDevice model] isEqualToString:@"iPod touch"] ) {
-            _deviceType = ICDeviceTypePod;
+            _deviceType = UIADeviceTypePod;
         } else if ( [[currentDevice model] isEqualToString:@"iPad"] ) {
-            _deviceType = ICDeviceTypePad;
+            _deviceType = UIADeviceTypePad;
         } else {
-            _deviceType = ICDeviceTypeUnknown;
+            _deviceType = UIADeviceTypeUnknown;
             NSLog(@"failed to detect device!!");
             // try again
             CGFloat screenWidth = [UIScreen mainScreen].applicationFrame.size.width;
             dlog(TRUE, @"check device resolution: %.0f", screenWidth);
             if ( screenWidth == 320.0f ) {
-                _deviceType = ICDeviceTypePhone;
+                _deviceType = UIADeviceTypePhone;
             } else if ( screenWidth == 768.0f ) {
-                _deviceType = ICDeviceTypePad;
+                _deviceType = UIADeviceTypePad;
             } else {
-                _deviceType = ICDeviceTypeUnknown;
+                _deviceType = UIADeviceTypeUnknown;
                 dassert(NO);
             }
         }

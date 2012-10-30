@@ -12,7 +12,7 @@
 #define UILog(TAG, ...)
 #endif
 
-@interface UIAlertView (FoundationExtension)
+@interface UIAlertView (FE_Shortcuts)
 
 + (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line;
 

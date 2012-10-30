@@ -12,7 +12,7 @@
 
 #include "debug.h"
 
-@implementation NSData (FoundationExtensionCreation)
+@implementation NSData (FE_Creations)
 
 - (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -61,7 +61,7 @@
 @end
 
 
-@implementation NSData (FoundationExtensionSerialization)
+@implementation NSData (FE_Serialization)
 
 - (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error {
     if ([NSPropertyListSerialization respondsToSelector:@selector(propertyListWithData:options:format:error:)]) {

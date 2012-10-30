@@ -11,11 +11,17 @@
 /*!
  *  @brief UIColor shortcuts
  */
-@interface UIColor (UIKitExtension)
+@interface UIColor (FE_Shortcuts)
 
 //! @brief Color component property. nil if unavailable.
 @property(nonatomic, readonly) UIAColorComponents *components;
 
+@end
+
+/*!
+ *  @brief UIColor creation shortcuts
+ */
+@interface UIColor (FE_Creations)
 /*!
  *  @brief Initialize color from 32bit color component
  *  @param red
@@ -51,7 +57,7 @@
 /*!
  *  @brief UIColor HTML color creations
  */
-@interface UIColor (UIKitExtensionHTML)
+@interface UIColor (FE_HTMLColor)
 
 /*!
  *  @brief Initialize with html color code

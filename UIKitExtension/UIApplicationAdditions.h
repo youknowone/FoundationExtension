@@ -7,7 +7,7 @@
 //
 
 //! @brief UIApplication extensions
-@interface UIApplication (FoundationExtension)
+@interface UIApplication (FE_Shortcuts)
 
 //! @brief statusbar size calculated for current orientation
 @property(nonatomic, readonly) CGRect statusBarFrameForCurrentOrientation;

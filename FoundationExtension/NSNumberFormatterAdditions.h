@@ -7,7 +7,7 @@
 //
 
 //! @brief NSNumberFormatter shortcuts.
-@interface NSNumberFormatter (FoundationExtensionShortcut)
+@interface NSNumberFormatter (FE_Shortcuts)
 
 //! @brief numberStyle property interface
 @property(assign) NSNumberFormatterStyle numberStyle;

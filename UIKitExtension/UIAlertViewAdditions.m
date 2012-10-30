@@ -8,7 +8,7 @@
 
 #import "UIAlertViewAdditions.h"
 
-@implementation UIAlertView (FoundationExtension)
+@implementation UIAlertView (FE_Shortcuts)
 
 + (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line {
     UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", [NSString stringWithUTF8String:filename], line]

@@ -9,7 +9,7 @@
 /*!
  *  @brief Creation methods extension
  */
-@interface NSDictionary (FoundationExtensionCreation)
+@interface NSDictionary (FE_Creations)
 
 /*!
  *  @brief Initializes a newly allocated dictionary with the contents of data. (plist)
@@ -84,7 +84,7 @@
 /*!
  *  @brief Common shortcuts
  */
-@interface NSDictionary (FoundationExtensionShortcuts)
+@interface NSDictionary (FE_Shortcuts)
 
 /*!
  *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.

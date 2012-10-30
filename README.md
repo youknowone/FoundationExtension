@@ -1,6 +1,5 @@
-@mainpage
+@mainpage FoundationExtension
 
-# FoundationExtension
 This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
 
  * Many common snippets in a method call.
@@ -39,6 +38,9 @@ FoundationExtension
 
     NSURL *URL = [[@"http://"HOST_URL"/api/%@" format:key] URL];
 
+@see @ref NSString(FE\_Shortcuts)
+@see @ref NSString(FE\_NSURL)
+
 ## performSelector, with 3 object
 Foundation
   * No way. You should use <objc/runtime.h>
@@ -46,6 +48,8 @@ Foundation
 FoundationExtension
 
     [obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
+
+@see @ref NSObject(FE\_ObjCRuntime)
 
 ## get NSData from post request
 Foundation
@@ -58,7 +62,9 @@ Foundation
 FoundationExtension
 
     NSData *data = [NSData dataWithContentsOfURL:URL postBody:@{@"field1":@"value1"} encoding:NSUTF8StringEncoding];
-    
+
+@see @ref NSData(FE\_Creations)
+
 ## get NSData from Multipart Form POST
 Foundation
   * No way.
@@ -68,6 +74,8 @@ FoundationExtension
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMultiPartFormPostBody:@{@"filename":data} encoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithContentOfURLRequest:request];
+
+@see NSURLRequestAdditions.h
 
 ## truncate objects in array
 Foundation
@@ -85,6 +93,9 @@ FoundationExtension NSMutableArray
 
     [array map::^(NSString *obj){ [obj substringToIndex:20]; }];
 
+@see @ref Map/Filter/Reduce
+@see NSAFunctional.h 
+
 ## get class name
 Foundation
 
@@ -93,15 +104,22 @@ Foundation
 FoundationExtension
 
     NSString *className = obj.classObject.name;
-    
-## encode base64 string (especially for IAP)
+
+@see @ref NSObject(FE\_ObjCRuntime)
+@see @ref NSAClass
+
+## encode/decode base64 string (especially for In-App Purchase / Facebook API)
 Foundation
   * No way.
 
 FoundationExtension
 
     NSString *base64String = [data base64String];
-    
+
+    NSData *data = [NSData dataWithBase64String:base64]
+
+@see @ref NSData(FE\_Serialization)
+
 ## get hexadecimal value from base 16 string
 Foundation
 
@@ -111,7 +129,9 @@ Foundation
 FoundationExtension
 
     NSInteger value = [string hexadecimalValue];
-    
+
+@see @ref NSData(FE\_Serialization)
+
 ## How about base 12 string?
 Foundation
   * Why should foundation has this?
@@ -119,6 +139,8 @@ Foundation
 FoundationExtension
 
     NSInteger value = [string integetValueBase:12];
+
+@see @ref NSString(FE\_NumericValues)
 
 ## md5 hash
 Foundation
@@ -132,7 +154,9 @@ Foundation
 FoundationExtension
 
     NSString *result = [data digestStringByMD5];
-    
+
+@see @ref NSData(FE\_CommonCrypto)
+
 ## plist dictionary decode from HTTP post request
 Foundation
   * Get data from NSURLRequest. Ehh.. so what can I do now? (Use NSPropertyListSerialization)
@@ -143,11 +167,17 @@ FoundationExtension
     [request setHTTPPostBody:@{@"key1":@"value1"} encoding:NSUTF8StringEncoding];
     NSData *data = [NSData dataWithContentOfURLRequest:request];
     NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
-    
+
+@see @ref NSMutableURLRequest(FE\_HTTPMethod)
+@see @ref NSData(FE\_Creations)
+@see @ref NSDictionary(FE\_Creations)
+
 ## UIColor from HTML color code
-FoundationExtension
+UIKitExtension
     
     UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];
+
+@see @ref UIColor(FE\_HTMLColor)
 
 ## Change implementation to new one
 FoundationExtension
@@ -156,6 +186,9 @@ FoundationExtension
     [c methodObjectForSelector:@selector(method1)].implementation
       = [c methodObjectForSelector:@selector(method2)].implementation;
     // now [obj method1] is [obj method2]
+
+@see NSAClass
+@see NSAMethod
 
 ## For more
 See the document! [http://youknowone.github.com/FoundationExtension] (http://youknowone.github.com/FoundationExtension)

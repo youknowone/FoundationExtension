@@ -8,7 +8,7 @@
 
 #import "NSStringAdditions.h"
 
-@implementation NSString (FoundationExtensionCreations)
+@implementation NSString (FE_Creations)
 
 - (id)initWithInteger:(NSInteger)value {
     #ifdef __LP64__
@@ -58,7 +58,7 @@
 @end
 
 
-@implementation NSString (FoundationExtensionShortcuts)
+@implementation NSString (FE_Shortcuts)
 
 // slow! proof of concept
 - (NSString *)format:(id)first, ... {
@@ -111,7 +111,7 @@
 @end
 
 
-@implementation NSString (FoundationExtensionUTF8)
+@implementation NSString (FE_UTF8Shortcuts)
 
 + (NSString *)stringWithUTF8Data:(NSData *)data {
     return [[[self alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
@@ -132,7 +132,7 @@
 @end
 
 
-@implementation NSString (FoundationExtensionPathExtensions)
+@implementation NSString (FE_NSPathUtilities)
 
 - (NSString *)stringByAppendingPathFormat:(NSString *)format, ... {
     va_list args;
@@ -145,7 +145,7 @@
 @end
 
 
-@implementation NSString (FoundationExtensionNumericValues)
+@implementation NSString (FE_NumericValues)
 
 - (NSInteger)integerValueBase:(NSInteger)radix {
     NSInteger result = 0;
@@ -173,7 +173,7 @@
 @end
 
 
-@implementation NSMutableString (FoundationExtensionShortcuts)
+@implementation NSMutableString (FE_Shortcuts)
 
 - (id)initWithConcatnatingStrings:(NSString *)first, ... {
     self = [self initWithString:first];

@@ -10,7 +10,7 @@
  *  @brief NSObject extensions
  */
 
-@interface NSObject (FoundationExtension)
+@interface NSObject (FE_ObjCRuntime)
 
 /*!
  *  @brief Return class name of object

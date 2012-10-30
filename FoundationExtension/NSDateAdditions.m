@@ -8,7 +8,7 @@
 
 #import "NSDateAdditions.h"
 
-@implementation NSDate (FoundationExtension)
+@implementation NSDate (FE_Shortcuts)
 
 - (NSDateComponents *)components {
     return [[NSCalendar currentCalendar] components:NSEraCalendarUnit

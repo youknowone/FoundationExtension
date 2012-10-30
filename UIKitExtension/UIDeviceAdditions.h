@@ -7,17 +7,17 @@
 //
 
 typedef enum {
-    ICDeviceTypeUnknown = 0,
-    ICDeviceTypePad    = 1,
-    ICDeviceTypePhone  = 2,
-    ICDeviceTypePod    = 3,
-}    ICDeviceType;
-#define ICDeviceTypeIsIPhoneOrIPodMask 2
-#define ICDeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType&ICDeviceTypeIsIPhoneOrIPodMask)>>1)
+    UIADeviceTypeUnknown = 0,
+    UIADeviceTypePad    = 1,
+    UIADeviceTypePhone  = 2,
+    UIADeviceTypePod    = 3,
+}   UIADeviceType;
+#define UIADeviceTypeIsIPhoneOrIPodMask 2
+#define UIADeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType&ICDeviceTypeIsIPhoneOrIPodMask)>>1)
 
-@interface UIDevice (FoundationExtension)
+@interface UIDevice (FE_Shortcuts)
 
-+ (ICDeviceType)currentDeviceType;
++ (UIADeviceType)currentDeviceType;
 
 //! @deprecated deprecated by implementation deprecation
 + (NSString *)uniqueIdentifier __deprecated;

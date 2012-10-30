@@ -9,7 +9,7 @@
 /*!
  *  @brief Creation methods extension
  */
-@interface NSArray (FoundationExtensionCreation)
+@interface NSArray (FE_Creations)
 
 /*!
  *  @brief Initializes a newly allocated array with the contents of data. (plist)
@@ -113,7 +113,7 @@
 /*!
  *  @brief NSNumber shortcut extension
  */
-@interface NSArray (FoundationExtensionNSNumber)
+@interface NSArray (FE_NSNumber)
 
 /*!
  *  @brief Returns the integer located at index.
@@ -141,7 +141,7 @@
 /*!
  *  @brief NSNumber shortcut extension
  */
-@interface NSMutableArray (FoundationExtensionNSNumber)
+@interface NSMutableArray (FE_NSNumber)
 
 /*!
  *  @brief Inserts a given integer at the end of the array.

@@ -8,7 +8,7 @@
 
 #import "NSNumberFormatterAdditions.h"
 
-@implementation NSNumberFormatter (FoundationExtensionShortcut)
+@implementation NSNumberFormatter (FE_Shortcuts)
 @dynamic numberStyle;
 @dynamic generatesDecimalNumbers;
 @dynamic locale;

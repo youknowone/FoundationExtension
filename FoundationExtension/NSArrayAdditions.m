@@ -10,7 +10,7 @@
 #import "NSDataAdditions.h"
 #import "NSArrayAdditions.h"
 
-@implementation NSArray (FoundationExtension)
+@implementation NSArray (FE_Creations)
 
 - (id) initWithData:(NSData *)data {
     return [self initWithData:data format:NULL error:NULL];
@@ -80,7 +80,7 @@
 
 @end
 
-@implementation NSMutableArray (FoundationExtensionCreation)
+@implementation NSMutableArray (FE_Creations)
 
 - (id)initWithEnumerator:(NSEnumerator *)enumerator copyItems:(BOOL)flag {
     if (flag) {
@@ -100,7 +100,7 @@
 @end
 
 
-@implementation NSArray (FoundationExtensionNSNumber)
+@implementation NSArray (FE_NSNumber)
 
 - (NSInteger)integerAtIndex:(NSUInteger)index {
     return [[self objectAtIndex:index] integerValue];
@@ -113,7 +113,7 @@
 @end
 
 
-@implementation NSMutableArray (FoundationExtensionNSNumber)
+@implementation NSMutableArray (FE_NSNumber)
 
 - (void)addInteger:(NSInteger)value {
     [self addObject:[NSNumber numberWithInteger:value]];

@@ -9,7 +9,7 @@
 /*!
  *  @brief NSRunLoop shortcuts.
  */
-@interface NSTimer (FoundationExtensionNSRunLoop)
+@interface NSTimer (FE_NSRunLoop)
 
 /*!
  *  @brief Add timer to current run loop with default run loop mode
@@ -47,7 +47,7 @@
 /*!
  *  @brief NSTimer delegate interface
  */
-@interface NSTimer (FoundationExtensionDelegate)
+@interface NSTimer (FE_Delegate)
 
 /*!
  *  @brief Initialize timer with delegate.
@@ -61,7 +61,7 @@
 @end
 
 // not recomenned to use.
-@interface NSTimer (FoundationExtensionShortcuts)
+@interface NSTimer (FE_Shortcuts)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector;
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector userInfo:(id)userInfo;

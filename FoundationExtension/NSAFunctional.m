@@ -159,7 +159,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 }
 
 
-@implementation NSArray (FoundationExtensionFunctional)
+@implementation NSArray (FE_Functional)
 
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;
@@ -184,7 +184,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 @end
 
 
-@implementation NSMutableArray (FoundationExtensionFunctional)
+@implementation NSMutableArray (FE_Functional)
 
 - (void)map:(NSAObjectUnaryOperator)mapper {
     NSUInteger count = self.count;

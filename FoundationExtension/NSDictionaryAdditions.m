@@ -10,7 +10,7 @@
 #import "NSDataAdditions.h"
 #import "NSDictionaryAdditions.h"
 
-@implementation NSDictionary (FoundationExtensionCreation)
+@implementation NSDictionary (FE_Creations)
 
 - (id)initWithData:(NSData *)data {
     return [self initWithData:data format:NULL error:NULL];
@@ -57,7 +57,7 @@
 @end
 
 
-@implementation NSDictionary (FoundationExtensionShortcuts)
+@implementation NSDictionary (FE_Shortcuts)
 
 - (BOOL)containsKey:(id)key {
     return [self.allKeys containsObject:key];

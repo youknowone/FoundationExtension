@@ -9,7 +9,7 @@
 /*!
  *  @brief Creation method extension
  */
-@interface NSURL (FoundationExtension)
+@interface NSURL (FE_Creations)
 
 /*!
  *  @brief Initializes a newly created NSURL referencing the local file or directory at path based on resource directory of main bundle.
@@ -87,7 +87,7 @@
 /*!
  *  @brief NSString shortcut to create NSURL
  */
-@interface NSString (FoundationExtensionNSURL)
+@interface NSString (FE_NSURL)
 
 /*!
  *  @brief Returns a Boolean value that indicates whether 'http://' or 'https://' matches the beginning characters of the receiver.

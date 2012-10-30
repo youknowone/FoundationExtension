@@ -8,7 +8,7 @@
 
 #import "NSTimerAdditions.h"
 
-@implementation NSTimer (FoundationExtensionNSRunLoop)
+@implementation NSTimer (FE_NSRunLoop)
 
 - (void)schedule {
     [self scheduleWithRunLoop:[NSRunLoop currentRunLoop] mode:NSDefaultRunLoopMode];
@@ -21,7 +21,7 @@
 @end
 
 
-@implementation NSTimer (FoundationExtensionDelegate)
+@implementation NSTimer (FE_Delegate)
 
 static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
     id<NSATimerDelegate> delegate = info;
@@ -46,7 +46,7 @@ static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
 @end
 
 
-@implementation NSTimer (FoundationExtensionShortcuts)
+@implementation NSTimer (FE_Shortcuts)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector {
     return [self scheduledTimerWithTimeInterval:0.0

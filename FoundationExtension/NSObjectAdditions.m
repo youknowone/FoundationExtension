@@ -10,7 +10,7 @@
 
 #import "NSObjectAdditions.h"
 
-@implementation NSObject (FoundationExtension)
+@implementation NSObject (FE_ObjCRuntime)
 
 - (NSString *)className {
     return [NSString stringWithUTF8String:object_getClassName(self)];

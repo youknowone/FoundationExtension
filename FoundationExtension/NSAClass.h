@@ -12,6 +12,8 @@
 
 /*!
  *  @brief Object wrapper for <objc/runtime.h> Class
+ *  @details This class supports accessing Objective-C runtime with Objective-C object model.
+ *      This reduces usage of verbose C functions.
  */
 @interface NSAClass: NSObject {
     Class _class;

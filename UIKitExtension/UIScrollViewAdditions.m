@@ -9,7 +9,7 @@
 #import "UIScrollViewAdditions.h"
 
 
-@implementation UIScrollView (UIKitExtension)
+@implementation UIScrollView (FE_Shortcuts)
 
 - (CGRect) contentFrame {
     CGRect f;

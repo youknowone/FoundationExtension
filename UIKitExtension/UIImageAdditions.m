@@ -10,7 +10,7 @@
 
 #import "UIImageAdditions.h"
 
-@implementation UIImage (UIKitExtension)
+@implementation UIImage (FE_ImageProcess)
 
 - (UIImage *)imageByResizingToSize:(CGSize)size {
     UIGraphicsBeginImageContext(size);

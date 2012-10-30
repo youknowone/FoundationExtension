@@ -15,7 +15,7 @@
 
 #include "debug.h"
 
-@implementation NSURL (ICAdditions)
+@implementation NSURL (FE_Creations)
 
 - (id)initResourceURLWithPath:(NSString *)path {
     if (path == nil) {
@@ -155,7 +155,7 @@
 @end
 
 
-@implementation NSString (FoundationExtensionNSURL)
+@implementation NSString (FE_NSURL)
 
 - (BOOL)hasHTTPPrefix {
     NSString *regexkey = @"^https?://.*";

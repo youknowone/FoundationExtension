@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIControl (UIKitExtension)
+@interface UIControl (FE_Shortcuts)
 
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event;
 

@@ -16,7 +16,7 @@ NSString *NSMainBundleResourcePathForFile(NSString *filename) {
     return [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
 }
 
-@implementation NSBundle (FoundationExtension)
+@implementation NSBundle (FE_Shortcuts)
 
 - (NSString *)pathForResourceFile:(NSString *)filename {
     return [self pathForResource:filename ofType:@""];

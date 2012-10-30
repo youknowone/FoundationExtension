@@ -9,7 +9,7 @@
 /*!
  *  @brief UIWebView extension
  */
-@interface UIWebView (UIKitExtension)
+@interface UIWebView (FE_Shortcuts)
 
 /*!
  *  @brief Creates URLRequest from given URL and call -loadRequest:

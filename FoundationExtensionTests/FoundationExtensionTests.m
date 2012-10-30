@@ -106,4 +106,35 @@
     STAssertTrue([@"SAMPLE" isEqual:[NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]], @"hexadecimal decode: %@", [NSString stringWithUTF8Data:[NSData dataWithHexadecimalString:@"53414d504c45"]]);
 }
 
+- (void)testTuple
+{
+    NSAMutableTuple *tuple = [NSAMutableTuple tupleWithFirst:@1 second:@2];
+    STAssertEquals((int)[tuple.first integerValue], 1, @"");
+    STAssertEquals((int)[tuple.second integerValue], 2, @"");
+    
+    tuple.first = @3;
+    tuple.second = @4;
+    STAssertEquals((int)[tuple.first integerValue], 3, @"");
+    STAssertEquals((int)[tuple.second integerValue], 4, @"");
+    
+    [tuple swap];
+    STAssertEquals((int)[tuple.first integerValue], 4, @"");
+    STAssertEquals((int)[tuple.second integerValue], 3, @"");
+}
+
+- (void)testTriple
+{
+    NSAMutableTriple *obj = [NSAMutableTriple tripleWithFirst:@1 second:@2 third:@3];
+    STAssertEquals((int)[obj.first integerValue], 1, @"");
+    STAssertEquals((int)[obj.second integerValue], 2, @"");
+    STAssertEquals((int)[obj.third integerValue], 3, @"");
+    
+    obj.first = @4;
+    obj.second = @5;
+    obj.third = @6;
+    STAssertEquals((int)[obj.first integerValue], 4, @"");
+    STAssertEquals((int)[obj.second integerValue], 5, @"");
+    STAssertEquals((int)[obj.third integerValue], 6, @"");
+}
+
 @end

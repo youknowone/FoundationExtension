@@ -9,7 +9,6 @@
 #import "NSADataObject.h"
 
 @implementation NSATuple
-@synthesize first=_first, second=_second;
 
 + (id)tuple {
     return [[[self alloc] init] autorelease];
@@ -18,8 +17,8 @@
 - (id)initWithFirst:(id)first second:(id)second {
     self = [super init];
     if (self != nil) {
-        self.first = first;
-        self.second = second;
+        self->_first = [first retain];
+        self->_second = [second retain];
     }
     return self;
 }
@@ -29,9 +28,46 @@
 }
 
 - (void)dealloc {
-    self.first = nil;
-    self.second = nil;
+    [self->_first release];
+    [self->_second release];
     [super dealloc];
+}
+
+- (id)first {
+    return self->_first;
+}
+
+- (id)second {
+    return self->_second;
+}
+
+- (id)objectAtIndex:(NSUInteger)index {
+    switch (index) {
+        case 0:
+            return self->_first;
+        case 1:
+            return self->_second;
+    }
+    return nil;
+}
+
+@end
+
+
+@implementation NSAMutableTuple
+
+// implementation should be thread-safe?
+
+- (void)setFirst:(id)first {
+    if (self->_first == first) return;
+    [self->_first release];
+    self->_first = [first retain];
+}
+
+- (void)setSecond:(id)second {
+    if (self->_second == second) return;
+    [self->_second release];
+    self->_second = [second retain];
 }
 
 - (void)swap {
@@ -42,8 +78,8 @@
 
 @end
 
+
 @implementation NSATriple
-@synthesize first=_first, second=_second, third=_third;
 
 + (id)triple {
     return [[[self alloc] init] autorelease];
@@ -52,9 +88,9 @@
 - (id)initWithFirst:(id)first second:(id)second third:(id)third {
     self = [super init];
     if (self != nil) {
-        self.first = first;
-        self.second = second;
-        self.third = third;
+        self->_first = [first retain];
+        self->_second = [second retain];
+        self->_third = [third retain];
     }
     return self;
 }
@@ -64,10 +100,59 @@
 }
 
 - (void)dealloc {
-    self.first = nil;
-    self.second = nil;
-    self.third = nil;
+    [self->_first release];
+    [self->_second release];
+    [self->_third release];
     [super dealloc];
+}
+
+- (id)first {
+    return self->_first;
+}
+
+- (id)second {
+    return self->_second;
+}
+
+- (id)third {
+    return self->_third;
+}
+
+- (id)objectAtIndex:(NSUInteger)index {
+    switch (index) {
+        case 0:
+            return self->_first;
+        case 1:
+            return self->_second;
+        case 2:
+            return self->_third;
+    }
+    return nil;
+}
+
+@end
+
+
+@implementation NSAMutableTriple
+
+// implementation should be thread-safe?
+
+- (void)setFirst:(id)first {
+    if (self->_first == first) return;
+    [self->_first release];
+    self->_first = [first retain];
+}
+
+- (void)setSecond:(id)second {
+    if (self->_second == second) return;
+    [self->_second release];
+    self->_second = [second retain];
+}
+
+- (void)setThird:(id)third {
+    if (self->_third == third) return;
+    [self->_third release];
+    self->_third = [third retain];
 }
 
 @end

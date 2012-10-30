@@ -27,4 +27,5 @@
 #import <FoundationExtension/NSAClass.h>
 #import <FoundationExtension/NSADataObject.h>
 #import <FoundationExtension/NSACrypto.h>
+#import <FoundationExtension/NSAFunctional.h>
 //#import <FoundationExtension/NSStringEncodingAdditions.h>

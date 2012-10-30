@@ -137,4 +137,61 @@
     STAssertEquals((int)[obj.third integerValue], 6, @"");
 }
 
+- (void)testFunctional {
+    {
+        NSArray *a = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
+        NSInteger idx = 0;
+        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return [NSNumber numberWithInteger:[obj integerValue] - 1]; })) {
+            STAssertEquals([i integerValue], idx, @"");
+            idx += 1;
+        }
+        STAssertEquals((int)idx, 4, @"");
+        
+        idx = 0;
+        for (id i in NSAFilter(a.objectEnumerator, ^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); })) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+        
+        idx = 0;
+        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; })) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, idx / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+        
+        NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return [NSNumber numberWithInteger:[obj1 integerValue] + [obj2 integerValue]]; }, @0);
+        STAssertEqualObjects(res, @10, @"");
+    }
+    
+    {
+        NSMutableArray *a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
+        NSInteger idx = 0;
+        [a map:^(id obj) { return [NSNumber numberWithInteger:[obj integerValue] - 1]; }];
+        for (id i in a) {
+            STAssertEquals([i integerValue], idx, @"");
+            idx += 1;
+        }
+        STAssertEquals((int)idx, 4, @"");
+        
+        a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
+        idx = 0;
+        [a filter:^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); }];
+        for (id i in a) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+        
+        a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
+        idx = 0;
+        [a mapFilter:^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; }];
+        for (id i in a) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, idx / 2, @"");
+        }
+    }
+}
+
 @end

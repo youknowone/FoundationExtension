@@ -95,6 +95,11 @@
 		38A90FE51635920F001DB09E /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSDataAdditions.m */; };
 		38A90FE616359211001DB09E /* NSBundleAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundleAdditions.m */; };
 		38A90FE716359213001DB09E /* NSArrayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArrayAdditions.m */; };
+		38B0C6E9163F73800044C73C /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; };
+		38B0C6EA163F73800044C73C /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; };
+		38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
+		38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
+		38B0C6ED163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
 		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
@@ -277,6 +282,8 @@
 		3873044E133732DE004C8E89 /* UIKitExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		3873044F133732DE004C8E89 /* UIKitExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitExtensionTests.h; sourceTree = "<group>"; };
 		38730451133732DE004C8E89 /* UIKitExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitExtensionTests.m; sourceTree = "<group>"; };
+		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
+		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
 		38C7A9721495181800381910 /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7A9761495181800381910 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		38C7A9771495181800381910 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -535,6 +542,8 @@
 				3868F3B4162885D300C31163 /* NSACrypto.m */,
 				3868F3B5162885D300C31163 /* NSADataObject.h */,
 				3868F3B6162885D300C31163 /* NSADataObject.m */,
+				38B0C6E7163F737F0044C73C /* NSAFunctional.h */,
+				38B0C6E8163F73800044C73C /* NSAFunctional.m */,
 				383764EA13373155007072FD /* Tests */,
 			);
 			path = FoundationExtension;
@@ -685,6 +694,7 @@
 				3855B079163D4200005584CD /* NSADataObject.h in Headers */,
 				38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */,
 				3855B053163D41F9005584CD /* FSEventStream.h in Headers */,
+				38B0C6EA163F73800044C73C /* NSAFunctional.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +723,7 @@
 				38F0697A163839D2002723AB /* NSAArray.h in Headers */,
 				38F0698B16384E40002723AB /* NSADictionary.h in Headers */,
 				38F0699016385752002723AB /* NSAString.h in Headers */,
+				38B0C6E9163F73800044C73C /* NSAFunctional.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1010,7 @@
 				3855B076163D4200005584CD /* NSAClass.m in Sources */,
 				3855B078163D4200005584CD /* NSACrypto.m in Sources */,
 				3855B07A163D4200005584CD /* NSADataObject.m in Sources */,
+				38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1056,7 @@
 				38F0697B163839D2002723AB /* NSAArray.m in Sources */,
 				38F0698C16384E40002723AB /* NSADictionary.m in Sources */,
 				38F0699116385752002723AB /* NSAString.m in Sources */,
+				38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1088,6 +1101,7 @@
 				38F0697C163839D2002723AB /* NSAArray.m in Sources */,
 				38F0698D16384E40002723AB /* NSADictionary.m in Sources */,
 				38F0699216385752002723AB /* NSAString.m in Sources */,
+				38B0C6ED163F73800044C73C /* NSAFunctional.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

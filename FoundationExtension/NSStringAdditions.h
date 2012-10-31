@@ -73,6 +73,12 @@
 - (NSString *)format0:(id)dummyLikeNil, ...;
 
 /*!
+ *  @brief Returns range of string.
+ *  @see NSRangeFromString
+ */
+- (NSRange)range;
+
+/*!
  *  @brief Returns a new string containing the characters of the receiver from the one at a given index with a given length.
  *  @param from
  *      An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.

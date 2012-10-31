@@ -100,6 +100,10 @@
     return result;
 }
 
+- (NSRange)range {
+    return NSRangeFromString(self);
+}
+
 - (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length {
     return [self substringWithRange:NSMakeRange(from, length)];
 }

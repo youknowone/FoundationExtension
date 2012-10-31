@@ -45,6 +45,10 @@
 #if NS_BLOCKS_AVAILABLE
 
 /*!
+ *  @brief Procedure take an object. Take an object and execute job.
+ */
+typedef void (^NSAObjectProcedure)(id obj);
+/*!
  *  @brief Object unary operation block. Take an object and returns an object.
  */
 typedef id (^NSAObjectUnaryOperator)(id obj);
@@ -57,6 +61,15 @@ typedef BOOL (^NSAObjectPicker)(id obj);
  */
 typedef id (^NSAObjectBinaryOperator)(id obj1, id obj2);
 
+
+/*!
+ *  @brief Applies mapper to every item of enumerator.
+ *  @param enumerator
+ *      Input object source enumerator.
+ *  @param procedure
+ *      A procedure to apply every item.
+ */
+FOUNDATION_EXTERN void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure);
 
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items.
@@ -120,6 +133,12 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  */
 @interface NSArray (FE_Functional)
 
+/*!
+ *  @brief Apply procedure to objects.
+ *  @details Shallow wrapper of @link NSAApply @endlink
+ *  @see NSAApply
+ */
+- (void)applyProcedure:(NSAObjectProcedure)procedure;
 /*!
  *  @brief Maps mapper to objects and returns the result as array.
  *  @details Shallow wrapper of @link NSAMap @endlink

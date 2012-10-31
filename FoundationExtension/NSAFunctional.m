@@ -8,6 +8,13 @@
 
 #import "NSAFunctional.h"
 
+void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure) {
+    for (id item in enumerator) {
+        procedure(item);
+    }
+}
+
+
 @interface _NSAFunctionalMapEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
     NSAObjectUnaryOperator _mapper;
@@ -160,6 +167,10 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 
 @implementation NSArray (FE_Functional)
+
+- (void)applyProcedure:(NSAObjectProcedure)procedure {
+    NSAApply(self, procedure);
+}
 
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;

@@ -10,6 +10,7 @@
 
 #import <FoundationExtension/NSObjectAdditions.h>
 #import <FoundationExtension/NSArrayAdditions.h>
+#import <FoundationExtension/NSAttributedStringAdditions.h>
 #import <FoundationExtension/NSBundleAdditions.h>
 #import <FoundationExtension/NSDataAdditions.h>
 #import <FoundationExtension/NSDateAdditions.h>

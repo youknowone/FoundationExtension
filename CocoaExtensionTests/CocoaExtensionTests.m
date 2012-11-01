@@ -39,4 +39,61 @@
     [eventStream release];
 }
 
+- (void)testStringAttribute
+{
+    NSAStringAttributeDictionary *dict = [NSAStringAttributeDictionary dictionary];
+    // defaults
+    STAssertEquals(dict.ligature, (NSUInteger)NSALigatureStandard, @"");
+    
+    #define TEST_ITEM(PROP, VALUE) \
+        dict.PROP = VALUE;  \
+        STAssertEqualObjects(dict.PROP, VALUE, @""); \
+        dict.PROP = nil;    \
+        STAssertNil(dict.PROP, @"");
+    #define TEST_ITEM_VALUE(PROP, VALUE) \
+        dict.PROP = VALUE;  \
+        STAssertEquals(dict.PROP, VALUE, @"");
+
+    TEST_ITEM(font, [NSFont fontWithName:@"Helvetica" size:10.0]);
+    TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
+    TEST_ITEM(foregroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
+    TEST_ITEM(underlineStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
+    TEST_ITEM_VALUE(underlineStyle, (NSUInteger)NSUnderlineStyleDouble);
+    TEST_ITEM(superscriptNumber, [NSNumber numberWithBool:YES]);
+    TEST_ITEM_VALUE(superscript, YES);
+    TEST_ITEM_VALUE(superscript, NO);
+    TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
+    NSTextAttachment *attach = [[[NSTextAttachment alloc] initWithFileWrapper:[[[NSFileWrapper alloc] initWithPath:@"/"] autorelease]] autorelease];
+    TEST_ITEM(attachment, attach);
+    TEST_ITEM(ligatureNumber, [NSNumber numberWithUnsignedInteger:NSALigatureNo]);
+    TEST_ITEM_VALUE(ligature, (NSUInteger)NSALigatureAll);
+    TEST_ITEM_VALUE(ligature, (NSUInteger)NSALigatureStandard);
+    TEST_ITEM(baselineOffsetNumber, [NSNumber numberWithFloat:1.2f]);
+    TEST_ITEM_VALUE(baselineOffset, 0.8f);
+    TEST_ITEM(kernNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM_VALUE(kern, 0.4f);
+    TEST_ITEM(link, @"http://youknowone.org".URL);
+    TEST_ITEM(strokeWidthNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM_VALUE(strokeWidth, 0.4f);
+    TEST_ITEM(strokeColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
+    TEST_ITEM(underlineColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
+    TEST_ITEM(strikethroughStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
+    TEST_ITEM_VALUE(strikethroughStyle, (NSUInteger)NSUnderlineStyleDouble);
+    TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
+    TEST_ITEM(obliquenessNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM_VALUE(obliqueness, 0.4f);
+    TEST_ITEM(expansionNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM_VALUE(expansion, 0.4f);
+    id cursor = [NSCursor currentSystemCursor];
+    TEST_ITEM(cursor, cursor);
+    TEST_ITEM(tooltip, @"Test tooptip");
+    TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
+    TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
+    TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSAVerticalGlyphFormHorizontal]);
+    TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSAVerticalGlyphFormHorizontal);
+    
+    #undef TEST_ITEM
+    #undef TEST_ITEM_VALUE
+}
+
 @end

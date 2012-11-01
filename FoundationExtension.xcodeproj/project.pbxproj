@@ -10,6 +10,7 @@
 		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
+		38505C5A1642A66C0059773B /* NSAStringAttributeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAStringAttributeDictionary.m */; };
 		3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
 		3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
@@ -100,6 +101,13 @@
 		38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
 		38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
 		38B0C6ED163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
+		38B0C73E1641382D0044C73C /* NSAttributedStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedStringAdditions.h */; };
+		38B0C73F1641382D0044C73C /* NSAttributedStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedStringAdditions.h */; };
+		38B0C7401641382D0044C73C /* NSAttributedStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedStringAdditions.m */; };
+		38B0C7411641382D0044C73C /* NSAttributedStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedStringAdditions.m */; };
+		38B0C7421641382D0044C73C /* NSAttributedStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedStringAdditions.m */; };
+		38B0C74616414B1D0044C73C /* NSAStringAttributeDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C74416414B1D0044C73C /* NSAStringAttributeDictionary.h */; };
+		38B0C74716414B1D0044C73C /* NSAStringAttributeDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C74516414B1D0044C73C /* NSAStringAttributeDictionary.m */; };
 		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
@@ -213,6 +221,8 @@
 		383764F013373155007072FD /* FoundationExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		383764F113373155007072FD /* FoundationExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionTests.h; sourceTree = "<group>"; };
 		383764F313373155007072FD /* FoundationExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionTests.m; sourceTree = "<group>"; };
+		38505C581642A66C0059773B /* NSAStringAttributeDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAStringAttributeDictionary.h; sourceTree = "<group>"; };
+		38505C591642A66C0059773B /* NSAStringAttributeDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAStringAttributeDictionary.m; sourceTree = "<group>"; };
 		3855B02B163CF2B1005584CD /* CocoaExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3855B02F163CF2B1005584CD /* CocoaExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtension-Info.plist"; sourceTree = "<group>"; };
 		3855B033163CF2B1005584CD /* CocoaExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtension-Prefix.pch"; sourceTree = "<group>"; };
@@ -284,6 +294,10 @@
 		38730451133732DE004C8E89 /* UIKitExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitExtensionTests.m; sourceTree = "<group>"; };
 		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
 		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
+		38B0C73C1641382D0044C73C /* NSAttributedStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedStringAdditions.h; sourceTree = "<group>"; };
+		38B0C73D1641382D0044C73C /* NSAttributedStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedStringAdditions.m; sourceTree = "<group>"; };
+		38B0C74416414B1D0044C73C /* NSAStringAttributeDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAStringAttributeDictionary.h; sourceTree = "<group>"; };
+		38B0C74516414B1D0044C73C /* NSAStringAttributeDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAStringAttributeDictionary.m; sourceTree = "<group>"; };
 		38C7A9721495181800381910 /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7A9761495181800381910 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		38C7A9771495181800381910 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -464,11 +478,13 @@
 		3855B02D163CF2B1005584CD /* CocoaExtension */ = {
 			isa = PBXGroup;
 			children = (
+				3855B02E163CF2B1005584CD /* Supporting Files */,
+				3855B042163CF2B1005584CD /* Tests */,
 				3855B034163CF2B1005584CD /* CocoaExtension.h */,
 				3855B051163D41F9005584CD /* FSEventStream.h */,
 				3855B052163D41F9005584CD /* FSEventStream.m */,
-				3855B02E163CF2B1005584CD /* Supporting Files */,
-				3855B042163CF2B1005584CD /* CocoaExtensionTests */,
+				38B0C74416414B1D0044C73C /* NSAStringAttributeDictionary.h */,
+				38B0C74516414B1D0044C73C /* NSAStringAttributeDictionary.m */,
 			);
 			path = CocoaExtension;
 			sourceTree = "<group>";
@@ -482,13 +498,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3855B042163CF2B1005584CD /* CocoaExtensionTests */ = {
+		3855B042163CF2B1005584CD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3855B048163CF2B1005584CD /* CocoaExtensionTests.h */,
 				3855B049163CF2B1005584CD /* CocoaExtensionTests.m */,
 				3855B043163CF2B1005584CD /* Supporting Files */,
 			);
+			name = Tests;
 			path = CocoaExtensionTests;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -504,9 +521,12 @@
 			isa = PBXGroup;
 			children = (
 				38660A3C161AD8D700C5CE06 /* Supporting Files */,
+				383764EA13373155007072FD /* Tests */,
 				38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */,
 				38660A4E161AD9AD00C5CE06 /* NSArrayAdditions.h */,
 				38660A4F161AD9AE00C5CE06 /* NSArrayAdditions.m */,
+				38B0C73C1641382D0044C73C /* NSAttributedStringAdditions.h */,
+				38B0C73D1641382D0044C73C /* NSAttributedStringAdditions.m */,
 				38660A50161AD9AE00C5CE06 /* NSBundleAdditions.h */,
 				38660A51161AD9AE00C5CE06 /* NSBundleAdditions.m */,
 				38660A52161AD9AE00C5CE06 /* NSDataAdditions.h */,
@@ -544,7 +564,6 @@
 				3868F3B6162885D300C31163 /* NSADataObject.m */,
 				38B0C6E7163F737F0044C73C /* NSAFunctional.h */,
 				38B0C6E8163F73800044C73C /* NSAFunctional.m */,
-				383764EA13373155007072FD /* Tests */,
 			);
 			path = FoundationExtension;
 			sourceTree = "<group>";
@@ -601,7 +620,11 @@
 			isa = PBXGroup;
 			children = (
 				38C98B56161AE30300C4A389 /* Supporting Files */,
+				38730448133732DE004C8E89 /* Tests */,
+				38F0681B1636F8C8002723AB /* TestApp */,
 				38C98B58161AE30300C4A389 /* UIKitExtension.h */,
+				38505C581642A66C0059773B /* NSAStringAttributeDictionary.h */,
+				38505C591642A66C0059773B /* NSAStringAttributeDictionary.m */,
 				3868F7C4162D9CDE00C31163 /* UIAlertViewAdditions.h */,
 				3868F7C5162D9CDE00C31163 /* UIAlertViewAdditions.m */,
 				3868F7C6162D9CDE00C31163 /* UIApplicationAdditions.h */,
@@ -618,8 +641,6 @@
 				3868F7D1162D9CDE00C31163 /* UIScrollViewAdditions.m */,
 				3868F7D4162D9CDE00C31163 /* UIWebViewAdditions.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebViewAdditions.m */,
-				38730448133732DE004C8E89 /* Tests */,
-				38F0681B1636F8C8002723AB /* TestApp */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -695,6 +716,8 @@
 				38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */,
 				3855B053163D41F9005584CD /* FSEventStream.h in Headers */,
 				38B0C6EA163F73800044C73C /* NSAFunctional.h in Headers */,
+				38B0C73F1641382D0044C73C /* NSAttributedStringAdditions.h in Headers */,
+				38B0C74616414B1D0044C73C /* NSAStringAttributeDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +747,7 @@
 				38F0698B16384E40002723AB /* NSADictionary.h in Headers */,
 				38F0699016385752002723AB /* NSAString.h in Headers */,
 				38B0C6E9163F73800044C73C /* NSAFunctional.h in Headers */,
+				38B0C73E1641382D0044C73C /* NSAttributedStringAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,6 +1035,8 @@
 				3855B078163D4200005584CD /* NSACrypto.m in Sources */,
 				3855B07A163D4200005584CD /* NSADataObject.m in Sources */,
 				38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */,
+				38B0C7411641382D0044C73C /* NSAttributedStringAdditions.m in Sources */,
+				38B0C74716414B1D0044C73C /* NSAStringAttributeDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1057,6 +1083,7 @@
 				38F0698C16384E40002723AB /* NSADictionary.m in Sources */,
 				38F0699116385752002723AB /* NSAString.m in Sources */,
 				38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */,
+				38B0C7401641382D0044C73C /* NSAttributedStringAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1102,6 +1129,8 @@
 				38F0698D16384E40002723AB /* NSADictionary.m in Sources */,
 				38F0699216385752002723AB /* NSAString.m in Sources */,
 				38B0C6ED163F73800044C73C /* NSAFunctional.m in Sources */,
+				38B0C7421641382D0044C73C /* NSAttributedStringAdditions.m in Sources */,
+				38505C5A1642A66C0059773B /* NSAStringAttributeDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,7 +1226,6 @@
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1233,7 +1261,6 @@
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1257,17 +1284,13 @@
 		3855B04C163CF2B1005584CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1275,7 +1298,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1286,21 +1309,17 @@
 		3855B04D163CF2B1005584CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1310,14 +1329,10 @@
 		3855B04F163CF2B1005584CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
@@ -1326,7 +1341,6 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1337,10 +1351,7 @@
 		3855B050163CF2B1005584CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1349,7 +1360,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;
@@ -1412,7 +1422,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1437,7 +1446,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
 				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
@@ -1450,12 +1458,10 @@
 		38C7A99C1495181900381910 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
@@ -1463,11 +1469,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "FoundationExtensionTests/FoundationExtensionTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FoundationExtensionTests;
 				SDKROOT = macosx;
@@ -1478,7 +1482,6 @@
 		38C7A99D1495181900381910 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
@@ -1487,11 +1490,9 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INFOPLIST_FILE = "FoundationExtensionTests/FoundationExtensionTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = FoundationExtensionTests;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = octest;

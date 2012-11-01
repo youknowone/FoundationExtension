@@ -194,4 +194,9 @@
     }
 }
 
+- (void)testAttributedString {
+    NSAttributedString *obj = [NSAttributedString attributedString];
+    STAssertEqualObjects(obj, [[[NSAttributedString alloc] initWithString:@""] autorelease], @"");
+}
+
 @end

@@ -11,3 +11,4 @@
 #import <Cocoa/Cocoa.h>
 
 #import <CocoaExtension/FSEventStream.h>
+#import <CocoaExtension/NSAStringAttributeDictionary.h>

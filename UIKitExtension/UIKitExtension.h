@@ -11,6 +11,7 @@
 
 #import <FoundationExtension/FoundationExtension.h>
 
+#import <UIKitExtension/NSAStringAttributeDictionary.h>
 #import <UIKitExtension/UIAlertViewAdditions.h>
 #import <UIKitExtension/UIApplicationAdditions.h>
 #import <UIKitExtension/UIColorAdditions.h>

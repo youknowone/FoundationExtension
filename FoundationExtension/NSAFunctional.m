@@ -166,7 +166,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 }
 
 
-@implementation NSArray (FE_Functional)
+@implementation NSArray (Functional)
 
 - (void)applyProcedure:(NSAObjectProcedure)procedure {
     NSAApply(self, procedure);
@@ -195,7 +195,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 @end
 
 
-@implementation NSMutableArray (FE_Functional)
+@implementation NSMutableArray (Functional)
 
 - (void)map:(NSAObjectUnaryOperator)mapper {
     NSUInteger count = self.count;

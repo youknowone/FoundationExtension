@@ -107,8 +107,8 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     }
 }
 
-- (void)start {
-    FSEventStreamStart(self->_stream);
+- (BOOL)start {
+    return FSEventStreamStart(self->_stream);
 }
 
 - (void)stop {

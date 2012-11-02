@@ -12,7 +12,8 @@
  */
 
 /*!
- *  @brief Subclass available dictionary implementation.
+ *  @brief [NSDictionary][0] subclass-available implementation.
+ *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html
  *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSADictionary : NSDictionary {
@@ -22,7 +23,8 @@
 @end
 
 /*!
- *  @brief Subclass available mutable dictionary implementation.
+ *  @brief [NSMutableDictionary][1] subclass-available implementation.
+ *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableDictionary_Class/Reference/Reference.html
  *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSAMutableDictionary : NSMutableDictionary {

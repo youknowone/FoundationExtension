@@ -7,6 +7,11 @@
 //
 
 /*!
+ *  @file
+ *  @brief Object containers to handle various concept of data structure.
+ */
+
+/*!
  *  @brief Manages ordered collections of 2 objects.
  */
 @interface NSATuple: NSObject {

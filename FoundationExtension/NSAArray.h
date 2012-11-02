@@ -34,7 +34,8 @@
  */
 
 /*!
- *  @brief Subclass available array implementation.
+ *  @brief [NSArray][0] subclass-available implementation.
+ *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html
  *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSAArray : NSArray {
@@ -45,7 +46,8 @@
 
 
 /*!
- *  @brief Subclass available mutable array implementation.
+ *  @brief [NSMutableArray][1] subclass-available implementation.
+ *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html
  *  @details See @ref CoreFoundation-Subclass for concept of these objects.
  */
 @interface NSAMutableArray : NSMutableArray {

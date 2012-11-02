@@ -38,8 +38,8 @@ FoundationExtension
 
     NSURL *URL = [[@"http://"HOST_URL"/api/%@" format:key] URL];
 
-@see @ref NSString(FE\_Shortcuts)
-@see @ref NSString(FE\_NSURL)
+@see @ref NSString(Shortcuts)
+@see @ref NSString(NSURL)
 
 ## performSelector, with 3 object
 Foundation
@@ -49,7 +49,7 @@ FoundationExtension
 
     [obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
 
-@see @ref NSObject(FE\_ObjCRuntime)
+@see @ref NSObject(ObjCRuntime)
 
 ## get NSData from post request
 Foundation
@@ -63,7 +63,7 @@ FoundationExtension
 
     NSData *data = [NSData dataWithContentsOfURL:URL postBody:@{@"field1":@"value1"} encoding:NSUTF8StringEncoding];
 
-@see @ref NSData(FE\_Creations)
+@see @ref NSData(NSURLRequest)
 
 ## get NSData from Multipart Form POST
 Foundation
@@ -105,7 +105,7 @@ FoundationExtension
 
     NSString *className = obj.classObject.name;
 
-@see @ref NSObject(FE\_ObjCRuntime)
+@see @ref NSObject(ObjCRuntime)
 @see @ref NSAClass
 
 ## encode/decode base64 string (especially for In-App Purchase / Facebook API)
@@ -118,7 +118,7 @@ FoundationExtension
 
     NSData *data = [NSData dataWithBase64String:base64]
 
-@see @ref NSData(FE\_Serialization)
+@see @ref NSData(Serialization)
 
 ## get hexadecimal value from base 16 string
 Foundation
@@ -130,7 +130,7 @@ FoundationExtension
 
     NSInteger value = [string hexadecimalValue];
 
-@see @ref NSData(FE\_Serialization)
+@see @ref NSData(Serialization)
 
 ## How about base 12 string?
 Foundation
@@ -140,7 +140,7 @@ FoundationExtension
 
     NSInteger value = [string integetValueBase:12];
 
-@see @ref NSString(FE\_NumericValues)
+@see @ref NSString(Evaluation)
 
 ## md5 hash
 Foundation
@@ -155,7 +155,7 @@ FoundationExtension
 
     NSString *result = [data digestStringByMD5];
 
-@see @ref NSData(FE\_CommonCrypto)
+@see @ref NSData(CommonCrypto)
 
 ## plist dictionary decode from HTTP post request
 Foundation
@@ -168,16 +168,16 @@ FoundationExtension
     NSData *data = [NSData dataWithContentOfURLRequest:request];
     NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
 
-@see @ref NSMutableURLRequest(FE\_HTTPMethod)
-@see @ref NSData(FE\_Creations)
-@see @ref NSDictionary(FE\_Creations)
+@see @ref NSMutableURLRequest(HTTPMethod)
+@see @ref NSData(NSURLRequest)
+@see @ref NSDictionary(NSData)
 
 ## UIColor from HTML color code
 UIKitExtension
     
     UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];
 
-@see @ref UIColor(FE\_HTMLColor)
+@see @ref UIColor(HTMLColor)
 
 ## Change implementation to new one
 FoundationExtension

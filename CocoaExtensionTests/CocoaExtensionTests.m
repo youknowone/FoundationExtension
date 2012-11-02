@@ -41,9 +41,9 @@
 
 - (void)testStringAttribute
 {
-    NSAStringAttributeDictionary *dict = [NSAStringAttributeDictionary dictionary];
+    NSAttributedStringAttributeDictionary *dict = [NSAttributedStringAttributeDictionary dictionary];
     // defaults
-    STAssertEquals(dict.ligature, (NSUInteger)NSALigatureStandard, @"");
+    STAssertEquals(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
     
     #define TEST_ITEM(PROP, VALUE) \
         dict.PROP = VALUE;  \
@@ -65,9 +65,9 @@
     TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     NSTextAttachment *attach = [[[NSTextAttachment alloc] initWithFileWrapper:[[[NSFileWrapper alloc] initWithPath:@"/"] autorelease]] autorelease];
     TEST_ITEM(attachment, attach);
-    TEST_ITEM(ligatureNumber, [NSNumber numberWithUnsignedInteger:NSALigatureNo]);
-    TEST_ITEM_VALUE(ligature, (NSUInteger)NSALigatureAll);
-    TEST_ITEM_VALUE(ligature, (NSUInteger)NSALigatureStandard);
+    TEST_ITEM(ligatureNumber, [NSNumber numberWithUnsignedInteger:NSLigatureNo]);
+    TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureAll);
+    TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureStandard);
     TEST_ITEM(baselineOffsetNumber, [NSNumber numberWithFloat:1.2f]);
     TEST_ITEM_VALUE(baselineOffset, 0.8f);
     TEST_ITEM(kernNumber, [NSNumber numberWithFloat:0.2f]);
@@ -86,11 +86,11 @@
     TEST_ITEM_VALUE(expansion, 0.4f);
     id cursor = [NSCursor currentSystemCursor];
     TEST_ITEM(cursor, cursor);
-    TEST_ITEM(tooltip, @"Test tooptip");
+    TEST_ITEM(toolTip, @"Test tooptip");
     TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
-    TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSAVerticalGlyphFormHorizontal]);
-    TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSAVerticalGlyphFormHorizontal);
+    TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSVerticalGlyphFormHorizontal]);
+    TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
     
     #undef TEST_ITEM
     #undef TEST_ITEM_VALUE

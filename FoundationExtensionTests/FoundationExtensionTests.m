@@ -49,6 +49,10 @@
     STAssertEquals(1, [self return0], @"");
 }
 
+- (void)testString {
+    STAssertEquals([@"Hello, World" hasSubstring:@""], NO, @"");
+}
+
 - (void)testStringFormat {
     {
         NSString *formatted = [@"%d %d %d" format0:nil, 10, 9, 8];

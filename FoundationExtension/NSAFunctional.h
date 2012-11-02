@@ -23,8 +23,8 @@
  *      http://docs.python.org/2/tutorial/datastructures.html#functional-programming-tools
  *
  *  If you are playing with array,
- *  @see @ref NSArray(FE_Functional)
- *  @see @ref NSMutableArray(FE_Functional)
+ *  @see @ref NSArray(Functional)
+ *  @see @ref NSMutableArray(Functional)
  *
  *  If you are playing with enumerator,
  *  @see NSAMap
@@ -64,28 +64,22 @@ typedef id (^NSAObjectBinaryOperator)(id obj1, id obj2);
 
 /*!
  *  @brief Applies mapper to every item of enumerator.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param procedure
- *      A procedure to apply every item.
+ *  @param enumerator Input object source enumerator.
+ *  @param procedure A procedure to apply every item.
  */
 FOUNDATION_EXTERN void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure);
 
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param mapper
- *      Object mapper to apply every item.
+ *  @param enumerator Input object source enumerator.
+ *  @param mapper Object mapper to apply every item.
  *  @return An enumerator with every mapper applied result.
  */
 FOUNDATION_EXTERN NSEnumerator *NSAMap(id<NSFastEnumeration> enumerator, NSAObjectUnaryOperator mapper);
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items except nil.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param mapper
- *      Object mapper to apply every item. Return nil to pass.
+ *  @param enumerator Input object source enumerator.
+ *  @param mapper Object mapper to apply every item. Return nil to pass.
  *  @return Take each object from given enumerator and returns an enumerator with mapped value by mapper. If the result is nil, it will not be enumerated.
  *  @see NSAMap
  *  @see NSAFilter
@@ -94,10 +88,8 @@ FOUNDATION_EXTERN NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObject
 
 /*!
  *  @brief Applies filter to every item of given enumerator and returns an enumerator with the filter result is YES.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param filter
- *      Object filter to decide inclues or not.
+ *  @param enumerator Input object source enumerator.
+ *  @param filter Object filter to decide inclues or not.
  *  @return An enumerator with filter result of items of given enumerater is YES.
  */
 FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter);
@@ -105,10 +97,8 @@ FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPic
 /*!
  *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value. Uses first and second value as seed.
  *  @details Given enumerator must enumerate more than a object.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param operation
- *      An operator to apply every item and latest result. If it is first object, operation is not used and keep the object as latest result.
+ *  @param enumerator Input object source enumerator.
+ *  @param operation An operator to apply every item and latest result. If it is first object, operation is not used and keep the object as latest result.
  *  @return An object.
  *  @see NSAReduceWithInitialObject
  */
@@ -116,10 +106,9 @@ FOUNDATION_EXTERN id NSAReduce(NSEnumerator *enumerator, NSAObjectBinaryOperator
 /*!
  *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value.
  *  @details Given enumerator must enumerate more than a object.
- *  @param enumerator
- *      Input object source enumerator.
- *  @param operation
- *      An operator to apply every item and latest result. If it is first object, uses initialObject as latest result.
+ *  @param enumerator Input object source enumerator.
+ *  @param operation An operator to apply every item and latest result. If it is first object, uses initialObject as latest result.
+ *  @param initialObject The initial value to reduce with first element of enumerator.
  *  @return An object.
  *  @see NSAReduce
  */
@@ -129,9 +118,9 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 /*!
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @see NSAFunctional.h
- *  @see @ref NSMutableArray(FE_Functional)
+ *  @see @ref NSMutableArray(Functional)
  */
-@interface NSArray (FE_Functional)
+@interface NSArray (Functional)
 
 /*!
  *  @brief Apply procedure to objects.
@@ -176,9 +165,9 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 /*!
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @see NSAFunctional.h
- *  @see @ref NSArray(FE_Functional)
+ *  @see @ref NSArray(Functional)
  */
-@interface NSMutableArray (FE_Functional)
+@interface NSMutableArray (Functional)
 
 /*!
  *  @brief Applies mapper to every item and replace original item to new one.

@@ -1,7 +1,10 @@
 var searchData=
 [
   ['latesteventid',['latestEventId',['../interfaceFSEventStream.html#ab05ac605476cc94a97ddc2ea7db15962',1,'FSEventStream']]],
-  ['loadrequestforfilepath_3a',['loadRequestForFilePath:',['../categoryUIWebView_07FE__Shortcuts_08.html#ad80f17ebdbff8eb6807c2d3412f3466b',1,'UIWebView(FE_Shortcuts)']]],
-  ['loadrequestforurl_3a',['loadRequestForURL:',['../categoryUIWebView_07FE__Shortcuts_08.html#a6d86d6d5869dd6002fc1a8b975f2ee50',1,'UIWebView(FE_Shortcuts)']]],
-  ['locale',['locale',['../categoryNSNumberFormatter_07FE__Shortcuts_08.html#a55d970773391c38bf27e52befa255aed',1,'NSNumberFormatter(FE_Shortcuts)']]]
+  ['ligature',['ligature',['../interfaceNSAttributedStringAttributeDictionary.html#add49d8d71567ff7bb66aaa2316f554e5',1,'NSAttributedStringAttributeDictionary']]],
+  ['ligaturenumber',['ligatureNumber',['../interfaceNSAttributedStringAttributeDictionary.html#aa0b6d5e2d5d0896f333ffd0e33cf3d23',1,'NSAttributedStringAttributeDictionary']]],
+  ['link',['link',['../interfaceNSAttributedStringAttributeDictionary.html#ae38fbe88b5672a5e831c18d5942e49eb',1,'NSAttributedStringAttributeDictionary']]],
+  ['loadrequestforfilepath_3a',['loadRequestForFilePath:',['../categoryUIWebView_07Shortcuts_08.html#a69d840cfade0f4cd8cc217407594e36f',1,'UIWebView(Shortcuts)']]],
+  ['loadrequestforurl_3a',['loadRequestForURL:',['../categoryUIWebView_07Shortcuts_08.html#a35b0f38fce89009029a081bccc9420b4',1,'UIWebView(Shortcuts)']]],
+  ['locale',['locale',['../categoryNSNumberFormatter_07Shortcuts_08.html#a98f4b7d26ff759abdbb320469be3910a',1,'NSNumberFormatter(Shortcuts)']]]
 ];

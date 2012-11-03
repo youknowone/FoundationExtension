@@ -96,56 +96,56 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2012 youknowone.org. All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html">   12</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects.">NSATuple</a>: NSObject {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">   13</a></span>&#160;    <span class="keywordtype">id</span> <a class="code" href="interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032">_first</a>, <a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">_second</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#af53b89f629a1ba13551b515668a3bede">   18</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> first;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#a4e7ef7db32eb78a92064347422857f76">   22</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> second;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;+ (id)tuple;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;- (id)initWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;+ (id)tupleWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (id)objectAtIndex:(NSUInteger)index;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html">   59</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMutableTuple.html" title="Manages ordered collections of 2 objects.">NSAMutableTuple</a>: <a class="code" href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects.">NSATuple</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html">   17</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects.">NSATuple</a>: NSObject {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">   18</a></span>&#160;    <span class="keywordtype">id</span> <a class="code" href="interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032">_first</a>, <a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">_second</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#af53b89f629a1ba13551b515668a3bede">   23</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> first;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="code" href="interfaceNSATuple.html#a4e7ef7db32eb78a92064347422857f76">   27</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> second;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;+ (id)tuple;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;- (id)initWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;+ (id)tupleWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (id)objectAtIndex:(NSUInteger)index;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa">   64</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa" title="first object">first</a>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80">   68</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80" title="second object">second</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;- (void)<a class="code" href="interfaceNSAMutableTuple.html#a2ceec4aeed382e4ff120b06901590945" title="Swap first and second.">swap</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html">   64</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMutableTuple.html" title="Manages ordered collections of 2 objects.">NSAMutableTuple</a>: <a class="code" href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects.">NSATuple</a></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa">   69</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa" title="first object">first</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80">   73</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80" title="second object">second</a>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html">   81</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects.">NSATriple</a>: NSObject {</div>
-<div class="line"><a name="l00082"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#a3fe827e8af230111744530325a912f57">   82</a></span>&#160;    <span class="keywordtype">id</span> <a class="code" href="interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032">_first</a>, <a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">_second</a>, <a class="code" href="interfaceNSATriple.html#a3fe827e8af230111744530325a912f57">_third</a>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#ab519a532a2bcd5fac34fa297a7d09164">   87</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa" title="first object">first</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#ad2977cb5e9113b3d69f166fa5406cb4e">   91</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80" title="second object">second</a>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#adb9e9042aab45ea1539c9addb67549c0">   95</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> third;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;+ (id)triple;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;- (id)initWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second third:(<span class="keywordtype">id</span>)third;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;+ (id)tripleWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second third:(<span class="keywordtype">id</span>)third;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;- (id)objectAtIndex:(NSUInteger)index;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html">  134</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMutableTriple.html" title="Manages ordered collections of 3 objects.">NSAMutableTriple</a>: <a class="code" href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects.">NSATriple</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (void)<a class="code" href="interfaceNSAMutableTuple.html#a2ceec4aeed382e4ff120b06901590945" title="Swap first and second.">swap</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html">   86</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects.">NSATriple</a>: NSObject {</div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#a3fe827e8af230111744530325a912f57">   87</a></span>&#160;    <span class="keywordtype">id</span> <a class="code" href="interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032">_first</a>, <a class="code" href="interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72">_second</a>, <a class="code" href="interfaceNSATriple.html#a3fe827e8af230111744530325a912f57">_third</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#ab519a532a2bcd5fac34fa297a7d09164">   92</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa" title="first object">first</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#ad2977cb5e9113b3d69f166fa5406cb4e">   96</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> <a class="code" href="interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80" title="second object">second</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="code" href="interfaceNSATriple.html#adb9e9042aab45ea1539c9addb67549c0">  100</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keywordtype">id</span> third;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;+ (id)triple;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;- (id)initWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second third:(<span class="keywordtype">id</span>)third;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;+ (id)tripleWithFirst:(<span class="keywordtype">id</span>)first second:(<span class="keywordtype">id</span>)second third:(<span class="keywordtype">id</span>)third;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;- (id)objectAtIndex:(NSUInteger)index;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#a4e1270cab9b096a38d328ba2c1cf3bab">  139</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> first;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#a6fb7829bb60712cb32c321f98f2066a3">  143</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> second;</div>
-<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#aa2e6f7b342f24f8bb1f81f896926be7f">  147</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> third;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html">  139</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMutableTriple.html" title="Manages ordered collections of 3 objects.">NSAMutableTriple</a>: <a class="code" href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects.">NSATriple</a></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#a4e1270cab9b096a38d328ba2c1cf3bab">  144</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> first;</div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#a6fb7829bb60712cb32c321f98f2066a3">  148</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> second;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="interfaceNSAMutableTriple.html#aa2e6f7b342f24f8bb1f81f896926be7f">  152</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) <span class="keywordtype">id</span> third;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

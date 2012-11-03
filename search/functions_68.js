@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['hashttpprefix',['hasHTTPPrefix',['../categoryNSString_07FE__NSURL_08.html#a136b35f6cbabfe21fe7c938a8b7b740d',1,'NSString(FE_NSURL)']]],
-  ['hassmarturlprefix',['hasSmartURLPrefix',['../categoryNSString_07FE__NSURL_08.html#a5346ef3daea1a66d2eec8c59c5dd07a4',1,'NSString(FE_NSURL)']]],
-  ['hexadecimalstring',['hexadecimalString',['../categoryNSData_07FE__Serialization_08.html#a75e004bac547d8682043a5ed046c12cb',1,'NSData(FE_Serialization)']]],
-  ['hexadecimalvalue',['hexadecimalValue',['../categoryNSString_07FE__NumericValues_08.html#a4bbe841ec69d0aa4cb8ea4046c23b8a6',1,'NSString(FE_NumericValues)']]],
+  ['hashttpprefix',['hasHTTPPrefix',['../categoryNSString_07NSURL_08.html#a639ea9d6853df5abba34d0eb8d8c26eb',1,'NSString(NSURL)']]],
+  ['hassmarturlprefix',['hasSmartURLPrefix',['../categoryNSString_07NSURL_08.html#a41d4df2db8903116131affc46f195b16',1,'NSString(NSURL)']]],
+  ['hassubstring_3a',['hasSubstring:',['../categoryNSString_07Shortcuts_08.html#a2744176dca83cbbe214918aa058c9e3c',1,'NSString(Shortcuts)']]],
+  ['hexadecimalstring',['hexadecimalString',['../categoryNSData_07Serialization_08.html#a9931ce3beebaddad3803ee6411d564fb',1,'NSData(Serialization)']]],
+  ['hexadecimalvalue',['hexadecimalValue',['../categoryNSString_07Evaluation_08.html#af4e3f0938e47549f44cc9c40cefc8448',1,'NSString(Evaluation)']]],
   ['httpbody',['HTTPBody',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a1f556487ffd3b2f62cffbeeb60f440b9',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]]
 ];

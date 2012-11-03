@@ -1,20 +1,20 @@
 var searchData=
 [
-  ['classname',['className',['../categoryNSObject_07FE__ObjCRuntime_08.html#a0918165129059a25fb92f016d3cc1266',1,'NSObject(FE_ObjCRuntime)']]],
+  ['classname',['className',['../categoryNSObject_07ObjCRuntime_08.html#a34bd5a6cff0e1234fdd58b61eab64c1d',1,'NSObject(ObjCRuntime)']]],
   ['classwithclass_3a',['classWithClass:',['../interfaceNSAClass.html#a2923733ee09b70c002116dab2ae1785f',1,'NSAClass']]],
   ['classwithname_3a',['classWithName:',['../interfaceNSAClass.html#ab5b6e27f385c2e78586108f6647fedba',1,'NSAClass']]],
   ['classwithutf8name_3a',['classWithUTF8Name:',['../interfaceNSAClass.html#aa477be2523498c9b3225d0858af9a729',1,'NSAClass']]],
-  ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07FE__Creations_08.html#af9ec08110de49a8b9a5b0aa17aa4134a',1,'UIColor(FE_Creations)']]],
-  ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07FE__Creations_08.html#ab2cdb0d811e9285f685910c82851d5a2',1,'UIColor(FE_Creations)']]],
-  ['colorwithhtmlcolorname_3a',['colorWithHTMLColorName:',['../categoryUIColor_07FE__HTMLColor_08.html#aa5c77bfa1a6cb55d74275777578a8a96',1,'UIColor(FE_HTMLColor)']]],
-  ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07FE__HTMLColor_08.html#a0468b1fcb7ab3f8879669504dda976e8',1,'UIColor(FE_HTMLColor)']]],
-  ['colorwithhtmlhexexpression16_3a',['colorWithHTMLHexExpression16:',['../categoryUIColor_07FE__HTMLColor_08.html#a18eabd9c2f581ca617b86d7fd1081597',1,'UIColor(FE_HTMLColor)']]],
-  ['colorwithhtmlhexexpression16a_3a',['colorWithHTMLHexExpression16a:',['../categoryUIColor_07FE__HTMLColor_08.html#a5f73aadcc66ca78f9e486a8255e26f38',1,'UIColor(FE_HTMLColor)']]],
-  ['colorwithhtmlhexexpression32_3a',['colorWithHTMLHexExpression32:',['../categoryUIColor_07FE__HTMLColor_08.html#a4e8286155510b2dc4cadf299e60a099c',1,'UIColor(FE_HTMLColor)']]],
-  ['colorwithhtmlhexexpression32a_3a',['colorWithHTMLHexExpression32a:',['../categoryUIColor_07FE__HTMLColor_08.html#afa492eae4b3672e57416f46a6dae92b5',1,'UIColor(FE_HTMLColor)']]],
+  ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c',1,'UIColor(Creations)']]],
+  ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb',1,'UIColor(Creations)']]],
+  ['colorwithhtmlcolorname_3a',['colorWithHTMLColorName:',['../categoryUIColor_07HTMLColor_08.html#a389ac696fcac1fd4d7e0672be03586aa',1,'UIColor(HTMLColor)']]],
+  ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a0ec63486ee1b05f5d43954450e8dddab',1,'UIColor(HTMLColor)']]],
+  ['colorwithhtmlhexexpression16_3a',['colorWithHTMLHexExpression16:',['../categoryUIColor_07HTMLColor_08.html#ae9b59881e1fec71d53fc54afc3eb4458',1,'UIColor(HTMLColor)']]],
+  ['colorwithhtmlhexexpression16a_3a',['colorWithHTMLHexExpression16a:',['../categoryUIColor_07HTMLColor_08.html#ac08c655397b28a2601013ee774bfc742',1,'UIColor(HTMLColor)']]],
+  ['colorwithhtmlhexexpression32_3a',['colorWithHTMLHexExpression32:',['../categoryUIColor_07HTMLColor_08.html#a1af528bc8d5183c215030011ad5cf0a5',1,'UIColor(HTMLColor)']]],
+  ['colorwithhtmlhexexpression32a_3a',['colorWithHTMLHexExpression32a:',['../categoryUIColor_07HTMLColor_08.html#ac381b1e50d5391a266af667cfd3a573c',1,'UIColor(HTMLColor)']]],
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],
-  ['configurationurl',['configurationURL',['../categoryNSString_07FE__NSURL_08.html#a75051ee70ccd3ef74d442e6cb8402ed9',1,'NSString(FE_NSURL)']]],
-  ['configurationurlwithpath_3a',['configurationURLWithPath:',['../categoryNSURL_07FE__Creations_08.html#a36c0c7403f94b1248d58beb3b724259c',1,'NSURL(FE_Creations)']]],
-  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07FE__Shortcuts_08.html#a6c309376d55c51419f3f1e3198ac6161',1,'NSDictionary(FE_Shortcuts)']]],
-  ['currentdevicetype',['currentDeviceType',['../categoryUIDevice_07FE__Shortcuts_08.html#abd5f09b65382b2adb65b09b6ed6ef5bb',1,'UIDevice(FE_Shortcuts)']]]
+  ['configurationurl',['configurationURL',['../categoryNSString_07NSURL_08.html#a2dbf914ae019ef54413dc9bec7472cd0',1,'NSString(NSURL)']]],
+  ['configurationurlwithpath_3a',['configurationURLWithPath:',['../categoryNSURL_07Creations_08.html#a74194a6f81796361a1beff0e776fc7a7',1,'NSURL(Creations)']]],
+  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]],
+  ['currentdevicetype',['currentDeviceType',['../categoryUIDevice_07Shortcuts_08.html#a12f49df222d6430dad964220e2e167e5',1,'UIDevice(Shortcuts)']]]
 ];

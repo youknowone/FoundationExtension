@@ -100,13 +100,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSArray_07FE__Functional_08.html">NSArray(FE_Functional)</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSArray_07FE__Functional_08.html#details">More...</a><br/></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSMutableArray_07FE__Functional_08.html">NSMutableArray(FE_Functional)</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSMutableArray_07FE__Functional_08.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSArray_07Functional_08.html">NSArray(Functional)</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSArray_07Functional_08.html#details">More...</a><br/></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSMutableArray_07Functional_08.html">NSMutableArray(Functional)</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSMutableArray_07Functional_08.html#details">More...</a><br/></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:a56149e200ea2728955c412150908a92c"><td class="memItemLeft" align="right" valign="top">typedef void(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a56149e200ea2728955c412150908a92c">NSAObjectProcedure</a> )(id obj)</td></tr>
+<tr class="memdesc:a56149e200ea2728955c412150908a92c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Procedure take an object. Take an object and execute job.  <a href="#a56149e200ea2728955c412150908a92c"></a><br/></td></tr>
 <tr class="memitem:afcea3a77f45a3a90551ea7893588de60"><td class="memItemLeft" align="right" valign="top">typedef id(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#afcea3a77f45a3a90551ea7893588de60">NSAObjectUnaryOperator</a> )(id obj)</td></tr>
 <tr class="memdesc:afcea3a77f45a3a90551ea7893588de60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object unary operation block. Take an object and returns an object.  <a href="#afcea3a77f45a3a90551ea7893588de60"></a><br/></td></tr>
 <tr class="memitem:a0761588e817345c12d3012a5e865b212"><td class="memItemLeft" align="right" valign="top">typedef BOOL(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a0761588e817345c12d3012a5e865b212">NSAObjectPicker</a> )(id obj)</td></tr>
@@ -116,6 +118,8 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a93aafe4b8f080838d989a360b351eca0"><td class="memItemLeft" align="right" valign="top">FOUNDATION_EXTERN void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a93aafe4b8f080838d989a360b351eca0">NSAApply</a> (id&lt; NSFastEnumeration &gt; enumerator, <a class="el" href="NSAFunctional_8h.html#a56149e200ea2728955c412150908a92c">NSAObjectProcedure</a> procedure)</td></tr>
+<tr class="memdesc:a93aafe4b8f080838d989a360b351eca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies mapper to every item of enumerator.  <a href="#a93aafe4b8f080838d989a360b351eca0"></a><br/></td></tr>
 <tr class="memitem:a0698c19d203cc1bf208000e14b3e4bd1"><td class="memItemLeft" align="right" valign="top">FOUNDATION_EXTERN NSEnumerator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a0698c19d203cc1bf208000e14b3e4bd1">NSAMap</a> (id&lt; NSFastEnumeration &gt; enumerator, <a class="el" href="NSAFunctional_8h.html#afcea3a77f45a3a90551ea7893588de60">NSAObjectUnaryOperator</a> mapper)</td></tr>
 <tr class="memdesc:a0698c19d203cc1bf208000e14b3e4bd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies mapper to every item of enumerator and returns an enumerator with every result items.  <a href="#a0698c19d203cc1bf208000e14b3e4bd1"></a><br/></td></tr>
 <tr class="memitem:a67bd8c44d7e741c0a6d5e79a9ef9418d"><td class="memItemLeft" align="right" valign="top">FOUNDATION_EXTERN NSEnumerator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a67bd8c44d7e741c0a6d5e79a9ef9418d">NSAMapFilter</a> (NSEnumerator *enumerator, <a class="el" href="NSAFunctional_8h.html#afcea3a77f45a3a90551ea7893588de60">NSAObjectUnaryOperator</a> mapper)</td></tr>
@@ -158,6 +162,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a56149e200ea2728955c412150908a92c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(^ NSAObjectProcedure)(id obj)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Procedure take an object. Take an object and execute job. </p>
+
+</div>
+</div>
 <a class="anchor" id="afcea3a77f45a3a90551ea7893588de60"></a>
 <div class="memitem">
 <div class="memproto">
@@ -173,6 +191,41 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2>Function Documentation</h2>
+<a class="anchor" id="a93aafe4b8f080838d989a360b351eca0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FOUNDATION_EXTERN void NSAApply </td>
+          <td>(</td>
+          <td class="paramtype">id&lt; NSFastEnumeration &gt;&#160;</td>
+          <td class="paramname"><em>enumerator</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="NSAFunctional_8h.html#a56149e200ea2728955c412150908a92c">NSAObjectProcedure</a>&#160;</td>
+          <td class="paramname"><em>procedure</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Applies mapper to every item of enumerator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enumerator</td><td>Input object source enumerator. </td></tr>
+    <tr><td class="paramname">procedure</td><td>A procedure to apply every item. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a5d18f0fe5c9adfc0e82f222a0a59508f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -358,6 +411,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">enumerator</td><td>Input object source enumerator. </td></tr>
     <tr><td class="paramname">operation</td><td>An operator to apply every item and latest result. If it is first object, uses initialObject as latest result. </td></tr>
+    <tr><td class="paramname">initialObject</td><td>The initial value to reduce with first element of enumerator. </td></tr>
   </table>
   </dd>
 </dl>

@@ -96,62 +96,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2012 youknowone.org. All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#import &lt;objc/runtime.h&gt;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for &lt;objc/runtime.h&gt; Class.">NSAClass</a>: NSObject {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd">   19</a></span>&#160;    Class <a class="code" href="interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd">_class</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// avoid &#39;class&#39; keyword. there must be good way, NSObject.h is using.</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#ifndef __cplusplus</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#a11ba277d9a6cce42a132878d5ca8de5d">   28</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Class <span class="keyword">class</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ae29e4474f6e8d1c07b799536e9509b94">   36</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keyword">const</span> <span class="keywordtype">char</span> *UTF8Name;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#aab3d5300e810152f3125d2dc8e30b816">   42</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString *name;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ab9230c56c455efe6f1439e74ec72eed9">   47</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Class superclass;</div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ae02bac8ba42d2d072c4ff8c3007558d5">   51</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for &lt;objc/runtime.h&gt; Class.">NSAClass</a> *superclassObject;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#import &lt;objc/runtime.h&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html">   24</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a>: NSObject {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd">   25</a></span>&#160;    Class <a class="code" href="interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd">_class</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// avoid &#39;class&#39; keyword in C++. there must be good way, NSObject.h is using.</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#ifndef __cplusplus</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#a11ba277d9a6cce42a132878d5ca8de5d">   34</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Class <span class="keyword">class</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ae29e4474f6e8d1c07b799536e9509b94">   44</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <span class="keyword">const</span> <span class="keywordtype">char</span> *UTF8Name;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#aab3d5300e810152f3125d2dc8e30b816">   51</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString *name;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;- (id)initWithClass:(Class)aClass;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;+ (id)classWithClass:(Class)aClass;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ab9230c56c455efe6f1439e74ec72eed9">   56</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Class superclass;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="code" href="interfaceNSAClass.html#ae02bac8ba42d2d072c4ff8c3007558d5">   60</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> *superclassObject;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;+ (id)classWithUTF8Name:(const <span class="keywordtype">char</span> *)name;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;+ (id)classWithName:(NSString *)name;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;- (id)initWithClass:(Class)aClass;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;+ (id)classWithClass:(Class)aClass;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;- (Method)methodForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (<a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> *)methodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for &lt;objc/runtime.h&gt; Class.">NSAClass</a> (ClassShortcuts)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;- (id)<a class="code" href="interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570" title="Allocator.">alloc</a>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;- (id)allocWithZone:(NSZone *)zone;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
-<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html">  112</a></span>&#160;<span class="keyword">@interface </span>NSObject (<a class="code" href="interfaceNSAClass.html" title="Object wrapper for &lt;objc/runtime.h&gt; Class.">NSAClass</a>)</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd">  117</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for &lt;objc/runtime.h&gt; Class.">NSAClass</a> *classObject;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00124"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html">  124</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> : NSObject {</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  125</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  128</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
-<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  130</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;+ (id)classWithUTF8Name:(const <span class="keywordtype">char</span> *)name;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;+ (id)classWithName:(NSString *)name;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;- (Method)methodForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;- (<a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> *)methodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> (ClassShortcuts)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;- (id)<a class="code" href="interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570" title="Allocator.">alloc</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (id)allocWithZone:(NSZone *)zone;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html">  128</a></span>&#160;<span class="keyword">@interface </span>NSObject (<a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a>)</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd">  133</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> *classObject;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html">  140</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> : NSObject {</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  141</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  144</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  146</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

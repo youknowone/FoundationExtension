@@ -203,4 +203,9 @@
     STAssertEqualObjects(obj, [[[NSAttributedString alloc] initWithString:@""] autorelease], @"");
 }
 
+- (void)testJSON {
+    id object = [NSJSONSerialization JSONObjectWithString:@"[1, 2, 3]" options:0 error:NULL];
+    STAssertEqualObjects(object, (@[@1, @2, @3]), @"");
+}
+
 @end

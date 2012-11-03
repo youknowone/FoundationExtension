@@ -122,6 +122,8 @@ var searchData=
   ['nsjis_5fx0208_5f83stringencoding',['NSJIS_X0208_83StringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55baad070d60a64eab53e89bfeed01d3c65c',1,'NSStringEncoding.h']]],
   ['nsjis_5fx0208_5f90stringencoding',['NSJIS_X0208_90StringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba30d70640a5576545e7b723e8fc352251',1,'NSStringEncoding.h']]],
   ['nsjis_5fx0212_5f90stringencoding',['NSJIS_X0212_90StringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0e1d89dcabfade12e7143bbd90560822',1,'NSStringEncoding.h']]],
+  ['nsjsonserialization_28shortcuts_29',['NSJSONSerialization(Shortcuts)',['../categoryNSJSONSerialization_07Shortcuts_08.html',1,'']]],
+  ['nsjsonserialization_2eh',['NSJSONSerialization.h',['../NSJSONSerialization_8h.html',1,'']]],
   ['nskoi8rstringencoding',['NSKOI8RStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba47ed7ec48e7e8ffe3959bf54ca54a824',1,'NSStringEncoding.h']]],
   ['nskoi8ustringencoding',['NSKOI8UStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba74ca25f8d828aeec805c609a47496268',1,'NSStringEncoding.h']]],
   ['nskoreaneucstringencoding',['NSKoreanEUCStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6b1b1cb1e8158cadd4bc9e174b3159a8',1,'NSStringEncoding.h']]],

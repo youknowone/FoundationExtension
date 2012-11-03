@@ -29,6 +29,7 @@ var searchData=
   ['stringwithdata_3aencoding_3a',['stringWithData:encoding:',['../categoryNSString_07Creations_08.html#a3c5d1d934d5f176b4d3190345282d4cc',1,'NSString(Creations)']]],
   ['stringwithformat_3aarguments_3a',['stringWithFormat:arguments:',['../categoryNSString_07Creations_08.html#abe9b5fd5bf6237356f2762196887514f',1,'NSString(Creations)']]],
   ['stringwithinteger_3a',['stringWithInteger:',['../categoryNSString_07Creations_08.html#abd5fa0d5e94d5e29cc75209f52ed2f5a',1,'NSString(Creations)']]],
+  ['stringwithjsonobject_3aoptions_3aerror_3a',['stringWithJSONObject:options:error:',['../categoryNSJSONSerialization_07Shortcuts_08.html#a89694ab933c7f731988a84dc5417adcf',1,'NSJSONSerialization(Shortcuts)']]],
   ['stringwithutf8data_3a',['stringWithUTF8Data:',['../categoryNSString_07NSUTF8StringEncoding_08.html#a56d14e57f39c4d8806dd57181020a9ff',1,'NSString(NSUTF8StringEncoding)']]],
   ['strokecolor',['strokeColor',['../interfaceNSAttributedStringAttributeDictionary.html#ad4dddad4a94b907337bdf526c8911f67',1,'NSAttributedStringAttributeDictionary::strokeColor()'],['../interfaceNSAttributedStringAttributeDictionary.html#a6796f73eec3a1dbba9fbc288fd2d4499',1,'NSAttributedStringAttributeDictionary::strokeColor()']]],
   ['strokewidth',['strokeWidth',['../interfaceNSAttributedStringAttributeDictionary.html#ae0cfe09c00b0faea32f79e14a8de91a2',1,'NSAttributedStringAttributeDictionary']]],

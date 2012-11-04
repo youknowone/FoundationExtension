@@ -64,8 +64,12 @@
     [self->_impl encodeWithCoder:aCoder];
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
+}
+
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
 }
 
 - (NSUInteger)count {
@@ -89,10 +93,6 @@
 
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     return [self->_impl descriptionWithLocale:locale indent:level];
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
 }
 
 @end
@@ -176,11 +176,11 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
 }
 
 // mutable methods

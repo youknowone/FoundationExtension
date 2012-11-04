@@ -93,11 +93,11 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
 }
 
 - (NSString *)description {
@@ -190,11 +190,11 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
+    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
 }
 
 - (NSString *)description {

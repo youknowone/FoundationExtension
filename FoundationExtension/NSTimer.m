@@ -40,7 +40,7 @@ static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
 + (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
     NSTimer *timer = [[self alloc] initWithFireDate:[NSDate date] interval:ti delegate:delegate];
     [timer schedule];
-    return timer;
+    return [timer autorelease];
 }
 
 @end

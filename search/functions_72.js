@@ -29,5 +29,6 @@ var searchData=
   ['removeattributeverticalglyphformfromrange_3a',['removeAttributeVerticalGlyphFormFromRange:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a7bb84d7622aeed6dd15f350a609cfa1d',1,'NSMutableAttributedString(AttributeProperties)::removeAttributeVerticalGlyphFormFromRange:(10_7 NS_AVAILABLE_MAC)'],['../categoryNSMutableAttributedString_07AttributeProperties_08.html#ab5a54973888ba18ced1ffb28caa80d12',1,'NSMutableAttributedString(AttributeProperties)::removeAttributeVerticalGlyphFormFromRange:(NSRange range)']]],
   ['removeattributewritingdirectionfromrange_3a',['removeAttributeWritingDirectionFromRange:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#aed5a0c4b1fead5df74785be8b4ac3b70',1,'NSMutableAttributedString(AttributeProperties)']]],
   ['resourceurl',['resourceURL',['../categoryNSString_07NSURL_08.html#ac048a1935e94baf35c3767d4eb7c83a3',1,'NSString(NSURL)']]],
-  ['resourceurlwithpath_3a',['resourceURLWithPath:',['../categoryNSURL_07Creations_08.html#a061bb7e8b806bc90bf9aec4d1d041e63',1,'NSURL(Creations)']]]
+  ['resourceurlwithpath_3a',['resourceURLWithPath:',['../categoryNSURL_07Creations_08.html#a061bb7e8b806bc90bf9aec4d1d041e63',1,'NSURL(Creations)']]],
+  ['reversedkeyenumerator',['reversedKeyEnumerator',['../interfaceNSAOrderedDictionary.html#ae5b5cd37836c36b04820f7dc4e395725',1,'NSAOrderedDictionary']]]
 ];

@@ -21,6 +21,11 @@
 		38505C961645837E0059773B /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
 		38505C971645837E0059773B /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
 		38505C981645837E0059773B /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
+		38505CBB164647910059773B /* NSAOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505CB9164647910059773B /* NSAOrderedDictionary.h */; };
+		38505CBC164647910059773B /* NSAOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505CB9164647910059773B /* NSAOrderedDictionary.h */; };
+		38505CBD164647910059773B /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
+		38505CBE164647910059773B /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
+		38505CBF164647910059773B /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
 		3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
 		3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
@@ -237,6 +242,8 @@
 		38505C871642EC5B0059773B /* NSURLRequestCreations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSURLRequestCreations.m; sourceTree = "<group>"; };
 		38505C921645837A0059773B /* NSJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSJSONSerialization.h; sourceTree = "<group>"; };
 		38505C931645837C0059773B /* NSJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSJSONSerialization.m; sourceTree = "<group>"; };
+		38505CB9164647910059773B /* NSAOrderedDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAOrderedDictionary.h; sourceTree = "<group>"; };
+		38505CBA164647910059773B /* NSAOrderedDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAOrderedDictionary.m; sourceTree = "<group>"; };
 		3855B02B163CF2B1005584CD /* CocoaExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3855B02F163CF2B1005584CD /* CocoaExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtension-Info.plist"; sourceTree = "<group>"; };
 		3855B033163CF2B1005584CD /* CocoaExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtension-Prefix.pch"; sourceTree = "<group>"; };
@@ -582,6 +589,8 @@
 				3868F3B6162885D300C31163 /* NSADataObject.m */,
 				38B0C6E7163F737F0044C73C /* NSAFunctional.h */,
 				38B0C6E8163F73800044C73C /* NSAFunctional.m */,
+				38505CB9164647910059773B /* NSAOrderedDictionary.h */,
+				38505CBA164647910059773B /* NSAOrderedDictionary.m */,
 			);
 			path = FoundationExtension;
 			sourceTree = "<group>";
@@ -738,6 +747,7 @@
 				38B0C74616414B1D0044C73C /* NSAttributedString.h in Headers */,
 				38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */,
 				38505C951645837E0059773B /* NSJSONSerialization.h in Headers */,
+				38505CBC164647910059773B /* NSAOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +780,7 @@
 				38B0C73E1641382D0044C73C /* NSAttributedString.h in Headers */,
 				38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */,
 				38505C941645837E0059773B /* NSJSONSerialization.h in Headers */,
+				38505CBB164647910059773B /* NSAOrderedDictionary.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,6 +1072,7 @@
 				38B0C74716414B1D0044C73C /* NSAttributedString.m in Sources */,
 				38505C8B1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
 				38505C971645837E0059773B /* NSJSONSerialization.m in Sources */,
+				38505CBE164647910059773B /* NSAOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1110,6 +1122,7 @@
 				38B0C7401641382D0044C73C /* NSAttributedString.m in Sources */,
 				38505C8A1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
 				38505C961645837E0059773B /* NSJSONSerialization.m in Sources */,
+				38505CBD164647910059773B /* NSAOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,6 +1172,7 @@
 				38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */,
 				38505C8C1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
 				38505C981645837E0059773B /* NSJSONSerialization.m in Sources */,
+				38505CBF164647910059773B /* NSAOrderedDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

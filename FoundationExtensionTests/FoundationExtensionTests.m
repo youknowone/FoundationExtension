@@ -208,4 +208,18 @@
     STAssertEqualObjects(object, (@[@1, @2, @3]), @"");
 }
 
+- (void)testOrderedDictionary {
+    NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionary];
+    [obj setObject:@"1" forKey:@1];
+    [obj setObject:@"2" forKey:@2];
+    [obj setObject:@"3" forKey:@3];
+    [obj setObject:@"4" forKey:@4];
+    [obj setObject:@"5" forKey:@5];
+    NSInteger count = 0;
+    for (id key in obj) {
+        count += 1;
+        STAssertEqualObjects([obj objectForKey:key], [NSString stringWithInteger:count], @"");
+    }
+}
+
 @end

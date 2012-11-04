@@ -57,3 +57,4 @@
 #import <FoundationExtension/NSADataObject.h>
 #import <FoundationExtension/NSACommonDigest.h>
 #import <FoundationExtension/NSAFunctional.h>
+#import <FoundationExtension/NSAOrderedDictionary.h>

@@ -49,6 +49,7 @@
 #import <FoundationExtension/NSTimer.h>
 #import <FoundationExtension/NSURL.h>
 #import <FoundationExtension/NSURLRequest.h>
+#import <FoundationExtension/NSURLRequestCreations.h>
 
 #import <FoundationExtension/NSAArray.h>
 #import <FoundationExtension/NSADictionary.h>

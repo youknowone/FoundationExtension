@@ -55,6 +55,7 @@
 
 
 @implementation NSAMutableTuple
+@dynamic first, second;
 
 // implementation should be thread-safe?
 
@@ -134,6 +135,7 @@
 
 
 @implementation NSAMutableTriple
+@dynamic first, second, third;
 
 // implementation should be thread-safe?
 

@@ -8,6 +8,8 @@
 
 #import "NSAOrderedDictionary.h"
 
+#import "debug.h"
+
 @interface NSAOrderedDictionary ()
 
 - (id)initWithImplementationOrder:(id)order dictionary:(id)impl;

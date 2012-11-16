@@ -13,7 +13,7 @@ typedef enum {
     UIADeviceTypePod    = 3,
 }   UIADeviceType;
 #define UIADeviceTypeIsIPhoneOrIPodMask 2
-#define UIADeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType&ICDeviceTypeIsIPhoneOrIPodMask)>>1)
+#define UIADeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType & UIADeviceTypeIsIPhoneOrIPodMask)>>1)
 
 @interface UIDevice (Shortcuts)
 

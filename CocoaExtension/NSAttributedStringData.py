@@ -27,7 +27,11 @@ class ObjcProperty(object):
 
     @property
     def available_mac(self):
-        return 'NS_AVAILABLE_MAC(%s)' % self.available
+        return 'NS_AVAILABLE_MAC(10_%s)' % self.available
+
+    @property
+    def available_header(self):
+        return '#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 10%s0' % self.available
 
     @property
     def number(self):
@@ -68,9 +72,9 @@ props = [
     O('float', 'expansion'),
     O('NSCursor *', 'cursor'),
     O('NSString *', 'toolTip'),
-    O('NSInteger', 'markedClauseSegment', '10_5'),
-    O('NSArray *', 'writingDirectionArray', '10_6'),
-    O('NSWritingDirectionAttributes', 'writingDirection', '10_6'),
-    O('NSVerticalGlyphForm', 'verticalGlyphForm', '10_7'),
-    O('NSTextAlternatives *', 'textAlternatives', '10_8'),
+    O('NSInteger', 'markedClauseSegment', '5'),
+    O('NSArray *', 'writingDirectionArray', '6'),
+    O('NSWritingDirectionAttributes', 'writingDirection', '6'),
+    O('NSVerticalGlyphForm', 'verticalGlyphForm', '7'),
+    O('NSTextAlternatives *', 'textAlternatives', '8'),
 ]

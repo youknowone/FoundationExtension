@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
+
 #import <FoundationExtension/FoundationExtension.h>
 
 /*!
@@ -305,3 +307,5 @@ typedef NSUInteger NSVerticalGlyphForm;
 
 
 @end
+
+#endif

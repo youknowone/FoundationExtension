@@ -6,10 +6,6 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
-
-#import <FoundationExtension/FoundationExtension.h>
-
 /*!
  *  @file
  *  @brief [NSMutableAttributedString][0] attributes dictionary and data type to support it.
@@ -18,9 +14,13 @@
  *
  *  Available in iOS 6.0 or later.
  *  UIKit is required.
- *  
+ *
  *  Before iOS 6.0, use CoreText.
  */
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_6_0
+
+#import <FoundationExtension/FoundationExtension.h>
 
 /*!
  *  @brief Type for NSUnderlinePattern*, NSUnderlineStyle* and NSUnderlineMask*.

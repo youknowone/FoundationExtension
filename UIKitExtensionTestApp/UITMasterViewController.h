@@ -10,7 +10,7 @@
 
 @class UITDetailViewController;
 
-@interface UITMasterViewController : UITableViewController<NSATimerDelegate>
+@interface UITMasterViewController : UITableViewController<NSTimerDelegate>
 
 @property (strong, nonatomic) UITDetailViewController *detailViewController;
 

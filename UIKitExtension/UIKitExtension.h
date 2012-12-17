@@ -32,3 +32,4 @@
 #import <UIKitExtension/UIControl.h>
 #import <UIKitExtension/UIScrollView.h>
 #import <UIKitExtension/UIWebView.h>
+#import <UIKitExtension/UIATableView.h>

@@ -6,13 +6,17 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+@interface UIApplication (Dump)
+
+- (CGRect)statusBarFrameForOrientation:(UIInterfaceOrientation)orientation;
+
+@end
+
 //! @brief UIApplication extensions
 @interface UIApplication (Shortcuts)
 
 //! @brief statusbar size calculated for current orientation
 @property(nonatomic, readonly) CGRect statusBarFrameForCurrentOrientation;
-//! @brief statusbar size calculated for a given orientation
-- (CGRect)statusBarFrameForOrientation:(UIInterfaceOrientation)orientation;
 
 //! @deprecated Use statusBarFrameForCurrentOrientation
 - (CGSize)statusBarOrientationReducedSize __deprecated;

@@ -18,7 +18,7 @@
  *  Before iOS 6.0, use CoreText.
  */
 
-#if IPHONEOS_DEPLOYMENT_TARGET >= 6 // need better way to do this
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 
 #import <FoundationExtension/FoundationExtension.h>
 

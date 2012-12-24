@@ -30,6 +30,7 @@
     STAssertNotNil([UIColor self], @""); // test initialize
 }
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 - (void)testStringAttribute
 {
     NSAttributedStringAttributeDictionary *dict = [NSAttributedStringAttributeDictionary dictionary];
@@ -67,5 +68,6 @@
     #undef TEST_ITEM
     #undef TEST_ITEM_VALUE
 }
+#endif
 
 @end

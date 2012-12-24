@@ -31,7 +31,7 @@ class ObjcProperty(object):
 
     @property
     def available_header(self):
-        return '#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 10%s0' % self.available
+        return '#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 10%s0' % self.available
 
     @property
     def number(self):

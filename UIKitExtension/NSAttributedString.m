@@ -8,7 +8,7 @@
 
 #import "NSAttributedString.h"
 
-#if IPHONEOS_DEPLOYMENT_TARGET >= 6
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 
 @implementation NSMutableAttributedString (AttributeProperties)
 

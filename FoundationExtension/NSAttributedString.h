@@ -13,8 +13,6 @@
  *  @see NSStringAttributeDictionary
  */
 
-#import <FoundationExtension/NSADictionary.h>
-
 /*!
  *  @brief NSAttributedString common shortcuts
  */

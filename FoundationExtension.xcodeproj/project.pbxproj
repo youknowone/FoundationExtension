@@ -159,6 +159,7 @@
 		38C98B59161AE30300C4A389 /* UIKitExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38C98B58161AE30300C4A389 /* UIKitExtension.h */; };
 		38E48D93167FB28700BD4F6D /* UIATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E48D92167FB28700BD4F6D /* UIATableView.m */; };
 		38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B034163CF2B1005584CD /* CocoaExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38EF66AF16AEEB8100781497 /* UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EF66AE16AEEB8100781497 /* UITableView.m */; };
 		38F068181636F8C8002723AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38F068191636F8C8002723AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38F0681A1636F8C8002723AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
@@ -368,6 +369,8 @@
 		38C98B58161AE30300C4A389 /* UIKitExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitExtension.h; sourceTree = "<group>"; };
 		38E48D91167FB28700BD4F6D /* UIATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIATableView.h; sourceTree = "<group>"; };
 		38E48D92167FB28700BD4F6D /* UIATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIATableView.m; sourceTree = "<group>"; };
+		38EF66AD16AEEB8100781497 /* UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableView.h; sourceTree = "<group>"; };
+		38EF66AE16AEEB8100781497 /* UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableView.m; sourceTree = "<group>"; };
 		38F068161636F8C8002723AB /* UIKitExtensionTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitExtensionTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F0681D1636F8C8002723AB /* UIKitExtensionTestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIKitExtensionTestApp-Info.plist"; sourceTree = "<group>"; };
 		38F0681F1636F8C8002723AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -730,6 +733,8 @@
 				3868F7CF162D9CDE00C31163 /* UIImage.m */,
 				3868F7D0162D9CDE00C31163 /* UIScrollView.h */,
 				3868F7D1162D9CDE00C31163 /* UIScrollView.m */,
+				38EF66AD16AEEB8100781497 /* UITableView.h */,
+				38EF66AE16AEEB8100781497 /* UITableView.m */,
 				3868F7D4162D9CDE00C31163 /* UIWebView.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
@@ -1301,6 +1306,7 @@
 				38505CBF164647910059773B /* NSAOrderedDictionary.m in Sources */,
 				38E48D93167FB28700BD4F6D /* UIATableView.m in Sources */,
 				3877F44D16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
+				38EF66AF16AEEB8100781497 /* UITableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

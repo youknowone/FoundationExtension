@@ -90,6 +90,21 @@
 
 
 /*!
+ *  @brief NSArray rearrangement methods extension.
+ */
+@interface NSArray (Rearrange)
+
+/*!
+ *  @brief Moves the object in the array at given index to another index.
+ *  @param fromIndex The index of the object with which to moves.
+ *  @param toIndex The index of the object wants moves to.
+ */
+- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
+@end
+
+
+/*!
  *  @brief NSArray shortcut methods for [NSNumber][1].
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html
  */

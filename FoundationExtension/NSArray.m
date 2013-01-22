@@ -78,6 +78,19 @@
 @end
 
 
+@implementation NSMutableArray (Rearrange)
+
+- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
+    id obj = [self objectAtIndex:fromIndex];
+    [obj retain];
+    [self removeObjectAtIndex:fromIndex];
+    [self insertObject:obj atIndex:toIndex];
+    [obj release];
+}
+
+@end
+
+
 @implementation NSArray (NSNumber)
 
 - (NSInteger)integerAtIndex:(NSUInteger)index {

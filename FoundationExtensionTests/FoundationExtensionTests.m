@@ -83,6 +83,23 @@
     STAssertTrue([concat isEqualToString:@"Hello, World!"], @"");
 }
 
+- (void)testArrayRearrangement {
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@0, @1, @2, @3, @4, nil];
+    STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
+    [array moveObjectAtIndex:3 toIndex:3];
+    STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
+    
+    array = [NSMutableArray arrayWithObjects:@0, @1, @2, @3, @4, nil];
+    STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
+    [array moveObjectAtIndex:0 toIndex:3];
+    STAssertEqualObjects(array, (@[@1, @2, @3, @0, @4]), @"result: %@", array);
+
+    array = [NSMutableArray arrayWithObjects:@0, @1, @2, @3, @4, nil];
+    STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
+    [array moveObjectAtIndex:4 toIndex:0];
+    STAssertEqualObjects(array, (@[@4, @0, @1, @2, @3]), @"result: %@", array);
+}
+
 - (void)testHexadecimalString {
     NSData *data = [NSData dataWithBytes:"\0aa\0" length:4];
     NSString *result = [data hexadecimalString];

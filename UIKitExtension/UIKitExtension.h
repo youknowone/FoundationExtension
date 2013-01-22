@@ -30,6 +30,7 @@
 #import <UIKitExtension/UIDevice.h>
 #import <UIKitExtension/UIImage.h>
 #import <UIKitExtension/UIControl.h>
+#import <UIKitExtension/UITableView.h>
 #import <UIKitExtension/UIScrollView.h>
 #import <UIKitExtension/UIWebView.h>
 #import <UIKitExtension/UIATableView.h>

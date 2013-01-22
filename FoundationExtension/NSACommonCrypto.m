@@ -7,6 +7,7 @@
 //
 
 #import <CommonCrypto/CommonCryptor.h>
+#import <FoundationExtension/NSString.h>
 #import "NSACommonCrypto.h"
 
 @implementation NSData (CommonCryptor)

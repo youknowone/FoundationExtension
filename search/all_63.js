@@ -1,6 +1,9 @@
 var searchData=
 [
   ['cachepolicy',['cachePolicy',['../categoryNSURLRequest_07Properties_08.html#a4cdfbb38f6776ab087c88138b29527ce',1,'NSURLRequest(Properties)::cachePolicy()'],['../categoryNSMutableURLRequest_07Properties_08.html#a8db71a71fc8e9cf00a6f17fd97e157c5',1,'NSMutableURLRequest(Properties)::cachePolicy()']]],
+  ['cellwillhidemenu_3a',['cellWillHideMenu:',['../protocolUIATableViewCellCopyableDelegate-p.html#a3320a76f9c423fcd116a66becaca6b68',1,'UIATableViewCellCopyableDelegate-p']]],
+  ['cellwillshowmenu_3a',['cellWillShowMenu:',['../protocolUIATableViewCellCopyableDelegate-p.html#a4b491dbbc5d0a92b969480077126dd63',1,'UIATableViewCellCopyableDelegate-p']]],
+  ['cellwithstyle_3areuseidentifier_3a',['cellWithStyle:reuseIdentifier:',['../categoryUITableViewCell_07Shortcuts_08.html#ad67ce8d27e66525bebfc55fb33d893b3',1,'UITableViewCell(Shortcuts)']]],
   ['class',['class',['../interfaceNSAClass.html#a11ba277d9a6cce42a132878d5ca8de5d',1,'NSAClass']]],
   ['classname',['className',['../categoryNSObject_07ObjCRuntime_08.html#aee4a29fd38aec8e08d65c145eeb22834',1,'NSObject(ObjCRuntime)::className()'],['../categoryNSObject_07ObjCRuntime_08.html#a34bd5a6cff0e1234fdd58b61eab64c1d',1,'NSObject(ObjCRuntime)::className()']]],
   ['classobject',['classObject',['../categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd',1,'NSObject(NSAClass)']]],

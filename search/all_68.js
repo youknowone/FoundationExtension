@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['hasdelegateselectionstyle',['hasDelegateSelectionStyle',['../interfaceUIATableViewCellCopyable.html#a91243cb1dbe5cc31ac0926ad732399cd',1,'UIATableViewCellCopyable']]],
+  ['hasdelegatestring',['hasDelegateString',['../interfaceUIATableViewCellCopyable.html#a60330ce876ed35bf029f416734a68211',1,'UIATableViewCellCopyable']]],
+  ['hasdelegatewillhidemenu',['hasDelegateWillHideMenu',['../interfaceUIATableViewCellCopyable.html#a9c80942dfbe07ebcb0619d593278213e',1,'UIATableViewCellCopyable']]],
+  ['hasdelegatewillshowmenu',['hasDelegateWillShowMenu',['../interfaceUIATableViewCellCopyable.html#ad856f6b8c78c3705e26cf7b8b297531f',1,'UIATableViewCellCopyable']]],
   ['hashttpprefix',['hasHTTPPrefix',['../categoryNSString_07NSURL_08.html#a639ea9d6853df5abba34d0eb8d8c26eb',1,'NSString(NSURL)']]],
   ['hassmarturlprefix',['hasSmartURLPrefix',['../categoryNSString_07NSURL_08.html#a41d4df2db8903116131affc46f195b16',1,'NSString(NSURL)']]],
   ['hassubstring_3a',['hasSubstring:',['../categoryNSString_07Shortcuts_08.html#a2744176dca83cbbe214918aa058c9e3c',1,'NSString(Shortcuts)']]],

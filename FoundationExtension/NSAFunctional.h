@@ -49,13 +49,25 @@
  */
 typedef void (^NSAObjectProcedure)(id obj);
 /*!
+ *  @brief Procedure take an object with index. Take an object and execute job.
+ */
+typedef void (^NSAObjectProcedureWithIndex)(id obj, NSUInteger index);
+/*!
  *  @brief Object unary operation block. Take an object and returns an object.
  */
 typedef id (^NSAObjectUnaryOperator)(id obj);
 /*!
+ *  @brief Object unary operation block. Take an object with index and returns an object.
+ */
+typedef id (^NSAObjectUnaryOperatorWithIndex)(id obj, NSUInteger index);
+/*!
  *  @brief Object selection block. Take an object and returns a boolean.
  */
 typedef BOOL (^NSAObjectPicker)(id obj);
+/*!
+ *  @brief Object selection block. Take an object with index and returns a boolean.
+ */
+typedef BOOL (^NSAObjectPickerWithIndex)(id obj, NSUInteger index);
 /*!
  *  @brief Object binary operation block. Take 2 objects and returns an object.
  */
@@ -70,12 +82,28 @@ typedef id (^NSAObjectBinaryOperator)(id obj1, id obj2);
 FOUNDATION_EXTERN void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure);
 
 /*!
+ *  @brief Applies mapper with index to every item of enumerator.
+ *  @param enumerator Input object source enumerator.
+ *  @param procedure A procedure to apply every item.
+ */
+FOUNDATION_EXTERN void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithIndex procedure);
+
+/*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items.
  *  @param enumerator Input object source enumerator.
  *  @param mapper Object mapper to apply every item.
  *  @return An enumerator with every mapper applied result.
  */
 FOUNDATION_EXTERN NSEnumerator *NSAMap(id<NSFastEnumeration> enumerator, NSAObjectUnaryOperator mapper);
+
+/*!
+ *  @brief Applies mapper with index to every item of enumerator and returns an enumerator with every result items.
+ *  @param enumerator Input object source enumerator.
+ *  @param mapper Object mapper to apply every item.
+ *  @return An enumerator with every mapper applied result.
+ */
+FOUNDATION_EXTERN NSEnumerator *NSAMapWithIndex(id<NSFastEnumeration> enumerator, NSAObjectUnaryOperatorWithIndex mapper);
+
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items except nil.
  *  @param enumerator Input object source enumerator.
@@ -87,12 +115,30 @@ FOUNDATION_EXTERN NSEnumerator *NSAMap(id<NSFastEnumeration> enumerator, NSAObje
 FOUNDATION_EXTERN NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper);
 
 /*!
+ *  @brief Applies mapper with index to every item of enumerator and returns an enumerator with every result items except nil.
+ *  @param enumerator Input object source enumerator.
+ *  @param mapper Object mapper to apply every item. Return nil to pass.
+ *  @return Take each object from given enumerator and returns an enumerator with mapped value by mapper. If the result is nil, it will not be enumerated.
+ *  @see NSAMap
+ *  @see NSAFilter
+ */
+FOUNDATION_EXTERN NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper);
+
+/*!
  *  @brief Applies filter to every item of given enumerator and returns an enumerator with the filter result is YES.
  *  @param enumerator Input object source enumerator.
  *  @param filter Object filter to decide inclues or not.
  *  @return An enumerator with filter result of items of given enumerater is YES.
  */
 FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter);
+
+/*!
+ *  @brief Applies filter with index to every item of given enumerator and returns an enumerator with the filter result is YES.
+ *  @param enumerator Input object source enumerator.
+ *  @param filter Object filter to decide inclues or not.
+ *  @return An enumerator with filter result of items of given enumerater is YES.
+ */
+FOUNDATION_EXTERN NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSAObjectPickerWithIndex filter);
 
 /*!
  *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value. Uses first and second value as seed.
@@ -128,24 +174,56 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAApply
  */
 - (void)applyProcedure:(NSAObjectProcedure)procedure;
+
+/*!
+ *  @brief Apply procedure with index to objects.
+ *  @details Shallow wrapper of @link NSAApply @endlink
+ *  @see NSAApply
+ */
+- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure;
+
 /*!
  *  @brief Maps mapper to objects and returns the result as array.
  *  @details Shallow wrapper of @link NSAMap @endlink
  *  @see NSAMap
  */
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMap @endlink
+ *  @see NSAMap
+ */
+- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
 /*!
  *  @brief Maps mapper to objects and filters nil result and returns the result as array.
  *  @details Shallow wrapper of @link NSAMapFilter @endlink
  *  @see NSAMapFilter
  */
 - (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMapFilter @endlink
+ *  @see NSAMapFilter
+ */
+- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
 /*!
  *  @brief Filters objects and returns result as array.
  *  @details Shallow wrapper of @link NSAFilter @endlink
  *  @see NSAFilter
  */
 - (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects with index and returns result as array.
+ *  @details Shallow wrapper of @link NSAFilter @endlink
+ *  @see NSAFilter
+ */
+- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter;
+
 /*!
  *  @brief Reduces objects and returns the result.
  *  @details Shallow wrapper of @link NSAReduce @endlink
@@ -174,16 +252,36 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAMap
  */
 - (void)map:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Applies mapper with index to every item and replace original item to new one.
+ *  @see NSAMap
+ */
+- (void)mapWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
 /*!
  *  @brief Applies mapper to every item and replace original item to new one or remove if new one is nil.
  *  @see NSAMapFilter
  */
 - (void)mapFilter:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Applies mapper with index to every item and replace original item to new one or remove if new one is nil.
+ *  @see NSAMapFilter
+ */
+- (void)mapFilterWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
 /*!
  *  @brief Applies filter to every item and remove it if result is NO.
  *  @see NSAFilter
  */
 - (void)filter:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Applies filter with index to every item and remove it if result is NO.
+ *  @see NSAFilter
+ */
+- (void)filterWithIndex:(NSAObjectPickerWithIndex)filter;
 
 @end
 

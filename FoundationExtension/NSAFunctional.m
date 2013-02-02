@@ -14,6 +14,14 @@ void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure) {
     }
 }
 
+void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithIndex procedure) {
+    NSUInteger index = 0;
+    for (id item in enumerator) {
+        procedure(item, index);
+        index += 1;
+    }
+}
+
 
 @interface _NSAFunctionalMapEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
@@ -23,6 +31,7 @@ void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure) {
 - (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
 
 @end
+
 
 @implementation _NSAFunctionalMapEnumerator
 
@@ -51,8 +60,52 @@ void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure) {
 
 @end
 
+
 NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
     return [[[_NSAFunctionalMapEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+}
+
+
+@interface _NSAFunctionalMapWithIndexEnumerator : NSEnumerator {
+    NSEnumerator *_enumerator;
+    NSAObjectUnaryOperatorWithIndex _mapper;
+}
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
+
+@end
+
+
+@implementation _NSAFunctionalMapWithIndexEnumerator
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
+    self = [super init];
+    if (self != nil) {
+        self->_mapper = mapper;
+        self->_enumerator = enumerator;
+    }
+    return self;
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
+    if(state->state == 0)
+    {
+        state->mutationsPtr = &state->extra[0];
+    }
+
+    NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:stackbuf count:len];
+    for (NSUInteger i = 0; i < count; i++) {
+        stackbuf[i] = self->_mapper(stackbuf[i], state->state);
+        state->state += 1;
+    }
+    return count;
+}
+
+@end
+
+
+NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper) {
+    return [[[_NSAFunctionalMapWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
 }
 
 
@@ -105,6 +158,55 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
 }
 
 
+@interface _NSAFunctionalMapFilterWithIndexEnumerator : NSEnumerator {
+    NSEnumerator *_enumerator;
+    NSAObjectUnaryOperatorWithIndex _mapper;
+}
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
+
+@end
+
+@implementation _NSAFunctionalMapFilterWithIndexEnumerator
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
+    self = [super init];
+    if (self != nil) {
+        self->_mapper = mapper;
+        self->_enumerator = enumerator;
+    }
+    return self;
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
+    if(state->state == 0)
+    {
+        state->mutationsPtr = &state->extra[0];
+    }
+    state->itemsPtr = stackbuf;
+
+    NSUInteger count = 0;
+    id obj;
+    while((obj = [_enumerator nextObject]) && (count < len))
+    {
+        id res = self->_mapper(obj, state->state);
+        state->state++;
+        if (res == nil) {
+            continue;
+        }
+        stackbuf[count] = res;
+        count++;
+    }
+    return count;
+}
+
+@end
+
+NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper) {
+    return [[[_NSAFunctionalMapFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+}
+
+
 @interface _NSAFunctionalFilterEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
     NSAObjectPicker _filter;
@@ -153,6 +255,55 @@ NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
 }
 
 
+@interface _NSAFunctionalFilterWithIndexEnumerator : NSEnumerator {
+    NSEnumerator *_enumerator;
+    NSAObjectPickerWithIndex _filter;
+}
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter;
+
+@end
+
+@implementation _NSAFunctionalFilterWithIndexEnumerator
+
+- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter {
+    self = [super init];
+    if (self != nil) {
+        self->_filter = filter;
+        self->_enumerator = enumerator;
+    }
+    return self;
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
+    if(state->state == 0)
+    {
+        state->mutationsPtr = &state->extra[0];
+    }
+    state->itemsPtr = stackbuf;
+
+    NSUInteger count = 0;
+    id obj;
+    while((obj = [_enumerator nextObject]) && (count < len))
+    {
+        BOOL result = self->_filter(obj, state->state);
+        state->state++;
+        if (!result) {
+            continue;
+        }
+        stackbuf[count] = obj;
+        count++;
+    }
+    return count;
+}
+
+@end
+
+NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSAObjectPickerWithIndex filter) {
+    return [[[_NSAFunctionalFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator filter:filter] autorelease];
+}
+
+
 id NSAReduce(NSEnumerator *enumerator, NSAObjectBinaryOperator operation) {
     return NSAReduceWithInitialObject(enumerator, operation, [operation nextObject]);
 }
@@ -172,16 +323,32 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSAApply(self, procedure);
 }
 
+- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+    NSAApplyWithIndex(self, procedure);
+}
+
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapWithIndex(self.objectEnumerator, mapper).allObjects;
 }
 
 - (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
 }
 
+- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects;
+}
+
 - (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
     return NSAFilter(self.objectEnumerator, filter).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+    return NSAFilterWithIndex(self.objectEnumerator, filter).allObjects;
 }
 
 - (id)reduce:(NSAObjectBinaryOperator)reduce {
@@ -204,6 +371,13 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     }
 }
 
+- (void)mapWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    NSUInteger count = self.count;
+    for (NSUInteger i = 0; i < count; i++) {
+        [self replaceObjectAtIndex:i withObject:mapper([self objectAtIndex:i], i)];
+    }
+}
+
 - (void)mapFilter:(NSAObjectUnaryOperator)mapper {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
@@ -219,11 +393,39 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     [removes release];
 }
 
+- (void)mapFilterWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
+    NSUInteger count = self.count;
+    for (NSUInteger i = 0; i < count; i++) {
+        id result = mapper([self objectAtIndex:i], i);
+        if (result == nil) {
+            [removes addIndex:i];
+        } else {
+            [self replaceObjectAtIndex:i withObject:result];
+        }
+    }
+    [self removeObjectsAtIndexes:removes];
+    [removes release];
+}
+
 - (void)filter:(NSAObjectPicker)filter {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
         BOOL result = filter([self objectAtIndex:i]);
+        if (!result) {
+            [removes addIndex:i];
+        }
+    }
+    [self removeObjectsAtIndexes:removes];
+    [removes release];
+}
+
+- (void)filterWithIndex:(NSAObjectPickerWithIndex)filter {
+    NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
+    NSUInteger count = self.count;
+    for (NSUInteger i = 0; i < count; i++) {
+        BOOL result = filter([self objectAtIndex:i], i);
         if (!result) {
             [removes addIndex:i];
         }

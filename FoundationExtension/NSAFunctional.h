@@ -53,6 +53,10 @@ typedef void (^NSAObjectProcedure)(id obj);
  */
 typedef void (^NSAObjectProcedureWithIndex)(id obj, NSUInteger index);
 /*!
+ *  @brief Procedure take an object with key. Take an object and execute job.
+ */
+typedef void (^NSAObjectProcedureWithKey)(id obj, id key);
+/*!
  *  @brief Object unary operation block. Take an object and returns an object.
  */
 typedef id (^NSAObjectUnaryOperator)(id obj);
@@ -61,6 +65,10 @@ typedef id (^NSAObjectUnaryOperator)(id obj);
  */
 typedef id (^NSAObjectUnaryOperatorWithIndex)(id obj, NSUInteger index);
 /*!
+ *  @brief Object unary operation block. Take an object with key and returns an object.
+ */
+typedef id (^NSAObjectUnaryOperatorWithKey)(id obj, id key);
+/*!
  *  @brief Object selection block. Take an object and returns a boolean.
  */
 typedef BOOL (^NSAObjectPicker)(id obj);
@@ -68,6 +76,10 @@ typedef BOOL (^NSAObjectPicker)(id obj);
  *  @brief Object selection block. Take an object with index and returns a boolean.
  */
 typedef BOOL (^NSAObjectPickerWithIndex)(id obj, NSUInteger index);
+/*!
+ *  @brief Object selection block. Take an object with key and returns a boolean.
+ */
+typedef BOOL (^NSAObjectPickerWithKey)(id obj, id key);
 /*!
  *  @brief Object binary operation block. Take 2 objects and returns an object.
  */
@@ -191,7 +203,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 /*!
  *  @brief Maps mapper with index to objects and returns the result as array.
- *  @details Shallow wrapper of @link NSAMap @endlink
+ *  @details Shallow wrapper of @link NSAMapWithIndex @endlink
  *  @see NSAMap
  */
 - (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
@@ -205,7 +217,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 /*!
  *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
- *  @details Shallow wrapper of @link NSAMapFilter @endlink
+ *  @details Shallow wrapper of @link NSAMapFilterWithIndex @endlink
  *  @see NSAMapFilter
  */
 - (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
@@ -219,7 +231,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 /*!
  *  @brief Filters objects with index and returns result as array.
- *  @details Shallow wrapper of @link NSAFilter @endlink
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
  *  @see NSAFilter
  */
 - (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter;
@@ -282,6 +294,113 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAFilter
  */
 - (void)filterWithIndex:(NSAObjectPickerWithIndex)filter;
+
+@end
+
+
+/*!
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @details Dictionary is not fit for this functional tools. But this implementation takes concept of them.
+ *  @see NSAFunctional.h
+ *  @see @ref NSMutableDictionary(Functional)
+ */
+@interface NSDictionary (Functional)
+
+/*!
+ *  @brief Apply procedure with key to objects.
+ *  @details Works as like NSAApply is adjusted to values of dictionary.
+ *  @see NSAApply
+ */
+- (void)applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure;
+
+/*!
+ *  @brief Maps mapper to objects and returns the result as dictionary.
+ *  @details Works as like @link NSAMap @endlink
+ *  @see NSAMap
+ */
+- (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with key to objects and returns the result as array.
+ *  @details Works as like @link NSAMapWithIndex @endlink
+ *  @see NSAMap
+ */
+- (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
+
+/*!
+ *  @brief Maps mapper to objects and filters nil result and returns the result as array.
+ *  @details Works as like @link NSAMapFilter @endlink
+ *  @see NSAMapFilter
+ */
+- (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
+ *  @details Works as like @link NSAMapFilterWithIndex @endlink
+ *  @see NSAMapFilter
+ */
+- (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
+
+/*!
+ *  @brief Filters objects and returns result as array.
+ *  @details Works as like @link NSAFilter @endlink
+ *  @see NSAFilter
+ */
+- (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects with key and returns result as array.
+ *  @details Works as like @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter;
+
+@end
+
+
+/*!
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @details Dictionary is not fit for this functional tools. But this implementation takes concept of them.
+ *  @see NSAFunctional.h
+ *  @see @ref NSDictionary(Functional)
+ */
+@interface NSMutableDictionary (Functional)
+
+/*!
+ *  @brief Applies mapper to every item and replace original item to new one.
+ *  @see NSAMap
+ */
+- (void)map:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Applies mapper with key to every item and replace original item to new one.
+ *  @see NSAMap
+ */
+- (void)mapWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
+
+/*!
+ *  @brief Applies mapper to every item and replace original item to new one or remove if new one is nil.
+ *  @see NSAMapFilter
+ */
+- (void)mapFilter:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Applies mapper with key to every item and replace original item to new one or remove if new one is nil.
+ *  @see NSAMapFilter
+ */
+- (void)mapFilterWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
+
+/*!
+ *  @brief Applies filter to every item and remove it if result is NO.
+ *  @see NSAFilter
+ */
+- (void)filter:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Applies filter with key to every item and remove it if result is NO.
+ *  @see NSAFilter
+ */
+- (void)filterWithKey:(NSAObjectPickerWithKey)filter;
 
 @end
 

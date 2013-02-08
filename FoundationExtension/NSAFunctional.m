@@ -435,3 +435,198 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 }
 
 @end
+
+
+@implementation NSDictionary (Functional)
+
+- (void)applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure {
+    for (id key in self.keyEnumerator) {
+        procedure([self objectForKey:key], key);
+    }
+}
+
+- (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        keys[i] = key;
+        objects[i] = mapper([self objectForKey:key]);
+        i += 1;
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:length];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+- (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        keys[i] = key;
+        objects[i] = mapper([self objectForKey:key], key);
+        i += 1;
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:length];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+- (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key]);
+        if (object) {
+            keys[i] = key;
+            objects[i] = object;
+            i += 1;
+        }
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:i];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+- (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key], key);
+        if (object) {
+            keys[i] = key;
+            objects[i] = object;
+            i += 1;
+        }
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:i];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+- (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        id object = [self objectForKey:key];
+        if (filter(object)) {
+            keys[i] = key;
+            objects[i] = object;
+            i += 1;
+        }
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:i];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+- (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+    NSUInteger length = self.count;
+    id *objects = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    NSInteger i = 0;
+    for (id key in self.keyEnumerator) {
+        id object = [self objectForKey:key];
+        if (filter(object, key)) {
+            keys[i] = key;
+            objects[i] = object;
+            i += 1;
+        }
+    }
+    NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:i];
+    free(objects);
+    free(keys);
+    return result;
+}
+
+@end
+
+
+@implementation NSMutableDictionary (Functional)
+
+- (void)map:(NSAObjectUnaryOperator)mapper {
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key]);
+        [self setObject:object forKey:key];
+    }
+}
+
+- (void)mapWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key], key);
+        [self setObject:object forKey:key];
+    }
+}
+
+- (void)mapFilter:(NSAObjectUnaryOperator)mapper {
+    NSMutableArray *candidates = [NSMutableArray array];
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key]);
+        if (object == nil) {
+            [candidates addObject:key];
+        } else {
+            [self setObject:object forKey:key];
+        }
+    }
+    for (id key in candidates) {
+        [self removeObjectForKey:key];
+    }
+}
+
+- (void)mapFilterWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+    NSMutableArray *candidates = [NSMutableArray array];
+    for (id key in self.keyEnumerator) {
+        id object = mapper([self objectForKey:key], key);
+        if (object == nil) {
+            [candidates addObject:key];
+        } else {
+            [self setObject:object forKey:key];
+        }
+    }
+    for (id key in candidates) {
+        [self removeObjectForKey:key];
+    }
+}
+
+- (void)filter:(NSAObjectPicker)filter {
+    NSMutableArray *candidates = [NSMutableArray array];
+    for (id key in self.keyEnumerator) {
+        BOOL filtered = filter([self objectForKey:key]);
+        if (!filtered) {
+            [candidates addObject:key];
+        }
+    }
+    for (id key in candidates) {
+        [self removeObjectForKey:key];
+    }
+}
+
+- (void)filterWithKey:(NSAObjectPickerWithKey)filter {
+    NSMutableArray *candidates = [NSMutableArray array];
+    for (id key in self.keyEnumerator) {
+        BOOL filtered = filter([self objectForKey:key], key);
+        if (!filtered) {
+            [candidates addObject:key];
+        }
+    }
+    for (id key in candidates) {
+        [self removeObjectForKey:key];
+    }
+}
+
+@end
+

@@ -14,7 +14,7 @@
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSATuple: NSObject {
+@interface NSATuple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration> {
     id _first, _second;
 }
 /*!
@@ -61,7 +61,7 @@
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSAMutableTuple: NSATuple
+@interface NSAMutableTuple: NSATuple<NSFastEnumeration>
 
 /*!
  *  @brief first object
@@ -83,7 +83,7 @@
 /*!
  *  @brief Manages ordered collections of 3 objects.
  */
-@interface NSATriple: NSObject {
+@interface NSATriple: NSObject<NSCopying, NSFastEnumeration> {
     id _first, _second, _third;
 }
 /*!

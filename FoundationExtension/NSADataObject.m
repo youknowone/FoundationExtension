@@ -10,6 +10,16 @@
 
 @implementation NSATuple
 
+static Class _tupleClass;
+static Class _mutableTupleClass;
+
++ (void)initialize {
+    if (self == [NSATuple class]) {
+        _tupleClass = [NSATuple class];
+        _mutableTupleClass = [NSAMutableTuple class];
+    }
+}
+
 + (id)tuple {
     return [[[self alloc] init] autorelease];
 }
@@ -51,6 +61,33 @@
     return nil;
 }
 
+#pragma mark NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [self retain];
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    return [[_mutableTupleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second];
+}
+
+#pragma mark NSFastEnumeration
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+    if(state->state != 0) {
+        return 0;
+    }
+
+    dassert(len > 2); // this is always bigger than 3 in common platform.
+
+    state->state = 1;
+    state->mutationsPtr = &state->extra[0];
+
+    buffer[0] = self->_first;
+    buffer[1] = self->_second;
+    return 2;
+}
+
 @end
 
 
@@ -77,10 +114,26 @@
     self->_second = temp;
 }
 
+#pragma mark NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[_tupleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second];
+}
+
 @end
 
 
 @implementation NSATriple
+
+static Class _tripleClass;
+static Class _mutableTripleClass;
+
++ (void)initialize {
+    if (self == [NSATuple class]) {
+        _tripleClass = [NSATuple class];
+        _mutableTripleClass = [NSAMutableTuple class];
+    }
+}
 
 + (id)triple {
     return [[[self alloc] init] autorelease];
@@ -131,6 +184,35 @@
     return nil;
 }
 
+
+#pragma mark NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [self retain];
+}
+
+- (id)mutableCopyWithZone:(NSZone *)zone {
+    return [[_mutableTripleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
+}
+
+#pragma mark NSFastEnumeration
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+    if(state->state != 0) {
+        return 0;
+    }
+
+    state->state = 1;
+    state->mutationsPtr = &state->extra[0];
+
+    dassert(len > 3); // this is always bigger than 3 in common platform.
+
+    buffer[0] = self->_first;
+    buffer[1] = self->_second;
+    buffer[2] = self->_third;
+    return 3;
+}
+
 @end
 
 
@@ -155,6 +237,12 @@
     if (self->_third == third) return;
     [self->_third release];
     self->_third = [third retain];
+}
+
+#pragma mark NSCopying
+
+- (id)copyWithZone:(NSZone *)zone {
+    return [[_tripleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
 }
 
 @end

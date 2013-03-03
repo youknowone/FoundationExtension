@@ -88,7 +88,7 @@
     STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
     [array moveObjectAtIndex:3 toIndex:3];
     STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
-    
+
     array = [NSMutableArray arrayWithObjects:@0, @1, @2, @3, @4, nil];
     STAssertEqualObjects(array, (@[@0, @1, @2, @3, @4]), @"result: %@", array);
     [array moveObjectAtIndex:0 toIndex:3];
@@ -113,7 +113,7 @@
     NSString *encode = [data base64String];
     STAssertEquals(encode.length, solution.length, @"length: %d expected: %d", encode.length, solution.length);
     STAssertTrue([encode isEqualToString:solution], @"result: %@", encode);
-    
+
     NSData *decode = [NSData dataWithBase64String:solution];
     STAssertEquals(decode.length, data.length, @"length: %d expected: %d", decode.length, data.length);
     STAssertTrue([decode isEqualToData:data], @"result: %@ expected: %@", [NSString stringWithUTF8Data:decode], [NSString stringWithUTF8Data:data]);
@@ -132,12 +132,12 @@
     NSAMutableTuple *tuple = [NSAMutableTuple tupleWithFirst:@1 second:@2];
     STAssertEquals((int)[tuple.first integerValue], 1, @"");
     STAssertEquals((int)[tuple.second integerValue], 2, @"");
-    
+
     tuple.first = @3;
     tuple.second = @4;
     STAssertEquals((int)[tuple.first integerValue], 3, @"");
     STAssertEquals((int)[tuple.second integerValue], 4, @"");
-    
+
     [tuple swap];
     STAssertEquals((int)[tuple.first integerValue], 4, @"");
     STAssertEquals((int)[tuple.second integerValue], 3, @"");
@@ -149,7 +149,7 @@
     STAssertEquals((int)[obj.first integerValue], 1, @"");
     STAssertEquals((int)[obj.second integerValue], 2, @"");
     STAssertEquals((int)[obj.third integerValue], 3, @"");
-    
+
     obj.first = @4;
     obj.second = @5;
     obj.third = @6;
@@ -167,25 +167,25 @@
             idx += 1;
         }
         STAssertEquals((int)idx, 4, @"");
-        
+
         idx = 0;
         for (id i in NSAFilter(a.objectEnumerator, ^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); })) {
             idx += 1;
             STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
         }
         STAssertEquals((int)idx, 2, @"");
-        
+
         idx = 0;
         for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; })) {
             idx += 1;
             STAssertEquals([i integerValue] / 2, idx / 2, @"");
         }
         STAssertEquals((int)idx, 2, @"");
-        
+
         NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return [NSNumber numberWithInteger:[obj1 integerValue] + [obj2 integerValue]]; }, @0);
         STAssertEqualObjects(res, @10, @"");
     }
-    
+
     {
         NSMutableArray *a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         NSInteger idx = 0;
@@ -195,7 +195,7 @@
             idx += 1;
         }
         STAssertEquals((int)idx, 4, @"");
-        
+
         a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         idx = 0;
         [a filter:^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); }];
@@ -204,7 +204,7 @@
             STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
         }
         STAssertEquals((int)idx, 2, @"");
-        
+
         a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         idx = 0;
         [a mapFilter:^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; }];

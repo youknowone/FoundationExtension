@@ -12,7 +12,7 @@
  *
  *  FoundationExtension adds small functional programming tools, called Map, Filter and Reduce.
  *  These are useful when used with array.
- *  
+ *
  *  In short:
  *  - Map applies a function to all items.
  *  - Filter filters some items by a function.

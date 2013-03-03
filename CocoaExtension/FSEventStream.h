@@ -43,7 +43,7 @@
     NSUInteger _managedRetainCount;
 }
 
-//! @brief Delegate object for event stream. 
+//! @brief Delegate object for event stream.
 @property(nonatomic, assign) id<FSEventStreamDelegate> delegate;
 //! @brief Latest event id of event stream.
 @property(nonatomic, readonly) FSEventStreamEventId latestEventId;
@@ -69,7 +69,7 @@
  *  @brief Returns a created and scheduled event stream with given path, latency, create flags and delegate.
  *  @see initWithPaths:latency:flags:delegate:
  *  @see scheduledEventStreamWithPaths:latency:flags:delegate:
- *  @see scheduleWithRunLoop:mode: 
+ *  @see scheduleWithRunLoop:mode:
  */
 + (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
 /*!

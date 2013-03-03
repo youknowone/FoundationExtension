@@ -20,7 +20,7 @@
 - (void)tearDown
 {
     [tmpURL release];
-    
+
     [super tearDown];
 }
 
@@ -44,7 +44,7 @@
     NSAttributedStringAttributeDictionary *dict = [NSAttributedStringAttributeDictionary dictionary];
     // defaults
     STAssertEquals(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
-    
+
     #define TEST_ITEM(PROP, VALUE) \
         dict.PROP = VALUE;  \
         STAssertEqualObjects(dict.PROP, VALUE, @""); \
@@ -91,7 +91,7 @@
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
     TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSVerticalGlyphFormHorizontal]);
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
-    
+
     #undef TEST_ITEM
     #undef TEST_ITEM_VALUE
 }

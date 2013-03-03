@@ -83,7 +83,7 @@ enum {
 #if MAC_OS_X_VERSION_10_6 <= MAC_OS_X_VERSION_MAX_ALLOWED || __IPHONE_2_0 <=  __IPHONE_OS_VERSION_MAX_ALLOWED
     NSUTF7StringEncoding                    = 0x84000100,  /* kTextEncodingUnicodeDefault + kUnicodeUTF7Format RFC2152 */
     NSUTF7IMAPStringEncoding                = 0x80000A10,  /* UTF-7 (IMAP folder variant) RFC3501 */
-#endif  
+#endif
 
     /* ISO 8-bit and 7-bit encodings begin at 0x200 */
     //  NSISOLatin1StringEncoding           = 0x80000201,  /* ISO 8859-1, defined as 5 */

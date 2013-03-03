@@ -33,7 +33,7 @@
     } else {
         UITMasterViewController *masterViewController = [[[UITMasterViewController alloc] initWithNibName:@"UITMasterViewController_iPad" bundle:nil] autorelease];
         UINavigationController *masterNavigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
-        
+
         UITDetailViewController *detailViewController = [[[UITDetailViewController alloc] initWithNibName:@"UITDetailViewController_iPad" bundle:nil] autorelease];
         UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
     	
@@ -42,7 +42,7 @@
         self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
         self.splitViewController.delegate = detailViewController;
         self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
-        
+
         self.window.rootViewController = self.splitViewController;
     }
     [self.window makeKeyAndVisible];
@@ -57,7 +57,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 

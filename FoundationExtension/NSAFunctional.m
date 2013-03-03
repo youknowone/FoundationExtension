@@ -50,7 +50,7 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
         state->state = 1;
         state->mutationsPtr = &state->extra[0];
     }
-    
+
     NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:stackbuf count:len];
     for (NSUInteger i = 0; i < count; i++) {
         stackbuf[i] = self->_mapper(stackbuf[i]);
@@ -136,7 +136,7 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
         state->mutationsPtr = &state->extra[0];
     }
     state->itemsPtr = stackbuf;
-    
+
     NSUInteger count = 0;
     id obj;
     while((obj = [_enumerator nextObject]) && (count < len))
@@ -234,7 +234,7 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
         state->mutationsPtr = &state->extra[0];
     }
     state->itemsPtr = stackbuf;
-    
+
     NSUInteger count = 0;
     id obj;
     while((obj = [_enumerator nextObject]) && (count < len))

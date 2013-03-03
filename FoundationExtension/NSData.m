@@ -27,10 +27,10 @@ const char NSDataHexadecimalEncodingTable[16] = "0123456789abcdef";
     NSUInteger length = self.length;
     unsigned char *inpos = (unsigned char *)self.bytes;
     const unsigned char *inendian = self.bytes + length;
-    
+
     char *buffer = malloc(length * 2);
     char *outpos = buffer;
-    
+
     for ( ; inpos < inendian; inpos += 1, outpos += 2) {
         *(outpos + 0) = NSDataHexadecimalEncodingTable[*inpos >> 4];
         *(outpos + 1) = NSDataHexadecimalEncodingTable[*inpos & 0x0f];
@@ -55,7 +55,7 @@ static const char NSDataHexadecimalDecodingTable[0x80] =
     const unsigned char *bytes = hexData.bytes;
     NSUInteger length = hexData.length;
     const unsigned char *endian = bytes + length;
-    
+
     unsigned char *buffer = (unsigned char *)malloc(length / 2);
     unsigned char *pointer = buffer;
 
@@ -89,18 +89,18 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
     NSUInteger outlen = 4 * ((roughlen / 4) + ((roughlen % 4) != 0));
     char *outbuf = malloc(outlen + 1);
     outbuf[outlen] = 0;
-    
+
     unsigned char *inpos = (unsigned char *)self.bytes;
     const unsigned char *inendian = inpos + inlen;
-    
+
     char *outpos = outbuf;
-    
+
     while (inendian - inpos >= 3) {
         NSDataBase64EncodeData(inpos, outpos);
         inpos += 3;
         outpos += 4;
     }
-    
+
     NSInteger taillen = inendian - inpos;
     dassert(taillen >= 0);
     if (taillen) {
@@ -115,7 +115,7 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
         outpos[3] = '=';
         dassert(outpos + 4 == outbuf + outlen);
     }
-    
+
     return [[[NSString alloc] initWithBytesNoCopy:outbuf length:outlen encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
 }
 
@@ -169,18 +169,18 @@ static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
         default:
             dassert(0);
     }
-    
+
     const char *inendian = inpos + inlen;
-    
+
     unsigned char *buffer = malloc(datalen);
     unsigned char *outpos = buffer;
-    
+
     while (inendian - inpos >= 4) {
         NSDataBase64DecodeData(inpos, outpos);
         inpos += 4;
         outpos += 3;
     }
-    
+
     NSInteger taillen = inendian - inpos;
     dassert(taillen > 0);
     if (taillen) {
@@ -192,7 +192,7 @@ static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
             outpos[1] = (unsigned char)(tmp2 << 4) + (tmp1 >> 2);
         }
     }
-    
+
     return [self initWithBytesNoCopy:buffer length:datalen freeWhenDone:YES];
 }
 

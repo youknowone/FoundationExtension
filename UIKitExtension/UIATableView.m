@@ -106,7 +106,7 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
 - (void)menuWillShow:(NSNotification *)notification
 {
     self.selectionStyle = self->_copyableFlags.hasDelegateSelectionStyle ? [self.delegate selectionStyleForCell:self] : UITableViewCellSelectionStyleBlue;
-    
+
     if (self->_copyableFlags.hasDelegateWillShowMenu) {
         [self.delegate cellWillShowMenu:self];
     }

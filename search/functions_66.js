@@ -2,7 +2,9 @@ var searchData=
 [
   ['fileurl',['fileURL',['../categoryNSString_07NSURL_08.html#a85510986ee18efa4b8a40eda60cb2d94',1,'NSString(NSURL)']]],
   ['fileurlwithformat_3a',['fileURLWithFormat:',['../categoryNSURL_07Creations_08.html#ae7e92fa29e162435385d32465123d620',1,'NSURL(Creations)']]],
-  ['filter_3a',['filter:',['../categoryNSMutableArray_07Functional_08.html#a671e6b020c85da68b65f91e26c15949c',1,'NSMutableArray(Functional)']]],
+  ['filter_3a',['filter:',['../categoryNSMutableArray_07Functional_08.html#a671e6b020c85da68b65f91e26c15949c',1,'NSMutableArray(Functional)::filter:()'],['../categoryNSMutableDictionary_07Functional_08.html#ae0ad25e9477312317c195dc391752416',1,'NSMutableDictionary(Functional)::filter:()']]],
+  ['filterwithindex_3a',['filterWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a9147180a536f05064e99c5355ac74d98',1,'NSMutableArray(Functional)']]],
+  ['filterwithkey_3a',['filterWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#a825ea9bf6b6c0aee237ba7902bc48ba1',1,'NSMutableDictionary(Functional)']]],
   ['flushasync',['flushAsync',['../interfaceFSEventStream.html#a92da08a35b794e29e479c6d9b1476e38',1,'FSEventStream']]],
   ['flushsync',['flushSync',['../interfaceFSEventStream.html#a155eb08448202e68e0a7b5e5e5efe7aa',1,'FSEventStream']]],
   ['format0_3a',['format0:',['../categoryNSString_07Shortcuts_08.html#a85e6363d2b64170af9994a219edc4b0d',1,'NSString(Shortcuts)']]],

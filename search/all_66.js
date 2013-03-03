@@ -2,7 +2,9 @@ var searchData=
 [
   ['fileurl',['fileURL',['../categoryNSString_07NSURL_08.html#a85510986ee18efa4b8a40eda60cb2d94',1,'NSString(NSURL)']]],
   ['fileurlwithformat_3a',['fileURLWithFormat:',['../categoryNSURL_07Creations_08.html#ae7e92fa29e162435385d32465123d620',1,'NSURL(Creations)']]],
-  ['filter_3a',['filter:',['../categoryNSMutableArray_07Functional_08.html#a671e6b020c85da68b65f91e26c15949c',1,'NSMutableArray(Functional)']]],
+  ['filter_3a',['filter:',['../categoryNSMutableArray_07Functional_08.html#a671e6b020c85da68b65f91e26c15949c',1,'NSMutableArray(Functional)::filter:()'],['../categoryNSMutableDictionary_07Functional_08.html#ae0ad25e9477312317c195dc391752416',1,'NSMutableDictionary(Functional)::filter:()']]],
+  ['filterwithindex_3a',['filterWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a9147180a536f05064e99c5355ac74d98',1,'NSMutableArray(Functional)']]],
+  ['filterwithkey_3a',['filterWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#a825ea9bf6b6c0aee237ba7902bc48ba1',1,'NSMutableDictionary(Functional)']]],
   ['first',['first',['../interfaceNSATuple.html#af53b89f629a1ba13551b515668a3bede',1,'NSATuple::first()'],['../interfaceNSAMutableTuple.html#a4d94bff9a09d669fe0e2e3376043e6aa',1,'NSAMutableTuple::first()'],['../interfaceNSATriple.html#ab519a532a2bcd5fac34fa297a7d09164',1,'NSATriple::first()'],['../interfaceNSAMutableTriple.html#a4e1270cab9b096a38d328ba2c1cf3bab',1,'NSAMutableTriple::first()']]],
   ['flushasync',['flushAsync',['../interfaceFSEventStream.html#a92da08a35b794e29e479c6d9b1476e38',1,'FSEventStream']]],
   ['flushsync',['flushSync',['../interfaceFSEventStream.html#a155eb08448202e68e0a7b5e5e5efe7aa',1,'FSEventStream']]],

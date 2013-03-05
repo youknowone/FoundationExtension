@@ -22,4 +22,9 @@ typedef enum {
 //! @deprecated deprecated by implementation deprecation
 + (NSString *)uniqueIdentifier __deprecated;
 
+/*
+ *  @brief Get UUID for vendor for later than iOS6 or device identifier.
+ */
+- (NSString *)uniqueToken;
+
 @end

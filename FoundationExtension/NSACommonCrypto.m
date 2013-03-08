@@ -12,7 +12,7 @@
 
 @implementation NSData (CommonCryptor)
 
-CCOptions NSDataCommonCryptoCryptDefaultOptions = kCCOptionPKCS7Padding|kCCOptionECBMode;
+CCOptions NSDataCommonCryptoCryptDefaultOptions = kCCOptionPKCS7Padding;
 
 static NSData *NSDataCommonCryptoCrypt(CCOperation operation, NSData *data, NSData *key, CCAlgorithm algorithm, CCOptions options, size_t keyLength, size_t blockSize) {
     unsigned char keyBytes[keyLength];

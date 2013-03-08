@@ -21,7 +21,7 @@
 
 /*!
  * 	@name Encryption Shortcut
- * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding + kCCOptionECBMode
+ * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding
  */
 - (NSData *)encryptedAES128DataWithKey:(NSData *)key;
 - (NSData *)encryptedAES256DataWithKey:(NSData *)key;
@@ -41,7 +41,7 @@
 
 /*!
  *	@name Decryption Shortcut
- * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding + kCCOptionECBMode
+ * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding
  */
 
 - (NSData *)decryptedAES128DataWithKey:(NSData *)key;

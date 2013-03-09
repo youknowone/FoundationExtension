@@ -17,7 +17,8 @@ typedef enum {
 
 @interface UIDevice (Shortcuts)
 
-+ (UIADeviceType)currentDeviceType;
+//! @deprecated Use -userInterfaceIdiom
++ (UIADeviceType)currentDeviceType __deprecated;
 
 //! @deprecated deprecated by implementation deprecation
 + (NSString *)uniqueIdentifier __deprecated;

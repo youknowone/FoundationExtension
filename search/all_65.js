@@ -7,7 +7,6 @@ var searchData=
   ['encryptedaes192datawithkey_3aoptions_3a',['encryptedAES192DataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#afe3d97ed53de505c85e5fe6367352b8e',1,'NSData(CommonCryptor)']]],
   ['encryptedaes256datawithkey_3a',['encryptedAES256DataWithKey:',['../categoryNSData_07CommonCryptor_08.html#a115b0a764d3f5ce9745a10fc4552a191',1,'NSData(CommonCryptor)::encryptedAES256DataWithKey:()'],['../categoryNSString_07CommonCryptorString_08.html#af0ce12002716da94afaf99c849533475',1,'NSString(CommonCryptorString)::encryptedAES256DataWithKey:()']]],
   ['encryptedaes256datawithkey_3aoptions_3a',['encryptedAES256DataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#ab2e24e89c5741fab0f4347eb627036c5',1,'NSData(CommonCryptor)']]],
-  ['encryptedblowfishdatawithkey_3aoptions_3a',['encryptedBlowfishDataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#a48531f376df3433d17ee45edb066e9ae',1,'NSData(CommonCryptor)']]],
   ['encryptedcastdatawithkey_3aoptions_3a',['encryptedCastDataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#ab1ad077598fe76348e68939e28c6f5ad',1,'NSData(CommonCryptor)']]],
   ['encrypteddesdatawithkey_3aoptions_3a',['encryptedDESDataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#a4a112c293cb09eb4514226fce622864a',1,'NSData(CommonCryptor)']]],
   ['encryptedrc2datawithkey_3aoptions_3a',['encryptedRC2DataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#a12ae6d8ecf7fb3bd0a7312888fb9ebb5',1,'NSData(CommonCryptor)']]],

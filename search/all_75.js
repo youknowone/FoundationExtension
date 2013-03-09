@@ -38,6 +38,7 @@ var searchData=
   ['underlinecolor',['underlineColor',['../interfaceNSAttributedStringAttributeDictionary.html#a4a8be03c90ba802b9e49004e6a2d3167',1,'NSAttributedStringAttributeDictionary']]],
   ['underlinestyle',['underlineStyle',['../interfaceNSAttributedStringAttributeDictionary.html#a9f924839f19dd1f892151cac132847d3',1,'NSAttributedStringAttributeDictionary']]],
   ['underlinestylenumber',['underlineStyleNumber',['../interfaceNSAttributedStringAttributeDictionary.html#a1c761901c43ff5e9ba1fc280b615eace',1,'NSAttributedStringAttributeDictionary']]],
+  ['uniquetoken',['uniqueToken',['../categoryUIDevice_07Shortcuts_08.html#a6bc86835c4cca077f73eae5c14663cba',1,'UIDevice(Shortcuts)']]],
   ['unschedulefromrunloop_3amode_3a',['unscheduleFromRunLoop:mode:',['../interfaceFSEventStream.html#a6bceb8706017180552ddab5829cc78ea',1,'FSEventStream']]],
   ['url',['URL',['../categoryNSURLRequest_07Properties_08.html#a8f49bdb6438390eb059f08e7cd8ef7ad',1,'NSURLRequest(Properties)::URL()'],['../categoryNSMutableURLRequest_07Properties_08.html#a8e20dda544941671bc6e9e92698246de',1,'NSMutableURLRequest(Properties)::URL()'],['../categoryNSString_07NSURL_08.html#afe8cfb6b0967d2c1af9afae69c346a8d',1,'NSString(NSURL)::URL()']]],
   ['urlprotocol',['URLProtocol',['../categoryNSString_07NSURL_08.html#ae4df6b961f8a694c86ceede6b5daa69b',1,'NSString(NSURL)']]],

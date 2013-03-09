@@ -18,6 +18,5 @@ var searchData=
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],
   ['configurationurl',['configurationURL',['../categoryNSString_07NSURL_08.html#a2dbf914ae019ef54413dc9bec7472cd0',1,'NSString(NSURL)']]],
   ['configurationurlwithpath_3a',['configurationURLWithPath:',['../categoryNSURL_07Creations_08.html#a74194a6f81796361a1beff0e776fc7a7',1,'NSURL(Creations)']]],
-  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]],
-  ['currentdevicetype',['currentDeviceType',['../categoryUIDevice_07Shortcuts_08.html#a12f49df222d6430dad964220e2e167e5',1,'UIDevice(Shortcuts)']]]
+  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]]
 ];

@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Encryption Shortcut</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These shortcuts use default option as kCCOptionPKCS7Padding + kCCOptionECBMode </p>
+<tr><td colspan="2"><div class="groupText"><p>These shortcuts use default option as kCCOptionPKCS7Padding </p>
 </div></td></tr>
 <tr class="memitem:a17e5cecf900f7dcc1b57cdbfe9d7bd09"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a17e5cecf900f7dcc1b57cdbfe9d7bd09">encryptedAES128DataWithKey:</a></td></tr>
 <tr class="memitem:a115b0a764d3f5ce9745a10fc4552a191"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a115b0a764d3f5ce9745a10fc4552a191">encryptedAES256DataWithKey:</a></td></tr>
@@ -111,9 +111,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1ad077598fe76348e68939e28c6f5ad"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#ab1ad077598fe76348e68939e28c6f5ad">encryptedCastDataWithKey:options:</a></td></tr>
 <tr class="memitem:a12ae6d8ecf7fb3bd0a7312888fb9ebb5"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a12ae6d8ecf7fb3bd0a7312888fb9ebb5">encryptedRC2DataWithKey:options:</a></td></tr>
 <tr class="memitem:aebfbc61542650636b905272935ce58d7"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#aebfbc61542650636b905272935ce58d7">encryptedRC4DataWithKey:options:</a></td></tr>
-<tr class="memitem:a48531f376df3433d17ee45edb066e9ae"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a48531f376df3433d17ee45edb066e9ae">encryptedBlowfishDataWithKey:options:</a></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Decryption Shortcut</div></td></tr>
-<tr><td colspan="2"><div class="groupText"><p>These shortcuts use default option as kCCOptionPKCS7Padding + kCCOptionECBMode </p>
+<tr><td colspan="2"><div class="groupText"><p>These shortcuts use default option as kCCOptionPKCS7Padding </p>
 </div></td></tr>
 <tr class="memitem:a671d572739b62ea08cfbe432f9d39518"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a671d572739b62ea08cfbe432f9d39518">decryptedAES128DataWithKey:</a></td></tr>
 <tr class="memitem:a9a9a7a7f4e5664164a8ddfd795d6b023"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a9a9a7a7f4e5664164a8ddfd795d6b023">decryptedAES256DataWithKey:</a></td></tr>
@@ -126,7 +125,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6422a918e21f764ef2e13a2430ec0c5a"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a6422a918e21f764ef2e13a2430ec0c5a">decrypted3DESDataWithKey:options:</a></td></tr>
 <tr class="memitem:ad91fac7480f59eb07b7aa36a5c9b7663"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#ad91fac7480f59eb07b7aa36a5c9b7663">decryptedCastDataWithKey:options:</a></td></tr>
 <tr class="memitem:a267ef3c1887cc898b8f948ebd991d3ea"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a267ef3c1887cc898b8f948ebd991d3ea">decryptedRC2DataWithKey:options:</a></td></tr>
-<tr class="memitem:a7f04ed3cc0d7d61a8fd58658a0143e78"><td class="memItemLeft" align="right" valign="top">(NSData *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSData_07CommonCryptor_08.html#a7f04ed3cc0d7d61a8fd58658a0143e78">decryptedBlowfishDataWithKey:options:</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>CommonCryptor wrapper.  If key is shorter than required length, methods return nil. If key is longer than requried length, it is cut as required length. </p>
@@ -263,32 +261,6 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">- (NSData *) <a class="el" href="categoryNSData_07CommonCryptor_08.html#a9a9a7a7f4e5664164a8ddfd795d6b023">decryptedAES256DataWithKey:</a> </td>
-          <td></td>
-          <td class="paramtype">(NSData *)&#160;</td>
-          <td class="paramname"><em>key</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">options:</td>
-          <td></td>
-          <td class="paramtype">(CCOptions)&#160;</td>
-          <td class="paramname"><em>options</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7f04ed3cc0d7d61a8fd58658a0143e78"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSData *) decryptedBlowfishDataWithKey: </td>
           <td></td>
           <td class="paramtype">(NSData *)&#160;</td>
           <td class="paramname"><em>key</em></td>
@@ -519,32 +491,6 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">- (NSData *) <a class="el" href="categoryNSData_07CommonCryptor_08.html#a115b0a764d3f5ce9745a10fc4552a191">encryptedAES256DataWithKey:</a> </td>
-          <td></td>
-          <td class="paramtype">(NSData *)&#160;</td>
-          <td class="paramname"><em>key</em></td>
-        </tr>
-        <tr>
-          <td class="paramkey">options:</td>
-          <td></td>
-          <td class="paramtype">(CCOptions)&#160;</td>
-          <td class="paramname"><em>options</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a48531f376df3433d17ee45edb066e9ae"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSData *) encryptedBlowfishDataWithKey: </td>
           <td></td>
           <td class="paramtype">(NSData *)&#160;</td>
           <td class="paramname"><em>key</em></td>

@@ -42,6 +42,7 @@
 #import <FoundationExtension/NSDate.h>
 #import <FoundationExtension/NSDictionary.h>
 #import <FoundationExtension/NSJSONSerialization.h>
+#import <FoundationExtension/NSNumber.h>
 #import <FoundationExtension/NSNumberFormatter.h>
 #import <FoundationExtension/NSPathUtilities.h>
 #import <FoundationExtension/NSString.h>

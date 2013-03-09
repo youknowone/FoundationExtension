@@ -103,6 +103,11 @@
 		3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
 		3877F44C16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
 		3877F44D16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
+		387B1EB516EBD0F50059722B /* NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 387B1EB316EBD0F50059722B /* NSNumber.h */; };
+		387B1EB616EBD0F50059722B /* NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 387B1EB316EBD0F50059722B /* NSNumber.h */; };
+		387B1EB716EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
+		387B1EB816EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
+		387B1EB916EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
 		38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
 		38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
@@ -350,6 +355,8 @@
 		38730451133732DE004C8E89 /* UIKitExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitExtensionTests.m; sourceTree = "<group>"; };
 		3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSACommonCrypto.h; sourceTree = "<group>"; };
 		3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSACommonCrypto.m; sourceTree = "<group>"; };
+		387B1EB316EBD0F50059722B /* NSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumber.h; sourceTree = "<group>"; };
+		387B1EB416EBD0F50059722B /* NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumber.m; sourceTree = "<group>"; };
 		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
 		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
 		38B0C73C1641382D0044C73C /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
@@ -623,6 +630,8 @@
 				38660A57161AD9AE00C5CE06 /* NSDictionary.m */,
 				38505C921645837A0059773B /* NSJSONSerialization.h */,
 				38505C931645837C0059773B /* NSJSONSerialization.m */,
+				387B1EB316EBD0F50059722B /* NSNumber.h */,
+				387B1EB416EBD0F50059722B /* NSNumber.m */,
 				38660A58161AD9AE00C5CE06 /* NSNumberFormatter.h */,
 				38660A59161AD9AE00C5CE06 /* NSNumberFormatter.m */,
 				3868F7AE162D57EB00C31163 /* NSObject.h */,
@@ -845,6 +854,7 @@
 				38505CBC164647910059773B /* NSAOrderedDictionary.h in Headers */,
 				38FCECDD16590A1100D3D0F0 /* NSTextView.h in Headers */,
 				3877F44A16A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
+				387B1EB616EBD0F50059722B /* NSNumber.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +889,7 @@
 				38505C941645837E0059773B /* NSJSONSerialization.h in Headers */,
 				38505CBB164647910059773B /* NSAOrderedDictionary.h in Headers */,
 				3877F44916A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
+				387B1EB516EBD0F50059722B /* NSNumber.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1203,6 +1214,7 @@
 				38505CBE164647910059773B /* NSAOrderedDictionary.m in Sources */,
 				38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */,
 				3877F44C16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
+				387B1EB816EBD0F50059722B /* NSNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,6 +1266,7 @@
 				38505C961645837E0059773B /* NSJSONSerialization.m in Sources */,
 				38505CBD164647910059773B /* NSAOrderedDictionary.m in Sources */,
 				3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
+				387B1EB716EBD0F50059722B /* NSNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1307,6 +1320,7 @@
 				38E48D93167FB28700BD4F6D /* UIATableView.m in Sources */,
 				3877F44D16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				38EF66AF16AEEB8100781497 /* UITableView.m in Sources */,
+				387B1EB916EBD0F50059722B /* NSNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

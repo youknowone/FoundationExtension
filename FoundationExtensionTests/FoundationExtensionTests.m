@@ -239,4 +239,11 @@
     }
 }
 
+- (void)testNumber {
+    STAssertEqualObjects([@0 description], [@0 typeFormedDescription], @"");
+    STAssertEqualObjects([[@1.0 description] stringByAppendingString:@".0"], [@1.0 typeFormedDescription], @"");
+    NSNumber *b = [NSNumber numberWithBool:YES];
+    STAssertEqualObjects(@"YES", [b typeFormedDescription], @"");
+}
+
 @end

@@ -6,8 +6,10 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <CommonCrypto/CommonCryptor.h>
 #import "NSString.h"
+
+#import <CommonCrypto/CommonCryptor.h>
+#define CCOptions CCOptions
 #import "NSACommonCrypto.h"
 
 @implementation NSData (CommonCryptor)

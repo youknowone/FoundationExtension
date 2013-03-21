@@ -11,6 +11,10 @@
  *  @brief Extension categories using CommonCrypto/CommonCryptor
  */
 
+#ifndef CCOptions
+    #define CCOptions uint32_t
+#endif
+
 /*!
  *	@brief CommonCryptor wrapper.
  *  @detail

@@ -60,3 +60,4 @@
 #import <FoundationExtension/NSACommonDigest.h>
 #import <FoundationExtension/NSAFunctional.h>
 #import <FoundationExtension/NSAOrderedDictionary.h>
+#import <FoundationExtension/NSACommonCrypto.h>

@@ -33,6 +33,10 @@
  */
 @property(nonatomic, readonly) Class class;
 
+#else
+
+- (Class)class;
+
 #endif
 
 /*!

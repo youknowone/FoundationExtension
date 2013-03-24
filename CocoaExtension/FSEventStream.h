@@ -53,7 +53,7 @@
  *  @param paths Array of NSString, each specifying a path to a directory, signifying the root of a filesystem hierarchy to be watched for modifications.
  *  @param latency The number of seconds the service should wait after hearing about an event from the kernel before passing it along to the client via its callback. Specifying a larger value may result in more effective temporal coalescing, resulting in fewer callbacks and greater overall efficiency.
  *  @param flags Flags that modify the behavior of the stream being created. See [FSEventStreamCreateFlags][0].
- *  @param The delegate object for the connection. The delegate will receive delegate messages as the file system event. Messages to the delegate will be sent on the thread that calls this method. By default, for the connection to work correctly, the calling thread’s run loop must be operating in the default run loop mode.
+ *  @param delegate The delegate object for the connection. The delegate will receive delegate messages as the file system event. Messages to the delegate will be sent on the thread that calls this method. By default, for the connection to work correctly, the calling thread’s run loop must be operating in the default run loop mode.
  *  @see [FSEventStreamCreate][1]
  *      [0]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamCreateFlags
  *      [1]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamCreate
@@ -112,7 +112,7 @@
  *
  *  To remove the stream from the run loops upon which it has been scheduled, call @link unscheduleFromRunLoop:mode: @endlink or @link invalidate @endlink.
  *  @param runLoop The run loop on which to schedule the stream.
- *  @param runLoopMode A run loop mode on which to schedule the stream.
+ *  @param mode A run loop mode on which to schedule the stream.
  *  @see [FSEventStreamScheduleWithRunLoop][0]
  *      [0]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamScheduleWithRunLoop
  */

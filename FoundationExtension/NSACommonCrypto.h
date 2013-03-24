@@ -17,7 +17,7 @@
 
 /*!
  *	@brief CommonCryptor wrapper.
- *  @detail
+ *  @details
  *		If key is shorter than required length, methods return nil.
  *		If key is longer than requried length, it is cut as required length.
  */
@@ -25,7 +25,7 @@
 
 /*!
  * 	@name Encryption Shortcut
- * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding
+ * 	@details These shortcuts use default option as kCCOptionPKCS7Padding
  */
 - (NSData *)encryptedAES128DataWithKey:(NSData *)key;
 - (NSData *)encryptedAES256DataWithKey:(NSData *)key;
@@ -47,7 +47,7 @@
 
 /*!
  *	@name Decryption Shortcut
- * 	@detail These shortcuts use default option as kCCOptionPKCS7Padding
+ * 	@details These shortcuts use default option as kCCOptionPKCS7Padding
  */
 
 - (NSData *)decryptedAES128DataWithKey:(NSData *)key;

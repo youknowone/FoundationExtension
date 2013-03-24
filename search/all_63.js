@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cachepolicy',['cachePolicy',['../categoryNSURLRequest_07Properties_08.html#a4cdfbb38f6776ab087c88138b29527ce',1,'NSURLRequest(Properties)::cachePolicy()'],['../categoryNSMutableURLRequest_07Properties_08.html#a8db71a71fc8e9cf00a6f17fd97e157c5',1,'NSMutableURLRequest(Properties)::cachePolicy()']]],
+  ['ccoptions',['CCOptions',['../NSACommonCrypto_8h.html#a305495ba3e4d391cf494435a32aaa9d1',1,'NSACommonCrypto.h']]],
   ['cellwillhidemenu_3a',['cellWillHideMenu:',['../protocolUIATableViewCellCopyableDelegate-p.html#a3320a76f9c423fcd116a66becaca6b68',1,'UIATableViewCellCopyableDelegate-p']]],
   ['cellwillshowmenu_3a',['cellWillShowMenu:',['../protocolUIATableViewCellCopyableDelegate-p.html#a4b491dbbc5d0a92b969480077126dd63',1,'UIATableViewCellCopyableDelegate-p']]],
   ['cellwithstyle_3areuseidentifier_3a',['cellWithStyle:reuseIdentifier:',['../categoryUITableViewCell_07Shortcuts_08.html#ad67ce8d27e66525bebfc55fb33d893b3',1,'UITableViewCell(Shortcuts)']]],

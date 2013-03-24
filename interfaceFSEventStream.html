@@ -225,7 +225,7 @@ Properties</h2></td></tr>
     <tr><td class="paramname">paths</td><td>Array of NSString, each specifying a path to a directory, signifying the root of a filesystem hierarchy to be watched for modifications. </td></tr>
     <tr><td class="paramname">latency</td><td>The number of seconds the service should wait after hearing about an event from the kernel before passing it along to the client via its callback. Specifying a larger value may result in more effective temporal coalescing, resulting in fewer callbacks and greater overall efficiency. </td></tr>
     <tr><td class="paramname">flags</td><td>Flags that modify the behavior of the stream being created. See <a href="https://developer.apple.com/library/mac/documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamCreateFlags">FSEventStreamCreateFlags</a>. </td></tr>
-    <tr><td class="paramname">The</td><td>delegate object for the connection. The delegate will receive delegate messages as the file system event. Messages to the delegate will be sent on the thread that calls this method. By default, for the connection to work correctly, the calling thread’s run loop must be operating in the default run loop mode. </td></tr>
+    <tr><td class="paramname">delegate</td><td>The delegate object for the connection. The delegate will receive delegate messages as the file system event. Messages to the delegate will be sent on the thread that calls this method. By default, for the connection to work correctly, the calling thread’s run loop must be operating in the default run loop mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -372,7 +372,7 @@ Properties</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">runLoop</td><td>The run loop on which to schedule the stream. </td></tr>
-    <tr><td class="paramname">runLoopMode</td><td>A run loop mode on which to schedule the stream. </td></tr>
+    <tr><td class="paramname">mode</td><td>A run loop mode on which to schedule the stream. </td></tr>
   </table>
   </dd>
 </dl>

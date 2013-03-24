@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['macaddress',['MACAddress',['../categoryUIDevice_07Shortcuts_08.html#ab74d7f5cdc760ed9612f92fceae95db9',1,'UIDevice(Shortcuts)']]],
+  ['macaddressdata',['MACAddressData',['../categoryUIDevice_07Shortcuts_08.html#a127656e806a85e08a5100913e6872581',1,'UIDevice(Shortcuts)']]],
   ['map_3a',['map:',['../categoryNSMutableArray_07Functional_08.html#a3d41224bbe61fb46f74bc0297daa56e8',1,'NSMutableArray(Functional)::map:()'],['../categoryNSMutableDictionary_07Functional_08.html#a4c2aee03a558d8cedab3df5a08f55226',1,'NSMutableDictionary(Functional)::map:()']]],
   ['mapfilter_3a',['mapFilter:',['../categoryNSMutableArray_07Functional_08.html#a6c4442ca26d7317f37dd5cf2947b7989',1,'NSMutableArray(Functional)::mapFilter:()'],['../categoryNSMutableDictionary_07Functional_08.html#a3eb971ee33ca481be67b0b9b127436b1',1,'NSMutableDictionary(Functional)::mapFilter:()']]],
   ['mapfilterwithindex_3a',['mapFilterWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a27ce349f8be2319c998a87d4b73157ce',1,'NSMutableArray(Functional)']]],

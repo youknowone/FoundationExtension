@@ -30,6 +30,11 @@
     STAssertNotNil([UIColor self], @""); // test initialize
 }
 
+- (void)testMACAddress {
+    NSString *mac = [[UIDevice currentDevice] MACAddress]; // any test without ifconfig?
+    STAssertNotNil(mac, @"");
+}
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 - (void)testStringAttribute
 {

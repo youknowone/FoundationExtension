@@ -28,4 +28,17 @@ typedef enum {
  */
 - (NSString *)uniqueToken;
 
+
+/*
+ *  @brief Get MAC address as data
+ *  @return 6-bytes MAC address data
+ */
+- (NSData *)MACAddressData;
+
+/*
+ *  @brief Get MAC address
+ *  @return MAC address formed as 'xx:xx:xx:xx:xx:xx'
+ */
+- (NSString *)MACAddress;
+
 @end

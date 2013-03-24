@@ -41,6 +41,14 @@ FoundationExtension
 @see @ref NSString(Shortcuts)
 @see @ref NSString(NSURL)
 
+## iPhone MAC Address
+Foundation
+  * No way.
+
+FoundationExtension
+
+    [[UIDevice currentDevice] MACAddress]
+
 ## performSelector, with 3 object
 Foundation
   * No way. You should use <objc/runtime.h>

@@ -41,6 +41,20 @@ FoundationExtension
 @see @ref NSString(Shortcuts)
 @see @ref NSString(NSURL)
 
+## Access array or dictionary
+Foundation
+
+    [array objectAtIndex:1];
+    [dictionary objectForKey:@"key"];
+
+FoundationExtension
+
+    [array :1];
+    [dictionary :@"key"];
+
+@see @ref NSArray(Shortcuts)
+@see @ref NSDictionary(Shortcuts)
+
 ## iPhone MAC Address
 Foundation
   * No way.
@@ -48,6 +62,8 @@ Foundation
 FoundationExtension
 
     [[UIDevice currentDevice] MACAddress]
+
+@see @ref UIDevice(Shortcuts)
 
 ## performSelector, with 3 object
 Foundation

@@ -13,6 +13,25 @@
  */
 
 /*!
+ *  @brief NSDictionary shortcut methods extension.
+ */
+@interface NSDictionary (Shortcuts)
+
+/*!
+ *  @brief Extreme short form of 'ObjectForKey:'
+ */
+- (id):(id)key;
+
+/*!
+ *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.
+ *  @param aKey A key to test dictionary has it.
+ *  @return YES if aKey is present in the dictionary, otherwise NO.
+ */
+- (BOOL)containsKey:(id)aKey;
+
+@end
+
+/*!
  *  @brief NSDictionary creation methods extension with [NSData][1].
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/Reference/Reference.html
  *  @details Data must be property list.
@@ -55,19 +74,5 @@
  *  @see initWithData:format:error:
  */
 + (id)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
-
-@end
-
-/*!
- *  @brief Common shortcuts
- */
-@interface NSDictionary (Shortcuts)
-
-/*!
- *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.
- *  @param aKey A key to test dictionary has it.
- *  @return YES if aKey is present in the dictionary, otherwise NO.
- */
-- (BOOL)containsKey:(id)aKey;
 
 @end

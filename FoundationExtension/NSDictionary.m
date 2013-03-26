@@ -10,6 +10,19 @@
 
 #import "NSDictionary.h"
 
+@implementation NSDictionary (Shortcuts)
+
+- (id):(id)key {
+    return [self objectForKey:key];
+}
+
+- (BOOL)containsKey:(id)key {
+    return [self.allKeys containsObject:key];
+}
+
+@end
+
+
 @implementation NSDictionary (NSData)
 
 - (id)initWithData:(NSData *)data {
@@ -31,15 +44,6 @@
 
 + (id)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     return [[[self alloc] initWithData:data format:format error:error] autorelease];
-}
-
-@end
-
-
-@implementation NSDictionary (Shortcuts)
-
-- (BOOL)containsKey:(id)key {
-    return [self.allKeys containsObject:key];
 }
 
 @end

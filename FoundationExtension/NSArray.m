@@ -9,6 +9,15 @@
 #import "NSData.h"
 #import "NSArray.h"
 
+@implementation NSArray (Shortcuts)
+
+- (id):(NSUInteger)index {
+    return [self objectAtIndex:index];
+}
+
+@end
+
+
 @implementation NSArray (Creations)
 
 - (id) initWithData:(NSData *)data {

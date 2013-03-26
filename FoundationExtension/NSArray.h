@@ -14,6 +14,18 @@
  */
 
 /*!
+ *  @brief NSArray shortcut methods extension.
+ */
+@interface NSArray (Shortcuts)
+
+/*!
+ *  @brief Extreme short form of 'ObjectAtIndex:'
+ */
+- (id):(NSUInteger)index;
+
+@end
+
+/*!
  *  @brief NSArray creation methods extension with [NSData][1] or [NSFastEnumeration][2]
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/Reference/Reference.html
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/NSFastEnumeration_protocol/Reference/NSFastEnumeration.html#//apple_ref/doc/uid/TP40004559

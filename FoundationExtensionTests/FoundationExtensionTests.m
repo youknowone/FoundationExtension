@@ -49,6 +49,11 @@
     STAssertEquals(1, [self return0], @"");
 }
 
+- (void)testExtremeShortcut {
+    STAssertEqualObjects(@1, ([@[@0, @1, @2] :1]), @"");
+    STAssertEqualObjects(@1, ([@{@"0": @0, @"1":@1, @"2":@2} :@"1"]), @"");
+}
+
 - (void)testString {
     STAssertEquals([@"Hello, World" hasSubstring:@""], NO, @"");
 }

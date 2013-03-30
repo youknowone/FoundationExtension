@@ -10,6 +10,7 @@
 		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
+		38412DB41706F9C70082ED4E /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB31706F9C70082ED4E /* UIView.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -276,6 +277,8 @@
 		383764F013373155007072FD /* FoundationExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		383764F113373155007072FD /* FoundationExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionTests.h; sourceTree = "<group>"; };
 		383764F313373155007072FD /* FoundationExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionTests.m; sourceTree = "<group>"; };
+		38412DB21706F9C70082ED4E /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView.h; sourceTree = "<group>"; };
+		38412DB31706F9C70082ED4E /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView.m; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 				3868F7D1162D9CDE00C31163 /* UIScrollView.m */,
 				38EF66AD16AEEB8100781497 /* UITableView.h */,
 				38EF66AE16AEEB8100781497 /* UITableView.m */,
+				38412DB21706F9C70082ED4E /* UIView.h */,
+				38412DB31706F9C70082ED4E /* UIView.m */,
 				3868F7D4162D9CDE00C31163 /* UIWebView.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
@@ -1321,6 +1326,7 @@
 				3877F44D16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				38EF66AF16AEEB8100781497 /* UITableView.m in Sources */,
 				387B1EB916EBD0F50059722B /* NSNumber.m in Sources */,
+				38412DB41706F9C70082ED4E /* UIView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

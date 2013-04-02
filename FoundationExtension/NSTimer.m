@@ -8,6 +8,18 @@
 
 #import "NSTimer.h"
 
+#if NS_BLOCKS_AVAILABLE
+@implementation NSTimer (dispatch)
+
++ (void)dispatchTimerWithTimeInterval:(NSTimeInterval)ti block:(NSATimerBlock)block {
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(ti * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), block);
+}
+
+@end
+#endif
+
+
 @implementation NSTimer (NSRunLoop)
 
 - (void)schedule {
@@ -37,8 +49,12 @@ static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
     return self;
 }
 
++ (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
+    return [[self alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:ti] interval:ti delegate:delegate];;
+}
+
 + (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
-    NSTimer *timer = [[self alloc] initWithFireDate:[NSDate date] interval:ti delegate:delegate];
+    NSTimer *timer = [self timerWithTimeInterval:ti delegate:delegate];
     [timer schedule];
     return [timer autorelease];
 }

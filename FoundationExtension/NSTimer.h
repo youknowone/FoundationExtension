@@ -12,6 +12,7 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html
  */
 
+
 /*!
  *  @brief NSTimer extension for [NSRunLoop][0] shortcuts.
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSRunLoop_Class/Reference/Reference.html
@@ -32,6 +33,26 @@
 - (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;
 
 @end
+
+
+#if NS_BLOCKS_AVAILABLE
+typedef void (^NSATimerBlock)();
+/*!
+ *  @brief [dispatch][0] Shortcuts, not really NSTimer-related implementation.
+ *  @warning This impelentation is testing.
+ *      [0]: http://developer.apple.com/library/ios/#documentation/General/Conceptual/ConcurrencyProgrammingGuide/GCDWorkQueues/GCDWorkQueues.html#//apple_ref/doc/uid/TP40008091-CH103-SW1
+ */
+@interface NSTimer(dispatch)
+
+/*!
+ *  @brief Dispatch a block.
+ *  @param ti Time Interval
+ *  @param block A block to dispatch.
+ */
++ (void)dispatchTimerWithTimeInterval:(NSTimeInterval)ti block:(NSATimerBlock)block;
+
+@end
+#endif
 
 
 /*!
@@ -64,6 +85,10 @@
  *  @brief Initialize timer with delegate.
  */
 - (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
+/*!
+ *  @brief Creates and returns timer with delegate.
+ */
++ (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
 /*!
  *  @brief Creates, schedules and returns timer with delegate.
  */

@@ -37,3 +37,4 @@
 #import <UIKitExtension/UIWebView.h>
 
 #import <UIKitExtension/UIATableView.h>
+#import <UIKitExtension/UIAResultDisplayController.h>

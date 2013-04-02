@@ -11,18 +11,18 @@
 #import "UITDetailViewController.h"
 
 @interface UITMasterViewController () {
-    NSMutableArray *_objects;
+    NSArray *_details;
 }
 @end
 
 @implementation UITMasterViewController
 
 - (void)timerFired:(NSTimer *)timer {
-    [self insertNewObject:timer];
+    self.title = [[NSDate date] description];
 }
 
 - (BOOL)timerShouldRepeat:(NSTimer *)timer {
-    return NO;
+    return YES;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -40,8 +40,7 @@
 							
 - (void)dealloc
 {
-    [_detailViewController release];
-    [_objects release];
+    [_details release];
     [super dealloc];
 }
 
@@ -51,11 +50,17 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)] autorelease];
+    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(changeTitle:)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
 
+    // #TEST: NSTimerDelegate
     NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 delegate:self];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+
+    _details = [@[
+                @"Detail",
+                @"ResultDisplay",
+                ] retain];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,14 +69,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (void)changeTitle:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    self.title = @"TEST!";
 }
 
 #pragma mark - Table View
@@ -83,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [_details count];
 }
 
 // Customize the appearance of table view cells.
@@ -100,58 +100,60 @@
     }
 
     UIImage *originalImage = [UIImage imageNamed:@"Default.png"];
+    // TEST: UIImage -imageByResizingToSize:
     UIImage *bulletImage = [originalImage imageByResizingToSize:CGSizeMake(15.0, 20.0)];
     cell.imageView.image = bulletImage;
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = [_details :indexPath.row];
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *object = _objects[indexPath.row];
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-	    if (!self.detailViewController) {
-	        self.detailViewController = [[[UITDetailViewController alloc] initWithNibName:@"UITDetailViewController_iPhone" bundle:nil] autorelease];
-	    }
-	    self.detailViewController.detailItem = object;
-        [self.navigationController pushViewController:self.detailViewController animated:YES];
-    } else {
-        self.detailViewController.detailItem = object;
+    NSString *detailName = [_details:indexPath.row];
+    NSArray *objects;
+    NSString *className = [@"UIT%@ViewController" format:detailName];
+    Class class = NSClassFromString(className);
+    id detailViewController = [class alloc];
+    @try {
+        objects = [[NSBundle mainBundle] loadNibNamed:[@"UIT%@ViewController" format:detailName] owner:detailViewController options:nil];
     }
+    @catch (NSException *exception) {
+        NSLog(@"errer met: %@ / retry", exception);
+        NSString *suffix;
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            suffix = @"iPhone";
+        } else {
+            suffix = @"iPad";
+        }
+        objects = [[NSBundle mainBundle] loadNibNamed:[@"UIT%@ViewController_%@" format:detailName, suffix] owner:detailViewController options:nil];
+    }
+    @finally {
+
+    }
+
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    } else {
+        UISplitViewController *splitViewController = (UISplitViewController *)self.view.window.rootViewController;
+        UINavigationController *detailNavigationController = [splitViewController.viewControllers:1];
+        [detailNavigationController popToRootViewControllerAnimated:NO];
+        [detailNavigationController pushViewController:detailViewController animated:NO];
+    }
+}
+
+#pragma mark - Split view
+
+- (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
+{
+    barButtonItem.title = NSLocalizedString(@"Master", @"Master");
+    [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
+}
+
+- (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+{
+    // Called when the view is shown again in the split view, invalidating the button and popover controller.
+    [self.navigationItem setLeftBarButtonItem:nil animated:YES];
 }
 
 @end

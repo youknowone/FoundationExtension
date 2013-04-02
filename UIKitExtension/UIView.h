@@ -6,6 +6,12 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+/*!
+ *  @brief The common animation duration constant of UIKit.
+ *  @details This is just an assumation.
+ */
+FOUNDATION_EXTERN const NSTimeInterval UIAViewAnimationDefaultDuraton;
+
 #if NS_BLOCKS_AVAILABLE
 /*!
  *  @brief UIView animation shortcuts
@@ -23,4 +29,5 @@
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated;
 
 @end
+
 #endif

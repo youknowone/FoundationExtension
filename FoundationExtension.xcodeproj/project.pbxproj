@@ -11,6 +11,9 @@
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		38412DB41706F9C70082ED4E /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB31706F9C70082ED4E /* UIView.m */; };
+		38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB61707112E0082ED4E /* UIAResultDisplayController.m */; };
+		38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
+		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
 		38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -279,6 +282,11 @@
 		383764F313373155007072FD /* FoundationExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionTests.m; sourceTree = "<group>"; };
 		38412DB21706F9C70082ED4E /* UIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView.h; sourceTree = "<group>"; };
 		38412DB31706F9C70082ED4E /* UIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView.m; sourceTree = "<group>"; };
+		38412DB51707112E0082ED4E /* UIAResultDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAResultDisplayController.h; sourceTree = "<group>"; };
+		38412DB61707112E0082ED4E /* UIAResultDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAResultDisplayController.m; sourceTree = "<group>"; };
+		38412DBC17075C7A0082ED4E /* UITResultDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITResultDisplayViewController.h; sourceTree = "<group>"; };
+		38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITResultDisplayViewController.m; sourceTree = "<group>"; };
+		38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITResultDisplayViewController.xib; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -753,6 +761,8 @@
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
 				38E48D92167FB28700BD4F6D /* UIATableView.m */,
+				38412DB51707112E0082ED4E /* UIAResultDisplayController.h */,
+				38412DB61707112E0082ED4E /* UIAResultDisplayController.m */,
 			);
 			path = UIKitExtension;
 			sourceTree = "<group>";
@@ -778,6 +788,9 @@
 				38F068361636F8C9002723AB /* UITMasterViewController_iPad.xib */,
 				38F068391636F8C9002723AB /* UITDetailViewController_iPhone.xib */,
 				38F0683C1636F8C9002723AB /* UITDetailViewController_iPad.xib */,
+				38412DBC17075C7A0082ED4E /* UITResultDisplayViewController.h */,
+				38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */,
+				38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */,
 				38F0681C1636F8C8002723AB /* Supporting Files */,
 			);
 			name = TestApp;
@@ -1130,6 +1143,7 @@
 				38F068381636F8C9002723AB /* UITMasterViewController_iPad.xib in Resources */,
 				38F0683B1636F8C9002723AB /* UITDetailViewController_iPhone.xib in Resources */,
 				38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */,
+				38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1327,6 +1341,8 @@
 				38EF66AF16AEEB8100781497 /* UITableView.m in Sources */,
 				387B1EB916EBD0F50059722B /* NSNumber.m in Sources */,
 				38412DB41706F9C70082ED4E /* UIView.m in Sources */,
+				38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */,
+				38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

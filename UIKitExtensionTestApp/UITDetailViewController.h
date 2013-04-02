@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface UITDetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 

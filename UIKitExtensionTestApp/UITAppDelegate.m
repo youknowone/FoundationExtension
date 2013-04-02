@@ -37,10 +37,8 @@
         UITDetailViewController *detailViewController = [[[UITDetailViewController alloc] initWithNibName:@"UITDetailViewController_iPad" bundle:nil] autorelease];
         UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
     	
-    	masterViewController.detailViewController = detailViewController;
-    	
         self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
-        self.splitViewController.delegate = detailViewController;
+        self.splitViewController.delegate = masterViewController;
         self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
 
         self.window.rootViewController = self.splitViewController;

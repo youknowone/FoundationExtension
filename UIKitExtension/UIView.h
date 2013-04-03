@@ -21,8 +21,8 @@ FOUNDATION_EXTERN const NSTimeInterval UIAViewAnimationDefaultDuraton;
 /*!
  *  @brief Set whether the view is hidden.
  *  @details If 'animated' property is NO, this method calls [-setHidden:][0]; Otherwise, when starting, object's 'hidden' property is set to NO. If given hidden parameter is YES, 'hidden' property is set to YES after end of animation. This may cause confliction with other animations or accessors.
- *  @param If YES, the view become hidden; otherwise, NO.
- *  @param If YES, animates the transition; otherwise, does not.
+ *  @param hidden If YES, the view become hidden; otherwise, NO.
+ *  @param animated If YES, animates the transition; otherwise, does not.
  *  @see [hidden][0]
     [0]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/UIView/UIView.html#//apple_ref/occ/instp/UIView/hidden
  */

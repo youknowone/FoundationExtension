@@ -7,5 +7,6 @@ var searchData=
   ['components',['components',['../categoryNSDate_07Shortcuts_08.html#a3aa469ba94d2d8259f18af2cb99be930',1,'NSDate(Shortcuts)::components()'],['../categoryUIColor_07Shortcuts_08.html#a2b54847335e7fc46b3ef247641d83abd',1,'UIColor(Shortcuts)::components()']]],
   ['contentbounds',['contentBounds',['../categoryUIScrollView_07Shortcuts_08.html#adb78eb9f50d7f7acb306769c235243e7',1,'UIScrollView(Shortcuts)']]],
   ['contentframe',['contentFrame',['../categoryUIScrollView_07Shortcuts_08.html#a7ba43f43ae486adf01107ca87720cd88',1,'UIScrollView(Shortcuts)']]],
+  ['contentscontroller',['contentsController',['../interfaceUIAResultDisplayController.html#adb58653223e6d882872e425a568773b1',1,'UIAResultDisplayController']]],
   ['cursor',['cursor',['../interfaceNSAttributedStringAttributeDictionary.html#ac13b1b8f1dec73b332aa30b5fab2a79d',1,'NSAttributedStringAttributeDictionary']]]
 ];

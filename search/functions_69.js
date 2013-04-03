@@ -18,6 +18,7 @@ var searchData=
   ['initwithclass_3a',['initWithClass:',['../interfaceNSAClass.html#a17b5b1d7cc7f6bf03764fe3127a0662d',1,'NSAClass']]],
   ['initwithcolor_3a',['initWithColor:',['../interfaceUIAColorComponents.html#ad719b6b389866047418c553f02ccc5fe',1,'UIAColorComponents']]],
   ['initwithconcatnatingstrings_3a',['initWithConcatnatingStrings:',['../categoryNSString_07Creations_08.html#af282417e854a13eebda8f6895b97fb76',1,'NSString(Creations)']]],
+  ['initwithcontentscontroller_3a',['initWithContentsController:',['../interfaceUIAResultDisplayController.html#aa3daf75e7c3727ed7daf9389e0154c2d',1,'UIAResultDisplayController']]],
   ['initwithcontentsofabstractpath_3a',['initWithContentsOfAbstractPath:',['../categoryNSData_07NSURL__deprecated_08.html#aa451bef02ed326eb7279f841029bfea0',1,'NSData(NSURL_deprecated)']]],
   ['initwithcontentsofabstractpath_3aoptions_3aerror_3a',['initWithContentsOfAbstractPath:options:error:',['../categoryNSData_07NSURL__deprecated_08.html#aa39aa8f61a0b7ee482547f46beb12387',1,'NSData(NSURL_deprecated)']]],
   ['initwithcontentsofurl_3apostbody_3aencoding_3a',['initWithContentsOfURL:postBody:encoding:',['../categoryNSData_07NSURLRequest_08.html#a259f793747ba08af9d38963ac6a1df18',1,'NSData(NSURLRequest)']]],

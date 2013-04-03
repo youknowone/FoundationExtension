@@ -116,6 +116,16 @@ NSURL *URL = [NSURL URLWithString:URLString];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSString_07Shortcuts_08.html">NSString(Shortcuts)</a> </dd>
 <dd>
 <a class="el" href="categoryNSString_07NSURL_08.html">NSString(NSURL)</a></dd></dl>
+<h2>Access array or dictionary</h2>
+<p>Foundation </p>
+<pre class="fragment">[array objectAtIndex:1];
+[dictionary objectForKey:@"key"];
+</pre><p>FoundationExtension </p>
+<pre class="fragment">[array :1];
+[dictionary :@"key"];
+</pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSArray_07Shortcuts_08.html">NSArray(Shortcuts)</a> </dd>
+<dd>
+<a class="el" href="categoryNSDictionary_07Shortcuts_08.html">NSDictionary(Shortcuts)</a></dd></dl>
 <h2>iPhone MAC Address</h2>
 <p>Foundation</p>
 <ul>
@@ -123,7 +133,8 @@ NSURL *URL = [NSURL URLWithString:URLString];
 </ul>
 <p>FoundationExtension </p>
 <pre class="fragment">[[UIDevice currentDevice] MACAddress]
-</pre><h2>performSelector, with 3 object</h2>
+</pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryUIDevice_07Shortcuts_08.html">UIDevice(Shortcuts)</a></dd></dl>
+<h2>performSelector, with 3 object</h2>
 <p>Foundation</p>
 <ul>
 <li>No way. You should use &lt;objc/runtime.h&gt;</li>

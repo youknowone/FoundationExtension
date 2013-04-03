@@ -1,6 +1,7 @@
 var searchData=
 [
   ['name',['name',['../interfaceNSAClass.html#aab3d5300e810152f3125d2dc8e30b816',1,'NSAClass']]],
+  ['navigationbarhidingenabled',['navigationBarHidingEnabled',['../interfaceUIAResultDisplayController.html#a8df0e7a11ed1604ddd968096f1fe6edf',1,'UIAResultDisplayController']]],
   ['nsaapply',['NSAApply',['../NSAFunctional_8h.html#a93aafe4b8f080838d989a360b351eca0',1,'NSAFunctional.h']]],
   ['nsaapplywithindex',['NSAApplyWithIndex',['../NSAFunctional_8h.html#add3db479613f3f544d35d4844bf3a701',1,'NSAFunctional.h']]],
   ['nsaarray',['NSAArray',['../interfaceNSAArray.html',1,'']]],
@@ -45,9 +46,11 @@ var searchData=
   ['nsarray_28nsnumber_29',['NSArray(NSNumber)',['../categoryNSArray_07NSNumber_08.html',1,'']]],
   ['nsarray_28nsurlrequest_29',['NSArray(NSURLRequest)',['../categoryNSArray_07NSURLRequest_08.html',1,'']]],
   ['nsarray_28rearrange_29',['NSArray(Rearrange)',['../categoryNSArray_07Rearrange_08.html',1,'']]],
+  ['nsarray_28shortcuts_29',['NSArray(Shortcuts)',['../categoryNSArray_07Shortcuts_08.html',1,'']]],
   ['nsarray_2eh',['NSArray.h',['../NSArray_8h.html',1,'']]],
   ['nsastring',['NSAString',['../interfaceNSAString.html',1,'']]],
   ['nsastring_2eh',['NSAString.h',['../NSAString_8h.html',1,'']]],
+  ['nsatimerblock',['NSATimerBlock',['../NSTimer_8h.html#acaca8cbb3ace3290cd07a6a0c3bcbdf6',1,'NSTimer.h']]],
   ['nsatriple',['NSATriple',['../interfaceNSATriple.html',1,'']]],
   ['nsattributedstring_28shortcuts_29',['NSAttributedString(Shortcuts)',['../categoryNSAttributedString_07Shortcuts_08.html',1,'']]],
   ['nsattributedstring_2eh',['NSAttributedString.h',['../FoundationExtension_2NSAttributedString_8h.html',1,'']]],
@@ -238,6 +241,7 @@ var searchData=
   ['nstextview_28placeholder_29',['NSTextView(Placeholder)',['../categoryNSTextView_07Placeholder_08.html',1,'']]],
   ['nstextview_2eh',['NSTextView.h',['../NSTextView_8h.html',1,'']]],
   ['nstimer_28delegate_29',['NSTimer(Delegate)',['../categoryNSTimer_07Delegate_08.html',1,'']]],
+  ['nstimer_28dispatch_29',['NSTimer(dispatch)',['../categoryNSTimer_07dispatch_08.html',1,'']]],
   ['nstimer_28nsrunloop_29',['NSTimer(NSRunLoop)',['../categoryNSTimer_07NSRunLoop_08.html',1,'']]],
   ['nstimer_28shortcuts_29',['NSTimer(Shortcuts)',['../categoryNSTimer_07Shortcuts_08.html',1,'']]],
   ['nstimer_2eh',['NSTimer.h',['../NSTimer_8h.html',1,'']]],

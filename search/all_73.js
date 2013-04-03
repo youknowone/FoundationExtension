@@ -8,6 +8,8 @@ var searchData=
   ['second',['second',['../interfaceNSATuple.html#a4e7ef7db32eb78a92064347422857f76',1,'NSATuple::second()'],['../interfaceNSAMutableTuple.html#af4debba03e15c0cbc2feb50fe5dcbd80',1,'NSAMutableTuple::second()'],['../interfaceNSATriple.html#ad2977cb5e9113b3d69f166fa5406cb4e',1,'NSATriple::second()'],['../interfaceNSAMutableTriple.html#a6fb7829bb60712cb32c321f98f2066a3',1,'NSAMutableTriple::second()']]],
   ['selectionstyleforcell_3a',['selectionStyleForCell:',['../protocolUIATableViewCellCopyableDelegate-p.html#a0ccdd573bdeac3031ecccdf07addc0c6',1,'UIATableViewCellCopyableDelegate-p']]],
   ['sendactionsforcontrolevents_3awithevent_3a',['sendActionsForControlEvents:withEvent:',['../categoryUIControl_07Shortcuts_08.html#a6a83391151f56f1c430d556286b762e5',1,'UIControl(Shortcuts)']]],
+  ['setactive_3aanimated_3a',['setActive:animated:',['../interfaceUIAResultDisplayController.html#aec642ab1ca07cd57d10dbe1cbc83b393',1,'UIAResultDisplayController']]],
+  ['sethidden_3aanimated_3a',['setHidden:animated:',['../categoryUIView_07Animation_08.html#ae204515ffc0d43ff9efa5688ea3cb0bd',1,'UIView(Animation)']]],
   ['sethttpmultipartformpostbody_3aencoding_3a',['setHTTPMultiPartFormPostBody:encoding:',['../categoryNSMutableURLRequest_07NSAURLRequestHTTPBodyMultiPartFormPostFormatter_08.html#a908e8287c6db3c274b6dc830f3f771de',1,'NSMutableURLRequest(NSAURLRequestHTTPBodyMultiPartFormPostFormatter)']]],
   ['sethttppostbody_3aencoding_3a',['setHTTPPostBody:encoding:',['../categoryNSMutableURLRequest_07HTTPMethod_08.html#a2e46661a1921b0d92ee1a7128951c652',1,'NSMutableURLRequest(HTTPMethod)']]],
   ['shadow',['shadow',['../interfaceNSAttributedStringAttributeDictionary.html#afa3d0fd6365d39e397c2fe9bf098c817',1,'NSAttributedStringAttributeDictionary']]],

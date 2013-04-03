@@ -3,7 +3,7 @@ var searchData=
   ['_5fbody',['_body',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a7d4988205428cba0df2e75c5de730a22',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['_5fclass',['_class',['../interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd',1,'NSAClass']]],
   ['_5fcomponents',['_components',['../interfaceUIAColorComponents.html#af0784b1ac14cf94db6286ff4a201894d',1,'UIAColorComponents']]],
-  ['_5fcopyableflags',['_copyableFlags',['../interfaceUIATableViewCellCopyable.html#a2c7a2bdd4cc9066e66dee63b640c21ce',1,'UIATableViewCellCopyable']]],
+  ['_5fcopyableflags',['_copyableFlags',['../interfaceUIATableViewCellCopyable.html#aac959f104c9bd707ed48892b5fcbfc4f',1,'UIATableViewCellCopyable']]],
   ['_5fdelegate',['_delegate',['../interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa',1,'FSEventStream::_delegate()'],['../interfaceUIATableViewCellCopyable.html#a17b8ac55db5ba9d71e93080788273e9a',1,'UIATableViewCellCopyable::_delegate()']]],
   ['_5fencoding',['_encoding',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#aeb7cf86f87e3200b4e70d41b235c1d4b',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['_5ffirst',['_first',['../interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032',1,'NSATuple::_first()'],['../interfaceNSATriple.html#a83404668cd6ac37cbc80a7ec29419ad7',1,'NSATriple::_first()']]],

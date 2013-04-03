@@ -47,5 +47,7 @@ var searchData=
   ['digestbysha384',['digestBySHA384',['../categoryNSData_07CommonCrypto_08.html#adbf87e11521cf9b8e0bf28642926fc12',1,'NSData(CommonCrypto)']]],
   ['digestbysha384usingencoding_3a',['digestBySHA384UsingEncoding:',['../categoryNSString_07CommonCrypto_08.html#a49ac755eaaea30e476f78be374f4881a',1,'NSString(CommonCrypto)']]],
   ['digestbysha512',['digestBySHA512',['../categoryNSData_07CommonCrypto_08.html#a1b88a59fa9bf3cce11c7fc78c582a417',1,'NSData(CommonCrypto)']]],
-  ['digestbysha512usingencoding_3a',['digestBySHA512UsingEncoding:',['../categoryNSString_07CommonCrypto_08.html#ad18be0167a167e4accce807d5ca271b0',1,'NSString(CommonCrypto)']]]
+  ['digestbysha512usingencoding_3a',['digestBySHA512UsingEncoding:',['../categoryNSString_07CommonCrypto_08.html#ad18be0167a167e4accce807d5ca271b0',1,'NSString(CommonCrypto)']]],
+  ['dimmingviewdidcancel_3a',['dimmingViewDidCancel:',['../protocolUIADimmingViewDelegate-p.html#aa722cbdb033c79cf75b233f695ccb24e',1,'UIADimmingViewDelegate-p']]],
+  ['dispatchtimerwithtimeinterval_3ablock_3a',['dispatchTimerWithTimeInterval:block:',['../categoryNSTimer_07dispatch_08.html#ad4a52a498d09fde54c81947085609dc1',1,'NSTimer(dispatch)']]]
 ];

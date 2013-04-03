@@ -1,19 +1,23 @@
 var searchData=
 [
   ['uiacolorcomponents',['UIAColorComponents',['../interfaceUIAColorComponents.html',1,'']]],
+  ['uiadimmingview',['UIADimmingView',['../interfaceUIADimmingView.html',1,'']]],
+  ['uiadimmingviewdelegate_2dp',['UIADimmingViewDelegate-p',['../protocolUIADimmingViewDelegate-p.html',1,'']]],
   ['uialertview_28shortcuts_29',['UIAlertView(Shortcuts)',['../categoryUIAlertView_07Shortcuts_08.html',1,'']]],
   ['uiapplication_28dump_29',['UIApplication(Dump)',['../categoryUIApplication_07Dump_08.html',1,'']]],
   ['uiapplication_28shortcuts_29',['UIApplication(Shortcuts)',['../categoryUIApplication_07Shortcuts_08.html',1,'']]],
+  ['uiaresultdisplaycontroller',['UIAResultDisplayController',['../interfaceUIAResultDisplayController.html',1,'']]],
+  ['uiaresultdisplaydelegate_2dp',['UIAResultDisplayDelegate-p',['../protocolUIAResultDisplayDelegate-p.html',1,'']]],
   ['uiatableviewcellcopyable',['UIATableViewCellCopyable',['../interfaceUIATableViewCellCopyable.html',1,'']]],
   ['uiatableviewcellcopyabledelegate_2dp',['UIATableViewCellCopyableDelegate-p',['../protocolUIATableViewCellCopyableDelegate-p.html',1,'']]],
   ['uicolor_28creations_29',['UIColor(Creations)',['../categoryUIColor_07Creations_08.html',1,'']]],
   ['uicolor_28htmlcolor_29',['UIColor(HTMLColor)',['../categoryUIColor_07HTMLColor_08.html',1,'']]],
   ['uicolor_28shortcuts_29',['UIColor(Shortcuts)',['../categoryUIColor_07Shortcuts_08.html',1,'']]],
   ['uicontrol_28shortcuts_29',['UIControl(Shortcuts)',['../categoryUIControl_07Shortcuts_08.html',1,'']]],
-  ['uicontroltouchevents_2dp',['UIControlTouchEvents-p',['../protocolUIControlTouchEvents-p.html',1,'']]],
   ['uidevice_28shortcuts_29',['UIDevice(Shortcuts)',['../categoryUIDevice_07Shortcuts_08.html',1,'']]],
   ['uiimage_28uigraphics_29',['UIImage(UIGraphics)',['../categoryUIImage_07UIGraphics_08.html',1,'']]],
   ['uiscrollview_28shortcuts_29',['UIScrollView(Shortcuts)',['../categoryUIScrollView_07Shortcuts_08.html',1,'']]],
   ['uitableviewcell_28shortcuts_29',['UITableViewCell(Shortcuts)',['../categoryUITableViewCell_07Shortcuts_08.html',1,'']]],
+  ['uiview_28animation_29',['UIView(Animation)',['../categoryUIView_07Animation_08.html',1,'']]],
   ['uiwebview_28shortcuts_29',['UIWebView(Shortcuts)',['../categoryUIWebView_07Shortcuts_08.html',1,'']]]
 ];

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['active',['active',['../interfaceUIAResultDisplayController.html#adbb5d35ca67d7243f6c451060bf41e23',1,'UIAResultDisplayController']]],
   ['addattributeattachment_3arange_3a',['addAttributeAttachment:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a3185e1166ca451fd0900bf6dc911f60c',1,'NSMutableAttributedString(AttributeProperties)']]],
   ['addattributebackgroundcolor_3arange_3a',['addAttributeBackgroundColor:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#afbd14276cd1a6876a5d33df3d2e7ba4e',1,'NSMutableAttributedString(AttributeProperties)::addAttributeBackgroundColor:range:(NSColor *backgroundColor,[range] NSRange range)'],['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a7bb6d690bf37f202a361351dc32ed8db',1,'NSMutableAttributedString(AttributeProperties)::addAttributeBackgroundColor:range:(UIColor *backgroundColor,[range] NSRange range)']]],
   ['addattributebaselineoffset_3arange_3a',['addAttributeBaselineOffset:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a58d2c08f6ffaf12136d188bf608675b0',1,'NSMutableAttributedString(AttributeProperties)']]],
@@ -28,6 +29,7 @@ var searchData=
   ['alloc',['alloc',['../interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570',1,'NSAClass']]],
   ['allocwithzone_3a',['allocWithZone:',['../interfaceNSAClass.html#ab9e3b5291a3aabb79dcd787612bee0a7',1,'NSAClass']]],
   ['alpha',['alpha',['../interfaceUIAColorComponents.html#aa957c44c9aa8a76c1cf1c59982f5ac18',1,'UIAColorComponents']]],
+  ['animating',['animating',['../interfaceUIAResultDisplayController.html#a0c3237d7666316bca5bac44697976c37',1,'UIAResultDisplayController']]],
   ['appendbodydataendian',['appendBodyDataEndian',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#ae3c48fb2dc27427880907afcc7384e0e',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['appendbodydatatofieldname_3adata_3a',['appendBodyDataToFieldName:data:',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a173d37fdecf954d7379759ea3a0bb304',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['appendbodydatatofieldname_3afilename_3adata_3a',['appendBodyDataToFieldName:fileName:data:',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a57f3621a620f08698585585b0bfb26d5',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],

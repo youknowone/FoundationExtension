@@ -27,5 +27,6 @@ var searchData=
   ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]],
   ['contentbounds',['contentBounds',['../categoryUIScrollView_07Shortcuts_08.html#adb78eb9f50d7f7acb306769c235243e7',1,'UIScrollView(Shortcuts)']]],
   ['contentframe',['contentFrame',['../categoryUIScrollView_07Shortcuts_08.html#a7ba43f43ae486adf01107ca87720cd88',1,'UIScrollView(Shortcuts)']]],
+  ['contentscontroller',['contentsController',['../interfaceUIAResultDisplayController.html#adb58653223e6d882872e425a568773b1',1,'UIAResultDisplayController']]],
   ['cursor',['cursor',['../interfaceNSAttributedStringAttributeDictionary.html#ac13b1b8f1dec73b332aa30b5fab2a79d',1,'NSAttributedStringAttributeDictionary']]]
 ];

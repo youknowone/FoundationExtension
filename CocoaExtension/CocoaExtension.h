@@ -24,4 +24,5 @@
 
 #import <CocoaExtension/FSEventStream.h>
 #import <CocoaExtension/NSAttributedString.h>
+#import <CocoaExtension/NSGeometry.h>
 #import <CocoaExtension/NSTextView.h>

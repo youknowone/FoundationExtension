@@ -14,6 +14,8 @@
 		38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB61707112E0082ED4E /* UIAResultDisplayController.m */; };
 		38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
 		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
+		38485C51170F14820001A99D /* NSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C4F170F14820001A99D /* NSGeometry.h */; };
+		38485C52170F14820001A99D /* NSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C50170F14820001A99D /* NSGeometry.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -287,6 +289,8 @@
 		38412DBC17075C7A0082ED4E /* UITResultDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITResultDisplayViewController.h; sourceTree = "<group>"; };
 		38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITResultDisplayViewController.m; sourceTree = "<group>"; };
 		38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITResultDisplayViewController.xib; sourceTree = "<group>"; };
+		38485C4F170F14820001A99D /* NSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGeometry.h; sourceTree = "<group>"; };
+		38485C50170F14820001A99D /* NSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGeometry.m; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -587,6 +591,8 @@
 				3855B052163D41F9005584CD /* FSEventStream.m */,
 				38B0C74416414B1D0044C73C /* NSAttributedString.h */,
 				38B0C74516414B1D0044C73C /* NSAttributedString.m */,
+				38485C4F170F14820001A99D /* NSGeometry.h */,
+				38485C50170F14820001A99D /* NSGeometry.m */,
 				38FCECDB16590A1100D3D0F0 /* NSTextView.h */,
 				38FCECDC16590A1100D3D0F0 /* NSTextView.m */,
 			);
@@ -873,6 +879,7 @@
 				38FCECDD16590A1100D3D0F0 /* NSTextView.h in Headers */,
 				3877F44A16A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
 				387B1EB616EBD0F50059722B /* NSNumber.h in Headers */,
+				38485C51170F14820001A99D /* NSGeometry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1234,6 +1241,7 @@
 				38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */,
 				3877F44C16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				387B1EB816EBD0F50059722B /* NSNumber.m in Sources */,
+				38485C52170F14820001A99D /* NSGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

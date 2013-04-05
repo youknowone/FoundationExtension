@@ -18,5 +18,8 @@ var searchData=
   ['nspathforuserconfigurationfile',['NSPathForUserConfigurationFile',['../NSPathUtilities_8h.html#a67f8b04c9372eae908f4e15709610b81',1,'NSPathUtilities.h']]],
   ['nspathforuserdirectory',['NSPathForUserDirectory',['../NSPathUtilities_8h.html#ad3e79b46e9c82fcb304f137426d2e53c',1,'NSPathUtilities.h']]],
   ['nspathforuserfileindirectory',['NSPathForUserFileInDirectory',['../NSPathUtilities_8h.html#a1321ebf96a1ab2299a970981c6f691bc',1,'NSPathUtilities.h']]],
+  ['nspointmake',['NSPointMake',['../NSGeometry_8h.html#a06f869b4bc2bbb0a275f69dfaa689702',1,'NSGeometry.h']]],
+  ['nsrectmake',['NSRectMake',['../NSGeometry_8h.html#a3599b6b9ae06ddd65b52504c07f65720',1,'NSGeometry.h']]],
+  ['nssizemake',['NSSizeMake',['../NSGeometry_8h.html#ac40b42711f4ffcdf8f4b3c9afba2c414',1,'NSGeometry.h']]],
   ['nsuserconfigurationdirectory',['NSUserConfigurationDirectory',['../NSPathUtilities_8h.html#a0cb1705744a327d9218ca93997fbd206',1,'NSPathUtilities.h']]]
 ];

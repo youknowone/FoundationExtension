@@ -1,0 +1,27 @@
+var NSAFunctional_8h =
+[
+    [ "NSArray(Functional)", "categoryNSArray_07Functional_08.html", "categoryNSArray_07Functional_08" ],
+    [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", "categoryNSMutableArray_07Functional_08" ],
+    [ "NSDictionary(Functional)", "categoryNSDictionary_07Functional_08.html", "categoryNSDictionary_07Functional_08" ],
+    [ "NSMutableDictionary(Functional)", "categoryNSMutableDictionary_07Functional_08.html", "categoryNSMutableDictionary_07Functional_08" ],
+    [ "NSAObjectBinaryOperator", "NSAFunctional_8h.html#ac3a87059af1d79cceaef4c4c4cbb7be0", null ],
+    [ "NSAObjectPicker", "NSAFunctional_8h.html#a0761588e817345c12d3012a5e865b212", null ],
+    [ "NSAObjectPickerWithIndex", "NSAFunctional_8h.html#a6729144064b79f07061fb32f69d9f112", null ],
+    [ "NSAObjectPickerWithKey", "NSAFunctional_8h.html#a6782fcc9a508fca5d46a019502823598", null ],
+    [ "NSAObjectProcedure", "NSAFunctional_8h.html#a56149e200ea2728955c412150908a92c", null ],
+    [ "NSAObjectProcedureWithIndex", "NSAFunctional_8h.html#ad666d0c20c04fb3902012b7475ecb83b", null ],
+    [ "NSAObjectProcedureWithKey", "NSAFunctional_8h.html#ac2d0af2229c2a51cc857c23157d701b2", null ],
+    [ "NSAObjectUnaryOperator", "NSAFunctional_8h.html#afcea3a77f45a3a90551ea7893588de60", null ],
+    [ "NSAObjectUnaryOperatorWithIndex", "NSAFunctional_8h.html#a3237f3e0cee7978a58686d196f035b77", null ],
+    [ "NSAObjectUnaryOperatorWithKey", "NSAFunctional_8h.html#a94132ce520a4fa95cf0c485c8a763865", null ],
+    [ "NSAApply", "NSAFunctional_8h.html#a93aafe4b8f080838d989a360b351eca0", null ],
+    [ "NSAApplyWithIndex", "NSAFunctional_8h.html#add3db479613f3f544d35d4844bf3a701", null ],
+    [ "NSAFilter", "NSAFunctional_8h.html#a5d18f0fe5c9adfc0e82f222a0a59508f", null ],
+    [ "NSAFilterWithIndex", "NSAFunctional_8h.html#a7eaac522a113a9b686954fe588c23a9a", null ],
+    [ "NSAMap", "NSAFunctional_8h.html#a0698c19d203cc1bf208000e14b3e4bd1", null ],
+    [ "NSAMapFilter", "NSAFunctional_8h.html#a67bd8c44d7e741c0a6d5e79a9ef9418d", null ],
+    [ "NSAMapFilterWithIndex", "NSAFunctional_8h.html#a3f6eb4dac08f45ccce8c1145d693990f", null ],
+    [ "NSAMapWithIndex", "NSAFunctional_8h.html#ae26a09dc526b9ac17dc2bae6036f0e76", null ],
+    [ "NSAReduce", "NSAFunctional_8h.html#a9389927867de62f0f13a1891f5a245b8", null ],
+    [ "NSAReduceWithInitialObject", "NSAFunctional_8h.html#a6f3d58e520eb555aad8b4454742fea2f", null ]
+];

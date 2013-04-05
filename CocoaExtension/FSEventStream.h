@@ -9,6 +9,7 @@
 /*!
  *  @file
  *  @brief FSEventStream wrapper in [<FSEvents.h>][0]
+ *  @warning This mechanism will not work with Appstore sandbox.
  *      [0]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html
  */
 

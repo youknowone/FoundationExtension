@@ -150,6 +150,7 @@
 
 /*!
  *  @brief NSMutableArray shortcut methods for [NSNumber][1].
+ *  @warning These methods are deprecated. Use NSNumber constants like @1.
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html
  */
 @interface NSMutableArray (NSNumber)
@@ -162,7 +163,7 @@
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableArray/addObject:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html#//apple_ref/occ/clm/NSNumber/numberWithInteger:
  */
-- (void)addInteger:(NSInteger)value;
+- (void)addInteger:(NSInteger)value __deprecated;
 
 /*!
  *  @brief Inserts a given integer at a given index.
@@ -173,6 +174,6 @@
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableArray/insertObject:atIndex:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html#//apple_ref/occ/clm/NSNumber/numberWithInteger:
  */
-- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index;
+- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index __deprecated;
 
 @end

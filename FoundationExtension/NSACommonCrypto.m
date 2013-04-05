@@ -9,7 +9,7 @@
 #import "NSString.h"
 
 #import <CommonCrypto/CommonCryptor.h>
-#define CCOptions CCOptions
+#define __CCOptions
 #import "NSACommonCrypto.h"
 
 @implementation NSData (CommonCryptor)

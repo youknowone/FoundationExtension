@@ -85,7 +85,7 @@
 
 /*!
  *  @brief Attempts to register with the FS Events service to receive events per the parameters in the stream.
- *  @details This method can only be called once the stream has been scheduled on at least one runloop, via @link -scheduleWithRunLoop:mode: @endlink.
+ *  @details This method can only be called once the stream has been scheduled on at least one runloop, via @link scheduleWithRunLoop:mode: @endlink.
 
     Once started, the stream can be stopped via FSEventStreamStop().
  *  @return True if it succeeds, otherwise False if it fails. It ought to always succeed, but in the event it does not then your code should fall back to performing recursive scans of the directories of interest as appropriate.

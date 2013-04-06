@@ -14,9 +14,29 @@ FOUNDATION_EXTERN const NSTimeInterval UIAViewAnimationDefaultDuraton;
 
 #if NS_BLOCKS_AVAILABLE
 /*!
+ *  @brief Animation block signature for UIView animation methods.
+ */
+typedef void (^UIAViewAnimationBlock)();
+/*!
+ *  @brief Animation completion block signature for UIView animation methods.
+ */
+typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
+
+/*!
  *  @brief UIView animation shortcuts
  */
 @interface UIView (Animation)
+
+/*!
+ *  @brief Animate changes to one or more views using the UIKit deafult animation duration @ref UIAViewAnimationDefaultDuraton.
+ *  @param animations A block object containing the changes to commit to the views. This is where you programmatically change any animatable properties of the views in your view hierarchy. This block takes no parameters and has no return value. This parameter must not be NULL.
+ *  @details
+        This method performs the specified animations immediately using the UIViewAnimationOptionCurveEaseInOut and UIViewAnimationOptionTransitionNone animation options.
+        During an animation, user interactions are temporarily disabled for the views being animated. (Prior to iOS 5, user interactions are disabled for the entire application.)
+ *  @see [animateWithDuration:animations:][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/UIView/UIView.html#//apple_ref/occ/clm/UIView/animateWithDuration:animations:
+ */
++ (void)animateWithDefaultDurationAnimations:(UIAViewAnimationBlock)animations;
 
 /*!
  *  @brief Set whether the view is hidden.

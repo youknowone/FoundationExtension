@@ -14,7 +14,7 @@
 
 @implementation UITResultDisplayViewController
 
-@synthesize controller=_controller, label=_label;
+@synthesize controller=_controller, label=_label, cancelButton=_cancelButton, inputField=_inputField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -58,6 +58,9 @@
 }
 
 -(void)resultDisplayController:(UIAResultDisplayController *)controller willUnloadResultView:(id)resultView {
+
+    [self.cancelButton setHidden:YES animated:YES];
+    
     [(UITextField *)self.controller.inputView endEditing:YES];
     NSLog(@"!! will UNLOAD");
 }
@@ -70,6 +73,8 @@
     CGRect contentsFrame = controller.contentsController.view.frame;
     CGFloat height = controller.inputView.frame.size.height;
     ((UIView *)resultView).frame = CGRectMake(0, height, contentsFrame.size.width, contentsFrame.size.height - height);
+
+    [self.cancelButton setHidden:NO animated:YES];
     NSLog(@"!! did LOAD");
 }
 

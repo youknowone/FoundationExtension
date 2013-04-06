@@ -11,7 +11,9 @@
 @interface UITResultDisplayViewController : UIViewController<UITextFieldDelegate, UIAResultDisplayDelegate>
 
 @property(nonatomic, retain) IBOutlet UIAResultDisplayController *controller;
+@property(nonatomic, retain) IBOutlet UITextField *inputField;
 @property(nonatomic, retain) IBOutlet UILabel *label;
+@property(nonatomic, retain) IBOutlet UIButton *cancelButton;
 
 - (IBAction)valueChanged:(id)sender;
 - (IBAction)cancel:(id)sender;

@@ -13,6 +13,10 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 #if NS_BLOCKS_AVAILABLE
 @implementation UIView (Animation)
 
++ (void)animateWithDefaultDurationAnimations:(UIAViewAnimationBlock)animations {
+    [self animateWithDuration:UIAViewAnimationDefaultDuraton animations:animations];
+}
+
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated {
     if (!animated || self.hidden == hidden) {
         self.hidden = hidden;

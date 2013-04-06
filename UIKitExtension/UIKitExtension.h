@@ -31,6 +31,7 @@
 
 #import <UIKitExtension/UIView.h>
 #import <UIKitExtension/UIAlertView.h>
+#import <UIKitExtension/UIActivityIndicatorView.h>
 #import <UIKitExtension/UIControl.h>
 #import <UIKitExtension/UITableView.h>
 #import <UIKitExtension/UIScrollView.h>

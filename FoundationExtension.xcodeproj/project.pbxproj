@@ -16,6 +16,7 @@
 		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
 		38485C51170F14820001A99D /* NSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C4F170F14820001A99D /* NSGeometry.h */; };
 		38485C52170F14820001A99D /* NSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C50170F14820001A99D /* NSGeometry.m */; };
+		38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C541710081F0001A99D /* UIActivityIndicatorView.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -291,6 +292,8 @@
 		38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITResultDisplayViewController.xib; sourceTree = "<group>"; };
 		38485C4F170F14820001A99D /* NSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGeometry.h; sourceTree = "<group>"; };
 		38485C50170F14820001A99D /* NSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGeometry.m; sourceTree = "<group>"; };
+		38485C531710081E0001A99D /* UIActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorView.h; sourceTree = "<group>"; };
+		38485C541710081F0001A99D /* UIActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorView.m; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -745,6 +748,8 @@
 				38C98B58161AE30300C4A389 /* UIKitExtension.h */,
 				38505C581642A66C0059773B /* NSAttributedString.h */,
 				38505C591642A66C0059773B /* NSAttributedString.m */,
+				38485C531710081E0001A99D /* UIActivityIndicatorView.h */,
+				38485C541710081F0001A99D /* UIActivityIndicatorView.m */,
 				3868F7C4162D9CDE00C31163 /* UIAlertView.h */,
 				3868F7C5162D9CDE00C31163 /* UIAlertView.m */,
 				3868F7C6162D9CDE00C31163 /* UIApplication.h */,
@@ -1351,6 +1356,7 @@
 				38412DB41706F9C70082ED4E /* UIView.m in Sources */,
 				38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */,
 				38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */,
+				38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

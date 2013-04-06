@@ -38,4 +38,5 @@
 #import <UIKitExtension/UIWebView.h>
 
 #import <UIKitExtension/UIATableView.h>
+#import <UIKitExtension/UIAPreparedCellTableView.h>
 #import <UIKitExtension/UIAResultDisplayController.h>

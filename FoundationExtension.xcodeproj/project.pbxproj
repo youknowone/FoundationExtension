@@ -12,11 +12,14 @@
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		38412DB41706F9C70082ED4E /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB31706F9C70082ED4E /* UIView.m */; };
 		38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB61707112E0082ED4E /* UIAResultDisplayController.m */; };
-		38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
 		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
 		38485C51170F14820001A99D /* NSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C4F170F14820001A99D /* NSGeometry.h */; };
 		38485C52170F14820001A99D /* NSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C50170F14820001A99D /* NSGeometry.m */; };
 		38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C541710081F0001A99D /* UIActivityIndicatorView.m */; };
+		38485C5D171089710001A99D /* UIAPreparedCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C5C1710896F0001A99D /* UIAPreparedCellTableView.m */; };
+		38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */; };
+		38485C6317109CD20001A99D /* UITPreparedCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */; };
+		38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -294,6 +297,11 @@
 		38485C50170F14820001A99D /* NSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGeometry.m; sourceTree = "<group>"; };
 		38485C531710081E0001A99D /* UIActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorView.h; sourceTree = "<group>"; };
 		38485C541710081F0001A99D /* UIActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIActivityIndicatorView.m; sourceTree = "<group>"; };
+		38485C5B1710896E0001A99D /* UIAPreparedCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAPreparedCellTableView.h; sourceTree = "<group>"; };
+		38485C5C1710896F0001A99D /* UIAPreparedCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAPreparedCellTableView.m; sourceTree = "<group>"; };
+		38485C5E1710974C0001A99D /* UITPreparedCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPreparedCellTableViewController.h; sourceTree = "<group>"; };
+		38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITPreparedCellTableViewController.m; sourceTree = "<group>"; };
+		38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITPreparedCellTableViewController.xib; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -772,6 +780,8 @@
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
 				38E48D92167FB28700BD4F6D /* UIATableView.m */,
+				38485C5B1710896E0001A99D /* UIAPreparedCellTableView.h */,
+				38485C5C1710896F0001A99D /* UIAPreparedCellTableView.m */,
 				38412DB51707112E0082ED4E /* UIAResultDisplayController.h */,
 				38412DB61707112E0082ED4E /* UIAResultDisplayController.m */,
 			);
@@ -802,6 +812,9 @@
 				38412DBC17075C7A0082ED4E /* UITResultDisplayViewController.h */,
 				38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */,
 				38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */,
+				38485C5E1710974C0001A99D /* UITPreparedCellTableViewController.h */,
+				38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */,
+				38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */,
 				38F0681C1636F8C8002723AB /* Supporting Files */,
 			);
 			name = TestApp;
@@ -1156,6 +1169,7 @@
 				38F0683B1636F8C9002723AB /* UITDetailViewController_iPhone.xib in Resources */,
 				38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */,
 				38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */,
+				38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1355,8 +1369,8 @@
 				387B1EB916EBD0F50059722B /* NSNumber.m in Sources */,
 				38412DB41706F9C70082ED4E /* UIView.m in Sources */,
 				38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */,
-				38412DBE17075C7A0082ED4E /* UITResultDisplayViewController.m in Sources */,
 				38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */,
+				38485C5D171089710001A99D /* UIAPreparedCellTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1368,6 +1382,8 @@
 				38F068261636F8C8002723AB /* UITAppDelegate.m in Sources */,
 				38F0682F1636F8C8002723AB /* UITMasterViewController.m in Sources */,
 				38F068321636F8C9002723AB /* UITDetailViewController.m in Sources */,
+				38485C6317109CD20001A99D /* UITPreparedCellTableViewController.m in Sources */,
+				38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

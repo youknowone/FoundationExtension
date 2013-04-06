@@ -60,6 +60,7 @@
     _details = [@[
                 @"Detail",
                 @"ResultDisplay",
+                @"PreparedCellTable",
                 ] retain];
 }
 
@@ -111,12 +112,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString *detailName = [_details:indexPath.row];
-    NSArray *objects;
     NSString *className = [@"UIT%@ViewController" format:detailName];
     Class class = NSClassFromString(className);
-    id detailViewController = [class alloc];
+    UIViewController *detailViewController = [class alloc];
     @try {
-        objects = [[NSBundle mainBundle] loadNibNamed:[@"UIT%@ViewController" format:detailName] owner:detailViewController options:nil];
+        NSString *name = [@"UIT%@ViewController" format:detailName];
+        [detailViewController initWithNibName:name bundle:nil];
     }
     @catch (NSException *exception) {
         NSLog(@"errer met: %@ / retry", exception);
@@ -126,7 +127,8 @@
         } else {
             suffix = @"iPad";
         }
-        objects = [[NSBundle mainBundle] loadNibNamed:[@"UIT%@ViewController_%@" format:detailName, suffix] owner:detailViewController options:nil];
+        NSString *name = [@"UIT%@ViewController_%@" format:detailName, suffix];
+        [detailViewController initWithNibName:name bundle:nil];
     }
     @finally {
 

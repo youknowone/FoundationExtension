@@ -195,3 +195,12 @@
 }
 
 @end
+
+
+@implementation NSData (NSStringUTF8)
+
+- (NSString *)stringUsingUTF8Encoding {
+    return [NSString stringWithUTF8Data:self];
+}
+
+@end

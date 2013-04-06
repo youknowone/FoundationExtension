@@ -62,6 +62,7 @@
 
 @end
 
+
 /*!
  *  @brief NSString method shortcuts
  */
@@ -131,6 +132,7 @@
 
 @end
 
+
 /*!
  *  @brief Shortcut for UTF8
  *  @see [NSUTF8StringEncoding][0]
@@ -190,5 +192,20 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/integerValue
  */
 - (NSInteger)hexadecimalValue;
+
+@end
+
+
+/*!
+ *  @brief NSData extension for NSString
+ */
+@interface NSData (NSStringUTF8)
+
+/*!
+ *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
+ *  @details For other encodings, see @ref NSString(Creations)::stringWithData:encoding:
+ *  @see @ref NSString(Creations)::stringWithData:encoding:
+ */
+@property(nonatomic, readonly) NSString *stringUsingUTF8Encoding;
 
 @end

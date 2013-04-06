@@ -34,35 +34,31 @@
 
 - (NSString *)uniqueToken {
     #ifndef USE_IOS5_UUID
-    #define __USE_IOS5_UUID
-    #define USE_IOS5_UUID NO
+        #define __USE_IOS5_UUID
+        #define USE_IOS5_UUID 0
     #endif
     NSString *token = nil;
-    Class UUID = NSClassFromString(@"NSUUID");
-    if (UUID != Nil) {
-        // iOS 5 or 6
-        if ([self respondsToSelector:@selector(identifierForVendor)]) {
-            // iOS6
-            id uuid = [self performSelector:@selector(identifierForVendor)];
-            token = [uuid UUIDString];
-        }
-        else {
-            // iOS5
-            #ifdef USE_IOS5_UUID
-            id uuid = [UUID UUID];
-            token = [uuid UUIDString];
-            #else
-            token = [self uniqueIdentifier];
-            #endif
-        }
-    } else {
-        // iOS4
+    if ([self respondsToSelector:@selector(identifierForVendor)]) {
+        // iOS6
+        id uuid = [self performSelector:@selector(identifierForVendor)];
+        token = [uuid UUIDString];
+    }
+    else {
+        // under iOS6
+        #if USE_IOS5_UUID
+        CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
+        token = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuid);
+        #else
+        #pragma clang diagnostic push
+        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         token = [self uniqueIdentifier];
+        #pragma clang diagnostic pop
+        #endif
     }
     return token;
     #ifdef __USE_IOS5_UUID
-    #undef __USE_IOS5_UUID
-    #undef USE_IOS5_UUID
+        #undef __USE_IOS5_UUID
+        #undef USE_IOS5_UUID
     #endif
 }
 

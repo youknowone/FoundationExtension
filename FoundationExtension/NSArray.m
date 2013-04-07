@@ -7,6 +7,7 @@
 //
 
 #import "NSData.h"
+
 #import "NSArray.h"
 
 @implementation NSArray (Shortcuts)

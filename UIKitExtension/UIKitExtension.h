@@ -18,25 +18,23 @@
  *  @see @ref FoundationExtension
  */
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
 #import <FoundationExtension/FoundationExtension.h>
 
-#import <UIKitExtension/NSAttributedString.h>
-#import <UIKitExtension/UIApplication.h>
-#import <UIKitExtension/UIColor.h>
-#import <UIKitExtension/UIDevice.h>
-#import <UIKitExtension/UIImage.h>
-
-#import <UIKitExtension/UIView.h>
-#import <UIKitExtension/UIAlertView.h>
-#import <UIKitExtension/UIActivityIndicatorView.h>
-#import <UIKitExtension/UIControl.h>
-#import <UIKitExtension/UITableView.h>
-#import <UIKitExtension/UIScrollView.h>
-#import <UIKitExtension/UIWebView.h>
-
-#import <UIKitExtension/UIATableView.h>
-#import <UIKitExtension/UIAPreparedCellTableView.h>
-#import <UIKitExtension/UIAResultDisplayController.h>
+#import <UIKit/UIKit.h>
+// depenency level 0
+#import <UIKitExtension/NSAttributedString+UIKit.h>         // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIActivityIndicatorView.h>          // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIAlertView.h>                      // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIApplication.h>                    // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIColor.h>                          // level: 0 / deps(0):  / internal(1): NSString
+#import <UIKitExtension/UIControl.h>                        // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIDevice.h>                         // level: 0 / deps(0):  / internal(1): NSString
+#import <UIKitExtension/UIImage.h>                          // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIScrollView.h>                     // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UITableView.h>                      // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIView.h>                           // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIWebView.h>                        // level: 0 / deps(0):  / internal(0):
+// depenency level 20
+#import <UIKitExtension/UIAPreparedCellTableView.h>         // level: 20 / deps(0):  / internal(1): NSArray
+#import <UIKitExtension/UIAResultDisplayController.h>       // level: 20 / deps(0):  / internal(2): NSTimer, UIView
+#import <UIKitExtension/UIATableView.h>                     // level: 20 / deps(0):  / internal(0):

@@ -21,8 +21,8 @@
 #import <FoundationExtension/FoundationExtension.h>
 
 #import <Cocoa/Cocoa.h>
-
-#import <CocoaExtension/FSEventStream.h>
-#import <CocoaExtension/NSAttributedString.h>
-#import <CocoaExtension/NSGeometry.h>
-#import <CocoaExtension/NSTextView.h>
+// depenency level 0
+#import <CocoaExtension/FSEventStream.h>                    // level: 0 / deps(0):  / internal(0):
+#import <CocoaExtension/NSAttributedString+Cocoa.h>         // level: 0 / deps(0):  / internal(0):
+#import <CocoaExtension/NSGeometry.h>                       // level: 0 / deps(0):  / internal(0):
+#import <CocoaExtension/NSTextView.h>                       // level: 0 / deps(0):  / internal(0):

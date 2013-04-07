@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "NSAttributedString.h"
+#import "NSAttributedString+UIKit.h"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
 

@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "NSAttributedString.h"
+#import "NSAttributedString+Cocoa.h"
 
 #import "debug.h"
 

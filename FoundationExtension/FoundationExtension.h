@@ -32,32 +32,33 @@
  *  @see @ref FoundationExtension
  */
 
+
 #import <Foundation/Foundation.h>
-
-#import <FoundationExtension/NSObject.h>
-#import <FoundationExtension/NSArray.h>
-#import <FoundationExtension/NSAttributedString.h>
-#import <FoundationExtension/NSBundle.h>
-#import <FoundationExtension/NSData.h>
-#import <FoundationExtension/NSDate.h>
-#import <FoundationExtension/NSDictionary.h>
-#import <FoundationExtension/NSJSONSerialization.h>
-#import <FoundationExtension/NSNumber.h>
-#import <FoundationExtension/NSNumberFormatter.h>
-#import <FoundationExtension/NSPathUtilities.h>
-#import <FoundationExtension/NSString.h>
-//#import <FoundationExtension/NSStringEncoding.h>
-#import <FoundationExtension/NSTimer.h>
-#import <FoundationExtension/NSURL.h>
-#import <FoundationExtension/NSURLRequest.h>
-#import <FoundationExtension/NSURLRequestCreations.h>
-
-#import <FoundationExtension/NSAArray.h>
-#import <FoundationExtension/NSADictionary.h>
-#import <FoundationExtension/NSAString.h>
-#import <FoundationExtension/NSAClass.h>
-#import <FoundationExtension/NSADataObject.h>
-#import <FoundationExtension/NSACommonDigest.h>
-#import <FoundationExtension/NSAFunctional.h>
-#import <FoundationExtension/NSAOrderedDictionary.h>
-#import <FoundationExtension/NSACommonCrypto.h>
+// depenency level 0
+#import <FoundationExtension/NSArray.h>                     // level: 0 / deps(0):  / internal(1): NSData
+#import <FoundationExtension/NSAttributedString.h>          // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSBundle.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSData.h>                      // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSDate.h>                      // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSDictionary.h>                // level: 0 / deps(0):  / internal(1): NSData
+#import <FoundationExtension/NSJSONSerialization.h>         // level: 0 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSLocale.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSNumber.h>                    // level: 0 / deps(0):  / internal(2): NSObject, NSString
+#import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
+#import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
+#import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
+// depenency level 20
+#import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAClass.h>                    // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSACommonCrypto.h>             // level: 20 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSACommonDigest.h>             // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSADictionary.h>               // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAFunctional.h>               // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAOrderedDictionary.h>        // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAString.h>                   // level: 20 / deps(0):  / internal(0):

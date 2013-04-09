@@ -20,6 +20,8 @@
 		38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */; };
 		38485C6317109CD20001A99D /* UITPreparedCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */; };
 		38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
+		38485C6B171463F70001A99D /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C69171463F60001A99D /* NSNull.h */; };
+		38485C6C171463F70001A99D /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString+UIKit.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -302,6 +304,8 @@
 		38485C5E1710974C0001A99D /* UITPreparedCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPreparedCellTableViewController.h; sourceTree = "<group>"; };
 		38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITPreparedCellTableViewController.m; sourceTree = "<group>"; };
 		38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITPreparedCellTableViewController.xib; sourceTree = "<group>"; };
+		38485C69171463F60001A99D /* NSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNull.h; sourceTree = "<group>"; };
+		38485C6A171463F70001A99D /* NSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNull.m; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+UIKit.h"; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString+UIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+UIKit.m"; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -658,6 +662,8 @@
 				38660A57161AD9AE00C5CE06 /* NSDictionary.m */,
 				38505C921645837A0059773B /* NSJSONSerialization.h */,
 				38505C931645837C0059773B /* NSJSONSerialization.m */,
+				38485C69171463F60001A99D /* NSNull.h */,
+				38485C6A171463F70001A99D /* NSNull.m */,
 				387B1EB316EBD0F50059722B /* NSNumber.h */,
 				387B1EB416EBD0F50059722B /* NSNumber.m */,
 				38660A58161AD9AE00C5CE06 /* NSNumberFormatter.h */,
@@ -933,6 +939,7 @@
 				38505CBB164647910059773B /* NSAOrderedDictionary.h in Headers */,
 				3877F44916A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
 				387B1EB516EBD0F50059722B /* NSNumber.h in Headers */,
+				38485C6B171463F70001A99D /* NSNull.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1313,6 +1320,7 @@
 				38505CBD164647910059773B /* NSAOrderedDictionary.m in Sources */,
 				3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				387B1EB716EBD0F50059722B /* NSNumber.m in Sources */,
+				38485C6C171463F70001A99D /* NSNull.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

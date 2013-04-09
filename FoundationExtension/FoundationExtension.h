@@ -42,7 +42,7 @@
 #import <FoundationExtension/NSDate.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSDictionary.h>                // level: 0 / deps(0):  / internal(1): NSData
 #import <FoundationExtension/NSJSONSerialization.h>         // level: 0 / deps(0):  / internal(1): NSString
-#import <FoundationExtension/NSLocale.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSNull.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSNumber.h>                    // level: 0 / deps(0):  / internal(2): NSObject, NSString
 #import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):

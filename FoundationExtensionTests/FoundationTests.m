@@ -8,7 +8,30 @@
 
 #import "FoundationTests.h"
 
+
+@interface TestObject: NSObject
+
+@end
+
+@implementation TestObject
+
+- (id)initObject {
+    [self release];
+    return (id)[[NSString alloc] init];
+}
+
+@end
+
 @implementation FoundationTests
+
+- (void)testInit {
+    id obj = [[TestObject alloc] initObject];
+    [obj release];
+}
+
+- (void)testSizeOfId {
+    STAssertEquals(sizeof(id), sizeof(id<NSCopying>), @"");
+}
 
 - (void)testStringPath {
     NSString *aPath;

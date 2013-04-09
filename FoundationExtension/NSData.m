@@ -63,7 +63,7 @@ static const char NSDataHexadecimalDecodingTable[0x80] =
         *pointer = (unsigned char)(NSDataHexadecimalDecodingTable[*pos] << 4) + NSDataHexadecimalDecodingTable[*(pos+1)];
     }
 
-    return [[NSData alloc] initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];
+    return [self initWithBytesNoCopy:buffer length:length / 2 freeWhenDone:YES];
 }
 
 + (NSData *)dataWithHexadecimalString:(NSString *)hexadecimal {

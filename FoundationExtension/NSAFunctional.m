@@ -448,7 +448,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
@@ -464,7 +464,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
@@ -480,7 +480,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = mapper([self objectForKey:key]);
@@ -499,7 +499,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = mapper([self objectForKey:key], key);
@@ -518,7 +518,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = [self objectForKey:key];
@@ -537,7 +537,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id) * length);
+    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = [self objectForKey:key];

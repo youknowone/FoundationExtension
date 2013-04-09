@@ -22,6 +22,10 @@
 		38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */; };
 		38485C6B171463F70001A99D /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C69171463F60001A99D /* NSNull.h */; };
 		38485C6C171463F70001A99D /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
+		38485C6D17149D070001A99D /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
+		38485C6E17149D0A0001A99D /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
+		38485C6F17149D0E0001A99D /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
+		38485C7017149D110001A99D /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38505C5A1642A66C0059773B /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString+UIKit.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -1276,6 +1280,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */,
+				38485C6D17149D070001A99D /* FoundationTests.m in Sources */,
+				38485C6E17149D0A0001A99D /* FoundationExtensionTests.m in Sources */,
+				38485C6F17149D0E0001A99D /* FoundationExtensionCoreFoundationTest.m in Sources */,
+				38485C7017149D110001A99D /* FoundationExtensionCppTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

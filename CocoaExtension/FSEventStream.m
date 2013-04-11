@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#import "NSArray.h"
+
 #import "FSEventStream.h"
 
 #include "debug.h"

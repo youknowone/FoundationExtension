@@ -44,14 +44,15 @@ static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
 }
 
 - (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id)delegate {
-    [self release];
+    //[self release]; // Please do not try this!
     CFRunLoopTimerContext context = {0, delegate, NULL, NULL, NULL};
     self = (NSTimer *)CFRunLoopTimerCreate(kCFAllocatorDefault, [date timeIntervalSinceReferenceDate], ti, 0, 0, &NSTimerDelegateCallback, &context);
     return self;
 }
 
 + (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
-    return [[[self alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:ti] interval:ti delegate:delegate] autorelease];
+    id timer = [[self alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:ti] interval:ti delegate:delegate];
+    return [timer autorelease];
 }
 
 + (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {

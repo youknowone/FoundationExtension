@@ -61,6 +61,7 @@
                 @"Detail",
                 @"ResultDisplay",
                 @"PreparedCellTable",
+                @"PlaceholderText",
                 ] retain];
 }
 
@@ -118,6 +119,7 @@
     @try {
         NSString *name = [@"UIT%@ViewController" format:detailName];
         [detailViewController initWithNibName:name bundle:nil];
+        [detailViewController view]; // force load
     }
     @catch (NSException *exception) {
         NSLog(@"errer met: %@ / retry", exception);

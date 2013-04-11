@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */; };
+		381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */; };
+		381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */; };
 		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
@@ -285,6 +288,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAPlaceholderTextView.h; sourceTree = "<group>"; };
+		381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAPlaceholderTextView.m; sourceTree = "<group>"; };
+		381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPlaceholderTextViewController.h; sourceTree = "<group>"; };
+		381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITPlaceholderTextViewController.m; sourceTree = "<group>"; };
+		381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITPlaceholderTextViewController.xib; sourceTree = "<group>"; };
 		383764D713373154007072FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		383764E213373155007072FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		383764E513373155007072FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -790,6 +798,8 @@
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
 				38E48D92167FB28700BD4F6D /* UIATableView.m */,
+				381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */,
+				381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */,
 				38485C5B1710896E0001A99D /* UIAPreparedCellTableView.h */,
 				38485C5C1710896F0001A99D /* UIAPreparedCellTableView.m */,
 				38412DB51707112E0082ED4E /* UIAResultDisplayController.h */,
@@ -825,6 +835,9 @@
 				38485C5E1710974C0001A99D /* UITPreparedCellTableViewController.h */,
 				38485C5F1710974C0001A99D /* UITPreparedCellTableViewController.m */,
 				38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */,
+				381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */,
+				381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */,
+				381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */,
 				38F0681C1636F8C8002723AB /* Supporting Files */,
 			);
 			name = TestApp;
@@ -1181,6 +1194,7 @@
 				38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */,
 				38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */,
 				38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */,
+				381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,6 +1401,7 @@
 				38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */,
 				38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */,
 				38485C5D171089710001A99D /* UIAPreparedCellTableView.m in Sources */,
+				381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,6 +1415,7 @@
 				38F068321636F8C9002723AB /* UITDetailViewController.m in Sources */,
 				38485C6317109CD20001A99D /* UITPreparedCellTableViewController.m in Sources */,
 				38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */,
+				381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

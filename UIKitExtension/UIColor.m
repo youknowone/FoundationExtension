@@ -185,7 +185,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 - (UIColor *)initWithHTMLExpression:(NSString *)code {
     if (![code hasPrefix:@"#"]) {
-        [self release];
+        [self autorelease];
         return [[[self class] colorWithHTMLColorName:code] retain];
     }
     switch (code.length) {

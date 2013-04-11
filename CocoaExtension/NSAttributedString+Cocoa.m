@@ -1,5 +1,5 @@
 //
-//  NSAttributedString.m
+//  NSAttributedString+Cocoa.m
 //  FoundationExtension
 //
 //  Created by Jeong YunWon on 12. 10. 31..

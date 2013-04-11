@@ -1,5 +1,5 @@
 //
-//  NSAttributedString.h
+//  NSAttributedString+UIKit.h
 //  FoundationExtension
 //
 //  Created by Jeong YunWon on 12. 11. 1..

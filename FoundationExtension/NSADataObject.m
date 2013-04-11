@@ -53,6 +53,12 @@ static Class _mutableTupleClass;
     return self->_second;
 }
 
+#pragma mark NSArray-like interface
+
+- (NSUInteger)count {
+    return 2;
+}
+
 - (id)objectAtIndex:(NSUInteger)index {
     switch (index) {
         case 0:
@@ -61,6 +67,24 @@ static Class _mutableTupleClass;
             return self->_second;
     }
     return nil;
+}
+
+- (id):(NSUInteger)index {
+    return [self objectAtIndex:index];
+}
+
+- (NSUInteger)indexOfObject:(id)anObject {
+    if ([anObject isEqual:self->_first]) {
+        return 0;
+    }
+    if ([anObject isEqual:self->_second]) {
+        return 1;
+    }
+    return NSNotFound;
+}
+
+- (BOOL)containsObject:(id)anObject {
+    return ([self indexOfObject:anObject] == NSNotFound) ? NO : YES;
 }
 
 #pragma mark NSCopying
@@ -174,6 +198,10 @@ static Class _mutableTripleClass;
     return self->_third;
 }
 
+- (NSUInteger)count {
+    return 3;
+}
+
 - (id)objectAtIndex:(NSUInteger)index {
     switch (index) {
         case 0:
@@ -186,6 +214,26 @@ static Class _mutableTripleClass;
     return nil;
 }
 
+- (id):(NSUInteger)index {
+    return [self objectAtIndex:index];
+}
+
+- (NSUInteger)indexOfObject:(id)anObject {
+    if ([anObject isEqual:self->_first]) {
+        return 0;
+    }
+    if ([anObject isEqual:self->_second]) {
+        return 1;
+    }
+    if ([anObject isEqual:self->_third]) {
+        return 2;
+    }
+    return NSNotFound;
+}
+
+- (BOOL)containsObject:(id)anObject {
+    return ([self indexOfObject:anObject] == NSNotFound) ? NO : YES;
+}
 
 #pragma mark NSCopying
 

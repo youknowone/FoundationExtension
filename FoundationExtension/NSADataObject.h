@@ -9,12 +9,62 @@
 /*!
  *  @file
  *  @brief Object containers to handle various concept of data structure.
+ *  @details
+ *      These classes are designed to pass 2 or 3 objects in compact form, not a verbose NSArray or NSDictionary form.
+ *      In these day, there are @[] as short array expression and -: as shotcut of -objectAtIndex:.
+ *      These classes may be not very useful. Consider to use above short expressions.
  */
+
+
+/*!
+ *  @brief This protocol defines NSArray-like interface methods for data objects.
+ */
+@protocol NSAArrayLikeDataObject <NSObject>
+
+/*!
+ *  @brief Returns the number of objects currently in the data object.
+ */
+@property(nonatomic, readonly) NSUInteger count;
+
+/*!
+ *  @brief Returns the object located at index.
+ *  @param index
+ *      An index within the bounds of data object.
+ *  @return The object located at index.
+ */
+- (id)objectAtIndex:(NSUInteger)index;
+
+/*!
+ *  @brief Returns the object located at index. Shortcut of @ref objectAtIndex:
+ *  @param index
+ *      An index within the bounds of data object.
+ *  @return The object located at index.
+ */
+- (id):(NSUInteger)index;
+
+/*!
+ *  @brief Returns the lowest index whose corresponding member value is equal to a given object.
+ *  @param anObject
+        An object.
+ *  @return The lowest index whose corresponding member value is equal to anObject. If none of the objects in the data object is equal to anObject, returns NSNotFound.
+ */
+- (NSUInteger)indexOfObject:(id)anObject;
+
+/*!
+ *  @brief Returns a Boolean value that indicates whether a given object is present in the array.
+ *  @param anObject
+ *      An object.
+ *  @return YES if anObject is present in the array, otherwise NO.
+ */
+- (BOOL)containsObject:(id)anObject;
+
+@end
+
 
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSATuple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration> {
+@interface NSATuple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration, NSAArrayLikeDataObject> {
     id _first, _second;
 }
 /*!
@@ -47,21 +97,13 @@
  */
 + (id)tupleWithFirst:(id)first second:(id)second;
 
-/*!
- *  @brief Returns the object located at index.
- *  @param index
- *      0 or 1 to points first or second.
- *  @return first for index 0 or second for index 1
- */
-- (id)objectAtIndex:(NSUInteger)index;
-
 @end
 
 
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSAMutableTuple: NSATuple<NSFastEnumeration>
+@interface NSAMutableTuple: NSATuple
 
 /*!
  *  @brief first object
@@ -83,7 +125,7 @@
 /*!
  *  @brief Manages ordered collections of 3 objects.
  */
-@interface NSATriple: NSObject<NSCopying, NSFastEnumeration> {
+@interface NSATriple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration, NSAArrayLikeDataObject> {
     id _first, _second, _third;
 }
 /*!
@@ -121,14 +163,6 @@
  *  @see initWithFirst:second:third:
  */
 + (id)tripleWithFirst:(id)first second:(id)second third:(id)third;
-
-/*!
- *  @brief Returns the object located at index.
- *  @param index
- *      0, 1 or 2 to points first or second.
- *  @return first for index 0, second for index 1 or third for index 2
- */
-- (id)objectAtIndex:(NSUInteger)index;
 
 @end
 

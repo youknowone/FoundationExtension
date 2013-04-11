@@ -33,6 +33,7 @@
  */
 
 
+
 #import <Foundation/Foundation.h>
 // depenency level 0
 #import <FoundationExtension/NSArray.h>                     // level: 0 / deps(0):  / internal(1): NSData
@@ -46,11 +47,11 @@
 #import <FoundationExtension/NSNumber.h>                    // level: 0 / deps(0):  / internal(2): NSObject, NSString
 #import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):
-#import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(2): NSArray, NSString
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
-#import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
+#import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(4): NSString, NSData, NSDictionary, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):

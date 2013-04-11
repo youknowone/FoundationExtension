@@ -240,7 +240,7 @@
     NSInteger count = 0;
     for (id key in obj) {
         count += 1;
-        STAssertEqualObjects([obj objectForKey:key], [NSString stringWithInteger:count], @"");
+        STAssertEqualObjects([obj :key], [NSString stringWithInteger:count], @"");
     }
 }
 

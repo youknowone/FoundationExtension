@@ -30,7 +30,7 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     FSEventStream *self = (FSEventStream *)userData;
     NSArray *paths = (NSArray *)eventPaths;
     for (size_t i = 0; i < numEvents; i += 1) {
-        [self.delegate eventStream:self path:[paths objectAtIndex:i] event:eventFlags[i] id:eventIds[i]];
+        [self.delegate eventStream:self path:[paths :i] event:eventFlags[i] id:eventIds[i]];
     }
 }
 

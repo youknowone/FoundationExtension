@@ -26,8 +26,8 @@
 #import <UIKitExtension/UIActivityIndicatorView.h>          // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIAlertView.h>                      // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIApplication.h>                    // level: 0 / deps(0):  / internal(0):
-#import <UIKitExtension/UIColor.h>                          // level: 0 / deps(0):  / internal(1): NSString
-#import <UIKitExtension/UIControl.h>                        // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIColor.h>                          // level: 0 / deps(0):  / internal(2): NSString, NSDictionary
+#import <UIKitExtension/UIControl.h>                        // level: 0 / deps(0):  / internal(1): NSArray
 #import <UIKitExtension/UIDevice.h>                         // level: 0 / deps(0):  / internal(1): NSString
 #import <UIKitExtension/UIImage.h>                          // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIScrollView.h>                     // level: 0 / deps(0):  / internal(0):

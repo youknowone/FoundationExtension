@@ -6,8 +6,6 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface UIControl (Shortcuts)
 
 - (void)sendActionsForControlEvents:(UIControlEvents)controlEvents withEvent:(UIEvent *)event;

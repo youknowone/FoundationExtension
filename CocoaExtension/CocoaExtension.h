@@ -22,7 +22,7 @@
 
 #import <Cocoa/Cocoa.h>
 // depenency level 0
-#import <CocoaExtension/FSEventStream.h>                    // level: 0 / deps(0):  / internal(0):
-#import <CocoaExtension/NSAttributedString+Cocoa.h>         // level: 0 / deps(0):  / internal(0):
+#import <CocoaExtension/FSEventStream.h>                    // level: 0 / deps(0):  / internal(1): NSArray
+#import <CocoaExtension/NSAttributedString+Cocoa.h>         // level: 0 / deps(1): NSADictionary / internal(0):
 #import <CocoaExtension/NSGeometry.h>                       // level: 0 / deps(0):  / internal(0):
 #import <CocoaExtension/NSTextView.h>                       // level: 0 / deps(0):  / internal(0):

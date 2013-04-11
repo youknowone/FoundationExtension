@@ -12,7 +12,7 @@ def find_import(lines, fileregex='"(.*).h"'):
             deps.append(m.group(1))
     return deps
 
-nodeps = ['debug', 'runtime', 'CommonCryptor', 'CommonDigest']
+nodeps = ['debug', 'runtime', 'Cocoa', 'UIKit', 'CommonCryptor', 'CommonDigest']
 def find_deps(path):
     selfname = path.rsplit('/', 1)[-1].split('.')[0]
     hpath = path[:-1] + 'h'
@@ -23,7 +23,7 @@ def find_deps(path):
             if nodep in deps:
                 del(deps[deps.index(nodep)])
         return deps
-    return selfname, get_deps(path, '"(.*).h"'), get_deps(path, '<.*/(.*).h>')
+    return selfname, get_deps(path, '"(.*).h"'), get_deps(hpath, '<[^/]*/(.*).h>')
 
 class Graph(OrderedDict):
     MAP = {}

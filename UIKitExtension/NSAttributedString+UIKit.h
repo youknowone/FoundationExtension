@@ -18,9 +18,9 @@
  *  Before iOS 6.0, use CoreText.
  */
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
 
-#import <FoundationExtension/FoundationExtension.h>
+#import <FoundationExtension/NSADictionary.h>
 
 /*!
  *  @brief Type for NSUnderlinePattern*, NSUnderlineStyle* and NSUnderlineMask*.

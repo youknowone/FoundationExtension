@@ -8,7 +8,7 @@
 
 #import "NSAttributedString+UIKit.h"
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
 
 @implementation NSMutableAttributedString (AttributeProperties)
 

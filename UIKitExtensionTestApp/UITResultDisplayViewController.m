@@ -3,7 +3,7 @@
 //  FoundationExtension
 //
 //  Created by Jeong YunWon on 13. 3. 31..
-//  Copyright (c) 2013년 youknowone.org. All rights reserved.
+//  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
 #import "UITResultDisplayViewController.h"

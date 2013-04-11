@@ -52,7 +52,6 @@
     UIView *_resultView;
     id<UIAResultDisplayDelegate> _delegate;
     UIView *_inputView;
-    UINavigationItem *_resultNavigationItem;
     struct {
         unsigned int visible:1;
         unsigned int animating:1;

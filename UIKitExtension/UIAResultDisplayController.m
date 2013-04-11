@@ -52,6 +52,8 @@
 
 - (void)dealloc {
     [self->_contentsController release];
+    self.dimmingView = nil;
+    self.resultView = nil;
     [super dealloc];
 }
 

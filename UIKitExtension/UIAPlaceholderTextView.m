@@ -6,16 +6,16 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import "UIView.h"
+
 #import "UIAPlaceholderTextView.h"
 
 @implementation UIAPlaceholderTextView
 
+@synthesize placeholderAnimated=_placeholderAnimated;
+
 - (void)_textDidChanged {
-    if (self.text.length != 0) {
-        [self->_placeholderTextView removeFromSuperview];
-    } else {
-        [self addSubview:self->_placeholderTextView];
-    }
+    [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated];
 }
 
 - (void)UIAPlaceholderTextViewInit {
@@ -27,6 +27,9 @@
     view.editable = NO;
     view.userInteractionEnabled = NO;
     view.contentMode = UIViewContentModeScaleToFill;
+    view.hidden = NO;
+    self->_placeholderAnimated = YES;
+    [self addSubview:self->_placeholderTextView];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {

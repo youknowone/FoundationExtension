@@ -12,15 +12,22 @@
 @interface UIAPlaceholderTextView : UITextView {
     UITextView *_placeholderTextView;
     NSString *_placeholderString;
+    BOOL _placeholderAnimated;
 }
 
 /*!
  *  @brief Placeholder string
  */
 @property(nonatomic, copy) NSString *placeholderString;
+
 /*!
  *  @brief Placeholder color. Default is gray.
  */
 @property(nonatomic, retain) UIColor *placeholderColor;
+
+/*!
+ *  @brief Placeholder shows/hides with animation. Default is YES.
+ */
+@property(nonatomic, assign, getter=isPlaceholderAnimated) BOOL placeholderAnimated;
 
 @end

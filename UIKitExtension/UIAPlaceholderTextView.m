@@ -8,15 +8,19 @@
 
 #import "UIAPlaceholderTextView.h"
 
-@interface UIAPlaceholderTextView ()
-
-- (void)refreshPlaceholderHidden;
-
-@end
-
 @implementation UIAPlaceholderTextView
 
+- (void)_textDidChanged {
+    if (self.text.length != 0) {
+        [self->_placeholderTextView removeFromSuperview];
+    } else {
+        [self addSubview:self->_placeholderTextView];
+    }
+}
+
 - (void)UIAPlaceholderTextViewInit {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_textDidChanged) name:UITextViewTextDidChangeNotification object:nil];
+
     UITextView *view = self->_placeholderTextView = [[UITextView alloc] initWithFrame:self.bounds];
     view.backgroundColor = [UIColor clearColor];
     view.textColor = [UIColor grayColor];
@@ -30,7 +34,7 @@
     if (self != nil) {
         [self UIAPlaceholderTextViewInit];
         self->_placeholderTextView.font = self.font;
-        [self refreshPlaceholderHidden];
+        [self _textDidChanged];
     }
     return self;
 }
@@ -49,14 +53,6 @@
     [super dealloc];
 }
 
-- (void)refreshPlaceholderHidden {
-    if (self.text.length != 0) {
-        [self->_placeholderTextView removeFromSuperview];
-    } else {
-        [self addSubview:self->_placeholderTextView];
-    }
-}
-
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
     self->_placeholderTextView.frame = self.bounds;
@@ -64,28 +60,12 @@
 
 - (void)setText:(NSString *)text {
     [super setText:text];
-    [self refreshPlaceholderHidden];
+    [self _textDidChanged];
 }
 
 - (void)setFont:(UIFont *)font {
     [super setFont:font];
     [self->_placeholderTextView setFont:font];
-}
-
-- (BOOL)becomeFirstResponder {
-    BOOL become = [super becomeFirstResponder];
-    if (become) {
-        [self->_placeholderTextView setHidden:YES];
-    }
-    return become;
-}
-
-- (BOOL)resignFirstResponder {
-    BOOL resign = [super becomeFirstResponder];
-    if (resign) {
-        [self->_placeholderTextView setHidden:NO];
-    }
-    return resign;
 }
 
 #pragma mark -

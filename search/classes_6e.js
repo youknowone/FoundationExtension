@@ -1,6 +1,7 @@
 var searchData=
 [
   ['nsaarray',['NSAArray',['../interfaceNSAArray.html',1,'']]],
+  ['nsaarraylikedataobject_2dp',['NSAArrayLikeDataObject-p',['../protocolNSAArrayLikeDataObject-p.html',1,'']]],
   ['nsaclass',['NSAClass',['../interfaceNSAClass.html',1,'']]],
   ['nsadictionary',['NSADictionary',['../interfaceNSADictionary.html',1,'']]],
   ['nsamethod',['NSAMethod',['../interfaceNSAMethod.html',1,'']]],
@@ -27,6 +28,7 @@ var searchData=
   ['nsdata_28commoncrypto_29',['NSData(CommonCrypto)',['../categoryNSData_07CommonCrypto_08.html',1,'']]],
   ['nsdata_28commoncryptor_29',['NSData(CommonCryptor)',['../categoryNSData_07CommonCryptor_08.html',1,'']]],
   ['nsdata_28commoncryptorstring_29',['NSData(CommonCryptorString)',['../categoryNSData_07CommonCryptorString_08.html',1,'']]],
+  ['nsdata_28nsstringutf8_29',['NSData(NSStringUTF8)',['../categoryNSData_07NSStringUTF8_08.html',1,'']]],
   ['nsdata_28nsurl_5fdeprecated_29',['NSData(NSURL_deprecated)',['../categoryNSData_07NSURL__deprecated_08.html',1,'']]],
   ['nsdata_28nsurlrequest_29',['NSData(NSURLRequest)',['../categoryNSData_07NSURLRequest_08.html',1,'']]],
   ['nsdata_28serialization_29',['NSData(Serialization)',['../categoryNSData_07Serialization_08.html',1,'']]],
@@ -36,7 +38,6 @@ var searchData=
   ['nsdictionary_28nsdata_29',['NSDictionary(NSData)',['../categoryNSDictionary_07NSData_08.html',1,'']]],
   ['nsdictionary_28nsurlrequest_29',['NSDictionary(NSURLRequest)',['../categoryNSDictionary_07NSURLRequest_08.html',1,'']]],
   ['nsdictionary_28shortcuts_29',['NSDictionary(Shortcuts)',['../categoryNSDictionary_07Shortcuts_08.html',1,'']]],
-  ['nsjsonserialization_28shortcuts_29',['NSJSONSerialization(Shortcuts)',['../categoryNSJSONSerialization_07Shortcuts_08.html',1,'']]],
   ['nsmutablearray_28functional_29',['NSMutableArray(Functional)',['../categoryNSMutableArray_07Functional_08.html',1,'']]],
   ['nsmutablearray_28nsnumber_29',['NSMutableArray(NSNumber)',['../categoryNSMutableArray_07NSNumber_08.html',1,'']]],
   ['nsmutableattributedstring_28attributeproperties_29',['NSMutableAttributedString(AttributeProperties)',['../categoryNSMutableAttributedString_07AttributeProperties_08.html',1,'']]],
@@ -44,6 +45,7 @@ var searchData=
   ['nsmutableurlrequest_28httpmethod_29',['NSMutableURLRequest(HTTPMethod)',['../categoryNSMutableURLRequest_07HTTPMethod_08.html',1,'']]],
   ['nsmutableurlrequest_28nsaurlrequesthttpbodymultipartformpostformatter_29',['NSMutableURLRequest(NSAURLRequestHTTPBodyMultiPartFormPostFormatter)',['../categoryNSMutableURLRequest_07NSAURLRequestHTTPBodyMultiPartFormPostFormatter_08.html',1,'']]],
   ['nsmutableurlrequest_28properties_29',['NSMutableURLRequest(Properties)',['../categoryNSMutableURLRequest_07Properties_08.html',1,'']]],
+  ['nsnull_28tools_29',['NSNull(Tools)',['../categoryNSNull_07Tools_08.html',1,'']]],
   ['nsnumber_28description_29',['NSNumber(Description)',['../categoryNSNumber_07Description_08.html',1,'']]],
   ['nsnumberformatter_28shortcuts_29',['NSNumberFormatter(Shortcuts)',['../categoryNSNumberFormatter_07Shortcuts_08.html',1,'']]],
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../categoryNSObject_07NSAClass_08.html',1,'']]],

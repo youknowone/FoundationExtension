@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>FoundationExtension: FoundationExtension/NSAttributedString.h Source File</title>
+<title>FoundationExtension: UIAPreparedCellTableView Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -44,8 +44,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
       <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
-      <li class="current"><a href="files.html"><span>Files</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -66,8 +66,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -82,7 +84,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('FoundationExtension_2NSAttributedString_8h_source.html','');});
+$(document).ready(function(){initNavTree('interfaceUIAPreparedCellTableView.html','');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -100,30 +102,85 @@ $(document).ready(function(){initNavTree('FoundationExtension_2NSAttributedStrin
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#properties">Properties</a> &#124;
+<a href="classUIAPreparedCellTableView-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">NSAttributedString.h</div>  </div>
+<div class="title">UIAPreparedCellTableView Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="FoundationExtension_2NSAttributedString_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//  NSAttributedString.h</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  FoundationExtension</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  Created by Jeong YunWon on 12. 10. 31..</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2012 youknowone.org. All rights reserved.</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="categoryNSAttributedString_07Shortcuts_08.html">   19</a></span>&#160;<span class="keyword">@interface </span>NSAttributedString (Shortcuts)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;+ (id)attributedString;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-</div><!-- fragment --></div><!-- contents -->
+
+<p>A table view using rrepared cells instead of data source.  
+ <a href="interfaceUIAPreparedCellTableView.html#details">More...</a></p>
+
+<p><code>#import &lt;<a class="el" href="UIAPreparedCellTableView_8h_source.html">UIAPreparedCellTableView.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:a44c80868281a9430db3f6a5b4e10c671"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceUIAPreparedCellTableView.html#a44c80868281a9430db3f6a5b4e10c671">hasUniqueSection</a></td></tr>
+<tr class="memdesc:a44c80868281a9430db3f6a5b4e10c671"><td class="mdescLeft">&#160;</td><td class="mdescRight">The flag tells cells are sectioned or not.  <a href="#a44c80868281a9430db3f6a5b4e10c671"></a><br/></td></tr>
+<tr class="memitem:a607b9da3fcd0c7cc941554de0d7adebb"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfaceUIAPreparedCellTableView.html#a607b9da3fcd0c7cc941554de0d7adebb">cells</a></td></tr>
+<tr class="memdesc:a607b9da3fcd0c7cc941554de0d7adebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The array of cells or array of arrays of cells to be used.  <a href="#a607b9da3fcd0c7cc941554de0d7adebb"></a><br/></td></tr>
+</table>
+<a name="details" id="details"></a><h2>Detailed Description</h2>
+<div class="textblock"><p>A table view using rrepared cells instead of data source. </p>
+<p>Cells are prepared cells for self-implemented data source protocol. Cells can be grouped by section or not. It is decided by hasUniqueSection. The table view does not reuse any cells by reuse identifier. </p>
+</div><h2>Property Documentation</h2>
+<a class="anchor" id="a607b9da3fcd0c7cc941554de0d7adebb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) cells</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">retain</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The array of cells or array of arrays of cells to be used. </p>
+<p>Array of cells if hasUniqueSection is YES; otherwise Array of arrays of cells. </p>
+
+</div>
+</div>
+<a class="anchor" id="a44c80868281a9430db3f6a5b4e10c671"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (BOOL) hasUniqueSection</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">assign</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The flag tells cells are sectioned or not. </p>
+<p>YES if Cells are not sectioned; otherwise NO; </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>UIKitExtension/<a class="el" href="UIAPreparedCellTableView_8h_source.html">UIAPreparedCellTableView.h</a></li>
+</ul>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a2bad244285ac6d8198735cc6224c7c2.html">FoundationExtension</a></li><li class="navelem"><a class="el" href="FoundationExtension_2NSAttributedString_8h.html">NSAttributedString.h</a></li>
+    <li class="navelem"><a class="el" href="interfaceUIAPreparedCellTableView.html">UIAPreparedCellTableView</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.1.2 </li>

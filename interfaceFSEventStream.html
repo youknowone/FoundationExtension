@@ -414,7 +414,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attempts to register with the FS Events service to receive events per the parameters in the stream. </p>
-<p>This method can only be called once the stream has been scheduled on at least one runloop, via <a class="el" href="">-scheduleWithRunLoop:mode:</a>.</p>
+<p>This method can only be called once the stream has been scheduled on at least one runloop, via <a class="el" href="interfaceFSEventStream.html#aad8916ac1877666f244cf35c406346a4">scheduleWithRunLoop:mode:</a>.</p>
 <p>Once started, the stream can be stopped via FSEventStreamStop(). </p>
 <dl class="section return"><dt>Returns</dt><dd>True if it succeeds, otherwise False if it fails. It ought to always succeed, but in the event it does not then your code should fall back to performing recursive scans of the directories of interest as appropriate. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamStart">FSEventStreamStart</a> </dd></dl>

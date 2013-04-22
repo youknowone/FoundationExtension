@@ -1,7 +1,6 @@
 var interfaceNSATriple =
 [
     [ "initWithFirst:second:third:", "interfaceNSATriple.html#a2c7392e75ace1d35a9211106edcf4d6a", null ],
-    [ "objectAtIndex:", "interfaceNSATriple.html#ab484ba19bcfe8227adb43ce46bb66f5c", null ],
     [ "triple", "interfaceNSATriple.html#a2ade5b9215141dc45aef34f7f42ff4c3", null ],
     [ "tripleWithFirst:second:third:", "interfaceNSATriple.html#a37dd48b6e2c40bf456ef9e83894e1cb2", null ],
     [ "_first", "interfaceNSATriple.html#a83404668cd6ac37cbc80a7ec29419ad7", null ],

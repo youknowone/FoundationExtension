@@ -116,13 +116,18 @@ $(document).ready(function(){initNavTree('UIView_8h_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#if NS_BLOCKS_AVAILABLE</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="categoryUIView_07Animation_08.html">   19</a></span>&#160;<span class="keyword">@interface </span>UIView (Animation)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;- (void)setHidden:(BOOL)hidden animated:(BOOL)animated;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">   19</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23" title="Animation block signature for UIView animation methods.">UIAViewAnimationBlock</a>)();</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="UIView_8h.html#a98e92f80cf92a30c5bcb36455261cd61">   23</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="UIView_8h.html#a98e92f80cf92a30c5bcb36455261cd61" title="Animation completion block signature for UIView animation methods.">UIAViewAnimationCompletionBlock</a>)(BOOL finished);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="categoryUIView_07Animation_08.html">   28</a></span>&#160;<span class="keyword">@interface </span>UIView (Animation)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;+ (void)animateWithDefaultDurationAnimations:(<a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23" title="Animation block signature for UIView animation methods.">UIAViewAnimationBlock</a>)animations;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;- (void)setHidden:(BOOL)hidden animated:(BOOL)animated;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

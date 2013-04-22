@@ -1,10 +1,19 @@
 var dir_989e9cdee22463940a60ca84015bf6c0 =
 [
-    [ "NSAttributedString.h", "UIKitExtension_2NSAttributedString_8h.html", "UIKitExtension_2NSAttributedString_8h" ],
+    [ "NSAttributedString+UIKit.h", "NSAttributedString_09UIKit_8h.html", null ],
+    [ "UIActivityIndicatorView.h", "UIActivityIndicatorView_8h.html", [
+      [ "UIActivityIndicatorView(Property)", "categoryUIActivityIndicatorView_07Property_08.html", "categoryUIActivityIndicatorView_07Property_08" ]
+    ] ],
     [ "UIAlertView.h", "UIAlertView_8h.html", "UIAlertView_8h" ],
+    [ "UIAPlaceholderTextView.h", "UIAPlaceholderTextView_8h.html", [
+      [ "UIAPlaceholderTextView", "interfaceUIAPlaceholderTextView.html", "interfaceUIAPlaceholderTextView" ]
+    ] ],
     [ "UIApplication.h", "UIApplication_8h.html", [
       [ "UIApplication(Dump)", "categoryUIApplication_07Dump_08.html", "categoryUIApplication_07Dump_08" ],
       [ "UIApplication(Shortcuts)", "categoryUIApplication_07Shortcuts_08.html", "categoryUIApplication_07Shortcuts_08" ]
+    ] ],
+    [ "UIAPreparedCellTableView.h", "UIAPreparedCellTableView_8h.html", [
+      [ "UIAPreparedCellTableView", "interfaceUIAPreparedCellTableView.html", "interfaceUIAPreparedCellTableView" ]
     ] ],
     [ "UIAResultDisplayController.h", "UIAResultDisplayController_8h.html", [
       [ "UIADimmingView", "interfaceUIADimmingView.html", "interfaceUIADimmingView" ],

@@ -21,7 +21,7 @@ var NAVTREE =
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
+        [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
@@ -35,10 +35,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"CocoaExtension_2NSAttributedString_8h.html",
-"NSURLRequest_8h_source.html",
-"categoryNSMutableDictionary_07Functional_08.html#a4c2aee03a558d8cedab3df5a08f55226",
-"globals.html"
+"CocoaExtension_8h.html",
+"NSTimer_8h_source.html",
+"categoryNSNull_07Tools_08.html#a7ec334888fc2ac7dee50ef9245d50c5d",
+"interfaceFSEventStream.html#acb5aea73105b017a374e3cec6f23a5fd"
 ];
 
 var navTreeSubIndices = new Array();

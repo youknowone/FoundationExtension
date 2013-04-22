@@ -1,7 +1,10 @@
 var searchData=
 [
+  ['uiactivityindicatorview_2eh',['UIActivityIndicatorView.h',['../UIActivityIndicatorView_8h.html',1,'']]],
   ['uialertview_2eh',['UIAlertView.h',['../UIAlertView_8h.html',1,'']]],
+  ['uiaplaceholdertextview_2eh',['UIAPlaceholderTextView.h',['../UIAPlaceholderTextView_8h.html',1,'']]],
   ['uiapplication_2eh',['UIApplication.h',['../UIApplication_8h.html',1,'']]],
+  ['uiapreparedcelltableview_2eh',['UIAPreparedCellTableView.h',['../UIAPreparedCellTableView_8h.html',1,'']]],
   ['uiaresultdisplaycontroller_2eh',['UIAResultDisplayController.h',['../UIAResultDisplayController_8h.html',1,'']]],
   ['uiatableview_2eh',['UIATableView.h',['../UIATableView_8h.html',1,'']]],
   ['uicolor_2eh',['UIColor.h',['../UIColor_8h.html',1,'']]],

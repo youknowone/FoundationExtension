@@ -9,14 +9,10 @@ var searchData=
   ['classwithutf8name_3a',['classWithUTF8Name:',['../interfaceNSAClass.html#aa477be2523498c9b3225d0858af9a729',1,'NSAClass']]],
   ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c',1,'UIColor(Creations)']]],
   ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb',1,'UIColor(Creations)']]],
-  ['colorwithhtmlcolorname_3a',['colorWithHTMLColorName:',['../categoryUIColor_07HTMLColor_08.html#a389ac696fcac1fd4d7e0672be03586aa',1,'UIColor(HTMLColor)']]],
   ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a0ec63486ee1b05f5d43954450e8dddab',1,'UIColor(HTMLColor)']]],
-  ['colorwithhtmlhexexpression16_3a',['colorWithHTMLHexExpression16:',['../categoryUIColor_07HTMLColor_08.html#ae9b59881e1fec71d53fc54afc3eb4458',1,'UIColor(HTMLColor)']]],
-  ['colorwithhtmlhexexpression16a_3a',['colorWithHTMLHexExpression16a:',['../categoryUIColor_07HTMLColor_08.html#ac08c655397b28a2601013ee774bfc742',1,'UIColor(HTMLColor)']]],
-  ['colorwithhtmlhexexpression32_3a',['colorWithHTMLHexExpression32:',['../categoryUIColor_07HTMLColor_08.html#a1af528bc8d5183c215030011ad5cf0a5',1,'UIColor(HTMLColor)']]],
-  ['colorwithhtmlhexexpression32a_3a',['colorWithHTMLHexExpression32a:',['../categoryUIColor_07HTMLColor_08.html#ac381b1e50d5391a266af667cfd3a573c',1,'UIColor(HTMLColor)']]],
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],
   ['configurationurl',['configurationURL',['../categoryNSString_07NSURL_08.html#a2dbf914ae019ef54413dc9bec7472cd0',1,'NSString(NSURL)']]],
   ['configurationurlwithpath_3a',['configurationURLWithPath:',['../categoryNSURL_07Creations_08.html#a74194a6f81796361a1beff0e776fc7a7',1,'NSURL(Creations)']]],
-  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]]
+  ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]],
+  ['containsobject_3a',['containsObject:',['../protocolNSAArrayLikeDataObject-p.html#aa95b57e6e771a74d1cdba808a90c2577',1,'NSAArrayLikeDataObject-p']]]
 ];

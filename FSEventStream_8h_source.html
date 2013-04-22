@@ -112,39 +112,39 @@ $(document).ready(function(){initNavTree('FSEventStream_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  Copyright (c) 2012 youknowone.org. All rights reserved.</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="code" href="protocolFSEventStreamDelegate-p.html">   20</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocolFSEventStreamDelegate-p.html" title="FSEventSteam delegate.">FSEventStreamDelegate</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;- (void)eventStream:(<a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a> *)eventStream path:(NSString *)path event:(FSEventStreamEventFlags)eventFlags id:(FSEventStreamEventId)eventId;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html">   39</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a> : NSObject {</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3">   40</a></span>&#160;    FSEventStreamRef <a class="code" href="interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3">_stream</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa">   41</a></span>&#160;    id&lt;FSEventStreamDelegate&gt; <a class="code" href="interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa">_delegate</a>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a147b74e84ad11f2034ca368390febaa0">   43</a></span>&#160;    NSUInteger <a class="code" href="interfaceFSEventStream.html#a147b74e84ad11f2034ca368390febaa0">_managedRetainCount</a>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#ac4eefa54eed1b0da731aeff503b0a8fc">   47</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) id&lt;FSEventStreamDelegate&gt; delegate;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#ab05ac605476cc94a97ddc2ea7db15962">   49</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) FSEventStreamEventId latestEventId;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;- (id)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;+ (id)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;+ (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;- (void)invalidate;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;- (BOOL)start;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;- (void)stop;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;- (FSEventStreamEventId)flushAsync;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;- (void)flushSync;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">@class</span> <a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="code" href="protocolFSEventStreamDelegate-p.html">   21</a></span>&#160;<span class="keyword">@protocol </span><a class="code" href="protocolFSEventStreamDelegate-p.html" title="FSEventSteam delegate.">FSEventStreamDelegate</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;- (void)eventStream:(<a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a> *)eventStream path:(NSString *)path event:(FSEventStreamEventFlags)eventFlags id:(FSEventStreamEventId)eventId;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html">   40</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceFSEventStream.html" title="FSEventSteam object wrapper.">FSEventStream</a> : NSObject {</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3">   41</a></span>&#160;    FSEventStreamRef <a class="code" href="interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3">_stream</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa">   42</a></span>&#160;    id&lt;FSEventStreamDelegate&gt; <a class="code" href="interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa">_delegate</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#a147b74e84ad11f2034ca368390febaa0">   44</a></span>&#160;    NSUInteger <a class="code" href="interfaceFSEventStream.html#a147b74e84ad11f2034ca368390febaa0">_managedRetainCount</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#ac4eefa54eed1b0da731aeff503b0a8fc">   48</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) id&lt;FSEventStreamDelegate&gt; delegate;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="interfaceFSEventStream.html#ab05ac605476cc94a97ddc2ea7db15962">   50</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) FSEventStreamEventId latestEventId;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (id)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;+ (id)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;+ (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(<span class="keywordtype">id</span>)delegate;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (void)invalidate;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;- (BOOL)start;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;- (void)stop;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;- (FSEventStreamEventId)flushAsync;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;- (void)flushSync;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

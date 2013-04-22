@@ -1,7 +1,6 @@
 var interfaceNSATuple =
 [
     [ "initWithFirst:second:", "interfaceNSATuple.html#a3be13c7ef1f57b5a4b66ba86ddcb2e18", null ],
-    [ "objectAtIndex:", "interfaceNSATuple.html#a86576e2cca5a9be14fc66591b5acb7cb", null ],
     [ "tuple", "interfaceNSATuple.html#a93b9ba4f09e28f22bae82ab84b72fdf1", null ],
     [ "tupleWithFirst:second:", "interfaceNSATuple.html#a965fca01afa981949fba7b711d0f81ab", null ],
     [ "_first", "interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032", null ],

@@ -3,12 +3,19 @@ var hierarchy =
     [ "FSEventStream", "interfaceFSEventStream.html", null ],
     [ "<FSEventStreamDelegate>", "protocolFSEventStreamDelegate-p.html", null ],
     [ "NSAArray", "interfaceNSAArray.html", null ],
+    [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", [
+      [ "NSATriple", "interfaceNSATriple.html", [
+        [ "NSAMutableTriple", "interfaceNSAMutableTriple.html", null ]
+      ] ],
+      [ "NSATuple", "interfaceNSATuple.html", [
+        [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", null ]
+      ] ]
+    ] ],
     [ "NSAClass", "interfaceNSAClass.html", null ],
     [ "NSADictionary", "interfaceNSADictionary.html", null ],
     [ "NSAMethod", "interfaceNSAMethod.html", null ],
     [ "NSAMutableArray", "interfaceNSAMutableArray.html", null ],
     [ "NSAMutableDictionary", "interfaceNSAMutableDictionary.html", [
-      [ "NSAttributedStringAttributeDictionary", "interfaceNSAttributedStringAttributeDictionary.html", null ],
       [ "NSAttributedStringAttributeDictionary", "interfaceNSAttributedStringAttributeDictionary.html", null ]
     ] ],
     [ "NSAMutableOrderedDictionary", "interfaceNSAMutableOrderedDictionary.html", null ],
@@ -21,18 +28,13 @@ var hierarchy =
     [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", null ],
     [ "NSArray(Shortcuts)", "categoryNSArray_07Shortcuts_08.html", null ],
     [ "NSAString", "interfaceNSAString.html", null ],
-    [ "NSATriple", "interfaceNSATriple.html", [
-      [ "NSAMutableTriple", "interfaceNSAMutableTriple.html", null ]
-    ] ],
     [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", null ],
-    [ "NSATuple", "interfaceNSATuple.html", [
-      [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", null ]
-    ] ],
     [ "NSAURLRequestHTTPBodyMultiPartFormPostFormatter", "interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html", null ],
     [ "NSBundle(Shortcuts)", "categoryNSBundle_07Shortcuts_08.html", null ],
     [ "NSData(CommonCrypto)", "categoryNSData_07CommonCrypto_08.html", null ],
     [ "NSData(CommonCryptor)", "categoryNSData_07CommonCryptor_08.html", null ],
     [ "NSData(CommonCryptorString)", "categoryNSData_07CommonCryptorString_08.html", null ],
+    [ "NSData(NSStringUTF8)", "categoryNSData_07NSStringUTF8_08.html", null ],
     [ "NSData(NSURL_deprecated)", "categoryNSData_07NSURL__deprecated_08.html", null ],
     [ "NSData(NSURLRequest)", "categoryNSData_07NSURLRequest_08.html", null ],
     [ "NSData(Serialization)", "categoryNSData_07Serialization_08.html", null ],
@@ -42,7 +44,6 @@ var hierarchy =
     [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", null ],
     [ "NSDictionary(NSURLRequest)", "categoryNSDictionary_07NSURLRequest_08.html", null ],
     [ "NSDictionary(Shortcuts)", "categoryNSDictionary_07Shortcuts_08.html", null ],
-    [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", null ],
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", null ],
     [ "NSMutableArray(NSNumber)", "categoryNSMutableArray_07NSNumber_08.html", null ],
     [ "NSMutableAttributedString(AttributeProperties)", "categoryNSMutableAttributedString_07AttributeProperties_08.html", null ],
@@ -50,6 +51,7 @@ var hierarchy =
     [ "NSMutableURLRequest(HTTPMethod)", "categoryNSMutableURLRequest_07HTTPMethod_08.html", null ],
     [ "NSMutableURLRequest(NSAURLRequestHTTPBodyMultiPartFormPostFormatter)", "categoryNSMutableURLRequest_07NSAURLRequestHTTPBodyMultiPartFormPostFormatter_08.html", null ],
     [ "NSMutableURLRequest(Properties)", "categoryNSMutableURLRequest_07Properties_08.html", null ],
+    [ "NSNull(Tools)", "categoryNSNull_07Tools_08.html", null ],
     [ "NSNumber(Description)", "categoryNSNumber_07Description_08.html", null ],
     [ "NSNumberFormatter(Shortcuts)", "categoryNSNumberFormatter_07Shortcuts_08.html", null ],
     [ "NSObject(NSAClass)", "categoryNSObject_07NSAClass_08.html", null ],
@@ -72,13 +74,16 @@ var hierarchy =
     [ "NSURLRequest(Creations_deprecated)", "categoryNSURLRequest_07Creations__deprecated_08.html", null ],
     [ "NSURLRequest(Properties)", "categoryNSURLRequest_07Properties_08.html", null ],
     [ "UIAColorComponents", "interfaceUIAColorComponents.html", null ],
+    [ "UIActivityIndicatorView(Property)", "categoryUIActivityIndicatorView_07Property_08.html", null ],
     [ "UIADimmingView", "interfaceUIADimmingView.html", null ],
     [ "<UIADimmingViewDelegate>", "protocolUIADimmingViewDelegate-p.html", [
       [ "UIAResultDisplayController", "interfaceUIAResultDisplayController.html", null ]
     ] ],
     [ "UIAlertView(Shortcuts)", "categoryUIAlertView_07Shortcuts_08.html", null ],
+    [ "UIAPlaceholderTextView", "interfaceUIAPlaceholderTextView.html", null ],
     [ "UIApplication(Dump)", "categoryUIApplication_07Dump_08.html", null ],
     [ "UIApplication(Shortcuts)", "categoryUIApplication_07Shortcuts_08.html", null ],
+    [ "UIAPreparedCellTableView", "interfaceUIAPreparedCellTableView.html", null ],
     [ "<UIAResultDisplayDelegate>", "protocolUIAResultDisplayDelegate-p.html", null ],
     [ "UIATableViewCellCopyable", "interfaceUIATableViewCellCopyable.html", null ],
     [ "<UIATableViewCellCopyableDelegate>", "protocolUIATableViewCellCopyableDelegate-p.html", null ],

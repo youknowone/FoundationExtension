@@ -11,8 +11,8 @@ var searchData=
   ['nsaobjectunaryoperatorwithindex',['NSAObjectUnaryOperatorWithIndex',['../NSAFunctional_8h.html#a3237f3e0cee7978a58686d196f035b77',1,'NSAFunctional.h']]],
   ['nsaobjectunaryoperatorwithkey',['NSAObjectUnaryOperatorWithKey',['../NSAFunctional_8h.html#a94132ce520a4fa95cf0c485c8a763865',1,'NSAFunctional.h']]],
   ['nsatimerblock',['NSATimerBlock',['../NSTimer_8h.html#acaca8cbb3ace3290cd07a6a0c3bcbdf6',1,'NSTimer.h']]],
-  ['nsligaturetype',['NSLigatureType',['../CocoaExtension_2NSAttributedString_8h.html#a8799354ea0947b621292a96bd39eb236',1,'NSLigatureType():&#160;NSAttributedString.h'],['../UIKitExtension_2NSAttributedString_8h.html#a8799354ea0947b621292a96bd39eb236',1,'NSLigatureType():&#160;NSAttributedString.h']]],
-  ['nsunderlinestyle',['NSUnderlineStyle',['../CocoaExtension_2NSAttributedString_8h.html#a1365665cb925cee05ec93046c12b1b2f',1,'NSUnderlineStyle():&#160;NSAttributedString.h'],['../UIKitExtension_2NSAttributedString_8h.html#a1365665cb925cee05ec93046c12b1b2f',1,'NSUnderlineStyle():&#160;NSAttributedString.h']]],
-  ['nsverticalglyphform',['NSVerticalGlyphForm',['../CocoaExtension_2NSAttributedString_8h.html#ac54573c8738e1cea34c6eaba9a022339',1,'NSVerticalGlyphForm():&#160;NSAttributedString.h'],['../UIKitExtension_2NSAttributedString_8h.html#ac54573c8738e1cea34c6eaba9a022339',1,'NSVerticalGlyphForm():&#160;NSAttributedString.h']]],
-  ['nswritingdirectionattributes',['NSWritingDirectionAttributes',['../CocoaExtension_2NSAttributedString_8h.html#a9386588bbd2a6a787cbccf634982debc',1,'NSAttributedString.h']]]
+  ['nsligaturetype',['NSLigatureType',['../NSAttributedString_09Cocoa_8h.html#a8799354ea0947b621292a96bd39eb236',1,'NSAttributedString+Cocoa.h']]],
+  ['nsunderlinestyle',['NSUnderlineStyle',['../NSAttributedString_09Cocoa_8h.html#a1365665cb925cee05ec93046c12b1b2f',1,'NSAttributedString+Cocoa.h']]],
+  ['nsverticalglyphform',['NSVerticalGlyphForm',['../NSAttributedString_09Cocoa_8h.html#ac54573c8738e1cea34c6eaba9a022339',1,'NSAttributedString+Cocoa.h']]],
+  ['nswritingdirectionattributes',['NSWritingDirectionAttributes',['../NSAttributedString_09Cocoa_8h.html#a9386588bbd2a6a787cbccf634982debc',1,'NSAttributedString+Cocoa.h']]]
 ];

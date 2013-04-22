@@ -1,5 +1,5 @@
 var categoryNSMutableArray_07NSNumber_08 =
 [
-    [ "addInteger:", "categoryNSMutableArray_07NSNumber_08.html#a5305f42806cf55026704b0c427a14d06", null ],
-    [ "insertInteger:atIndex:", "categoryNSMutableArray_07NSNumber_08.html#a23cc01295f42cc02b442bfe57f18199f", null ]
+    [ "addInteger:", "categoryNSMutableArray_07NSNumber_08.html#a41d4e1964c00fcb8c627a46cd2bfa356", null ],
+    [ "insertInteger:atIndex:", "categoryNSMutableArray_07NSNumber_08.html#a977964fa205613a7fc1c0e4ec77f9e84", null ]
 ];

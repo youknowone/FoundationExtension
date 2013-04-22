@@ -128,38 +128,47 @@ $(document).ready(function(){initNavTree('NSString_8h_source.html','');});
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="code" href="categoryNSString_07Shortcuts_08.html">   68</a></span>&#160;<span class="keyword">@interface </span>NSString (Shortcuts)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;- (BOOL)hasSubstring:(NSString *)aString;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;- (NSString *)format:(<span class="keywordtype">id</span>)first, ...;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;- (NSString *)format0:(<span class="keywordtype">id</span>)dummyLikeNil, ...;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;- (NSRange)range;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno"><a class="code" href="categoryNSString_07NSUTF8StringEncoding_08.html">  139</a></span>&#160;<span class="keyword">@interface </span>NSString (NSUTF8StringEncoding)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;+ (NSString *)stringWithUTF8Data:(NSData *)data;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;- (NSData *)dataUsingUTF8Encoding;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="code" href="categoryNSString_07Shortcuts_08.html">   69</a></span>&#160;<span class="keyword">@interface </span>NSString (Shortcuts)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (BOOL)hasSubstring:(NSString *)aString;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;- (NSString *)format:(<span class="keywordtype">id</span>)first, ...;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (NSString *)format0:(<span class="keywordtype">id</span>)dummyLikeNil, ...;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;- (NSRange)range;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from length:(NSUInteger)length;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;- (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="categoryNSString_07NSUTF8StringEncoding_08.html">  141</a></span>&#160;<span class="keyword">@interface </span>NSString (NSUTF8StringEncoding)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;+ (NSString *)stringWithUTF8Data:(NSData *)data;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;- (NSData *)dataUsingUTF8Encoding;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="code" href="categoryNSString_07Evaluation_08.html">  173</a></span>&#160;<span class="keyword">@interface </span>NSString (Evaluation)</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;- (NSInteger)integerValueBase:(NSInteger)radix;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;- (NSInteger)hexadecimalValue;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="code" href="categoryNSString_07Evaluation_08.html">  175</a></span>&#160;<span class="keyword">@interface </span>NSString (Evaluation)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;- (NSInteger)integerValueBase:(NSInteger)radix;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;- (NSInteger)hexadecimalValue;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno"><a class="code" href="categoryNSData_07NSStringUTF8_08.html">  202</a></span>&#160;<span class="keyword">@interface </span>NSData (NSStringUTF8)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno"><a class="code" href="categoryNSData_07NSStringUTF8_08.html#afabdd69658a9e257d30c0fe13a5fe703">  209</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString *stringUsingUTF8Encoding;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

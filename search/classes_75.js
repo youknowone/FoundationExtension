@@ -1,11 +1,14 @@
 var searchData=
 [
   ['uiacolorcomponents',['UIAColorComponents',['../interfaceUIAColorComponents.html',1,'']]],
+  ['uiactivityindicatorview_28property_29',['UIActivityIndicatorView(Property)',['../categoryUIActivityIndicatorView_07Property_08.html',1,'']]],
   ['uiadimmingview',['UIADimmingView',['../interfaceUIADimmingView.html',1,'']]],
   ['uiadimmingviewdelegate_2dp',['UIADimmingViewDelegate-p',['../protocolUIADimmingViewDelegate-p.html',1,'']]],
   ['uialertview_28shortcuts_29',['UIAlertView(Shortcuts)',['../categoryUIAlertView_07Shortcuts_08.html',1,'']]],
+  ['uiaplaceholdertextview',['UIAPlaceholderTextView',['../interfaceUIAPlaceholderTextView.html',1,'']]],
   ['uiapplication_28dump_29',['UIApplication(Dump)',['../categoryUIApplication_07Dump_08.html',1,'']]],
   ['uiapplication_28shortcuts_29',['UIApplication(Shortcuts)',['../categoryUIApplication_07Shortcuts_08.html',1,'']]],
+  ['uiapreparedcelltableview',['UIAPreparedCellTableView',['../interfaceUIAPreparedCellTableView.html',1,'']]],
   ['uiaresultdisplaycontroller',['UIAResultDisplayController',['../interfaceUIAResultDisplayController.html',1,'']]],
   ['uiaresultdisplaydelegate_2dp',['UIAResultDisplayDelegate-p',['../protocolUIAResultDisplayDelegate-p.html',1,'']]],
   ['uiatableviewcellcopyable',['UIATableViewCellCopyable',['../interfaceUIATableViewCellCopyable.html',1,'']]],

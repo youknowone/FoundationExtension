@@ -16,6 +16,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSString(CommonCrypto)", "categoryNSString_07CommonCrypto_08.html", "categoryNSString_07CommonCrypto_08" ]
     ] ],
     [ "NSADataObject.h", "NSADataObject_8h.html", [
+      [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", "protocolNSAArrayLikeDataObject-p" ],
       [ "NSATuple", "interfaceNSATuple.html", "interfaceNSATuple" ],
       [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", "interfaceNSAMutableTuple" ],
       [ "NSATriple", "interfaceNSATriple.html", "interfaceNSATriple" ],
@@ -41,7 +42,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSAString", "interfaceNSAString.html", "interfaceNSAString" ],
       [ "NSAMutableString", "interfaceNSAMutableString.html", "interfaceNSAMutableString" ]
     ] ],
-    [ "NSAttributedString.h", "FoundationExtension_2NSAttributedString_8h.html", [
+    [ "NSAttributedString.h", "NSAttributedString_8h.html", [
       [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", "categoryNSAttributedString_07Shortcuts_08" ]
     ] ],
     [ "NSBundle.h", "NSBundle_8h.html", "NSBundle_8h" ],
@@ -55,8 +56,9 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSDictionary(Shortcuts)", "categoryNSDictionary_07Shortcuts_08.html", "categoryNSDictionary_07Shortcuts_08" ],
       [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", "categoryNSDictionary_07NSData_08" ]
     ] ],
-    [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", [
-      [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", "categoryNSJSONSerialization_07Shortcuts_08" ]
+    [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", null ],
+    [ "NSNull.h", "NSNull_8h.html", [
+      [ "NSNull(Tools)", "categoryNSNull_07Tools_08.html", "categoryNSNull_07Tools_08" ]
     ] ],
     [ "NSNumber.h", "NSNumber_8h.html", [
       [ "NSNumber(Description)", "categoryNSNumber_07Description_08.html", "categoryNSNumber_07Description_08" ],
@@ -73,7 +75,8 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSString(Creations)", "categoryNSString_07Creations_08.html", "categoryNSString_07Creations_08" ],
       [ "NSString(Shortcuts)", "categoryNSString_07Shortcuts_08.html", "categoryNSString_07Shortcuts_08" ],
       [ "NSString(NSUTF8StringEncoding)", "categoryNSString_07NSUTF8StringEncoding_08.html", "categoryNSString_07NSUTF8StringEncoding_08" ],
-      [ "NSString(Evaluation)", "categoryNSString_07Evaluation_08.html", "categoryNSString_07Evaluation_08" ]
+      [ "NSString(Evaluation)", "categoryNSString_07Evaluation_08.html", "categoryNSString_07Evaluation_08" ],
+      [ "NSData(NSStringUTF8)", "categoryNSData_07NSStringUTF8_08.html", "categoryNSData_07NSStringUTF8_08" ]
     ] ],
     [ "NSStringEncoding.h", "NSStringEncoding_8h.html", "NSStringEncoding_8h" ],
     [ "NSTimer.h", "NSTimer_8h.html", "NSTimer_8h" ],

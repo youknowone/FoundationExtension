@@ -104,6 +104,7 @@ $(document).ready(function(){initNavTree('categoryUIView_07Animation_08.html',''
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="categoryUIView_07Animation_08-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">UIView(Animation) Category Reference</div>  </div>
@@ -119,10 +120,42 @@ $(document).ready(function(){initNavTree('categoryUIView_07Animation_08.html',''
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae204515ffc0d43ff9efa5688ea3cb0bd"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIView_07Animation_08.html#ae204515ffc0d43ff9efa5688ea3cb0bd">setHidden:animated:</a></td></tr>
 <tr class="memdesc:ae204515ffc0d43ff9efa5688ea3cb0bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set whether the view is hidden.  <a href="#ae204515ffc0d43ff9efa5688ea3cb0bd"></a><br/></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a22949fb65f0d780a571bfe8b6f343b4c"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="categoryUIView_07Animation_08.html#a22949fb65f0d780a571bfe8b6f343b4c">animateWithDefaultDurationAnimations:</a></td></tr>
+<tr class="memdesc:a22949fb65f0d780a571bfe8b6f343b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Animate changes to one or more views using the UIKit deafult animation duration <a class="el" href="UIView_8h.html#a410479f6c0c0e0766b2a1a8ce31a872a">UIAViewAnimationDefaultDuraton</a>.  <a href="#a22949fb65f0d780a571bfe8b6f343b4c"></a><br/></td></tr>
 </table>
 <a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>UIView animation shortcuts. </p>
 </div><h2>Member Function Documentation</h2>
+<a class="anchor" id="a22949fb65f0d780a571bfe8b6f343b4c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (void) animateWithDefaultDurationAnimations: </td>
+          <td></td>
+          <td class="paramtype">(<a class="el" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">UIAViewAnimationBlock</a>)&#160;</td>
+          <td class="paramname"><em>animations</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Animate changes to one or more views using the UIKit deafult animation duration <a class="el" href="UIView_8h.html#a410479f6c0c0e0766b2a1a8ce31a872a">UIAViewAnimationDefaultDuraton</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animations</td><td>A block object containing the changes to commit to the views. This is where you programmatically change any animatable properties of the views in your view hierarchy. This block takes no parameters and has no return value. This parameter must not be NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<pre class="fragment">This method performs the specified animations immediately using the UIViewAnimationOptionCurveEaseInOut and UIViewAnimationOptionTransitionNone animation options.
+During an animation, user interactions are temporarily disabled for the views being animated. (Prior to iOS 5, user interactions are disabled for the entire application.)
+</pre> <dl class="section see"><dt>See Also</dt><dd><a href="http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/UIView/UIView.html#//apple_ref/occ/clm/UIView/animateWithDuration:animations:">animateWithDuration:animations:</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae204515ffc0d43ff9efa5688ea3cb0bd"></a>
 <div class="memitem">
 <div class="memproto">

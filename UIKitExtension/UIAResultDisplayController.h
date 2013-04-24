@@ -181,8 +181,8 @@
 /*!
  *  @brief Asks the delegate if the navigation bar should be hidden.
  *  @param controller The result display controller which the receiver is the delegate.
- *  @details Default is YES. If YES. This affect the navigation bar of contents view controller's navigation controller.
  *  @return YES if the display controller should hide its navigation bar when active becomes YES, otherwise NO.
+ *  @details Default is YES. If YES, this affect the navigation bar of contents view controller's navigation controller.
  */
 - (BOOL)resultDisplayControllerHidesNavigationBar:(UIAResultDisplayController *)controller;
 

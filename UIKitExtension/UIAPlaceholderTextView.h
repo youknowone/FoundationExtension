@@ -7,7 +7,7 @@
 //
 
 /*!
- *  @brief UITextView with placeholder
+ *  @brief UITextView with placeholder.
  */
 @interface UIAPlaceholderTextView : UITextView {
     UITextView *_placeholderTextView;

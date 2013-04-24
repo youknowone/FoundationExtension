@@ -181,6 +181,12 @@
 		38C98B34161ADAD700C4A389 /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
 		38C98B54161AE30300C4A389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38C98B59161AE30300C4A389 /* UIKitExtension.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38C98B58161AE30300C4A389 /* UIKitExtension.h */; };
+		38D930E81726C9B400BD0938 /* NSAImageWell.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D930E61726C9B400BD0938 /* NSAImageWell.h */; };
+		38D930E91726C9B400BD0938 /* NSAImageWell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D930E71726C9B400BD0938 /* NSAImageWell.m */; };
+		38D930EC1726CEC300BD0938 /* NSImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D930EA1726CEC200BD0938 /* NSImage.h */; };
+		38D930ED1726CEC300BD0938 /* NSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D930EB1726CEC200BD0938 /* NSImage.m */; };
+		38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D930EE1726EDD200BD0938 /* NSPasteboard.h */; };
+		38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D930EF1726EDD200BD0938 /* NSPasteboard.m */; };
 		38E48D93167FB28700BD4F6D /* UIATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E48D92167FB28700BD4F6D /* UIATableView.m */; };
 		38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B034163CF2B1005584CD /* CocoaExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38EF66AF16AEEB8100781497 /* UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38EF66AE16AEEB8100781497 /* UITableView.m */; };
@@ -416,6 +422,12 @@
 		38C98B53161AE30300C4A389 /* libUIKitExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUIKitExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C98B57161AE30300C4A389 /* UIKitExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtension-Prefix.pch"; sourceTree = "<group>"; };
 		38C98B58161AE30300C4A389 /* UIKitExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitExtension.h; sourceTree = "<group>"; };
+		38D930E61726C9B400BD0938 /* NSAImageWell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAImageWell.h; sourceTree = "<group>"; };
+		38D930E71726C9B400BD0938 /* NSAImageWell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAImageWell.m; sourceTree = "<group>"; };
+		38D930EA1726CEC200BD0938 /* NSImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSImage.h; sourceTree = "<group>"; };
+		38D930EB1726CEC200BD0938 /* NSImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSImage.m; sourceTree = "<group>"; };
+		38D930EE1726EDD200BD0938 /* NSPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPasteboard.h; sourceTree = "<group>"; };
+		38D930EF1726EDD200BD0938 /* NSPasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPasteboard.m; sourceTree = "<group>"; };
 		38E48D91167FB28700BD4F6D /* UIATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIATableView.h; sourceTree = "<group>"; };
 		38E48D92167FB28700BD4F6D /* UIATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIATableView.m; sourceTree = "<group>"; };
 		38EF66AD16AEEB8100781497 /* UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableView.h; sourceTree = "<group>"; };
@@ -620,8 +632,14 @@
 				38B0C74516414B1D0044C73C /* NSAttributedString+Cocoa.m */,
 				38485C4F170F14820001A99D /* NSGeometry.h */,
 				38485C50170F14820001A99D /* NSGeometry.m */,
+				38D930EA1726CEC200BD0938 /* NSImage.h */,
+				38D930EB1726CEC200BD0938 /* NSImage.m */,
+				38D930EE1726EDD200BD0938 /* NSPasteboard.h */,
+				38D930EF1726EDD200BD0938 /* NSPasteboard.m */,
 				38FCECDB16590A1100D3D0F0 /* NSTextView.h */,
 				38FCECDC16590A1100D3D0F0 /* NSTextView.m */,
+				38D930E61726C9B400BD0938 /* NSAImageWell.h */,
+				38D930E71726C9B400BD0938 /* NSAImageWell.m */,
 			);
 			path = CocoaExtension;
 			sourceTree = "<group>";
@@ -921,6 +939,9 @@
 				3877F44A16A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
 				387B1EB616EBD0F50059722B /* NSNumber.h in Headers */,
 				38485C51170F14820001A99D /* NSGeometry.h in Headers */,
+				38D930E81726C9B400BD0938 /* NSAImageWell.h in Headers */,
+				38D930EC1726CEC300BD0938 /* NSImage.h in Headers */,
+				38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1286,6 +1307,9 @@
 				3877F44C16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				387B1EB816EBD0F50059722B /* NSNumber.m in Sources */,
 				38485C52170F14820001A99D /* NSGeometry.m in Sources */,
+				38D930E91726C9B400BD0938 /* NSAImageWell.m in Sources */,
+				38D930ED1726CEC300BD0938 /* NSImage.m in Sources */,
+				38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

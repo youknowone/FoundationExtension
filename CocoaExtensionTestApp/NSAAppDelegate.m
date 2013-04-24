@@ -11,6 +11,7 @@
 @implementation NSAAppDelegate
 @synthesize window=_window;
 @synthesize textView=_textView;
+@synthesize imageWell=_imageWell;
 
 - (void)dealloc
 {
@@ -21,6 +22,7 @@
 {
     // Insert code here to initialize your application
     self.textView.placeholderString = @"Hi! This is place holder string, to test long long message drawing!";
+    self.imageWell.acceptsStringDragging = YES;
 }
 
 @end

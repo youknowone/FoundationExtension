@@ -17,7 +17,6 @@
 
 @implementation NSAImageWell
 
-@synthesize imageURL=_imageURL;
 @synthesize acceptsStringDragging=_acceptsStringDragging;
 
 - (void)_NSAImageWellInit {
@@ -62,6 +61,17 @@
     self->_imageWellFlags.delegateDidDraggingExited = [delegate respondsToSelector:@selector(imageWell:didDraggingExited:)];
     self->_imageWellFlags.delegateWillReceiveDragging = [delegate respondsToSelector:@selector(imageWell:willReceiveDragging:)];
     self->_imageWellFlags.delegateDidReceiveDragging = [delegate respondsToSelector:@selector(imageWell:didReceiveDragging:)];
+}
+
+- (NSURL *)imageURL {
+    return self->_imageURL;
+}
+
+- (void)setImageURL:(NSURL *)imageURL {
+    if (self->_imageURL == imageURL) return;
+    [self->_imageURL release];
+    self->_imageURL = [imageURL copy];
+    self.image = [NSImage imageByReferencingURL:imageURL];
 }
 
 #pragma mark - NSDraggingDestination
@@ -156,7 +166,8 @@ reject:
         }
         if (image != nil) {
             self.image = image;
-            self.imageURL = URL;
+            [self->_imageURL release];
+            self->_imageURL = [URL copy];
             if (self->_imageWellFlags.delegateDidReceiveDragging) {
                 [self->_delegate imageWell:self didReceiveDragging:sender];
             }

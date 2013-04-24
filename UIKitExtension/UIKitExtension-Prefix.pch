@@ -3,6 +3,7 @@
 //
 
 #ifdef __OBJC__
+    #import <cdebug/debug.h>
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif

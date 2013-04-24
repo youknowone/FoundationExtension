@@ -3,6 +3,7 @@
 //
 
 #ifdef __OBJC__
+    #import <cdebug/debug.h>
     #import <FoundationExtension/FoundationExtension.h>
     #import <Cocoa/Cocoa.h>
 #endif

@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
-
 /*!
  *  @file
  *  @brief [NSTextView][0] extension.

@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <cdebug/debug.h>
-
 #import "NSArray.h"
 
 #import "UIAPreparedCellTableView.h"

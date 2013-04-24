@@ -96,11 +96,32 @@
 - (NSAMethod *)methodObjectForSelector:(SEL)selector;
 
 /*!
+ *  @brief Returns class Method from given selector;
+ *  @see [class_getClassMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
+ */
+- (Method)classMethodForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns class Method from given selector;
+ *  @see [class_getClassMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
+ */
+- (NSAMethod *)classMethodObjectForSelector:(SEL)selector;
+
+/*!
  *  @brief Returns IMP from given method
  *  @see [class_getMethodImplementation][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getMethodImplementation
  */
 - (IMP)methodImplementationForSelector:(SEL)selector;
+
+/*!
+ *  @brief Adds a new method to a class with a given name and implementation.
+ *  @see [class_addMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
+ */
+- (void)addMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
 
 @end
 

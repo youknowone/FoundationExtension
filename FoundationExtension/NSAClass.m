@@ -70,8 +70,20 @@
     return [NSAMethod methodWithMethod:class_getInstanceMethod(self->_class, selector)];
 }
 
+- (Method)classMethodForSelector:(SEL)selector {
+    return class_getClassMethod(self->_class, selector);
+}
+
+- (NSAMethod *)classMethodObjectForSelector:(SEL)selector {
+    return [NSAMethod methodWithMethod:class_getClassMethod(self->_class, selector)];
+}
+
 - (IMP)methodImplementationForSelector:(SEL)selector {
     return class_getMethodImplementation(self->_class, selector);
+}
+
+- (void)addMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes {
+    class_addMethod(self->_class, selector, implementation, implementationTypes.UTF8String);
 }
 
 @end

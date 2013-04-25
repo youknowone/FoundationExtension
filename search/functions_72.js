@@ -1,6 +1,7 @@
 var searchData=
 [
   ['range',['range',['../categoryNSString_07Shortcuts_08.html#a7d28df22921cd927304a7d672f78669f',1,'NSString(Shortcuts)']]],
+  ['readobjectforclass_3aoptions_3a',['readObjectForClass:options:',['../categoryNSPasteboard_07Shortcuts_08.html#adde358f1b39bd5b4ea34cb4dc43ea1fc',1,'NSPasteboard(Shortcuts)']]],
   ['reduce_3a',['reduce:',['../categoryNSArray_07Functional_08.html#aae42c75e7a333accea5126365f081e0d',1,'NSArray(Functional)']]],
   ['reduce_3ainitialobject_3a',['reduce:initialObject:',['../categoryNSArray_07Functional_08.html#a84b8e51617277974f737d44a54462a30',1,'NSArray(Functional)']]],
   ['reloadresult',['reloadResult',['../interfaceUIAResultDisplayController.html#a3e78fff5c538adac3e3b801a51ff8e13',1,'UIAResultDisplayController']]],

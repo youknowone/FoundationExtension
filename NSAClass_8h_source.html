@@ -147,31 +147,37 @@ $(document).ready(function(){initNavTree('NSAClass_8h_source.html','');});
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;- (<a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> *)methodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;- (Method)classMethodForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> (ClassShortcuts)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;- (<a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> *)classMethodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;- (id)<a class="code" href="interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570" title="Allocator.">alloc</a>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;- (id)allocWithZone:(NSZone *)zone;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html">  132</a></span>&#160;<span class="keyword">@interface </span>NSObject (<a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a>)</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd">  137</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> *classObject;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html">  144</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> : NSObject {</div>
-<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  145</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;}</div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  148</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
-<div class="line"><a name="l00150"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  150</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;- (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;- (void)addMethodForSelector:(<span class="keywordtype">SEL</span>)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> (ClassShortcuts)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;- (id)<a class="code" href="interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570" title="Allocator.">alloc</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;- (id)allocWithZone:(NSZone *)zone;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html">  153</a></span>&#160;<span class="keyword">@interface </span>NSObject (<a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a>)</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd">  158</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) <a class="code" href="interfaceNSAClass.html" title="Object wrapper for runtime Class.">NSAClass</a> *classObject;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html">  165</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html" title="Object wrapper for Method.">NSAMethod</a> : NSObject {</div>
+<div class="line"><a name="l00166"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  166</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;}</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  169</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="code" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  171</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

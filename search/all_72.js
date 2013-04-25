@@ -3,6 +3,7 @@ var searchData=
   ['readme',['README',['../md_README.html',1,'']]],
   ['range',['range',['../categoryNSString_07Shortcuts_08.html#a7d28df22921cd927304a7d672f78669f',1,'NSString(Shortcuts)']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
+  ['readobjectforclass_3aoptions_3a',['readObjectForClass:options:',['../categoryNSPasteboard_07Shortcuts_08.html#adde358f1b39bd5b4ea34cb4dc43ea1fc',1,'NSPasteboard(Shortcuts)']]],
   ['red',['red',['../interfaceUIAColorComponents.html#a010b88e1c2cd78cb25df0c52e7334543',1,'UIAColorComponents']]],
   ['reduce_3a',['reduce:',['../categoryNSArray_07Functional_08.html#aae42c75e7a333accea5126365f081e0d',1,'NSArray(Functional)']]],
   ['reduce_3ainitialobject_3a',['reduce:initialObject:',['../categoryNSArray_07Functional_08.html#a84b8e51617277974f737d44a54462a30',1,'NSArray(Functional)']]],

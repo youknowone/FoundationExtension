@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['acceptsstringdragging',['acceptsStringDragging',['../interfaceNSAImageWell.html#a6b4571ca90399baa151eac0d4bceff95',1,'NSAImageWell']]],
   ['active',['active',['../interfaceUIAResultDisplayController.html#adbb5d35ca67d7243f6c451060bf41e23',1,'UIAResultDisplayController']]],
   ['addattributeattachment_3arange_3a',['addAttributeAttachment:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a3185e1166ca451fd0900bf6dc911f60c',1,'NSMutableAttributedString(AttributeProperties)']]],
   ['addattributebackgroundcolor_3arange_3a',['addAttributeBackgroundColor:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#afbd14276cd1a6876a5d33df3d2e7ba4e',1,'NSMutableAttributedString(AttributeProperties)']]],
@@ -24,6 +25,7 @@ var searchData=
   ['addattributeunderlinestyle_3arange_3a',['addAttributeUnderlineStyle:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#a5786ebf606a0ce1bdcb5ced07e8805e7',1,'NSMutableAttributedString(AttributeProperties)']]],
   ['addattributewritingdirectionarray_3arange_3a',['addAttributeWritingDirectionArray:range:',['../categoryNSMutableAttributedString_07AttributeProperties_08.html#ade60a547f9662a141f7910b59a1d8f96',1,'NSMutableAttributedString(AttributeProperties)']]],
   ['addinteger_3a',['addInteger:',['../categoryNSMutableArray_07NSNumber_08.html#a41d4e1964c00fcb8c627a46cd2bfa356',1,'NSMutableArray(NSNumber)']]],
+  ['addmethodforselector_3aimplementation_3atypes_3a',['addMethodForSelector:implementation:types:',['../interfaceNSAClass.html#a0892f52787819ddd2cf469d9a7b052d8',1,'NSAClass']]],
   ['allhttpheaderfields',['allHTTPHeaderFields',['../categoryNSURLRequest_07Properties_08.html#ac1bf57fe404e042de98ef52e92124cb4',1,'NSURLRequest(Properties)::allHTTPHeaderFields()'],['../categoryNSMutableURLRequest_07Properties_08.html#aa39283bb0024b6c9ff07c63a28f06cb0',1,'NSMutableURLRequest(Properties)::allHTTPHeaderFields()']]],
   ['alloc',['alloc',['../interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570',1,'NSAClass']]],
   ['allocwithzone_3a',['allocWithZone:',['../interfaceNSAClass.html#ab9e3b5291a3aabb79dcd787612bee0a7',1,'NSAClass']]],

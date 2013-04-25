@@ -126,8 +126,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3d14e9dc3b66f3049d077002c1d08109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Method from given selector;.  <a href="#a3d14e9dc3b66f3049d077002c1d08109"></a><br/></td></tr>
 <tr class="memitem:ac9f6e5e5e7217879f244c10ba1d0500c"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interfaceNSAMethod.html">NSAMethod</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#ac9f6e5e5e7217879f244c10ba1d0500c">methodObjectForSelector:</a></td></tr>
 <tr class="memdesc:ac9f6e5e5e7217879f244c10ba1d0500c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns Method from given selector;.  <a href="#ac9f6e5e5e7217879f244c10ba1d0500c"></a><br/></td></tr>
+<tr class="memitem:af547d143b5977a6bed7b0bfb763e1837"><td class="memItemLeft" align="right" valign="top">(Method)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#af547d143b5977a6bed7b0bfb763e1837">classMethodForSelector:</a></td></tr>
+<tr class="memdesc:af547d143b5977a6bed7b0bfb763e1837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns class Method from given selector;.  <a href="#af547d143b5977a6bed7b0bfb763e1837"></a><br/></td></tr>
+<tr class="memitem:af608c86757dcab473f25a53c2fad9337"><td class="memItemLeft" align="right" valign="top">(<a class="el" href="interfaceNSAMethod.html">NSAMethod</a> *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#af608c86757dcab473f25a53c2fad9337">classMethodObjectForSelector:</a></td></tr>
+<tr class="memdesc:af608c86757dcab473f25a53c2fad9337"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns class Method from given selector;.  <a href="#af608c86757dcab473f25a53c2fad9337"></a><br/></td></tr>
 <tr class="memitem:a97b2d8dd38c83427dac0b367095e8f39"><td class="memItemLeft" align="right" valign="top">(IMP)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#a97b2d8dd38c83427dac0b367095e8f39">methodImplementationForSelector:</a></td></tr>
 <tr class="memdesc:a97b2d8dd38c83427dac0b367095e8f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns IMP from given method.  <a href="#a97b2d8dd38c83427dac0b367095e8f39"></a><br/></td></tr>
+<tr class="memitem:a0892f52787819ddd2cf469d9a7b052d8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#a0892f52787819ddd2cf469d9a7b052d8">addMethodForSelector:implementation:types:</a></td></tr>
+<tr class="memdesc:a0892f52787819ddd2cf469d9a7b052d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new method to a class with a given name and implementation.  <a href="#a0892f52787819ddd2cf469d9a7b052d8"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Class shortcuts</div></td></tr>
 <tr class="memitem:a759bb36d92410759b17b7204ef94a570"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceNSAClass.html#a759bb36d92410759b17b7204ef94a570">alloc</a></td></tr>
 <tr class="memdesc:a759bb36d92410759b17b7204ef94a570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocator.  <a href="#a759bb36d92410759b17b7204ef94a570"></a><br/></td></tr>
@@ -164,6 +170,41 @@ Properties</h2></td></tr>
 <div class="textblock"><p>Object wrapper for runtime Class. </p>
 <p>This class supports accessing Objective-C runtime with Objective-C object model. This reduces usage of verbose C functions. </p>
 </div><h2>Member Function Documentation</h2>
+<a class="anchor" id="a0892f52787819ddd2cf469d9a7b052d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) addMethodForSelector: </td>
+          <td></td>
+          <td class="paramtype">(SEL)&#160;</td>
+          <td class="paramname"><em>selector</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">implementation:</td>
+          <td></td>
+          <td class="paramtype">(IMP)&#160;</td>
+          <td class="paramname"><em>implementation</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">types:</td>
+          <td></td>
+          <td class="paramtype">(NSString *)&#160;</td>
+          <td class="paramname"><em>implementationTypes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new method to a class with a given name and implementation. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod">class_addMethod</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a759bb36d92410759b17b7204ef94a570"></a>
 <div class="memitem">
 <div class="memproto">
@@ -198,6 +239,44 @@ Properties</h2></td></tr>
 
 <p>Allocator. </p>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html#//apple_ref/occ/clm/NSObject/allocWithZone:">NSObject +allocWithZone:</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af547d143b5977a6bed7b0bfb763e1837"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (Method) classMethodForSelector: </td>
+          <td></td>
+          <td class="paramtype">(SEL)&#160;</td>
+          <td class="paramname"><em>selector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns class Method from given selector;. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod">class_getClassMethod</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af608c86757dcab473f25a53c2fad9337"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (<a class="el" href="interfaceNSAMethod.html">NSAMethod</a> *) classMethodObjectForSelector: </td>
+          <td></td>
+          <td class="paramtype">(SEL)&#160;</td>
+          <td class="paramname"><em>selector</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns class Method from given selector;. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod">class_getClassMethod</a> </dd></dl>
 
 </div>
 </div>

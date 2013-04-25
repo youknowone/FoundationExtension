@@ -1,6 +1,14 @@
 var searchData=
 [
+  ['imagebyreferencingurl_3a',['imageByReferencingURL:',['../categoryNSImage_07Shortcuts_08.html#a3f50d83e7146c34f8df14e3c1ac49946',1,'NSImage(Shortcuts)']]],
   ['imagebyresizingtosize_3a',['imageByResizingToSize:',['../categoryUIImage_07UIGraphics_08.html#a45337a32a1331728e314b1cfc073a9ea',1,'UIImage(UIGraphics)']]],
+  ['imagewell_3adiddraggingentered_3a',['imageWell:didDraggingEntered:',['../protocolNSAImageWellDelegate-p.html#aeb7bd38b2bab6911fd056e01e34d5a60',1,'NSAImageWellDelegate-p']]],
+  ['imagewell_3adiddraggingexited_3a',['imageWell:didDraggingExited:',['../protocolNSAImageWellDelegate-p.html#a16572b4a049e347f6ee425c7c2cec1ba',1,'NSAImageWellDelegate-p']]],
+  ['imagewell_3adidreceivedragging_3a',['imageWell:didReceiveDragging:',['../protocolNSAImageWellDelegate-p.html#a4f61afb686244df6f3a657d3a85b9605',1,'NSAImageWellDelegate-p']]],
+  ['imagewell_3awillreceivedragging_3a',['imageWell:willReceiveDragging:',['../protocolNSAImageWellDelegate-p.html#a534d4140a9fe2302318e07da5efe13cb',1,'NSAImageWellDelegate-p']]],
+  ['imagewellshouldaccepturlstring_3a',['imageWellShouldAcceptURLString:',['../protocolNSAImageWellDelegate-p.html#a0c8bdbd10953545d96d2d7274c68ee1c',1,'NSAImageWellDelegate-p']]],
+  ['imagewithcontentsofurl_3a',['imageWithContentsOfURL:',['../categoryNSImage_07Shortcuts_08.html#a8672db14bc1070300eeecedfaf4d1143',1,'NSImage(Shortcuts)']]],
+  ['imagewithpasteboard_3a',['imageWithPasteboard:',['../categoryNSImage_07Shortcuts_08.html#a85e6c2aad7a440414d65670335fafd91',1,'NSImage(Shortcuts)']]],
   ['indexofinteger_3a',['indexOfInteger:',['../categoryNSArray_07NSNumber_08.html#afb49b7109b678ed085e3ea973dd5ca35',1,'NSArray(NSNumber)']]],
   ['indexofkey_3a',['indexOfKey:',['../interfaceNSAOrderedDictionary.html#af35ca7e72ce755989d8cfc03f0e468a5',1,'NSAOrderedDictionary']]],
   ['indexofobject_3a',['indexOfObject:',['../protocolNSAArrayLikeDataObject-p.html#ab55907a80f4fd0e55372964bb3b3d26e',1,'NSAArrayLikeDataObject-p']]],

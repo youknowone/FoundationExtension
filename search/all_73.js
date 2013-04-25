@@ -29,6 +29,7 @@ var searchData=
   ['stringbyappendingpathformat_3a',['stringByAppendingPathFormat:',['../categoryNSString_07NSPathUtilities_08.html#a5d8fb03de84e07d4d441220b2bacf24e',1,'NSString(NSPathUtilities)']]],
   ['stringbyreplacingpercentescapesusingutf8encoding',['stringByReplacingPercentEscapesUsingUTF8Encoding',['../categoryNSString_07NSUTF8StringEncoding_08.html#a1f5da58dc7f9f3af12536ad2b0089843',1,'NSString(NSUTF8StringEncoding)']]],
   ['stringforcell_3a',['stringForCell:',['../protocolUIATableViewCellCopyableDelegate-p.html#af7a61caaf40568209ebd55bd813206a8',1,'UIATableViewCellCopyableDelegate-p']]],
+  ['stringfrompasteboard_3a',['stringFromPasteboard:',['../categoryNSString_07NSPasteboard_08.html#afbeb1d7428decbf662ee9bc3cd07793a',1,'NSString(NSPasteboard)']]],
   ['stringusingutf8encoding',['stringUsingUTF8Encoding',['../categoryNSData_07NSStringUTF8_08.html#afabdd69658a9e257d30c0fe13a5fe703',1,'NSData(NSStringUTF8)']]],
   ['stringwithconcatnatingstrings_3a',['stringWithConcatnatingStrings:',['../categoryNSString_07Creations_08.html#ad592316cefbfe8985f52b437453b6c86',1,'NSString(Creations)']]],
   ['stringwithdata_3aencoding_3a',['stringWithData:encoding:',['../categoryNSString_07Creations_08.html#a3c5d1d934d5f176b4d3190345282d4cc',1,'NSString(Creations)']]],

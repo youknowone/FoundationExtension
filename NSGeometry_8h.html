@@ -101,8 +101,7 @@ $(document).ready(function(){initNavTree('NSGeometry_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">NSGeometry.h File Reference</div>  </div>
 </div><!--header-->
@@ -121,12 +120,22 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creations</div></td></tr>
 <tr class="memitem:a06f869b4bc2bbb0a275f69dfaa689702"><td class="memItemLeft" align="right" valign="top">NS_INLINE NSPoint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#a06f869b4bc2bbb0a275f69dfaa689702">NSPointMake</a> (CGFloat x, CGFloat y)</td></tr>
 <tr class="memdesc:a06f869b4bc2bbb0a275f69dfaa689702"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new NSPoint from the specified values.  <a href="#a06f869b4bc2bbb0a275f69dfaa689702"></a><br/></td></tr>
 <tr class="memitem:ac40b42711f4ffcdf8f4b3c9afba2c414"><td class="memItemLeft" align="right" valign="top">NS_INLINE NSSize&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#ac40b42711f4ffcdf8f4b3c9afba2c414">NSSizeMake</a> (CGFloat w, CGFloat h)</td></tr>
 <tr class="memdesc:ac40b42711f4ffcdf8f4b3c9afba2c414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new NSSize from the specified values.  <a href="#ac40b42711f4ffcdf8f4b3c9afba2c414"></a><br/></td></tr>
 <tr class="memitem:a3599b6b9ae06ddd65b52504c07f65720"><td class="memItemLeft" align="right" valign="top">NS_INLINE NSRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#a3599b6b9ae06ddd65b52504c07f65720">NSRectMake</a> (CGFloat x, CGFloat y, CGFloat w, CGFloat h)</td></tr>
 <tr class="memdesc:a3599b6b9ae06ddd65b52504c07f65720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new NSRect from the specified values.  <a href="#a3599b6b9ae06ddd65b52504c07f65720"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Equalities</div></td></tr>
+<tr class="memitem:a99924662c2941c34105cf998e869e7b4"><td class="memItemLeft" align="right" valign="top">NS_INLINE BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#a99924662c2941c34105cf998e869e7b4">NSPointEqualToPoint</a> (NSPoint aPoint, NSPoint bPoint)</td></tr>
+<tr class="memdesc:a99924662c2941c34105cf998e869e7b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether two points are equal.  <a href="#a99924662c2941c34105cf998e869e7b4"></a><br/></td></tr>
+<tr class="memitem:a513c5766bfa6dcb8126630bdd8b6c6ec"><td class="memItemLeft" align="right" valign="top">NS_INLINE BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#a513c5766bfa6dcb8126630bdd8b6c6ec">NSSizeEqualToSize</a> (NSSize aSize, NSSize bSize)</td></tr>
+<tr class="memdesc:a513c5766bfa6dcb8126630bdd8b6c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether two size values are equal.  <a href="#a513c5766bfa6dcb8126630bdd8b6c6ec"></a><br/></td></tr>
+<tr class="memitem:af1f14d7768e373c2e68adbb67dc92283"><td class="memItemLeft" align="right" valign="top">NS_INLINE BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#af1f14d7768e373c2e68adbb67dc92283">NSRectEqualToRect</a> (NSRect aRect, NSRect bRect)</td></tr>
+<tr class="memdesc:af1f14d7768e373c2e68adbb67dc92283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether the two rectangles are equal.  <a href="#af1f14d7768e373c2e68adbb67dc92283"></a><br/></td></tr>
+<tr class="memitem:a3dffe1ceffa16d2acf2550728f7ef3e9"><td class="memItemLeft" align="right" valign="top">NS_INLINE BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSGeometry_8h.html#a3dffe1ceffa16d2acf2550728f7ef3e9">NSRectIsEmpty</a> (NSRect aRect)</td></tr>
+<tr class="memdesc:a3dffe1ceffa16d2acf2550728f7ef3e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether a given rectangle is empty.  <a href="#a3dffe1ceffa16d2acf2550728f7ef3e9"></a><br/></td></tr>
 </table>
 <h2>Macro Definition Documentation</h2>
 <a class="anchor" id="adf992faad9e3045157483fd8cb9ebcce"></a>
@@ -175,6 +184,35 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2>Function Documentation</h2>
+<a class="anchor" id="a99924662c2941c34105cf998e869e7b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NS_INLINE BOOL NSPointEqualToPoint </td>
+          <td>(</td>
+          <td class="paramtype">NSPoint&#160;</td>
+          <td class="paramname"><em>aPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NSPoint&#160;</td>
+          <td class="paramname"><em>bPoint</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Boolean value that indicates whether two points are equal. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/#documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSEqualPoints">NSEqualPoints</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a06f869b4bc2bbb0a275f69dfaa689702"></a>
 <div class="memitem">
 <div class="memproto">
@@ -201,6 +239,54 @@ Functions</h2></td></tr>
 
 <p>Creates a new NSPoint from the specified values. </p>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSMakePoint">NSMakePoint</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af1f14d7768e373c2e68adbb67dc92283"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NS_INLINE BOOL NSRectEqualToRect </td>
+          <td>(</td>
+          <td class="paramtype">NSRect&#160;</td>
+          <td class="paramname"><em>aRect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NSRect&#160;</td>
+          <td class="paramname"><em>bRect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Boolean value that indicates whether the two rectangles are equal. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/#documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSEqualRects">NSEqualRects</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3dffe1ceffa16d2acf2550728f7ef3e9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NS_INLINE BOOL NSRectIsEmpty </td>
+          <td>(</td>
+          <td class="paramtype">NSRect&#160;</td>
+          <td class="paramname"><em>aRect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Boolean value that indicates whether a given rectangle is empty. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/#documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSIsEmptyRect">NSIsEmptyRect</a> </dd></dl>
 
 </div>
 </div>
@@ -242,6 +328,35 @@ Functions</h2></td></tr>
 
 <p>Creates a new NSRect from the specified values. </p>
 <dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSMakeRect">NSMakeRect</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a513c5766bfa6dcb8126630bdd8b6c6ec"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">NS_INLINE BOOL NSSizeEqualToSize </td>
+          <td>(</td>
+          <td class="paramtype">NSSize&#160;</td>
+          <td class="paramname"><em>aSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">NSSize&#160;</td>
+          <td class="paramname"><em>bSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a Boolean value that indicates whether two size values are equal. </p>
+<dl class="section see"><dt>See Also</dt><dd><a href="https://developer.apple.com/library/mac/#documentation/cocoa/reference/foundation/miscellaneous/foundation_functions/reference/reference.html#//apple_ref/c/func/NSEqualSizes">NSEqualSizes</a> </dd></dl>
 
 </div>
 </div>

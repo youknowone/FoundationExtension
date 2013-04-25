@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import "NSArray.h"
+
 #import "NSImage.h"
 
 @implementation NSImage (Shortcuts)
@@ -20,6 +22,24 @@
 
 + (id)imageWithPasteboard:(NSPasteboard *)pasteboard {
     return [[[self alloc] initWithPasteboard:pasteboard] autorelease];
+}
+
+- (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType  properties:(NSDictionary *)properties {
+    NSBitmapImageRep *imageRep = [[NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation] :0];
+    NSData *pngData = [imageRep representationUsingType:fileType properties:properties];
+    return pngData;
+}
+
+- (NSData *)PNGRepresentation {
+    return [self dataRepresentationUsingType:NSPNGFileType properties:@{}];
+}
+
+- (NSData *)JPEGRepresentationWithCompressionFactor:(CGFloat)compressionFactor {
+    return [self dataRepresentationUsingType:NSJPEGFileType properties:@{NSImageCompressionFactor: [NSNumber numberWithDouble:compressionFactor]}];
+}
+
+- (NSData *)JPEGRepresentation {
+    return [self JPEGRepresentationWithCompressionFactor:1.0];
 }
 
 @end

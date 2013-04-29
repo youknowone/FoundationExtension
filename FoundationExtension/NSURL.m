@@ -154,6 +154,14 @@
 
 @end
 
+@implementation NSURL (CFURL)
+
+- (BOOL)hasDirectoryPath {
+    return CFURLHasDirectoryPath((CFURLRef)self);
+}
+
+@end
+
 
 @implementation NSString (NSURL)
 

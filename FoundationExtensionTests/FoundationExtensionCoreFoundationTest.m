@@ -138,4 +138,17 @@
     STAssertEquals(2, (int)mobj.length, @"");
 }
 
+- (void)testURL {
+    // file URL for real filesystem representation
+    STAssertEquals(YES, [@"/Volumes".smartURL hasDirectoryPath], @"");
+    STAssertEquals(YES, [@"/Volumes/".smartURL hasDirectoryPath], @"");
+    STAssertEquals(NO, [@"/bin/sh".smartURL hasDirectoryPath], @"");
+    STAssertEquals(YES, [@"/bin/sh/".smartURL hasDirectoryPath], @"");
+    // remote URL for URL based (maybe?)
+    STAssertEquals(NO, [@"http://example.com".smartURL hasDirectoryPath], @"");
+    STAssertEquals(YES, [@"http://example.com/".smartURL hasDirectoryPath], @"");
+    STAssertEquals(NO, [@"http://example.com/dir".smartURL hasDirectoryPath], @"");
+    STAssertEquals(YES, [@"http://example.com/dir/".smartURL hasDirectoryPath], @"");
+}
+
 @end

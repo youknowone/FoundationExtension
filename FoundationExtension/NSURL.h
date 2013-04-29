@@ -98,6 +98,20 @@
 @end
 
 /*!
+ *  @brief NSURL missing bridge of CFURL
+ */
+@interface NSURL (CFURL)
+
+/*!
+ *  @brief The URL status if a given URL's path represents a directory.
+ *  @return YES if the URL represents a directory; otherwise NO.
+ */
+@property(nonatomic, readonly) BOOL hasDirectoryPath;
+
+@end
+
+
+/*!
  *  @brief NSString shortcut to detect URL and to create an NSURL
  */
 @interface NSString (NSURL)

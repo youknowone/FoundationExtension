@@ -35,7 +35,8 @@
 #import <UIKitExtension/UIView.h>                           // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIWebView.h>                        // level: 0 / deps(0):  / internal(0):
 // depenency level 20
-#import <UIKitExtension/UIAPlaceholderTextView.h>           // level: 20 / deps(0):  / internal(0):
+#import <UIKitExtension/UIASubviewTableView.h>        // level: 20 / deps(0):  / internal(2): NSString, UITableView
+#import <UIKitExtension/UIAPlaceholderTextView.h>           // level: 20 / deps(0):  / internal(1): UIView
 #import <UIKitExtension/UIAPreparedCellTableView.h>         // level: 20 / deps(0):  / internal(1): NSArray
 #import <UIKitExtension/UIAResultDisplayController.h>       // level: 20 / deps(0):  / internal(2): NSTimer, UIView
 #import <UIKitExtension/UIATableView.h>                     // level: 20 / deps(0):  / internal(0):

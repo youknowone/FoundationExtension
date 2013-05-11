@@ -3,7 +3,7 @@
 //  CocoaExtensionTestApp
 //
 //  Created by Jeong YunWon on 12. 11. 18..
-//  Copyright (c) 2012년 youknowone.org. All rights reserved.
+//  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

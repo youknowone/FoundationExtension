@@ -62,6 +62,7 @@
                 @"ResultDisplay",
                 @"PreparedCellTable",
                 @"PlaceholderText",
+                @"SubviewTable",
                 ] retain];
 }
 

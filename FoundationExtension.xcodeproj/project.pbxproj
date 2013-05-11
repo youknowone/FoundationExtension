@@ -154,6 +154,13 @@
 		38B0C7421641382D0044C73C /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedString.m */; };
 		38B0C74616414B1D0044C73C /* NSAttributedString+Cocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C74416414B1D0044C73C /* NSAttributedString+Cocoa.h */; };
 		38B0C74716414B1D0044C73C /* NSAttributedString+Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C74516414B1D0044C73C /* NSAttributedString+Cocoa.m */; };
+		38BC0E58173E7D7B00F36497 /* UIASubviewTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E57173E7D7B00F36497 /* UIASubviewTableView.m */; };
+		38BC0E5D173E821700F36497 /* UITSubviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E5B173E821700F36497 /* UITSubviewTableViewController.m */; };
+		38BC0E5E173E821700F36497 /* UITSubviewTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BC0E5C173E821700F36497 /* UITSubviewTableViewController.xib */; };
+		38BC0E61173ED68900F36497 /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; };
+		38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
+		38BC0E63173EDD1900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
+		38BC0E64173EDD1A00F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
 		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
@@ -415,6 +422,13 @@
 		38B0C73D1641382D0044C73C /* NSAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAttributedString.m; sourceTree = "<group>"; };
 		38B0C74416414B1D0044C73C /* NSAttributedString+Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Cocoa.h"; sourceTree = "<group>"; };
 		38B0C74516414B1D0044C73C /* NSAttributedString+Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Cocoa.m"; sourceTree = "<group>"; };
+		38BC0E56173E7D7B00F36497 /* UIASubviewTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIASubviewTableView.h; sourceTree = "<group>"; };
+		38BC0E57173E7D7B00F36497 /* UIASubviewTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIASubviewTableView.m; sourceTree = "<group>"; };
+		38BC0E5A173E821700F36497 /* UITSubviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITSubviewTableViewController.h; sourceTree = "<group>"; };
+		38BC0E5B173E821700F36497 /* UITSubviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITSubviewTableViewController.m; sourceTree = "<group>"; };
+		38BC0E5C173E821700F36497 /* UITSubviewTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITSubviewTableViewController.xib; sourceTree = "<group>"; };
+		38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAOverridingMediator.h; sourceTree = "<group>"; };
+		38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAOverridingMediator.m; sourceTree = "<group>"; };
 		38C7A9721495181800381910 /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7A9761495181800381910 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		38C7A9771495181800381910 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -737,6 +751,8 @@
 				38B0C6E8163F73800044C73C /* NSAFunctional.m */,
 				38505CB9164647910059773B /* NSAOrderedDictionary.h */,
 				38505CBA164647910059773B /* NSAOrderedDictionary.m */,
+				38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */,
+				38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */,
 			);
 			path = FoundationExtension;
 			sourceTree = "<group>";
@@ -822,6 +838,8 @@
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
 				38E48D92167FB28700BD4F6D /* UIATableView.m */,
+				38BC0E56173E7D7B00F36497 /* UIASubviewTableView.h */,
+				38BC0E57173E7D7B00F36497 /* UIASubviewTableView.m */,
 				381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */,
 				381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */,
 				38485C5B1710896E0001A99D /* UIAPreparedCellTableView.h */,
@@ -862,6 +880,9 @@
 				381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */,
 				381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */,
 				381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */,
+				38BC0E5A173E821700F36497 /* UITSubviewTableViewController.h */,
+				38BC0E5B173E821700F36497 /* UITSubviewTableViewController.m */,
+				38BC0E5C173E821700F36497 /* UITSubviewTableViewController.xib */,
 				38F0681C1636F8C8002723AB /* Supporting Files */,
 			);
 			name = TestApp;
@@ -985,6 +1006,7 @@
 				3877F44916A5FC4B007CD975 /* NSACommonCrypto.h in Headers */,
 				387B1EB516EBD0F50059722B /* NSNumber.h in Headers */,
 				38485C6B171463F70001A99D /* NSNull.h in Headers */,
+				38BC0E61173ED68900F36497 /* NSAOverridingMediator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1223,6 +1245,7 @@
 				38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */,
 				38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */,
 				381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */,
+				38BC0E5E173E821700F36497 /* UITSubviewTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1318,6 +1341,7 @@
 				38D930ED1726CEC300BD0938 /* NSImage.m in Sources */,
 				38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */,
 				382E39AD1727C8F300099BC4 /* NSControl.m in Sources */,
+				38BC0E63173EDD1900F36497 /* NSAOverridingMediator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1375,6 +1399,7 @@
 				3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				387B1EB716EBD0F50059722B /* NSNumber.m in Sources */,
 				38485C6C171463F70001A99D /* NSNull.m in Sources */,
+				38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1434,6 +1459,8 @@
 				38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */,
 				38485C5D171089710001A99D /* UIAPreparedCellTableView.m in Sources */,
 				381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */,
+				38BC0E58173E7D7B00F36497 /* UIASubviewTableView.m in Sources */,
+				38BC0E64173EDD1A00F36497 /* NSAOverridingMediator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1448,6 +1475,7 @@
 				38485C6317109CD20001A99D /* UITPreparedCellTableViewController.m in Sources */,
 				38485C6417109CD70001A99D /* UITResultDisplayViewController.m in Sources */,
 				381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */,
+				38BC0E5D173E821700F36497 /* UITSubviewTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

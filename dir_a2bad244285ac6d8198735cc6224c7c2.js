@@ -31,6 +31,9 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSAOrderedDictionary", "interfaceNSAOrderedDictionary.html", "interfaceNSAOrderedDictionary" ],
       [ "NSAMutableOrderedDictionary", "interfaceNSAMutableOrderedDictionary.html", "interfaceNSAMutableOrderedDictionary" ]
     ] ],
+    [ "NSAOverridingMediator.h", "NSAOverridingMediator_8h.html", [
+      [ "NSAOverridingMediator", "interfaceNSAOverridingMediator.html", "interfaceNSAOverridingMediator" ]
+    ] ],
     [ "NSArray.h", "NSArray_8h.html", [
       [ "NSArray(Shortcuts)", "categoryNSArray_07Shortcuts_08.html", "categoryNSArray_07Shortcuts_08" ],
       [ "NSArray(Creations)", "categoryNSArray_07Creations_08.html", "categoryNSArray_07Creations_08" ],
@@ -82,6 +85,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     [ "NSTimer.h", "NSTimer_8h.html", "NSTimer_8h" ],
     [ "NSURL.h", "NSURL_8h.html", [
       [ "NSURL(Creations)", "categoryNSURL_07Creations_08.html", "categoryNSURL_07Creations_08" ],
+      [ "NSURL(CFURL)", "categoryNSURL_07CFURL_08.html", "categoryNSURL_07CFURL_08" ],
       [ "NSString(NSURL)", "categoryNSString_07NSURL_08.html", "categoryNSString_07NSURL_08" ],
       [ "NSData(NSURL_deprecated)", "categoryNSData_07NSURL__deprecated_08.html", "categoryNSData_07NSURL__deprecated_08" ]
     ] ],

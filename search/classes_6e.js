@@ -14,6 +14,7 @@ var searchData=
   ['nsamutabletriple',['NSAMutableTriple',['../interfaceNSAMutableTriple.html',1,'']]],
   ['nsamutabletuple',['NSAMutableTuple',['../interfaceNSAMutableTuple.html',1,'']]],
   ['nsaordereddictionary',['NSAOrderedDictionary',['../interfaceNSAOrderedDictionary.html',1,'']]],
+  ['nsaoverridingmediator',['NSAOverridingMediator',['../interfaceNSAOverridingMediator.html',1,'']]],
   ['nsarray_28creations_29',['NSArray(Creations)',['../categoryNSArray_07Creations_08.html',1,'']]],
   ['nsarray_28functional_29',['NSArray(Functional)',['../categoryNSArray_07Functional_08.html',1,'']]],
   ['nsarray_28nsnumber_29',['NSArray(NSNumber)',['../categoryNSArray_07NSNumber_08.html',1,'']]],
@@ -70,6 +71,7 @@ var searchData=
   ['nstimer_28nsrunloop_29',['NSTimer(NSRunLoop)',['../categoryNSTimer_07NSRunLoop_08.html',1,'']]],
   ['nstimer_28shortcuts_29',['NSTimer(Shortcuts)',['../categoryNSTimer_07Shortcuts_08.html',1,'']]],
   ['nstimerdelegate_2dp',['NSTimerDelegate-p',['../protocolNSTimerDelegate-p.html',1,'']]],
+  ['nsurl_28cfurl_29',['NSURL(CFURL)',['../categoryNSURL_07CFURL_08.html',1,'']]],
   ['nsurl_28creations_29',['NSURL(Creations)',['../categoryNSURL_07Creations_08.html',1,'']]],
   ['nsurlrequest_28creations_5fdeprecated_29',['NSURLRequest(Creations_deprecated)',['../categoryNSURLRequest_07Creations__deprecated_08.html',1,'']]],
   ['nsurlrequest_28properties_29',['NSURLRequest(Properties)',['../categoryNSURLRequest_07Properties_08.html',1,'']]]

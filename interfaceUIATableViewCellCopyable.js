@@ -1,6 +1,6 @@
 var interfaceUIATableViewCellCopyable =
 [
-    [ "_copyableFlags", "interfaceUIATableViewCellCopyable.html#a2c7a2bdd4cc9066e66dee63b640c21ce", null ],
+    [ "_copyableFlags", "interfaceUIATableViewCellCopyable.html#aac959f104c9bd707ed48892b5fcbfc4f", null ],
     [ "_delegate", "interfaceUIATableViewCellCopyable.html#a17b8ac55db5ba9d71e93080788273e9a", null ],
     [ "hasDelegateString", "interfaceUIATableViewCellCopyable.html#a60330ce876ed35bf029f416734a68211", null ],
     [ "hasDelegateWillHideMenu", "interfaceUIATableViewCellCopyable.html#a9c80942dfbe07ebcb0619d593278213e", null ],

@@ -21,6 +21,10 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UIAResultDisplayController", "interfaceUIAResultDisplayController.html", "interfaceUIAResultDisplayController" ],
       [ "<UIAResultDisplayDelegate>", "protocolUIAResultDisplayDelegate-p.html", "protocolUIAResultDisplayDelegate-p" ]
     ] ],
+    [ "UIASubviewTableView.h", "UIASubviewTableView_8h.html", [
+      [ "UIASubviewTableView", "interfaceUIASubviewTableView.html", "interfaceUIASubviewTableView" ],
+      [ "<UIASubviewTableSubviewSource>", "protocolUIASubviewTableSubviewSource-p.html", "protocolUIASubviewTableSubviewSource-p" ]
+    ] ],
     [ "UIATableView.h", "UIATableView_8h.html", [
       [ "UIATableViewCellCopyable", "interfaceUIATableViewCellCopyable.html", "interfaceUIATableViewCellCopyable" ],
       [ "<UIATableViewCellCopyableDelegate>", "protocolUIATableViewCellCopyableDelegate-p.html", "protocolUIATableViewCellCopyableDelegate-p" ]

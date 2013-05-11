@@ -9,6 +9,8 @@ var searchData=
   ['mapfilterwithkey_3a',['mapFilterWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#a1108d90d1b64589f4f2e4bf782467f3d',1,'NSMutableDictionary(Functional)']]],
   ['mapwithindex_3a',['mapWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a5e9afc9721d1005b35e1a597bec8c98d',1,'NSMutableArray(Functional)']]],
   ['mapwithkey_3a',['mapWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#ac0ac1bb66a6cb375b3b40c4bdc73243a',1,'NSMutableDictionary(Functional)']]],
+  ['mediatorwithorigin_3aoverride_3a',['mediatorWithOrigin:override:',['../interfaceNSAOverridingMediator.html#a2bb858a8aee5c42c174f70d1843f6337',1,'NSAOverridingMediator']]],
+  ['mediatorwithorigin_3aoverride_3asuppressive_3a',['mediatorWithOrigin:override:suppressive:',['../interfaceNSAOverridingMediator.html#a6eea3f987900911b05d4642b379fab9f',1,'NSAOverridingMediator']]],
   ['method',['method',['../interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2',1,'NSAMethod']]],
   ['methodforselector_3a',['methodForSelector:',['../interfaceNSAClass.html#a3d14e9dc3b66f3049d077002c1d08109',1,'NSAClass']]],
   ['methodimplementationforselector_3a',['methodImplementationForSelector:',['../interfaceNSAClass.html#a97b2d8dd38c83427dac0b367095e8f39',1,'NSAClass']]],

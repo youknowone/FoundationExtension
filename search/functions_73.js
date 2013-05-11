@@ -31,5 +31,8 @@ var searchData=
   ['stringwithutf8data_3a',['stringWithUTF8Data:',['../categoryNSString_07NSUTF8StringEncoding_08.html#a56d14e57f39c4d8806dd57181020a9ff',1,'NSString(NSUTF8StringEncoding)']]],
   ['substringfromindex_3alength_3a',['substringFromIndex:length:',['../categoryNSString_07Shortcuts_08.html#a0c1970c8f898024f10b58d44896a186f',1,'NSString(Shortcuts)']]],
   ['substringfromindex_3atoindex_3a',['substringFromIndex:toIndex:',['../categoryNSString_07Shortcuts_08.html#ae5ae56a7a97abecaf80e06fc41e5e0dd',1,'NSString(Shortcuts)']]],
+  ['subviewtableview_3aviewforrow_3a',['subviewTableView:viewForRow:',['../protocolUIASubviewTableSubviewSource-p.html#a10b06831b49b8f164bf8d34413998ee6',1,'UIASubviewTableSubviewSource-p']]],
+  ['subviewtableview_3aviewheightforrow_3a',['subviewTableView:viewHeightForRow:',['../protocolUIASubviewTableSubviewSource-p.html#a4c4d4ff16b61bb2bb897b469ee9a71d8',1,'UIASubviewTableSubviewSource-p']]],
+  ['subviewtableviewnumberofsubviews_3a',['subviewTableViewNumberOfSubviews:',['../protocolUIASubviewTableSubviewSource-p.html#aedade5ea29da0df700dcf98bb64fe41e',1,'UIASubviewTableSubviewSource-p']]],
   ['swap',['swap',['../interfaceNSAMutableTuple.html#a2ceec4aeed382e4ff120b06901590945',1,'NSAMutableTuple']]]
 ];

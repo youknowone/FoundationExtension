@@ -41,9 +41,15 @@ var searchData=
   ['strokewidthnumber',['strokeWidthNumber',['../interfaceNSAttributedStringAttributeDictionary.html#a7481196b12b8d8f90bf0f804bcebf2c6',1,'NSAttributedStringAttributeDictionary']]],
   ['substringfromindex_3alength_3a',['substringFromIndex:length:',['../categoryNSString_07Shortcuts_08.html#a0c1970c8f898024f10b58d44896a186f',1,'NSString(Shortcuts)']]],
   ['substringfromindex_3atoindex_3a',['substringFromIndex:toIndex:',['../categoryNSString_07Shortcuts_08.html#ae5ae56a7a97abecaf80e06fc41e5e0dd',1,'NSString(Shortcuts)']]],
+  ['subviewsource',['subviewSource',['../interfaceUIASubviewTableView.html#ac9d5f71a356abfe1c04807e1f0547e8d',1,'UIASubviewTableView']]],
+  ['subviewsourceviewheightforrow',['subviewSourceViewHeightForRow',['../interfaceUIASubviewTableView.html#adb8a813ab742b7d8b0945e0b0ca6c28b',1,'UIASubviewTableView']]],
+  ['subviewtableview_3aviewforrow_3a',['subviewTableView:viewForRow:',['../protocolUIASubviewTableSubviewSource-p.html#a10b06831b49b8f164bf8d34413998ee6',1,'UIASubviewTableSubviewSource-p']]],
+  ['subviewtableview_3aviewheightforrow_3a',['subviewTableView:viewHeightForRow:',['../protocolUIASubviewTableSubviewSource-p.html#a4c4d4ff16b61bb2bb897b469ee9a71d8',1,'UIASubviewTableSubviewSource-p']]],
+  ['subviewtableviewnumberofsubviews_3a',['subviewTableViewNumberOfSubviews:',['../protocolUIASubviewTableSubviewSource-p.html#aedade5ea29da0df700dcf98bb64fe41e',1,'UIASubviewTableSubviewSource-p']]],
   ['superclass',['superclass',['../interfaceNSAClass.html#ab9230c56c455efe6f1439e74ec72eed9',1,'NSAClass']]],
   ['superclassobject',['superclassObject',['../interfaceNSAClass.html#ae02bac8ba42d2d072c4ff8c3007558d5',1,'NSAClass']]],
   ['superscript',['superscript',['../interfaceNSAttributedStringAttributeDictionary.html#ac96def3e194f7677d46662852bde0dcf',1,'NSAttributedStringAttributeDictionary']]],
   ['superscriptnumber',['superscriptNumber',['../interfaceNSAttributedStringAttributeDictionary.html#a86c3ca05f329c7f57a576fe5589ceed5',1,'NSAttributedStringAttributeDictionary']]],
+  ['suppressive',['suppressive',['../interfaceNSAOverridingMediator.html#a9b8d4ce534f1c0edfe031d19f7d0036d',1,'NSAOverridingMediator']]],
   ['swap',['swap',['../interfaceNSAMutableTuple.html#a2ceec4aeed382e4ff120b06901590945',1,'NSAMutableTuple']]]
 ];

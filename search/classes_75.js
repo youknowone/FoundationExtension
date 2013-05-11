@@ -11,6 +11,8 @@ var searchData=
   ['uiapreparedcelltableview',['UIAPreparedCellTableView',['../interfaceUIAPreparedCellTableView.html',1,'']]],
   ['uiaresultdisplaycontroller',['UIAResultDisplayController',['../interfaceUIAResultDisplayController.html',1,'']]],
   ['uiaresultdisplaydelegate_2dp',['UIAResultDisplayDelegate-p',['../protocolUIAResultDisplayDelegate-p.html',1,'']]],
+  ['uiasubviewtablesubviewsource_2dp',['UIASubviewTableSubviewSource-p',['../protocolUIASubviewTableSubviewSource-p.html',1,'']]],
+  ['uiasubviewtableview',['UIASubviewTableView',['../interfaceUIASubviewTableView.html',1,'']]],
   ['uiatableviewcellcopyable',['UIATableViewCellCopyable',['../interfaceUIATableViewCellCopyable.html',1,'']]],
   ['uiatableviewcellcopyabledelegate_2dp',['UIATableViewCellCopyableDelegate-p',['../protocolUIATableViewCellCopyableDelegate-p.html',1,'']]],
   ['uicolor_28creations_29',['UIColor(Creations)',['../categoryUIColor_07Creations_08.html',1,'']]],

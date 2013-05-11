@@ -1,5 +1,10 @@
 var searchData=
 [
+  ['tableview_3acaneditrowatindexpath_3a',['tableView:canEditRowAtIndexPath:',['../protocolUIASubviewTableSubviewSource-p.html#a40bb71fc3b4ec92af7c487e0989e925b',1,'UIASubviewTableSubviewSource-p']]],
+  ['tableview_3acanmoverowatindexpath_3a',['tableView:canMoveRowAtIndexPath:',['../protocolUIASubviewTableSubviewSource-p.html#ae276740bf50476740e2edd56dcf4dd69',1,'UIASubviewTableSubviewSource-p']]],
+  ['tableview_3acommiteditingstyle_3aforrowatindexpath_3a',['tableView:commitEditingStyle:forRowAtIndexPath:',['../protocolUIASubviewTableSubviewSource-p.html#a4e529a3a943d7cf86d6c22354d47fa87',1,'UIASubviewTableSubviewSource-p']]],
+  ['tableview_3amoverowatindexpath_3atoindexpath_3a',['tableView:moveRowAtIndexPath:toIndexPath:',['../protocolUIASubviewTableSubviewSource-p.html#aaa8855dbb191f04764048c8849a6a567',1,'UIASubviewTableSubviewSource-p']]],
+  ['tableview_3asectionforsectionindextitle_3aatindex_3a',['tableView:sectionForSectionIndexTitle:atIndex:',['../protocolUIASubviewTableSubviewSource-p.html#a6ec0c8c1229032d96ae271e65324f4cd',1,'UIASubviewTableSubviewSource-p']]],
   ['temporaryurl',['temporaryURL',['../categoryNSString_07NSURL_08.html#a9df0212edd24bcbcb6dda0da8a241968',1,'NSString(NSURL)']]],
   ['temporaryurlwithpath_3a',['temporaryURLWithPath:',['../categoryNSURL_07Creations_08.html#a708517f940d8b3c0beeb756fbbd1bfe1',1,'NSURL(Creations)']]],
   ['timerfired_3a',['timerFired:',['../protocolNSTimerDelegate-p.html#ae0e7f25358b949a6b5081ae501974483',1,'NSTimerDelegate-p']]],

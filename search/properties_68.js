@@ -1,6 +1,7 @@
 var searchData=
 [
   ['hasdelegateselectionstyle',['hasDelegateSelectionStyle',['../interfaceUIATableViewCellCopyable.html#a91243cb1dbe5cc31ac0926ad732399cd',1,'UIATableViewCellCopyable']]],
+  ['hasdirectorypath',['hasDirectoryPath',['../categoryNSURL_07CFURL_08.html#a3e8e061549600057b6034dccd15505b2',1,'NSURL(CFURL)']]],
   ['hasuniquesection',['hasUniqueSection',['../interfaceUIAPreparedCellTableView.html#a44c80868281a9430db3f6a5b4e10c671',1,'UIAPreparedCellTableView']]],
   ['httpbody',['HTTPBody',['../categoryNSURLRequest_07Properties_08.html#a96ecc1eb42d6d37aaf979c46e7429f60',1,'NSURLRequest(Properties)::HTTPBody()'],['../categoryNSMutableURLRequest_07Properties_08.html#a382530f61cfbe8f42cd94eb9fad35f60',1,'NSMutableURLRequest(Properties)::HTTPBody()']]],
   ['httpbodystream',['HTTPBodyStream',['../categoryNSURLRequest_07Properties_08.html#a447d9685143c8ab10db9e0f68dabdef1',1,'NSURLRequest(Properties)::HTTPBodyStream()'],['../categoryNSMutableURLRequest_07Properties_08.html#a6cbe65410eac051d9bc9dd248ec39cb7',1,'NSMutableURLRequest(Properties)::HTTPBodyStream()']]],

@@ -51,6 +51,7 @@ var searchData=
   ['initwithhtmlexpression_3a',['initWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a6207161f48c3d3486a27f1e5fe31a51d',1,'UIColor(HTMLColor)']]],
   ['initwithinteger_3a',['initWithInteger:',['../categoryNSString_07Creations_08.html#a5a5ee01c32ac32af48964839dfd58b0c',1,'NSString(Creations)']]],
   ['initwithnumberstyle_3a',['initWithNumberStyle:',['../categoryNSNumberFormatter_07Shortcuts_08.html#aa5fc8cd64e78126ad91e8d11a703744b',1,'NSNumberFormatter(Shortcuts)']]],
+  ['initwithorigin_3aoverride_3asuppressive_3a',['initWithOrigin:override:suppressive:',['../interfaceNSAOverridingMediator.html#ab655c0665e2cbfec95fcd54aba1d2221',1,'NSAOverridingMediator']]],
   ['initwithpaths_3alatency_3aflags_3adelegate_3a',['initWithPaths:latency:flags:delegate:',['../interfaceFSEventStream.html#a7c09455fe437aaaf55f59cf83c2a3923',1,'FSEventStream']]],
   ['initwithurlformat_3a',['initWithURLFormat:',['../categoryNSURLRequest_07Creations__deprecated_08.html#a20a6be4a7ef88b63703bc4a0bbff052b',1,'NSURLRequest(Creations_deprecated)']]],
   ['inputview',['inputView',['../interfaceUIAResultDisplayController.html#ab275ac833dd78a7300d7bd8c339c9920',1,'UIAResultDisplayController']]],

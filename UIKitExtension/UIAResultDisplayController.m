@@ -79,12 +79,12 @@
 - (void)loadResultView {
     // delegate is required at this position
     if (![self->_delegate respondsToSelector:@selector(resultDisplayControllerLoadResultView:)]) {
-        @throw [NSException exceptionWithName:@"UIAResultDisplayControllerError" reason:@"UIAResultDisplayControllerLoadViewIsBroken" userInfo:nil];
+        return;
     }
     // check it is not nil
     self->_resultView = [self->_delegate resultDisplayControllerLoadResultView:self];
     if (self->_resultView == nil) {
-        @throw [NSException exceptionWithName:@"UIAResultDisplayControllerError" reason:@"UIAResultDisplayControllerLoadViewIsBroken" userInfo:nil];
+        return;
     }
     // mark loader by delegate
     self->_resultDisplayControllerFlags.resultViewLoaded = YES;
@@ -180,6 +180,8 @@
         }
     }
 
+    BOOL needDim = self->_resultDisplayControllerFlags.delegateShouldShowDimmingView && [self->_delegate resultDisplayControllerShouldShowDimmingView:self];
+
     UIView *resultView = self.resultView;
     if (visible) {
         if ([self->_delegate respondsToSelector:@selector(resultDisplayController:didLoadResultView:)]) {
@@ -187,8 +189,12 @@
         }
 
         self.dimmingView.hidden = YES;
-        [self.dimmingView setHidden:NO animated:YES];
-        self.resultView.hidden = YES;
+        if (needDim) {
+            [self.dimmingView setHidden:NO animated:YES];
+            self.resultView.hidden = YES;
+        } else {
+            self.resultView.hidden = NO;
+        }
         [self.contentsController.view insertSubview:self.dimmingView belowSubview:self.inputView];
         [self.contentsController.view insertSubview:self.resultView aboveSubview:self.inputView];
 

@@ -30,6 +30,7 @@ NSString *UITPlaceholderTextViewControllerLoremIpsum = @"Lorem ipsum dolor sit e
     [super viewDidLoad];
     self.textView.placeholderString = @"This is long long place holder may work ";
     // Do any additional setup after loading the view from its nib.
+    self.textView.placeholderTextView.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)didReceiveMemoryWarning

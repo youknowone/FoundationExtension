@@ -37,6 +37,7 @@
     if (self != nil) {
         [self UIAPlaceholderTextViewInit];
         self->_placeholderTextView.font = self.font;
+        self->_placeholderTextView.textAlignment = self.textAlignment;
         [self _textDidChanged];
     }
     return self;
@@ -90,6 +91,10 @@
 
 - (void)setPlaceholderColor:(UIColor *)placeholderColor {
     self->_placeholderTextView.textColor = placeholderColor;
+}
+
+- (UITextView *)placeholderTextView {
+    return self->_placeholderTextView;
 }
 
 @end

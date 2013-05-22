@@ -23,7 +23,12 @@
 /*!
  *  @brief Placeholder color. Default is gray.
  */
-@property(nonatomic, retain) UIColor *placeholderColor;
+@property(nonatomic, retain) UIColor *placeholderColor __deprecated;
+
+/*!
+ *  @brief Placeholder text view to setup styles.
+ */
+@property(nonatomic, readonly) UITextView *placeholderTextView;
 
 /*!
  *  @brief Placeholder shows/hides with animation. Default is YES.

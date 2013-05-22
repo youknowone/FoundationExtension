@@ -31,6 +31,7 @@
 		38485C6E17149D0A0001A99D /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		38485C6F17149D0E0001A99D /* FoundationExtensionCoreFoundationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0697F16383A4B002723AB /* FoundationExtensionCoreFoundationTest.m */; };
 		38485C7017149D110001A99D /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
+		38498113174CFB8000FEB725 /* UIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38498112174CFB7F00FEB725 /* UIViewController.m */; };
 		38505C5A1642A66C0059773B /* NSAttributedString+UIKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C591642A66C0059773B /* NSAttributedString+UIKit.m */; };
 		38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
 		38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
@@ -335,6 +336,8 @@
 		38485C601710974C0001A99D /* UITPreparedCellTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITPreparedCellTableViewController.xib; sourceTree = "<group>"; };
 		38485C69171463F60001A99D /* NSNull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNull.h; sourceTree = "<group>"; };
 		38485C6A171463F70001A99D /* NSNull.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNull.m; sourceTree = "<group>"; };
+		38498111174CFB7F00FEB725 /* UIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewController.h; sourceTree = "<group>"; };
+		38498112174CFB7F00FEB725 /* UIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewController.m; sourceTree = "<group>"; };
 		38505C581642A66C0059773B /* NSAttributedString+UIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+UIKit.h"; sourceTree = "<group>"; };
 		38505C591642A66C0059773B /* NSAttributedString+UIKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+UIKit.m"; sourceTree = "<group>"; };
 		38505C861642EC5A0059773B /* NSURLRequestCreations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSURLRequestCreations.h; sourceTree = "<group>"; };
@@ -834,6 +837,8 @@
 				38EF66AE16AEEB8100781497 /* UITableView.m */,
 				38412DB21706F9C70082ED4E /* UIView.h */,
 				38412DB31706F9C70082ED4E /* UIView.m */,
+				38498111174CFB7F00FEB725 /* UIViewController.h */,
+				38498112174CFB7F00FEB725 /* UIViewController.m */,
 				3868F7D4162D9CDE00C31163 /* UIWebView.h */,
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
@@ -1461,6 +1466,7 @@
 				381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */,
 				38BC0E58173E7D7B00F36497 /* UIASubviewTableView.m in Sources */,
 				38BC0E64173EDD1A00F36497 /* NSAOverridingMediator.m in Sources */,
+				38498113174CFB8000FEB725 /* UIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

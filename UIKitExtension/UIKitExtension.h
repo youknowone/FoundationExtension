@@ -33,6 +33,7 @@
 #import <UIKitExtension/UIScrollView.h>                     // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UITableView.h>                      // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIView.h>                           // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIViewController.h>                           // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIWebView.h>                        // level: 0 / deps(0):  / internal(0):
 // depenency level 20
 #import <UIKitExtension/UIASubviewTableView.h>        // level: 20 / deps(0):  / internal(2): NSString, UITableView

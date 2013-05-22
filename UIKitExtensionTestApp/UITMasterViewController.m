@@ -124,14 +124,8 @@
     }
     @catch (NSException *exception) {
         NSLog(@"errer met: %@ / retry", exception);
-        NSString *suffix;
-        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-            suffix = @"iPhone";
-        } else {
-            suffix = @"iPad";
-        }
-        NSString *name = [@"UIT%@ViewController_%@" format:detailName, suffix];
-        [detailViewController initWithNibName:name bundle:nil];
+        NSString *name = [@"UIT%@ViewController" format:detailName];
+        [detailViewController initWithPlatformSuffixedNibName:name bundle:nil];
     }
     @finally {
 

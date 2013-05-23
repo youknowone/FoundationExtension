@@ -41,3 +41,6 @@
 #import <UIKitExtension/UIAPreparedCellTableView.h>         // level: 20 / deps(0):  / internal(1): NSArray
 #import <UIKitExtension/UIAResultDisplayController.h>       // level: 20 / deps(0):  / internal(2): NSTimer, UIView
 #import <UIKitExtension/UIATableView.h>                     // level: 20 / deps(0):  / internal(0):
+#import <UIKitExtension/UIAViewController.h>                // level: 20 / deps(0):  / internal(0):
+// depenency level 21
+#import <UIKitExtension/UIAView.h>                          // level: 21 / deps(1): UIAViewController / internal(0):

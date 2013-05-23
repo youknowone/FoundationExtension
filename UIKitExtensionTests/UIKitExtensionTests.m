@@ -75,4 +75,10 @@
 }
 #endif
 
+//- (void)testViewHolder {
+//    UIView *view = [[[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil] autorelease];
+//    STAssertNotNil(view, @"");
+//    STAssertEquals(view.tag, 42, @"");
+//}
+
 @end

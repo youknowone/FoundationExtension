@@ -22,6 +22,31 @@ typedef void (^UIAViewAnimationBlock)();
  */
 typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
 
+
+/*!
+ *  @breif A holder of UIView for interface builder instead of UIViewController.
+ */
+@interface UIAViewHolder: NSObject
+
+@property(nonatomic, retain) IBOutlet id view;
+
+@end
+
+/*!
+ *  @brief UIView loader from InterfaceBuilder
+ */
+@interface UIView (InterfaceBuilder)
+
+/*!
+ *  @brief Pick a view from nib file.
+ *  @warning This method load view from UIViewController or UIViewHolder nib file.
+ */
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+
+- (id)initWithPlatformSuffixedNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
+
+@end
+
 /*!
  *  @brief UIView animation shortcuts
  */

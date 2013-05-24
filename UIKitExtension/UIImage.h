@@ -13,6 +13,22 @@
  */
 
 /*!
+ *  @brief UIImage creations
+ */
+@interface UIImage (Creations)
+
+- (id)initWithContentsOfURL:(NSURL *)URL;
++ (id)imageWithContentsOfURL:(NSURL *)URL;
+
+- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
++ (id)imageWithContentsOfURLRequest:(NSURLRequest *)request;
+
+- (id)initWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
++ (id)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
+
+@end
+
+/*!
  *  @brief UIImage extension
  */
 @interface UIImage (UIGraphics)

@@ -93,6 +93,10 @@
 }
 
 - (void)setPlaceholderString:(NSString *)placeholderString {
+    if (self.placeholderAnimated && self->_placeholderString.length == 0 && !self->_placeholderTextView.hidden) {
+        [self->_placeholderTextView setHidden:YES];
+        [self->_placeholderTextView setHidden:NO animated:YES];
+    }
     [self->_placeholderString autorelease];
     self->_placeholderString = [placeholderString copy];
 

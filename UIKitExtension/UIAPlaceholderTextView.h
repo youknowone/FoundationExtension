@@ -13,6 +13,7 @@
     UITextView *_placeholderTextView;
     NSString *_placeholderString;
     BOOL _placeholderAnimated;
+    BOOL _editing;
 }
 
 /*!

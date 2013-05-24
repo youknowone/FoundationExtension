@@ -14,12 +14,26 @@
 
 @synthesize placeholderAnimated=_placeholderAnimated;
 
+- (void)_didBeginEditing {
+    self->_editing = YES;
+    [self->_placeholderTextView setHidden:YES != 0 animated:self->_placeholderAnimated];
+}
+
 - (void)_textDidChanged {
+    if (!self->_editing) {
+        [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated];
+    }
+}
+
+- (void)_didEndEditing {
     [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated];
+    self->_editing = NO;
 }
 
 - (void)UIAPlaceholderTextViewInit {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didBeginEditing) name:UITextViewTextDidBeginEditingNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_textDidChanged) name:UITextViewTextDidChangeNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_didEndEditing) name:UITextViewTextDidEndEditingNotification object:nil];
 
     UITextView *view = self->_placeholderTextView = [[UITextView alloc] initWithFrame:self.bounds];
     view.backgroundColor = [UIColor clearColor];

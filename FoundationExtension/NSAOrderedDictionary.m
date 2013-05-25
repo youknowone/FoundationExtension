@@ -97,6 +97,10 @@
     return [self->_order objectAtIndex:index];
 }
 
+- (id)objectAtIndex:(NSUInteger)index {
+    return [self->_impl objectForKey:[self keyAtIndex:index]];
+}
+
 - (NSUInteger)indexOfKey:(id)key {
     return [self->_order indexOfObject:key];
 }
@@ -221,5 +225,22 @@
     [self->_order removeObject:aKey];
     [self->_impl removeObjectForKey:aKey];
 }
+
+- (id)keyAtIndex:(NSUInteger)index {
+    return [self->_order objectAtIndex:index];
+}
+
+- (id)objectAtIndex:(NSUInteger)index {
+    return [self->_impl objectForKey:[self keyAtIndex:index]];
+}
+
+- (NSUInteger)indexOfKey:(id)key {
+    return [self->_order indexOfObject:key];
+}
+
+- (NSEnumerator *)reversedKeyEnumerator {
+    return [self->_order reverseObjectEnumerator];
+}
+
 
 @end

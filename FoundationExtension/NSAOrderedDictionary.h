@@ -22,6 +22,7 @@
 }
 
 - (id)keyAtIndex:(NSUInteger)index;
+- (id)objectAtIndex:(NSUInteger)index;
 - (NSUInteger)indexOfKey:(id)key;
 - (NSEnumerator *)reversedKeyEnumerator;
 
@@ -34,5 +35,10 @@
     NSMutableDictionary *_impl;
     NSMutableOrderedSet *_order;
 }
+
+- (id)keyAtIndex:(NSUInteger)index;
+- (id)objectAtIndex:(NSUInteger)index;
+- (NSUInteger)indexOfKey:(id)key;
+- (NSEnumerator *)reversedKeyEnumerator;
 
 @end

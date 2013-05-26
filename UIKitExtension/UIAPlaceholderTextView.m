@@ -16,17 +16,17 @@
 
 - (void)_didBeginEditing {
     self->_editing = YES;
-    [self->_placeholderTextView setHidden:YES != 0 animated:self->_placeholderAnimated];
+    [self->_placeholderTextView setHidden:YES != 0 animated:self->_placeholderAnimated && self->_placeholderString.length > 0];
 }
 
 - (void)_textDidChanged {
     if (!self->_editing) {
-        [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated];
+        [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated && self->_placeholderString.length > 0];
     }
 }
 
 - (void)_didEndEditing {
-    [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated];
+    [self->_placeholderTextView setHidden:self.text.length != 0 animated:self->_placeholderAnimated && self->_placeholderString.length > 0];
     self->_editing = NO;
 }
 

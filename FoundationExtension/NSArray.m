@@ -114,6 +114,39 @@
 @end
 
 
+@implementation NSArray (Random)
+
+- (id)randomObject {
+    NSUInteger count = self.count;
+    if (count == 0) {
+        return nil;
+    }
+    return [self :rand() % count];
+}
+
+- (NSArray *)randomObjectsOfCount:(NSUInteger)theCount {
+    NSUInteger count = self.count;
+    if (theCount > count) {
+        [self :count]; // NOTE: to raise proper exception
+        return nil;
+    }
+    // FIXME: slow - reimplement with objectsAtIndexes
+    NSMutableArray *copy = [self mutableCopy];
+    NSMutableArray *selected = [NSMutableArray array];
+
+    for (NSUInteger i = 0; i < theCount; i ++) {
+        NSUInteger index = rand() % (theCount - i);
+        [selected addObject:[copy :index]];
+        [copy removeObjectAtIndex:index];
+    }
+
+    [copy release];
+    return selected;
+}
+
+@end
+
+
 @implementation NSMutableArray (NSNumber)
 
 - (void)addInteger:(NSInteger)value {

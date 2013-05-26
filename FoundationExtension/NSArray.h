@@ -148,6 +148,14 @@
 @end
 
 
+@interface NSArray (Random)
+
+- (id)randomObject;
+- (NSArray *)randomObjectsOfCount:(NSUInteger)count;
+
+@end
+
+
 /*!
  *  @brief NSMutableArray shortcut methods for [NSNumber][1].
  *  @warning These methods are deprecated. Use NSNumber constants like @1.

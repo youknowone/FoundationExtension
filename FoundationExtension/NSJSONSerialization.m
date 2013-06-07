@@ -9,6 +9,7 @@
 #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
 
 #import "NSString.h"
+#import "NSURLRequestCreations.h"
 
 #import "NSJSONSerialization.h"
 
@@ -20,6 +21,22 @@
 
 + (NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error {
     return [NSString stringWithUTF8Data:[self dataWithJSONObject:obj options:opt error:error]];
+}
+
++ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONWritingOptions)opt error:(NSError **)error {
+    NSData *data = [NSData dataWithContentsOfURLRequest:URLRequest error:error];
+    if (data == nil) {
+        return nil;
+    }
+    return [self JSONObjectWithData:data options:opterr error:error];
+}
+
++ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONWritingOptions)opt error:(NSError **)error {
+    NSData *data = [NSData dataWithContentsOfURL:URL options:0 error:error];
+    if (data == nil) {
+        return nil;
+    }
+    return [self JSONObjectWithData:data options:0 error:error];
 }
 
 @end

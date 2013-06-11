@@ -30,7 +30,7 @@
  *      [3]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underlining_Styles
  *      [4]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underline_Masks
  */
-typedef NSUInteger NSUnderlineStyle;
+typedef NSInteger NSUnderlineStyle;
 
 /*!
  *  @brief Values for ligature style.

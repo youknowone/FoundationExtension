@@ -22,6 +22,8 @@
 
 #import <FoundationExtension/NSADictionary.h>
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < 70000
+
 /*!
  *  @brief Type for NSUnderlinePattern*, NSUnderlineStyle* and NSUnderlineMask*.
  *  @see [NSUnderlineStyleAttributeName][0]
@@ -36,6 +38,8 @@
  *      [4]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underline_Masks
  */
 typedef NSUInteger NSUnderlineStyle;
+
+#endif
 
 /*!
  *  @brief Values for ligature style.

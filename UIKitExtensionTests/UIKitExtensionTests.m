@@ -55,7 +55,7 @@
     TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
     TEST_ITEM(foregroundColor, [UIColor colorWithRed:0.2f green:0.4f blue:0.6f alpha:1.0f]);
     TEST_ITEM(underlineStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleSingle]);
-    TEST_ITEM_VALUE(underlineStyle, (NSUInteger)NSUnderlineStyleSingle);
+    TEST_ITEM_VALUE(underlineStyle, (NSInteger)NSUnderlineStyleSingle);
     TEST_ITEM(backgroundColor, [UIColor colorWithRed:0.2f green:0.4f blue:0.6f alpha:1.0f]);
     TEST_ITEM(ligatureNumber, [NSNumber numberWithUnsignedInteger:NSLigatureNo]);
     TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureStandard);
@@ -65,7 +65,7 @@
     TEST_ITEM_VALUE(strokeWidth, 0.4f);
     TEST_ITEM(strokeColor, [UIColor colorWithRed:0.2f green:0.4f blue:0.6f alpha:1.0f]);
     TEST_ITEM(strikethroughStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleSingle]);
-    TEST_ITEM_VALUE(strikethroughStyle, (NSUInteger)NSUnderlineStyleSingle);
+    TEST_ITEM_VALUE(strikethroughStyle, (NSInteger)NSUnderlineStyleSingle);
     TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
     TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSVerticalGlyphFormHorizontal]);
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);

@@ -90,7 +90,7 @@
     obj = [NSADictionary dictionaryWithObjects:@[@1, @2, @3] forKeys:@[@1, @2, @3]];
     STAssertEquals(3, (int)obj.count, @"");
 
-    obj = [NSAMutableDictionary dictionaryWithCapacity:4];
+    obj = (NSADictionary *)[NSAMutableDictionary dictionaryWithCapacity:4];
     STAssertEquals(0, (int)obj.count, @"");
 
     NSADictionary *copy = [obj copy];

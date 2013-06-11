@@ -28,6 +28,7 @@ var hierarchy =
     [ "NSArray(Functional)", "categoryNSArray_07Functional_08.html", null ],
     [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", null ],
     [ "NSArray(NSURLRequest)", "categoryNSArray_07NSURLRequest_08.html", null ],
+    [ "NSArray(Random)", "categoryNSArray_07Random_08.html", null ],
     [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", null ],
     [ "NSArray(Shortcuts)", "categoryNSArray_07Shortcuts_08.html", null ],
     [ "NSAString", "interfaceNSAString.html", null ],
@@ -97,14 +98,22 @@ var hierarchy =
     [ "UIASubviewTableView", "interfaceUIASubviewTableView.html", null ],
     [ "UIATableViewCellCopyable", "interfaceUIATableViewCellCopyable.html", null ],
     [ "<UIATableViewCellCopyableDelegate>", "protocolUIATableViewCellCopyableDelegate-p.html", null ],
+    [ "UIAViewController", "interfaceUIAViewController.html", null ],
+    [ "UIAViewHolder", "interfaceUIAViewHolder.html", null ],
+    [ "<UIAViewLifeCycle>", "protocolUIAViewLifeCycle-p.html", [
+      [ "UIAView", "interfaceUIAView.html", null ]
+    ] ],
     [ "UIColor(Creations)", "categoryUIColor_07Creations_08.html", null ],
     [ "UIColor(HTMLColor)", "categoryUIColor_07HTMLColor_08.html", null ],
     [ "UIColor(Shortcuts)", "categoryUIColor_07Shortcuts_08.html", null ],
     [ "UIControl(Shortcuts)", "categoryUIControl_07Shortcuts_08.html", null ],
     [ "UIDevice(Shortcuts)", "categoryUIDevice_07Shortcuts_08.html", null ],
+    [ "UIImage(Creations)", "categoryUIImage_07Creations_08.html", null ],
     [ "UIImage(UIGraphics)", "categoryUIImage_07UIGraphics_08.html", null ],
     [ "UIScrollView(Shortcuts)", "categoryUIScrollView_07Shortcuts_08.html", null ],
     [ "UITableViewCell(Shortcuts)", "categoryUITableViewCell_07Shortcuts_08.html", null ],
     [ "UIView(Animation)", "categoryUIView_07Animation_08.html", null ],
+    [ "UIView(InterfaceBuilder)", "categoryUIView_07InterfaceBuilder_08.html", null ],
+    [ "UIViewController(Shortcuts)", "categoryUIViewController_07Shortcuts_08.html", null ],
     [ "UIWebView(Shortcuts)", "categoryUIWebView_07Shortcuts_08.html", null ]
 ];

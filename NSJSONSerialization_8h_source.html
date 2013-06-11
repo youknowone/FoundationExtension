@@ -118,10 +118,12 @@ $(document).ready(function(){initNavTree('NSJSONSerialization_8h_source.html',''
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;+ (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;+ (NSString *)stringWithJSONObject:(<span class="keywordtype">id</span>)obj options:(NSJSONWritingOptions)opt error:(NSError **)error;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONWritingOptions)opt error:(NSError **)error;;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONWritingOptions)opt error:(NSError **)error;;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -46,6 +46,7 @@ var searchData=
   ['dictionarywithcontentsofurlrequest_3aformat_3aerror_3a',['dictionaryWithContentsOfURLRequest:format:error:',['../categoryNSDictionary_07NSURLRequest_08.html#a8d522b4a831893d0b75ac7eca197cb03',1,'NSDictionary(NSURLRequest)']]],
   ['dictionarywithdata_3a',['dictionaryWithData:',['../categoryNSDictionary_07NSData_08.html#abd85c5b2f35b4cf498f2522c67249f7e',1,'NSDictionary(NSData)']]],
   ['dictionarywithdata_3aformat_3aerror_3a',['dictionaryWithData:format:error:',['../categoryNSDictionary_07NSData_08.html#ace115cd53e23346e8fb8c07f621b98bd',1,'NSDictionary(NSData)']]],
+  ['didreceivememorywarning',['didReceiveMemoryWarning',['../protocolUIAViewLifeCycle-p.html#a18450f000908720da219476c190d2fed',1,'UIAViewLifeCycle-p']]],
   ['digestbymd2',['digestByMD2',['../categoryNSData_07CommonCrypto_08.html#a80e38c5858c49380c7867cd806990dd3',1,'NSData(CommonCrypto)']]],
   ['digestbymd2usingencoding_3a',['digestByMD2UsingEncoding:',['../categoryNSString_07CommonCrypto_08.html#a8485baaeb930bb297e09d0be44aa0dbd',1,'NSString(CommonCrypto)']]],
   ['digestbymd4',['digestByMD4',['../categoryNSData_07CommonCrypto_08.html#a8350c64c93f1e80a96cea97f8d868d8d',1,'NSData(CommonCrypto)']]],

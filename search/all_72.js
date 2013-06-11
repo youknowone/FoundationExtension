@@ -1,6 +1,8 @@
 var searchData=
 [
   ['readme',['README',['../md_README.html',1,'']]],
+  ['randomobject',['randomObject',['../categoryNSArray_07Random_08.html#a1de0ab9407399e553bdcd2019bcd2077',1,'NSArray(Random)']]],
+  ['randomobjectsofcount_3a',['randomObjectsOfCount:',['../categoryNSArray_07Random_08.html#a36625c57ca00ca3fa91a73c1c7cf4235',1,'NSArray(Random)']]],
   ['range',['range',['../categoryNSString_07Shortcuts_08.html#a7d28df22921cd927304a7d672f78669f',1,'NSString(Shortcuts)']]],
   ['readme_2emd',['README.md',['../README_8md.html',1,'']]],
   ['readobjectforclass_3aoptions_3a',['readObjectForClass:options:',['../categoryNSPasteboard_07Shortcuts_08.html#adde358f1b39bd5b4ea34cb4dc43ea1fc',1,'NSPasteboard(Shortcuts)']]],
@@ -46,5 +48,5 @@ var searchData=
   ['resultdisplaycontrollershouldshowdimmingview_3a',['resultDisplayControllerShouldShowDimmingView:',['../protocolUIAResultDisplayDelegate-p.html#a21c1308d14c23291bb8fb488e33bc1b7',1,'UIAResultDisplayDelegate-p']]],
   ['resultview',['resultView',['../interfaceUIAResultDisplayController.html#aad33496583e76baabd1ec4b0046d5661',1,'UIAResultDisplayController']]],
   ['resultviewloaded',['resultViewLoaded',['../interfaceUIAResultDisplayController.html#a64f6a07584d4b49ab882f7cd57bbace4',1,'UIAResultDisplayController']]],
-  ['reversedkeyenumerator',['reversedKeyEnumerator',['../interfaceNSAOrderedDictionary.html#ae5b5cd37836c36b04820f7dc4e395725',1,'NSAOrderedDictionary']]]
+  ['reversedkeyenumerator',['reversedKeyEnumerator',['../interfaceNSAOrderedDictionary.html#ae5b5cd37836c36b04820f7dc4e395725',1,'NSAOrderedDictionary::reversedKeyEnumerator()'],['../interfaceNSAMutableOrderedDictionary.html#a073fd52ec7a4cbfc4e8f5ee8ec9965fd',1,'NSAMutableOrderedDictionary::reversedKeyEnumerator()']]]
 ];

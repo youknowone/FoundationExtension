@@ -3,7 +3,7 @@ var NSAttributedString_09Cocoa_8h =
     [ "NSMutableAttributedString(AttributeProperties)", "categoryNSMutableAttributedString_07AttributeProperties_08.html", "categoryNSMutableAttributedString_07AttributeProperties_08" ],
     [ "NSAttributedStringAttributeDictionary", "interfaceNSAttributedStringAttributeDictionary.html", "interfaceNSAttributedStringAttributeDictionary" ],
     [ "NSLigatureType", "NSAttributedString_09Cocoa_8h.html#a8799354ea0947b621292a96bd39eb236", null ],
-    [ "NSUnderlineStyle", "NSAttributedString_09Cocoa_8h.html#a1365665cb925cee05ec93046c12b1b2f", null ],
+    [ "NSUnderlineStyle", "NSAttributedString_09Cocoa_8h.html#aac8d0ccdc7bade0bbb9174fa59f5eec3", null ],
     [ "NSVerticalGlyphForm", "NSAttributedString_09Cocoa_8h.html#ac54573c8738e1cea34c6eaba9a022339", null ],
     [ "NSWritingDirectionAttributes", "NSAttributedString_09Cocoa_8h.html#a9386588bbd2a6a787cbccf634982debc", null ],
     [ "NSLigatureNo", "NSAttributedString_09Cocoa_8h.html#a99fb83031ce9923c84392b4e92f956b5a42865a4e389582c4e2993c7ad1d1954c", null ],

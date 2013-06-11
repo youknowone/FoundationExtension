@@ -39,6 +39,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSArray(Creations)", "categoryNSArray_07Creations_08.html", "categoryNSArray_07Creations_08" ],
       [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", "categoryNSArray_07Rearrange_08" ],
       [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", "categoryNSArray_07NSNumber_08" ],
+      [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ],
       [ "NSMutableArray(NSNumber)", "categoryNSMutableArray_07NSNumber_08.html", "categoryNSMutableArray_07NSNumber_08" ]
     ] ],
     [ "NSAString.h", "NSAString_8h.html", [

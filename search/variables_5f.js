@@ -8,6 +8,7 @@ var searchData=
   ['_5fdatasourceimpl',['_dataSourceImpl',['../interfaceUIASubviewTableView.html#af8a0e65e09d4a63a8afb5d6aa27bed74',1,'UIASubviewTableView']]],
   ['_5fdelegate',['_delegate',['../interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa',1,'FSEventStream::_delegate()'],['../interfaceNSAImageWell.html#a7f41eb78e4d00896b21d683441a099e8',1,'NSAImageWell::_delegate()'],['../interfaceUIATableViewCellCopyable.html#a17b8ac55db5ba9d71e93080788273e9a',1,'UIATableViewCellCopyable::_delegate()']]],
   ['_5fdelegatemediator',['_delegateMediator',['../interfaceUIASubviewTableView.html#ad4c5fd52e553ccca4ce7104e3c866058',1,'UIASubviewTableView']]],
+  ['_5fediting',['_editing',['../interfaceUIAPlaceholderTextView.html#aa208c7a810463649d9132598354fad16',1,'UIAPlaceholderTextView']]],
   ['_5fencoding',['_encoding',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#aeb7cf86f87e3200b4e70d41b235c1d4b',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['_5ffirst',['_first',['../interfaceNSATuple.html#ae6bce12a000bbfbc59cd5fcd824c0032',1,'NSATuple::_first()'],['../interfaceNSATriple.html#a83404668cd6ac37cbc80a7ec29419ad7',1,'NSATriple::_first()']]],
   ['_5fimageurl',['_imageURL',['../interfaceNSAImageWell.html#acd69376d70883d4e783fe2dd23dd3563',1,'NSAImageWell']]],

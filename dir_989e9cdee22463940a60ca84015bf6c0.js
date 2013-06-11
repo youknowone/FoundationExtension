@@ -29,6 +29,13 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UIATableViewCellCopyable", "interfaceUIATableViewCellCopyable.html", "interfaceUIATableViewCellCopyable" ],
       [ "<UIATableViewCellCopyableDelegate>", "protocolUIATableViewCellCopyableDelegate-p.html", "protocolUIATableViewCellCopyableDelegate-p" ]
     ] ],
+    [ "UIAView.h", "UIAView_8h.html", [
+      [ "UIAView", "interfaceUIAView.html", null ]
+    ] ],
+    [ "UIAViewController.h", "UIAViewController_8h.html", [
+      [ "<UIAViewLifeCycle>", "protocolUIAViewLifeCycle-p.html", "protocolUIAViewLifeCycle-p" ],
+      [ "UIAViewController", "interfaceUIAViewController.html", "interfaceUIAViewController" ]
+    ] ],
     [ "UIColor.h", "UIColor_8h.html", [
       [ "UIColor(Shortcuts)", "categoryUIColor_07Shortcuts_08.html", "categoryUIColor_07Shortcuts_08" ],
       [ "UIColor(Creations)", "categoryUIColor_07Creations_08.html", "categoryUIColor_07Creations_08" ],
@@ -40,6 +47,7 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
     ] ],
     [ "UIDevice.h", "UIDevice_8h.html", "UIDevice_8h" ],
     [ "UIImage.h", "UIImage_8h.html", [
+      [ "UIImage(Creations)", "categoryUIImage_07Creations_08.html", "categoryUIImage_07Creations_08" ],
       [ "UIImage(UIGraphics)", "categoryUIImage_07UIGraphics_08.html", "categoryUIImage_07UIGraphics_08" ]
     ] ],
     [ "UIKitExtension.h", "UIKitExtension_8h.html", null ],
@@ -50,6 +58,9 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UITableViewCell(Shortcuts)", "categoryUITableViewCell_07Shortcuts_08.html", "categoryUITableViewCell_07Shortcuts_08" ]
     ] ],
     [ "UIView.h", "UIView_8h.html", "UIView_8h" ],
+    [ "UIViewController.h", "UIViewController_8h.html", [
+      [ "UIViewController(Shortcuts)", "categoryUIViewController_07Shortcuts_08.html", "categoryUIViewController_07Shortcuts_08" ]
+    ] ],
     [ "UIWebView.h", "UIWebView_8h.html", [
       [ "UIWebView(Shortcuts)", "categoryUIWebView_07Shortcuts_08.html", "categoryUIWebView_07Shortcuts_08" ]
     ] ]

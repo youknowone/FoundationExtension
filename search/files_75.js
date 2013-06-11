@@ -8,6 +8,8 @@ var searchData=
   ['uiaresultdisplaycontroller_2eh',['UIAResultDisplayController.h',['../UIAResultDisplayController_8h.html',1,'']]],
   ['uiasubviewtableview_2eh',['UIASubviewTableView.h',['../UIASubviewTableView_8h.html',1,'']]],
   ['uiatableview_2eh',['UIATableView.h',['../UIATableView_8h.html',1,'']]],
+  ['uiaview_2eh',['UIAView.h',['../UIAView_8h.html',1,'']]],
+  ['uiaviewcontroller_2eh',['UIAViewController.h',['../UIAViewController_8h.html',1,'']]],
   ['uicolor_2eh',['UIColor.h',['../UIColor_8h.html',1,'']]],
   ['uicontrol_2eh',['UIControl.h',['../UIControl_8h.html',1,'']]],
   ['uidevice_2eh',['UIDevice.h',['../UIDevice_8h.html',1,'']]],
@@ -16,5 +18,6 @@ var searchData=
   ['uiscrollview_2eh',['UIScrollView.h',['../UIScrollView_8h.html',1,'']]],
   ['uitableview_2eh',['UITableView.h',['../UITableView_8h.html',1,'']]],
   ['uiview_2eh',['UIView.h',['../UIView_8h.html',1,'']]],
+  ['uiviewcontroller_2eh',['UIViewController.h',['../UIViewController_8h.html',1,'']]],
   ['uiwebview_2eh',['UIWebView.h',['../UIWebView_8h.html',1,'']]]
 ];

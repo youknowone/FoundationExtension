@@ -22,7 +22,7 @@
 
 #import <FoundationExtension/NSADictionary.h>
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED < 70000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
 
 /*!
  *  @brief Type for NSUnderlinePattern*, NSUnderlineStyle* and NSUnderlineMask*.

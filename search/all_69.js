@@ -24,6 +24,7 @@ var searchData=
   ['inittemporaryurlwithpath_3a',['initTemporaryURLWithPath:',['../categoryNSURL_07Creations_08.html#a6c55cf3a57b73157535aea66e333878f',1,'NSURL(Creations)']]],
   ['initwith32bitcolor_3a',['initWith32bitColor:',['../categoryUIColor_07Creations_08.html#a17af75d5b265c22e6c738437e5852e05',1,'UIColor(Creations)']]],
   ['initwith8bitred_3agreen_3ablue_3aalpha_3a',['initWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#ad30c18ab01ff10c0db3d391cbc2fc736',1,'UIColor(Creations)']]],
+  ['initwith8bitwhite_3aalpha_3a',['initWith8bitWhite:alpha:',['../categoryUIColor_07Creations_08.html#addbdf223448bc54e2ac1aba953a2cc41',1,'UIColor(Creations)']]],
   ['initwithabstractformat_3a',['initWithAbstractFormat:',['../categoryNSURL_07Creations_08.html#ade9a90d27e45d02d24925b2e4b92202b',1,'NSURL(Creations)']]],
   ['initwithabstractpath_3a',['initWithAbstractPath:',['../categoryNSURL_07Creations_08.html#aa9bffdd9ca081a8c9ee30498e078132e',1,'NSURL(Creations)::initWithAbstractPath:()'],['../categoryNSURLRequest_07Creations__deprecated_08.html#a54f72bc67d42118454c427daa8071ff4',1,'NSURLRequest(Creations_deprecated)::initWithAbstractPath:()']]],
   ['initwithabstractpathformat_3a',['initWithAbstractPathFormat:',['../categoryNSURLRequest_07Creations__deprecated_08.html#a302d86d3a976d073a0da1bc0f763c202',1,'NSURLRequest(Creations_deprecated)']]],
@@ -64,5 +65,8 @@ var searchData=
   ['insertinteger_3aatindex_3a',['insertInteger:atIndex:',['../categoryNSMutableArray_07NSNumber_08.html#a977964fa205613a7fc1c0e4ec77f9e84',1,'NSMutableArray(NSNumber)']]],
   ['integeratindex_3a',['integerAtIndex:',['../categoryNSArray_07NSNumber_08.html#add035abb04f06d7d8b218eb90bd624d0',1,'NSArray(NSNumber)']]],
   ['integervaluebase_3a',['integerValueBase:',['../categoryNSString_07Evaluation_08.html#afc17c94e3ed64c7250dcbd673b5bd5ad',1,'NSString(Evaluation)']]],
-  ['invalidate',['invalidate',['../interfaceFSEventStream.html#a7611ddfe2724e59f0fae7b77e6c62e8d',1,'FSEventStream']]]
+  ['invalidate',['invalidate',['../interfaceFSEventStream.html#a7611ddfe2724e59f0fae7b77e6c62e8d',1,'FSEventStream']]],
+  ['ios7backgroundcolor',['iOS7BackgroundColor',['../categoryUIColor_07iOS7_08.html#a96c328d95d652ce437efbb2d466417f7',1,'UIColor(iOS7)']]],
+  ['ios7systemfontofsize_3a',['iOS7SystemFontOfSize:',['../categoryUIFont_07iOS7_08.html#ab25f77d176ff13800b1c7b5086d07a05',1,'UIFont(iOS7)']]],
+  ['ios7systemfontofsize_3aweight_3a',['iOS7SystemFontOfSize:weight:',['../categoryUIFont_07iOS7_08.html#a641eb861a53626243baa7a90e9531182',1,'UIFont(iOS7)']]]
 ];

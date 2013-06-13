@@ -5,6 +5,7 @@ var NAVTREE =
     [ "FoundationExtension", "FoundationExtension.html", null ],
     [ "CoreFoundation-Subclass", "CoreFoundation-Subclass.html", null ],
     [ "Map/Filter/Reduce", "Map_2Filter_2Reduce.html", null ],
+    [ "UI7Kit", "UI7Kit.html", null ],
     [ "README", "md_README.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Classes", null, [
@@ -37,9 +38,9 @@ var NAVTREEINDEX =
 [
 "CocoaExtension_8h.html",
 "NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae5dd6eb2c39970a09e1cad2933daf4b4",
-"categoryNSMutableAttributedString_07AttributeProperties_08.html#ad4581b7ea3e41f6b12ed0ac5819ba3d6",
-"functions_0x73.html",
-"interfaceUIASubviewTableView.html#af8a0e65e09d4a63a8afb5d6aa27bed74"
+"categoryNSMutableAttributedString_07AttributeProperties_08.html#a4588b8da1172505407e6810eccc1bb6c",
+"categoryUIViewController_07Shortcuts_08.html#ac846dd76a2ad9389cc701ae6764fb162",
+"interfaceUIAColorComponents.html#a010b88e1c2cd78cb25df0c52e7334543"
 ];
 
 var navTreeSubIndices = new Array();

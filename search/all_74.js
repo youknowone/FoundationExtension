@@ -17,5 +17,6 @@ var searchData=
   ['triplewithfirst_3asecond_3athird_3a',['tripleWithFirst:second:third:',['../interfaceNSATriple.html#a37dd48b6e2c40bf456ef9e83894e1cb2',1,'NSATriple']]],
   ['tuple',['tuple',['../interfaceNSATuple.html#a93b9ba4f09e28f22bae82ab84b72fdf1',1,'NSATuple']]],
   ['tuplewithfirst_3asecond_3a',['tupleWithFirst:second:',['../interfaceNSATuple.html#a965fca01afa981949fba7b711d0f81ab',1,'NSATuple']]],
+  ['typeencoding',['typeEncoding',['../interfaceNSAMethod.html#a0fead82c65d21f6eff1081e046016a8f',1,'NSAMethod']]],
   ['typeformeddescription',['typeFormedDescription',['../categoryNSNumber_07Description_08.html#a335b56ec7a1765b286272b412c0f5621',1,'NSNumber(Description)::typeFormedDescription()'],['../categoryNSDecimalNumber_07Description_08.html#a079b8cd421eef51869eb6e4f6b4e937f',1,'NSDecimalNumber(Description)::typeFormedDescription()']]]
 ];

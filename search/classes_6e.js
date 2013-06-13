@@ -56,6 +56,7 @@ var searchData=
   ['nsnumberformatter_28shortcuts_29',['NSNumberFormatter(Shortcuts)',['../categoryNSNumberFormatter_07Shortcuts_08.html',1,'']]],
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../categoryNSObject_07NSAClass_08.html',1,'']]],
   ['nsobject_28objcruntime_29',['NSObject(ObjCRuntime)',['../categoryNSObject_07ObjCRuntime_08.html',1,'']]],
+  ['nsobject_28pointer_29',['NSObject(Pointer)',['../categoryNSObject_07Pointer_08.html',1,'']]],
   ['nspasteboard_28shortcuts_29',['NSPasteboard(Shortcuts)',['../categoryNSPasteboard_07Shortcuts_08.html',1,'']]],
   ['nsstring_28commoncrypto_29',['NSString(CommonCrypto)',['../categoryNSString_07CommonCrypto_08.html',1,'']]],
   ['nsstring_28commoncryptorstring_29',['NSString(CommonCryptorString)',['../categoryNSString_07CommonCryptorString_08.html',1,'']]],

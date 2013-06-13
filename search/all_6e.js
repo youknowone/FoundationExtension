@@ -2,6 +2,7 @@ var searchData=
 [
   ['name',['name',['../interfaceNSAClass.html#aab3d5300e810152f3125d2dc8e30b816',1,'NSAClass']]],
   ['navigationbarhidingenabled',['navigationBarHidingEnabled',['../interfaceUIAResultDisplayController.html#a8df0e7a11ed1604ddd968096f1fe6edf',1,'UIAResultDisplayController']]],
+  ['needsui7kit',['needsUI7Kit',['../categoryUIDevice_07iOS7_08.html#a8caa69f9980334256f696da25c5a0f6b',1,'UIDevice(iOS7)']]],
   ['nilifobjectisnull_3a',['nilIfObjectIsNull:',['../categoryNSNull_07Tools_08.html#a7ec334888fc2ac7dee50ef9245d50c5d',1,'NSNull(Tools)']]],
   ['nsaapply',['NSAApply',['../NSAFunctional_8h.html#a93aafe4b8f080838d989a360b351eca0',1,'NSAFunctional.h']]],
   ['nsaapplywithindex',['NSAApplyWithIndex',['../NSAFunctional_8h.html#add3db479613f3f544d35d4844bf3a701',1,'NSAFunctional.h']]],
@@ -231,6 +232,7 @@ var searchData=
   ['nsnumberformatter_2eh',['NSNumberFormatter.h',['../NSNumberFormatter_8h.html',1,'']]],
   ['nsobject_28nsaclass_29',['NSObject(NSAClass)',['../categoryNSObject_07NSAClass_08.html',1,'']]],
   ['nsobject_28objcruntime_29',['NSObject(ObjCRuntime)',['../categoryNSObject_07ObjCRuntime_08.html',1,'']]],
+  ['nsobject_28pointer_29',['NSObject(Pointer)',['../categoryNSObject_07Pointer_08.html',1,'']]],
   ['nsobject_2eh',['NSObject.h',['../NSObject_8h.html',1,'']]],
   ['nspasteboard_28shortcuts_29',['NSPasteboard(Shortcuts)',['../categoryNSPasteboard_07Shortcuts_08.html',1,'']]],
   ['nspasteboard_2eh',['NSPasteboard.h',['../NSPasteboard_8h.html',1,'']]],

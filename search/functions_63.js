@@ -11,10 +11,12 @@ var searchData=
   ['classwithutf8name_3a',['classWithUTF8Name:',['../interfaceNSAClass.html#aa477be2523498c9b3225d0858af9a729',1,'NSAClass']]],
   ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c',1,'UIColor(Creations)']]],
   ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb',1,'UIColor(Creations)']]],
+  ['colorwith8bitwhite_3aalpha_3a',['colorWith8BitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a08d516b49e374292f8d69ac7d11049c1',1,'UIColor(Creations)']]],
   ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a0ec63486ee1b05f5d43954450e8dddab',1,'UIColor(HTMLColor)']]],
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],
   ['configurationurl',['configurationURL',['../categoryNSString_07NSURL_08.html#a2dbf914ae019ef54413dc9bec7472cd0',1,'NSString(NSURL)']]],
   ['configurationurlwithpath_3a',['configurationURLWithPath:',['../categoryNSURL_07Creations_08.html#a74194a6f81796361a1beff0e776fc7a7',1,'NSURL(Creations)']]],
   ['containskey_3a',['containsKey:',['../categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b',1,'NSDictionary(Shortcuts)']]],
-  ['containsobject_3a',['containsObject:',['../protocolNSAArrayLikeDataObject-p.html#aa95b57e6e771a74d1cdba808a90c2577',1,'NSAArrayLikeDataObject-p']]]
+  ['containsobject_3a',['containsObject:',['../protocolNSAArrayLikeDataObject-p.html#aa95b57e6e771a74d1cdba808a90c2577',1,'NSAArrayLikeDataObject-p']]],
+  ['copytoselector_3afromselector_3a',['copyToSelector:fromSelector:',['../interfaceNSAClass.html#a3b03d6232f5085361142846cf801c01d',1,'NSAClass']]]
 ];

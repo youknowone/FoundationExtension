@@ -11,5 +11,6 @@ var searchData=
   ['encrypteddesdatawithkey_3aoptions_3a',['encryptedDESDataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#a4a112c293cb09eb4514226fce622864a',1,'NSData(CommonCryptor)']]],
   ['encryptedrc2datawithkey_3aoptions_3a',['encryptedRC2DataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#a12ae6d8ecf7fb3bd0a7312888fb9ebb5',1,'NSData(CommonCryptor)']]],
   ['encryptedrc4datawithkey_3aoptions_3a',['encryptedRC4DataWithKey:options:',['../categoryNSData_07CommonCryptor_08.html#aebfbc61542650636b905272935ce58d7',1,'NSData(CommonCryptor)']]],
-  ['eventstream_3apath_3aevent_3aid_3a',['eventStream:path:event:id:',['../protocolFSEventStreamDelegate-p.html#ab76c4594eb99fc74fd8e29374caeddca',1,'FSEventStreamDelegate-p']]]
+  ['eventstream_3apath_3aevent_3aid_3a',['eventStream:path:event:id:',['../protocolFSEventStreamDelegate-p.html#ab76c4594eb99fc74fd8e29374caeddca',1,'FSEventStreamDelegate-p']]],
+  ['exportselector_3atoclass_3a',['exportSelector:toClass:',['../interfaceNSAClass.html#abfb93124779abb01731713f5ba1f88d2',1,'NSAClass']]]
 ];

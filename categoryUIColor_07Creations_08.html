@@ -120,6 +120,8 @@ $(document).ready(function(){initNavTree('categoryUIColor_07Creations_08.html','
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad30c18ab01ff10c0db3d391cbc2fc736"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIColor_07Creations_08.html#ad30c18ab01ff10c0db3d391cbc2fc736">initWith8bitRed:green:blue:alpha:</a></td></tr>
 <tr class="memdesc:ad30c18ab01ff10c0db3d391cbc2fc736"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize color from 32bit color component.  <a href="#ad30c18ab01ff10c0db3d391cbc2fc736"></a><br/></td></tr>
+<tr class="memitem:addbdf223448bc54e2ac1aba953a2cc41"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIColor_07Creations_08.html#addbdf223448bc54e2ac1aba953a2cc41">initWith8bitWhite:alpha:</a></td></tr>
+<tr class="memdesc:addbdf223448bc54e2ac1aba953a2cc41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize color from 8bit white component.  <a href="#addbdf223448bc54e2ac1aba953a2cc41"></a><br/></td></tr>
 <tr class="memitem:a17af75d5b265c22e6c738437e5852e05"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIColor_07Creations_08.html#a17af75d5b265c22e6c738437e5852e05">initWith32bitColor:</a></td></tr>
 <tr class="memdesc:a17af75d5b265c22e6c738437e5852e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize color from 32bit color packed value.  <a href="#a17af75d5b265c22e6c738437e5852e05"></a><br/></td></tr>
 </table><table class="memberdecls">
@@ -127,6 +129,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:acc1b4f2ef0f039363bcde6eaaa6ca7eb"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb">colorWith8bitRed:green:blue:alpha:</a></td></tr>
 <tr class="memdesc:acc1b4f2ef0f039363bcde6eaaa6ca7eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns color from 32bit color component.  <a href="#acc1b4f2ef0f039363bcde6eaaa6ca7eb"></a><br/></td></tr>
+<tr class="memitem:a08d516b49e374292f8d69ac7d11049c1"><td class="memItemLeft" align="right" valign="top">(UIColor *)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="categoryUIColor_07Creations_08.html#a08d516b49e374292f8d69ac7d11049c1">colorWith8BitWhite:alpha:</a></td></tr>
+<tr class="memdesc:a08d516b49e374292f8d69ac7d11049c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns color from 8bit white component.  <a href="#a08d516b49e374292f8d69ac7d11049c1"></a><br/></td></tr>
 <tr class="memitem:a23cbb93708a593b7ece47b1d861d7a5c"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c">colorWith32bitColor:</a></td></tr>
 <tr class="memdesc:a23cbb93708a593b7ece47b1d861d7a5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns color from 32bit color packed value.  <a href="#a23cbb93708a593b7ece47b1d861d7a5c"></a><br/></td></tr>
 </table>
@@ -190,6 +194,35 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Creates and returns color from 32bit color component. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryUIColor_07Creations_08.html#ad30c18ab01ff10c0db3d391cbc2fc736" title="Initialize color from 32bit color component.">- initWith8bitRed:green:blue:alpha:</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a08d516b49e374292f8d69ac7d11049c1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">+ (UIColor *) colorWith8BitWhite: </td>
+          <td></td>
+          <td class="paramtype">(UInt8)&#160;</td>
+          <td class="paramname"><em>white</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">alpha:</td>
+          <td></td>
+          <td class="paramtype">(UInt8)&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and returns color from 8bit white component. </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryUIColor_07Creations_08.html#addbdf223448bc54e2ac1aba953a2cc41" title="Initialize color from 8bit white component.">- initWith8bitWhite:alpha:</a> </dd></dl>
 
 </div>
 </div>
@@ -259,6 +292,41 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">red</td><td>Value from 0 to 255 </td></tr>
     <tr><td class="paramname">green</td><td>Value from 0 to 255 </td></tr>
     <tr><td class="paramname">blue</td><td>Value from 0 to 255 </td></tr>
+    <tr><td class="paramname">alpha</td><td>Value from 0 to 255 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="addbdf223448bc54e2ac1aba953a2cc41"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWith8bitWhite: </td>
+          <td></td>
+          <td class="paramtype">(UInt8)&#160;</td>
+          <td class="paramname"><em>red</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">alpha:</td>
+          <td></td>
+          <td class="paramtype">(UInt8)&#160;</td>
+          <td class="paramname"><em>alpha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize color from 8bit white component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">white</td><td>Value from 0 to 255 </td></tr>
     <tr><td class="paramname">alpha</td><td>Value from 0 to 255 </td></tr>
   </table>
   </dd>

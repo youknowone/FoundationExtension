@@ -161,14 +161,33 @@
 
 /*!
  *  @brief Object wrapper for Method
+ *  @see [Method][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/tdef/Method
  */
 @interface NSAMethod : NSObject {
     Method _method;
 }
-//! @brief wrapped value
+
+/*!
+ *  @brief Wrapped value of type [Method][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/tdef/Method
+ */
 @property(nonatomic, readonly) Method method;
-//! @brief mapped implementation
+
+/*!
+ *  @brief Implementation of the method.
+ *  
+ *  @see [method_getImplementation][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getImplementation
+ */
 @property(nonatomic, assign) IMP implementation;
+
+/*! @brief Type encoding of the method.
+ *
+ *  @see [method_getTypeEncoding][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getTypeEncoding
+ */
+@property(nonatomic, readonly) NSString *typeEncoding;
 
 @end
 

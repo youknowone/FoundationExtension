@@ -134,4 +134,8 @@
     method_setImplementation(self->_method, implementation);
 }
 
+- (NSString *)typeEncoding {
+    return [NSString stringWithUTF8String:method_getTypeEncoding(self->_method)];
+}
+
 @end

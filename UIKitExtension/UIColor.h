@@ -28,6 +28,7 @@
  *  @brief UIColor creation shortcuts
  */
 @interface UIColor (Creations)
+
 /*!
  *  @brief Initialize color from 32bit color component
  *  @param red
@@ -45,6 +46,21 @@
  *  @see initWith8bitRed:green:blue:alpha:
  */
 + (id)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;
+
+/*!
+ *  @brief Initialize color from 8bit white component
+ *  @param white
+ *      Value from 0 to 255
+ *  @param alpha
+ *      Value from 0 to 255
+ */
+- (id)initWith8bitWhite:(UInt8)red alpha:(UInt8)alpha;
+
+/*!
+ *  @brief Creates and returns color from 8bit white component
+ *  @see initWith8bitWhite:alpha:
+ */
++ (UIColor *)colorWith8BitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Initialize color from 32bit color packed value

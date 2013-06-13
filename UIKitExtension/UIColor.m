@@ -34,6 +34,15 @@
     return [[[self alloc] initWith8bitRed:red green:green blue:blue alpha:alpha] autorelease];
 }
 
+- (id)initWith8bitWhite:(UInt8)red alpha:(UInt8)alpha {
+    return [self initWithWhite:red/255.0f
+                         alpha:alpha/255.0f];
+}
+
++ (UIColor *)colorWith8BitWhite:(UInt8)white alpha:(UInt8)alpha {
+    return [[[self alloc] initWith8bitWhite:white alpha:alpha] autorelease];
+}
+
 - (id)initWith32bitColor:(UInt32)value {
     return [self initWith8bitRed:(value >> 24) & 0xff
                            green:(value >> 16) & 0xff

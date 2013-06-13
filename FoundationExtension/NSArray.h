@@ -23,6 +23,11 @@
  */
 - (id):(NSUInteger)index;
 
+/*!
+ *  @brief index < self.count
+ */
+- (BOOL)hasIndex:(NSUInteger)index;
+
 @end
 
 /*!

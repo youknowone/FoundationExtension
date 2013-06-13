@@ -16,6 +16,10 @@
     return [self objectAtIndex:index];
 }
 
+- (BOOL)hasIndex:(NSUInteger)index {
+    return index < self.count;
+}
+
 @end
 
 

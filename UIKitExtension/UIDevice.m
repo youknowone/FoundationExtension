@@ -19,7 +19,10 @@
 @implementation UIDevice (Shortcuts)
 
 + (NSString *)uniqueIdentifier {
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wobjc-method-access"
     return [[UIDevice currentDevice] uniqueIdentifier];
+    #pragma clang diagnostic pop
 }
 
 + (UIADeviceType)currentDeviceType {
@@ -51,6 +54,7 @@
         #else
         #pragma clang diagnostic push
         #pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        #pragma clang diagnostic ignored "-Wobjc-method-access"
         token = [self uniqueIdentifier];
         #pragma clang diagnostic pop
         #endif

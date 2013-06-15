@@ -230,10 +230,12 @@
     STAssertEqualObjects(obj, [[[NSAttributedString alloc] initWithString:@""] autorelease], @"");
 }
 
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
 - (void)testJSON {
     id object = [NSJSONSerialization JSONObjectWithString:@"[1, 2, 3]" options:0 error:NULL];
     STAssertEqualObjects(object, (@[@1, @2, @3]), @"");
 }
+#endif
 
 - (void)testOrderedDictionary {
     NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionary];

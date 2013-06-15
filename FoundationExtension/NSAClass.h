@@ -157,6 +157,8 @@
  */
 @property(nonatomic, readonly) NSAClass *classObject;
 
++ (NSAClass *)classObject;
+
 @end
 
 /*!

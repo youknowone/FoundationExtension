@@ -36,6 +36,11 @@
     STAssertTrue([aString isEqualToString:@"hi"], @"");
 }
 
+- (void)testClassObject {
+    NSAString *string = [[[NSAString alloc] initWithString:@"blah"] autorelease];
+    STAssertEquals(string.classObject.class, [NSAString classObject].class, @"");
+}
+
 - (int)return0 { return 0; }
 - (int)return1 { return 1; }
 

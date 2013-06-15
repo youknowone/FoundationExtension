@@ -38,6 +38,10 @@
     return [[[self alloc] initWithClass:class] autorelease];
 }
 
+- (NSUInteger)hash {
+    return [self.name hash];
+}
+
 - (const char *)UTF8Name {
     return class_getName(self->_class);
 }
@@ -106,6 +110,10 @@
 
 - (NSAClass *)classObject {
     return [NSAClass classWithClass:self.class];
+}
+
++ (NSAClass *)classObject {
+    return [NSAClass classWithClass:self];
 }
 
 @end

@@ -130,6 +130,11 @@
 		387B1EB716EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
 		387B1EB816EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
 		387B1EB916EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
+		3888FC5B176C778D00489638 /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; };
+		3888FC5C176C778D00489638 /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; };
+		3888FC5D176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
+		3888FC5E176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
+		3888FC5F176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
 		38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
 		38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
@@ -423,6 +428,8 @@
 		3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSACommonCrypto.m; sourceTree = "<group>"; };
 		387B1EB316EBD0F50059722B /* NSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumber.h; sourceTree = "<group>"; };
 		387B1EB416EBD0F50059722B /* NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumber.m; sourceTree = "<group>"; };
+		3888FC59176C778D00489638 /* NSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValue.h; sourceTree = "<group>"; };
+		3888FC5A176C778D00489638 /* NSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValue.m; sourceTree = "<group>"; };
 		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
 		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
 		38B0C73C1641382D0044C73C /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
@@ -745,6 +752,8 @@
 				38660A64161AD9AE00C5CE06 /* NSURLRequest.m */,
 				38505C861642EC5A0059773B /* NSURLRequestCreations.h */,
 				38505C871642EC5B0059773B /* NSURLRequestCreations.m */,
+				3888FC59176C778D00489638 /* NSValue.h */,
+				3888FC5A176C778D00489638 /* NSValue.m */,
 				38F06978163839D2002723AB /* NSAArray.h */,
 				38F06979163839D2002723AB /* NSAArray.m */,
 				38F0698916384E3E002723AB /* NSADictionary.h */,
@@ -989,6 +998,7 @@
 				38D930EC1726CEC300BD0938 /* NSImage.h in Headers */,
 				38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */,
 				382E39AC1727C8F300099BC4 /* NSControl.h in Headers */,
+				3888FC5C176C778D00489638 /* NSValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1036,7 @@
 				387B1EB516EBD0F50059722B /* NSNumber.h in Headers */,
 				38485C6B171463F70001A99D /* NSNull.h in Headers */,
 				38BC0E61173ED68900F36497 /* NSAOverridingMediator.h in Headers */,
+				3888FC5B176C778D00489638 /* NSValue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1363,6 +1374,7 @@
 				38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */,
 				382E39AD1727C8F300099BC4 /* NSControl.m in Sources */,
 				38BC0E63173EDD1900F36497 /* NSAOverridingMediator.m in Sources */,
+				3888FC5E176C778D00489638 /* NSValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1421,6 +1433,7 @@
 				387B1EB716EBD0F50059722B /* NSNumber.m in Sources */,
 				38485C6C171463F70001A99D /* NSNull.m in Sources */,
 				38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */,
+				3888FC5D176C778D00489638 /* NSValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1485,6 +1498,7 @@
 				38498113174CFB8000FEB725 /* UIViewController.m in Sources */,
 				38D52563174EAC3A00B46322 /* UIAView.m in Sources */,
 				38D52566174EAC4D00B46322 /* UIAViewController.m in Sources */,
+				3888FC5F176C778D00489638 /* NSValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

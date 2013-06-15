@@ -52,6 +52,7 @@
 #import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
 #import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(4): NSString, NSData, NSDictionary, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
+#import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAClass.h>                    // level: 20 / deps(0):  / internal(0):

@@ -58,7 +58,7 @@
     TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
     TEST_ITEM(foregroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(underlineStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
-    TEST_ITEM_VALUE(underlineStyle, (NSUInteger)NSUnderlineStyleDouble);
+    TEST_ITEM_VALUE(underlineStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
     TEST_ITEM(superscriptNumber, [NSNumber numberWithBool:YES]);
     TEST_ITEM_VALUE(superscript, YES);
     TEST_ITEM_VALUE(superscript, NO);
@@ -78,7 +78,7 @@
     TEST_ITEM(strokeColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(underlineColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(strikethroughStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
-    TEST_ITEM_VALUE(strikethroughStyle, (NSUInteger)NSUnderlineStyleDouble);
+    TEST_ITEM_VALUE(strikethroughStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
     TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
     TEST_ITEM(obliquenessNumber, [NSNumber numberWithFloat:0.2f]);
     TEST_ITEM_VALUE(obliqueness, 0.4f);
@@ -89,9 +89,10 @@
     TEST_ITEM(toolTip, @"Test tooptip");
     TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
+    #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
     TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSVerticalGlyphFormHorizontal]);
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
-
+    #endif
     #undef TEST_ITEM
     #undef TEST_ITEM_VALUE
 }

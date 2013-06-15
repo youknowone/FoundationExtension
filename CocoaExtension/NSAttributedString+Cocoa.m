@@ -214,7 +214,7 @@ static NSArray *__NSWritingDirectionAttributeArrayFromAttributes(NSWritingDirect
     self.ligatureNumber = [NSNumber numberWithUnsignedInteger:ligature];
 }
 
-- (NSNumber *)writingDirectionArray {
+- (NSArray *)writingDirectionArray {
     return [self objectForKey:NSWritingDirectionAttributeName];
 }
 

@@ -8,7 +8,6 @@
 
 const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 
-#import "NSArray.h"
 #import "UIView.h"
 
 @implementation UIAViewHolder

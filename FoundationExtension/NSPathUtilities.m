@@ -6,13 +6,12 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#import "NSArray.h"
 #import "NSString.h"
 
 #import "NSPathUtilities.h"
 
 NSString *NSPathForUserDirectory(NSSearchPathDirectory directory) {
-    return [NSSearchPathForDirectoriesInDomains(directory,  NSUserDomainMask, YES) :0];
+    return NSSearchPathForDirectoriesInDomains(directory,  NSUserDomainMask, YES)[0];
 }
 
 NSString *NSPathForUserFileInDirectory(NSSearchPathDirectory directory, NSString *filename) {
@@ -29,9 +28,9 @@ NSString *NSPathForHomeFileForUser(NSString *filename, NSString *userName) {
 
 NSString *NSUserConfigurationDirectory(void) {
 #ifdef TARGET_OS_IPHONE
-    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) :0];
+    return NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
 #else
-    return [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) :0];
+    return NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0];
 #endif
 }
 

@@ -13,11 +13,11 @@
 @implementation NSObject (ObjCRuntime)
 
 - (NSString *)className {
-    return [NSString stringWithUTF8String:object_getClassName(self)];
+    return @(object_getClassName(self));
 }
 
 + (NSString *)className {
-    return [NSString stringWithUTF8String:class_getName(self)];
+    return @(class_getName(self));
 }
 
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 {

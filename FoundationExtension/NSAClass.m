@@ -47,7 +47,7 @@
 }
 
 - (NSString *)name {
-    return [NSString stringWithUTF8String:class_getName(self->_class)];
+    return @(class_getName(self->_class));
 }
 
 - (Class)superclass {
@@ -143,7 +143,7 @@
 }
 
 - (NSString *)typeEncoding {
-    return [NSString stringWithUTF8String:method_getTypeEncoding(self->_method)];
+    return @(method_getTypeEncoding(self->_method));
 }
 
 @end

@@ -37,7 +37,7 @@
     NSAArray *array2 = [NSAArray arrayWithContentsOfURL:tmpURL];
 
     STAssertEquals(obj.count, array2.count, @"");
-    STAssertTrue([[obj :0] isEqual:@1], @"");
+    STAssertTrue([obj[0] isEqual:@1], @"");
 
     obj = [NSAArray arrayWithObject:@1];
     STAssertTrue([@1 isEqual:[obj lastObject]], @"");
@@ -85,7 +85,7 @@
     NSADictionary *array2 = [NSADictionary dictionaryWithContentsOfURL:tmpURL];
 
     STAssertEquals(obj.count, array2.count, @"");
-    STAssertTrue([[obj :@"2"] isEqual:@2], @"");
+    STAssertTrue([obj[@"2"] isEqual:@2], @"");
 
     obj = [NSADictionary dictionaryWithObjects:@[@1, @2, @3] forKeys:@[@1, @2, @3]];
     STAssertEquals(3, (int)obj.count, @"");

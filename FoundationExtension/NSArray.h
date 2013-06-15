@@ -20,8 +20,9 @@
 
 /*!
  *  @brief Extreme short form of 'ObjectAtIndex:'
+ *  @deprecated Use (array)[index] syntax instead of this.
  */
-- (id):(NSUInteger)index;
+- (id):(NSUInteger)index __deprecated;
 
 /*!
  *  @brief index < self.count

@@ -8,8 +8,6 @@
 
 #import "NSAOrderedDictionary.h"
 
-#import "debug.h"
-
 @interface NSAOrderedDictionary ()
 
 - (id)initWithImplementationOrder:(id)order dictionary:(id)impl;
@@ -76,7 +74,7 @@
 
 - (id)objectForKey:(id)aKey {
     dassert(self->_impl);
-    return [self->_impl objectForKey:aKey];
+    return self->_impl[aKey];
 }
 
 - (NSEnumerator *)keyEnumerator {
@@ -94,11 +92,11 @@
 
 
 - (id)keyAtIndex:(NSUInteger)index {
-    return [self->_order objectAtIndex:index];
+    return self->_order[index];
 }
 
 - (id)objectAtIndex:(NSUInteger)index {
-    return [self->_impl objectForKey:[self keyAtIndex:index]];
+    return self->_impl[[self keyAtIndex:index]];
 }
 
 - (NSUInteger)indexOfKey:(id)key {
@@ -179,7 +177,7 @@
 
 - (id)objectForKey:(id)aKey {
     dassert(self->_impl);
-    return [self->_impl objectForKey:aKey];
+    return self->_impl[aKey];
 }
 
 - (NSEnumerator *)keyEnumerator {
@@ -217,7 +215,7 @@
 - (void)setObject:(id)anObject forKey:(id<NSCopying>)aKey {
     dassert(self->_impl);
     [self->_order addObject:aKey];
-    [self->_impl setObject:anObject forKey:aKey];
+    self->_impl[aKey] = anObject;
 }
 
 - (void)removeObjectForKey:(id)aKey {
@@ -227,11 +225,11 @@
 }
 
 - (id)keyAtIndex:(NSUInteger)index {
-    return [self->_order objectAtIndex:index];
+    return self->_order[index];
 }
 
 - (id)objectAtIndex:(NSUInteger)index {
-    return [self->_impl objectForKey:[self keyAtIndex:index]];
+    return self->_impl[[self keyAtIndex:index]];
 }
 
 - (NSUInteger)indexOfKey:(id)key {

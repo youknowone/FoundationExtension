@@ -13,7 +13,7 @@
 @implementation NSArray (Shortcuts)
 
 - (id):(NSUInteger)index {
-    return [self objectAtIndex:index];
+    return self[index];
 }
 
 - (BOOL)hasIndex:(NSUInteger)index {
@@ -95,7 +95,7 @@
 @implementation NSMutableArray (Rearrange)
 
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
-    id obj = [self objectAtIndex:fromIndex];
+    id obj = self[fromIndex];
     [obj retain];
     [self removeObjectAtIndex:fromIndex];
     [self insertObject:obj atIndex:toIndex];
@@ -108,11 +108,11 @@
 @implementation NSArray (NSNumber)
 
 - (NSInteger)integerAtIndex:(NSUInteger)index {
-    return [[self objectAtIndex:index] integerValue];
+    return [self[index] integerValue];
 }
 
 - (NSUInteger)indexOfInteger:(NSInteger)value {
-    return [self indexOfObject:[NSNumber numberWithInteger:value]];
+    return [self indexOfObject:@(value)];
 }
 
 @end
@@ -125,13 +125,13 @@
     if (count == 0) {
         return nil;
     }
-    return [self :rand() % count];
+    return self[rand() % count];
 }
 
 - (NSArray *)randomObjectsOfCount:(NSUInteger)theCount {
     NSUInteger count = self.count;
     if (theCount > count) {
-        [self :count]; // NOTE: to raise proper exception
+        [self objectAtIndex:count]; // NOTE: to raise proper exception
         return nil;
     }
     // FIXME: slow - reimplement with objectsAtIndexes
@@ -140,7 +140,7 @@
 
     for (NSUInteger i = 0; i < theCount; i ++) {
         NSUInteger index = rand() % (theCount - i);
-        [selected addObject:[copy :index]];
+        [selected addObject:copy[index]];
         [copy removeObjectAtIndex:index];
     }
 
@@ -154,11 +154,11 @@
 @implementation NSMutableArray (NSNumber)
 
 - (void)addInteger:(NSInteger)value {
-    [self addObject:[NSNumber numberWithInteger:value]];
+    [self addObject:@(value)];
 }
 
 - (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index {
-    [self insertObject:[NSNumber numberWithInteger:value] atIndex:index];
+    [self insertObject:@(value) atIndex:index];
 }
 
 @end

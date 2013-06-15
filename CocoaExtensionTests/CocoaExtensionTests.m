@@ -57,7 +57,7 @@
     TEST_ITEM(font, [NSFont fontWithName:@"Helvetica" size:10.0]);
     TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
     TEST_ITEM(foregroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
-    TEST_ITEM(underlineStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
+    TEST_ITEM(underlineStyleNumber, @(NSUnderlineStyleDouble));
     TEST_ITEM_VALUE(underlineStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
     TEST_ITEM(superscriptNumber, [NSNumber numberWithBool:YES]);
     TEST_ITEM_VALUE(superscript, YES);
@@ -65,24 +65,24 @@
     TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     NSTextAttachment *attach = [[[NSTextAttachment alloc] initWithFileWrapper:[[[NSFileWrapper alloc] initWithPath:@"/"] autorelease]] autorelease];
     TEST_ITEM(attachment, attach);
-    TEST_ITEM(ligatureNumber, [NSNumber numberWithUnsignedInteger:NSLigatureNo]);
+    TEST_ITEM(ligatureNumber, @(NSLigatureNo));
     TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureAll);
     TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureStandard);
-    TEST_ITEM(baselineOffsetNumber, [NSNumber numberWithFloat:1.2f]);
+    TEST_ITEM(baselineOffsetNumber, @1.2f);
     TEST_ITEM_VALUE(baselineOffset, 0.8f);
-    TEST_ITEM(kernNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM(kernNumber, @0.2f);
     TEST_ITEM_VALUE(kern, 0.4f);
     TEST_ITEM(link, @"http://youknowone.org".URL);
-    TEST_ITEM(strokeWidthNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM(strokeWidthNumber, @0.2f);
     TEST_ITEM_VALUE(strokeWidth, 0.4f);
     TEST_ITEM(strokeColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(underlineColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
-    TEST_ITEM(strikethroughStyleNumber, [NSNumber numberWithUnsignedInteger:NSUnderlineStyleDouble]);
+    TEST_ITEM(strikethroughStyleNumber, @(NSUnderlineStyleDouble));
     TEST_ITEM_VALUE(strikethroughStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
     TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
-    TEST_ITEM(obliquenessNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM(obliquenessNumber, @0.2f);
     TEST_ITEM_VALUE(obliqueness, 0.4f);
-    TEST_ITEM(expansionNumber, [NSNumber numberWithFloat:0.2f]);
+    TEST_ITEM(expansionNumber, @0.2f);
     TEST_ITEM_VALUE(expansion, 0.4f);
     id cursor = [NSCursor currentSystemCursor];
     TEST_ITEM(cursor, cursor);
@@ -90,7 +90,7 @@
     TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
     #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
-    TEST_ITEM(verticalGlyphFormNumber, [NSNumber numberWithUnsignedInteger:NSVerticalGlyphFormHorizontal]);
+    TEST_ITEM(verticalGlyphFormNumber, @(NSVerticalGlyphFormHorizontal));
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
     #endif
     #undef TEST_ITEM

@@ -11,7 +11,7 @@
 @implementation UIAlertView (Shortcuts)
 
 + (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line {
-    UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", [NSString stringWithUTF8String:filename], line]
+    UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", @(filename), line]
                                                 message:log
                                                 delegate:nil
                                        cancelButtonTitle:NSLocalizedStringFromTable(@"OK", @"common", @"")

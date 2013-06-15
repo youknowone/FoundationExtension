@@ -13,7 +13,7 @@
 @implementation NSDictionary (Shortcuts)
 
 - (id):(id)key {
-    return [self objectForKey:key];
+    return self[key];
 }
 
 - (BOOL)containsKey:(id)key {

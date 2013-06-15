@@ -19,8 +19,9 @@
 
 /*!
  *  @brief Extreme short form of 'ObjectForKey:'
+ *  @deprecated Use (array)[index] syntax instead of this.
  */
-- (id):(id)key;
+- (id):(id)key __deprecated;
 
 /*!
  *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.

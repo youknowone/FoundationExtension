@@ -7,7 +7,6 @@
 //
 
 #import "NSString.h"
-#import "NSDictionary.h"
 
 #import "UIColor.h"
 
@@ -168,7 +167,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 }
 
 + (UIColor *)colorWithHTMLColorName:(NSString *)name {
-    return [FoundationExtensionUIColorHTMLColorTable :name];
+    return FoundationExtensionUIColorHTMLColorTable[name];
 }
 
 + (UIColor *)colorWithHTMLHexExpression16:(NSString *)code {

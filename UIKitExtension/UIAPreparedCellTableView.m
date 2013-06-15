@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import "NSArray.h"
-
 #import "UIAPreparedCellTableView.h"
 
 @interface UIAPreparedCellTableView () {
@@ -67,7 +65,7 @@
     if (self->_hasUniqueSection) {
         return self.cells;
     } else {
-        return [self.cells :section];
+        return self.cells[section];
     }
 }
 
@@ -84,7 +82,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[self cellsForSection:indexPath.section] :indexPath.row];
+    UITableViewCell *cell = [self cellsForSection:indexPath.section][indexPath.row];
     dassert([cell isKindOfClass:[UITableViewCell class]]);
     return cell;
 }

@@ -8,7 +8,6 @@
 
 #import "NSString.h"
 #import "NSData.h"
-#import "NSDictionary.h"
 #import "NSURL.h"
 #import "NSURLRequest.h"
 
@@ -55,7 +54,7 @@
     NSMutableArray *parts = [[NSMutableArray alloc] initWithCapacity:[bodyDictionary count]];
 
     for (NSString *key in [bodyDictionary keyEnumerator]) {
-        NSString *value = [bodyDictionary :key];
+        NSString *value = bodyDictionary[key];
         NSString *part = [@"%@=%@" format:[key stringByAddingPercentEscapesUsingEncoding:encoding], [value stringByAddingPercentEscapesUsingEncoding:encoding]];
         [parts addObject:part];
     }
@@ -166,7 +165,7 @@
     self.HTTPMethod = @"POST";
     NSAURLRequestHTTPBodyMultiPartFormPostFormatter *formatter = [[NSAURLRequestHTTPBodyMultiPartFormPostFormatter alloc] initWithEncoding:encoding];
     for (NSString *key in [bodyDictionary keyEnumerator]) {
-        id object = [bodyDictionary :@"key"];
+        id object = bodyDictionary[key];
         if ([object isKindOfClass:[NSData class]]) {
             [formatter appendBodyDataToFieldName:key data:object];
         } else {

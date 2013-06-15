@@ -54,11 +54,6 @@
     STAssertEquals(1, [self return0], @"");
 }
 
-- (void)testExtremeShortcut {
-    STAssertEqualObjects(@1, ([@[@0, @1, @2] :1]), @"");
-    STAssertEqualObjects(@1, ([@{@"0": @0, @"1":@1, @"2":@2} :@"1"]), @"");
-}
-
 - (void)testString {
     STAssertEquals([@"Hello, World" hasSubstring:@""], NO, @"");
 }
@@ -170,9 +165,9 @@
 
 - (void)testFunctional {
     {
-        NSArray *a = [NSArray arrayWithObjects:@1, @2, @3, @4, nil];
+        NSArray *a = @[@1, @2, @3, @4];
         NSInteger idx = 0;
-        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return [NSNumber numberWithInteger:[obj integerValue] - 1]; })) {
+        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return @([obj integerValue] - 1); })) {
             STAssertEquals([i integerValue], idx, @"");
             idx += 1;
         }
@@ -186,20 +181,20 @@
         STAssertEquals((int)idx, 2, @"");
 
         idx = 0;
-        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; })) {
+        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; })) {
             idx += 1;
             STAssertEquals([i integerValue] / 2, idx / 2, @"");
         }
         STAssertEquals((int)idx, 2, @"");
 
-        NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return [NSNumber numberWithInteger:[obj1 integerValue] + [obj2 integerValue]]; }, @0);
+        NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return @([obj1 integerValue] + [obj2 integerValue]); }, @0);
         STAssertEqualObjects(res, @10, @"");
     }
 
     {
         NSMutableArray *a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         NSInteger idx = 0;
-        [a map:^(id obj) { return [NSNumber numberWithInteger:[obj integerValue] - 1]; }];
+        [a map:^(id obj) { return @([obj integerValue] - 1); }];
         for (id i in a) {
             STAssertEquals([i integerValue], idx, @"");
             idx += 1;
@@ -217,7 +212,7 @@
 
         a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         idx = 0;
-        [a mapFilter:^(id obj) { return ([obj integerValue] % 2 != 0) ? [NSNumber numberWithInteger:[obj integerValue] - 1] : nil; }];
+        [a mapFilter:^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; }];
         for (id i in a) {
             idx += 1;
             STAssertEquals([i integerValue] / 2, idx / 2, @"");
@@ -239,22 +234,22 @@
 
 - (void)testOrderedDictionary {
     NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionary];
-    [obj setObject:@"1" forKey:@1];
-    [obj setObject:@"2" forKey:@2];
-    [obj setObject:@"3" forKey:@3];
-    [obj setObject:@"4" forKey:@4];
-    [obj setObject:@"5" forKey:@5];
+    obj[@1] = @"1";
+    obj[@2] = @"2";
+    obj[@3] = @"3";
+    obj[@4] = @"4";
+    obj[@5] = @"5";
     NSInteger count = 0;
     for (id key in obj) {
         count += 1;
-        STAssertEqualObjects([obj :key], [NSString stringWithInteger:count], @"");
+        STAssertEqualObjects(obj[key], [NSString stringWithInteger:count], @"");
     }
 }
 
 - (void)testNumber {
     STAssertEqualObjects([@0 description], [@0 typeFormedDescription], @"");
     STAssertEqualObjects([[@1.0 description] stringByAppendingString:@".0"], [@1.0 typeFormedDescription], @"");
-    NSNumber *b = [NSNumber numberWithBool:YES];
+    NSNumber *b = @YES;
     STAssertEqualObjects(@"YES", [b typeFormedDescription], @"");
 }
 

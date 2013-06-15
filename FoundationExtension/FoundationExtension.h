@@ -41,16 +41,16 @@
 #import <FoundationExtension/NSData.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSDate.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSDictionary.h>                // level: 0 / deps(0):  / internal(1): NSData
-#import <FoundationExtension/NSJSONSerialization.h>         // level: 0 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSJSONSerialization.h>         // level: 0 / deps(0):  / internal(2): NSString, NSURLRequestCreations
 #import <FoundationExtension/NSNull.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSNumber.h>                    // level: 0 / deps(0):  / internal(2): NSObject, NSString
 #import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):
-#import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(2): NSArray, NSString
+#import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
-#import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(4): NSString, NSData, NSDictionary, NSURL
+#import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
 #import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):
 // depenency level 20
@@ -62,5 +62,5 @@
 #import <FoundationExtension/NSADictionary.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAFunctional.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOrderedDictionary.h>        // level: 20 / deps(0):  / internal(0):
-#import <FoundationExtension/NSAString.h>                   // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOverridingMediator.h>       // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAString.h>                   // level: 20 / deps(0):  / internal(0):

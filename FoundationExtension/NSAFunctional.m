@@ -367,14 +367,14 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (void)map:(NSAObjectUnaryOperator)mapper {
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        [self replaceObjectAtIndex:i withObject:mapper([self objectAtIndex:i])];
+        self[i] = mapper(self[i]);
     }
 }
 
 - (void)mapWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        [self replaceObjectAtIndex:i withObject:mapper([self objectAtIndex:i], i)];
+        self[i] = mapper(self[i], i);
     }
 }
 
@@ -382,11 +382,11 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        id result = mapper([self objectAtIndex:i]);
+        id result = mapper(self[i]);
         if (result == nil) {
             [removes addIndex:i];
         } else {
-            [self replaceObjectAtIndex:i withObject:result];
+            self[i] = result;
         }
     }
     [self removeObjectsAtIndexes:removes];
@@ -397,11 +397,11 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        id result = mapper([self objectAtIndex:i], i);
+        id result = mapper(self[i], i);
         if (result == nil) {
             [removes addIndex:i];
         } else {
-            [self replaceObjectAtIndex:i withObject:result];
+            self[i] = result;
         }
     }
     [self removeObjectsAtIndexes:removes];
@@ -412,7 +412,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        BOOL result = filter([self objectAtIndex:i]);
+        BOOL result = filter(self[i]);
         if (!result) {
             [removes addIndex:i];
         }
@@ -425,7 +425,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
-        BOOL result = filter([self objectAtIndex:i], i);
+        BOOL result = filter(self[i], i);
         if (!result) {
             [removes addIndex:i];
         }
@@ -441,7 +441,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (void)applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure {
     for (id key in self.keyEnumerator) {
-        procedure([self objectForKey:key], key);
+        procedure(self[key], key);
     }
 }
 
@@ -452,7 +452,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
-        objects[i] = mapper([self objectForKey:key]);
+        objects[i] = mapper(self[key]);
         i += 1;
     }
     NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:length];
@@ -468,7 +468,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
-        objects[i] = mapper([self objectForKey:key], key);
+        objects[i] = mapper(self[key], key);
         i += 1;
     }
     NSDictionary *result = [NSDictionary dictionaryWithObjects:objects forKeys:keys count:length];
@@ -483,7 +483,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key]);
+        id object = mapper(self[key]);
         if (object) {
             keys[i] = key;
             objects[i] = object;
@@ -502,7 +502,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key], key);
+        id object = mapper(self[key], key);
         if (object) {
             keys[i] = key;
             objects[i] = object;
@@ -521,7 +521,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
-        id object = [self objectForKey:key];
+        id object = self[key];
         if (filter(object)) {
             keys[i] = key;
             objects[i] = object;
@@ -540,7 +540,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
-        id object = [self objectForKey:key];
+        id object = self[key];
         if (filter(object, key)) {
             keys[i] = key;
             objects[i] = object;
@@ -560,26 +560,26 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (void)map:(NSAObjectUnaryOperator)mapper {
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key]);
-        [self setObject:object forKey:key];
+        id object = mapper(self[key]);
+        self[key] = object;
     }
 }
 
 - (void)mapWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key], key);
-        [self setObject:object forKey:key];
+        id object = mapper(self[key], key);
+        self[key] = object;
     }
 }
 
 - (void)mapFilter:(NSAObjectUnaryOperator)mapper {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key]);
+        id object = mapper(self[key]);
         if (object == nil) {
             [candidates addObject:key];
         } else {
-            [self setObject:object forKey:key];
+            self[key] = object;
         }
     }
     for (id key in candidates) {
@@ -590,11 +590,11 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (void)mapFilterWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
-        id object = mapper([self objectForKey:key], key);
+        id object = mapper(self[key], key);
         if (object == nil) {
             [candidates addObject:key];
         } else {
-            [self setObject:object forKey:key];
+            self[key] = object;
         }
     }
     for (id key in candidates) {
@@ -605,7 +605,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (void)filter:(NSAObjectPicker)filter {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
-        BOOL filtered = filter([self objectForKey:key]);
+        BOOL filtered = filter(self[key]);
         if (!filtered) {
             [candidates addObject:key];
         }
@@ -618,7 +618,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 - (void)filterWithKey:(NSAObjectPickerWithKey)filter {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
-        BOOL filtered = filter([self objectForKey:key], key);
+        BOOL filtered = filter(self[key], key);
         if (!filtered) {
             [candidates addObject:key];
         }

@@ -6,8 +6,6 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "NSArray.h"
-
 #import "FSEventStream.h"
 
 #include "debug.h"
@@ -32,7 +30,7 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     FSEventStream *self = (FSEventStream *)userData;
     NSArray *paths = (NSArray *)eventPaths;
     for (size_t i = 0; i < numEvents; i += 1) {
-        [self.delegate eventStream:self path:[paths :i] event:eventFlags[i] id:eventIds[i]];
+        [self.delegate eventStream:self path:paths[i] event:eventFlags[i] id:eventIds[i]];
     }
 }
 
@@ -55,7 +53,7 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
 }
 
 + (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
-    return [self scheduledEventStreamWithPaths:[NSArray arrayWithObject:path] latency:latency flags:flags delegate:delegate];
+    return [self scheduledEventStreamWithPaths:@[path] latency:latency flags:flags delegate:delegate];
 }
 
 + (id)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {

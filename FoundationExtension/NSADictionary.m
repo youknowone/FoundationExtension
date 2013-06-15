@@ -8,8 +8,6 @@
 
 #import "NSADictionary.h"
 
-#include "debug.h"
-
 @interface NSADictionary ()
 
 - (id)initWithImplementationDelegate:(id)impl;
@@ -79,7 +77,7 @@
 
 - (id)objectForKey:(id)aKey {
     dassert(self->_impl);
-    return [self->_impl objectForKey:aKey];
+    return self->_impl[aKey];
 }
 
 - (NSEnumerator *)keyEnumerator {
@@ -159,7 +157,7 @@
 
 - (id)objectForKey:(id)aKey {
     dassert(self->_impl);
-    return [self->_impl objectForKey:aKey];
+    return self->_impl[aKey];
 }
 
 - (NSEnumerator *)keyEnumerator {
@@ -195,7 +193,7 @@
 
 - (void)setObject:(id)anObject forKey:(id<NSCopying>)aKey {
     dassert(self->_impl);
-    [self->_impl setObject:anObject forKey:aKey];
+    self->_impl[aKey] = anObject;
 }
 
 - (void)removeObjectForKey:(id)aKey {

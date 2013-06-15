@@ -34,7 +34,7 @@
 }
 
 + (NSString *)formattedStringByDecimalStyleForInteger:(NSInteger)integer {
-    return [self formattedStringByDecimalStyleForNumber:[NSNumber numberWithInteger:integer]];
+    return [self formattedStringByDecimalStyleForNumber:@(integer)];
 }
 
 @end

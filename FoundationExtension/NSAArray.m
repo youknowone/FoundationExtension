@@ -8,8 +8,6 @@
 
 #import "NSAArray.h"
 
-#include "debug.h"
-
 @interface NSAArray ()
 
 - (id)initWithImplementationDelegate:(id)impl;
@@ -72,7 +70,7 @@
 
 - (id)objectAtIndex:(NSUInteger)index {
     dassert(self->_impl);
-    return [self->_impl objectAtIndex:index];
+    return self->_impl[index];
 }
 
 - (NSArray *)subarrayWithRange:(NSRange)range {
@@ -157,7 +155,7 @@
 
 - (id)objectAtIndex:(NSUInteger)index {
     dassert(self->_impl);
-    return [self->_impl objectAtIndex:index];
+    return self->_impl[index];
 }
 
 - (NSArray *)subarrayWithRange:(NSRange)range {
@@ -209,7 +207,7 @@
 
 - (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
     dassert(self->_impl);
-    [self->_impl replaceObjectAtIndex:index withObject:anObject];
+    self->_impl[index] = anObject;
 }
 
 @end

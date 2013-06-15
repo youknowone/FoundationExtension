@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import "NSArray.h"
-
 #import "NSImage.h"
 
 @implementation NSImage (Shortcuts)
@@ -25,7 +23,7 @@
 }
 
 - (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType  properties:(NSDictionary *)properties {
-    NSBitmapImageRep *imageRep = [[NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation] :0];
+    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation][0];
     NSData *pngData = [imageRep representationUsingType:fileType properties:properties];
     return pngData;
 }
@@ -35,7 +33,7 @@
 }
 
 - (NSData *)JPEGRepresentationWithCompressionFactor:(CGFloat)compressionFactor {
-    return [self dataRepresentationUsingType:NSJPEGFileType properties:@{NSImageCompressionFactor: [NSNumber numberWithDouble:compressionFactor]}];
+    return [self dataRepresentationUsingType:NSJPEGFileType properties:@{NSImageCompressionFactor: @(compressionFactor)}];
 }
 
 - (NSData *)JPEGRepresentation {

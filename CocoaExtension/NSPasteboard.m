@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import "NSArray.h"
-
 #import "NSPasteboard.h"
 
 @implementation NSPasteboard (Shortcuts)
@@ -17,7 +15,7 @@
     if (objects.count == 0) {
         return nil;
     }
-    return [objects :0];
+    return objects[0];
 }
 
 @end

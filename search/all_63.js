@@ -10,7 +10,7 @@ var searchData=
   ['classmethodforselector_3a',['classMethodForSelector:',['../interfaceNSAClass.html#af547d143b5977a6bed7b0bfb763e1837',1,'NSAClass']]],
   ['classmethodobjectforselector_3a',['classMethodObjectForSelector:',['../interfaceNSAClass.html#af608c86757dcab473f25a53c2fad9337',1,'NSAClass']]],
   ['classname',['className',['../categoryNSObject_07ObjCRuntime_08.html#aee4a29fd38aec8e08d65c145eeb22834',1,'NSObject(ObjCRuntime)::className()'],['../categoryNSObject_07ObjCRuntime_08.html#a34bd5a6cff0e1234fdd58b61eab64c1d',1,'NSObject(ObjCRuntime)::className()']]],
-  ['classobject',['classObject',['../categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd',1,'NSObject(NSAClass)']]],
+  ['classobject',['classObject',['../categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd',1,'NSObject(NSAClass)::classObject()'],['../categoryNSObject_07NSAClass_08.html#a3491824f75ff1094718d985b14446b2c',1,'NSObject(NSAClass)::classObject()']]],
   ['classwithclass_3a',['classWithClass:',['../interfaceNSAClass.html#a2923733ee09b70c002116dab2ae1785f',1,'NSAClass']]],
   ['classwithname_3a',['classWithName:',['../interfaceNSAClass.html#ab5b6e27f385c2e78586108f6647fedba',1,'NSAClass']]],
   ['classwithutf8name_3a',['classWithUTF8Name:',['../interfaceNSAClass.html#aa477be2523498c9b3225d0858af9a729',1,'NSAClass']]],
@@ -28,7 +28,6 @@ var searchData=
   ['contentbounds',['contentBounds',['../categoryUIScrollView_07Shortcuts_08.html#adb78eb9f50d7f7acb306769c235243e7',1,'UIScrollView(Shortcuts)']]],
   ['contentframe',['contentFrame',['../categoryUIScrollView_07Shortcuts_08.html#a7ba43f43ae486adf01107ca87720cd88',1,'UIScrollView(Shortcuts)']]],
   ['contentscontroller',['contentsController',['../interfaceUIAResultDisplayController.html#adb58653223e6d882872e425a568773b1',1,'UIAResultDisplayController']]],
-  ['copytoselector_3afromselector_3a',['copyToSelector:fromSelector:',['../interfaceNSAClass.html#a3b03d6232f5085361142846cf801c01d',1,'NSAClass']]],
   ['count',['count',['../protocolNSAArrayLikeDataObject-p.html#ab040cae87c279ddb504e971816090f28',1,'NSAArrayLikeDataObject-p']]],
   ['cursor',['cursor',['../interfaceNSAttributedStringAttributeDictionary.html#ac13b1b8f1dec73b332aa30b5fab2a79d',1,'NSAttributedStringAttributeDictionary']]]
 ];

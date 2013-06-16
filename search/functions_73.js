@@ -11,6 +11,7 @@ var searchData=
   ['sethidden_3aanimated_3a',['setHidden:animated:',['../categoryUIView_07Animation_08.html#ae204515ffc0d43ff9efa5688ea3cb0bd',1,'UIView(Animation)']]],
   ['sethttpmultipartformpostbody_3aencoding_3a',['setHTTPMultiPartFormPostBody:encoding:',['../categoryNSMutableURLRequest_07NSAURLRequestHTTPBodyMultiPartFormPostFormatter_08.html#a908e8287c6db3c274b6dc830f3f771de',1,'NSMutableURLRequest(NSAURLRequestHTTPBodyMultiPartFormPostFormatter)']]],
   ['sethttppostbody_3aencoding_3a',['setHTTPPostBody:encoding:',['../categoryNSMutableURLRequest_07HTTPMethod_08.html#a2e46661a1921b0d92ee1a7128951c652',1,'NSMutableURLRequest(HTTPMethod)']]],
+  ['setvariable_3aforname_3a',['setVariable:forName:',['../categoryNSObject_07ObjCRuntime_08.html#a59e70a6a741e08d13f5579866fd5e402',1,'NSObject(ObjCRuntime)']]],
   ['showlog_3afile_3aline_3a',['showLog:file:line:',['../categoryUIAlertView_07Shortcuts_08.html#ad1a6cfe0c94272ef8077797fdcf33b94',1,'UIAlertView(Shortcuts)']]],
   ['shownoticewithtitle_3amessage_3acancelbuttontitle_3a',['showNoticeWithTitle:message:cancelButtonTitle:',['../categoryUIAlertView_07Shortcuts_08.html#a451b9643274e35ce31c25de55c6a2333',1,'UIAlertView(Shortcuts)']]],
   ['smarturl',['smartURL',['../categoryNSString_07NSURL_08.html#a51b70d5a7b55c3b4412aaf4446868182',1,'NSString(NSURL)']]],

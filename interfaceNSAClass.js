@@ -8,8 +8,6 @@ var interfaceNSAClass =
     [ "classWithClass:", "interfaceNSAClass.html#a2923733ee09b70c002116dab2ae1785f", null ],
     [ "classWithName:", "interfaceNSAClass.html#ab5b6e27f385c2e78586108f6647fedba", null ],
     [ "classWithUTF8Name:", "interfaceNSAClass.html#aa477be2523498c9b3225d0858af9a729", null ],
-    [ "copyToSelector:fromSelector:", "interfaceNSAClass.html#a3b03d6232f5085361142846cf801c01d", null ],
-    [ "exportSelector:toClass:", "interfaceNSAClass.html#abfb93124779abb01731713f5ba1f88d2", null ],
     [ "initWithClass:", "interfaceNSAClass.html#a17b5b1d7cc7f6bf03764fe3127a0662d", null ],
     [ "methodForSelector:", "interfaceNSAClass.html#a3d14e9dc3b66f3049d077002c1d08109", null ],
     [ "methodImplementationForSelector:", "interfaceNSAClass.html#a97b2d8dd38c83427dac0b367095e8f39", null ],

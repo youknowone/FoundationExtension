@@ -65,8 +65,5 @@ var searchData=
   ['insertinteger_3aatindex_3a',['insertInteger:atIndex:',['../categoryNSMutableArray_07NSNumber_08.html#a977964fa205613a7fc1c0e4ec77f9e84',1,'NSMutableArray(NSNumber)']]],
   ['integeratindex_3a',['integerAtIndex:',['../categoryNSArray_07NSNumber_08.html#add035abb04f06d7d8b218eb90bd624d0',1,'NSArray(NSNumber)']]],
   ['integervaluebase_3a',['integerValueBase:',['../categoryNSString_07Evaluation_08.html#afc17c94e3ed64c7250dcbd673b5bd5ad',1,'NSString(Evaluation)']]],
-  ['invalidate',['invalidate',['../interfaceFSEventStream.html#a7611ddfe2724e59f0fae7b77e6c62e8d',1,'FSEventStream']]],
-  ['ios7backgroundcolor',['iOS7BackgroundColor',['../categoryUIColor_07iOS7_08.html#a96c328d95d652ce437efbb2d466417f7',1,'UIColor(iOS7)']]],
-  ['ios7systemfontofsize_3a',['iOS7SystemFontOfSize:',['../categoryUIFont_07iOS7_08.html#ab25f77d176ff13800b1c7b5086d07a05',1,'UIFont(iOS7)']]],
-  ['ios7systemfontofsize_3aweight_3a',['iOS7SystemFontOfSize:weight:',['../categoryUIFont_07iOS7_08.html#a641eb861a53626243baa7a90e9531182',1,'UIFont(iOS7)']]]
+  ['invalidate',['invalidate',['../interfaceFSEventStream.html#a7611ddfe2724e59f0fae7b77e6c62e8d',1,'FSEventStream']]]
 ];

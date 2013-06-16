@@ -35,5 +35,6 @@ var searchData=
   ['nstimer_2eh',['NSTimer.h',['../NSTimer_8h.html',1,'']]],
   ['nsurl_2eh',['NSURL.h',['../NSURL_8h.html',1,'']]],
   ['nsurlrequest_2eh',['NSURLRequest.h',['../NSURLRequest_8h.html',1,'']]],
-  ['nsurlrequestcreations_2eh',['NSURLRequestCreations.h',['../NSURLRequestCreations_8h.html',1,'']]]
+  ['nsurlrequestcreations_2eh',['NSURLRequestCreations.h',['../NSURLRequestCreations_8h.html',1,'']]],
+  ['nsvalue_2eh',['NSValue.h',['../NSValue_8h.html',1,'']]]
 ];

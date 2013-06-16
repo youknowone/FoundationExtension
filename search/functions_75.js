@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ui7kitpatchall',['UI7KitPatchAll',['../UI7Kit_8h.html#aa389dfb77e447917bb8c0281f4405e23',1,'UI7KitPatchAll(BOOL override7):&#160;UI7Kit.h'],['../UI7Utilities_8h.html#adfd2ff7b7c340d4f374b47b4cc6aad50',1,'UI7KitPatchAll(BOOL override7):&#160;UI7Utilities.h']]],
   ['uniquetoken',['uniqueToken',['../categoryUIDevice_07Shortcuts_08.html#a6bc86835c4cca077f73eae5c14663cba',1,'UIDevice(Shortcuts)']]],
   ['unschedulefromrunloop_3amode_3a',['unscheduleFromRunLoop:mode:',['../interfaceFSEventStream.html#a6bceb8706017180552ddab5829cc78ea',1,'FSEventStream']]],
   ['url',['URL',['../categoryNSString_07NSURL_08.html#afe8cfb6b0967d2c1af9afae69c346a8d',1,'NSString(NSURL)']]],

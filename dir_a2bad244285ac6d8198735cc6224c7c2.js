@@ -71,9 +71,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     [ "NSNumberFormatter.h", "NSNumberFormatter_8h.html", [
       [ "NSNumberFormatter(Shortcuts)", "categoryNSNumberFormatter_07Shortcuts_08.html", "categoryNSNumberFormatter_07Shortcuts_08" ]
     ] ],
-    [ "NSObject.h", "NSObject_8h.html", [
-      [ "NSObject(ObjCRuntime)", "categoryNSObject_07ObjCRuntime_08.html", "categoryNSObject_07ObjCRuntime_08" ]
-    ] ],
+    [ "NSObject.h", "NSObject_8h.html", "NSObject_8h" ],
     [ "NSPathUtilities.h", "NSPathUtilities_8h.html", "NSPathUtilities_8h" ],
     [ "NSString.h", "NSString_8h.html", [
       [ "NSString(Creations)", "categoryNSString_07Creations_08.html", "categoryNSString_07Creations_08" ],
@@ -102,5 +100,8 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSData(NSURLRequest)", "categoryNSData_07NSURLRequest_08.html", "categoryNSData_07NSURLRequest_08" ],
       [ "NSArray(NSURLRequest)", "categoryNSArray_07NSURLRequest_08.html", "categoryNSArray_07NSURLRequest_08" ],
       [ "NSDictionary(NSURLRequest)", "categoryNSDictionary_07NSURLRequest_08.html", "categoryNSDictionary_07NSURLRequest_08" ]
+    ] ],
+    [ "NSValue.h", "NSValue_8h.html", [
+      [ "NSObject(NSValue)", "categoryNSObject_07NSValue_08.html", "categoryNSObject_07NSValue_08" ]
     ] ]
 ];

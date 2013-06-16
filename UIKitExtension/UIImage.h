@@ -39,4 +39,10 @@
  */
 - (UIImage *)imageByResizingToSize:(CGSize)size;
 
+/*!
+ *  @brief Color filled image with given color.
+ *  @details This method depends on CoreGraphics.
+ */
+- (UIImage *)imageByFilledWithColor:(UIColor *)color;
+
 @end

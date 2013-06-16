@@ -59,4 +59,19 @@
     return result;
 }
 
+- (UIImage *)imageByFilledWithColor:(UIColor *)color {
+    UIGraphicsBeginImageContext(self.size);
+    [color set];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect bounds = CGRectZero;
+    bounds.size = self.size;
+    CGContextTranslateCTM(context, 0, bounds.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextClipToMask(context, bounds, self.CGImage);
+    CGContextFillRect(context, bounds);
+    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return result;
+}
+
 @end

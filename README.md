@@ -218,16 +218,17 @@ FoundationExtension
 FoundationExtension
 
     @interface Secret: NSObject { @private id _attr; } @end // #1 remember the '_attr'
-    
     // Hack the Secret!
     @interface Secret (Accessor)
-    @property(nonatomic, retain) id attr; // #2 remember the 'attr'
+    @property
+        (nonatomic, retain) id attr; // #2 remember the 'attr'
     @end
-    
     @implementation Secret (Accessor)
     NSAPropertyGetter(attr, "_attr") // #2, #1 to create getter
     NSAPropertyRetainSetter(setAttr, "_attr") // #2, #1 to create getter
     @end
+
+@see NSObject(ObjCRuntime)
 
 ## For more
 See the document! [http://youknowone.github.com/FoundationExtension] (http://youknowone.github.com/FoundationExtension)

@@ -102,18 +102,21 @@
         }
     }
 
-    UIImage *originalImage = [UIImage imageNamed:@"Default.png"];
+    UIImage *originalImage = [UIImage imageNamed:@"Image"];
     // TEST: UIImage -imageByResizingToSize:
-    UIImage *bulletImage = [originalImage imageByResizingToSize:CGSizeMake(15.0, 20.0)];
+    UIImage *bulletImage = [originalImage imageByResizingToSize:CGSizeMake(20.0, 20.0)];
+    UIColor *color = [UIColor colorWith8bitRed:(UInt8)random() green:(UInt8)random() blue:(UInt8)random() alpha:255];
+    bulletImage = [bulletImage imageByFilledWithColor:color];
+    bulletImage = [bulletImage imageByFilledWithColor:color];
     cell.imageView.image = bulletImage;
 
-    cell.textLabel.text = [_details :indexPath.row];
+    cell.textLabel.text = _details[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *detailName = [_details:indexPath.row];
+    NSString *detailName = _details[indexPath.row];
     NSString *className = [@"UIT%@ViewController" format:detailName];
     Class class = NSClassFromString(className);
     UIViewController *detailViewController = [class alloc];
@@ -135,7 +138,7 @@
         [self.navigationController pushViewController:detailViewController animated:YES];
     } else {
         UISplitViewController *splitViewController = (UISplitViewController *)self.view.window.rootViewController;
-        UINavigationController *detailNavigationController = [splitViewController.viewControllers:1];
+        UINavigationController *detailNavigationController = splitViewController.viewControllers[1];
         [detailNavigationController popToRootViewControllerAnimated:NO];
         [detailNavigationController pushViewController:detailViewController animated:NO];
     }

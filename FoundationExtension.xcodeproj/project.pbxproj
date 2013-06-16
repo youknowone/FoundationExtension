@@ -13,6 +13,7 @@
 		382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		382302D514E822B800EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		382302D614E822B900EA6EF2 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
+		382E2208176DE62C005F0A98 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 382E2207176DE62C005F0A98 /* Image.png */; };
 		382E39AC1727C8F300099BC4 /* NSControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 382E39AA1727C8F300099BC4 /* NSControl.h */; };
 		382E39AD1727C8F300099BC4 /* NSControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 382E39AB1727C8F300099BC4 /* NSControl.m */; };
 		38412DB41706F9C70082ED4E /* UIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38412DB31706F9C70082ED4E /* UIView.m */; };
@@ -318,6 +319,7 @@
 		381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPlaceholderTextViewController.h; sourceTree = "<group>"; };
 		381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITPlaceholderTextViewController.m; sourceTree = "<group>"; };
 		381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITPlaceholderTextViewController.xib; sourceTree = "<group>"; };
+		382E2207176DE62C005F0A98 /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
 		382E39AA1727C8F300099BC4 /* NSControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSControl.h; sourceTree = "<group>"; };
 		382E39AB1727C8F300099BC4 /* NSControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSControl.m; sourceTree = "<group>"; };
 		383764D713373154007072FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -924,6 +926,7 @@
 				38F0681E1636F8C8002723AB /* InfoPlist.strings */,
 				38F068211636F8C8002723AB /* main.m */,
 				38F068231636F8C8002723AB /* UIKitExtensionTestApp-Prefix.pch */,
+				382E2207176DE62C005F0A98 /* Image.png */,
 				38F068271636F8C8002723AB /* Default.png */,
 				38F068291636F8C8002723AB /* Default@2x.png */,
 				38F0682B1636F8C8002723AB /* Default-568h@2x.png */,
@@ -1272,6 +1275,7 @@
 				38F068351636F8C9002723AB /* UITMasterViewController_iPhone.xib in Resources */,
 				38F068381636F8C9002723AB /* UITMasterViewController_iPad.xib in Resources */,
 				38F0683B1636F8C9002723AB /* UITDetailViewController_iPhone.xib in Resources */,
+				382E2208176DE62C005F0A98 /* Image.png in Resources */,
 				38F0683E1636F8C9002723AB /* UITDetailViewController_iPad.xib in Resources */,
 				38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */,
 				38485C6217109CCE0001A99D /* UITPreparedCellTableViewController.xib in Resources */,

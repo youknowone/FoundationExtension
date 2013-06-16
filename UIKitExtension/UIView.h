@@ -6,6 +6,11 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#define UIViewAutoresizingFlexibleVertical (UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin)
+#define UIViewAutoresizingFlexibleHorizontal (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleBottomMargin)
+#define UIViewAutoresizingFlexibleSize (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight)
+#define UIViewAutoresizingFlexibleAll (UIViewAutoresizingFlexibleVertical|UIViewAutoresizingFlexibleHorizontal)
+
 /*!
  *  @brief The common animation duration constant of UIKit.
  *  @details This is just an assumation.

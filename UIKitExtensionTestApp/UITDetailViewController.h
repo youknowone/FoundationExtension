@@ -6,12 +6,13 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <UIKitExtension/UIKitExtension.h>
 
 @interface UITDetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UIASegmentedImageView *imageView;
 
 @end

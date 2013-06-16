@@ -75,3 +75,12 @@
 }
 
 @end
+
+
+@implementation UIImageView (Creations)
+
++ (id)imageView {
+    return [[[self alloc] init] autorelease];
+}
+
+@end

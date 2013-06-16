@@ -40,6 +40,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    UIImage *image = [UIImage imageNamed:@"0"];
+    self.imageView.centerImage = image;
+    self.imageView.topImage = image;
+    self.imageView.bottomImage = image;
+    self.imageView.leftImage = image;
+    self.imageView.rightImage = image;
+    self.imageView.topLeftImage = [UIImage imageNamed:@"1"];
+    self.imageView.topRightImage = [UIImage imageNamed:@"2"];
+    self.imageView.bottomLeftImage = [UIImage imageNamed:@"3"];
+    self.imageView.bottomRightImage = [UIImage imageNamed:@"4"];
 }
 
 - (void)didReceiveMemoryWarning

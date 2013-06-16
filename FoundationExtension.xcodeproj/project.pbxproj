@@ -121,6 +121,7 @@
 		38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
 		38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3873044F133732DE004C8E89 /* UIKitExtensionTests.h */; };
 		38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38730451133732DE004C8E89 /* UIKitExtensionTests.m */; };
+		387558C8176E00C600AE5C8B /* UIASegmentedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 387558C7176E00C600AE5C8B /* UIASegmentedImageView.m */; };
 		3877F44916A5FC4B007CD975 /* NSACommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */; };
 		3877F44A16A5FC4B007CD975 /* NSACommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */; };
 		3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
@@ -136,6 +137,11 @@
 		3888FC5D176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
 		3888FC5E176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
 		3888FC5F176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
+		388D1C1B176E22FD0061527C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C16176E22FD0061527C /* 3.png */; };
+		388D1C1C176E22FD0061527C /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C17176E22FD0061527C /* 0.png */; };
+		388D1C1D176E22FD0061527C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C18176E22FD0061527C /* 1.png */; };
+		388D1C1E176E22FD0061527C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C19176E22FD0061527C /* 2.png */; };
+		388D1C1F176E22FD0061527C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C1A176E22FD0061527C /* 4.png */; };
 		38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
 		38A90FDC163590C5001DB09E /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
 		38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
@@ -426,12 +432,19 @@
 		3873044E133732DE004C8E89 /* UIKitExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		3873044F133732DE004C8E89 /* UIKitExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitExtensionTests.h; sourceTree = "<group>"; };
 		38730451133732DE004C8E89 /* UIKitExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitExtensionTests.m; sourceTree = "<group>"; };
+		387558C6176E00C600AE5C8B /* UIASegmentedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIASegmentedImageView.h; sourceTree = "<group>"; };
+		387558C7176E00C600AE5C8B /* UIASegmentedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIASegmentedImageView.m; sourceTree = "<group>"; };
 		3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSACommonCrypto.h; sourceTree = "<group>"; };
 		3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSACommonCrypto.m; sourceTree = "<group>"; };
 		387B1EB316EBD0F50059722B /* NSNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumber.h; sourceTree = "<group>"; };
 		387B1EB416EBD0F50059722B /* NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumber.m; sourceTree = "<group>"; };
 		3888FC59176C778D00489638 /* NSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValue.h; sourceTree = "<group>"; };
 		3888FC5A176C778D00489638 /* NSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValue.m; sourceTree = "<group>"; };
+		388D1C16176E22FD0061527C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		388D1C17176E22FD0061527C /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
+		388D1C18176E22FD0061527C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		388D1C19176E22FD0061527C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		388D1C1A176E22FD0061527C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
 		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
 		38B0C73C1641382D0044C73C /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
@@ -864,6 +877,8 @@
 				3868F7D5162D9CDE00C31163 /* UIWebView.m */,
 				38E48D91167FB28700BD4F6D /* UIATableView.h */,
 				38E48D92167FB28700BD4F6D /* UIATableView.m */,
+				387558C6176E00C600AE5C8B /* UIASegmentedImageView.h */,
+				387558C7176E00C600AE5C8B /* UIASegmentedImageView.m */,
 				38BC0E56173E7D7B00F36497 /* UIASubviewTableView.h */,
 				38BC0E57173E7D7B00F36497 /* UIASubviewTableView.m */,
 				381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */,
@@ -922,6 +937,11 @@
 		38F0681C1636F8C8002723AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				388D1C16176E22FD0061527C /* 3.png */,
+				388D1C17176E22FD0061527C /* 0.png */,
+				388D1C18176E22FD0061527C /* 1.png */,
+				388D1C19176E22FD0061527C /* 2.png */,
+				388D1C1A176E22FD0061527C /* 4.png */,
 				38F0681D1636F8C8002723AB /* UIKitExtensionTestApp-Info.plist */,
 				38F0681E1636F8C8002723AB /* InfoPlist.strings */,
 				38F068211636F8C8002723AB /* main.m */,
@@ -1282,6 +1302,11 @@
 				381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */,
 				38BC0E5E173E821700F36497 /* UITSubviewTableViewController.xib in Resources */,
 				38D52569174EB6E300B46322 /* ViewHolder.xib in Resources */,
+				388D1C1B176E22FD0061527C /* 3.png in Resources */,
+				388D1C1C176E22FD0061527C /* 0.png in Resources */,
+				388D1C1D176E22FD0061527C /* 1.png in Resources */,
+				388D1C1E176E22FD0061527C /* 2.png in Resources */,
+				388D1C1F176E22FD0061527C /* 4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1503,6 +1528,7 @@
 				38D52563174EAC3A00B46322 /* UIAView.m in Sources */,
 				38D52566174EAC4D00B46322 /* UIAViewController.m in Sources */,
 				3888FC5F176C778D00489638 /* NSValue.m in Sources */,
+				387558C8176E00C600AE5C8B /* UIASegmentedImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

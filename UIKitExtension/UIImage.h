@@ -46,3 +46,16 @@
 - (UIImage *)imageByFilledWithColor:(UIColor *)color;
 
 @end
+
+
+/*!
+ *  @brief UIImageView extension
+ */
+@interface UIImageView (Creations)
+
+/*!
+ *  @brief Creates a basic image view
+ */
++ (id)imageView;
+
+@end

@@ -123,15 +123,15 @@ static Class _mutableTupleClass;
 // implementation should be thread-safe?
 
 - (void)setFirst:(id)first {
-    if (self->_first == first) return;
+    [first retain];
     [self->_first release];
-    self->_first = [first retain];
+    self->_first = first;
 }
 
 - (void)setSecond:(id)second {
-    if (self->_second == second) return;
+    [second retain];
     [self->_second release];
-    self->_second = [second retain];
+    self->_second = second;
 }
 
 - (void)swap {
@@ -272,21 +272,21 @@ static Class _mutableTripleClass;
 // implementation should be thread-safe?
 
 - (void)setFirst:(id)first {
-    if (self->_first == first) return;
+    [first retain];
     [self->_first release];
-    self->_first = [first retain];
+    self->_first = first;
 }
 
 - (void)setSecond:(id)second {
-    if (self->_second == second) return;
+    [second retain];
     [self->_second release];
-    self->_second = [second retain];
+    self->_second = second;
 }
 
 - (void)setThird:(id)third {
-    if (self->_third == third) return;
+    [third retain];
     [self->_third release];
-    self->_third = [third retain];
+    self->_third = third;
 }
 
 #pragma mark NSCopying

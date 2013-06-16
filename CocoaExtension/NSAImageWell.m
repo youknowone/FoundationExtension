@@ -54,8 +54,9 @@
 
 - (void)setDelegate:(id<NSAImageWellDelegate>)delegate {
     if (self->_delegate == delegate) return;
+    [delegate retain];
     [self->_delegate release];
-    self->_delegate = [delegate retain];
+    self->_delegate = delegate;
     self->_imageWellFlags.delegateShouldAcceptURLString = [delegate respondsToSelector:@selector(imageWellShouldAcceptURLString:)];
     self->_imageWellFlags.delegateDidDraggingEntered = [delegate respondsToSelector:@selector(imageWell:didDraggingEntered:)];
     self->_imageWellFlags.delegateDidDraggingExited = [delegate respondsToSelector:@selector(imageWell:didDraggingExited:)];

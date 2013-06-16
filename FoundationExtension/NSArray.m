@@ -139,7 +139,7 @@
     NSMutableArray *selected = [NSMutableArray array];
 
     for (NSUInteger i = 0; i < theCount; i ++) {
-        NSUInteger index = rand() % (theCount - i);
+        NSUInteger index = arc4random() % (theCount - i);
         [selected addObject:copy[index]];
         [copy removeObjectAtIndex:index];
     }

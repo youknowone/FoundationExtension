@@ -152,8 +152,9 @@
 
 - (void)setDimmingView:(UIADimmingView *)dimmingView {
     if (self->_dimmingView == dimmingView) return;
+    [dimmingView retain];
     [self->_dimmingView release];
-    self->_dimmingView = [dimmingView retain];
+    self->_dimmingView = dimmingView;
     self->_dimmingView.delegate = self;
 }
 

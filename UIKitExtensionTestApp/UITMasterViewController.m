@@ -105,7 +105,7 @@
     UIImage *originalImage = [UIImage imageNamed:@"Image"];
     // TEST: UIImage -imageByResizingToSize:
     UIImage *bulletImage = [originalImage imageByResizingToSize:CGSizeMake(20.0, 20.0)];
-    UIColor *color = [UIColor colorWith8bitRed:(UInt8)random() green:(UInt8)random() blue:(UInt8)random() alpha:255];
+    UIColor *color = [UIColor colorWith8bitRed:(UInt8)arc4random() green:(UInt8)arc4random() blue:(UInt8)arc4random() alpha:255];
     bulletImage = [bulletImage imageByFilledWithColor:color];
     bulletImage = [bulletImage imageByFilledWithColor:color];
     cell.imageView.image = bulletImage;

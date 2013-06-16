@@ -20,6 +20,21 @@
     return @(class_getName(self));
 }
 
+- (id)variableForName:(NSString *)name {
+    void *value;
+    object_getInstanceVariable(self, name.UTF8String, &value);
+    return value;
+}
+
+- (void)getVariable:(void **)outValue forName:(NSString *)name {
+    object_getInstanceVariable(self, name.UTF8String, outValue);
+}
+
+- (void)setVariable:(void *)value forName:(NSString *)name {
+    object_setInstanceVariable(self, name.UTF8String, value);
+}
+
+
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 {
     IMP msg;
     msg = class_getMethodImplementation(self.class, aSelector);

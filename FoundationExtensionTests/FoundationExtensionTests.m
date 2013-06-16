@@ -10,6 +10,54 @@
 
 #import "FoundationExtensionTests.h"
 
+@interface TestObject : NSObject {
+@private
+    id obj1;
+    NSString *obj2;
+    NSString *obj3;
+    NSInteger val;
+}
+
+@end
+
+@implementation TestObject
+
+- (id)init {
+    self = [super init];
+    self->obj1 = self;
+    self->obj2 = (id)[self retain];
+    self->obj3 = (id)[self retain];
+    self->val = 42;
+    return self;
+}
+
+@end
+
+
+@interface TestObject (Private)
+
+@property(nonatomic, readonly) NSInteger val;
+@property(nonatomic, assign) id obj1;
+@property(nonatomic, retain) NSString *obj2;
+@property(nonatomic, retain) NSString *obj3;
+
+@end
+
+
+@implementation TestObject (Private)
+
+NSAPropertyGetterForType(val, @"val", NSInteger)
+
+NSAPropertyGetter(obj1, @"obj1")
+NSAPropertyAssignSetter(setObj1, @"obj1")
+NSAPropertyGetter(obj2, @"obj2")
+NSAPropertyRetainSetter(setObj2, @"obj2")
+NSAPropertyGetter(obj3, @"obj3")
+NSAPropertyCopySetter(setObj3, @"obj3")
+
+@end
+
+
 @implementation FoundationExtensionTests
 
 - (void)setUp
@@ -41,6 +89,40 @@
     STAssertEquals(string.classObject.class, [NSAString classObject].class, @"");
 }
 
+- (void)testRuntimeAccessor {
+    TestObject *obj = [[[TestObject alloc] init] autorelease];
+    STAssertEquals(obj.val, (NSInteger)42, @"");
+
+    NSString *new = [NSMutableString stringWithString:@"Hello"]; // to make new object.
+    NSUInteger count = new.retainCount;
+
+    STAssertEquals(obj.obj1, obj, @"");
+    obj.obj1 = new;
+    STAssertEquals(obj.obj1, new, @"");
+    STAssertEquals(new.retainCount, count, @"");
+    obj.obj1 = nil;
+    STAssertEquals(obj.obj1, (NSObject *)nil, @"");
+    STAssertEquals(new.retainCount, count, @"");
+
+    STAssertEquals(obj.obj2, obj, @"");
+    obj.obj2 = new;
+    STAssertEquals(obj.obj2, new, @"");
+    STAssertEquals(new.retainCount, count + 1, @"");
+    obj.obj2 = nil;
+    STAssertEquals(obj.obj2, (NSObject *)nil, @"");
+    STAssertEquals(new.retainCount, count, @"");
+
+    STAssertEquals(obj.obj3, obj, @"");
+    obj.obj3 = new;
+    STAssertFalse(obj.obj3 == new, @"");
+    STAssertEqualObjects(obj.obj3, new, @"");
+    STAssertEquals(new.retainCount, count, @"");
+    obj.obj3 = nil;
+    STAssertEquals(obj.obj3, (NSObject *)nil, @"");
+    STAssertEquals(new.retainCount, count, @"");
+
+}
+
 - (int)return0 { return 0; }
 - (int)return1 { return 1; }
 
@@ -53,6 +135,8 @@
     m0.implementation = m1.implementation;
     STAssertEquals(1, [self return0], @"");
 }
+
+
 
 - (void)testString {
     STAssertEquals([@"Hello, World" hasSubstring:@""], NO, @"");

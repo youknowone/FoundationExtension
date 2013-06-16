@@ -125,6 +125,7 @@
 
 @end
 
+
 /*!
  *  @brief Class methods shortcuts
  */
@@ -153,10 +154,13 @@
 @interface NSObject (NSAClass)
 
 /*!
- *  @brief NSObject class object representation.
+ *  @brief Class object representation.
  */
 @property(nonatomic, readonly) NSAClass *classObject;
 
+/*!
+ *  @brief Class object representation.
+ */
 + (NSAClass *)classObject;
 
 @end
@@ -184,12 +188,21 @@
  */
 @property(nonatomic, assign) IMP implementation;
 
-/*! @brief Type encoding of the method.
+/*!
+ *  @brief Type encoding of the method.
  *
  *  @see [method_getTypeEncoding][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getTypeEncoding
  */
 @property(nonatomic, readonly) NSString *typeEncoding;
+
+/*!
+ *  @brief Exchanges the implementation of tho methods.
+ *
+ *  @see [method_exchangeImplementations][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_exchangeImplementations
+ */
+- (void)exchangeImplementationWith:(NSAMethod *)method;
 
 @end
 

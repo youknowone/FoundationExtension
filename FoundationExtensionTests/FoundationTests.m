@@ -9,11 +9,11 @@
 #import "FoundationTests.h"
 
 
-@interface TestObject: NSObject
+@interface TestInit: NSObject
 
 @end
 
-@implementation TestObject
+@implementation TestInit
 
 - (id)initObject {
     [self release];
@@ -25,7 +25,7 @@
 @implementation FoundationTests
 
 - (void)testInit {
-    id obj = [[TestObject alloc] initObject];
+    id obj = [[TestInit alloc] initObject];
     [obj release];
 }
 

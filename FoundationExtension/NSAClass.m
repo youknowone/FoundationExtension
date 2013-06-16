@@ -146,4 +146,8 @@
     return @(method_getTypeEncoding(self->_method));
 }
 
+- (void)exchangeImplementationWith:(NSAMethod *)method {
+    method_exchangeImplementations(self.method, method.method);
+}
+
 @end

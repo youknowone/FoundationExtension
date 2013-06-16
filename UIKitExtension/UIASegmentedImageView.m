@@ -46,7 +46,6 @@
 
 - (void)_segmentedImageViewInit {
     self.contentMode = UIViewContentModeScaleToFill;
-    self.autosizing = YES;
 
     self.centerImageView = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
     self.topImageView = [UIImageView imageView];
@@ -58,17 +57,17 @@
     self.bottomLeftImageView = [UIImageView imageView];
     self.bottomRightImageView = [UIImageView imageView];
 
-    self.centerImageView.autoresizingMask = UIViewAutoresizingFlexibleAll;
+    self.centerImageView.autoresizingMask = UIViewAutoresizingFlexibleSize;
 
-    self.topImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
-    self.bottomImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
-    self.leftImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
-    self.rightImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+    self.topImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+    self.bottomImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+    self.leftImageView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+    self.rightImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
 
-    self.topLeftImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
-    self.topRightImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
-    self.bottomLeftImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin;
-    self.bottomRightImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+    self.topLeftImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+    self.topRightImageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin;
+    self.bottomLeftImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin;
+    self.bottomRightImageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin;
 
     [self addSubview:self.centerImageView];
     [self addSubview:self.topImageView];
@@ -87,6 +86,8 @@
         [self _segmentedImageViewInit];
         self.centerImage = self.image;
         [super setImage:nil];
+        [self arrange];
+        self.autosizing = YES;
     }
     return self;
 }
@@ -95,7 +96,10 @@
     self = [super init];
     if (self != nil) {
         [self _segmentedImageViewInit];
+        self.frame = CGRectMake(.0, .0, image.size.width, image.size.height);
         self.centerImage = image;
+        [self arrange];
+        self.autosizing = YES;
     }
     return self;
 }
@@ -104,7 +108,10 @@
     self = [super init];
     if (self != nil) {
         [self _segmentedImageViewInit];
+        self.frame = CGRectMake(.0, .0, image.size.width, image.size.height);
         self.centerImage = image;
+        [self arrange];
+        self.autosizing = YES;
     }
     return self;
 }
@@ -112,9 +119,9 @@
 - (id)initWithTopImage:(UIImage *)topImage centerImage:(UIImage *)centerImage bottomImage:(UIImage *)bottomImage {
     self = [self initWithCenterImage:centerImage];
     if (self != nil) {
+        self.frame = CGRectMake(.0, .0, topImage.size.width, topImage.size.height + centerImage.size.height + bottomImage.size.height);
         self.topImage = topImage;
         self.bottomImage = bottomImage;
-        self.frame = CGRectMake(.0, .0, topImage.size.width, topImage.size.height + centerImage.size.height + bottomImage.size.height);
     }
     return self;
 }
@@ -122,9 +129,9 @@
 - (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage {
     self = [self initWithCenterImage:centerImage];
     if (self != nil) {
+        self.frame = CGRectMake(.0, .0, leftImage.size.width + centerImage.size.width + rightImage.size.width, leftImage.size.height);
         self.leftImage = leftImage;
         self.rightImage = rightImage;
-        self.frame = CGRectMake(.0, .0, leftImage.size.width + centerImage.size.width + rightImage.size.width, leftImage.size.height);
     }
     return self;
 }
@@ -143,6 +150,25 @@
     self.bottomRightImage = nil;
 
     [super dealloc];
+}
+
+- (void)arrange {
+    CGFloat width = self.bounds.size.width;
+    CGFloat height = self.bounds.size.height;
+    CGFloat topMargin = self.topMargin;
+    CGFloat bottomMargin = self.bottomMargin;
+    CGFloat leftMargin = self.leftMargin;
+    CGFloat rightMargin = self.rightMargin;
+
+    self.topLeftImageView.frame = CGRectMake(.0, .0, leftMargin, topMargin);
+    self.topImageView.frame = CGRectMake(leftMargin, .0, width - leftMargin - rightMargin, topMargin);
+    self.topRightImageView.frame = CGRectMake(width - rightMargin, .0, rightMargin, topMargin);
+    self.leftImageView.frame = CGRectMake(.0, topMargin, leftMargin, height - topMargin - bottomMargin);
+    self.centerImageView.frame = CGRectMake(leftMargin, topMargin, width - leftMargin - rightMargin, height - topMargin - bottomMargin);
+    self.rightImageView.frame = CGRectMake(width - rightMargin, topMargin, rightMargin, height - topMargin - bottomMargin);
+    self.bottomLeftImageView.frame = CGRectMake(.0, height - bottomMargin, leftMargin, bottomMargin);
+    self.bottomImageView.frame = CGRectMake(.0, height - bottomMargin, width - leftMargin - rightMargin, bottomMargin);
+    self.bottomRightImageView.frame = CGRectMake(width - rightMargin, height - bottomMargin, rightMargin, bottomMargin);
 }
 
 - (UIImage *)image {

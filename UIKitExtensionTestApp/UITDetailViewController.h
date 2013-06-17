@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UIASegmentedImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *drawView;
 
 @end

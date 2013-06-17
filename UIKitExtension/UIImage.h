@@ -45,6 +45,16 @@
  */
 - (UIImage *)imageByFilledWithColor:(UIColor *)color;
 
+/*!
+ *  @brief Image by bazier path.
+ */
++ (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color backgroundColor:(UIColor *)backgroundColor;
+
+/*!
+ *  @brief Image by bazier path.
+ */
++ (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color;
+
 @end
 
 
@@ -57,5 +67,12 @@
  *  @brief Creates a basic image view
  */
 + (id)imageView;
+
+@end
+
+
+@interface UIBezierPath (UIImage)
+
+- (UIImage *)imageWithStrokeColor:(UIColor *)strokeColor fillColor:(UIColor *)fillColor;
 
 @end

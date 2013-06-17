@@ -74,6 +74,28 @@
     return result;
 }
 
++ (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
+    UIGraphicsBeginImageContext(path.bounds.size);
+    UIGraphicsGetCurrentContext();
+
+    if (backgroundColor) {
+        [backgroundColor set];
+        [path fill];
+    }
+    if (color) {
+        [color set];
+        [path stroke];
+    }
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
++ (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color; {
+    return [self imageWithBezierPath:path color:color backgroundColor:nil];
+}
+
 @end
 
 
@@ -81,6 +103,15 @@
 
 + (id)imageView {
     return [[[self alloc] init] autorelease];
+}
+
+@end
+
+
+@implementation UIBezierPath (UIImage)
+
+- (UIImage *)imageWithStrokeColor:(UIColor *)strokeColor fillColor:(UIColor *)fillColor {
+    return [UIImage imageWithBezierPath:self color:strokeColor backgroundColor:fillColor];
 }
 
 @end

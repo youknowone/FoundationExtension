@@ -55,7 +55,7 @@
 #import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
-#import <FoundationExtension/NSAClass.h>                    // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAClassDeprecated.h>          // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSACommonCrypto.h>             // level: 20 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSACommonDigest.h>             // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(0):  / internal(0):

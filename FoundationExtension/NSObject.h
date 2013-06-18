@@ -8,10 +8,15 @@
 
 /*!
  *  @file
- *  @brief [NSObject][0] extension category collection. Or [NSObject Protocol][1].
+ *  @brief [NSObject][0] or Class extension category collection. Or [NSObject Protocol][1].
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html
  */
+
+
+#import <objc/runtime.h>
+
+@class NSAMethod;
 
 /*!
  *  @brief NSObject [<objc/runtime.h>][0] extensions
@@ -25,13 +30,6 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/object_getClassName
  */
 @property(nonatomic, readonly) NSString *className;
-
-/*!
- *  @brief Returns name of class.
- *  @see [class_getName][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getName
- */
-+ (NSString *)className;
 
 /*!
  *  @brief Obtains the value of an instance variable of a class instance.
@@ -65,6 +63,7 @@
 /*!
  *  @brief Implement property getter for an instance variable.
  *  @param methodName The name of property getter.
+ *  @param name A string. Pass the name of the instance variable whose value you wish to modify.
  *  @param type The type of of instance variable.
  *  @see getVariable:forName:
  */
@@ -136,5 +135,116 @@
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:withObject:
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4;
+
+@end
+
+/*!
+ *  @brief Class extensions.
+ */
+@interface NSObject (ObjCRuntimeClass)
+
+/*!
+ *  @brief Returns name of class.
+ *  @see [class_getName][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getName
+ */
++ (NSString *)name;
+
+/*!
+ *  @brief Returns name of class.
+ *  @deprecated Renamed to name
+ */
++ (NSString *)className __deprecated;
+
+/*!
+ *  @brief Returns Method from given selector;
+ *  @see [class_getInstanceMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
+ */
++ (Method)methodValueForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns Method from given selector;
+ *  @see [class_getInstanceMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
+ */
++ (NSAMethod *)methodForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns class Method from given selector;
+ *  @see [class_getClassMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
+ */
++ (Method)classMethodValueForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns class Method from given selector;
+ *  @see [class_getClassMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
+ */
++ (NSAMethod *)classMethodForSelector:(SEL)selector;
+
+/*!
+ *  @brief Returns IMP from given method
+ *  @see [class_getMethodImplementation][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getMethodImplementation
+ */
++ (IMP)methodImplementationForSelector:(SEL)selector;
+
+/*!
+ *  @brief Adds a new method to a class with a given name and template method.
+ *  @see [class_addMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
+ */
++ (void)addMethodForSelector:(SEL)selector fromMethod:(NSAMethod *)method;
+
+/*!
+ *  @brief Adds a new method to a class with a given name and implementation.
+ *  @see [class_addMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
+ */
++ (void)addMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
+
+@end
+
+
+/*!
+ *  @brief Object wrapper for Method
+ *  @see [Method][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/tdef/Method
+ */
+@interface NSAMethod : NSObject {
+    Method _method;
+}
+
+/*!
+ *  @brief Wrapped value of type [Method][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/tdef/Method
+ */
+@property(nonatomic, readonly) Method method;
+
+/*!
+ *  @brief Implementation of the method.
+ *
+ *  @see [method_getImplementation][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getImplementation
+ */
+@property(nonatomic, assign) IMP implementation;
+
+/*!
+ *  @brief Type encoding of the method.
+ *
+ *  @see [method_getTypeEncoding][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getTypeEncoding
+ */
+@property(nonatomic, readonly) NSString *typeEncoding;
+
+/*!
+ *  @brief Exchanges the implementation of tho methods.
+ *
+ *  @see [method_exchangeImplementations][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_exchangeImplementations
+ */
+- (void)exchangeImplementationWith:(NSAMethod *)method;
 
 @end

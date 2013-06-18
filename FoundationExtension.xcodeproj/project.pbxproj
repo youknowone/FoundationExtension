@@ -88,8 +88,8 @@
 		3855B072163D4200005584CD /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3855B073163D4200005584CD /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
 		3855B074163D4200005584CD /* NSStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5E161AD9AE00C5CE06 /* NSStringEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3855B075163D4200005584CD /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3855B076163D4200005584CD /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3855B075163D4200005584CD /* NSAClassDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3855B076163D4200005584CD /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
 		3855B077163D4200005584CD /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3855B078163D4200005584CD /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
 		3855B079163D4200005584CD /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -103,9 +103,9 @@
 		3868F7B1162D57EB00C31163 /* NSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F7B4162D57EB00C31163 /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
 		3868F7B5162D57EB00C31163 /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
-		3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
-		3868F7BE162D58EE00C31163 /* NSAClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClass.m */; };
+		3868F7BA162D58EE00C31163 /* NSAClassDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3868F7BD162D58EE00C31163 /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
+		3868F7BE162D58EE00C31163 /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
 		3868F7D6162D9CDE00C31163 /* UIAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7C5162D9CDE00C31163 /* UIAlertView.m */; };
 		3868F7D7162D9CDE00C31163 /* UIApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7C7162D9CDE00C31163 /* UIApplication.m */; };
 		3868F7D8162D9CDE00C31163 /* UIColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7C9162D9CDE00C31163 /* UIColor.m */; };
@@ -407,8 +407,8 @@
 		3868F3B6162885D300C31163 /* NSADataObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSADataObject.m; sourceTree = "<group>"; };
 		3868F7AE162D57EB00C31163 /* NSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject.h; sourceTree = "<group>"; };
 		3868F7AF162D57EB00C31163 /* NSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject.m; sourceTree = "<group>"; };
-		3868F7B7162D58ED00C31163 /* NSAClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAClass.h; sourceTree = "<group>"; };
-		3868F7B8162D58ED00C31163 /* NSAClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAClass.m; sourceTree = "<group>"; };
+		3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAClassDeprecated.h; sourceTree = "<group>"; };
+		3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAClassDeprecated.m; sourceTree = "<group>"; };
 		3868F7C4162D9CDE00C31163 /* UIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertView.h; sourceTree = "<group>"; };
 		3868F7C5162D9CDE00C31163 /* UIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertView.m; sourceTree = "<group>"; };
 		3868F7C6162D9CDE00C31163 /* UIApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplication.h; sourceTree = "<group>"; };
@@ -775,8 +775,8 @@
 				38F0698A16384E3F002723AB /* NSADictionary.m */,
 				38F0698E16385750002723AB /* NSAString.h */,
 				38F0698F16385751002723AB /* NSAString.m */,
-				3868F7B7162D58ED00C31163 /* NSAClass.h */,
-				3868F7B8162D58ED00C31163 /* NSAClass.m */,
+				3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */,
+				3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */,
 				3868F3B3162885D300C31163 /* NSACommonDigest.h */,
 				3868F3B4162885D300C31163 /* NSACommonDigest.m */,
 				3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */,
@@ -1002,7 +1002,7 @@
 				3855B070163D4200005584CD /* NSADictionary.h in Headers */,
 				3855B072163D4200005584CD /* NSAString.h in Headers */,
 				3855B074163D4200005584CD /* NSStringEncoding.h in Headers */,
-				3855B075163D4200005584CD /* NSAClass.h in Headers */,
+				3855B075163D4200005584CD /* NSAClassDeprecated.h in Headers */,
 				3855B077163D4200005584CD /* NSACommonDigest.h in Headers */,
 				3855B079163D4200005584CD /* NSADataObject.h in Headers */,
 				38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */,
@@ -1045,7 +1045,7 @@
 				3868F3B8162885D300C31163 /* NSACommonDigest.h in Headers */,
 				3868F3BF162885D300C31163 /* NSADataObject.h in Headers */,
 				3868F7B1162D57EB00C31163 /* NSObject.h in Headers */,
-				3868F7BA162D58EE00C31163 /* NSAClass.h in Headers */,
+				3868F7BA162D58EE00C31163 /* NSAClassDeprecated.h in Headers */,
 				3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */,
 				38F0697A163839D2002723AB /* NSAArray.h in Headers */,
 				38F0698B16384E40002723AB /* NSADictionary.h in Headers */,
@@ -1385,7 +1385,7 @@
 				3855B06F163D4200005584CD /* NSAArray.m in Sources */,
 				3855B071163D4200005584CD /* NSADictionary.m in Sources */,
 				3855B073163D4200005584CD /* NSAString.m in Sources */,
-				3855B076163D4200005584CD /* NSAClass.m in Sources */,
+				3855B076163D4200005584CD /* NSAClassDeprecated.m in Sources */,
 				3855B078163D4200005584CD /* NSACommonDigest.m in Sources */,
 				3855B07A163D4200005584CD /* NSADataObject.m in Sources */,
 				38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */,
@@ -1449,7 +1449,7 @@
 				3868F3BB162885D300C31163 /* NSACommonDigest.m in Sources */,
 				3868F3C2162885D300C31163 /* NSADataObject.m in Sources */,
 				3868F7B4162D57EB00C31163 /* NSObject.m in Sources */,
-				3868F7BD162D58EE00C31163 /* NSAClass.m in Sources */,
+				3868F7BD162D58EE00C31163 /* NSAClassDeprecated.m in Sources */,
 				38F0697B163839D2002723AB /* NSAArray.m in Sources */,
 				38F0698C16384E40002723AB /* NSADictionary.m in Sources */,
 				38F0699116385752002723AB /* NSAString.m in Sources */,
@@ -1484,7 +1484,7 @@
 				3868F3BC162885D300C31163 /* NSACommonDigest.m in Sources */,
 				3868F3C3162885D300C31163 /* NSADataObject.m in Sources */,
 				3868F7B5162D57EB00C31163 /* NSObject.m in Sources */,
-				3868F7BE162D58EE00C31163 /* NSAClass.m in Sources */,
+				3868F7BE162D58EE00C31163 /* NSAClassDeprecated.m in Sources */,
 				3868F7D6162D9CDE00C31163 /* UIAlertView.m in Sources */,
 				3868F7D7162D9CDE00C31163 /* UIApplication.m in Sources */,
 				3868F7D8162D9CDE00C31163 /* UIColor.m in Sources */,
@@ -1984,7 +1984,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2011,7 +2010,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIKitExtensionTestApp/UIKitExtensionTestApp-Prefix.pch";

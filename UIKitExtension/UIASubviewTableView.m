@@ -87,6 +87,8 @@
 
 @end
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wprotocol"
 
 @implementation UIASubviewTableView
 
@@ -164,3 +166,5 @@
 
 
 @end
+
+#pragma clang diagnostic pop

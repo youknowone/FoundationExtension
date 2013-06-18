@@ -52,7 +52,7 @@
 
         [views addObject:aTextView];
 
-        UIImage *image = [UIImage imageNamed:@"Default"];
+        UIImage *image = [UIImage imageWithColor:[UIColor colorWith32bitColor:arc4random()] size:CGSizeMake(1.0, 1.0)];
         image = [image imageByResizingToSize:CGSizeMake(250.0, 30.0)];
         UIImageView *anImageView = [[[UIImageView alloc] initWithImage:image] autorelease];
 

@@ -48,14 +48,14 @@
     self.contentMode = UIViewContentModeScaleToFill;
 
     self.centerImageView = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
-    self.topImageView = [UIImageView imageView];
-    self.bottomImageView = [UIImageView imageView];
-    self.leftImageView = [UIImageView imageView];
-    self.rightImageView = [UIImageView imageView];
-    self.topLeftImageView = [UIImageView imageView];
-    self.topRightImageView = [UIImageView imageView];
-    self.bottomLeftImageView = [UIImageView imageView];
-    self.bottomRightImageView = [UIImageView imageView];
+    self.topImageView = [[[UIImageView alloc] init] autorelease];
+    self.bottomImageView = [[[UIImageView alloc] init] autorelease];
+    self.leftImageView = [[[UIImageView alloc] init] autorelease];
+    self.rightImageView = [[[UIImageView alloc] init] autorelease];
+    self.topLeftImageView = [[[UIImageView alloc] init] autorelease];
+    self.topRightImageView = [[[UIImageView alloc] init] autorelease];
+    self.bottomLeftImageView = [[[UIImageView alloc] init] autorelease];
+    self.bottomRightImageView = [[[UIImageView alloc] init] autorelease];
 
     self.centerImageView.autoresizingMask = UIViewAutoresizingFlexibleSize;
 

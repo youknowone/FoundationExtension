@@ -74,9 +74,29 @@
     return result;
 }
 
++ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    [color set];
+    CGContextFillRect(context, CGRectMake(.0, .0, size.width, size.height));
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
++ (UIImage *)clearImage {
+    static UIImage *image = nil;
+    if (image == nil) {
+        image = [UIImage imageWithColor:[UIColor clearColor] size:CGSizeMake(1.0, 1.0)];
+        [image retain];
+    }
+    return image;
+}
+
 + (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
     UIGraphicsBeginImageContext(path.bounds.size);
-    UIGraphicsGetCurrentContext();
 
     if (backgroundColor) {
         [backgroundColor set];
@@ -92,17 +112,17 @@
     return image;
 }
 
-+ (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color; {
-    return [self imageWithBezierPath:path color:color backgroundColor:nil];
-}
-
 @end
 
 
-@implementation UIImageView (Creations)
+@implementation UIColor (UIImage)
 
-+ (id)imageView {
-    return [[[self alloc] init] autorelease];
+- (UIImage *)imageOfSize:(CGSize)size {
+    return [UIImage imageWithColor:self size:size];
+}
+
+- (UIImage *)image {
+    return [self imageOfSize:CGSizeMake(1.0, 1.0)];
 }
 
 @end
@@ -112,6 +132,14 @@
 
 - (UIImage *)imageWithStrokeColor:(UIColor *)strokeColor fillColor:(UIColor *)fillColor {
     return [UIImage imageWithBezierPath:self color:strokeColor backgroundColor:fillColor];
+}
+
+- (UIImage *)imageWithStrokeColor:(UIColor *)strokeColor {
+    return [self imageWithStrokeColor:strokeColor fillColor:nil];
+}
+
+- (UIImage *)imageWithFillColor:(UIColor *)fillColor {
+    return [self imageWithStrokeColor:nil fillColor:fillColor];
 }
 
 @end

@@ -52,7 +52,7 @@
     self.imageView.bottomRightImage = [UIImage imageNamed:@"4"];
 
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(.0, .0, 100.0, 100.0) cornerRadius:10.0];
-    self.drawView.image = [UIImage imageWithBezierPath:path color:[UIColor greenColor]];
+    self.drawView.image = [path imageWithStrokeColor:[UIColor greenColor]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -104,7 +104,11 @@
 @implementation NSAMethod
 @synthesize method=_method;
 
-- (id)initWithMethod:(Method)method  {
+- (id)initWithMethod:(Method)method {
+    if (method == nil) {
+        [self release];
+        return nil;
+    }
     self = [super init];
     if (self != nil) {
         self->_method = method;

@@ -38,7 +38,7 @@
                          alpha:alpha/255.0f];
 }
 
-+ (UIColor *)colorWith8BitWhite:(UInt8)white alpha:(UInt8)alpha {
++ (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
     return [[[self alloc] initWith8bitWhite:white alpha:alpha] autorelease];
 }
 

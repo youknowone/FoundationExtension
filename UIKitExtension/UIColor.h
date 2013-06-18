@@ -64,7 +64,7 @@
  *  @brief Creates and returns color from 8bit white component
  *  @see initWith8bitWhite:alpha:
  */
-+ (UIColor *)colorWith8BitWhite:(UInt8)white alpha:(UInt8)alpha;
++ (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Initialize color from 32bit color packed value

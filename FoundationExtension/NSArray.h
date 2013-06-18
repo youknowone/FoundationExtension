@@ -153,41 +153,20 @@
 
 @end
 
-
+/*!
+ *  @brief Random selection in NSArray objects.
+ */
 @interface NSArray (Random)
 
+/*!
+ *  @brief Select random object from NSArray.
+ */
 - (id)randomObject;
+
+/*!
+ *  @brief Select the given count number of random objects form NSArray.
+ *  @param count The number of items to select.
+ */
 - (NSArray *)randomObjectsOfCount:(NSUInteger)count;
-
-@end
-
-
-/*!
- *  @brief NSMutableArray shortcut methods for [NSNumber][1].
- *  @warning These methods are deprecated. Use NSNumber constants like @1.
- *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html
- */
-@interface NSMutableArray (NSNumber)
-
-/*!
- *  @brief Inserts a given integer at the end of the array.
- *  @param value The value to add to the end of the array's content.
- *  @see [addObject:][0]
- *  @see [NSNumber numberWithInteger:][1]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableArray/addObject:
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html#//apple_ref/occ/clm/NSNumber/numberWithInteger:
- */
-- (void)addInteger:(NSInteger)value __deprecated;
-
-/*!
- *  @brief Inserts a given integer at a given index.
- *  @param value The value to add to the array's content.
- *  @param index The index in the array at which to insert value. This value must not be greater than the count of elements in the array.
- *  @see [insertObject:atIndex:][0]
- *  @see [NSNumber numberWithInteger:][1]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableArray/insertObject:atIndex:
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNumber_Class/Reference/Reference.html#//apple_ref/occ/clm/NSNumber/numberWithInteger:
- */
-- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index __deprecated;
 
 @end

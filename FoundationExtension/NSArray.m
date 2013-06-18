@@ -149,16 +149,3 @@
 }
 
 @end
-
-
-@implementation NSMutableArray (NSNumber)
-
-- (void)addInteger:(NSInteger)value {
-    [self addObject:@(value)];
-}
-
-- (void)insertInteger:(NSInteger)value atIndex:(NSUInteger)index {
-    [self insertObject:@(value) atIndex:index];
-}
-
-@end

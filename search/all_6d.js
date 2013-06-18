@@ -12,8 +12,9 @@ var searchData=
   ['mediatorwithorigin_3aoverride_3a',['mediatorWithOrigin:override:',['../interfaceNSAOverridingMediator.html#a2bb858a8aee5c42c174f70d1843f6337',1,'NSAOverridingMediator']]],
   ['mediatorwithorigin_3aoverride_3asuppressive_3a',['mediatorWithOrigin:override:suppressive:',['../interfaceNSAOverridingMediator.html#a6eea3f987900911b05d4642b379fab9f',1,'NSAOverridingMediator']]],
   ['method',['method',['../interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2',1,'NSAMethod']]],
-  ['methodforselector_3a',['methodForSelector:',['../interfaceNSAClass.html#a3d14e9dc3b66f3049d077002c1d08109',1,'NSAClass']]],
-  ['methodimplementationforselector_3a',['methodImplementationForSelector:',['../interfaceNSAClass.html#a97b2d8dd38c83427dac0b367095e8f39',1,'NSAClass']]],
-  ['methodobjectforselector_3a',['methodObjectForSelector:',['../interfaceNSAClass.html#ac9f6e5e5e7217879f244c10ba1d0500c',1,'NSAClass']]],
+  ['methodforselector_3a',['methodForSelector:',['../categoryNSAClass_07Deprecated_08.html#a0d734bc1d42289800ab8945294ae2a8f',1,'NSAClass(Deprecated)::methodForSelector:()'],['../categoryNSObject_07ObjCRuntimeClass_08.html#a55994a1225f675b85e65ff227bcbc3b9',1,'NSObject(ObjCRuntimeClass)::methodForSelector:()'],['../interfaceNSAClass.html#a0d734bc1d42289800ab8945294ae2a8f',1,'NSAClass::methodForSelector:()']]],
+  ['methodimplementationforselector_3a',['methodImplementationForSelector:',['../categoryNSAClass_07Deprecated_08.html#a0b1e8a43b8a4b366630892038f8532a0',1,'NSAClass(Deprecated)::methodImplementationForSelector:()'],['../categoryNSObject_07ObjCRuntimeClass_08.html#a5ebfa496e65bc65adc34b1747211d737',1,'NSObject(ObjCRuntimeClass)::methodImplementationForSelector:()'],['../interfaceNSAClass.html#a0b1e8a43b8a4b366630892038f8532a0',1,'NSAClass::methodImplementationForSelector:()']]],
+  ['methodobjectforselector_3a',['methodObjectForSelector:',['../categoryNSAClass_07Deprecated_08.html#a2fb64bd829e712c6b8ed894b16e9f704',1,'NSAClass(Deprecated)::methodObjectForSelector:()'],['../interfaceNSAClass.html#a2fb64bd829e712c6b8ed894b16e9f704',1,'NSAClass::methodObjectForSelector:()']]],
+  ['methodvalueforselector_3a',['methodValueForSelector:',['../categoryNSObject_07ObjCRuntimeClass_08.html#a3aa5dbb5cc8c548e70fbce232bc4a112',1,'NSObject(ObjCRuntimeClass)']]],
   ['moveobjectatindex_3atoindex_3a',['moveObjectAtIndex:toIndex:',['../categoryNSArray_07Rearrange_08.html#aadb48bda6b9b6f467b1efc236b2e41e2',1,'NSArray(Rearrange)']]]
 ];

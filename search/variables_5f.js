@@ -4,7 +4,7 @@ var searchData=
   ['_5fbody',['_body',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a7d4988205428cba0df2e75c5de730a22',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],
   ['_5fclass',['_class',['../interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd',1,'NSAClass']]],
   ['_5fcomponents',['_components',['../interfaceUIAColorComponents.html#af0784b1ac14cf94db6286ff4a201894d',1,'UIAColorComponents']]],
-  ['_5fcopyableflags',['_copyableFlags',['../interfaceUIATableViewCellCopyable.html#aac959f104c9bd707ed48892b5fcbfc4f',1,'UIATableViewCellCopyable']]],
+  ['_5fcopyableflags',['_copyableFlags',['../interfaceUIATableViewCellCopyable.html#addf55dca300a7bb966cd7fb47ec8f5c2',1,'UIATableViewCellCopyable']]],
   ['_5fdatasourceimpl',['_dataSourceImpl',['../interfaceUIASubviewTableView.html#af8a0e65e09d4a63a8afb5d6aa27bed74',1,'UIASubviewTableView']]],
   ['_5fdelegate',['_delegate',['../interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa',1,'FSEventStream::_delegate()'],['../interfaceNSAImageWell.html#a7f41eb78e4d00896b21d683441a099e8',1,'NSAImageWell::_delegate()'],['../interfaceUIATableViewCellCopyable.html#a17b8ac55db5ba9d71e93080788273e9a',1,'UIATableViewCellCopyable::_delegate()']]],
   ['_5fdelegatemediator',['_delegateMediator',['../interfaceUIASubviewTableView.html#ad4c5fd52e553ccca4ce7104e3c866058',1,'UIASubviewTableView']]],
@@ -26,7 +26,7 @@ var searchData=
   ['_5fplaceholdertextview',['_placeholderTextView',['../interfaceUIAPlaceholderTextView.html#afc3eb92e6234b04858e6a91dd89736e5',1,'UIAPlaceholderTextView']]],
   ['_5fsecond',['_second',['../interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72',1,'NSATuple::_second()'],['../interfaceNSATriple.html#a28fc5ce469d2dd8242cb9293912c1295',1,'NSATriple::_second()']]],
   ['_5fstream',['_stream',['../interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3',1,'FSEventStream']]],
-  ['_5fsubviewtableviewflags',['_subviewTableViewFlags',['../interfaceUIASubviewTableView.html#ac4eec7f7eeb77d30e986fd13e1a892fa',1,'UIASubviewTableView']]],
+  ['_5fsubviewtableviewflags',['_subviewTableViewFlags',['../interfaceUIASubviewTableView.html#a8c31f1bbbcb02646c400f8f4f390c627',1,'UIASubviewTableView']]],
   ['_5fsuppressive',['_suppressive',['../interfaceNSAOverridingMediator.html#a6e94209245f6f86b118729bfcca5685c',1,'NSAOverridingMediator']]],
   ['_5fthird',['_third',['../interfaceNSATriple.html#a3fe827e8af230111744530325a912f57',1,'NSATriple']]]
 ];

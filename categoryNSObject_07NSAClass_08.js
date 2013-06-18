@@ -1,5 +1,5 @@
 var categoryNSObject_07NSAClass_08 =
 [
-    [ "classObject", "categoryNSObject_07NSAClass_08.html#a3491824f75ff1094718d985b14446b2c", null ],
-    [ "classObject", "categoryNSObject_07NSAClass_08.html#a7d7667d78d7afd2feea4d98bddeb14fd", null ]
+    [ "__deprecated", "categoryNSObject_07NSAClass_08.html#a8390e44d9d4bbafc40aae8cc70c8db92", null ],
+    [ "__deprecated", "categoryNSObject_07NSAClass_08.html#a56ee2c3ab1751be5561edadcedd9c136", null ]
 ];

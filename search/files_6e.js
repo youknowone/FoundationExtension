@@ -1,7 +1,7 @@
 var searchData=
 [
   ['nsaarray_2eh',['NSAArray.h',['../NSAArray_8h.html',1,'']]],
-  ['nsaclass_2eh',['NSAClass.h',['../NSAClass_8h.html',1,'']]],
+  ['nsaclassdeprecated_2eh',['NSAClassDeprecated.h',['../NSAClassDeprecated_8h.html',1,'']]],
   ['nsacommoncrypto_2eh',['NSACommonCrypto.h',['../NSACommonCrypto_8h.html',1,'']]],
   ['nsacommondigest_2eh',['NSACommonDigest.h',['../NSACommonDigest_8h.html',1,'']]],
   ['nsadataobject_2eh',['NSADataObject.h',['../NSADataObject_8h.html',1,'']]],

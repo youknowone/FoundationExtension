@@ -5,10 +5,10 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSAArray", "interfaceNSAArray.html", "interfaceNSAArray" ],
       [ "NSAMutableArray", "interfaceNSAMutableArray.html", "interfaceNSAMutableArray" ]
     ] ],
-    [ "NSAClass.h", "NSAClass_8h.html", [
+    [ "NSAClassDeprecated.h", "NSAClassDeprecated_8h.html", [
       [ "NSAClass", "interfaceNSAClass.html", "interfaceNSAClass" ],
-      [ "NSObject(NSAClass)", "categoryNSObject_07NSAClass_08.html", "categoryNSObject_07NSAClass_08" ],
-      [ "NSAMethod", "interfaceNSAMethod.html", "interfaceNSAMethod" ]
+      [ "NSAClass(Deprecated)", "categoryNSAClass_07Deprecated_08.html", "categoryNSAClass_07Deprecated_08" ],
+      [ "NSObject(NSAClass)", "categoryNSObject_07NSAClass_08.html", "categoryNSObject_07NSAClass_08" ]
     ] ],
     [ "NSACommonCrypto.h", "NSACommonCrypto_8h.html", "NSACommonCrypto_8h" ],
     [ "NSACommonDigest.h", "NSACommonDigest_8h.html", [
@@ -39,8 +39,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSArray(Creations)", "categoryNSArray_07Creations_08.html", "categoryNSArray_07Creations_08" ],
       [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", "categoryNSArray_07Rearrange_08" ],
       [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", "categoryNSArray_07NSNumber_08" ],
-      [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ],
-      [ "NSMutableArray(NSNumber)", "categoryNSMutableArray_07NSNumber_08.html", "categoryNSMutableArray_07NSNumber_08" ]
+      [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ]
     ] ],
     [ "NSAString.h", "NSAString_8h.html", [
       [ "NSAString", "interfaceNSAString.html", "interfaceNSAString" ],
@@ -60,7 +59,9 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSDictionary(Shortcuts)", "categoryNSDictionary_07Shortcuts_08.html", "categoryNSDictionary_07Shortcuts_08" ],
       [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", "categoryNSDictionary_07NSData_08" ]
     ] ],
-    [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", null ],
+    [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", [
+      [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", "categoryNSJSONSerialization_07Shortcuts_08" ]
+    ] ],
     [ "NSNull.h", "NSNull_8h.html", [
       [ "NSNull(Tools)", "categoryNSNull_07Tools_08.html", "categoryNSNull_07Tools_08" ]
     ] ],

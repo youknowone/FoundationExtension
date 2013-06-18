@@ -1,6 +1,6 @@
 var dir_989e9cdee22463940a60ca84015bf6c0 =
 [
-    [ "NSAttributedString+UIKit.h", "NSAttributedString_09UIKit_8h.html", null ],
+    [ "NSAttributedString+UIKit.h", "NSAttributedString_09UIKit_8h.html", "NSAttributedString_09UIKit_8h" ],
     [ "UIActivityIndicatorView.h", "UIActivityIndicatorView_8h.html", [
       [ "UIActivityIndicatorView(Property)", "categoryUIActivityIndicatorView_07Property_08.html", "categoryUIActivityIndicatorView_07Property_08" ]
     ] ],
@@ -9,7 +9,7 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UIAPlaceholderTextView", "interfaceUIAPlaceholderTextView.html", "interfaceUIAPlaceholderTextView" ]
     ] ],
     [ "UIApplication.h", "UIApplication_8h.html", [
-      [ "UIApplication(Dump)", "categoryUIApplication_07Dump_08.html", "categoryUIApplication_07Dump_08" ],
+      [ "UIApplication(Private)", "categoryUIApplication_07Private_08.html", "categoryUIApplication_07Private_08" ],
       [ "UIApplication(Shortcuts)", "categoryUIApplication_07Shortcuts_08.html", "categoryUIApplication_07Shortcuts_08" ]
     ] ],
     [ "UIAPreparedCellTableView.h", "UIAPreparedCellTableView_8h.html", [
@@ -20,6 +20,9 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "<UIADimmingViewDelegate>", "protocolUIADimmingViewDelegate-p.html", "protocolUIADimmingViewDelegate-p" ],
       [ "UIAResultDisplayController", "interfaceUIAResultDisplayController.html", "interfaceUIAResultDisplayController" ],
       [ "<UIAResultDisplayDelegate>", "protocolUIAResultDisplayDelegate-p.html", "protocolUIAResultDisplayDelegate-p" ]
+    ] ],
+    [ "UIASegmentedImageView.h", "UIASegmentedImageView_8h.html", [
+      [ "UIASegmentedImageView", "interfaceUIASegmentedImageView.html", "interfaceUIASegmentedImageView" ]
     ] ],
     [ "UIASubviewTableView.h", "UIASubviewTableView_8h.html", [
       [ "UIASubviewTableView", "interfaceUIASubviewTableView.html", "interfaceUIASubviewTableView" ],
@@ -48,7 +51,9 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
     [ "UIDevice.h", "UIDevice_8h.html", "UIDevice_8h" ],
     [ "UIImage.h", "UIImage_8h.html", [
       [ "UIImage(Creations)", "categoryUIImage_07Creations_08.html", "categoryUIImage_07Creations_08" ],
-      [ "UIImage(UIGraphics)", "categoryUIImage_07UIGraphics_08.html", "categoryUIImage_07UIGraphics_08" ]
+      [ "UIImage(UIGraphics)", "categoryUIImage_07UIGraphics_08.html", "categoryUIImage_07UIGraphics_08" ],
+      [ "UIColor(UIImage)", "categoryUIColor_07UIImage_08.html", "categoryUIColor_07UIImage_08" ],
+      [ "UIBezierPath(UIImage)", "categoryUIBezierPath_07UIImage_08.html", "categoryUIBezierPath_07UIImage_08" ]
     ] ],
     [ "UIKitExtension.h", "UIKitExtension_8h.html", null ],
     [ "UIScrollView.h", "UIScrollView_8h.html", [

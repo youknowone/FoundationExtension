@@ -6,6 +6,7 @@ var searchData=
   ['uiapplication_2eh',['UIApplication.h',['../UIApplication_8h.html',1,'']]],
   ['uiapreparedcelltableview_2eh',['UIAPreparedCellTableView.h',['../UIAPreparedCellTableView_8h.html',1,'']]],
   ['uiaresultdisplaycontroller_2eh',['UIAResultDisplayController.h',['../UIAResultDisplayController_8h.html',1,'']]],
+  ['uiasegmentedimageview_2eh',['UIASegmentedImageView.h',['../UIASegmentedImageView_8h.html',1,'']]],
   ['uiasubviewtableview_2eh',['UIASubviewTableView.h',['../UIASubviewTableView_8h.html',1,'']]],
   ['uiatableview_2eh',['UIATableView.h',['../UIATableView_8h.html',1,'']]],
   ['uiaview_2eh',['UIAView.h',['../UIAView_8h.html',1,'']]],

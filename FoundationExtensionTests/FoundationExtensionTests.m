@@ -75,18 +75,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 }
 
 - (void)testClassName {
-    STAssertTrue([[[self classObject] name] isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", [[self classObject] name]);
-}
-
-- (void)testClassShortcut {
-    NSString *aString = [[[NSAClass classWithClass:[NSString class]] alloc] initWithString:@"hi"];
-
-    STAssertTrue([aString isEqualToString:@"hi"], @"");
+    STAssertTrue([[[self class] name] isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", [[self class] name]);
 }
 
 - (void)testClassObject {
     NSAString *string = [[[NSAString alloc] initWithString:@"blah"] autorelease];
-    STAssertEquals(string.classObject.class, [NSAString classObject].class, @"");
+    STAssertEquals(string.class, [NSAString class], @"");
 }
 
 - (void)testRuntimeAccessor {
@@ -130,8 +124,8 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     STAssertEquals(0, [self return0], @"");
     STAssertEquals(1, [self return1], @"");
 
-    NSAMethod *m0 = [self.classObject methodObjectForSelector:@selector(return0)];
-    NSAMethod *m1 = [self.classObject methodObjectForSelector:@selector(return1)];
+    NSAMethod *m0 = [self.class methodForSelector:@selector(return0)];
+    NSAMethod *m1 = [self.class methodForSelector:@selector(return1)];
     m0.implementation = m1.implementation;
     STAssertEquals(1, [self return0], @"");
 }

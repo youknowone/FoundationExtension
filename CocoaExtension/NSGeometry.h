@@ -6,6 +6,13 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+
+/*!
+ *  @file
+ *  @brief Human friendly [NSGeometry][0] symbols and macros.
+ *      [0]: http://developer.apple.com/library/Mac/#documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_DataTypes/Reference/reference.html
+ */
+
 /*!
  *  @brief An NSPoint structure with both x and y coordinates set to 0
  *  @see [NSZeroPoint][0]

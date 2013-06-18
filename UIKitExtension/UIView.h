@@ -29,7 +29,7 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
 
 
 /*!
- *  @breif A holder of UIView for interface builder instead of UIViewController.
+ *  @brief A holder of UIView for interface builder instead of UIViewController.
  */
 @interface UIAViewHolder: NSObject
 

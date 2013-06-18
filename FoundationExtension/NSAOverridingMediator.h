@@ -7,7 +7,12 @@
 //
 
 /*!
- *  @brief A mediator to select origin or overrided method.
+ *  @file
+ *  @brief Tool for partial method implementation.
+ */
+
+/*!
+ *  @brief A mediator to select origin or overrided method. Useful for partial protocol implementation.
  */
 @interface NSAOverridingMediator : NSObject {
     id _origin;

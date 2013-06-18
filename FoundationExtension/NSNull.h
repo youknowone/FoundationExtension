@@ -7,7 +7,14 @@
 //
 
 /*!
- *  @brief NSNull tools
+ *  @file
+ *  @brief [NSNull][0] extension cateogory collection..
+ *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNull_Class/Reference/Reference.html
+ */
+
+/*!
+ *  @brief [NSNull][0] tools.
+ *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNull_Class/Reference/Reference.html
  */
 @interface NSNull (Tools)
 

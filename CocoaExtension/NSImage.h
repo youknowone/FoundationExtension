@@ -7,6 +7,12 @@
 //
 
 /*!
+ *  @file
+ *  @brief [NSImage][0] category extension collections.
+ *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSImage_Class/Reference/Reference.html
+ */
+
+/*!
  *  @brief [NSImage][0] shortcuts.
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSImage_Class/Reference/Reference.html
  */

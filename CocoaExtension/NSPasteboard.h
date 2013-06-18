@@ -7,7 +7,14 @@
 //
 
 /*!
- *  @brief NSPasteboard shortcuts
+ *  @file
+ *  @brief [NSPasteboard][0] category extension collections.
+ *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html
+ */
+
+/*!
+ *  @brief [NSPasteboard][0] shortcuts
+ *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html
  */
 @interface NSPasteboard (Shortcuts)
 

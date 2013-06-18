@@ -15,17 +15,21 @@
  */
 
 /*!
- *  @brief UIColor shortcuts
+ *  @brief [UIColor][0] shortcuts.
+ *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIColor_Class/Reference/Reference.html
  */
 @interface UIColor (Shortcuts)
 
-//! @brief Color component property. nil if unavailable.
+/*!
+ *  @brief Color component property. nil if unavailable.
+ */
 @property(nonatomic, readonly) UIAColorComponents *components;
 
 @end
 
 /*!
- *  @brief UIColor creation shortcuts
+ *  @brief [UIColor][0] convinient creation methods.
+ *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIColor_Class/Reference/Reference.html
  */
 @interface UIColor (Creations)
 
@@ -54,7 +58,7 @@
  *  @param alpha
  *      Value from 0 to 255
  */
-- (id)initWith8bitWhite:(UInt8)red alpha:(UInt8)alpha;
+- (id)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Creates and returns color from 8bit white component

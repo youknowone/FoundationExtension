@@ -33,8 +33,8 @@
     return [[[self alloc] initWith8bitRed:red green:green blue:blue alpha:alpha] autorelease];
 }
 
-- (id)initWith8bitWhite:(UInt8)red alpha:(UInt8)alpha {
-    return [self initWithWhite:red/255.0f
+- (id)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
+    return [self initWithWhite:white/255.0f
                          alpha:alpha/255.0f];
 }
 

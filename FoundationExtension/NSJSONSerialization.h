@@ -6,16 +6,18 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
 
 /*!
  *  @file
- *  @brief [NSJSONSerialization][0] shortcuts
+ *  @brief [NSJSONSerialization][0] extension cateogory collection.
  *      [0]: http://developer.apple.com/library/mac/#documentation/Foundation/Reference/NSJSONSerialization_Class/Reference/Reference.html
  */
 
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
+
 /*!
- *  @brief String shortcuts
+ *  @brief [NSJSONSerialization][0] shortcuts
+ *      [0]: http://developer.apple.com/library/mac/#documentation/Foundation/Reference/NSJSONSerialization_Class/Reference/Reference.html
  */
 @interface NSJSONSerialization (Shortcuts)
 

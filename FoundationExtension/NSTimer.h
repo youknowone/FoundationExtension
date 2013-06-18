@@ -96,7 +96,10 @@ typedef void (^NSATimerBlock)();
 
 @end
 
-// not recomenned to use.
+
+/*!
+ *  @brief NSTimer shortcuts - deprecated candidates.
+ */
 @interface NSTimer (Shortcuts)
 
 + (NSTimer *)zeroDelayedTimerWithTarget:(id)aTarget selector:(SEL)aSelector;

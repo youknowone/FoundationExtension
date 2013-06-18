@@ -6,6 +6,11 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+/*!
+ *  @file
+ *  @brief 'Real' image well implementation.
+ */
+
 @protocol NSAImageWellDelegate;
 
 /*!
@@ -32,7 +37,7 @@
 /*!
  *  @brief The acception state of the string dragging.
  *  @details YES if image well accepts string dragging; otherwise NO. Default is NO.
- *      If delegate response to @ref imageWellShouldReceiveURLString:, this value is ignored.
+ *      If delegate response to @ref NSAImageWellDelegate::imageWellShouldAcceptURLString:, this value is ignored.
  */
 @property(nonatomic, assign) BOOL acceptsStringDragging;
 /*!

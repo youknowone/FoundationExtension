@@ -178,6 +178,85 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAFunctional.h
  *  @see @ref NSMutableArray(Functional)
  */
+@interface NSEnumerator (Functional)
+
+/*!
+ *  @brief Apply procedure to objects.
+ *  @details Shallow wrapper of @link NSAApply @endlink
+ *  @see NSAApply
+ */
+- (void)applyProcedure:(NSAObjectProcedure)procedure;
+
+/*!
+ *  @brief Apply procedure with index to objects.
+ *  @details Shallow wrapper of @link NSAApply @endlink
+ *  @see NSAApply
+ */
+- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure;
+
+/*!
+ *  @brief Maps mapper to objects and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMap @endlink
+ *  @see NSAMap
+ */
+- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMapWithIndex @endlink
+ *  @see NSAMap
+ */
+- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
+/*!
+ *  @brief Maps mapper to objects and filters nil result and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMapFilter @endlink
+ *  @see NSAMapFilter
+ */
+- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
+ *  @details Shallow wrapper of @link NSAMapFilterWithIndex @endlink
+ *  @see NSAMapFilter
+ */
+- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper;
+
+/*!
+ *  @brief Filters objects and returns result as array.
+ *  @details Shallow wrapper of @link NSAFilter @endlink
+ *  @see NSAFilter
+ */
+- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects with index and returns result as array.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter;
+
+/*!
+ *  @brief Reduces objects and returns the result.
+ *  @details Shallow wrapper of @link NSAReduce @endlink
+ *  @see NSAReduce
+ */
+- (id)reduce:(NSAObjectBinaryOperator)reduce;
+/*!
+ *  @brief Reduces objects and returns the result.
+ *  @details Shallow wrapper of @link NSAReduceWithInitialObject @endlink
+ *  @see NSAReduceWithInitialObject
+ */
+- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject;
+
+@end
+
+
+/*!
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @see NSAFunctional.h
+ *  @see @ref NSMutableArray(Functional)
+ */
 @interface NSArray (Functional)
 
 /*!

@@ -22,6 +22,7 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
     }
 }
 
+#pragma mark -
 
 @interface _NSAFunctionalMapEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
@@ -31,7 +32,6 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
 - (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
 
 @end
-
 
 @implementation _NSAFunctionalMapEnumerator
 
@@ -60,7 +60,6 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
 
 @end
 
-
 NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
     return [[[_NSAFunctionalMapEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
 }
@@ -74,7 +73,6 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
 - (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
 
 @end
-
 
 @implementation _NSAFunctionalMapWithIndexEnumerator
 
@@ -103,11 +101,11 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
 
 @end
 
-
 NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper) {
     return [[[_NSAFunctionalMapWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
 }
 
+#pragma mark -
 
 @interface _NSAFunctionalMapFilterEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
@@ -206,6 +204,7 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
     return [[[_NSAFunctionalMapFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
 }
 
+#pragma mark -
 
 @interface _NSAFunctionalFilterEnumerator : NSEnumerator {
     NSEnumerator *_enumerator;
@@ -303,6 +302,7 @@ NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSAObjectPickerWithIn
     return [[[_NSAFunctionalFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator filter:filter] autorelease];
 }
 
+#pragma mark -
 
 id NSAReduce(NSEnumerator *enumerator, NSAObjectBinaryOperator operation) {
     return NSAReduceWithInitialObject(enumerator, operation, [operation nextObject]);
@@ -315,6 +315,52 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     }
     return res;
 }
+
+#pragma mark -
+
+@implementation NSEnumerator (Functional)
+
+- (void)applyProcedure:(NSAObjectProcedure)procedure {
+    NSAApply(self, procedure);
+}
+
+- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+    NSAApplyWithIndex(self, procedure);
+}
+
+- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMap(self, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapWithIndex(self, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMapFilter(self, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapFilterWithIndex(self, mapper).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+    return NSAFilter(self, filter).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+    return NSAFilterWithIndex(self, filter).allObjects;
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce {
+    return NSAReduce(self, reduce);
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+    return NSAReduceWithInitialObject(self, reduce, initialObject);
+}
+
+@end
 
 
 @implementation NSArray (Functional)

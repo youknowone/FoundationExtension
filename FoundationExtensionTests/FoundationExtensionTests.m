@@ -270,6 +270,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     }
 
     {
+        NSArray *a = @[@1, @2, @3, @4];
+        NSArray *r = [a.reverseObjectEnumerator arrayByFilteringOperator:^BOOL(id obj) { return YES; }];
+        STAssertEqualObjects(r, (@[@4, @3, @2, @1]), @"");
+    }
+
+    {
         NSMutableArray *a = [NSMutableArray arrayWithObjects:@1, @2, @3, @4, nil];
         NSInteger idx = 0;
         [a map:^(id obj) { return @([obj integerValue] - 1); }];

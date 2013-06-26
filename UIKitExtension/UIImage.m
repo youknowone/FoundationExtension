@@ -96,7 +96,7 @@
 }
 
 + (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
-    UIGraphicsBeginImageContext(path.bounds.size);
+    UIGraphicsBeginImageContext(CGSizeMake(path.bounds.origin.x * 2 + path.bounds.size.width, path.bounds.origin.y * 2 + path.bounds.size.height));
 
     if (backgroundColor) {
         [backgroundColor set];

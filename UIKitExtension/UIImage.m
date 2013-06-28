@@ -52,7 +52,7 @@
 @implementation UIImage (UIGraphics)
 
 - (UIImage *)imageByResizingToSize:(CGSize)size {
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, .0);
     [self drawInRect:CGRectMake(.0, .0, size.width, size.height)];
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -60,7 +60,7 @@
 }
 
 - (UIImage *)imageByFilledWithColor:(UIColor *)color {
-    UIGraphicsBeginImageContext(self.size);
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, .0);
     [color set];
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGRect bounds = CGRectZero;
@@ -75,7 +75,7 @@
 }
 
 + (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
-    UIGraphicsBeginImageContext(size);
+    UIGraphicsBeginImageContextWithOptions(size, NO, .0);
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     [color set];
@@ -96,7 +96,7 @@
 }
 
 + (UIImage *)imageWithBezierPath:(UIBezierPath *)path color:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
-    UIGraphicsBeginImageContext(CGSizeMake(path.bounds.origin.x * 2 + path.bounds.size.width, path.bounds.origin.y * 2 + path.bounds.size.height));
+    UIGraphicsBeginImageContextWithOptions((CGSizeMake(path.bounds.origin.x * 2 + path.bounds.size.width, path.bounds.origin.y * 2 + path.bounds.size.height)), NO, .0);
 
     if (backgroundColor) {
         [backgroundColor set];

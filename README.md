@@ -3,7 +3,7 @@
 This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
 
  * Many common snippets in a method call.
- * Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention. 
+ * Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention.
 
 See document on [Github] (http://youknowone.github.com/FoundationExtension)
 
@@ -41,20 +41,6 @@ FoundationExtension
 @see @ref NSString(Shortcuts)
 @see @ref NSString(NSURL)
 
-## Access array or dictionary
-Foundation
-
-    [array objectAtIndex:1];
-    [dictionary objectForKey:@"key"];
-
-FoundationExtension
-
-    [array :1];
-    [dictionary :@"key"];
-
-@see @ref NSArray(Shortcuts)
-@see @ref NSDictionary(Shortcuts)
-
 ## iPhone MAC Address
 Foundation
   * No way.
@@ -75,21 +61,21 @@ FoundationExtension
 
 @see @ref NSObject(ObjCRuntime)
 
-## get NSData from post request
+## Get NSData from post request
 Foundation
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:@"field1=value1"];
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL];
-    
+
 FoundationExtension
 
     NSData *data = [NSData dataWithContentsOfURL:URL postBody:@{@"field1":@"value1"} encoding:NSUTF8StringEncoding];
 
 @see @ref NSData(NSURLRequest)
 
-## get NSData from Multipart Form POST
+## Get NSData from Multipart Form POST
 Foundation
   * No way.
 
@@ -101,7 +87,7 @@ FoundationExtension
 
 @see NSURLRequestAdditions.h
 
-## truncate objects in array
+## Truncate strings in array
 Foundation
 
     NSMutableArray *newArray = [NSMutableArray array];
@@ -118,19 +104,19 @@ FoundationExtension NSMutableArray
     [array map::^(NSString *obj){ [obj substringToIndex:20]; }];
 
 @see @ref Map/Filter/Reduce
-@see NSAFunctional.h 
+@see NSAFunctional.h
 
-## get class name
+## Get a class name
 Foundation
 
     NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];
-    
+
 FoundationExtension
 
-    NSString *className = obj.classObject.name;
+    NSString *className = obj.class.name;
 
 @see @ref NSObject(ObjCRuntime)
-@see @ref NSAClass
+@see @ref NSObject(ObjCRuntimeClass)
 
 ## encode/decode base64 string (especially for In-App Purchase / Facebook API)
 Foundation
@@ -144,7 +130,7 @@ FoundationExtension
 
 @see @ref NSData(Serialization)
 
-## get hexadecimal value from base 16 string
+## Get hexadecimal value from base 16 string
 Foundation
 
     int value;
@@ -172,9 +158,10 @@ Foundation
     unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
     CC_MD5([data bytes], (CC_LONG)[self length], hashedChars);
     NSMutableString *result = [[NSMutableString alloc] init];
-    for ( int i = 0; i<CC_MD5_DIGEST_LENGTH; i++ )
+    for ( int i = 0; i<CC_MD5_DIGEST_LENGTH; i++ ) {
         [result appendFormat:@"%02x", *(hashedChars+i)];
-    
+    }
+
 FoundationExtension
 
     NSString *result = [data digestStringByMD5];
@@ -198,7 +185,7 @@ FoundationExtension
 
 ## UIColor from HTML color code
 UIKitExtension
-    
+
     UIColor *color = [UIColor colorWithHTMLExpression:@"#f0f0f0"];
 
 @see @ref UIColor(HTMLColor)
@@ -206,12 +193,10 @@ UIKitExtension
 ## Change implementation to new one
 FoundationExtension
 
-    NSAClass *c = obj.classObject;
-    [c methodObjectForSelector:@selector(method1)].implementation
-      = [c methodObjectForSelector:@selector(method2)].implementation;
-    // now [obj method1] is [obj method2]
+    [class methodObjectForSelector:@selector(method1)].implementation
+      = [class methodObjectForSelector:@selector(method2)].implementation;
+    // now [obj method1] equals [obj method2]
 
-@see NSAClass
 @see NSAMethod
 
 ## Retrieve accessibility for private variable.

@@ -1,5 +1,6 @@
 var NSAFunctional_8h =
 [
+    [ "NSEnumerator(Functional)", "categoryNSEnumerator_07Functional_08.html", "categoryNSEnumerator_07Functional_08" ],
     [ "NSArray(Functional)", "categoryNSArray_07Functional_08.html", "categoryNSArray_07Functional_08" ],
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", "categoryNSMutableArray_07Functional_08" ],
     [ "NSDictionary(Functional)", "categoryNSDictionary_07Functional_08.html", "categoryNSDictionary_07Functional_08" ],

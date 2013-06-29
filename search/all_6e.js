@@ -124,6 +124,7 @@ var searchData=
   ['nsdosturkishstringencoding',['NSDOSTurkishStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae1c8e0079e1f3c878e8d409e45f91125',1,'NSStringEncoding.h']]],
   ['nsebcdiccp037stringencoding',['NSEBCDICCP037StringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bacb89637bbf1838821d2ec27ea16e3c53',1,'NSStringEncoding.h']]],
   ['nsebcdicusstringencoding',['NSEBCDICUSStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae282caa901f45467516a9494a8d70fae',1,'NSStringEncoding.h']]],
+  ['nsenumerator_28functional_29',['NSEnumerator(Functional)',['../categoryNSEnumerator_07Functional_08.html',1,'']]],
   ['nseucchinesestringencoding',['NSEUCChineseStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba6caa29d62b8ef1158989b902524b300c',1,'NSStringEncoding.h']]],
   ['nseucjapanesestringencoding',['NSEUCJapaneseStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bafe39abe82395332a13b504e57c9a4205',1,'NSStringEncoding.h']]],
   ['nseuckoreanstringencoding',['NSEUCKoreanStringEncoding',['../NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b64bfbf20635a1beea16cda24dedf8c',1,'NSStringEncoding.h']]],

@@ -46,6 +46,7 @@ var annotated =
     [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", "categoryNSDictionary_07NSData_08" ],
     [ "NSDictionary(NSURLRequest)", "categoryNSDictionary_07NSURLRequest_08.html", "categoryNSDictionary_07NSURLRequest_08" ],
     [ "NSDictionary(Shortcuts)", "categoryNSDictionary_07Shortcuts_08.html", "categoryNSDictionary_07Shortcuts_08" ],
+    [ "NSEnumerator(Functional)", "categoryNSEnumerator_07Functional_08.html", "categoryNSEnumerator_07Functional_08" ],
     [ "NSImage(Shortcuts)", "categoryNSImage_07Shortcuts_08.html", "categoryNSImage_07Shortcuts_08" ],
     [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", "categoryNSJSONSerialization_07Shortcuts_08" ],
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", "categoryNSMutableArray_07Functional_08" ],

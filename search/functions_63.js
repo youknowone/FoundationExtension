@@ -12,7 +12,7 @@ var searchData=
   ['clearimage',['clearImage',['../categoryUIImage_07UIGraphics_08.html#ab3deb42b707d2d1eff1537f51d0bdec6',1,'UIImage(UIGraphics)']]],
   ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c',1,'UIColor(Creations)']]],
   ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb',1,'UIColor(Creations)']]],
-  ['colorwith8bitwhite_3aalpha_3a',['colorWith8BitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a08d516b49e374292f8d69ac7d11049c1',1,'UIColor(Creations)']]],
+  ['colorwith8bitwhite_3aalpha_3a',['colorWith8bitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a70e2e5bd0ad0822d8a8b8ec7f505898b',1,'UIColor(Creations)']]],
   ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a0ec63486ee1b05f5d43954450e8dddab',1,'UIColor(HTMLColor)']]],
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],
   ['configurationurl',['configurationURL',['../categoryNSString_07NSURL_08.html#a2dbf914ae019ef54413dc9bec7472cd0',1,'NSString(NSURL)']]],

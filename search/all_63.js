@@ -18,7 +18,7 @@ var searchData=
   ['cocoaextension_2eh',['CocoaExtension.h',['../CocoaExtension_8h.html',1,'']]],
   ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#a23cbb93708a593b7ece47b1d861d7a5c',1,'UIColor(Creations)']]],
   ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#acc1b4f2ef0f039363bcde6eaaa6ca7eb',1,'UIColor(Creations)']]],
-  ['colorwith8bitwhite_3aalpha_3a',['colorWith8BitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a08d516b49e374292f8d69ac7d11049c1',1,'UIColor(Creations)']]],
+  ['colorwith8bitwhite_3aalpha_3a',['colorWith8bitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a70e2e5bd0ad0822d8a8b8ec7f505898b',1,'UIColor(Creations)']]],
   ['colorwithhtmlexpression_3a',['colorWithHTMLExpression:',['../categoryUIColor_07HTMLColor_08.html#a0ec63486ee1b05f5d43954450e8dddab',1,'UIColor(HTMLColor)']]],
   ['components',['components',['../categoryNSDate_07Shortcuts_08.html#a3aa469ba94d2d8259f18af2cb99be930',1,'NSDate(Shortcuts)::components()'],['../categoryUIColor_07Shortcuts_08.html#a2b54847335e7fc46b3ef247641d83abd',1,'UIColor(Shortcuts)::components()']]],
   ['componentswithcolor_3a',['componentsWithColor:',['../interfaceUIAColorComponents.html#ad7794d7ace5c2a32097da2928a7f22f8',1,'UIAColorComponents']]],

@@ -138,16 +138,6 @@ NSURL *URL = [NSURL URLWithString:URLString];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSString_07Shortcuts_08.html">NSString(Shortcuts)</a> </dd>
 <dd>
 <a class="el" href="categoryNSString_07NSURL_08.html">NSString(NSURL)</a></dd></dl>
-<h2>Access array or dictionary</h2>
-<p>Foundation </p>
-<pre class="fragment">[array objectAtIndex:1];
-[dictionary objectForKey:@"key"];
-</pre><p>FoundationExtension </p>
-<pre class="fragment">[array :1];
-[dictionary :@"key"];
-</pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSArray_07Shortcuts_08.html">NSArray(Shortcuts)</a> </dd>
-<dd>
-<a class="el" href="categoryNSDictionary_07Shortcuts_08.html">NSDictionary(Shortcuts)</a></dd></dl>
 <h2>iPhone MAC Address</h2>
 <p>Foundation</p>
 <ul>
@@ -164,7 +154,7 @@ NSURL *URL = [NSURL URLWithString:URLString];
 <p>FoundationExtension </p>
 <pre class="fragment">[obj performSelector:sel withObject:o1 withObject:o2 withObject:o3];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSObject_07ObjCRuntime_08.html">NSObject(ObjCRuntime)</a></dd></dl>
-<h2>get NSData from post request</h2>
+<h2>Get NSData from post request</h2>
 <p>Foundation </p>
 <pre class="fragment">NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:URL];
 [request setHTTPMethod:@"POST"];
@@ -173,7 +163,7 @@ NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse
 </pre><p>FoundationExtension </p>
 <pre class="fragment">NSData *data = [NSData dataWithContentsOfURL:URL postBody:@"field1":@"value1"} encoding:NSUTF8StringEncoding];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSData_07NSURLRequest_08.html">NSData(NSURLRequest)</a></dd></dl>
-<h2>get NSData from Multipart Form POST</h2>
+<h2>Get NSData from Multipart Form POST</h2>
 <p>Foundation</p>
 <ul>
 <li>No way.</li>
@@ -183,7 +173,7 @@ NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse
 [request setHTTPMultiPartFormPostBody:@"filename":data} encoding:NSUTF8StringEncoding];
 NSData *data = [NSData dataWithContentOfURLRequest:request];
 </pre><dl class="section see"><dt>See Also</dt><dd>NSURLRequestAdditions.h</dd></dl>
-<h2>truncate objects in array</h2>
+<h2>Truncate strings in array</h2>
 <p>Foundation </p>
 <pre class="fragment">NSMutableArray *newArray = [NSMutableArray array];
 for (NSString *s in array) {
@@ -196,14 +186,14 @@ for (NSString *s in array) {
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> </dd>
 <dd>
 <a class="el" href="NSAFunctional_8h.html" title="See Map/Filter/Reduce for concept of functional tools. ">NSAFunctional.h</a></dd></dl>
-<h2>get class name</h2>
+<h2>Get a class name</h2>
 <p>Foundation </p>
 <pre class="fragment">NSString *className = [NSString stringWithUTF8String:class_getName(obj.class)];
 </pre><p>FoundationExtension </p>
-<pre class="fragment">NSString *className = obj.classObject.name;
+<pre class="fragment">NSString *className = obj.class.name;
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSObject_07ObjCRuntime_08.html">NSObject(ObjCRuntime)</a> </dd>
 <dd>
-<a class="el" href="interfaceNSAClass.html">NSAClass</a></dd></dl>
+<a class="el" href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject(ObjCRuntimeClass)</a></dd></dl>
 <h2>encode/decode base64 string (especially for In-App Purchase / Facebook API)</h2>
 <p>Foundation</p>
 <ul>
@@ -214,7 +204,7 @@ for (NSString *s in array) {
 
 NSData *data = [NSData dataWithBase64String:base64]
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSData_07Serialization_08.html">NSData(Serialization)</a></dd></dl>
-<h2>get hexadecimal value from base 16 string</h2>
+<h2>Get hexadecimal value from base 16 string</h2>
 <p>Foundation </p>
 <pre class="fragment">int value;
 sscanf(string.UTF8String, "%x", &amp;value);
@@ -234,8 +224,9 @@ sscanf(string.UTF8String, "%x", &amp;value);
 <pre class="fragment">unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
 CC_MD5([data bytes], (CC_LONG)[self length], hashedChars);
 NSMutableString *result = [[NSMutableString alloc] init];
-for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ )
+for ( int i = 0; i&lt;CC_MD5_DIGEST_LENGTH; i++ ) {
     [result appendFormat:@"%02x", *(hashedChars+i)];
+}
 </pre><p>FoundationExtension </p>
 <pre class="fragment">NSString *result = [data digestStringByMD5];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryNSData_07CommonCrypto_08.html">NSData(CommonCrypto)</a></dd></dl>
@@ -260,13 +251,10 @@ NSDictionary *dictionary = [NSDictionary dictionaryWithData:data];
 </pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="categoryUIColor_07HTMLColor_08.html">UIColor(HTMLColor)</a></dd></dl>
 <h2>Change implementation to new one</h2>
 <p>FoundationExtension </p>
-<pre class="fragment">NSAClass *c = obj.classObject;
-[c methodObjectForSelector:@selector(method1)].implementation
-  = [c methodObjectForSelector:@selector(method2)].implementation;
-// now [obj method1] is [obj method2]
-</pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="interfaceNSAClass.html" title="Object wrapper for runtime Class. ">NSAClass</a> </dd>
-<dd>
-<a class="el" href="interfaceNSAMethod.html" title="Object wrapper for Method. ">NSAMethod</a></dd></dl>
+<pre class="fragment">[class methodObjectForSelector:@selector(method1)].implementation
+  = [class methodObjectForSelector:@selector(method2)].implementation;
+// now [obj method1] equals [obj method2]
+</pre><dl class="section see"><dt>See Also</dt><dd><a class="el" href="interfaceNSAMethod.html" title="Object wrapper for Method. ">NSAMethod</a></dd></dl>
 <h2>Retrieve accessibility for private variable.</h2>
 <p>FoundationExtension </p>
 </div></div><!-- contents -->

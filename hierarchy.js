@@ -43,6 +43,7 @@ var hierarchy =
     [ "<NSDraggingDestination>", null, [
       [ "NSAImageWell", "interfaceNSAImageWell.html", null ]
     ] ],
+    [ "NSEnumerator(Functional)", "categoryNSEnumerator_07Functional_08.html", null ],
     [ "<NSFastEnumeration>", null, [
       [ "NSATriple", "interfaceNSATriple.html", null ],
       [ "NSATuple", "interfaceNSATuple.html", null ]

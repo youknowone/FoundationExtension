@@ -36,9 +36,9 @@ var NAVTREEINDEX =
 [
 "CocoaExtension_8h.html",
 "NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bada31b80b9db99a4ad711edbb1b3f6259",
-"categoryNSMutableArray_07Functional_08.html#a6c4442ca26d7317f37dd5cf2947b7989",
-"categoryNSURL_07Creations_08.html#ae5c78bef579e8a16f5c66bcf08aa8a2f",
-"interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72"
+"categoryNSImage_07Shortcuts_08.html#acc1b5858ceba0db2510fedd0afa66bec",
+"categoryNSURL_07Creations_08.html#a6be45b1e1bb92208a3d51325d291954d",
+"interfaceNSATriple.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -213,12 +213,58 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 @end
 
 
-@implementation  UIAColorComponents
+@interface UIAMonochromeColorComponents : UIAColorComponents {
+    CGFloat _components[2];
+}
 
-- (id)initWithColor:(UIColor *)color {
+@end
+
+
+@implementation UIAMonochromeColorComponents
+
+- (id)initWithCGColor:(CGColorRef)color {
     self = [super init];
     if (self != nil) {
-        const CGFloat *components = CGColorGetComponents(color.CGColor);
+        const CGFloat *components = CGColorGetComponents(color);
+        self->_components[0] = components[0];
+        self->_components[1] = components[1];
+    }
+    return self;
+}
+
+
+- (CGFloat)red {
+    return self->_components[0];
+}
+
+- (CGFloat)green {
+    return self->_components[0];
+}
+
+- (CGFloat)blue {
+    return self->_components[0];
+}
+
+- (CGFloat)alpha {
+    return self->_components[1];
+}
+
+@end
+
+
+@interface UIARGBColorComponents : UIAColorComponents {
+    CGFloat _components[4];
+}
+
+@end
+
+
+@implementation UIARGBColorComponents
+
+- (id)initWithCGColor:(CGColorRef)color {
+    self = [super init];
+    if (self != nil) {
+        const CGFloat *components = CGColorGetComponents(color);
         self->_components[0] = components[0];
         self->_components[1] = components[1];
         self->_components[2] = components[2];
@@ -227,9 +273,6 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
     return self;
 }
 
-+ (id)componentsWithColor:(UIColor *)color {
-    return [[(UIAColorComponents *)[self alloc] initWithColor:color] autorelease];
-}
 
 - (CGFloat)red {
     return self->_components[0];
@@ -245,6 +288,43 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 - (CGFloat)alpha {
     return self->_components[3];
+}
+
+@end
+
+
+@implementation UIAColorComponents
+
+@dynamic red, green, blue, alpha;
+
+- (id)initWithColor:(UIColor *)color {
+    return [self initWithCGColor:color.CGColor];
+}
+
++ (id)componentsWithColor:(UIColor *)color {
+    return [self componentsWithCGColor:color.CGColor];
+}
+
+- (id)initWithCGColor:(CGColorRef)color {
+    [self release];
+    CGColorSpaceRef colorSpace = CGColorGetColorSpace(color);
+    CGColorSpaceModel colorSpaceModel = CGColorSpaceGetModel(colorSpace);
+    switch (colorSpaceModel) {
+        case kCGColorSpaceModelMonochrome: {
+            self = [[UIAMonochromeColorComponents alloc] initWithCGColor:color];
+        }   break;
+        case kCGColorSpaceModelRGB: {
+            self = [[UIARGBColorComponents alloc] initWithCGColor:color];
+        }   break;
+        default:
+            self = nil;
+            break;
+    }
+    return self;
+}
+
++ (id)componentsWithCGColor:(CGColorRef)color {
+    return [[(UIAColorComponents *)[self alloc] initWithCGColor:color] autorelease];
 }
 
 @end

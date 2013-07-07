@@ -103,18 +103,16 @@
 /*!
  *  @brief UIColor component interface
  */
-@interface UIAColorComponents: NSObject {
-    CGFloat _components[4];
-}
+@interface UIAColorComponents: NSObject
 
 //! @brief Red component
-@property(nonatomic, readonly) CGFloat red;
+@property(nonatomic,readonly) CGFloat red;
 //! @brief Green component
-@property(nonatomic, readonly) CGFloat green;
+@property(nonatomic,readonly) CGFloat green;
 //! @brief Blue component
-@property(nonatomic, readonly) CGFloat blue;
+@property(nonatomic,readonly) CGFloat blue;
 //! @brief Alpha component
-@property(nonatomic, readonly) CGFloat alpha;
+@property(nonatomic,readonly) CGFloat alpha;
 
 /*!
  *  @brief Initialize color components from color

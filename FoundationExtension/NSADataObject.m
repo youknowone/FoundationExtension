@@ -53,6 +53,21 @@ static Class _mutableTupleClass;
     return self->_second;
 }
 
+- (NSUInteger)hash {
+    return 2;
+}
+
+- (BOOL)isEqualToTuple:(NSATuple *)tuple {
+    return [self.first isEqual:tuple.first] && [self.second isEqual:tuple.second];
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[NSATuple class]]) {
+        return [self isEqualToTuple:object];
+    }
+    return NO;
+}
+
 #pragma mark NSArray-like interface
 
 - (NSUInteger)count {
@@ -197,6 +212,23 @@ static Class _mutableTripleClass;
 - (id)third {
     return self->_third;
 }
+
+- (NSUInteger)hash {
+    return 3;
+}
+
+- (BOOL)isEqualToTriple:(NSATriple *)triple {
+    return [self.first isEqual:triple.first] && [self.second isEqual:triple.second] && [self.third isEqual:triple.third];
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[NSATriple class]]) {
+        return [self isEqualToTriple:object];
+    }
+    return NO;
+}
+
+#pragma mark
 
 - (NSUInteger)count {
     return 3;

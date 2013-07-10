@@ -32,6 +32,7 @@
  *  @see NSAMapFilter
  *  @see NSAReduce
  *  @see NSAReduceWithInitialObject
+ *  @see @ref NSEnumerator(Functional)
  *
  *  About files,
  *  @see NSAFunctional.h

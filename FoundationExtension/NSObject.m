@@ -136,4 +136,21 @@
     method_exchangeImplementations(self.method, method.method);
 }
 
+#pragma mark NSObject protocols
+
+- (NSUInteger)hash {
+    return (NSUInteger)self.method;
+}
+
+- (BOOL)isEqualToMethod:(NSAMethod *)object {
+    return self.hash == object.hash;
+}
+
+- (BOOL)isEqual:(id)object {
+    if ([object isKindOfClass:[NSAMethod class]]) {
+        return [self isEqualToMethod:object];
+    }
+    return NO;
+}
+
 @end

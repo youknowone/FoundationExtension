@@ -123,11 +123,18 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 - (void)testClassMethod {
     STAssertEquals(0, [self return0], @"");
     STAssertEquals(1, [self return1], @"");
-
-    NSAMethod *m0 = [self.class methodForSelector:@selector(return0)];
-    NSAMethod *m1 = [self.class methodForSelector:@selector(return1)];
-    m0.implementation = m1.implementation;
-    STAssertEquals(1, [self return0], @"");
+    {
+        NSAMethod *m0 = [self.class methodForSelector:@selector(return0)];
+        NSAMethod *m1 = [self.class methodForSelector:@selector(return0)];
+        STAssertEquals(m0.method, m1.method, @"");
+        STAssertEqualObjects(m0, m1, @"");
+    }
+    {
+        NSAMethod *m0 = [self.class methodForSelector:@selector(return0)];
+        NSAMethod *m1 = [self.class methodForSelector:@selector(return1)];
+        m0.implementation = m1.implementation;
+        STAssertEquals(1, [self return0], @"");
+    }
 }
 
 

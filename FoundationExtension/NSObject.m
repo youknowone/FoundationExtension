@@ -57,6 +57,26 @@
     return (*msg)(self, aSelector, object1, object2, object3, object4);
 }
 
+- (id)associatedObjectForKey:(void *)key {
+    return objc_getAssociatedObject(self, key);
+}
+
+- (void)setAssociatedObject:(id)object forKey:(void *)key {
+    [self setAssociatedObject:object forKey:key policy:OBJC_ASSOCIATION_RETAIN];
+}
+
+- (void)setAssociatedObject:(id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy {
+    objc_setAssociatedObject(self, key, object, policy);
+}
+
+- (void)removeAssociatedObjectForKey:(void *)key {
+    [self removeAssociatedObjectForKey:key policy:OBJC_ASSOCIATION_RETAIN];
+}
+
+- (void)removeAssociatedObjectForKey:(void *)key policy:(objc_AssociationPolicy)policy {
+    [self setAssociatedObject:nil forKey:key policy:policy];
+}
+
 @end
 
 

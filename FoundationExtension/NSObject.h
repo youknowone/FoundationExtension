@@ -136,6 +136,63 @@
  */
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4;
 
+/*!
+ *  @name Associative References
+ */
+
+/*!
+ *  @brief Returns the value associated with a given object for a given key.
+ *  @param object The source object for the association.
+ *  @param key The key for the association.
+ *  @return The value associated with the key key for object.
+ *  @see [objc_getAssociatedObject][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_getAssociatedObject
+ */
+- (id)associatedObjectForKey:(void *)key;
+
+/*!
+ *  @brief Sets an associated value for a given object using a given key. Association policy is `retain`.
+ *  @param object The source object for the association.
+ *  @param key The key for the association.
+ *  @param value The value to associate with the key key for object. Pass nil to clear an existing association.
+ *  @see [objc_setAssociatedObject][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
+ */
+- (void)setAssociatedObject:(id)object forKey:(void *)key;
+
+/*!
+ *  @brief Sets an associated value for a given object using a given key and association policy.
+ *  @param object The source object for the association.
+ *  @param key The key for the association.
+ *  @param value The value to associate with the key key for object. Pass nil to clear an existing association.
+ *  @param policy The policy for the association. For possible values, see [Associative Object Behaviors][1].
+ *  @see [objc_setAssociatedObject][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
+ *      [1]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/doc/constant_group/Associative_Object_Behaviors
+ */
+- (void)setAssociatedObject:(id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy;
+
+/*!
+ *  @brief Removes all associations for a given object. Association policy is `retain`.
+ *  @param object The source object for the association.
+ *  @details setAssociatedObject:nil forKey:key
+ *  @see [objc_setAssociatedObject][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
+ */
+- (void)removeAssociatedObjectForKey:(void *)key;
+
+/*!
+ *  @brief Removes all associations for a given object.
+ *  @param object The source object for the association.
+ *  @param policy The policy for the association. For possible values, see [Associative Object Behaviors][1].
+ *  @details setAssociatedObject:nil forKey:key policy:policy
+ *  @see [objc_setAssociatedObject][0]
+ *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
+ *      [1]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/doc/constant_group/Associative_Object_Behaviors
+ */
+- (void)removeAssociatedObjectForKey:(void *)key policy:(objc_AssociationPolicy)policy;
+
+
 @end
 
 /*!

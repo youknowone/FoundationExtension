@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief [UIViewController][0] shortcut extension
  *

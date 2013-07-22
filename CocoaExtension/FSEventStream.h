@@ -13,6 +13,8 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html
  */
 
+#import <Cocoa/Cocoa.h>
+
 @class FSEventStream;
 
 /*!

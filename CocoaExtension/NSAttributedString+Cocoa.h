@@ -15,6 +15,7 @@
  *  AppKit is required.
  */
 
+#import <Cocoa/Cocoa.h>
 #import <FoundationExtension/NSADictionary.h>
 
 /*!

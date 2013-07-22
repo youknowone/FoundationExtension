@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSControl_Class/Reference/Reference.html
  */
 
+#import <Cocoa/Cocoa.h>
+
 /*!
  *  @brief [NSControl][0] missing properties.
  *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSControl_Class/Reference/Reference.html

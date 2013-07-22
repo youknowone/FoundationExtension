@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html
  */
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief UIWebView extension
  */

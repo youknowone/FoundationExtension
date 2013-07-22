@@ -13,7 +13,7 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html
  */
 
-
+#import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
 @class NSAMethod;

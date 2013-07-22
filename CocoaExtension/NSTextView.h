@@ -12,6 +12,8 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSTextView_Class/Reference/Reference.html
  */
 
+#import <Cocoa/Cocoa.h>
+
 /*!
  *  @brief Append placeholder support.
  */

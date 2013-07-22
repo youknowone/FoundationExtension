@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIImage_Class/Reference/Reference.html
  */
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief [UIImage][0] convinient creations methods.
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIImage_Class/Reference/Reference.html

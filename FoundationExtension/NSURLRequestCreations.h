@@ -11,6 +11,8 @@
  *  @brief Creation category extension for various objects using NSURLRequest
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief Creation methods extension using NSURLRequest
  */

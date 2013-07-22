@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html
  */
 
+#import <UIKit/UIKit.h>
+
 //! @deprecated Use UIUserInterfaceIdiom
 typedef enum {
     UIADeviceTypeUnknown = 0,

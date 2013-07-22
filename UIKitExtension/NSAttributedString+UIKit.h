@@ -18,6 +18,8 @@
  *  Before iOS 6.0, use CoreText.
  */
 
+#import <UIKit/UIKit.h>
+
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
 
 #import <FoundationExtension/NSADictionary.h>

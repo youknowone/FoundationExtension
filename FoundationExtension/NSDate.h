@@ -12,6 +12,8 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief NSDate common shortcuts.
  */

@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIApplication_Class/Reference/Reference.html
  */
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief Safe private methods of [UIApplication][0]
  *      [0]: http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIApplication_Class/Reference/Reference.html

@@ -13,6 +13,7 @@
  *      [1]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UITableViewCell_Class/Reference/Reference.html
  */
 
+#import <UIKit/UIKit.h>
 
 /*!
  *  @brief UITableViewCell shortcuts

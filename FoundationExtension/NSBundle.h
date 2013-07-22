@@ -12,6 +12,8 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/Reference/Reference.html
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief Returns directory path for main bundle.
  *  @return [[NSBundle mainBundle] resourcePath]

@@ -12,6 +12,7 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html
  */
 
+#import <Foundation/Foundation.h>
 
 /*!
  *  @brief NSTimer extension for [NSRunLoop][0] shortcuts.

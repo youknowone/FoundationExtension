@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#import <cdebug/debug.h>
 #import "NSADictionary.h"
 
 @interface NSADictionary ()

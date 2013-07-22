@@ -12,6 +12,8 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSValue_Class/Reference/Reference.html
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief NSObject extension cateogory collection for [NSValue][0].
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSValue_Class/Reference/Reference.html

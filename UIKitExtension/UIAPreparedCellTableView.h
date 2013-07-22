@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief A table view using rrepared cells instead of data source.
  *  @details Cells are prepared cells for self-implemented data source protocol.

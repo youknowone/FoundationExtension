@@ -11,6 +11,8 @@
  *  @brief 'Real' image well implementation.
  */
 
+#import <Cocoa/Cocoa.h>
+
 @protocol NSAImageWellDelegate;
 
 /*!

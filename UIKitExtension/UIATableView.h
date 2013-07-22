@@ -6,6 +6,8 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @protocol UIATableViewCellCopyableDelegate;
 
 @interface UIATableViewCellCopyable : UITableViewCell {

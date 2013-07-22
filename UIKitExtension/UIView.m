@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
-
 #import "UIView.h"
+
+const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 
 @implementation UIAViewHolder
 

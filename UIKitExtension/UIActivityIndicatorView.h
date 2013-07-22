@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief [UIActivityIndicatorView][0] shortcut properties.
  *      [0]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIActivityIndicatorView_Class/Reference/UIActivityIndicatorView.html

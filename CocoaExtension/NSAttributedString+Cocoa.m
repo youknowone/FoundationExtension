@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#import <cdebug/debug.h>
 #import "NSAttributedString+Cocoa.h"
 
 static NSArray *__NSWritingDirectionAttributeArrayFromAttributes(NSWritingDirectionAttributes writingDirection) {

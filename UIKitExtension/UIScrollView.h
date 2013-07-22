@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIScrollView_Class/Reference/UIScrollView.html
  */
 
+#import <UIKit/UIKit.h>
+
 /*!
  *  @brief UIScrollView shortcuts
  */

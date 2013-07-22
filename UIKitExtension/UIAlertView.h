@@ -12,6 +12,8 @@
 #define UILog(TAG, ...)
 #endif
 
+#import <UIKit/UIKit.h>
+
 @interface UIAlertView (Shortcuts)
 
 + (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line;

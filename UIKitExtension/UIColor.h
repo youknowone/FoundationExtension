@@ -6,13 +6,14 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-@class UIAColorComponents;
-
 /*!
  *  @file
  *  @brief [UIColor][0] shortcut method category extensions.
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIColor_Class/Reference/Reference.html
  */
+
+#import <UIKit/UIKit.h>
+@class UIAColorComponents;
 
 /*!
  *  @brief [UIColor][0] shortcuts.

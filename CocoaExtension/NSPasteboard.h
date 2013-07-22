@@ -12,6 +12,8 @@
  *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html
  */
 
+#import <Cocoa/Cocoa.h>
+
 /*!
  *  @brief [NSPasteboard][0] shortcuts
  *      [0]: http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSPasteboard_Class/Reference/Reference.html

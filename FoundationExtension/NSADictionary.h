@@ -11,6 +11,8 @@
  *  @brief See @ref CoreFoundation-Subclass for concept of these objects.
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief [NSDictionary][0] subclass-available implementation.
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html

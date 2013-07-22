@@ -13,6 +13,8 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html
  */
 
+#import <Foundation/Foundation.h>
+
 /*!
  *  @brief NSArray shortcut methods extension.
  */

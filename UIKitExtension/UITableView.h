@@ -15,6 +15,10 @@
 
 #import <UIKit/UIKit.h>
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
+#define UITableViewCellAccessoryDetailButton (UITableViewCellAccessoryCheckmark + 1)
+#endif
+
 /*!
  *  @brief UITableViewCell shortcuts
  */

@@ -64,3 +64,4 @@
 #import <FoundationExtension/NSAOrderedDictionary.h>        // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOverridingMediator.h>       // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAString.h>                   // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAVersion.h>                  // level: 20 / deps(0):  / internal(0):

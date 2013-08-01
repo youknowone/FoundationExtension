@@ -344,4 +344,11 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     STAssertEqualObjects(@"YES", [b typeFormedDescription], @"");
 }
 
+- (void)testVersion {
+    NSAVersion *version = [NSAVersion versionWithString:@"10.8.4"];
+    STAssertEquals(version.major, (NSInteger)10, @"");
+    STAssertEquals(version.minor, (NSInteger)8, @"");
+    STAssertEquals(version.bugfix, (NSInteger)4, @"");
+}
+
 @end

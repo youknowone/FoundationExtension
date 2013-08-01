@@ -31,3 +31,4 @@
 #import <CocoaExtension/NSTextView.h>                       // level: 0 / deps(0):  / internal(0):
 // depenency level 20
 #import <CocoaExtension/NSAImageWell.h>                     // level: 20 / deps(0):  / internal(3): NSGeometry, NSImage, NSPasteboard
+#import <CocoaExtension/NSAVersion+System.h>                // level: 20 / deps(1): NSAVersion / internal(0):

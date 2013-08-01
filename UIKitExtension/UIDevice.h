@@ -13,6 +13,7 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <FoundationExtension/NSAVersion.h>
 
 //! @deprecated Use UIUserInterfaceIdiom
 typedef enum {
@@ -32,16 +33,29 @@ typedef enum {
  */
 @interface UIDevice (Shortcuts)
 
+/*!
+ *  @brief System version for easy access
+ */
+@property(nonatomic,readonly) NSAVersion *systemVersionParts;
+
+/*
+ *  @brief Get UUID for vendor for later than iOS6 or device identifier.
+ */
+- (NSString *)uniqueToken;
+
 //! @deprecated Use -userInterfaceIdiom
 + (UIADeviceType)currentDeviceType __deprecated;
 
 //! @deprecated Deprecated by implementation deprecation. Use @ref uniqueToken.
 + (NSString *)uniqueIdentifier __deprecated;
 
-/*
- *  @brief Get UUID for vendor for later than iOS6 or device identifier.
+@end
+
+/*!
+ *  @brief [UIDevice][0] MAC address extension, useful to make unique identifier.
+ *      [0]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html
  */
-- (NSString *)uniqueToken;
+@interface UIDevice (MACAddress)
 
 /*
  *  @brief Get MAC address as data

@@ -18,6 +18,10 @@
 
 @implementation UIDevice (Shortcuts)
 
+- (NSAVersion *)systemVersionParts {
+    return [NSAVersion versionWithString:self.systemVersion];
+}
+
 + (NSString *)uniqueIdentifier {
     #pragma clang diagnostic push
     #pragma clang diagnostic ignored "-Wobjc-method-access"
@@ -65,6 +69,11 @@
         #undef USE_IOS5_UUID
     #endif
 }
+
+@end
+
+
+@implementation UIDevice (MACAddress)
 
 - (NSData *)MACAddressData {
     #define MAC_LENGTH 6

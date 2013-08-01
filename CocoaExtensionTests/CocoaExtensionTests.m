@@ -97,4 +97,10 @@
     #undef TEST_ITEM_VALUE
 }
 
+- (void)testSystemVersion {
+    NSAVersion *version = [NSAVersion systemVersion];
+    STAssertEquals(version.major, (NSInteger)10, @"");
+//    STAssertEqualObjects(version.string, @"10.8.4", @"");
+}
+
 @end

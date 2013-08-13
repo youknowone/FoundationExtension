@@ -24,7 +24,16 @@
 /*!
  *  @brief Color component property. nil if unavailable.
  */
-@property(nonatomic, readonly) UIAColorComponents *components;
+@property(nonatomic,readonly) UIAColorComponents *components;
+
+/*!
+ *  @brief CGColorSpace
+ */
+@property(nonatomic,readonly) CGColorSpaceRef CGColorSpace;
+/*!
+ *  @brief CGColorSpaceModel
+ */
+@property(nonatomic,readonly) CGColorSpaceModel CGColorSpaceModel;
 
 @end
 

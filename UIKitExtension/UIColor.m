@@ -17,6 +17,14 @@
     return [UIAColorComponents componentsWithColor:self];
 }
 
+- (CGColorSpaceRef)CGColorSpace {
+    return CGColorGetColorSpace(self.CGColor);
+}
+
+- (CGColorSpaceModel)CGColorSpaceModel {
+    return CGColorSpaceGetModel(self.CGColorSpace);
+}
+
 @end
 
 

@@ -65,7 +65,7 @@
  *  @brief Creates and returns color from 8bit white component
  *  @see initWith8bitWhite:alpha:
  */
-+ (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
++ (id)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Initialize color from 32bit color packed value
@@ -97,6 +97,23 @@
  *  @details This accept formats as like "#fff" or "#0f0f0f" for formal colors. "#dddf" or "#fdfdfdff" for alpha value. If "#" prefix doesn't exist, select constant from HTML color name table. "orange" for css and "transperent" for clear color.
  */
 + (UIColor *)colorWithHTMLExpression:(NSString *)code;
+
+@end
+
+/*!
+ *  @brief UIColor creations using UIAColorComponents
+ */
+@interface UIColor (UIAColorComponents)
+
+/*!
+ *  @brief Creates and returns color with changed alpha.
+ */
+- (UIColor *)colorWithAlpha:(CGFloat)alpha;
+
+/*!
+ *  @brief Creates and returns color with mixed color
+ */
+- (UIColor *)mixedColorWithColor:(UIColor *)color ratio:(CGFloat)ratio;
 
 @end
 

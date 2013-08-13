@@ -213,6 +213,36 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 @end
 
 
+@implementation UIColor (UIAColorComponents)
+
+- (UIColor *)colorWithAlpha:(CGFloat)alpha {
+    UIAColorComponents *components = self.components;
+    return [UIColor colorWithRed:components.red green:components.green blue:components.blue alpha:alpha];
+}
+
+- (UIColor *)mixedColorWithColor:(UIColor *)color ratio:(CGFloat)ratio {
+    UIAColorComponents *c1 = self.components;
+    UIAColorComponents *c2 = color.components;
+
+    CGFloat ratio2 = 1.0f - ratio;
+    CGFloat aratio1 = ratio * c1.alpha;
+    CGFloat aratio2 = ratio2 * c2.alpha;
+    CGFloat aratios = aratio1 + aratio2;
+    CGFloat cratio1 = aratio1 / aratios;
+    CGFloat cratio2 = aratio2 / aratios;
+
+    return [UIColor colorWithRed:c1.red * cratio1 + c2.red * cratio2
+                           green:c1.green * cratio1 + c2.green * cratio2
+                            blue:c1.blue * cratio1 + c2.blue * cratio2
+                           alpha:c1.alpha * ratio + c2.alpha * ratio2];
+}
+
+@end
+
+
+#pragma mark -
+
+
 @interface UIAMonochromeColorComponents : UIAColorComponents {
     CGFloat _components[2];
 }

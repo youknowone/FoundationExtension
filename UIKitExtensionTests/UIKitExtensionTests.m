@@ -75,6 +75,37 @@
 }
 #endif
 
+- (void)testColor {
+    UIColor *color1 = [UIColor colorWithRed:0.7f green:0.5f blue:0.3f alpha:1.0];
+    UIColor *color2 = [UIColor colorWithRed:0.7f green:0.5f blue:0.3f alpha:1.0];
+
+    STAssertEqualObjects(color1, color2, @"");
+
+    UIColor *color3 = [color1 colorWithAlpha:0.5f];
+    STAssertEquals(color3.components.red, color1.components.red, @"");
+    STAssertEquals(color3.components.green, color1.components.green, @"");
+    STAssertEquals(color3.components.blue, color1.components.blue, @"");
+    STAssertEquals(color3.components.alpha, 0.5f, @"");
+}
+
+- (void)testColorMix {
+    UIColor *color1 = [UIColor colorWithRed:0.25 green:0.5 blue:0.75 alpha:1.0];
+    UIColor *color2 = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+
+    UIColor *color = [color1 mixedColorWithColor:color2 ratio:0.25];
+    STAssertEquals(color.components.red, 0.75f + 0.25f * 0.25f, @"");
+    STAssertEquals(color.components.green, 0.75f + 0.5f * 0.25f, @"");
+    STAssertEquals(color.components.blue, 0.75f + 0.75f * 0.25f, @"");
+    STAssertEquals(color.components.alpha, 1.0f, @"");
+
+    UIColor *color3 = [UIColor colorWithWhite:0.125 alpha:0.25];
+    UIColor *color4 = [UIColor colorWithWhite:0.625 alpha:0.75];
+    color = [color3 mixedColorWithColor:color4 ratio:0.75];
+
+    STAssertEquals(color.components.red, 0.375f, @"");
+    STAssertEquals(color.components.alpha, 0.375f, @"");
+}
+
 //- (void)testViewHolder {
 //    UIView *view = [[[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil] autorelease];
 //    STAssertNotNil(view, @"");

@@ -24,6 +24,8 @@
  */
 @interface UITableViewCell (Shortcuts)
 
+- (void)setReuseIdentifier:(NSString *)reuseIdentifier;
+
 /*!
  *  @brief Creates and returns a table cell with a style and a reuse identifier and returns it to the caller.
  *  @see [initWithStyle:reuseIdentifier:][0]

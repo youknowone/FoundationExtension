@@ -97,39 +97,6 @@ __deprecated @interface NSAClass: NSObject {
  */
 @property(nonatomic, readonly) NSAClass *superclassObject __deprecated;
 
-
-/*!
- *  @brief Returns Method from given selector;
- *  @see [class_getInstanceMethod][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
- *  @deprecated See @ref NSObject(ObjCRuntimeClass)
- */
-- (Method)methodForSelector:(SEL)selector __deprecated;
-
-/*!
- *  @brief Returns Method from given selector;
- *  @see [class_getInstanceMethod][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
- *  @deprecated See @ref NSObject(ObjCRuntimeClass)
- */
-- (NSAMethod *)methodObjectForSelector:(SEL)selector __deprecated;
-
-/*!
- *  @brief Returns class Method from given selector;
- *  @see [class_getClassMethod][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
- *  @deprecated See @ref NSObject(ObjCRuntimeClass)
- */
-- (Method)classMethodForSelector:(SEL)selector __deprecated;
-
-/*!
- *  @brief Returns class Method from given selector;
- *  @see [class_getClassMethod][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
- *  @deprecated See @ref NSObject(ObjCRuntimeClass)
- */
-- (NSAMethod *)classMethodObjectForSelector:(SEL)selector __deprecated;
-
 /*!
  *  @brief Returns IMP from given method
  *  @see [class_getMethodImplementation][1]

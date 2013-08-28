@@ -14,7 +14,6 @@
 		3805FBAC17AA89E2008487A9 /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
 		3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBB117AA901D008487A9 /* NSAVersion+System.h */; };
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
-		381512D717C3A7B8000E06D0 /* MPMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 381512D617C3A3AA000E06D0 /* MPMediaItem.m */; };
 		381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */; };
 		381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */; };
 		381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */; };
@@ -1521,7 +1520,6 @@
 				38A90FE41635920D001DB09E /* NSDate.m in Sources */,
 				38A90FE51635920F001DB09E /* NSData.m in Sources */,
 				38A90FE616359211001DB09E /* NSBundle.m in Sources */,
-				381512D717C3A7B8000E06D0 /* MPMediaItem.m in Sources */,
 				38A90FE716359213001DB09E /* NSArray.m in Sources */,
 				38F0697C163839D2002723AB /* NSAArray.m in Sources */,
 				38F0698D16384E40002723AB /* NSADictionary.m in Sources */,

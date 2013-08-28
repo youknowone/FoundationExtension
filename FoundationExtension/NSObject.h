@@ -225,7 +225,7 @@
  *  @see [class_getInstanceMethod][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
  */
-+ (NSAMethod *)methodForSelector:(SEL)selector;
++ (NSAMethod *)methodObjectForSelector:(SEL)selector;
 
 /*!
  *  @brief Returns class Method from given selector;
@@ -239,7 +239,7 @@
  *  @see [class_getClassMethod][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getClassMethod
  */
-+ (NSAMethod *)classMethodForSelector:(SEL)selector;
++ (NSAMethod *)classMethodObjectForSelector:(SEL)selector;
 
 /*!
  *  @brief Returns IMP from given method

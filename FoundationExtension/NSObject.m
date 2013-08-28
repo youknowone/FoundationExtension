@@ -94,7 +94,7 @@
     return class_getInstanceMethod(self, selector);
 }
 
-+ (NSAMethod *)methodForSelector:(SEL)selector {
++ (NSAMethod *)methodObjectForSelector:(SEL)selector {
     return [NSAMethod methodWithMethod:class_getInstanceMethod(self, selector)];
 }
 
@@ -102,7 +102,7 @@
     return class_getClassMethod(self, selector);
 }
 
-+ (NSAMethod *)classMethodForSelector:(SEL)selector {
++ (NSAMethod *)classMethodObjectForSelector:(SEL)selector {
     return [NSAMethod methodWithMethod:class_getClassMethod(self, selector)];
 }
 

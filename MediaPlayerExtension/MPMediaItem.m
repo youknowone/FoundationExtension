@@ -29,7 +29,7 @@
     if (done) return;
 
     done = YES;
-    NSAMethod *template = [self methodForSelector:@selector(_getValue)];
+    NSAMethod *template = [self methodObjectForSelector:@selector(_getValue)];
     Class ConcreteClass = NSClassFromString(@"MPConcreteMediaItem");
     //dassert(ConcreteClass);
     for (NSString *key in @[@"persistentID", @"mediaType", @"title",
@@ -44,7 +44,7 @@
 
         [ConcreteClass addMethodForSelector:NSSelectorFromString(key) fromMethod:template];
     }
-    [ConcreteClass addMethodForSelector:@selector(artworkImageWithSize:) fromMethod:[self methodForSelector:@selector(artworkImageWithSize:)]];
+    [ConcreteClass addMethodForSelector:@selector(artworkImageWithSize:) fromMethod:[self methodObjectForSelector:@selector(artworkImageWithSize:)]];
 }
 
 - (UIImage *)artworkImageWithSize:(CGSize)size {

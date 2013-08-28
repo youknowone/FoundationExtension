@@ -52,14 +52,6 @@
     return (id)[self superclass];
 }
 
-+ (NSAMethod *)methodObjectForSelector:(SEL)selector {
-    return [self methodForSelector:selector];
-}
-
-+ (NSAMethod *)classMethodObjectForSelector:(SEL)selector {
-    return [self classMethodForSelector:selector];
-}
-
 @end
 
 

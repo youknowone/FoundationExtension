@@ -10,7 +10,15 @@
 
 #import "MPMediaItem.h"
 
-@implementation MPMediaItem
+@implementation MPMediaItem (Shortcuts)
+
+@dynamic persistentID, mediaType, title;
+@dynamic albumTitle, artist, albumArtist, genre, composer;
+@dynamic albumPID, artistPID, albumArtistPID, genrePID, composerPID;
+@dynamic playbackDuration, albumTrackNumber, albumTrackCount, discNumber, discCount, artwork, lyrics;
+@dynamic isCompilation, releaseDate, beatsPerMinute, comments, assetURL, isCloudItem;
+@dynamic podcastTitle, podcastPID;
+@dynamic playCount, skipCount, rating, lastPlayedDate, userGrouping;
 
 + (void)initialize {
     if (self == [MPMediaItem class]) {

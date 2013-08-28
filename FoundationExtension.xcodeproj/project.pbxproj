@@ -14,6 +14,7 @@
 		3805FBAC17AA89E2008487A9 /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
 		3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBB117AA901D008487A9 /* NSAVersion+System.h */; };
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
+		381512D717C3A7B8000E06D0 /* MPMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 381512D617C3A3AA000E06D0 /* MPMediaItem.m */; };
 		381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */; };
 		381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */; };
 		381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */; };
@@ -323,6 +324,8 @@
 		3805FBA717AA89E2008487A9 /* NSAVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAVersion.m; sourceTree = "<group>"; };
 		3805FBB117AA901D008487A9 /* NSAVersion+System.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAVersion+System.h"; sourceTree = "<group>"; };
 		3805FBB217AA901D008487A9 /* NSAVersion+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAVersion+System.m"; sourceTree = "<group>"; };
+		381512D517C3A3AA000E06D0 /* MPMediaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPMediaItem.h; sourceTree = "<group>"; };
+		381512D617C3A3AA000E06D0 /* MPMediaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPMediaItem.m; sourceTree = "<group>"; };
 		381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAPlaceholderTextView.h; sourceTree = "<group>"; };
 		381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAPlaceholderTextView.m; sourceTree = "<group>"; };
 		381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPlaceholderTextViewController.h; sourceTree = "<group>"; };
@@ -607,6 +610,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381512D417C3A394000E06D0 /* MediaPlayerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				381512D517C3A3AA000E06D0 /* MPMediaItem.h */,
+				381512D617C3A3AA000E06D0 /* MPMediaItem.m */,
+			);
+			path = MediaPlayerExtension;
+			sourceTree = "<group>";
+		};
 		383764C913373154007072FD = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +626,7 @@
 				38660A3B161AD8D700C5CE06 /* FoundationExtension */,
 				3855B02D163CF2B1005584CD /* CocoaExtension */,
 				38C98B55161AE30300C4A389 /* UIKitExtension */,
+				381512D417C3A394000E06D0 /* MediaPlayerExtension */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
 			);
@@ -1508,6 +1521,7 @@
 				38A90FE41635920D001DB09E /* NSDate.m in Sources */,
 				38A90FE51635920F001DB09E /* NSData.m in Sources */,
 				38A90FE616359211001DB09E /* NSBundle.m in Sources */,
+				381512D717C3A7B8000E06D0 /* MPMediaItem.m in Sources */,
 				38A90FE716359213001DB09E /* NSArray.m in Sources */,
 				38F0697C163839D2002723AB /* NSAArray.m in Sources */,
 				38F0698D16384E40002723AB /* NSADictionary.m in Sources */,

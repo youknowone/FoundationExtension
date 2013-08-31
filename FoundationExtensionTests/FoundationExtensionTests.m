@@ -351,4 +351,10 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     STAssertEquals(version.bugfix, (NSInteger)4, @"");
 }
 
+- (void)testShuffle {
+    NSMutableArray *array = [@[@"1", @"2", @"3"] mutableCopy];
+    [array shuffle];
+    STAssertEquals(array.count, (NSUInteger)3, nil);
+}
+
 @end

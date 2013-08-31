@@ -123,9 +123,9 @@
 - (id)randomObject {
     NSUInteger count = self.count;
     if (count == 0) {
-        return nil;
+        return self[0]; // raise index error
     }
-    return self[rand() % count];
+    return self[arc4random_uniform(count)];
 }
 
 - (NSArray *)randomObjectsOfCount:(NSUInteger)theCount {
@@ -139,13 +139,37 @@
     NSMutableArray *selected = [NSMutableArray array];
 
     for (NSUInteger i = 0; i < theCount; i ++) {
-        NSUInteger index = arc4random() % (theCount - i);
+        NSUInteger index = arc4random_uniform((uint32_t)(theCount - i));
         [selected addObject:copy[index]];
         [copy removeObjectAtIndex:index];
     }
 
     [copy release];
     return selected;
+}
+
+@end
+
+
+@implementation NSMutableArray (Random)
+
+- (id)popRandomObject {
+    NSUInteger count = self.count;
+    if (count == 0) {
+        return self[0]; // raise index error
+    }
+    uint32_t index = arc4random_uniform((uint32_t)count);
+    id result = [self[index] retain];
+    [self removeObjectAtIndex:index];
+    return [result autorelease];
+}
+
+- (void)shuffle {
+    NSMutableArray *pool = [self mutableCopy];
+    [self removeAllObjects];
+    while (pool.count) {
+        [self addObject:[pool popRandomObject]];
+    }
 }
 
 @end

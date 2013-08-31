@@ -172,3 +172,20 @@
 - (NSArray *)randomObjectsOfCount:(NSUInteger)count;
 
 @end
+
+/*!
+ *  @brief Random selection in NSMutableArray objects.
+ */
+@interface NSMutableArray (Random)
+
+/*!
+ *  @brief Pop random object from NSArray.
+ */
+- (id)popRandomObject;
+
+/*!
+ *  @brief Shuffle
+ */
+- (void)shuffle;
+
+@end

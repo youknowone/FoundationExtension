@@ -10,7 +10,7 @@
 
 @implementation NSObject (NSValue)
 
-- (NSValue *)value {
+- (NSValue *)fe_value {
     return [NSValue valueWithNonretainedObject:self];
 }
 

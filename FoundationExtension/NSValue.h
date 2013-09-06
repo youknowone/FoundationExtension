@@ -24,6 +24,6 @@
  *  @brief NSValue instant creation method for NSObject.
  *  @details NSValue -valueWithNonretainedObject:
  */
-- (NSValue *)value;
+- (NSValue *)fe_value;
 
 @end

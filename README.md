@@ -148,7 +148,7 @@ Foundation
 
 FoundationExtension
 
-    NSInteger value = [string integetValueBase:12];
+    NSInteger value = [string integerValueBase:12];
 
 @see @ref NSString(Evaluation)
 

@@ -6,10 +6,10 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#if IC_DEBUG
-#define UILog(TAG, ...) { if ( TAG ) { NSString *logText = [NSString stringWithFormat:__VA_ARGS__]; __ICLog(logText, __FILE__, __LINE__); [UIAlertView showLog:logText file:__FILE__ line:__LINE__]; } }
+#if DEBUG
+    #define UILog(TAG, ...) { if ( TAG ) { NSString *logText = [NSString stringWithFormat:__VA_ARGS__]; if (TAG) NSLog(__VA_ARGS__); [UIAlertView showLog:logText file:__FILE__ line:__LINE__]; } }
 #else
-#define UILog(TAG, ...)
+    #define UILog(TAG, ...)
 #endif
 
 #import <UIKit/UIKit.h>

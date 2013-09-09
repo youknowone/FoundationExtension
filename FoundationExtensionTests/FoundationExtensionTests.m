@@ -324,16 +324,28 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 #endif
 
 - (void)testOrderedDictionary {
-    NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionary];
-    obj[@1] = @"1";
-    obj[@2] = @"2";
-    obj[@3] = @"3";
-    obj[@4] = @"4";
-    obj[@5] = @"5";
-    NSInteger count = 0;
-    for (id key in obj) {
-        count += 1;
-        STAssertEqualObjects(obj[key], [NSString stringWithInteger:count], @"");
+    {
+        NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionary];
+        obj[@1] = @"1";
+        obj[@2] = @"2";
+        obj[@3] = @"3";
+        obj[@4] = @"4";
+        obj[@5] = @"5";
+        NSInteger count = 0;
+        for (id key in obj) {
+            count += 1;
+            STAssertEqualObjects(obj[key], [NSString stringWithInteger:count], @"");
+        }
+    }
+    {
+        NSAOrderedDictionary *obj = [NSAOrderedDictionary dictionaryWithObject:@"obj" forKey:@"key"];
+        STAssertEqualObjects(obj[@"key"], @"obj", @"");
+        STAssertEqualObjects([obj objectAtIndex:0], @"obj", @"");
+    }
+    {
+        NSAMutableOrderedDictionary *obj = [NSAMutableOrderedDictionary dictionaryWithObject:@"obj" forKey:@"key"];
+        STAssertEqualObjects(obj[@"key"], @"obj", @"");
+        STAssertEqualObjects([obj objectAtIndex:0], @"obj", @"");
     }
 }
 

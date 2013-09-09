@@ -34,8 +34,8 @@
 - (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
-        self->_order = [[NSOrderedSet alloc] initWithObjects:objects count:cnt];
         self->_impl = [[NSDictionary alloc] initWithObjects:objects forKeys:keys count:cnt];
+        self->_order = [[NSOrderedSet alloc] initWithObjects:keys count:cnt];
     }
     return self;
 }

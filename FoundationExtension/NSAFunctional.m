@@ -676,3 +676,112 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @end
 
+
+@implementation NSSet (Functional)
+
+- (void)applyProcedure:(NSAObjectProcedure)procedure {
+    NSAApply(self, procedure);
+}
+
+- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMap(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+    return NSAFilter(self.objectEnumerator, filter).allObjects;
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce {
+    return NSAReduce(self.objectEnumerator, reduce);
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+    return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
+}
+
+- (NSSet *)setByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self arrayByMappingOperator:mapper]];
+}
+
+- (NSSet *)setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self arrayByMapFilteringOperator:mapper]];
+}
+
+- (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter {
+    return [NSSet setWithArray:[self arrayByFilteringOperator:filter]];
+}
+
+@end
+
+
+@implementation NSOrderedSet (Functional)
+
+- (void)applyProcedure:(NSAObjectProcedure)procedure {
+    NSAApply(self, procedure);
+}
+
+- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+    NSAApplyWithIndex(self, procedure);
+}
+
+- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMap(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapWithIndex(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+    return NSAFilter(self.objectEnumerator, filter).allObjects;
+}
+
+- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+    return NSAFilterWithIndex(self.objectEnumerator, filter).allObjects;
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce {
+    return NSAReduce(self.objectEnumerator, reduce);
+}
+
+- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+    return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
+}
+
+- (NSSet *)setByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self arrayByMappingOperator:mapper]];
+}
+
+- (NSSet *)setByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return [NSSet setWithArray:NSAMapWithIndex(self.objectEnumerator, mapper).allObjects];
+}
+
+- (NSSet *)setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self arrayByMapFilteringOperator:mapper]];
+}
+
+- (NSSet *)setByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+    return [NSSet setWithArray:NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects];
+}
+
+- (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter {
+    return [NSSet setWithArray:[self arrayByFilteringOperator:filter]];
+}
+
+- (NSSet *)setByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+    return [NSSet setWithArray:NSAFilterWithIndex(self.objectEnumerator, filter).allObjects];
+}
+
+@end

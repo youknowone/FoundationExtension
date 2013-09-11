@@ -254,6 +254,8 @@
 		38FCECDA1659092100D3D0F0 /* CocoaExtension.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; };
 		38FCECDD16590A1100D3D0F0 /* NSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FCECDB16590A1100D3D0F0 /* NSTextView.h */; };
 		38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FCECDC16590A1100D3D0F0 /* NSTextView.m */; };
+		38FD75AF17E0759700153727 /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; };
+		38FD75B017E0759700153727 /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -528,6 +530,8 @@
 		38FCECD1165904AF00D3D0F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		38FCECDB16590A1100D3D0F0 /* NSTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSTextView.h; sourceTree = "<group>"; };
 		38FCECDC16590A1100D3D0F0 /* NSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextView.m; sourceTree = "<group>"; };
+		38FD75AD17E0759700153727 /* NSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSet.h; sourceTree = "<group>"; };
+		38FD75AE17E0759700153727 /* NSSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -773,6 +777,8 @@
 				3868F7AF162D57EB00C31163 /* NSObject.m */,
 				38660A5A161AD9AE00C5CE06 /* NSPathUtilities.h */,
 				38660A5B161AD9AE00C5CE06 /* NSPathUtilities.m */,
+				38FD75AD17E0759700153727 /* NSSet.h */,
+				38FD75AE17E0759700153727 /* NSSet.m */,
 				38660A5C161AD9AE00C5CE06 /* NSString.h */,
 				38660A5D161AD9AE00C5CE06 /* NSString.m */,
 				38660A5E161AD9AE00C5CE06 /* NSStringEncoding.h */,
@@ -1071,6 +1077,7 @@
 				38F0697A163839D2002723AB /* NSAArray.h in Headers */,
 				38F0698B16384E40002723AB /* NSADictionary.h in Headers */,
 				38F0699016385752002723AB /* NSAString.h in Headers */,
+				38FD75AF17E0759700153727 /* NSSet.h in Headers */,
 				38B0C6E9163F73800044C73C /* NSAFunctional.h in Headers */,
 				38B0C73E1641382D0044C73C /* NSAttributedString.h in Headers */,
 				38505C881642EC5B0059773B /* NSURLRequestCreations.h in Headers */,
@@ -1472,6 +1479,7 @@
 				38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */,
 				38B0C7401641382D0044C73C /* NSAttributedString.m in Sources */,
 				38505C8A1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
+				38FD75B017E0759700153727 /* NSSet.m in Sources */,
 				38505C961645837E0059773B /* NSJSONSerialization.m in Sources */,
 				38505CBD164647910059773B /* NSAOrderedDictionary.m in Sources */,
 				3877F44B16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,

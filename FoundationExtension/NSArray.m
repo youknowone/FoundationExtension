@@ -25,15 +25,15 @@
 
 @implementation NSArray (Creations)
 
-- (id) initWithData:(NSData *)data {
+- (id)initWithData:(NSData *)data {
     return [self initWithData:data format:NULL error:NULL];
 }
 
-+ (id) arrayWithData:(NSData *)data {
++ (id)arrayWithData:(NSData *)data {
     return [[[self alloc] initWithData:data] autorelease];
 }
 
-- (id) initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSArray *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
         [self release];
@@ -42,7 +42,7 @@
     return [self initWithArray:contents];
 }
 
-+ (id) arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     return [[[self alloc] initWithData:data format:format error:error] autorelease];
 }
 
@@ -68,25 +68,6 @@
         }
     }
     return [self initWithArray:array];
-}
-
-@end
-
-@implementation NSMutableArray (Creations)
-
-- (id)initWithEnumerator:(NSEnumerator *)enumerator copyItems:(BOOL)flag {
-    if (flag) {
-        for (id object in enumerator) {
-            [self addObject:object];
-        }
-    } else {
-        for (id object in enumerator) {
-            id newObject = [object copy];
-            [self addObject:newObject];
-            [newObject release];
-        }
-    }
-    return self;
 }
 
 @end

@@ -190,6 +190,13 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     STAssertEqualObjects(array, (@[@4, @0, @1, @2, @3]), @"result: %@", array);
 }
 
+- (void)testArrayWithEnumerator {
+    NSArray *array = @[@1, @2, @3];
+    NSArray *newArray = [NSArray arrayWithEnumerator:array.objectEnumerator];
+
+    STAssertEqualObjects(array, newArray, @"");
+}
+
 - (void)testHexadecimalString {
     NSData *data = [NSData dataWithBytes:"\0aa\0" length:4];
     NSString *result = [data hexadecimalString];
@@ -249,6 +256,58 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 }
 
 - (void)testFunctional {
+    {
+        NSSet *a = [NSSet setWithObjects:@1, @2, @3, @4, nil];
+        NSInteger idx = 0;
+        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return @([obj integerValue] - 1); })) {
+            idx += 1;
+        }
+        STAssertEquals((int)idx, 4, @"");
+
+        idx = 0;
+        for (id i in NSAFilter(a.objectEnumerator, ^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); })) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+
+        idx = 0;
+        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; })) {
+            idx += 1;
+        }
+        STAssertEquals((int)idx, 2, @"");
+
+        NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return @([obj1 integerValue] + [obj2 integerValue]); }, @0);
+        STAssertEqualObjects(res, @10, @"");
+    }
+
+    {
+        NSOrderedSet *a = [[NSOrderedSet alloc] initWithObjects:@1, @2, @3, @4, nil];
+        NSInteger idx = 0;
+        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return @([obj integerValue] - 1); })) {
+            STAssertEquals([i integerValue], idx, @"");
+            idx += 1;
+        }
+        STAssertEquals((int)idx, 4, @"");
+
+        idx = 0;
+        for (id i in NSAFilter(a.objectEnumerator, ^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); })) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, (idx + 2) / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+
+        idx = 0;
+        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; })) {
+            idx += 1;
+            STAssertEquals([i integerValue] / 2, idx / 2, @"");
+        }
+        STAssertEquals((int)idx, 2, @"");
+
+        NSNumber *res = NSAReduceWithInitialObject(a.objectEnumerator, ^(id obj1, id obj2) { return @([obj1 integerValue] + [obj2 integerValue]); }, @0);
+        STAssertEqualObjects(res, @10, @"");
+    }
+
     {
         NSArray *a = @[@1, @2, @3, @4];
         NSInteger idx = 0;
@@ -368,5 +427,6 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     [array shuffle];
     STAssertEquals(array.count, (NSUInteger)3, nil);
 }
+
 
 @end

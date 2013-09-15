@@ -33,4 +33,16 @@
  */
 + (id)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier;
 
+/*!
+ *  @brief Current table view.
+ *  @return If a table view includes this cell, returns the table view; otherwise nil;
+ */
+@property(nonatomic,readonly) UITableView *tableView;
+
+/*!
+ *  @brief Current table view.
+ *  @return If a table view includes this cell, returns the index path for the table view; otherwise nil;
+ */
+@property(nonatomic,readonly) NSIndexPath *indexPath;
+
 @end

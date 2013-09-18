@@ -65,13 +65,20 @@ typedef void (^NSATimerBlock)();
  *  @brief Fired event.
  *  @param timer Fired timer.
  */
-- (void)timerFired:(NSTimer *)timer;
+- (void)timerDidFire:(NSTimer *)timer;
+
 /*!
  *  @brief Timer should repeat or not.
  *  @param timer Fired timer.
  *  @return YES, timer will be repeated. NO, timer is invalidated.
  */
 - (BOOL)timerShouldRepeat:(NSTimer *)timer;
+
+@optional
+/*!
+ *  @brief Use timerDidFire:. Deprecated by name collision with private method.
+ */
+- (void)timerFired:(NSTimer *)timer __deprecated;
 
 @end
 

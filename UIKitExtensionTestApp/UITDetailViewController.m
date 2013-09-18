@@ -53,6 +53,9 @@
 
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(.0, .0, 100.0, 100.0) cornerRadius:10.0];
     self.drawView.image = [path imageWithStrokeColor:[UIColor greenColor]];
+
+    CGRect frame = [UIApplication sharedApplication].statusBarFrameForCurrentOrientation;
+    UILog(1, @"%.0f %.0f %.0f %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

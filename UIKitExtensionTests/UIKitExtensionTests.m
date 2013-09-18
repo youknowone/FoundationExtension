@@ -112,8 +112,8 @@
 //    STAssertEquals(view.tag, 42, @"");
 //}
 
-- (void)testUILog {
-    UILog(1, @"test");
-}
+//- (void)testUILog {
+//    UILog(1, @"test");
+//}
 
 @end

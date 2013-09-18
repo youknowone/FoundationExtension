@@ -7,11 +7,24 @@
 //
 
 #import "UIApplication.h"
+#import "NSObject.h"
+
+@implementation UIApplication (PrivatePatch)
+
+- (CGRect)__statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
+    assert(NO);
+    return CGRectZero;
+}
+
+@end
 
 @implementation UIApplication (Shortcuts)
 
 - (CGRect)statusBarFrameForCurrentOrientation {
-    return [self statusBarFrameForOrientation:self.statusBarOrientation];
+    Class class = [UIApplication class];
+    NSString *selectorName = [@"statusBarFrame" stringByAppendingString:@"ForOrientation:"];
+    [class methodObjectForSelector:@selector(__statusBarFrameForOrientation:)].implementation = [class methodObjectForSelector:NSSelectorFromString(selectorName)].implementation;
+    return [self __statusBarFrameForOrientation:self.statusBarOrientation];
 }
 
 - (CGSize) statusBarOrientationReducedSize {

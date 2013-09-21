@@ -106,6 +106,16 @@
     STAssertEquals(color.components.alpha, 0.375f, @"");
 }
 
+- (id)valueMethod {
+    return self;
+}
+
+- (void)testClassMethodPatch {
+    SEL selector = NSSelectorFromString(@"classValueMethod");
+    [self.class addClassMethodForSelector:selector fromMethod:[self.class methodObjectForSelector:@selector(valueMethod)]];
+    STAssertEquals((id)self.class, (id)[self.class performSelector:selector], @"");
+}
+
 //- (void)testViewHolder {
 //    UIView *view = [[[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil] autorelease];
 //    STAssertNotNil(view, @"");

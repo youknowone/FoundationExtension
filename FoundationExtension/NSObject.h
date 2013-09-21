@@ -262,6 +262,20 @@
  */
 + (void)addMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
 
+/*!
+ *  @brief Adds a new class method to a class with a given name and template method.
+ *  @see [class_addMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
+ */
++ (void)addClassMethodForSelector:(SEL)selector fromMethod:(NSAMethod *)method;
+
+/*!
+ *  @brief Adds a new class method to a class with a given name and implementation.
+ *  @see [class_addMethod][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
+ */
++ (void)addClassMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
+
 @end
 
 

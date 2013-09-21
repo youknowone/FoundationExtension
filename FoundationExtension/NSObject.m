@@ -118,6 +118,15 @@
     class_addMethod(self, selector, implementation, implementationTypes.UTF8String);
 }
 
++ (void)addClassMethodForSelector:(SEL)selector fromMethod:(NSAMethod *)method {
+    [self addClassMethodForSelector:selector implementation:method.implementation types:method.typeEncoding];
+}
+
++ (void)addClassMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes {
+    Class class = object_getClass(self.class);
+    class_addMethod(class, selector, implementation, implementationTypes.UTF8String);
+}
+
 @end
 
 

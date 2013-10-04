@@ -97,13 +97,13 @@
 
 /*!
  *  @brief Initialize with html color code
- *  @details This accept formats as like "#fff" or "#0f0f0f" for formal colors. "#dddf" or "#fdfdfdff" for alpha value. If "#" prefix doesn't exist, select constant from HTML color name table. "orange" for css and "transperent" for clear color.
+ *  @details This method accepts formats like "#fff" or "#0f0f0f" for formal colors. "#dddf" or "#fdfdfdff" for alpha value. If "#" prefix doesn't exist, select constant from HTML color name table. "orange" for css and "transperent" for clear color.
  */
 - (UIColor *)initWithHTMLExpression:(NSString *)code;
 
 /*!
  *  @brief Creates and returns color object with html color code
- *  @details This accept formats as like "#fff" or "#0f0f0f" for formal colors. "#dddf" or "#fdfdfdff" for alpha value. If "#" prefix doesn't exist, select constant from HTML color name table. "orange" for css and "transperent" for clear color.
+ *  @details This method accepts formats like "#fff" or "#0f0f0f" for formal colors. "#dddf" or "#fdfdfdff" for alpha value. If "#" prefix doesn't exist, select constant from HTML color name table. "orange" for css and "transperent" for clear color.
  */
 + (UIColor *)colorWithHTMLExpression:(NSString *)code;
 

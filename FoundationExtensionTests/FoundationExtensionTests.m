@@ -339,6 +339,9 @@ NSAPropertyCopySetter(setObj3, @"obj3")
         NSArray *a = @[@1, @2, @3, @4];
         NSArray *r = [a.reverseObjectEnumerator arrayByFilteringOperator:^BOOL(id obj) { return YES; }];
         STAssertEqualObjects(r, (@[@4, @3, @2, @1]), @"");
+
+        NSNumber *f = [a firstObjectByFilteringOperator:^BOOL(id obj) { return [obj integerValue] == 1; }];
+        STAssertEqualObjects(f, @1, @"");
     }
 
     {

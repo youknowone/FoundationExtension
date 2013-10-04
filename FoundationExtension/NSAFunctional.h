@@ -103,6 +103,7 @@ FOUNDATION_EXTERN void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProce
  */
 FOUNDATION_EXTERN void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithIndex procedure);
 
+
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items.
  *  @param enumerator Input object source enumerator.
@@ -118,6 +119,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAMap(id<NSFastEnumeration> enumerator, NSAObje
  *  @return An enumerator with every mapper applied result.
  */
 FOUNDATION_EXTERN NSEnumerator *NSAMapWithIndex(id<NSFastEnumeration> enumerator, NSAObjectUnaryOperatorWithIndex mapper);
+
 
 /*!
  *  @brief Applies mapper to every item of enumerator and returns an enumerator with every result items except nil.
@@ -139,6 +141,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObject
  */
 FOUNDATION_EXTERN NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper);
 
+
 /*!
  *  @brief Applies filter to every item of given enumerator and returns an enumerator with the filter result is YES.
  *  @param enumerator Input object source enumerator.
@@ -155,6 +158,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPic
  */
 FOUNDATION_EXTERN NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSAObjectPickerWithIndex filter);
 
+
 /*!
  *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value. Uses first and second value as seed.
  *  @details Given enumerator must enumerate more than a object.
@@ -164,6 +168,7 @@ FOUNDATION_EXTERN NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSA
  *  @see NSAReduceWithInitialObject
  */
 FOUNDATION_EXTERN id NSAReduce(NSEnumerator *enumerator, NSAObjectBinaryOperator operation);
+
 /*!
  *  @brief Applies operation of two arguments cumulatively to the items of enumerator, from left to right, so as to reduce the iterable to a single value.
  *  @details Given enumerator must enumerate more than a object.
@@ -245,12 +250,20 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAReduce
  */
 - (id)reduce:(NSAObjectBinaryOperator)reduce;
+
 /*!
  *  @brief Reduces objects and returns the result.
  *  @details Shallow wrapper of @link NSAReduceWithInitialObject @endlink
  *  @see NSAReduceWithInitialObject
  */
 - (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject;
+
+/*!
+ *  @brief Filters objects and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter;
 
 @end
 
@@ -332,6 +345,20 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  */
 - (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject;
 
+/*!
+ *  @brief Filters objects and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects with index and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter;
+
 @end
 
 
@@ -391,52 +418,73 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 /*!
  *  @brief Apply procedure with key to objects.
- *  @details Works as like NSAApply is adjusted to values of dictionary.
+ *  @details Works like NSAApply is adjusted to values of dictionary.
  *  @see NSAApply
  */
 - (void)applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure;
 
 /*!
  *  @brief Maps mapper to objects and returns the result as dictionary.
- *  @details Works as like @link NSAMap @endlink
+ *  @details Works like @link NSAMap @endlink
  *  @see NSAMap
  */
 - (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper;
 
 /*!
  *  @brief Maps mapper with key to objects and returns the result as array.
- *  @details Works as like @link NSAMapWithIndex @endlink
+ *  @details Works like @link NSAMapWithIndex @endlink
  *  @see NSAMap
  */
 - (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
 
 /*!
  *  @brief Maps mapper to objects and filters nil result and returns the result as array.
- *  @details Works as like @link NSAMapFilter @endlink
+ *  @details Works like @link NSAMapFilter @endlink
  *  @see NSAMapFilter
  */
 - (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper;
 
 /*!
  *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
- *  @details Works as like @link NSAMapFilterWithIndex @endlink
+ *  @details Works like @link NSAMapFilterWithIndex @endlink
  *  @see NSAMapFilter
  */
 - (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper;
 
 /*!
  *  @brief Filters objects and returns result as array.
- *  @details Works as like @link NSAFilter @endlink
+ *  @details Works like @link NSAFilter @endlink
  *  @see NSAFilter
  */
 - (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter;
 
 /*!
  *  @brief Filters objects with key and returns result as array.
- *  @details Works as like @link NSAFilterWithIndex @endlink
+ *  @details Works like @link NSAFilterWithIndex @endlink
  *  @see NSAFilter
  */
 - (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter;
+
+/*!
+ *  @brief Filters objects and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilter @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects with key and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilterWithInde @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter;
+
+/*!
+ *  @brief Filters objects with key and returns the first key of result.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (id)firstKeyByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter;
 
 @end
 
@@ -557,6 +605,13 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAFilter
  */
 - (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter;
+
+/*!
+ *  @brief Filters objects and returns the first object of result.
+ *  @details Shallow wrapper of @link NSAFilterWithIndex @endlink
+ *  @see NSAFilter
+ */
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter;
 
 @end
 

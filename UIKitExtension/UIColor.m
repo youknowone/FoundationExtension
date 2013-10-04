@@ -68,47 +68,47 @@
 
 /*!
  *  @brief Initialize with html color code
- *  @details This accept formats as like "#fff".
+ *  @details This method accepts formats like "#fff".
  */
 - (UIColor *)initWithHTMLHexExpression16:(NSString *)code;
 /*!
  *  @brief Initialize with html color code
- *  @details This accept formats as like "#0f0f0f"
+ *  @details This method accepts formats like "#0f0f0f"
  */
 - (UIColor *)initWithHTMLHexExpression32:(NSString *)code;
 /*!
  *  @brief Initialize with html color code
- *  @details This accept formats as like "#dddf". Last character is alpha channel.
+ *  @details This method accepts formats like "#dddf". Last character represents alpha channel.
  */
 - (UIColor *)initWithHTMLHexExpression16a:(NSString *)code;
 /*!
  *  @brief Initialize with html color code
- *  @details This accept formats as like "#ddddddff". Last 2 characters are alpha channel.
+ *  @details This method accepts formats like "#ddddddff". Last 2 characters represent alpha channel.
  */
 - (UIColor *)initWithHTMLHexExpression32a:(NSString *)code;
 /*!
- *  @brief Creates and return color object with html color code
- *  @details This accept formats as like "#fff".
+ *  @brief Creates and returns color object with html color code
+ *  @details This method accepts formats like "#fff".
  */
 + (UIColor *)colorWithHTMLHexExpression16:(NSString *)code;
 /*!
- *  @brief Creates and return color object with html color code
- *  @details This accept formats as like "#0f0f0f".
+ *  @brief Creates and returns color object with html color code
+ *  @details This method accepts formats like "#0f0f0f".
  */
 + (UIColor *)colorWithHTMLHexExpression32:(NSString *)code;
 /*!
- *  @brief Creates and return color object with html color code
- *  @details This accept formats as like "#dddf". Last character is alpha channel.
+ *  @brief Creates and returns color object with html color code
+ *  @details This method accepts formats like "#dddf". Last character represents alpha channel.
  */
 + (UIColor *)colorWithHTMLHexExpression16a:(NSString *)code;
 /*!
- *  @brief Creates and return color object with html color code
- *  @details This accept formats as like "#ddddddff". Last 2 characters are alpha channel.
+ *  @brief Creates and returns color object with html color code
+ *  @details This method accepts formats like "#ddddddff". Last 2 characters represent alpha channel.
  */
 + (UIColor *)colorWithHTMLHexExpression32a:(NSString *)code;
 
 /*!
- *  @brief Return constant color object for given color name.
+ *  @brief Returns constant color object for given color name.
  *  @details Available color names are standard HTML color names, "orange" for css and "transperent" for clear color.
  */
 + (UIColor *)colorWithHTMLColorName:(NSString *)name;

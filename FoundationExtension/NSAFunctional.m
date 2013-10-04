@@ -360,6 +360,15 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return NSAReduceWithInitialObject(self, reduce, initialObject);
 }
 
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+    for (id obj in self) {
+        if (filter(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
 @end
 
 
@@ -403,6 +412,26 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
     return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
+}
+
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+    for (id obj in self) {
+        if (filter(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
+- (id)firstObjectByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+    NSInteger count = 0;
+    for (id obj in self) {
+        if (filter(obj, count)) {
+            return obj;
+        }
+        count += 1;
+    }
+    return nil;
 }
 
 @end
@@ -599,6 +628,35 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+    for (id obj in self.objectEnumerator) {
+        if (filter(obj)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
+- (id)firstObjectByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+    for (id key in self.keyEnumerator) {
+        id obj = self[key];
+        if (filter(obj, key)) {
+            return obj;
+        }
+    }
+    return nil;
+}
+
+- (id)firstKeyByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+    for (id key in self.keyEnumerator) {
+        id obj = self[key];
+        if (filter(obj, key)) {
+            return key;
+        }
+    }
+    return nil;
+}
+
 @end
 
 
@@ -713,6 +771,15 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter {
     return [NSSet setWithArray:[self arrayByFilteringOperator:filter]];
+}
+
+- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+    for (id obj in self) {
+        if (filter(obj)) {
+            return obj;
+        }
+    }
+    return nil;
 }
 
 @end

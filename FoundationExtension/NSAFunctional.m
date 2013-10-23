@@ -320,47 +320,47 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSEnumerator (Functional)
 
-- (void)applyProcedure:(NSAObjectProcedure)procedure {
+- (void)fe_applyProcedure:(NSAObjectProcedure)procedure {
     NSAApply(self, procedure);
 }
 
-- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+- (void)fe_applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
     NSAApplyWithIndex(self, procedure);
 }
 
-- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapWithIndex(self, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMapFilter(self, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapFilterWithIndex(self, mapper).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+- (NSArray *)fe_arrayByFilteringOperator:(NSAObjectPicker)filter {
     return NSAFilter(self, filter).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+- (NSArray *)fe_arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
     return NSAFilterWithIndex(self, filter).allObjects;
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce {
     return NSAReduce(self, reduce);
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
     return NSAReduceWithInitialObject(self, reduce, initialObject);
 }
 
-- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+- (id)fe_firstObjectByFilteringOperator:(NSAObjectPicker)filter {
     for (id obj in self) {
         if (filter(obj)) {
             return obj;
@@ -374,47 +374,47 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSArray (Functional)
 
-- (void)applyProcedure:(NSAObjectProcedure)procedure {
+- (void)fe_applyProcedure:(NSAObjectProcedure)procedure {
     NSAApply(self, procedure);
 }
 
-- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+- (void)fe_applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
     NSAApplyWithIndex(self, procedure);
 }
 
-- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapWithIndex(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+- (NSArray *)fe_arrayByFilteringOperator:(NSAObjectPicker)filter {
     return NSAFilter(self.objectEnumerator, filter).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+- (NSArray *)fe_arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
     return NSAFilterWithIndex(self.objectEnumerator, filter).allObjects;
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce {
     return NSAReduce(self.objectEnumerator, reduce);
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
     return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
 }
 
-- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+- (id)fe_firstObjectByFilteringOperator:(NSAObjectPicker)filter {
     for (id obj in self) {
         if (filter(obj)) {
             return obj;
@@ -423,7 +423,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return nil;
 }
 
-- (id)firstObjectByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+- (id)fe_firstObjectByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
     NSInteger count = 0;
     for (id obj in self) {
         if (filter(obj, count)) {
@@ -439,21 +439,21 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSMutableArray (Functional)
 
-- (void)map:(NSAObjectUnaryOperator)mapper {
+- (void)fe_map:(NSAObjectUnaryOperator)mapper {
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
         self[i] = mapper(self[i]);
     }
 }
 
-- (void)mapWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (void)fe_mapWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
         self[i] = mapper(self[i], i);
     }
 }
 
-- (void)mapFilter:(NSAObjectUnaryOperator)mapper {
+- (void)fe_mapFilter:(NSAObjectUnaryOperator)mapper {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
@@ -468,7 +468,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     [removes release];
 }
 
-- (void)mapFilterWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (void)fe_mapFilterWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
@@ -483,7 +483,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     [removes release];
 }
 
-- (void)filter:(NSAObjectPicker)filter {
+- (void)fe_filter:(NSAObjectPicker)filter {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
@@ -496,7 +496,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     [removes release];
 }
 
-- (void)filterWithIndex:(NSAObjectPickerWithIndex)filter {
+- (void)fe_filterWithIndex:(NSAObjectPickerWithIndex)filter {
     NSMutableIndexSet *removes = [[NSMutableIndexSet alloc] init];
     NSUInteger count = self.count;
     for (NSUInteger i = 0; i < count; i++) {
@@ -514,13 +514,13 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSDictionary (Functional)
 
-- (void)applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure {
+- (void)fe_applyProcedureWithKey:(NSAObjectProcedureWithKey)procedure {
     for (id key in self.keyEnumerator) {
         procedure(self[key], key);
     }
 }
 
-- (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper {
+- (NSDictionary *)fe_dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -536,7 +536,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+- (NSDictionary *)fe_dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -552,7 +552,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+- (NSDictionary *)fe_dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -571,7 +571,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+- (NSDictionary *)fe_dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -590,7 +590,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter {
+- (NSDictionary *)fe_dictionaryByFilteringOperator:(NSAObjectPicker)filter {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -609,7 +609,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+- (NSDictionary *)fe_dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
     NSUInteger length = self.count;
     id *objects = malloc(sizeof(id) * length);
     id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
@@ -628,7 +628,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return result;
 }
 
-- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+- (id)fe_firstObjectByFilteringOperator:(NSAObjectPicker)filter {
     for (id obj in self.objectEnumerator) {
         if (filter(obj)) {
             return obj;
@@ -637,7 +637,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return nil;
 }
 
-- (id)firstObjectByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+- (id)fe_firstObjectByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
     for (id key in self.keyEnumerator) {
         id obj = self[key];
         if (filter(obj, key)) {
@@ -647,7 +647,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     return nil;
 }
 
-- (id)firstKeyByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
+- (id)fe_firstKeyByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
     for (id key in self.keyEnumerator) {
         id obj = self[key];
         if (filter(obj, key)) {
@@ -662,21 +662,21 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSMutableDictionary (Functional)
 
-- (void)map:(NSAObjectUnaryOperator)mapper {
+- (void)fe_map:(NSAObjectUnaryOperator)mapper {
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key]);
         self[key] = object;
     }
 }
 
-- (void)mapWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+- (void)fe_mapWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key], key);
         self[key] = object;
     }
 }
 
-- (void)mapFilter:(NSAObjectUnaryOperator)mapper {
+- (void)fe_mapFilter:(NSAObjectUnaryOperator)mapper {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key]);
@@ -691,7 +691,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     }
 }
 
-- (void)mapFilterWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
+- (void)fe_mapFilterWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key], key);
@@ -706,7 +706,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     }
 }
 
-- (void)filter:(NSAObjectPicker)filter {
+- (void)fe_filter:(NSAObjectPicker)filter {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
         BOOL filtered = filter(self[key]);
@@ -719,7 +719,7 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
     }
 }
 
-- (void)filterWithKey:(NSAObjectPickerWithKey)filter {
+- (void)fe_filterWithKey:(NSAObjectPickerWithKey)filter {
     NSMutableArray *candidates = [NSMutableArray array];
     for (id key in self.keyEnumerator) {
         BOOL filtered = filter(self[key], key);
@@ -737,43 +737,43 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSSet (Functional)
 
-- (void)applyProcedure:(NSAObjectProcedure)procedure {
+- (void)fe_applyProcedure:(NSAObjectProcedure)procedure {
     NSAApply(self, procedure);
 }
 
-- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+- (NSArray *)fe_arrayByFilteringOperator:(NSAObjectPicker)filter {
     return NSAFilter(self.objectEnumerator, filter).allObjects;
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce {
     return NSAReduce(self.objectEnumerator, reduce);
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
     return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
 }
 
-- (NSSet *)setByMappingOperator:(NSAObjectUnaryOperator)mapper {
-    return [NSSet setWithArray:[self arrayByMappingOperator:mapper]];
+- (NSSet *)fe_setByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self fe_arrayByMappingOperator:mapper]];
 }
 
-- (NSSet *)setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
-    return [NSSet setWithArray:[self arrayByMapFilteringOperator:mapper]];
+- (NSSet *)fe_setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self fe_arrayByMapFilteringOperator:mapper]];
 }
 
-- (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter {
-    return [NSSet setWithArray:[self arrayByFilteringOperator:filter]];
+- (NSSet *)fe_setByFilteringOperator:(NSAObjectPicker)filter {
+    return [NSSet setWithArray:[self fe_arrayByFilteringOperator:filter]];
 }
 
-- (id)firstObjectByFilteringOperator:(NSAObjectPicker)filter {
+- (id)fe_firstObjectByFilteringOperator:(NSAObjectPicker)filter {
     for (id obj in self) {
         if (filter(obj)) {
             return obj;
@@ -787,67 +787,67 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 @implementation NSOrderedSet (Functional)
 
-- (void)applyProcedure:(NSAObjectProcedure)procedure {
+- (void)fe_applyProcedure:(NSAObjectProcedure)procedure {
     NSAApply(self, procedure);
 }
 
-- (void)applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
+- (void)fe_applyProcedureWithIndex:(NSAObjectProcedureWithIndex)procedure {
     NSAApplyWithIndex(self, procedure);
 }
 
-- (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMappingOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMap(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapWithIndex(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     return NSAMapFilter(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSArray *)fe_arrayByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter {
+- (NSArray *)fe_arrayByFilteringOperator:(NSAObjectPicker)filter {
     return NSAFilter(self.objectEnumerator, filter).allObjects;
 }
 
-- (NSArray *)arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+- (NSArray *)fe_arrayByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
     return NSAFilterWithIndex(self.objectEnumerator, filter).allObjects;
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce {
     return NSAReduce(self.objectEnumerator, reduce);
 }
 
-- (id)reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
+- (id)fe_reduce:(NSAObjectBinaryOperator)reduce initialObject:(id)initialObject {
     return NSAReduceWithInitialObject(self.objectEnumerator, reduce, initialObject);
 }
 
-- (NSSet *)setByMappingOperator:(NSAObjectUnaryOperator)mapper {
-    return [NSSet setWithArray:[self arrayByMappingOperator:mapper]];
+- (NSSet *)fe_setByMappingOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self fe_arrayByMappingOperator:mapper]];
 }
 
-- (NSSet *)setByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSSet *)fe_setByMappingOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return [NSSet setWithArray:NSAMapWithIndex(self.objectEnumerator, mapper).allObjects];
 }
 
-- (NSSet *)setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
-    return [NSSet setWithArray:[self arrayByMapFilteringOperator:mapper]];
+- (NSSet *)fe_setByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
+    return [NSSet setWithArray:[self fe_arrayByMapFilteringOperator:mapper]];
 }
 
-- (NSSet *)setByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (NSSet *)fe_setByMapFilteringOperatorWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
     return [NSSet setWithArray:NSAMapFilterWithIndex(self.objectEnumerator, mapper).allObjects];
 }
 
-- (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter {
-    return [NSSet setWithArray:[self arrayByFilteringOperator:filter]];
+- (NSSet *)fe_setByFilteringOperator:(NSAObjectPicker)filter {
+    return [NSSet setWithArray:[self fe_arrayByFilteringOperator:filter]];
 }
 
-- (NSSet *)setByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
+- (NSSet *)fe_setByFilteringOperatorWithIndex:(NSAObjectPickerWithIndex)filter {
     return [NSSet setWithArray:NSAFilterWithIndex(self.objectEnumerator, filter).allObjects];
 }
 

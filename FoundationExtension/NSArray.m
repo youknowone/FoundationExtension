@@ -17,7 +17,7 @@
 }
 
 - (BOOL)hasIndex:(NSUInteger)index {
-    return index <r self.count;
+    return index < self.count;
 }
 
 @end

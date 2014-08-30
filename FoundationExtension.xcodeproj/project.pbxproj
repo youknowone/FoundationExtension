@@ -251,7 +251,7 @@
 		38FCECCF165904AE00D3D0F0 /* NSAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FCECCE165904AE00D3D0F0 /* NSAAppDelegate.m */; };
 		38FCECD2165904AF00D3D0F0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FCECD0165904AF00D3D0F0 /* MainMenu.xib */; };
 		38FCECD8165908F800D3D0F0 /* CocoaExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; };
-		38FCECDA1659092100D3D0F0 /* CocoaExtension.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; };
+		38FCECDA1659092100D3D0F0 /* CocoaExtension.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		38FCECDD16590A1100D3D0F0 /* NSTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FCECDB16590A1100D3D0F0 /* NSTextView.h */; };
 		38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FCECDC16590A1100D3D0F0 /* NSTextView.m */; };
 		38FD75AF17E0759700153727 /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; };
@@ -1130,7 +1130,7 @@
 			name = CocoaExtensionTests;
 			productName = CocoaExtensionTests;
 			productReference = 3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		38730440133732DE004C8E89 /* UIKitExtensionTests */ = {
 			isa = PBXNativeTarget;
@@ -1149,7 +1149,7 @@
 			name = UIKitExtensionTests;
 			productName = UIKitExtensionTests;
 			productReference = 38730441133732DE004C8E89 /* UIKitExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		38C7A9711495181800381910 /* FoundationExtension */ = {
 			isa = PBXNativeTarget;
@@ -1186,7 +1186,7 @@
 			name = FoundationExtensionTests;
 			productName = FoundationExtensionTests;
 			productReference = 38C7A9881495181800381910 /* FoundationExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		38C98B52161AE30300C4A389 /* UIKitExtension */ = {
 			isa = PBXNativeTarget;
@@ -1248,7 +1248,7 @@
 		383764CB13373154007072FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = youknowone.org;
 			};
 			buildConfigurationList = 383764CE13373154007072FD /* Build configuration list for PBXProject "FoundationExtension" */;

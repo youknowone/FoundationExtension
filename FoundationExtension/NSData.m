@@ -18,7 +18,10 @@
     }
 
     // support os < osx10.6 or ios4.0
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Wdeprecated-declarations"
     return [NSPropertyListSerialization propertyListFromData:self mutabilityOption:NSPropertyListImmutable format:format errorDescription:NULL];
+    #pragma clang diagnostic pop
 }
 
 const char NSDataHexadecimalEncodingTable[16] = "0123456789abcdef";

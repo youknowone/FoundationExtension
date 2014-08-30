@@ -19,7 +19,7 @@
     self = [super initWithFrame:frame];
     if (self != nil) {
         self.backgroundColor = [UIColor blackColor];
-        self.alpha = 0.7;
+        self.alpha = 0.7f;
         self.contentMode = UIViewContentModeScaleToFill;
     }
     return self;

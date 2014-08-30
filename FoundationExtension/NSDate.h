@@ -20,6 +20,6 @@
 @interface NSDate (Shortcuts)
 
 //! @brief Get components from current Calendar.
-@property(readonly) NSDateComponents *components;
+@property(readonly) NSDateComponents *components __deprecated;
 
 @end

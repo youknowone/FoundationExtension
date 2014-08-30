@@ -106,7 +106,7 @@
     if (count == 0) {
         return self[0]; // raise index error
     }
-    return self[arc4random_uniform(count)];
+    return self[arc4random_uniform((u_int32_t)count)];
 }
 
 - (NSArray *)randomObjectsOfCount:(NSUInteger)theCount {

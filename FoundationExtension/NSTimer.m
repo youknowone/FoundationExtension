@@ -37,7 +37,7 @@
 
 static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
     id<NSTimerDelegate> delegate = info;
-    [delegate timerDidFire:(NSTimer *)timer];
+    [delegate timerHasFired:(NSTimer *)timer];
     if (![delegate timerShouldRepeat:(NSTimer *)timer]) {
         CFRunLoopTimerInvalidate(timer);
     };

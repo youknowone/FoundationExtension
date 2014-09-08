@@ -17,7 +17,7 @@
 
 @implementation UITMasterViewController
 
-- (void)timerDidFire:(NSTimer *)timer {
+- (void)timerHasFired:(NSTimer *)timer {
     self.title = [[NSDate date] description];
 }
 

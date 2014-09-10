@@ -6,10 +6,10 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 
-@interface FoundationExtensionTests : SenTestCase {
+@interface FoundationExtensionTests : XCTestCase {
 @private
 
 }

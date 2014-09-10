@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 //  Test how Foundation implementation works
 
-@interface FoundationTests : SenTestCase
+@interface FoundationTests : XCTestCase
 
 @end

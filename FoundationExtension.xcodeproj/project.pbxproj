@@ -52,7 +52,6 @@
 		38505CBE164647910059773B /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
 		38505CBF164647910059773B /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
 		3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
-		3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
 		3855B041163CF2B1005584CD /* CocoaExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3855B02B163CF2B1005584CD /* CocoaExtension.framework */; };
 		3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B049163CF2B1005584CD /* CocoaExtensionTests.m */; };
@@ -175,7 +174,6 @@
 		38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
 		38BC0E63173EDD1900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
 		38BC0E64173EDD1A00F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
-		38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9891495181800381910 /* SenTestingKit.framework */; };
 		38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		38C98B1D161ADAD700C4A389 /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -470,8 +468,7 @@
 		38C7A9771495181800381910 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		38C7A9781495181800381910 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38C7A97B1495181800381910 /* FoundationExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoundationExtension-Info.plist"; sourceTree = "<group>"; };
-		38C7A9881495181800381910 /* FoundationExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38C7A9891495181800381910 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		38C7A9881495181800381910 /* FoundationExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C7A9D014951D2C00381910 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38C98B53161AE30300C4A389 /* libUIKitExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUIKitExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C98B57161AE30300C4A389 /* UIKitExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtension-Prefix.pch"; sourceTree = "<group>"; };
@@ -547,7 +544,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3855B03D163CF2B1005584CD /* SenTestingKit.framework in Frameworks */,
 				3855B03E163CF2B1005584CD /* Cocoa.framework in Frameworks */,
 				3855B041163CF2B1005584CD /* CocoaExtension.framework in Frameworks */,
 			);
@@ -577,7 +573,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				382302CB14E8123200EA6EF2 /* Foundation.framework in Frameworks */,
-				38C7A98A1495181800381910 /* SenTestingKit.framework in Frameworks */,
 				38C7A98E1495181800381910 /* FoundationExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +635,7 @@
 			children = (
 				38730441133732DE004C8E89 /* UIKitExtensionTests.octest */,
 				38C7A9721495181800381910 /* FoundationExtension.framework */,
-				38C7A9881495181800381910 /* FoundationExtensionTests.octest */,
+				38C7A9881495181800381910 /* FoundationExtensionTests.xctest */,
 				38C98B53161AE30300C4A389 /* libUIKitExtension.a */,
 				38F068161636F8C8002723AB /* UIKitExtensionTestApp.app */,
 				3855B02B163CF2B1005584CD /* CocoaExtension.framework */,
@@ -657,7 +652,6 @@
 				383764E213373155007072FD /* UIKit.framework */,
 				383764E513373155007072FD /* CoreGraphics.framework */,
 				38C7A9D014951D2C00381910 /* Foundation.framework */,
-				38C7A9891495181800381910 /* SenTestingKit.framework */,
 				38660A24161AD86000C5CE06 /* Cocoa.framework */,
 				38C7A9751495181800381910 /* Other Frameworks */,
 			);
@@ -1185,8 +1179,8 @@
 			);
 			name = FoundationExtensionTests;
 			productName = FoundationExtensionTests;
-			productReference = 38C7A9881495181800381910 /* FoundationExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 38C7A9881495181800381910 /* FoundationExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		38C98B52161AE30300C4A389 /* UIKitExtension */ = {
 			isa = PBXNativeTarget;
@@ -1923,7 +1917,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
@@ -1937,7 +1931,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = FoundationExtensionTests;
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1947,7 +1940,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
@@ -1956,7 +1949,6 @@
 				INFOPLIST_FILE = "FoundationExtensionTests/FoundationExtensionTests-Info.plist";
 				PRODUCT_NAME = FoundationExtensionTests;
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

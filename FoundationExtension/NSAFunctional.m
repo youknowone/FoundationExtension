@@ -91,7 +91,9 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
         state->mutationsPtr = &state->extra[0];
     }
 
+    NSUInteger lastState = state->state;
     NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:stackbuf count:len];
+    state->state = lastState;
     for (NSUInteger i = 0; i < count; i++) {
         stackbuf[i] = self->_mapper(stackbuf[i], state->state);
         state->state += 1;

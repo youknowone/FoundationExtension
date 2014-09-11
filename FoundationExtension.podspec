@@ -45,6 +45,7 @@ Pod::Spec.new do |s|
     ss.source_files = "UIKitExtension"
     ss.public_header_files = "UIKitExtension/*.h"
     ss.header_dir = "UIKitExtension"
+    ss.frameworks = "UIKit", "QuartzCore"
     ss.prefix_header_contents = '
 #include <cdebug/debug.h>
 #include <UIKitExtension/UIKitExtension.h>

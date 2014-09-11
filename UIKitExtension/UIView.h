@@ -82,4 +82,20 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
 
 @end
 
+/*!
+ *  @brief See UIView layer for more informations.
+ */
+@interface UIView (CALayer)
+
+@property(assign) CGFloat borderWidth;
+@property(copy) UIColor *borderColor;
+@property(assign) CGFloat cornerRadius;
+
+@property(retain) UIColor *shadowColor;
+@property(assign) CGSize shadowOffset;
+@property(assign) float shadowAlpha;
+@property(assign) CGFloat shadowRadius;
+
+@end
+
 #endif

@@ -95,6 +95,15 @@
 		3855B078163D4200005584CD /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
 		3855B079163D4200005584CD /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3855B07A163D4200005584CD /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
+		3865D8F619C6AEB400B4DC72 /* ABMultiValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865D8F219C6AE3E00B4DC72 /* ABMultiValue.m */; };
+		3865D8F719C6AEB800B4DC72 /* ABRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865D8EE19C6AD8700B4DC72 /* ABRecord.m */; };
+		3865D8F819C6AEBB00B4DC72 /* ABAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865D8EA19C6AD1E00B4DC72 /* ABAddressBook.m */; };
+		3865D8FB19C6B00D00B4DC72 /* ABProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 3865D8FA19C6B00D00B4DC72 /* ABProperty.m */; };
+		3865D8FF19C6B46600B4DC72 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D8FE19C6B46600B4DC72 /* AddressBook.framework */; };
+		3865D90019C6B47900B4DC72 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D8FE19C6B46600B4DC72 /* AddressBook.framework */; };
+		3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90119C6B48100B4DC72 /* MediaPlayer.framework */; };
+		3865D90319C6B5C500B4DC72 /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
+		3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90419C6B5D100B4DC72 /* UIKit.framework */; };
 		3868F3B8162885D300C31163 /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F3BB162885D300C31163 /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
 		3868F3BC162885D300C31163 /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
@@ -117,7 +126,6 @@
 		3868F7DE162D9CDE00C31163 /* UIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7D5162D9CDE00C31163 /* UIWebView.m */; };
 		3868F8BF16343F0700C31163 /* FoundationExtensionCppTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3868F8C216343F6000C31163 /* FoundationExtensionCppTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */; };
-		38730442133732DE004C8E89 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E213373155007072FD /* UIKit.framework */; };
 		38730443133732DE004C8E89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
 		38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764E513373155007072FD /* CoreGraphics.framework */; };
 		38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 3873044F133732DE004C8E89 /* UIKitExtensionTests.h */; };
@@ -143,7 +151,7 @@
 		388D1C1D176E22FD0061527C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C18176E22FD0061527C /* 1.png */; };
 		388D1C1E176E22FD0061527C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C19176E22FD0061527C /* 2.png */; };
 		388D1C1F176E22FD0061527C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C1A176E22FD0061527C /* 4.png */; };
-		38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C98B53161AE30300C4A389 /* libUIKitExtension.a */; };
+		388D7D7C19C456800006B243 /* MPMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 381512D617C3A3AA000E06D0 /* MPMediaItem.m */; };
 		38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
 		38A90FDE163591FC001DB09E /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
 		38A90FDF163591FF001DB09E /* NSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A60161AD9AE00C5CE06 /* NSTimer.m */; };
@@ -372,12 +380,24 @@
 		3855B02F163CF2B1005584CD /* CocoaExtension-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtension-Info.plist"; sourceTree = "<group>"; };
 		3855B033163CF2B1005584CD /* CocoaExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CocoaExtension-Prefix.pch"; sourceTree = "<group>"; };
 		3855B034163CF2B1005584CD /* CocoaExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaExtension.h; sourceTree = "<group>"; };
-		3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3855B03C163CF2B1005584CD /* CocoaExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CocoaExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3855B044163CF2B1005584CD /* CocoaExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CocoaExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		3855B048163CF2B1005584CD /* CocoaExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaExtensionTests.h; sourceTree = "<group>"; };
 		3855B049163CF2B1005584CD /* CocoaExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CocoaExtensionTests.m; sourceTree = "<group>"; };
 		3855B051163D41F9005584CD /* FSEventStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSEventStream.h; sourceTree = "<group>"; };
 		3855B052163D41F9005584CD /* FSEventStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSEventStream.m; sourceTree = "<group>"; };
+		3865D8E219C5E26900B4DC72 /* AddressBookExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookExtension.h; sourceTree = "<group>"; };
+		3865D8E919C6AD1E00B4DC72 /* ABAddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABAddressBook.h; sourceTree = "<group>"; };
+		3865D8EA19C6AD1E00B4DC72 /* ABAddressBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABAddressBook.m; sourceTree = "<group>"; };
+		3865D8ED19C6AD8700B4DC72 /* ABRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRecord.h; sourceTree = "<group>"; };
+		3865D8EE19C6AD8700B4DC72 /* ABRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABRecord.m; sourceTree = "<group>"; };
+		3865D8F119C6AE3E00B4DC72 /* ABMultiValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABMultiValue.h; sourceTree = "<group>"; };
+		3865D8F219C6AE3E00B4DC72 /* ABMultiValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABMultiValue.m; sourceTree = "<group>"; };
+		3865D8F519C6AE8500B4DC72 /* ABProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABProperty.h; sourceTree = "<group>"; };
+		3865D8FA19C6B00D00B4DC72 /* ABProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABProperty.m; sourceTree = "<group>"; };
+		3865D8FE19C6B46600B4DC72 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
+		3865D90119C6B48100B4DC72 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
+		3865D90419C6B5D100B4DC72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		38660A24161AD86000C5CE06 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38660A41161AD8D700C5CE06 /* FoundationExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoundationExtension-Prefix.pch"; sourceTree = "<group>"; };
 		38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtension.h; sourceTree = "<group>"; };
@@ -432,7 +452,7 @@
 		3868F7D5162D9CDE00C31163 /* UIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebView.m; sourceTree = "<group>"; };
 		3868F8BD16343F0700C31163 /* FoundationExtensionCppTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundationExtensionCppTests.h; sourceTree = "<group>"; };
 		3868F8BE16343F0700C31163 /* FoundationExtensionCppTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FoundationExtensionCppTests.mm; sourceTree = "<group>"; };
-		38730441133732DE004C8E89 /* UIKitExtensionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitExtensionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38730441133732DE004C8E89 /* UIKitExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIKitExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873044A133732DE004C8E89 /* UIKitExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIKitExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		3873044E133732DE004C8E89 /* UIKitExtensionTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIKitExtensionTests-Prefix.pch"; sourceTree = "<group>"; };
 		3873044F133732DE004C8E89 /* UIKitExtensionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitExtensionTests.h; sourceTree = "<group>"; };
@@ -553,10 +573,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38730442133732DE004C8E89 /* UIKit.framework in Frameworks */,
+				3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */,
+				3865D90319C6B5C500B4DC72 /* libUIKitExtension.a in Frameworks */,
+				3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */,
+				3865D90019C6B47900B4DC72 /* AddressBook.framework in Frameworks */,
 				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
 				38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */,
-				38A90FDB16358FC9001DB09E /* libUIKitExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +603,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3865D8FF19C6B46600B4DC72 /* AddressBook.framework in Frameworks */,
 				38C98B54161AE30300C4A389 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +648,7 @@
 				3855B02D163CF2B1005584CD /* CocoaExtension */,
 				38C98B55161AE30300C4A389 /* UIKitExtension */,
 				381512D417C3A394000E06D0 /* MediaPlayerExtension */,
+				3865D8E119C5E26900B4DC72 /* AddressBookExtension */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
 			);
@@ -633,13 +657,13 @@
 		383764D513373154007072FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38730441133732DE004C8E89 /* UIKitExtensionTests.octest */,
+				38730441133732DE004C8E89 /* UIKitExtensionTests.xctest */,
 				38C7A9721495181800381910 /* FoundationExtension.framework */,
 				38C7A9881495181800381910 /* FoundationExtensionTests.xctest */,
 				38C98B53161AE30300C4A389 /* libUIKitExtension.a */,
 				38F068161636F8C8002723AB /* UIKitExtensionTestApp.app */,
 				3855B02B163CF2B1005584CD /* CocoaExtension.framework */,
-				3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */,
+				3855B03C163CF2B1005584CD /* CocoaExtensionTests.xctest */,
 				38FCECBE165904AE00D3D0F0 /* CocoaExtensionTestApp.app */,
 			);
 			name = Products;
@@ -648,6 +672,9 @@
 		383764D613373154007072FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3865D90419C6B5D100B4DC72 /* UIKit.framework */,
+				3865D90119C6B48100B4DC72 /* MediaPlayer.framework */,
+				3865D8FE19C6B46600B4DC72 /* AddressBook.framework */,
 				383764D713373154007072FD /* Foundation.framework */,
 				383764E213373155007072FD /* UIKit.framework */,
 				383764E513373155007072FD /* CoreGraphics.framework */,
@@ -739,6 +766,22 @@
 				3855B044163CF2B1005584CD /* CocoaExtensionTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3865D8E119C5E26900B4DC72 /* AddressBookExtension */ = {
+			isa = PBXGroup;
+			children = (
+				3865D8E219C5E26900B4DC72 /* AddressBookExtension.h */,
+				3865D8E919C6AD1E00B4DC72 /* ABAddressBook.h */,
+				3865D8EA19C6AD1E00B4DC72 /* ABAddressBook.m */,
+				3865D8ED19C6AD8700B4DC72 /* ABRecord.h */,
+				3865D8EE19C6AD8700B4DC72 /* ABRecord.m */,
+				3865D8F119C6AE3E00B4DC72 /* ABMultiValue.h */,
+				3865D8F219C6AE3E00B4DC72 /* ABMultiValue.m */,
+				3865D8F519C6AE8500B4DC72 /* ABProperty.h */,
+				3865D8FA19C6B00D00B4DC72 /* ABProperty.m */,
+			);
+			path = AddressBookExtension;
 			sourceTree = "<group>";
 		};
 		38660A3B161AD8D700C5CE06 /* FoundationExtension */ = {
@@ -1123,8 +1166,8 @@
 			);
 			name = CocoaExtensionTests;
 			productName = CocoaExtensionTests;
-			productReference = 3855B03C163CF2B1005584CD /* CocoaExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 3855B03C163CF2B1005584CD /* CocoaExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		38730440133732DE004C8E89 /* UIKitExtensionTests */ = {
 			isa = PBXNativeTarget;
@@ -1142,8 +1185,8 @@
 			);
 			name = UIKitExtensionTests;
 			productName = UIKitExtensionTests;
-			productReference = 38730441133732DE004C8E89 /* UIKitExtensionTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = 38730441133732DE004C8E89 /* UIKitExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		38C7A9711495181800381910 /* FoundationExtension */ = {
 			isa = PBXNativeTarget;
@@ -1514,12 +1557,14 @@
 				3868F7DE162D9CDE00C31163 /* UIWebView.m in Sources */,
 				38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */,
 				38A90FDE163591FC001DB09E /* NSURL.m in Sources */,
+				3865D8F619C6AEB400B4DC72 /* ABMultiValue.m in Sources */,
 				38A90FDF163591FF001DB09E /* NSTimer.m in Sources */,
 				38A90FE016359201001DB09E /* NSString.m in Sources */,
 				38A90FE116359202001DB09E /* NSPathUtilities.m in Sources */,
 				38A90FE216359208001DB09E /* NSNumberFormatter.m in Sources */,
 				38A90FE31635920B001DB09E /* NSDictionary.m in Sources */,
 				38A90FE41635920D001DB09E /* NSDate.m in Sources */,
+				3865D8FB19C6B00D00B4DC72 /* ABProperty.m in Sources */,
 				38A90FE51635920F001DB09E /* NSData.m in Sources */,
 				38A90FE616359211001DB09E /* NSBundle.m in Sources */,
 				38A90FE716359213001DB09E /* NSArray.m in Sources */,
@@ -1538,8 +1583,11 @@
 				387B1EB916EBD0F50059722B /* NSNumber.m in Sources */,
 				38412DB41706F9C70082ED4E /* UIView.m in Sources */,
 				38412DB71707112E0082ED4E /* UIAResultDisplayController.m in Sources */,
+				3865D8F719C6AEB800B4DC72 /* ABRecord.m in Sources */,
 				38485C55171008200001A99D /* UIActivityIndicatorView.m in Sources */,
+				388D7D7C19C456800006B243 /* MPMediaItem.m in Sources */,
 				38485C5D171089710001A99D /* UIAPreparedCellTableView.m in Sources */,
+				3865D8F819C6AEBB00B4DC72 /* ABAddressBook.m in Sources */,
 				381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */,
 				38BC0E58173E7D7B00F36497 /* UIASubviewTableView.m in Sources */,
 				38BC0E64173EDD1A00F36497 /* NSAOverridingMediator.m in Sources */,
@@ -1790,7 +1838,10 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
@@ -1802,7 +1853,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1812,14 +1862,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1829,20 +1881,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIKitExtension/UIKitExtension-Prefix.pch";
 				INFOPLIST_FILE = "UIKitExtensionTests/UIKitExtensionTests-Info.plist";
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-framework",
-					SenTestingKit,
-					"-force_load",
-					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/libUIKitExtension.a\"",
+					XCTest,
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -1852,20 +1903,19 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIKitExtension/UIKitExtension-Prefix.pch";
 				INFOPLIST_FILE = "UIKitExtensionTests/UIKitExtensionTests-Info.plist";
 				OTHER_LDFLAGS = (
+					"$(inherited)",
 					"-framework",
-					SenTestingKit,
-					"-force_load",
-					"\"$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/libUIKitExtension.a\"",
+					XCTest,
+					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

@@ -151,6 +151,7 @@
     while (pool.count) {
         [self addObject:[pool popRandomObject]];
     }
+    [pool release];
 }
 
 @end

@@ -8,9 +8,9 @@
 
 #import <CocoaExtension/CocoaExtension.h>
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface CocoaExtensionTests : SenTestCase<FSEventStreamDelegate> {
+@interface CocoaExtensionTests : XCTestCase<FSEventStreamDelegate> {
     NSURL *tmpURL;
     BOOL testFSEvents;
 }

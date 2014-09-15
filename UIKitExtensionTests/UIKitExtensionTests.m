@@ -9,6 +9,7 @@
 #import "UIKitExtensionTests.h"
 
 #import <UIKitExtension/UIKitExtension.h>
+#import <AddressBookExtension/ABAddressBook.h>
 
 @implementation UIKitExtensionTests
 
@@ -27,12 +28,12 @@
 }
 
 - (void)testUIColor {
-    STAssertNotNil([UIColor self], @""); // test initialize
+    XCTAssertNotNil([UIColor self], @""); // test initialize
 }
 
 - (void)testMACAddress {
     NSString *mac = [[UIDevice currentDevice] MACAddress]; // any test without ifconfig?
-    STAssertNotNil(mac, @"");
+    XCTAssertNotNil(mac, @"");
 }
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
@@ -40,16 +41,16 @@
 {
     NSAttributedStringAttributeDictionary *dict = [NSAttributedStringAttributeDictionary dictionary];
     // defaults
-    STAssertEquals(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
+    XCTAssertEqual(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
 
     #define TEST_ITEM(PROP, VALUE) \
         dict.PROP = VALUE;  \
-        STAssertEqualObjects(dict.PROP, VALUE, @""); \
+        XCTAssertEqualObjects(dict.PROP, VALUE, @""); \
         dict.PROP = nil;    \
-        STAssertNil(dict.PROP, @"");
+        XCTAssertNil(dict.PROP, @"");
     #define TEST_ITEM_VALUE(PROP, VALUE) \
         dict.PROP = VALUE;  \
-        STAssertEquals(dict.PROP, VALUE, @"");
+        XCTAssertEqual(dict.PROP, VALUE, @"");
 
 //    TEST_ITEM(font, [UIFont systemFontOfSize:10.0]);
     TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
@@ -79,13 +80,13 @@
     UIColor *color1 = [UIColor colorWithRed:0.7f green:0.5f blue:0.3f alpha:1.0];
     UIColor *color2 = [UIColor colorWithRed:0.7f green:0.5f blue:0.3f alpha:1.0];
 
-    STAssertEqualObjects(color1, color2, @"");
+    XCTAssertEqualObjects(color1, color2, @"");
 
     UIColor *color3 = [color1 colorWithAlpha:0.5f];
-    STAssertEquals(color3.components.red, color1.components.red, @"");
-    STAssertEquals(color3.components.green, color1.components.green, @"");
-    STAssertEquals(color3.components.blue, color1.components.blue, @"");
-    STAssertEquals(color3.components.alpha, 0.5f, @"");
+    XCTAssertEqual(color3.components.red, color1.components.red, @"");
+    XCTAssertEqual(color3.components.green, color1.components.green, @"");
+    XCTAssertEqual(color3.components.blue, color1.components.blue, @"");
+    XCTAssertEqual(color3.components.alpha, 0.5f, @"");
 }
 
 - (void)testColorMix {
@@ -93,17 +94,17 @@
     UIColor *color2 = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
 
     UIColor *color = [color1 mixedColorWithColor:color2 ratio:0.25];
-    STAssertEquals(color.components.red, 0.75f + 0.25f * 0.25f, @"");
-    STAssertEquals(color.components.green, 0.75f + 0.5f * 0.25f, @"");
-    STAssertEquals(color.components.blue, 0.75f + 0.75f * 0.25f, @"");
-    STAssertEquals(color.components.alpha, 1.0f, @"");
+    XCTAssertEqual(color.components.red, 0.75f + 0.25f * 0.25f, @"");
+    XCTAssertEqual(color.components.green, 0.75f + 0.5f * 0.25f, @"");
+    XCTAssertEqual(color.components.blue, 0.75f + 0.75f * 0.25f, @"");
+    XCTAssertEqual(color.components.alpha, 1.0f, @"");
 
     UIColor *color3 = [UIColor colorWithWhite:0.125 alpha:0.25];
     UIColor *color4 = [UIColor colorWithWhite:0.625 alpha:0.75];
     color = [color3 mixedColorWithColor:color4 ratio:0.75];
 
-    STAssertEquals(color.components.red, 0.375f, @"");
-    STAssertEquals(color.components.alpha, 0.375f, @"");
+    XCTAssertEqual(color.components.red, 0.375f, @"");
+    XCTAssertEqual(color.components.alpha, 0.375f, @"");
 }
 
 - (id)valueMethod {
@@ -113,7 +114,11 @@
 - (void)testClassMethodPatch {
     SEL selector = NSSelectorFromString(@"classValueMethod");
     [self.class addClassMethodForSelector:selector fromMethod:[self.class methodObjectForSelector:@selector(valueMethod)]];
-    STAssertEquals((id)self.class, (id)[self.class performSelector:selector], @"");
+    XCTAssertEqual((id)self.class, (id)[self.class performSelector:selector], @"");
+}
+
+- (void)testAddressBook {
+
 }
 
 //- (void)testViewHolder {

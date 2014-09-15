@@ -44,14 +44,15 @@ static void NSTimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
 }
 
 - (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id)delegate {
-    //[self release]; // Please do not try this!
+    //[[self init] release]; // This removes warning, but stupid
     CFRunLoopTimerContext context = {0, delegate, NULL, NULL, NULL};
     self = (NSTimer *)CFRunLoopTimerCreate(kCFAllocatorDefault, [date timeIntervalSinceReferenceDate], ti, 0, 0, &NSTimerDelegateCallback, &context);
     return self;
 }
 
 + (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
-    id timer = [[self alloc] initWithFireDate:[NSDate dateWithTimeIntervalSinceNow:ti] interval:ti delegate:delegate];
+    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:ti];
+    NSTimer *timer = [[self alloc] initWithFireDate:fireDate interval:ti delegate:delegate];
     return [timer autorelease];
 }
 

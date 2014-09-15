@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FoundationExtension"
-  s.version      = "0.48"
+  s.version      = "0.49"
   s.summary      = "Foundation/UIKit extension kit. It is category based and looks familiar to Foundation/UIKit. It includes many common snippets as shortcut."
   s.description  = <<-DESC
                     This library includes small Foundation/Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/youknowone/FoundationExtension"
   s.license      = "2-clause BSD"
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
-  s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "0.48" }
+  s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "0.49" }
   s.dependency "cdebug", "~> 0.1"
   s.requires_arc = false
 
@@ -49,6 +49,20 @@ Pod::Spec.new do |s|
     ss.prefix_header_contents = '
 #include <cdebug/debug.h>
 #include <UIKitExtension/UIKitExtension.h>
+    '
+    ss.dependency "FoundationExtension/FoundationExtension"
+  end
+
+  s.subspec "AddressBookExtension" do |ss|
+    ss.platform     = :ios
+    ss.source_files = "AddressBookExtension"
+    ss.public_header_files = "AddressBookExtension/*.h"
+    ss.header_dir = "AddressBookExtension"
+    ss.frameworks = "Foundation", "AddressBook"
+    ss.prefix_header_contents = '
+#include <cdebug/debug.h>
+#include <FoundationExtension/FoundationExtension.h>
+#include <AddressBookExtension/AddressBookExtension.h>
     '
     ss.dependency "FoundationExtension/FoundationExtension"
   end

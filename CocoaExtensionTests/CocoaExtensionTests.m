@@ -25,8 +25,8 @@
 }
 
 - (void)eventStream:(FSEventStream *)eventStream path:(NSString *)path event:(FSEventStreamEventFlags)eventFlags id:(FSEventStreamEventId)eventId {
-    STAssertEqualObjects(path, [tmpURL.path stringByDeletingLastPathComponent], @"check path");
-    STAssertTrue((kFSEventStreamEventFlagItemCreated|kFSEventStreamEventFlagItemModified) == eventFlags, @"");
+    XCTAssertEqualObjects(path, [tmpURL.path stringByDeletingLastPathComponent], @"check path");
+    XCTAssertTrue((kFSEventStreamEventFlagItemCreated|kFSEventStreamEventFlagItemModified) == eventFlags, @"");
     testFSEvents = YES;
 }
 
@@ -43,16 +43,16 @@
 {
     NSAttributedStringAttributeDictionary *dict = [NSAttributedStringAttributeDictionary dictionary];
     // defaults
-    STAssertEquals(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
+    XCTAssertEqual(dict.ligature, (NSUInteger)NSLigatureStandard, @"");
 
     #define TEST_ITEM(PROP, VALUE) \
         dict.PROP = VALUE;  \
-        STAssertEqualObjects(dict.PROP, VALUE, @""); \
+        XCTAssertEqualObjects(dict.PROP, VALUE, @""); \
         dict.PROP = nil;    \
-        STAssertNil(dict.PROP, @"");
+        XCTAssertNil(dict.PROP, @"");
     #define TEST_ITEM_VALUE(PROP, VALUE) \
         dict.PROP = VALUE;  \
-        STAssertEquals(dict.PROP, VALUE, @"");
+        XCTAssertEqual(dict.PROP, VALUE, @"");
 
     TEST_ITEM(font, [NSFont fontWithName:@"Helvetica" size:10.0]);
     TEST_ITEM(paragraphStyle, [NSParagraphStyle defaultParagraphStyle]);
@@ -84,8 +84,8 @@
     TEST_ITEM_VALUE(obliqueness, 0.4f);
     TEST_ITEM(expansionNumber, @0.2f);
     TEST_ITEM_VALUE(expansion, 0.4f);
-    id cursor = [NSCursor currentSystemCursor];
-    TEST_ITEM(cursor, cursor);
+//    id cursor = [NSCursor currentSystemCursor];
+//    TEST_ITEM(cursor, cursor);
     TEST_ITEM(toolTip, @"Test tooptip");
     TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
@@ -99,7 +99,7 @@
 
 - (void)testSystemVersion {
     NSAVersion *version = [NSAVersion systemVersion];
-    STAssertEquals(version.major, (NSInteger)10, @"");
+    XCTAssertEqual(version.major, (NSInteger)10, @"");
 //    STAssertEqualObjects(version.string, @"10.8.4", @"");
 }
 

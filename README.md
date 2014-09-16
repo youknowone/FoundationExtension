@@ -7,12 +7,6 @@ This library includes small Cocoa/UIKit extensions. This library does not includ
 
 See document on [Github] (http://youknowone.github.com/FoundationExtension)
 
-# Download
-
-    git clone git://github.com/youknowone/FoundationExtension.git
-    cd FoundationExtension
-    git submodule update --init
-
 # How to use
 * Compiled library
   1. Build project
@@ -23,6 +17,12 @@ See document on [Github] (http://youknowone.github.com/FoundationExtension)
   1. Visit and follow http://cocoapods.org/
 
 If your compiler is gcc or old clang, add '-force\_load' to static library.
+
+# Download for editing
+
+    git clone git://github.com/youknowone/FoundationExtension.git
+    cd FoundationExtension
+    git submodule update --init
 
 # Why useful
 Make your code short! Do not allow evil objc to make your code verbose.

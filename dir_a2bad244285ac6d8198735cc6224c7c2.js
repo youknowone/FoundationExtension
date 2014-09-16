@@ -39,7 +39,8 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSArray(Creations)", "categoryNSArray_07Creations_08.html", "categoryNSArray_07Creations_08" ],
       [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", "categoryNSArray_07Rearrange_08" ],
       [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", "categoryNSArray_07NSNumber_08" ],
-      [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ]
+      [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ],
+      [ "NSMutableArray(Random)", "categoryNSMutableArray_07Random_08.html", "categoryNSMutableArray_07Random_08" ]
     ] ],
     [ "NSAString.h", "NSAString_8h.html", [
       [ "NSAString", "interfaceNSAString.html", "interfaceNSAString" ],
@@ -47,6 +48,9 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     ] ],
     [ "NSAttributedString.h", "NSAttributedString_8h.html", [
       [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", "categoryNSAttributedString_07Shortcuts_08" ]
+    ] ],
+    [ "NSAVersion.h", "NSAVersion_8h.html", [
+      [ "NSAVersion", "interfaceNSAVersion.html", "interfaceNSAVersion" ]
     ] ],
     [ "NSBundle.h", "NSBundle_8h.html", "NSBundle_8h" ],
     [ "NSData.h", "NSData_8h.html", [
@@ -74,6 +78,9 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     ] ],
     [ "NSObject.h", "NSObject_8h.html", "NSObject_8h" ],
     [ "NSPathUtilities.h", "NSPathUtilities_8h.html", "NSPathUtilities_8h" ],
+    [ "NSSet.h", "NSSet_8h.html", [
+      [ "NSSet(Enumerator)", "categoryNSSet_07Enumerator_08.html", "categoryNSSet_07Enumerator_08" ]
+    ] ],
     [ "NSString.h", "NSString_8h.html", [
       [ "NSString(Creations)", "categoryNSString_07Creations_08.html", "categoryNSString_07Creations_08" ],
       [ "NSString(Shortcuts)", "categoryNSString_07Shortcuts_08.html", "categoryNSString_07Shortcuts_08" ],

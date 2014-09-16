@@ -1,4 +1,4 @@
 var categoryNSObject_07NSValue_08 =
 [
-    [ "value", "categoryNSObject_07NSValue_08.html#a94f98410e0c66e9d3e41f317f50f3048", null ]
+    [ "valueForObject", "categoryNSObject_07NSValue_08.html#a0daa826cfd0829cd5bc42ffa86f4e69c", null ]
 ];

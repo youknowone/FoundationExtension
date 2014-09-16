@@ -10,6 +10,9 @@ var dir_e076ad54aab45f8a582397419b81a886 =
       [ "<NSAImageWellDelegate>", "protocolNSAImageWellDelegate-p.html", "protocolNSAImageWellDelegate-p" ]
     ] ],
     [ "NSAttributedString+Cocoa.h", "NSAttributedString_09Cocoa_8h.html", "NSAttributedString_09Cocoa_8h" ],
+    [ "NSAVersion+System.h", "NSAVersion_09System_8h.html", [
+      [ "NSAVersion(OSX)", "categoryNSAVersion_07OSX_08.html", "categoryNSAVersion_07OSX_08" ]
+    ] ],
     [ "NSControl.h", "NSControl_8h.html", [
       [ "NSControl(Properties)", "categoryNSControl_07Properties_08.html", "categoryNSControl_07Properties_08" ]
     ] ],

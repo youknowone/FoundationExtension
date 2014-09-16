@@ -43,6 +43,7 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UIColor(Shortcuts)", "categoryUIColor_07Shortcuts_08.html", "categoryUIColor_07Shortcuts_08" ],
       [ "UIColor(Creations)", "categoryUIColor_07Creations_08.html", "categoryUIColor_07Creations_08" ],
       [ "UIColor(HTMLColor)", "categoryUIColor_07HTMLColor_08.html", "categoryUIColor_07HTMLColor_08" ],
+      [ "UIColor(UIAColorComponents)", "categoryUIColor_07UIAColorComponents_08.html", "categoryUIColor_07UIAColorComponents_08" ],
       [ "UIAColorComponents", "interfaceUIAColorComponents.html", "interfaceUIAColorComponents" ]
     ] ],
     [ "UIControl.h", "UIControl_8h.html", [

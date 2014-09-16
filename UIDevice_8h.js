@@ -1,6 +1,7 @@
 var UIDevice_8h =
 [
     [ "UIDevice(Shortcuts)", "categoryUIDevice_07Shortcuts_08.html", "categoryUIDevice_07Shortcuts_08" ],
+    [ "UIDevice(MACAddress)", "categoryUIDevice_07MACAddress_08.html", "categoryUIDevice_07MACAddress_08" ],
     [ "UIADeviceTypeIsIPhoneOrIPod", "UIDevice_8h.html#a67fd991a7899436df74894d971a2338e", null ],
     [ "UIADeviceTypeIsIPhoneOrIPodMask", "UIDevice_8h.html#acd35bdbcac8abb93f7d27674e891a467", null ],
     [ "UIADeviceType", "UIDevice_8h.html#a0322cce775ca014314e700a7c9ba536f", [

@@ -13,6 +13,7 @@ var hierarchy =
     [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", null ],
     [ "NSArray(Shortcuts)", "categoryNSArray_07Shortcuts_08.html", null ],
     [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", null ],
+    [ "NSAVersion(OSX)", "categoryNSAVersion_07OSX_08.html", null ],
     [ "NSBundle(Shortcuts)", "categoryNSBundle_07Shortcuts_08.html", null ],
     [ "NSControl(Properties)", "categoryNSControl_07Properties_08.html", null ],
     [ "<NSCopying>", null, [
@@ -57,6 +58,7 @@ var hierarchy =
       [ "NSAMutableArray", "interfaceNSAMutableArray.html", null ]
     ] ],
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", null ],
+    [ "NSMutableArray(Random)", "categoryNSMutableArray_07Random_08.html", null ],
     [ "NSMutableAttributedString(AttributeProperties)", "categoryNSMutableAttributedString_07AttributeProperties_08.html", null ],
     [ "<NSMutableCopying>", null, [
       [ "NSATriple", "interfaceNSATriple.html", null ],
@@ -87,6 +89,7 @@ var hierarchy =
       [ "NSATriple", "interfaceNSATriple.html", null ],
       [ "NSATuple", "interfaceNSATuple.html", null ],
       [ "NSAURLRequestHTTPBodyMultiPartFormPostFormatter", "interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html", null ],
+      [ "NSAVersion", "interfaceNSAVersion.html", null ],
       [ "UIAColorComponents", "interfaceUIAColorComponents.html", null ],
       [ "UIAResultDisplayController", "interfaceUIAResultDisplayController.html", null ],
       [ "UIAViewHolder", "interfaceUIAViewHolder.html", null ]
@@ -107,7 +110,10 @@ var hierarchy =
         [ "UIAView", "interfaceUIAView.html", null ]
       ] ]
     ] ],
+    [ "NSOrderedSet(Functional)", "categoryNSOrderedSet_07Functional_08.html", null ],
     [ "NSPasteboard(Shortcuts)", "categoryNSPasteboard_07Shortcuts_08.html", null ],
+    [ "NSSet(Enumerator)", "categoryNSSet_07Enumerator_08.html", null ],
+    [ "NSSet(Functional)", "categoryNSSet_07Functional_08.html", null ],
     [ "NSString", null, [
       [ "NSAString", "interfaceNSAString.html", null ]
     ] ],
@@ -138,8 +144,10 @@ var hierarchy =
     [ "UIColor(Creations)", "categoryUIColor_07Creations_08.html", null ],
     [ "UIColor(HTMLColor)", "categoryUIColor_07HTMLColor_08.html", null ],
     [ "UIColor(Shortcuts)", "categoryUIColor_07Shortcuts_08.html", null ],
+    [ "UIColor(UIAColorComponents)", "categoryUIColor_07UIAColorComponents_08.html", null ],
     [ "UIColor(UIImage)", "categoryUIColor_07UIImage_08.html", null ],
     [ "UIControl(Shortcuts)", "categoryUIControl_07Shortcuts_08.html", null ],
+    [ "UIDevice(MACAddress)", "categoryUIDevice_07MACAddress_08.html", null ],
     [ "UIDevice(Shortcuts)", "categoryUIDevice_07Shortcuts_08.html", null ],
     [ "UIImage(Creations)", "categoryUIImage_07Creations_08.html", null ],
     [ "UIImage(UIGraphics)", "categoryUIImage_07UIGraphics_08.html", null ],
@@ -173,6 +181,7 @@ var hierarchy =
       [ "UIAView", "interfaceUIAView.html", null ]
     ] ],
     [ "UIView(Animation)", "categoryUIView_07Animation_08.html", null ],
+    [ "UIView(CALayer)", "categoryUIView_07CALayer_08.html", null ],
     [ "UIView(InterfaceBuilder)", "categoryUIView_07InterfaceBuilder_08.html", null ],
     [ "UIViewController", null, [
       [ "UIAViewController", "interfaceUIAViewController.html", null ]

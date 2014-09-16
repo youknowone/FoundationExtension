@@ -5,6 +5,8 @@ var NSAFunctional_8h =
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", "categoryNSMutableArray_07Functional_08" ],
     [ "NSDictionary(Functional)", "categoryNSDictionary_07Functional_08.html", "categoryNSDictionary_07Functional_08" ],
     [ "NSMutableDictionary(Functional)", "categoryNSMutableDictionary_07Functional_08.html", "categoryNSMutableDictionary_07Functional_08" ],
+    [ "NSSet(Functional)", "categoryNSSet_07Functional_08.html", "categoryNSSet_07Functional_08" ],
+    [ "NSOrderedSet(Functional)", "categoryNSOrderedSet_07Functional_08.html", "categoryNSOrderedSet_07Functional_08" ],
     [ "NSAObjectBinaryOperator", "NSAFunctional_8h.html#ac3a87059af1d79cceaef4c4c4cbb7be0", null ],
     [ "NSAObjectPicker", "NSAFunctional_8h.html#a0761588e817345c12d3012a5e865b212", null ],
     [ "NSAObjectPickerWithIndex", "NSAFunctional_8h.html#a6729144064b79f07061fb32f69d9f112", null ],

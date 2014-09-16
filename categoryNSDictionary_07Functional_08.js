@@ -6,5 +6,8 @@ var categoryNSDictionary_07Functional_08 =
     [ "dictionaryByMapFilteringOperator:", "categoryNSDictionary_07Functional_08.html#ac50befcf6fa4ca7ef21b864663e432f4", null ],
     [ "dictionaryByMapFilteringOperatorWithKey:", "categoryNSDictionary_07Functional_08.html#adcf9fab760a2bdf270ecd5ad91ca7de6", null ],
     [ "dictionaryByMappingOperator:", "categoryNSDictionary_07Functional_08.html#ab4550280002c0639c3bdaff6a07603d2", null ],
-    [ "dictionaryByMappingOperatorWithKey:", "categoryNSDictionary_07Functional_08.html#ab45b6e1b04786f434e34080e87288001", null ]
+    [ "dictionaryByMappingOperatorWithKey:", "categoryNSDictionary_07Functional_08.html#ab45b6e1b04786f434e34080e87288001", null ],
+    [ "firstKeyByFilteringOperatorWithKey:", "categoryNSDictionary_07Functional_08.html#a9ca396b4ffc0f45edb8627015898fd27", null ],
+    [ "firstObjectByFilteringOperator:", "categoryNSDictionary_07Functional_08.html#a0382cd32e38bf3bf8a39560b02188088", null ],
+    [ "firstObjectByFilteringOperatorWithKey:", "categoryNSDictionary_07Functional_08.html#a448bfceb3308ce88ed8aad571738a44a", null ]
 ];

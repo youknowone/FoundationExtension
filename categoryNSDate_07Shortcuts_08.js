@@ -1,4 +1,4 @@
 var categoryNSDate_07Shortcuts_08 =
 [
-    [ "components", "categoryNSDate_07Shortcuts_08.html#a3aa469ba94d2d8259f18af2cb99be930", null ]
+    [ "__deprecated", "categoryNSDate_07Shortcuts_08.html#a67a3696926326c4bad5db17f1d0071d1", null ]
 ];

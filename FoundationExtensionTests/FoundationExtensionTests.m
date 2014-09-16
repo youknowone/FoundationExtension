@@ -74,10 +74,10 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     [super tearDown];
 }
 
-- (void)testClassName {
-    id className = [[[self class] name] copy];
-    //XCTAssertTrue([className isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", className); // causes error
-}
+//- (void)testClassName {
+//    id className = [[[self class] name] copy];
+//    XCTAssertTrue([className isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", className); // causes error
+//}
 
 - (void)testClassObject {
     NSAString *string = [[[NSAString alloc] initWithString:@"blah"] autorelease];
@@ -172,6 +172,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     NSString *concat = [NSString stringWithConcatnatingStrings:@"Hello, ", @"World!", nil];
 
     XCTAssertTrue([concat isEqualToString:@"Hello, World!"], @"");
+}
+
+- (void)testStringTrimming {
+    XCTAssertEqualObjects([@"  \thi \t" stringByTrimmingWhitespaceCharacters], @"hi", @"");
+    XCTAssertEqualObjects([@"  \thi \n\t" stringByTrimmingWhitespaceCharacters], @"hi \n", @"");
+    XCTAssertEqualObjects([@"  \thi \n\t" stringByTrimmingWhitespaceAndNewlineCharacters], @"hi", @"");
 }
 
 - (void)testArrayRearrangement {

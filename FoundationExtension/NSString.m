@@ -116,6 +116,18 @@
     return [self substringWithRange:NSMakeRange(from, to - from)];
 }
 
+- (NSString *)stringByTrimmingWhitespaceCharacters {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
+- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSString *)stringByTrimmingNewlineCharacters {
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+}
+
 @end
 
 

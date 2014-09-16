@@ -132,6 +132,34 @@
  */
 - (NSString *)substringFromIndex:(NSUInteger)from toIndex:(NSUInteger)to;
 
+/*!
+ *  @brief Returns a new string made by removing from both ends of the receiver characters contained in whitespace character set.
+ *  @return A new string made by removing from both ends of the receiver characters contained in whitespace character set. If the receiver is composed entirely of characters from whitespace character set, the empty string is returned.
+ *  @see [stringByTrimmingCharactersInSet:][0]
+ *  @see [NSCharacterSet whitespaceCharacterSet][1]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByTrimmingCharactersInSet:
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/Reference/Reference.html#//apple_ref/occ/clm/NSCharacterSet/whitespaceCharacterSet
+ */
+- (NSString *)stringByTrimmingWhitespaceCharacters;
+/*!
+ *  @brief Returns a new string made by removing from both ends of the receiver characters contained in whitespace and newline character set.
+ *  @return A new string made by removing from both ends of the receiver characters contained in whitespace and newline character set. If the receiver is composed entirely of characters from whitespace and newline character set, the empty string is returned.
+ *  @see [stringByTrimmingCharactersInSet:][0]
+ *  @see [NSCharacterSet whitespaceAndNewlineCharacterSet][1]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByTrimmingCharactersInSet:
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/Reference/Reference.html#//apple_ref/occ/clm/NSCharacterSet/whitespaceAndNewlineCharacterSet
+ */
+- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters;
+/*!
+ *  @brief Returns a new string made by removing from both ends of the receiver characters contained in newline character set.
+ *  @return A new string made by removing from both ends of the receiver characters contained in newline character set. If the receiver is composed entirely of characters from newline character set, the empty string is returned.
+ *  @see [stringByTrimmingCharactersInSet:][0]
+ *  @see [NSCharacterSet newlineCharacterSet][1]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByTrimmingCharactersInSet:
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/Reference/Reference.html#//apple_ref/occ/clm/NSCharacterSet/newlineCharacterSet
+ */
+- (NSString *)stringByTrimmingNewlineCharacters;
+
 @end
 
 

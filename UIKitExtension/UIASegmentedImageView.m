@@ -80,7 +80,7 @@
     [self addSubview:self.bottomRightImageView];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self != nil) {
         [self _segmentedImageViewInit];
@@ -92,7 +92,7 @@
     return self;
 }
 
-- (id)initWithCenterImage:(UIImage *)image {
+- (instancetype)initWithCenterImage:(UIImage *)image {
     self = [super init];
     if (self != nil) {
         [self _segmentedImageViewInit];
@@ -104,7 +104,7 @@
     return self;
 }
 
-- (id)initWithCenterImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage {
+- (instancetype)initWithCenterImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage {
     self = [super init];
     if (self != nil) {
         [self _segmentedImageViewInit];
@@ -116,7 +116,7 @@
     return self;
 }
 
-- (id)initWithTopImage:(UIImage *)topImage centerImage:(UIImage *)centerImage bottomImage:(UIImage *)bottomImage {
+- (instancetype)initWithTopImage:(UIImage *)topImage centerImage:(UIImage *)centerImage bottomImage:(UIImage *)bottomImage {
     self = [self initWithCenterImage:centerImage];
     if (self != nil) {
         self.frame = CGRectMake(.0, .0, topImage.size.width, topImage.size.height + centerImage.size.height + bottomImage.size.height);
@@ -126,7 +126,7 @@
     return self;
 }
 
-- (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage {
+- (instancetype)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage {
     self = [self initWithCenterImage:centerImage];
     if (self != nil) {
         self.frame = CGRectMake(.0, .0, leftImage.size.width + centerImage.size.width + rightImage.size.width, leftImage.size.height);

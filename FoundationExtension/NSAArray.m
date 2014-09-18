@@ -11,15 +11,15 @@
 
 @interface NSAArray ()
 
-- (id)initWithImplementationDelegate:(id)impl;
-+ (id)arrayWithImplementationDelegate:(id)impl;
+- (instancetype)initWithImplementationDelegate:(id)impl;
++ (instancetype)arrayWithImplementationDelegate:(id)impl;
 
 @end
 
 
 @implementation NSAArray
 
-- (id)initWithImplementationDelegate:(id)impl {
+- (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_impl = [impl retain];
@@ -27,11 +27,11 @@
     return self;
 }
 
-+ (id)arrayWithImplementationDelegate:(id)impl {
++ (instancetype)arrayWithImplementationDelegate:(id)impl {
     return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSArray alloc] init];
@@ -39,7 +39,7 @@
     return self;
 }
 
-- (id)initWithObjects:(const id [])objects count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSArray alloc] initWithObjects:objects count:cnt];
@@ -47,17 +47,17 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSArray alloc] initWithCoder:aDecoder];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_impl release];
+    [super dealloc];
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
@@ -96,15 +96,15 @@
 
 @interface NSAMutableArray ()
 
-- (id)initWithImplementationDelegate:(id)impl;
-+ (id)arrayWithImplementationDelegate:(id)impl;
+- (instancetype)initWithImplementationDelegate:(id)impl;
++ (instancetype)arrayWithImplementationDelegate:(id)impl;
 
 @end
 
 
 @implementation NSAMutableArray
 
-- (id)initWithImplementationDelegate:(id)impl {
+- (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_impl = [impl retain];
@@ -112,11 +112,11 @@
     return self;
 }
 
-+ (id)arrayWithImplementationDelegate:(id)impl {
++ (instancetype)arrayWithImplementationDelegate:(id)impl {
     return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableArray alloc] init];
@@ -124,7 +124,7 @@
     return self;
 }
 
-- (id)initWithObjects:(const id [])objects count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableArray alloc] initWithObjects:objects count:cnt];
@@ -132,12 +132,7 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableArray alloc] initWithCoder:aDecoder];
@@ -147,6 +142,11 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self->_impl encodeWithCoder:aCoder];
+}
+
+- (void)dealloc {
+    [self->_impl release];
+    [super dealloc];
 }
 
 - (NSUInteger)count {
@@ -178,7 +178,7 @@
 
 // mutable methods
 
-- (id)initWithCapacity:(NSUInteger)numItems {
+- (instancetype)initWithCapacity:(NSUInteger)numItems {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableArray alloc] initWithCapacity:numItems];

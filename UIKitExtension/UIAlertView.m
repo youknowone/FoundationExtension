@@ -10,7 +10,7 @@
 
 @implementation UIAlertView (Shortcuts)
 
-+ (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line {
++ (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line {
     UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", @(filename), line]
                                                 message:log
                                                 delegate:nil
@@ -21,12 +21,12 @@
 }
 
 
-- (id)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
+- (instancetype)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
     self = [self initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
     return self;
 }
 
-+ (UIAlertView *)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
++ (instancetype)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
     UIAlertView *alert = [[self alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
     [alert show];
     return [alert autorelease];

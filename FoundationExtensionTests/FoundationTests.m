@@ -15,7 +15,7 @@
 
 @implementation TestInit
 
-- (id)initObject {
+- (instancetype)initObject {
     [self release];
     return (id)[[NSString alloc] init];
 }

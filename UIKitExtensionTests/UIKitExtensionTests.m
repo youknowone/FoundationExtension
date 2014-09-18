@@ -117,9 +117,12 @@
     XCTAssertEqual((id)self.class, (id)[self.class performSelector:selector], @"");
 }
 
-- (void)testAddressBook {
-
-}
+//- (void)testAddressBook {
+//    ABAddressBook *book = [[ABAddressBook alloc] init];
+//    [book requestAccessWithCompletion:^(bool granted, NSError *error) {
+//        NSLog(@"passed here?");
+//    }];
+//}
 
 //- (void)testViewHolder {
 //    UIView *view = [[[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil] autorelease];

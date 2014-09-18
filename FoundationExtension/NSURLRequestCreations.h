@@ -25,12 +25,12 @@
  *  @see initWithContentsOfURLRequest:error:
  *  @see dataWithContentsOfURLRequest:error:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request;
++ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated data object initialized with the data from the result specified by a given request.
@@ -40,23 +40,23 @@
  *  @see initWithContentsOfURLRequest:
  *  @see dataWithContentsOfURLRequest:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
  *  @see initWithContentsOfURLRequest:error:
  */
-+ (id)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
++ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
 
 /*! @name Deprecated */
 
 /*!
  *  @deprecated Use initWithContentsOfURLRequest: with NSMutableURLRequest
  */
-- (id)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
+- (instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 /*!
  *  @deprecated Use dataWithContentsOfURLRequest: with NSMutableURLRequest
  */
-+ (NSData *)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
++ (instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 
 @end
 
@@ -73,12 +73,12 @@
  *  @see initWithContentsOfURLRequest:format:error:
  *  @see arrayWithContentsOfURLRequest:format:error:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Creates and returns an array containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (id)arrayWithContentsOfURLRequest:(NSURLRequest *)request;
++ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated array with the contents of the result specified by a given request.
@@ -89,12 +89,12 @@
  *  @see initWithContentsOfURLRequest:
  *  @see arrayWithContentsOfURLRequest:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!
  *  @brief Creates and returns an array containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:format:error:
  */
-+ (id)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 @end
 
@@ -111,12 +111,12 @@
  *  @see initWithContentsOfURLRequest:format:error:
  *  @see dictionaryWithContentsOfURLRequest:format:error:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (id)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request;
++ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated dictionary with the contents of the result specified by a given request.
@@ -127,11 +127,11 @@
  *  @see initWithContentsOfURLRequest:
  *  @see dictionaryWithContentsOfURLRequest:
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:format:error:
  */
-+ (id)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 @end

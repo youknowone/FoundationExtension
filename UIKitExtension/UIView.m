@@ -20,13 +20,13 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 
 @implementation UIView (InterfaceBuilder)
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     [self release];
     UIViewController *holder = [[[UIViewController alloc] initWithNibName:nibNameOrNil bundle:nibBundleOrNil] autorelease];
     return [holder.view retain];
 }
 
-- (id)initWithPlatformSuffixedNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (instancetype)initWithPlatformSuffixedNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     NSString *suffix = [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone ? @"_iPhone" : @"_iPad";
     return [self initWithNibName:[nibNameOrNil stringByAppendingString:suffix] bundle:nibBundleOrNil];
 }

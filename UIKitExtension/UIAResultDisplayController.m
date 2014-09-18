@@ -42,7 +42,7 @@
 @synthesize contentsController=_contentsController;
 @synthesize inputView=_inputView;
 
-- (id)initWithContentsController:(UIViewController *)viewController {
+- (instancetype)initWithContentsController:(UIViewController *)viewController {
     self = [super init];
     if (self != nil) {
         self->_contentsController = [viewController retain];

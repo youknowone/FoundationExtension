@@ -12,8 +12,8 @@
 
 @interface NSAMethod ()
 
-- (id)initWithMethod:(Method)method;
-+ (id)methodWithMethod:(Method)method;
+- (instancetype)initWithMethod:(Method)method;
++ (instancetype)methodWithMethod:(Method)method;
 
 @end
 

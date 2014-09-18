@@ -26,7 +26,7 @@
  *  @return An UIImage object initialized with the data from the location specified by URL. The returned object might be different than the original receiver.
  *  @see initWithContentsOfURL:cachePolicy:
  */
-- (id)initWithContentsOfURL:(NSURL *)URL;
+- (instancetype)initWithContentsOfURL:(NSURL *)URL;
 
 /*!
  *  @brief Returns an image object containing the data from the location specified by a given URL.
@@ -34,7 +34,7 @@
  *  @return An UIImage object containing the data from the location specified by URL. The returned object might be different than the original receiver.
  *  @see imageWithContentsOfURL:cachePolicy:
  */
-+ (id)imageWithContentsOfURL:(NSURL *)URL;
++ (instancetype)imageWithContentsOfURL:(NSURL *)URL;
 
 /*!
  *  @brief Initializes a newly allocated image object initialized with the data from the location specified by URL.
@@ -43,7 +43,7 @@
  *  @return An UIImage object initialized with the data from the location specified by URL. The returned object might be different than the original receiver.
  *  @see initWithContentsOfURL:
  */
-- (id)initWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
+- (instancetype)initWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
 
 /*!
  *  @brief Returns an image object containing the data from the location specified by a given URL.
@@ -52,21 +52,21 @@
  *  @return An UIImage object containing the data from the location specified by URL. The returned object might be different than the original receiver.
  *  @see imageWithContentsOfURL:
  */
-+ (id)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
++ (instancetype)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
 
 /*!
  *  @brief Initializes a newly allocated image object initialized with the data the given URL request.
  *  @param request The URL request from which to read data.
  *  @return An UIImage object initialized with the data from the request specified by request. The returned object might be different than the original receiver.
  */
-- (id)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Returns an image object containing the data from the given URL request.
  *  @param request The URL request from which to read data.
  *  @return An UIImage object containing the data from the request specified by request. The returned object might be different than the original receiver.
  */
-+ (id)imageWithContentsOfURLRequest:(NSURLRequest *)request;
++ (instancetype)imageWithContentsOfURLRequest:(NSURLRequest *)request;
 
 @end
 

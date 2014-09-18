@@ -29,10 +29,10 @@
  *  @param suppressive Suppress overrided implementation or not.
  *  @return Returns a mediator of origin and overrided objects.
  */
-- (id)initWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive;
+- (instancetype)initWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive;
 
-+ (id)mediatorWithOrigin:(id)origin override:(id)override;
-+ (id)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive;
++ (instancetype)mediatorWithOrigin:(id)origin override:(id)override;
++ (instancetype)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive;
 
 @property(nonatomic, retain) id origin;
 @property(nonatomic, retain) id override;

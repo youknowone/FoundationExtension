@@ -11,14 +11,14 @@
 
 @interface NSAOrderedDictionary ()
 
-- (id)initWithImplementationOrder:(id)order dictionary:(id)impl;
-+ (id)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl;
+- (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl;
++ (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl;
 
 @end
 
 @implementation NSAOrderedDictionary
 
-- (id)initWithImplementationOrder:(id)order dictionary:(id)impl {
+- (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_order = [order retain];
@@ -27,11 +27,11 @@
     return self;
 }
 
-+ (id)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
++ (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
     return [[[self alloc] initWithImplementationOrder:order dictionary:impl] autorelease];
 }
 
-- (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSDictionary alloc] initWithObjects:objects forKeys:keys count:cnt];
@@ -40,13 +40,7 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_order release];
-    [self->_impl release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_order = [[NSOrderedSet alloc] initWithCoder:aDecoder];
@@ -58,6 +52,12 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self->_order encodeWithCoder:aCoder];
     [self->_impl encodeWithCoder:aCoder];
+}
+
+- (void)dealloc {
+    [self->_order release];
+    [self->_impl release];
+    [super dealloc];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -113,14 +113,14 @@
 
 @interface NSAMutableOrderedDictionary ()
 
-- (id)initWithImplementationOrder:(id)order dictionary:(id)impl;
-+ (id)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl;
+- (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl;
++ (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl;
 
 @end
 
 @implementation NSAMutableOrderedDictionary
 
-- (id)initWithImplementationOrder:(id)order dictionary:(id)impl {
+- (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_order = [order retain];
@@ -129,11 +129,11 @@
     return self;
 }
 
-+ (id)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
++ (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
     return [[[self alloc] initWithImplementationOrder:order dictionary:impl] autorelease];
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] init];
@@ -142,7 +142,7 @@
     return self;
 }
 
-- (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] initWithObjects:objects forKeys:keys count:cnt];
@@ -151,13 +151,7 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [self->_order release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_order = [[NSMutableOrderedSet alloc] initWithCoder:aDecoder];
@@ -169,6 +163,12 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self->_order encodeWithCoder:aCoder];
     [self->_impl encodeWithCoder:aCoder];
+}
+
+- (void)dealloc {
+    [self->_impl release];
+    [self->_order release];
+    [super dealloc];
 }
 
 - (NSUInteger)count {
@@ -204,7 +204,7 @@
 
 // mutable methods
 
-- (id)initWithCapacity:(NSUInteger)numItems {
+- (instancetype)initWithCapacity:(NSUInteger)numItems {
     self = [super init];
     if (self != nil) {
         self->_order = [[NSMutableOrderedSet alloc] initWithCapacity:numItems];

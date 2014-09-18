@@ -54,12 +54,12 @@
  *  @param alpha
  *      Value from 0 to 255
  */
-- (id)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;
+- (UIColor *)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;
 /*!
  *  @brief Creates and returns color from 32bit color component
  *  @see initWith8bitRed:green:blue:alpha:
  */
-+ (id)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;
++ (UIColor *)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;
 
 /*!
  *  @brief Initialize color from 8bit white component
@@ -68,25 +68,25 @@
  *  @param alpha
  *      Value from 0 to 255
  */
-- (id)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
+- (UIColor *)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Creates and returns color from 8bit white component
  *  @see initWith8bitWhite:alpha:
  */
-+ (id)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
++ (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;
 
 /*!
  *  @brief Initialize color from 32bit color packed value
  *  @param value
  *      Packed 32bit color value.
  */
-- (id)initWith32bitColor:(UInt32)value;
+- (UIColor *)initWith32bitColor:(UInt32)value;
 /*!
  *  @brief Creates and returns color from 32bit color packed value
  *  @see initWith32bitColor:
  */
-+ (id)colorWith32bitColor:(UInt32)value;
++ (UIColor *)colorWith32bitColor:(UInt32)value;
 
 @end
 
@@ -146,11 +146,11 @@
  *  @param color
  *      An UIColor
  */
-- (id)initWithColor:(UIColor *)color;
+- (instancetype)initWithColor:(UIColor *)color;
 /*!
  *  @brief Creates and returns color components from color
  *  @see initWithColor:
  */
-+ (id)componentsWithColor:(UIColor *)color;
++ (instancetype)componentsWithColor:(UIColor *)color;
 
 @end

@@ -12,7 +12,7 @@
 
 @implementation NSSet (Enumerator)
 
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
     self = [self initWithArray:[NSArray arrayWithEnumerator:enumerator]];
     return self;
 }

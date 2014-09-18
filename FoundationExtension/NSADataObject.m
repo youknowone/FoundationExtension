@@ -22,11 +22,11 @@ static Class _mutableTupleClass;
     }
 }
 
-+ (id)tuple {
++ (instancetype)tuple {
     return [[[self alloc] init] autorelease];
 }
 
-- (id)initWithFirst:(id)first second:(id)second {
+- (instancetype)initWithFirst:(id)first second:(id)second {
     self = [super init];
     if (self != nil) {
         self->_first = [first retain];
@@ -35,7 +35,7 @@ static Class _mutableTupleClass;
     return self;
 }
 
-+ (id)tupleWithFirst:(id)first second:(id)second {
++ (instancetype)tupleWithFirst:(id)first second:(id)second {
     return [[[self alloc] initWithFirst:first second:second] autorelease];
 }
 
@@ -176,11 +176,11 @@ static Class _mutableTripleClass;
     }
 }
 
-+ (id)triple {
++ (instancetype)triple {
     return [[[self alloc] init] autorelease];
 }
 
-- (id)initWithFirst:(id)first second:(id)second third:(id)third {
+- (instancetype)initWithFirst:(id)first second:(id)second third:(id)third {
     self = [super init];
     if (self != nil) {
         self->_first = [first retain];
@@ -190,7 +190,7 @@ static Class _mutableTripleClass;
     return self;
 }
 
-+ (id)tripleWithFirst:(id)first second:(id)second third:(id)third {
++ (instancetype)tripleWithFirst:(id)first second:(id)second third:(id)third {
     return [[[self alloc] initWithFirst:first second:second third:third] autorelease];
 }
 

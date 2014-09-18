@@ -119,7 +119,7 @@
  *  @brief Initialize formatter with default encoding.
  *  @param encoding Default encoding for formatter
  */
-- (id)initWithEncoding:(NSStringEncoding)encoding;
+- (instancetype)initWithEncoding:(NSStringEncoding)encoding;
 /*!
  *  @brief Appends text data to field name with default encoding.
  *  @param fieldName Field name for data.

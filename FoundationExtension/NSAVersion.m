@@ -13,7 +13,7 @@
 @synthesize string=_string;
 @synthesize major=_major, minor=_minor, bugfix=_bugfix;
 
-- (id)initWithString:(NSString *)string {
+- (instancetype)initWithString:(NSString *)string {
     self = [super init];
     if (self != nil) {
         self->_string = [string copy];
@@ -27,7 +27,7 @@
     return self;
 }
 
-+ (id)versionWithString:(NSString *)string {
++ (instancetype)versionWithString:(NSString *)string {
     return [[[self alloc] initWithString:string] autorelease];
 }
 

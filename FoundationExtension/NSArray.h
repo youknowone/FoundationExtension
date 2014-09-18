@@ -50,7 +50,7 @@
  *  @see initWithData:format:error:
  *  @see arrayWithData:format:error:
  */
-- (id)initWithData:(NSData *)data;
+- (instancetype)initWithData:(NSData *)data;
 
 /*!
  *  @brief Initializes a newly allocated array with the contents of data. Data must be property list.
@@ -62,7 +62,7 @@
  *  @see arrayWithData:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSPropertyListSerialization_Class/Reference/Reference.html#//apple_ref/c/tdef/NSPropertyListFormat
  */
-- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 /*!
  *  @brief Initializes a newly allocated array by placing in it the objects enumerated in a given enumerator.
@@ -71,7 +71,7 @@
  *  @return An array initialized to contain the objects — or if flag is YES, copies of the objects - enumerated in a given enumerator.
  *  @see initWithEnumerator:copyItems:
  */
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator;
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator;
 /*!
  *  @brief Initializes a newly allocated array by placing in it the objects enumerated in a given enumerator.
  *  @warning This initilizer is not optimized.
@@ -84,7 +84,7 @@
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSCopying_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/NSCopying/copyWithZone:
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSCopying_Protocol/Reference/Reference.html
  */
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator copyItems:(BOOL)flag;
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator copyItems:(BOOL)flag;
 
 /*! @name Creating an Array */
 
@@ -92,19 +92,19 @@
  *  @brief Creates and returns an array containing the contents of data. Data must be property list.
  *  @see initWithData:
  */
-+ (id)arrayWithData:(NSData *)data;
++ (instancetype)arrayWithData:(NSData *)data;
 
 /*!
  *  @brief Creates and returns an array containing the contents of data. Data must be property list.
  *  @see initWithData:format:error:
  */
-+ (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 /*!
  *  @brief Creates and returns an array containing the objects enumerated in a given enumerator.
  *  @see initWithEnumerator:
  */
-+ (id)arrayWithEnumerator:(id<NSFastEnumeration>)enumerator;
++ (instancetype)arrayWithEnumerator:(id<NSFastEnumeration>)enumerator;
 
 @end
 

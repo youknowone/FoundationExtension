@@ -13,7 +13,7 @@
 
 NSAPropertyRetainSetter(setReuseIdentifier, @"_reuseIdentifier")
 
-+ (id)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier {
++ (instancetype)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier {
     return [[[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier] autorelease];
 }
 

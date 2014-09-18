@@ -27,7 +27,7 @@
 
 @synthesize owner=_owner;
 
-- (id)initWithOwner:(UIASubviewTableView *)owner {
+- (instancetype)initWithOwner:(UIASubviewTableView *)owner {
     self = [super init];
     if (self != nil) {
         self->_owner = owner;
@@ -101,7 +101,7 @@
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self != nil) {
         id dataSource = self.dataSource;

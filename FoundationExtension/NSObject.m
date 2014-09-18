@@ -12,8 +12,8 @@
 
 @interface NSAMethod ()
 
-- (id)initWithMethod:(Method)method;
-+ (id)methodWithMethod:(Method)method;
+- (instancetype)initWithMethod:(Method)method;
++ (instancetype)methodWithMethod:(Method)method;
 
 @end
 
@@ -133,7 +133,7 @@
 @implementation NSAMethod
 @synthesize method=_method;
 
-- (id)initWithMethod:(Method)method {
+- (instancetype)initWithMethod:(Method)method {
     if (method == nil) {
         [self release];
         return nil;
@@ -145,7 +145,7 @@
     return self;
 }
 
-+ (id)methodWithMethod:(Method)method {
++ (instancetype)methodWithMethod:(Method)method {
     return [[[self alloc] initWithMethod:method] autorelease];
 }
 

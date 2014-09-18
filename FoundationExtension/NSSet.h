@@ -10,6 +10,6 @@
 
 @interface NSSet (Enumerator)
 
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator;
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator;
 
 @end

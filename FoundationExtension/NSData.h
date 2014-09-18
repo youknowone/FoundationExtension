@@ -43,12 +43,12 @@
  *  @brief Initialize with deserialized data from hexadecimal string.
  *  @param hexadecimal Hexadecimal string.
  */
-- (id)initWithHexadecimalString:(NSString *)hexadecimal;
+- (instancetype)initWithHexadecimalString:(NSString *)hexadecimal;
 /*!
  *  @brief Creates and returns deserialized data from hexadecimal string.
  *  @see initWithHexadecimalString:
  */
-+ (id)dataWithHexadecimalString:(NSString *)hexadecimal;
++ (instancetype)dataWithHexadecimalString:(NSString *)hexadecimal;
 
 
 /*! @name base64 */
@@ -66,13 +66,13 @@
  *  @return Initialized data object.
  *  @see base64String
  */
-- (id)initWithBase64String:(NSString *)base64;
+- (instancetype)initWithBase64String:(NSString *)base64;
 /*!
  *  @brief Creates and returns deserialized data from base64 string.
  *  @return Created data object.
  *  @see initWithBase64String:
  *  @see base64String
  */
-+ (id)dataWithBase64String:(NSString *)base64;
++ (instancetype)dataWithBase64String:(NSString *)base64;
 
 @end

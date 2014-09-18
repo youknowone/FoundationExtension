@@ -61,20 +61,20 @@
  *      [0]: https://developer.apple.com/library/mac/documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamCreateFlags
  *      [1]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/FSEvents_Ref/Reference/reference.html#//apple_ref/doc/c_ref/FSEventStreamCreate
  */
-- (id)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
+- (instancetype)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
 /*!
  *  @brief Returns a created and scheduled event stream with given paths, latency, create flags and delegate.
  *  @see initWithPaths:latency:flags:delegate:
  *  @see scheduleWithRunLoop:mode:
  */
-+ (id)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
++ (instancetype)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
 /*!
  *  @brief Returns a created and scheduled event stream with given path, latency, create flags and delegate.
  *  @see initWithPaths:latency:flags:delegate:
  *  @see scheduledEventStreamWithPaths:latency:flags:delegate:
  *  @see scheduleWithRunLoop:mode:
  */
-+ (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
++ (instancetype)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate;
 /*!
  *  @brief Invalidates the stream.
  *  @details Invalidates the stream, like CFRunLoopSourceInvalidate() does for a CFRunLoopSourceRef. It will be unscheduled from any runloops or dispatch queues upon which it had been scheduled.

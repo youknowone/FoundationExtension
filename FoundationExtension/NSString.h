@@ -27,13 +27,13 @@
  *  @details Implemented with [NSString initWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithFormat:
  */
-- (id)initWithInteger:(NSInteger)value;
+- (instancetype)initWithInteger:(NSInteger)value;
 
 /*!
  *  @brief Initialize an NSString object with concatnating given arguments.
  *  @details Appends all arguments to first string one by one by order.
  */
-- (id)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
+- (instancetype)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
 
 /*! @name Creating a String */
 
@@ -41,26 +41,26 @@
  *  @brief Creates and returns an NSString from integer value.
  *  @see initWithInteger:
  */
-+ (id)stringWithInteger:(NSInteger)value;
++ (instancetype)stringWithInteger:(NSInteger)value;
 
 /*!
  *  @brief Creates and returns an NSString object initialized by using a given format string as a template into which the remaining argument values are substituted according to the user’s default locale.
  *  @see [initWithFormat:arguments:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithFormat:arguments:
  */
-+ (id)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
++ (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using a given encoding.
  *  @see [initWithData:encoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithData:encoding:
  */
-+ (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
++ (instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 
 /*!
  *  @brief Creates and returns an NSString object with concatnating given arguments.
  */
-+ (id)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
++ (instancetype)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end
 
@@ -91,7 +91,7 @@
  *  @see [stringWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/clm/NSString/stringWithFormat:
  */
-- (NSString *)format:(id)first, ...;
+- (instancetype)format:(id)first, ...;
 /*!
  *  @brief Returns a string made by using self as a format string template into which the remaining argument values are substituted.
  *  @param dummyLikeNil Do nothing. Value will be ignored. This is placeholder
@@ -102,7 +102,7 @@
  *  @see [stringWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/clm/NSString/stringWithFormat:
  */
-- (NSString *)format0:(id)dummyLikeNil, ...;
+- (instancetype)format0:(id)dummyLikeNil, ...;
 
 /*! @name Range */
 
@@ -174,7 +174,7 @@
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
  *  @see @ref NSString(Creations)::stringWithData:encoding:
  */
-+ (NSString *)stringWithUTF8Data:(NSData *)data;
++ (instancetype)stringWithUTF8Data:(NSData *)data;
 
 /*!
  *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.

@@ -29,7 +29,7 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
     [recognizer release];
 }
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self initAsUIATableViewCellCopyable];

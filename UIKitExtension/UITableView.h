@@ -31,7 +31,7 @@
  *  @see [initWithStyle:reuseIdentifier:][0]
  *      [0]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#//apple_ref/occ/instm/UITableViewCell/initWithStyle:reuseIdentifier:
  */
-+ (id)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier;
++ (instancetype)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier;
 
 /*!
  *  @brief Current table view.

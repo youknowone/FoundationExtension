@@ -14,7 +14,7 @@
 @synthesize override=_override;
 @synthesize suppressive=_suppressive;
 
-- (id)initWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive {
+- (instancetype)initWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive {
     self = [super init];
     if (self != nil) {
         self.origin = origin;
@@ -30,11 +30,11 @@
     [super dealloc];
 }
 
-+ (id)mediatorWithOrigin:(id)origin override:(id)override {
++ (instancetype)mediatorWithOrigin:(id)origin override:(id)override {
     return [self mediatorWithOrigin:origin override:override suppressive:NO];
 }
 
-+ (id)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive {
++ (instancetype)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive {
     return [[[self alloc] initWithOrigin:origin override:override suppressive:suppressive] autorelease];
 }
 

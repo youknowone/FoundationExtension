@@ -74,7 +74,7 @@
  *  @brief Returns a display controller initialized with the given contents controller.
  *  @param viewController The view controller that manages display of the original contents. The view of view controller must have inputView as its top level subview.
  */
-- (id)initWithContentsController:(UIViewController *)viewController;
+- (instancetype)initWithContentsController:(UIViewController *)viewController;
 
 /*!
  *  @brief Request to reload result view.

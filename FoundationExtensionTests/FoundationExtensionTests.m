@@ -22,7 +22,7 @@
 
 @implementation TestObject
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     self->obj1 = self;
     self->obj2 = (id)[self retain];

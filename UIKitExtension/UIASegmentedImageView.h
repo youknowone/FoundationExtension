@@ -26,11 +26,11 @@
 
 @property(nonatomic, assign) CGFloat topMargin, bottomMargin, leftMargin, rightMargin;
 
-- (id)initWithCenterImage:(UIImage *)image;
-//- (id)initWithCenterImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage;
+- (instancetype)initWithCenterImage:(UIImage *)image;
+//- (instancetype)initWithCenterImage:(UIImage *)image highlightedImage:(UIImage *)highlightedImage;
 
-- (id)initWithTopImage:(UIImage *)topImage centerImage:(UIImage *)centerImage bottomImage:(UIImage *)bottomImage;
-- (id)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage;
+- (instancetype)initWithTopImage:(UIImage *)topImage centerImage:(UIImage *)centerImage bottomImage:(UIImage *)bottomImage;
+- (instancetype)initWithLeftImage:(UIImage *)leftImage centerImage:(UIImage *)centerImage rightImage:(UIImage *)rightImage;
 
 - (void)arrange;
 

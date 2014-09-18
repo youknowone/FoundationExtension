@@ -22,7 +22,7 @@
     return [[[self alloc] initWithPasteboard:pasteboard] autorelease];
 }
 
-- (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType  properties:(NSDictionary *)properties {
+- (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType properties:(NSDictionary *)properties {
     NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation][0];
     NSData *pngData = [imageRep representationUsingType:fileType properties:properties];
     return pngData;

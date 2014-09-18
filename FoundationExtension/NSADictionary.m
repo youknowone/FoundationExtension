@@ -11,14 +11,14 @@
 
 @interface NSADictionary ()
 
-- (id)initWithImplementationDelegate:(id)impl;
-+ (id)dictionaryWithImplementationDelegate:(id)impl;
+- (instancetype)initWithImplementationDelegate:(id)impl;
++ (instancetype)dictionaryWithImplementationDelegate:(id)impl;
 
 @end
 
 @implementation NSADictionary
 
-- (id)initWithImplementationDelegate:(id)impl {
+- (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_impl = [impl retain];
@@ -26,11 +26,11 @@
     return self;
 }
 
-+ (id)dictionaryWithImplementationDelegate:(id)impl {
++ (instancetype)dictionaryWithImplementationDelegate:(id)impl {
     return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSDictionary alloc] init];
@@ -38,7 +38,7 @@
     return self;
 }
 
-- (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSDictionary alloc] initWithObjects:objects forKeys:keys count:cnt];
@@ -46,12 +46,7 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSDictionary alloc] initWithCoder:aDecoder];
@@ -61,6 +56,11 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self->_impl encodeWithCoder:aCoder];
+}
+
+- (void)dealloc {
+    [self->_impl release];
+    [super dealloc];
 }
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -99,14 +99,14 @@
 
 @interface NSAMutableDictionary ()
 
-- (id)initWithImplementationDelegate:(id)impl;
-+ (id)dictionaryWithImplementationDelegate:(id)impl;
+- (instancetype)initWithImplementationDelegate:(id)impl;
++ (instancetype)dictionaryWithImplementationDelegate:(id)impl;
 
 @end
 
 @implementation NSAMutableDictionary
 
-- (id)initWithImplementationDelegate:(id)impl {
+- (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
         self->_impl = [impl retain];
@@ -114,11 +114,11 @@
     return self;
 }
 
-+ (id)dictionaryWithImplementationDelegate:(id)impl {
++ (instancetype)dictionaryWithImplementationDelegate:(id)impl {
     return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
 }
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] init];
@@ -126,7 +126,7 @@
     return self;
 }
 
-- (id)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
+- (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] initWithObjects:objects forKeys:keys count:cnt];
@@ -134,12 +134,7 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] initWithCoder:aDecoder];
@@ -149,6 +144,11 @@
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [self->_impl encodeWithCoder:aCoder];
+}
+
+- (void)dealloc {
+    [self->_impl release];
+    [super dealloc];
 }
 
 - (NSUInteger)count {
@@ -184,7 +184,7 @@
 
 // mutable methods
 
-- (id)initWithCapacity:(NSUInteger)numItems {
+- (instancetype)initWithCapacity:(NSUInteger)numItems {
     self = [super init];
     if (self != nil) {
         self->_impl = [[NSMutableDictionary alloc] initWithCapacity:numItems];

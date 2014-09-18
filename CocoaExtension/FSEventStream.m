@@ -34,7 +34,7 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     }
 }
 
-- (id)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
+- (instancetype)initWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
     self = [super init];
     if (self != nil) {
         self.delegate = delegate;
@@ -52,11 +52,11 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     return self;
 }
 
-+ (id)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
++ (instancetype)scheduledEventStreamWithPath:(NSString *)path latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
     return [self scheduledEventStreamWithPaths:@[path] latency:latency flags:flags delegate:delegate];
 }
 
-+ (id)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
++ (instancetype)scheduledEventStreamWithPaths:(NSArray *)paths latency:(NSTimeInterval)latency flags:(FSEventStreamCreateFlags)flags delegate:(id)delegate {
     FSEventStream *obj = [[self alloc] initWithPaths:paths latency:latency flags:flags delegate:delegate];
     [obj scheduleWithRunLoop:[NSRunLoop currentRunLoop] mode:NSDefaultRunLoopMode];
     [obj start];

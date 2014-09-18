@@ -17,7 +17,7 @@
     return [[[self alloc] init] autorelease];
 }
 
-- (id)initWithNumberStyle:(NSNumberFormatterStyle)style {
+- (instancetype)initWithNumberStyle:(NSNumberFormatterStyle)style {
     self = [self init];
     if (self != nil) {
         [self setNumberStyle:style];

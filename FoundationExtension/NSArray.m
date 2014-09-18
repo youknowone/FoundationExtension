@@ -25,15 +25,15 @@
 
 @implementation NSArray (Creations)
 
-- (id)initWithData:(NSData *)data {
+- (instancetype)initWithData:(NSData *)data {
     return [self initWithData:data format:NULL error:NULL];
 }
 
-+ (id)arrayWithData:(NSData *)data {
++ (instancetype)arrayWithData:(NSData *)data {
     return [[[self alloc] initWithData:data] autorelease];
 }
 
-- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSArray *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
         [self release];
@@ -42,19 +42,19 @@
     return [self initWithArray:contents];
 }
 
-+ (id)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     return [[[self alloc] initWithData:data format:format error:error] autorelease];
 }
 
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
     return [self initWithEnumerator:enumerator copyItems:NO];
 }
 
-+ (id)arrayWithEnumerator:(id<NSFastEnumeration>)enumerator {
++ (instancetype)arrayWithEnumerator:(id<NSFastEnumeration>)enumerator {
     return [[[self alloc] initWithEnumerator:enumerator] autorelease];
 }
 
-- (id)initWithEnumerator:(id<NSFastEnumeration>)enumerator copyItems:(BOOL)flag {
+- (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator copyItems:(BOOL)flag {
     NSMutableArray *array = [NSMutableArray array];
     if (flag) {
         for (id object in enumerator) {

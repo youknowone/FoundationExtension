@@ -16,9 +16,9 @@
 
 @interface UIAlertView (Shortcuts)
 
-+ (UIAlertView *)showLog:(NSString *)log file:(char *)filename line:(int)line;
++ (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line;
 
-- (id)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
-+ (UIAlertView *)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
+- (instancetype)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
++ (instancetype)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
 
 @end

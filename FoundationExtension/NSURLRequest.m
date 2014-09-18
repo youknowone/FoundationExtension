@@ -79,7 +79,7 @@
 
 @implementation NSAURLRequestHTTPBodyMultiPartFormPostFormatter
 
-- (id)init {
+- (instancetype)init {
     self = [super init];
     if (self != nil) {
         _encoding = NSUTF8StringEncoding;
@@ -88,7 +88,7 @@
     return self;
 }
 
-- (id)initWithEncoding:(NSStringEncoding)anEncoding {
+- (instancetype)initWithEncoding:(NSStringEncoding)anEncoding {
     self = [super init];
     if (self != nil) {
         _encoding = anEncoding;

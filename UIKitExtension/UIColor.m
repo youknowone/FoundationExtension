@@ -30,18 +30,18 @@
 
 @implementation UIColor (Creations)
 
-- (id)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
+- (UIColor *)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
     return [self initWithRed:red/255.0f
                        green:green/255.0f
                         blue:blue/255.0f
                        alpha:alpha/255.0f];
 }
 
-+ (id)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
++ (UIColor *)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
     return [[[self alloc] initWith8bitRed:red green:green blue:blue alpha:alpha] autorelease];
 }
 
-- (id)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
+- (UIColor *)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
     return [self initWithWhite:white/255.0f
                          alpha:alpha/255.0f];
 }
@@ -50,14 +50,14 @@
     return [[[self alloc] initWith8bitWhite:white alpha:alpha] autorelease];
 }
 
-- (id)initWith32bitColor:(UInt32)value {
+- (UIColor *)initWith32bitColor:(UInt32)value {
     return [self initWith8bitRed:(value >> 24) & 0xff
                            green:(value >> 16) & 0xff
                             blue:(value >>  8) & 0xff
                            alpha:(value >> 0 ) & 0xff];
 }
 
-+ (id)colorWith32bitColor:(UInt32)value {
++ (UIColor *)colorWith32bitColor:(UInt32)value {
     return [[[self alloc] initWith32bitColor:value] autorelease];
 }
 
@@ -260,7 +260,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 @implementation UIAMonochromeColorComponents
 
-- (id)initWithCGColor:(CGColorRef)color {
+- (instancetype)initWithCGColor:(CGColorRef)color {
     self = [super init];
     if (self != nil) {
         const CGFloat *components = CGColorGetComponents(color);
@@ -299,7 +299,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 @implementation UIARGBColorComponents
 
-- (id)initWithCGColor:(CGColorRef)color {
+- (instancetype)initWithCGColor:(CGColorRef)color {
     self = [super init];
     if (self != nil) {
         const CGFloat *components = CGColorGetComponents(color);
@@ -335,15 +335,15 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 @dynamic red, green, blue, alpha;
 
-- (id)initWithColor:(UIColor *)color {
+- (instancetype)initWithColor:(UIColor *)color {
     return [self initWithCGColor:color.CGColor];
 }
 
-+ (id)componentsWithColor:(UIColor *)color {
++ (instancetype)componentsWithColor:(UIColor *)color {
     return [self componentsWithCGColor:color.CGColor];
 }
 
-- (id)initWithCGColor:(CGColorRef)color {
+- (instancetype)initWithCGColor:(CGColorRef)color {
     [self release];
     CGColorSpaceRef colorSpace = CGColorGetColorSpace(color);
     CGColorSpaceModel colorSpaceModel = CGColorSpaceGetModel(colorSpace);
@@ -361,7 +361,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
     return self;
 }
 
-+ (id)componentsWithCGColor:(CGColorRef)color {
++ (instancetype)componentsWithCGColor:(CGColorRef)color {
     return [[(UIAColorComponents *)[self alloc] initWithCGColor:color] autorelease];
 }
 

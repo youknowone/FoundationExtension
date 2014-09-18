@@ -48,7 +48,7 @@
  *  @see initWithData:format:error:
  *  @see dictionaryWithData:
  */
-- (id)initWithData:(NSData *)data;
+- (instancetype)initWithData:(NSData *)data;
 
 /*!
  *  @brief Initializes a newly allocated dictionary with the contents of data. Data must be property list.
@@ -60,7 +60,7 @@
  *  @see dictionaryWithData:format:error:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSPropertyListSerialization_Class/Reference/Reference.html#//apple_ref/c/tdef/NSPropertyListFormat
  */
-- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 /*! @name Creating a Dictionary */
 
@@ -68,12 +68,12 @@
  *  @brief Creates and returns a dictionary containing the contents of data. Data must be property list.
  *  @see initWithData:
  */
-+ (id)dictionaryWithData:(NSData *)data;
++ (instancetype)dictionaryWithData:(NSData *)data;
 
 /*!
  *  @brief Creates and returns a dictionary containing the contents of data. Data must be property list.
  *  @see initWithData:format:error:
  */
-+ (id)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
 
 @end

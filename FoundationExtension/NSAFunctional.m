@@ -29,13 +29,13 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
     NSAObjectUnaryOperator _mapper;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
 
 @end
 
 @implementation _NSAFunctionalMapEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
@@ -70,13 +70,13 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
     NSAObjectUnaryOperatorWithIndex _mapper;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
 
 @end
 
 @implementation _NSAFunctionalMapWithIndexEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
@@ -114,13 +114,13 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
     NSAObjectUnaryOperator _mapper;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper;
 
 @end
 
 @implementation _NSAFunctionalMapFilterEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperator)mapper {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
@@ -163,13 +163,13 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
     NSAObjectUnaryOperatorWithIndex _mapper;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper;
 
 @end
 
 @implementation _NSAFunctionalMapFilterWithIndexEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator mapper:(NSAObjectUnaryOperatorWithIndex)mapper {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
@@ -213,13 +213,13 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
     NSAObjectPicker _filter;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPicker)filter;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPicker)filter;
 
 @end
 
 @implementation _NSAFunctionalFilterEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPicker)filter {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPicker)filter {
     self = [super init];
     if (self != nil) {
         self->_filter = filter;
@@ -261,13 +261,13 @@ NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
     NSAObjectPickerWithIndex _filter;
 }
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter;
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter;
 
 @end
 
 @implementation _NSAFunctionalFilterWithIndexEnumerator
 
-- (id)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter {
+- (instancetype)initWithEnumerator:(NSEnumerator *)enumerator filter:(NSAObjectPickerWithIndex)filter {
     self = [super init];
     if (self != nil) {
         self->_filter = filter;

@@ -20,7 +20,7 @@
 @property(nonatomic,readonly) NSString *string;
 @property(nonatomic,readonly) NSInteger major, minor, bugfix;
 
-- (id)initWithString:(NSString *)string;
-+ (id)versionWithString:(NSString *)string;
+- (instancetype)initWithString:(NSString *)string;
++ (instancetype)versionWithString:(NSString *)string;
 
 @end

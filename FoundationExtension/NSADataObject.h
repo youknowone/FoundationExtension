@@ -80,7 +80,7 @@
  *  @brief Creates and returns an empty tuple.
  *  @return An empty tuple.
  */
-+ (id)tuple;
++ (instancetype)tuple;
 
 /*!
  *  @brief Initilize a tuple containing first as first object and second as second object.
@@ -90,12 +90,12 @@
  *      Value for second
  *  @return A tuple with first and second value.
  */
-- (id)initWithFirst:(id)first second:(id)second;
+- (instancetype)initWithFirst:(id)first second:(id)second;
 /*!
  *  @brief Creates and returns a tuple containing first as first object and second as second object.
  *  @see initWithFirst:second:
  */
-+ (id)tupleWithFirst:(id)first second:(id)second;
++ (instancetype)tupleWithFirst:(id)first second:(id)second;
 
 @end
 
@@ -145,7 +145,7 @@
  *  @brief Creates and returns an empty triple.
  *  @return An empty triple.
  */
-+ (id)triple;
++ (instancetype)triple;
 
 /*!
  *  @brief Initilize a triple containing first as first object, second as second object and third as third object.
@@ -157,12 +157,12 @@
  *      Value for third
  *  @return A tuple with first, second and third value.
  */
-- (id)initWithFirst:(id)first second:(id)second third:(id)third;
+- (instancetype)initWithFirst:(id)first second:(id)second third:(id)third;
 /*!
  *  @brief Creates and returns a triple containing first as first object, second as second object and third as third object.
  *  @see initWithFirst:second:third:
  */
-+ (id)tripleWithFirst:(id)first second:(id)second third:(id)third;
++ (instancetype)tripleWithFirst:(id)first second:(id)second third:(id)third;
 
 @end
 

@@ -31,7 +31,7 @@
  *  @see [setNumberStyle:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSNumberFormatter_Class/Reference/Reference.html#//apple_ref/occ/instm/NSNumberFormatter/setNumberStyle:
  */
-- (id)initWithNumberStyle:(NSNumberFormatterStyle)style;
+- (instancetype)initWithNumberStyle:(NSNumberFormatterStyle)style;
 /*!
  *  @brief Creates and returns with number style.
  *  @see initWithNumberStyle:

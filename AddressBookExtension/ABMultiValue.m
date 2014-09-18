@@ -13,9 +13,14 @@
 
 @synthesize ref=_ref;
 
-- (instancetype)initWithABMultiValueRef:(CFTypeRef)ref {
+- (instancetype)initWithABMultiValueRefNoRetain:(CFTypeRef)ref {
     self = [super init];
     self->_ref = ref;
+    return self;
+}
+
+- (instancetype)initWithABMultiValueRef:(CFTypeRef)ref {
+    self = [self initWithABMultiValueRefNoRetain:ref];
     CFRetain(self->_ref);
     return self;
 }
@@ -30,20 +35,23 @@
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
     ABMutableMultiValueRef copied = ABMultiValueCreateMutableCopy(self->_ref);
-    ABMutableMultiValue *obj = [[ABMutableMultiValue alloc] initWithABMultiValueRef:copied];
-    CFRelease(copied);
+    ABMutableMultiValue *obj = [[ABMutableMultiValue alloc] initWithABMultiValueRefNoRetain:copied];
     return obj;
 }
 
 - (id)valueAtIndex:(NSUInteger)index {
     CFTypeRef obj = ABMultiValueCopyValueAtIndex(self->_ref, (CFIndex)index);
-    CFAutorelease(obj);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
     return (id)obj;
 }
 
 - (NSArray *)allValues {
     CFArrayRef obj = ABMultiValueCopyArrayOfAllValues(self->_ref);
-    CFAutorelease(obj);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
     return (NSArray *)obj;
 }
 
@@ -58,15 +66,19 @@
 
 - (NSString *)labelAtIndex:(NSUInteger)index {
     CFStringRef obj = ABMultiValueCopyLabelAtIndex(self->_ref, (CFIndex)index);
-    CFAutorelease(obj);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
     return (NSString *)obj;
 }
 
 - (NSString *)localizedLabelAtIndex:(NSUInteger)index {
-    CFStringRef label = (CFStringRef)[self labelAtIndex:index];
-    label = ABAddressBookCopyLocalizedLabel(label);
-    CFAutorelease(label);
-    return (NSString *)label;
+    CFStringRef obj = (CFStringRef)[self labelAtIndex:index];
+    if (obj != nil) {
+        obj = ABAddressBookCopyLocalizedLabel(obj);
+        CFAutorelease(obj);
+    }
+    return (NSString *)obj;
 }
 
 - (ABMultiValueIdentifier)identifierAtIndex:(NSUInteger)index {
@@ -88,8 +100,7 @@
 
 - (instancetype)initWithPropertyType:(ABPropertyType)type {
     ABMutableMultiValueRef ref = ABMultiValueCreateMutable(type);
-    self = [self initWithABMultiValueRef:ref];
-    CFRelease(ref);
+    self = [self initWithABMultiValueRefNoRetain:ref];
     return self;
 }
 

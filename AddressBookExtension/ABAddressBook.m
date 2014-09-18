@@ -17,30 +17,32 @@
     return ABAddressBookGetAuthorizationStatus();
 }
 
-- (instancetype)init {
-    ABAddressBookRef aRef = ABAddressBookCreateWithOptions(NULL, nil);
-    if (aRef == nil) {
-        return nil;
-    }
-    self = [self initWithABAddressBookRef:aRef];
-    CFRelease(aRef);
-    return self;
-}
-
-- (instancetype)initWithABAddressBookRef:(ABAddressBookRef)aRef {
+- (instancetype)initWithABAddressBookRefNoRetain:(ABAddressBookRef)aRef {
     if (aRef == nil) {
         return nil;
     }
     self = [super init];
-    CFRetain(aRef);
     self->_ref = aRef;
+    return self;
+}
+
+- (instancetype)init {
+    ABAddressBookRef aRef = ABAddressBookCreateWithOptions(NULL, nil);
+    self = [self initWithABAddressBookRefNoRetain:aRef];
+    return self;
+}
+
+- (instancetype)initWithABAddressBookRef:(ABAddressBookRef)aRef {
+    self = [self initWithABAddressBookRefNoRetain:aRef];
+    if (self != nil) {
+        CFRetain(aRef);
+    }
     return self;
 }
 
 - (instancetype)initWithOptions:(NSDictionary *)options error:(NSError *)error {
     ABAddressBookRef aRef = ABAddressBookCreateWithOptions((CFDictionaryRef)options, (CFErrorRef *)&error);
-    self = [self initWithABAddressBookRef:aRef];
-    CFRelease(aRef);
+    self = [self initWithABAddressBookRefNoRetain:aRef];
     return self;
 }
 

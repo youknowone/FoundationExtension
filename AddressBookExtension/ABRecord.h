@@ -17,6 +17,7 @@
 @property(readonly,nonatomic) ABRecord *ref;
 
 - (instancetype)initWithABRecordRef:(ABRecordRef)ref;
+- (instancetype)initWithABRecordRefNoRetain:(ABRecordRef)ref;
 
 @property(readonly,nonatomic) ABRecordID recordID;
 @property(readonly,nonatomic) ABRecordType recordType;

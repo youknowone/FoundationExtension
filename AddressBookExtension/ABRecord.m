@@ -13,10 +13,37 @@
 NSArray *_ABArrayOfGroupRefToGroup(CFArrayRef rawGroups);
 NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople);
 
+
+NSArray *_ABArrayOfGroupRefToGroup(CFArrayRef rawGroups) {
+    if (rawGroups == nil) {
+        return nil;
+    }
+    NSArray *groups = [(NSArray *)rawGroups arrayByMappingOperator:^id(id obj) {
+        return [[[ABGroup alloc] initWithABRecordRef:(ABRecordRef)obj] autorelease];
+    }];
+    CFRelease(rawGroups);
+    return groups;
+}
+
+NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
+    if (rawPeople == nil) {
+        return nil;
+    }
+    NSArray *people = [(NSArray *)rawPeople arrayByMappingOperator:^id(id obj) {
+        return [[[ABPerson alloc] initWithABRecordRef:(ABRecordRef)obj] autorelease];
+    }];
+    CFRelease(rawPeople);
+    return people;
+}
+
+
 @implementation ABAddressBook (Source)
 
 - (NSArray *)allSources {
     CFArrayRef rawSources = ABAddressBookCopyArrayOfAllSources(self.ref);
+    if (rawSources == nil) {
+        return nil;
+    }
     NSArray *sources = [(NSArray *)rawSources arrayByMappingOperator:^id(id obj) {
         return [[[ABSource alloc] initWithABRecordRef:(ABRecordRef)obj] autorelease];
     }];
@@ -53,14 +80,6 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople);
     return [group autorelease];
 }
 
-NSArray *_ABArrayOfGroupRefToGroup(CFArrayRef rawGroups) {
-    NSArray *groups = [(NSArray *)rawGroups arrayByMappingOperator:^id(id obj) {
-        return [[[ABGroup alloc] initWithABRecordRef:(ABRecordRef)obj] autorelease];
-    }];
-    CFRelease(rawGroups);
-    return groups;
-}
-
 - (NSArray *)allGroups {
     CFArrayRef obj = ABAddressBookCopyArrayOfAllGroups(self.ref);
     return _ABArrayOfGroupRefToGroup(obj);
@@ -73,8 +92,7 @@ NSArray *_ABArrayOfGroupRefToGroup(CFArrayRef rawGroups) {
 
 - (ABSource *)source {
     ABRecordRef sourceRef = ABGroupCopySource(self.ref);
-    ABSource *source = [[ABSource alloc] initWithABRecordRef:sourceRef];
-    CFRelease(sourceRef);
+    ABSource *source = [[ABSource alloc] initWithABRecordRefNoRetain:sourceRef];
     return [source autorelease];
 }
 
@@ -85,14 +103,6 @@ NSArray *_ABArrayOfGroupRefToGroup(CFArrayRef rawGroups) {
 
 - (NSUInteger)personCount {
     return ABAddressBookGetPersonCount(self.ref);
-}
-
-NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
-    NSArray *people = [(NSArray *)rawPeople arrayByMappingOperator:^id(id obj) {
-        return [[[ABPerson alloc] initWithABRecordRef:(ABRecordRef)obj] autorelease];
-    }];
-    CFRelease(rawPeople);
-    return people;
 }
 
 - (NSArray *)allPeople {
@@ -117,8 +127,7 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 - (ABPerson *)personWithRecordID:(ABRecordID)recordID {
     ABRecordRef obj = ABAddressBookGetPersonWithRecordID(self.ref, recordID);
-    ABPerson *source = [[[ABPerson alloc] initWithABRecordRef:obj] autorelease];
-    CFRelease(obj);
+    ABPerson *source = [[[ABPerson alloc] initWithABRecordRefNoRetain:obj] autorelease];
     return source;
 }
 
@@ -130,14 +139,19 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 @synthesize ref=_ref;
 
-- (instancetype)initWithABRecordRef:(ABRecordRef)aRef {
+- (instancetype)initWithABRecordRefNoRetain:(ABRecordRef)aRef {
     if (aRef == nil) {
         [self autorelease];
         return nil;
     }
     self = [super init];
-    CFRetain(aRef);
     self->_ref = aRef;
+    return self;
+}
+
+- (instancetype)initWithABRecordRef:(ABRecordRef)aRef {
+    self = [self initWithABRecordRefNoRetain:aRef];
+    CFRetain(aRef);
     return self;
 }
 
@@ -156,7 +170,9 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 - (NSString *)compositeName {
     CFStringRef obj = ABRecordCopyCompositeName(self->_ref);
-    CFAutorelease(obj);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
     return (NSString *)obj;
 }
 
@@ -198,15 +214,13 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 - (instancetype)init {
     ABRecordRef ref = ABGroupCreate();
-    self = [super initWithABRecordRef:ref];
-    CFRelease(ref);
+    self = [super initWithABRecordRefNoRetain:ref];
     return self;
 }
 
 - (instancetype)initInSource:(ABSource *)source {
     ABRecordRef ref = ABGroupCreateInSource(source.ref);
-    self = [super initWithABRecordRef:ref];
-    CFRelease(ref);
+    self = [super initWithABRecordRefNoRetain:ref];
     return self;
 }
 
@@ -235,15 +249,13 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 - (instancetype)init {
     ABRecordRef ref = ABPersonCreate();
-    self = [super initWithABRecordRef:ref];
-    CFRelease(ref);
+    self = [super initWithABRecordRefNoRetain:ref];
     return self;
 }
 
 - (instancetype)initInSource:(ABSource *)source {
     ABRecordRef ref = ABPersonCreateInSource(source.ref);
-    self = [super initWithABRecordRef:ref];
-    CFRelease(ref);
+    self = [super initWithABRecordRefNoRetain:ref];
     return self;
 }
 
@@ -252,15 +264,19 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 }
 
 - (NSData *)imageData {
-    CFDataRef data = ABPersonCopyImageData(self.ref);
-    CFAutorelease(data);
-    return (NSData *)data;
+    CFDataRef obj = ABPersonCopyImageData(self.ref);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
+    return (NSData *)obj;
 }
 
 - (NSData *)imageDataWithFormat:(ABPersonImageFormat)format {
-    CFDataRef data = ABPersonCopyImageDataWithFormat(self.ref, format);
-    CFAutorelease(data);
-    return (NSData *)data;
+    CFDataRef obj = ABPersonCopyImageDataWithFormat(self.ref, format);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
+    return (NSData *)obj;
 }
 
 - (void)setImageData:(NSData *)imageData {
@@ -286,15 +302,16 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
 
 - (ABSource *)source {
     ABRecordRef sourceRef = ABPersonCopySource(self.ref);
-    ABSource *source = [[ABSource alloc] initWithABRecordRef:sourceRef];
-    CFRelease(sourceRef);
+    ABSource *source = [[ABSource alloc] initWithABRecordRefNoRetain:sourceRef];
     return [source autorelease];
 }
 
 - (NSString *)compositeNameDelimiter {
-    CFStringRef delimiter = ABPersonCopyCompositeNameDelimiterForRecord(self.ref);
-    CFAutorelease(delimiter);
-    return (NSString *)delimiter;
+    CFStringRef obj = ABPersonCopyCompositeNameDelimiterForRecord(self.ref);
+    if (obj != nil) {
+        CFAutorelease(obj);
+    }
+    return (NSString *)obj;
 }
 
 - (ABPersonCompositeNameFormat)compositeNameFormat {

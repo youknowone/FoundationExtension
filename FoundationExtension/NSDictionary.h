@@ -24,6 +24,18 @@
  */
 - (BOOL)containsKey:(id)aKey;
 
+/*!
+ *  @brief Returns one of the keys in the dictionary, or nil if the dictionary contains no objects.
+ *  @return One of the keys in the dictionary, or nil if the dictionary contains no objects. The key returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random.
+ */
+- (id)anyKey;
+
+/*!
+ *  @brief Returns one of the objects in the dictionary, or nil if the dictionary contains no objects.
+ *  @return One of the objects in the dictionary, or nil if the dictionary contains no objects. The object returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random.
+ */
+- (id)anyObject;
+
 @end
 
 /*!

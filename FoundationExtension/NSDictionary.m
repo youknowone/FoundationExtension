@@ -16,6 +16,14 @@
     return [self.allKeys containsObject:key];
 }
 
+- (id)anyKey {
+    return [self.keyEnumerator nextObject];
+}
+
+- (id)anyObject {
+    return [self.objectEnumerator nextObject];
+}
+
 @end
 
 

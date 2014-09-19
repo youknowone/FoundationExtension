@@ -155,15 +155,22 @@
 @interface NSArray (Random)
 
 /*!
- *  @brief Select random object from NSArray.
+ *  @brief Returns one of the objects in the array, or nil if the array contains no objects.
+ *  @return One of the objects in the array, or nil if the array contains no objects.
  */
 - (id)randomObject;
 
 /*!
- *  @brief Select the given count number of random objects form NSArray.
- *  @param count The number of items to select.
+ *  @brief Returns an array of random objects of given number in the array without duplication.
+ *  @param count A number of items to select.
+ *  @return An array of random objects of given number in the array without duplication. If given count is bigger than the size of receiver array, it returns a shuffled array of the array.
  */
 - (NSArray *)randomObjectsOfCount:(NSUInteger)count;
+
+/*!
+ *  @brief Returns a new shuffled array from the array;
+ */
+- (NSArray *)shuffledArray;
 
 @end
 
@@ -173,9 +180,9 @@
 @interface NSMutableArray (Random)
 
 /*!
- *  @brief Pop random object from NSArray.
+ *  @brief Removes a random object in the array
  */
-- (id)popRandomObject;
+- (id)removeRandomObject;
 
 /*!
  *  @brief Shuffle
@@ -183,6 +190,7 @@
 - (void)shuffle;
 
 @end
+
 
 /*!
  *  @brief Deprecated methods of NSArray extensions.
@@ -194,5 +202,18 @@
  *  @deprecated Use (array)[index] syntax of Modern Objective-C instead of this method.
  */
 - (id):(NSUInteger)index __deprecated;
+
+@end
+
+/*!
+ *  @brief Deprecated methods of NSMutableArray extensions.
+ */
+@interface NSMutableArray (Deprecated)
+
+/*!
+ *  @brief Pop random object from NSArray.
+ *  @deprecated Use @ref removeRandomObject
+ */
+- (id)popRandomObject __deprecated;
 
 @end

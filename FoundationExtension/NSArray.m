@@ -100,23 +100,19 @@
 - (id)randomObject {
     NSUInteger count = self.count;
     if (count == 0) {
-        return self[0]; // raise index error
+        return nil;
     }
     return self[arc4random_uniform((u_int32_t)count)];
 }
 
-- (NSArray *)randomObjectsOfCount:(NSUInteger)theCount {
+- (NSArray *)randomObjectsOfCount:(NSUInteger)aCount {
     NSUInteger count = self.count;
-    if (theCount > count) {
-        [self objectAtIndex:count]; // NOTE: to raise proper exception
-        return nil;
-    }
     // FIXME: slow - reimplement with objectsAtIndexes
     NSMutableArray *copy = [self mutableCopy];
     NSMutableArray *selected = [NSMutableArray array];
 
-    for (NSUInteger i = 0; i < theCount; i ++) {
-        NSUInteger index = arc4random_uniform((uint32_t)(theCount - i));
+    for (NSUInteger i = 0; i < MIN(aCount, count); i ++) {
+        NSUInteger index = arc4random_uniform((uint32_t)(aCount - i));
         [selected addObject:copy[index]];
         [copy removeObjectAtIndex:index];
     }
@@ -125,12 +121,16 @@
     return selected;
 }
 
+- (NSArray *)shuffledArray {
+    return [self randomObjectsOfCount:self.count];
+}
+
 @end
 
 
 @implementation NSMutableArray (Random)
 
-- (id)popRandomObject {
+- (id)removeRandomObject {
     NSUInteger count = self.count;
     if (count == 0) {
         return self[0]; // raise index error
@@ -145,7 +145,7 @@
     NSMutableArray *pool = [self mutableCopy];
     [self removeAllObjects];
     while (pool.count) {
-        [self addObject:[pool popRandomObject]];
+        [self addObject:[pool removeRandomObject]];
     }
     [pool release];
 }
@@ -157,6 +157,15 @@
 
 - (id):(NSUInteger)index {
     return self[index];
+}
+
+@end
+
+
+@implementation NSMutableArray (Deprecated)
+
+- (id)popRandomObject {
+    return [self removeRandomObject];
 }
 
 @end

@@ -321,6 +321,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @brief Filters objects and returns result as array.
  *  @details Shallow wrapper of @link NSAFilter @endlink
  *  @see NSAFilter
+ *  @see indexesOfObjectsPassingTest:
  */
 - (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter;
 
@@ -568,6 +569,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @brief Filters objects and returns result as array.
  *  @details Shallow wrapper of @link NSAFilter @endlink
  *  @see NSAFilter
+ *  @see objectsPassingTest:
  */
 - (NSArray *)arrayByFilteringOperator:(NSAObjectPicker)filter;
 

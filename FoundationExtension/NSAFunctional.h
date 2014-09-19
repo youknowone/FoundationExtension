@@ -552,14 +552,14 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 - (void)applyProcedure:(NSAObjectProcedure)procedure;
 
 /*!
- *  @brief Maps mapper to objects and returns the result as array.
+ *  @brief Returns an array of the result objects of mapping the given mappter to objects.
  *  @details Shallow wrapper of @link NSAMap @endlink
  *  @see NSAMap
  */
 - (NSArray *)arrayByMappingOperator:(NSAObjectUnaryOperator)mapper;
 
 /*!
- *  @brief Maps mapper to objects and filters nil result and returns the result as array.
+ *  @brief Returns an array of the result objects of mapping the given mappter to objects which is not nil.
  *  @details Shallow wrapper of @link NSAMapFilter @endlink
  *  @see NSAMapFilter
  */
@@ -617,7 +617,11 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 
 @end
 
-
+/*!
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @details Ordered set is treated as variation of array.
+ *  @see NSAFunctional.h
+ */
 @interface NSOrderedSet (Functional)
 
 /*!
@@ -710,6 +714,48 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @see NSAFilter
  */
 - (NSSet *)setByFilteringOperator:(NSAObjectPicker)filter;
+
+@end
+
+
+typedef void (^NSAObjectProcedureWithCount)(id obj, NSUInteger count);
+typedef id (^NSAObjectUnaryOperatorWithCount)(id obj, NSUInteger count);
+typedef BOOL (^NSAObjectPickerWithCount)(id obj, NSUInteger count);
+
+/*!
+ *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
+ *  @details Counted set has additional functions with count.
+ *  @see NSAFunctional.h
+ */
+@interface NSCountedSet (Functional)
+
+/*!
+ *  @brief Apply procedure with count to objects.
+ *  @details A wrapper of @link NSAApply @endlink
+ *  @see NSAApply
+ */
+- (void)applyProcedureWithCount:(NSAObjectProcedureWithCount)procedure;
+
+/*!
+ *  @brief Maps mapper with index to objects and returns the result as array.
+ *  @details A wrapper of @link NSAMap @endlink
+ *  @see NSAMap
+ */
+- (NSArray *)arrayByMappingOperatorWithCount:(NSAObjectUnaryOperatorWithCount)mapper;
+
+/*!
+ *  @brief Maps mapper with index to objects and filters nil result and returns the result as array.
+ *  @details A wrapper of @link NSAMapFilter @endlink
+ *  @see NSAMapFilter
+ */
+- (NSArray *)arrayByMapFilteringOperatorWithCount:(NSAObjectUnaryOperatorWithCount)mapper;
+
+/*!
+ *  @brief Filters objects with index and returns result as array.
+ *  @details A wrapper of @link NSAFilter @endlink
+ *  @see NSAFilter
+ */
+- (NSArray *)arrayByFilteringOperatorWithCount:(NSAObjectPickerWithCount)filter;
 
 @end
 

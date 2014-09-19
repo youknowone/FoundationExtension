@@ -854,3 +854,36 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 }
 
 @end
+
+
+@implementation NSCountedSet (Functional)
+
+- (void)applyProcedureWithCount:(NSAObjectProcedureWithCount)procedure {
+    [self applyProcedure:^(id obj) {
+        NSUInteger count = [self countForObject:obj];
+        procedure(obj, count);
+    }];
+}
+
+- (NSArray *)arrayByMappingOperatorWithCount:(NSAObjectUnaryOperatorWithCount)mapper {
+    return [self arrayByMappingOperator:^(id obj) {
+        NSUInteger count = [self countForObject:obj];
+        return mapper(obj, count);
+    }];
+}
+
+- (NSArray *)arrayByMapFilteringOperatorWithCount:(NSAObjectUnaryOperatorWithCount)mapper {
+    return [self arrayByMapFilteringOperator:^(id obj) {
+        NSUInteger count = [self countForObject:obj];
+        return mapper(obj, count);
+    }];
+}
+
+- (NSArray *)arrayByFilteringOperatorWithCount:(NSAObjectPickerWithCount)filter {
+    return [self arrayByFilteringOperator:^(id obj) {
+        NSUInteger count = [self countForObject:obj];
+        return filter(obj, count);
+    }];
+}
+
+@end

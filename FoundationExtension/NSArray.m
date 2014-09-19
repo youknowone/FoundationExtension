@@ -12,10 +12,6 @@
 
 @implementation NSArray (Shortcuts)
 
-- (id):(NSUInteger)index {
-    return self[index];
-}
-
 - (BOOL)hasIndex:(NSUInteger)index {
     return index < self.count;
 }
@@ -152,6 +148,15 @@
         [self addObject:[pool popRandomObject]];
     }
     [pool release];
+}
+
+@end
+
+
+@implementation NSArray (Deprecated)
+
+- (id):(NSUInteger)index {
+    return self[index];
 }
 
 @end

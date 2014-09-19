@@ -47,6 +47,7 @@
 #import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
+#import <FoundationExtension/NSSet.h>                       // level: 0 / deps(0):  / internal(1): NSArray
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
@@ -55,10 +56,10 @@
 #import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
-#import <FoundationExtension/NSAClassDeprecated.h>          // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAClassDeprecated.h>          // level: 20 / deps(0):  / internal(1): NSObject
 #import <FoundationExtension/NSACommonCrypto.h>             // level: 20 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSACommonDigest.h>             // level: 20 / deps(0):  / internal(0):
-#import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(1): NSASubscript / internal(1): NSArray
 #import <FoundationExtension/NSADictionary.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAFunctional.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOrderedDictionary.h>        // level: 20 / deps(0):  / internal(0):

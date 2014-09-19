@@ -21,12 +21,6 @@
 @interface NSArray (Shortcuts)
 
 /*!
- *  @brief Extreme short form of 'ObjectAtIndex:'
- *  @deprecated Use (array)[index] syntax instead of this.
- */
-- (id):(NSUInteger)index __deprecated;
-
-/*!
  *  @brief index < self.count
  */
 - (BOOL)hasIndex:(NSUInteger)index;
@@ -187,5 +181,18 @@
  *  @brief Shuffle
  */
 - (void)shuffle;
+
+@end
+
+/*!
+ *  @brief Deprecated methods of NSArray extensions.
+ */
+@interface NSArray (Deprecated)
+
+/*!
+ *  @brief Extreme short form of 'ObjectAtIndex:'
+ *  @deprecated Use (array)[index] syntax of Modern Objective-C instead of this method.
+ */
+- (id):(NSUInteger)index __deprecated;
 
 @end

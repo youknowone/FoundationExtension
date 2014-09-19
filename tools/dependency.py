@@ -9,7 +9,9 @@ def find_import(lines, fileregex='"(.*).h"'):
     for l in lines:
         m = re.search('^ *# *import *' + fileregex + ' *$', l)
         if m is not None:
-            deps.append(m.group(1))
+            dep = m.group(1)
+            if dep not in ['Foundation', 'Cocoa', 'UIKit']:
+                deps.append(dep)
     return deps
 
 nodeps = ['debug', 'runtime', 'Cocoa', 'UIKit', 'CommonCryptor', 'CommonDigest']

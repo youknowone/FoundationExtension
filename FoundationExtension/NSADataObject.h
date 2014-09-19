@@ -15,11 +15,12 @@
  *      These classes may be not very useful. Consider to use above short expressions.
  */
 
+#import <FoundationExtension/NSASubscript.h>
 
 /*!
  *  @brief This protocol defines NSArray-like interface methods for data objects.
  */
-@protocol NSAArrayLikeDataObject <NSObject>
+@protocol NSAArrayLikeDataObject <NSObject, NSFastEnumeration, NSAIndexedSubscript>
 
 /*!
  *  @brief Returns the number of objects currently in the data object.
@@ -33,14 +34,6 @@
  *  @return The object located at index.
  */
 - (id)objectAtIndex:(NSUInteger)index;
-
-/*!
- *  @brief Returns the object located at index. Shortcut of @ref objectAtIndex:
- *  @param index
- *      An index within the bounds of data object.
- *  @return The object located at index.
- */
-- (id):(NSUInteger)index;
 
 /*!
  *  @brief Returns the lowest index whose corresponding member value is equal to a given object.
@@ -58,13 +51,41 @@
  */
 - (BOOL)containsObject:(id)anObject;
 
+/*!
+ *  @brief Returns the object located at index. Shortcut of @ref objectAtIndex:
+ *  @param index
+ *      An index within the bounds of data object.
+ *  @return The object located at index.
+ *  @deprecated Use (obj)[index] syntax of Modern Objective-C instead of this method.
+ */
+- (id):(NSUInteger)index __deprecated;
+
+/*!
+ *  @brief Returns an array containing the container’s members, or an empty array if the container has no members.
+ */
+@property(readonly, copy) NSArray *allObjects;
+
+@end
+
+/*!
+ *  @brief This protocol defines NSMutableArray-like interface methods for data objects.
+ */
+@protocol NSAMutableArrayLikeDataObject<NSAArrayLikeDataObject, NSAMutableIndexedSubscript>
+
+/*!
+ *  @brief Replaces the object at index with anObject.
+ *  @param index The index of the object to be replaced. This value must not exceed the bounds of the array.
+ *  @param anObject The object with which to replace the object at index index in the array. This value must not be nil.
+ */
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject;
+
 @end
 
 
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSATuple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration, NSAArrayLikeDataObject> {
+@interface NSATuple: NSObject<NSCopying, NSMutableCopying, NSAArrayLikeDataObject> {
     id _first, _second;
 }
 /*!
@@ -103,7 +124,7 @@
 /*!
  *  @brief Manages ordered collections of 2 objects.
  */
-@interface NSAMutableTuple: NSATuple
+@interface NSAMutableTuple: NSATuple<NSAMutableArrayLikeDataObject>
 
 /*!
  *  @brief first object
@@ -119,15 +140,22 @@
  */
 - (void)swap;
 
+/*!
+ *  @brief Sets the receiving tuple's elements to those in another given tuple.
+ *  @param otherTuple The tuple of objects with which to replace the receiving tuple's content.
+ */
+- (void)setTuple:(NSATuple *)otherTuple;
+
 @end
 
 
 /*!
  *  @brief Manages ordered collections of 3 objects.
  */
-@interface NSATriple: NSObject<NSCopying, NSMutableCopying, NSFastEnumeration, NSAArrayLikeDataObject> {
+@interface NSATriple: NSObject<NSCopying, NSMutableCopying, NSAArrayLikeDataObject> {
     id _first, _second, _third;
 }
+
 /*!
  *  @brief first object
  */
@@ -170,7 +198,7 @@
 /*!
  *  @brief Manages ordered collections of 3 objects.
  */
-@interface NSAMutableTriple: NSATriple
+@interface NSAMutableTriple: NSATriple<NSAMutableArrayLikeDataObject>
 
 /*!
  *  @brief first object
@@ -184,5 +212,11 @@
  *  @brief third object
  */
 @property(nonatomic, retain) id third;
+
+/*!
+ *  @brief Sets the receiving triple's elements to those in another given triple.
+ *  @param otherTriple The triple of objects with which to replace the receiving triple's content.
+ */
+- (void)setTriple:(NSATriple *)otherTriple;
 
 @end

@@ -355,6 +355,7 @@
 		38412DBC17075C7A0082ED4E /* UITResultDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITResultDisplayViewController.h; sourceTree = "<group>"; };
 		38412DBD17075C7A0082ED4E /* UITResultDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITResultDisplayViewController.m; sourceTree = "<group>"; };
 		38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UITResultDisplayViewController.xib; sourceTree = "<group>"; };
+		384852E219CB2E0D00304965 /* NSASubscript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSASubscript.h; sourceTree = "<group>"; };
 		38485C4F170F14820001A99D /* NSGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSGeometry.h; sourceTree = "<group>"; };
 		38485C50170F14820001A99D /* NSGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSGeometry.m; sourceTree = "<group>"; };
 		38485C531710081E0001A99D /* UIActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIActivityIndicatorView.h; sourceTree = "<group>"; };
@@ -849,6 +850,7 @@
 				38505CBA164647910059773B /* NSAOrderedDictionary.m */,
 				38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */,
 				38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */,
+				384852E219CB2E0D00304965 /* NSASubscript.h */,
 				3805FBA617AA89E2008487A9 /* NSAVersion.h */,
 				3805FBA717AA89E2008487A9 /* NSAVersion.m */,
 			);

@@ -25,13 +25,13 @@
 #import <UIKitExtension/NSAttributedString+UIKit.h>         // level: 0 / deps(1): NSADictionary / internal(0):
 #import <UIKitExtension/UIActivityIndicatorView.h>          // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIAlertView.h>                      // level: 0 / deps(0):  / internal(0):
-#import <UIKitExtension/UIApplication.h>                    // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UIApplication.h>                    // level: 0 / deps(0):  / internal(1): NSObject
 #import <UIKitExtension/UIColor.h>                          // level: 0 / deps(0):  / internal(1): NSString
 #import <UIKitExtension/UIControl.h>                        // level: 0 / deps(0):  / internal(0):
-#import <UIKitExtension/UIDevice.h>                         // level: 0 / deps(0):  / internal(1): NSString
+#import <UIKitExtension/UIDevice.h>                         // level: 0 / deps(1): NSAVersion / internal(1): NSString
 #import <UIKitExtension/UIImage.h>                          // level: 0 / deps(0):  / internal(1): NSURLRequestCreations
 #import <UIKitExtension/UIScrollView.h>                     // level: 0 / deps(0):  / internal(0):
-#import <UIKitExtension/UITableView.h>                      // level: 0 / deps(0):  / internal(0):
+#import <UIKitExtension/UITableView.h>                      // level: 0 / deps(0):  / internal(1): NSObject
 #import <UIKitExtension/UIView.h>                           // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIViewController.h>                 // level: 0 / deps(0):  / internal(0):
 #import <UIKitExtension/UIWebView.h>                        // level: 0 / deps(0):  / internal(0):
@@ -45,4 +45,3 @@
 #import <UIKitExtension/UIAViewController.h>                // level: 20 / deps(0):  / internal(0):
 // depenency level 21
 #import <UIKitExtension/UIAView.h>                          // level: 21 / deps(1): UIAViewController / internal(0):
-

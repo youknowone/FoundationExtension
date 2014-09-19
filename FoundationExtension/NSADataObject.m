@@ -8,19 +8,10 @@
 
 #include "debug.h"
 
+#import "NSArray.h"
 #import "NSADataObject.h"
 
 @implementation NSATuple
-
-static Class _tupleClass;
-static Class _mutableTupleClass;
-
-+ (void)initialize {
-    if (self == [NSATuple class]) {
-        _tupleClass = [NSATuple class];
-        _mutableTupleClass = [NSAMutableTuple class];
-    }
-}
 
 + (instancetype)tuple {
     return [[[self alloc] init] autorelease];
@@ -75,12 +66,17 @@ static Class _mutableTupleClass;
 }
 
 - (id)objectAtIndex:(NSUInteger)index {
+    return self[index];
+}
+
+- (id)objectAtIndexedSubscript:(NSUInteger)index {
     switch (index) {
         case 0:
             return self->_first;
         case 1:
             return self->_second;
     }
+    @throw NSRangeException;
     return nil;
 }
 
@@ -102,6 +98,10 @@ static Class _mutableTupleClass;
     return ([self indexOfObject:anObject] == NSNotFound) ? NO : YES;
 }
 
+- (NSArray *)allObjects {
+    return [NSArray arrayWithEnumerator:self];
+}
+
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -109,7 +109,7 @@ static Class _mutableTupleClass;
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[_mutableTupleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second];
+    return [[NSAMutableTuple allocWithZone:zone] initWithFirst:self->_first second:self->_second];
 }
 
 #pragma mark NSFastEnumeration
@@ -155,26 +155,38 @@ static Class _mutableTupleClass;
     self->_second = temp;
 }
 
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
+    self[index] = anObject;
+}
+
+- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)index {
+    switch (index) {
+        case 0:
+            self.first = obj;
+            break;
+        case 1:
+            self.second = obj;
+            break;
+        default:
+            @throw NSRangeException;
+    }
+}
+
+- (void)setTuple:(NSATuple *)otherTuple {
+    self.first = otherTuple.first;
+    self.second = otherTuple.second;
+}
+
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[_tupleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second];
+    return [[NSATuple allocWithZone:zone] initWithFirst:self->_first second:self->_second];
 }
 
 @end
 
 
 @implementation NSATriple
-
-static Class _tripleClass;
-static Class _mutableTripleClass;
-
-+ (void)initialize {
-    if (self == [NSATuple class]) {
-        _tripleClass = [NSATuple class];
-        _mutableTripleClass = [NSAMutableTuple class];
-    }
-}
 
 + (instancetype)triple {
     return [[[self alloc] init] autorelease];
@@ -235,6 +247,10 @@ static Class _mutableTripleClass;
 }
 
 - (id)objectAtIndex:(NSUInteger)index {
+    return self[index];
+}
+
+- (id)objectAtIndexedSubscript:(NSUInteger)index {
     switch (index) {
         case 0:
             return self->_first;
@@ -243,6 +259,7 @@ static Class _mutableTripleClass;
         case 2:
             return self->_third;
     }
+    @throw NSRangeException;
     return nil;
 }
 
@@ -267,6 +284,10 @@ static Class _mutableTripleClass;
     return ([self indexOfObject:anObject] == NSNotFound) ? NO : YES;
 }
 
+- (NSArray *)allObjects {
+    return [NSArray arrayWithEnumerator:self];
+}
+
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
@@ -274,7 +295,7 @@ static Class _mutableTripleClass;
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[_mutableTripleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
+    return [[NSAMutableTriple allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
 }
 
 #pragma mark NSFastEnumeration
@@ -321,10 +342,36 @@ static Class _mutableTripleClass;
     self->_third = third;
 }
 
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)anObject {
+    self[index] = anObject;
+}
+
+- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)index {
+    switch (index) {
+        case 0:
+            self.first = obj;
+            break;
+        case 1:
+            self.second = obj;
+            break;
+        case 2:
+            self.third = obj;
+            break;
+        default:
+            @throw NSRangeException;
+    }
+}
+
+- (void)setTriple:(NSATriple *)otherTriple {
+    self.first = otherTriple.first;
+    self.second = otherTriple.second;
+    self.third = otherTriple.third;
+}
+
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[_tripleClass allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
+    return [[NSATriple allocWithZone:zone] initWithFirst:self->_first second:self->_second third:self->_third];
 }
 
 @end

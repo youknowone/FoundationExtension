@@ -12,10 +12,6 @@
 
 @implementation NSDictionary (Shortcuts)
 
-- (id):(id)key {
-    return self[key];
-}
-
 - (BOOL)containsKey:(id)key {
     return [self.allKeys containsObject:key];
 }
@@ -44,6 +40,15 @@
 
 + (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     return [[[self alloc] initWithData:data format:format error:error] autorelease];
+}
+
+@end
+
+
+@implementation NSDictionary (Deprecated)
+
+- (id):(id)key {
+    return self[key];
 }
 
 @end

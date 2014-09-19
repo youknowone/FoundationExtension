@@ -18,12 +18,6 @@
 @interface NSDictionary (Shortcuts)
 
 /*!
- *  @brief Extreme short form of 'ObjectForKey:'
- *  @deprecated Use (array)[index] syntax instead of this.
- */
-- (id):(id)key __deprecated;
-
-/*!
  *  @brief Returns a Boolean value that indicates whether a given object is present in the keys.
  *  @param aKey A key to test dictionary has it.
  *  @return YES if aKey is present in the dictionary, otherwise NO.
@@ -75,5 +69,19 @@
  *  @see initWithData:format:error:
  */
 + (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
+
+@end
+
+
+/*!
+ *  @brief Deprecated methods of NSDictionary extensions.
+ */
+@interface NSDictionary (Deprecated)
+
+/*!
+ *  @brief Extreme short form of 'ObjectForKey:'
+ *  @deprecated Use (array)[key] syntax of Modern Objective-C instead of this method.
+ */
+- (id):(id)key __deprecated;
 
 @end

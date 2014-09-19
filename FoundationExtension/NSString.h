@@ -91,7 +91,7 @@
  *  @see [stringWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/clm/NSString/stringWithFormat:
  */
-- (instancetype)format:(id)first, ...;
+- (NSString *)format:(id)first, ...;
 /*!
  *  @brief Returns a string made by using self as a format string template into which the remaining argument values are substituted.
  *  @param dummyLikeNil Do nothing. Value will be ignored. This is placeholder
@@ -102,7 +102,7 @@
  *  @see [stringWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/clm/NSString/stringWithFormat:
  */
-- (instancetype)format0:(id)dummyLikeNil, ...;
+- (NSString *)format0:(id)dummyLikeNil, ...;
 
 /*! @name Range */
 

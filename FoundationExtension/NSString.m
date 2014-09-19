@@ -24,10 +24,6 @@
     return [[[self alloc] initWithInteger:value] autorelease];
 }
 
-+ (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList {
-    return [[[self alloc] initWithFormat:format arguments:argList] autorelease];
-}
-
 + (instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
     return [[[self alloc] initWithData:data encoding:encoding] autorelease];
 }
@@ -55,6 +51,11 @@
     return [array componentsJoinedByString:@""];
 }
 
++ (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList {
+    NSString *string = [[[NSString alloc] initWithFormat:format arguments:argList] autorelease];
+    return string;
+}
+
 @end
 
 
@@ -65,7 +66,7 @@
 }
 
 // slow! proof of concept
-- (instancetype)format:(id)first, ... {
+- (NSString *)format:(id)first, ... {
     NSUInteger len = self.length;
     NSUInteger index = 0;
     BOOL passed = NO;
@@ -85,22 +86,21 @@
         index += 1;
     } while (index < len);
 
-    Class StringClass = [self class];
     if (index == len) {
-        return [StringClass stringWithFormat:self, first];
+        return [NSString stringWithFormat:self, first];
     } else {
         va_list args;
         va_start(args, first);
-        id result = [[StringClass stringWithFormat:[self substringToIndex:index], first] stringByAppendingString:[StringClass stringWithFormat:[self substringFromIndex:index] arguments:args]];
+        id result = [[NSString stringWithFormat:[self substringToIndex:index], first] stringByAppendingString:[NSString stringWithFormat:[self substringFromIndex:index] arguments:args]];
         va_end(args);
         return result;
     }
 }
 
-- (instancetype)format0:(id)dummy, ... {
+- (NSString *)format0:(id)dummy, ... {
     va_list args;
     va_start(args, dummy);
-    id result = [[self class] stringWithFormat:self arguments:args];
+    id result = [NSString stringWithFormat:self arguments:args];
     va_end(args);
     return result;
 }
@@ -176,6 +176,16 @@
 
 - (NSInteger)hexadecimalValue {
     return [self integerValueBase:16];
+}
+
+@end
+
+
+@implementation NSMutableString (Creations)
+
++ (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList {
+    id string = [[[NSMutableString alloc] initWithFormat:format arguments:argList] autorelease];
+    return string;
 }
 
 @end

@@ -166,6 +166,11 @@ NSAPropertyCopySetter(setObj3, @"obj3")
         NSString *test = [aPath stringByAppendingPathFormat:@"/%@/%@", @"dir", @"file.ext"];
         XCTAssertTrue([test isEqualToString:@"/tmp/dir/file.ext"], @"result: %@", test);
     }
+    {
+        NSMutableString *string = [NSMutableString stringWithFormat:@"format %d", 1];
+        [string appendString:@" hi"];
+        XCTAssertEqualObjects(string, @"format 1 hi", @"");
+    }
 }
 
 - (void)testStringConcatnation {

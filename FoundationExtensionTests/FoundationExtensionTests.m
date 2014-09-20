@@ -58,12 +58,20 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 @end
 
 
-@interface FoundationExtensionTests : XCTestCase
+@interface FoundationExtensionTests : XCTestCase<NSTimerDelegate>
 
 @end
 
 
 @implementation FoundationExtensionTests
+
+- (void)timerHasFired:(NSTimer *)timer {
+    // never
+}
+
+- (BOOL)timerShouldRepeat:(NSTimer *)timer {
+    return NO;
+}
 
 - (void)setUp
 {
@@ -264,6 +272,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     XCTAssertEqual((int)[obj.first integerValue], 4, @"");
     XCTAssertEqual((int)[obj.second integerValue], 5, @"");
     XCTAssertEqual((int)[obj.third integerValue], 6, @"");
+}
+
+- (void)testTimer {
+    NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 delegate:self];
+    [timer schedule];
+    [timer invalidate];
 }
 
 - (void)testFunctional {

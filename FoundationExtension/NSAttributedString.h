@@ -20,7 +20,7 @@
  */
 @interface NSAttributedString (Shortcuts)
 
-+ (id)attributedString;
++ (instancetype)attributedString;
 
 @end
 

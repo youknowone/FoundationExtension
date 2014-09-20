@@ -67,7 +67,7 @@
     TEST_ITEM(foregroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(underlineStyleNumber, @(NSUnderlineStyleDouble));
     TEST_ITEM_VALUE(underlineStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
-    TEST_ITEM(superscriptNumber, [NSNumber numberWithBool:YES]);
+    TEST_ITEM(superscriptNumber, @(YES));
     TEST_ITEM_VALUE(superscript, YES);
     TEST_ITEM_VALUE(superscript, NO);
     TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
@@ -95,7 +95,7 @@
 //    id cursor = [NSCursor currentSystemCursor];
 //    TEST_ITEM(cursor, cursor);
     TEST_ITEM(toolTip, @"Test tooptip");
-    TEST_ITEM(writingDirectionArray, ([NSArray arrayWithObjects:@1, @2, @3, nil]));
+    TEST_ITEM(writingDirectionArray, (@[@[@1, @2, @3]]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
     #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
     TEST_ITEM(verticalGlyphFormNumber, @(NSVerticalGlyphFormHorizontal));

@@ -70,7 +70,7 @@
     }
     {
         NSArray *a1 = @[@1, @2, @3];
-        NSMutableArray *a2 = [NSMutableArray arrayWithObjects:@1, @2, [NSNumber numberWithInteger:3], nil];
+        NSMutableArray *a2 = [NSMutableArray arrayWithObjects:@1, @2, @3, nil];
         XCTAssertEqualObjects(a1, a2, @"");
         XCTAssertEqual(a1.hash, a2.hash, @"");
         NSArray *a3 = [a2 copy];

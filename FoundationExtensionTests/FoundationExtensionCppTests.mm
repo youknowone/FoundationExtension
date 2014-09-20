@@ -8,7 +8,13 @@
 
 //  This file helps C++ keyword confiction by existance itself.
 
-#import "FoundationExtensionCppTests.h"
+#import <FoundationExtension/FoundationExtension.h>
+
+
+@interface FoundationExtensionCppTests : NSObject
+
+@end
+
 
 @implementation FoundationExtensionCppTests
 

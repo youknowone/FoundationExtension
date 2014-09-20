@@ -9,14 +9,28 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38C98B52161AE30300C4A389"
-               BuildableName = "libUIKitExtension.a"
-               BlueprintName = "UIKitExtension"
+               BlueprintIdentifier = "3855B03B163CF2B1005584CD"
+               BuildableName = "CocoaExtensionTests.xctest"
+               BlueprintName = "CocoaExtensionTests"
+               ReferencedContainer = "container:FoundationExtension.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "38E48AC119CDA45700EE7FFC"
+               BuildableName = "FoundationExtensionTests.xctest"
+               BlueprintName = "FoundationExtensionTests"
                ReferencedContainer = "container:FoundationExtension.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38730440133732DE004C8E89"
-               BuildableName = "UIKitExtensionTests.xctest"
-               BlueprintName = "UIKitExtensionTests"
+               BlueprintIdentifier = "3855B03B163CF2B1005584CD"
+               BuildableName = "CocoaExtensionTests.xctest"
+               BlueprintName = "CocoaExtensionTests"
                ReferencedContainer = "container:FoundationExtension.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,7 +56,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38C7A9871495181800381910"
+               BlueprintIdentifier = "38E48AC119CDA45700EE7FFC"
                BuildableName = "FoundationExtensionTests.xctest"
                BlueprintName = "FoundationExtensionTests"
                ReferencedContainer = "container:FoundationExtension.xcodeproj">
@@ -52,9 +66,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38C98B52161AE30300C4A389"
-            BuildableName = "libUIKitExtension.a"
-            BlueprintName = "UIKitExtension"
+            BlueprintIdentifier = "3855B03B163CF2B1005584CD"
+            BuildableName = "CocoaExtensionTests.xctest"
+            BlueprintName = "CocoaExtensionTests"
             ReferencedContainer = "container:FoundationExtension.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -71,9 +85,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38C98B52161AE30300C4A389"
-            BuildableName = "libUIKitExtension.a"
-            BlueprintName = "UIKitExtension"
+            BlueprintIdentifier = "3855B03B163CF2B1005584CD"
+            BuildableName = "CocoaExtensionTests.xctest"
+            BlueprintName = "CocoaExtensionTests"
             ReferencedContainer = "container:FoundationExtension.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,15 +100,6 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38C98B52161AE30300C4A389"
-            BuildableName = "libUIKitExtension.a"
-            BlueprintName = "UIKitExtension"
-            ReferencedContainer = "container:FoundationExtension.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

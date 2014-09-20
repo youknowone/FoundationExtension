@@ -6,6 +6,7 @@
 //  Copyright (c) 2014년 youknowone.org. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <AddressBook/ABAddressBook.h>
 
 @class ABRecord;

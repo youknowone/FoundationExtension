@@ -39,9 +39,14 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
@@ -80,9 +85,14 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
@@ -124,9 +134,14 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
@@ -139,7 +154,7 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
 
     NSUInteger count = 0;
     id obj;
-    while((obj = [_enumerator nextObject]) && (count < len))
+    while((obj = [self->_enumerator nextObject]) && (count < len))
     {
         id res = self->_mapper(obj);
         if (res == nil) {
@@ -173,9 +188,14 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
@@ -223,9 +243,14 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
     self = [super init];
     if (self != nil) {
         self->_filter = filter;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
@@ -238,7 +263,7 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
 
     NSUInteger count = 0;
     id obj;
-    while((obj = [_enumerator nextObject]) && (count < len))
+    while((obj = [self->_enumerator nextObject]) && (count < len))
     {
         if (!self->_filter(obj)) {
             continue;
@@ -271,9 +296,14 @@ NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
     self = [super init];
     if (self != nil) {
         self->_filter = filter;
-        self->_enumerator = enumerator;
+        self->_enumerator = [enumerator retain];
     }
     return self;
+}
+
+- (void)dealloc {
+    [self->_enumerator release];
+    [super dealloc];
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {

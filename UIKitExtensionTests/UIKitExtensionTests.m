@@ -67,7 +67,7 @@
     TEST_ITEM(strokeColor, [UIColor colorWithRed:0.2f green:0.4f blue:0.6f alpha:1.0f]);
     TEST_ITEM(strikethroughStyleNumber, @(NSUnderlineStyleSingle));
     TEST_ITEM_VALUE(strikethroughStyle, (NSUnderlineStyle)NSUnderlineStyleSingle);
-    TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
+    TEST_ITEM(shadow, [[NSShadow alloc] init]);
     TEST_ITEM(verticalGlyphFormNumber, @(NSVerticalGlyphFormHorizontal));
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
 
@@ -114,7 +114,10 @@
 - (void)testClassMethodPatch {
     SEL selector = NSSelectorFromString(@"classValueMethod");
     [self.class addClassMethodForSelector:selector fromMethod:[self.class methodObjectForSelector:@selector(valueMethod)]];
+    #pragma clang diagnostic push
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     XCTAssertEqual((id)self.class, (id)[self.class performSelector:selector], @"");
+    #pragma clang diagnostic pop
 }
 
 //- (void)testAddressBook {

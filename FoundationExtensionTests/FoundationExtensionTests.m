@@ -6,9 +6,9 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
+#import <XCTest/XCTest.h>
 #import <FoundationExtension/FoundationExtension.h>
 
-#import "FoundationExtensionTests.h"
 
 @interface TestObject : NSObject {
 @private
@@ -25,8 +25,8 @@
 - (instancetype)init {
     self = [super init];
     self->obj1 = self;
-    self->obj2 = (id)[self retain];
-    self->obj3 = (id)[self retain];
+    self->obj2 = nil;
+    self->obj3 = nil;
     self->val = 42;
     return self;
 }
@@ -39,7 +39,7 @@
 @property(nonatomic, readonly) NSInteger val;
 @property(nonatomic, assign) id obj1;
 @property(nonatomic, retain) NSString *obj2;
-@property(nonatomic, retain) NSString *obj3;
+@property(nonatomic, copy) NSString *obj3;
 
 @end
 
@@ -54,6 +54,11 @@ NSAPropertyGetter(obj2, @"obj2")
 NSAPropertyRetainSetter(setObj2, @"obj2")
 NSAPropertyGetter(obj3, @"obj3")
 NSAPropertyCopySetter(setObj3, @"obj3")
+
+@end
+
+
+@interface FoundationExtensionTests : XCTestCase
 
 @end
 
@@ -80,42 +85,36 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 //}
 
 - (void)testClassObject {
-    NSAString *string = [[[NSAString alloc] initWithString:@"blah"] autorelease];
+    NSAString *string = [[NSAString alloc] initWithString:@"blah"];
     XCTAssertEqual(string.class, [NSAString class], @"");
 }
 
 - (void)testRuntimeAccessor {
-    TestObject *obj = [[[TestObject alloc] init] autorelease];
+    TestObject *obj = [[TestObject alloc] init];
     XCTAssertEqual(obj.val, (NSInteger)42, @"");
 
     NSString *new = [NSMutableString stringWithString:@"Hello"]; // to make new object.
-    NSUInteger count = new.retainCount;
 
     XCTAssertEqual(obj.obj1, obj, @"");
     obj.obj1 = new;
     XCTAssertEqual(obj.obj1, new, @"");
-    XCTAssertEqual(new.retainCount, count, @"");
     obj.obj1 = nil;
     XCTAssertEqual(obj.obj1, (NSObject *)nil, @"");
-    XCTAssertEqual(new.retainCount, count, @"");
 
-    XCTAssertEqual((id)obj.obj2, obj, @"");
+    XCTAssertEqual((id)obj.obj2, (id)nil, @"");
     obj.obj2 = new;
     XCTAssertEqual(obj.obj2, new, @"");
-    XCTAssertEqual(new.retainCount, count + 1, @"");
     obj.obj2 = nil;
     XCTAssertEqual(obj.obj2, (NSObject *)nil, @"");
-    XCTAssertEqual(new.retainCount, count, @"");
 
-    XCTAssertEqual((id)obj.obj3, obj, @"");
+    XCTAssertEqual((id)obj.obj3, (id)nil, @"");
     obj.obj3 = new;
     XCTAssertFalse(obj.obj3 == new, @"");
     XCTAssertEqualObjects(obj.obj3, new, @"");
-    XCTAssertEqual(new.retainCount, count, @"");
     obj.obj3 = nil;
     XCTAssertEqual(obj.obj3, (NSObject *)nil, @"");
-    XCTAssertEqual(new.retainCount, count, @"");
 
+    [obj self];
 }
 
 - (int)return0 { return 0; }
@@ -277,9 +276,11 @@ NSAPropertyCopySetter(setObj3, @"obj3")
         XCTAssertEqual((int)idx, 4, @"");
 
         idx = 0;
-        for (id i in NSAFilter(a.objectEnumerator, ^(id obj) { return (BOOL)([obj integerValue] % 2 == 0); })) {
+        for (id i in NSAFilter(a.objectEnumerator, ^(id obj) {
+            return (BOOL)([obj integerValue] % 2 == 0);
+        })) {
             idx += 1;
-            XCTAssertEqual([i integerValue] / 2, (idx + 2) / 2, @"");
+            XCTAssertEqual([i integerValue] % 2, 0, @"");
         }
         XCTAssertEqual((int)idx, 2, @"");
 
@@ -413,7 +414,7 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 
 - (void)testAttributedString {
     NSAttributedString *obj = [NSAttributedString attributedString];
-    XCTAssertEqualObjects(obj, [[[NSAttributedString alloc] initWithString:@""] autorelease], @"");
+    XCTAssertEqualObjects(obj, [[NSAttributedString alloc] initWithString:@""], @"");
 }
 
 #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070

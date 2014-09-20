@@ -6,9 +6,14 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+#import <XCTest/XCTest.h>
 #import <FoundationExtension/FoundationExtension.h>
 
-#import "FoundationExtensionCoreFoundationTest.h"
+
+@interface FoundationExtensionCoreFoundationTest : XCTestCase
+
+@end
+
 
 @implementation FoundationExtensionCoreFoundationTest
 
@@ -16,7 +21,7 @@
     NSAArray *obj;
     NSURL *tmpURL = @"tmp://test.plist".temporaryURL;
 
-    obj = [[[NSAArray alloc] init] autorelease];
+    obj = [[NSAArray alloc] init];
     XCTAssertEqual(0, (int)obj.count, @"");
 
     obj = [NSAArray array];
@@ -25,7 +30,7 @@
     obj = [NSAArray arrayWithArray:@[@1, @2, @3, @4, @5]];
     XCTAssertEqual(5, (int)obj.count, @"");
 
-    obj = [[[NSAArray alloc] initWithArray:@[@1, @2, @3, @4, @5] copyItems:YES] autorelease];
+    obj = [[NSAArray alloc] initWithArray:@[@1, @2, @3, @4, @5] copyItems:YES];
     XCTAssertEqual(5, (int)obj.count, @"");
 
     for (id o in obj) {
@@ -69,7 +74,7 @@
     NSADictionary *obj;
     NSURL *tmpURL = @"tmp://test.plist".temporaryURL;
 
-    obj = [[[NSADictionary alloc] init] autorelease];
+    obj = [[NSADictionary alloc] init];
     XCTAssertEqual(0, (int)obj.count, @"");
 
     obj = [NSADictionary dictionary];
@@ -103,7 +108,7 @@
     NSAString *obj;
     NSURL *tmpURL = @"tmp://test.plist".temporaryURL;
 
-    obj = [[[NSAString alloc] init] autorelease];
+    obj = [[NSAString alloc] init];
     XCTAssertEqual(0, (int)obj.length, @"");
 
     obj = [NSAString string];

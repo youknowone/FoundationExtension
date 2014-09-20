@@ -6,7 +6,13 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "FoundationTests.h"
+#import <XCTest/XCTest.h>
+
+//  Test how Foundation implementation works
+
+@interface FoundationTests : XCTestCase
+
+@end
 
 
 @interface TestInit: NSObject
@@ -15,19 +21,9 @@
 
 @implementation TestInit
 
-- (instancetype)initObject {
-    [self release];
-    return (id)[[NSString alloc] init];
-}
-
 @end
 
 @implementation FoundationTests
-
-- (void)testInit {
-    id obj = [[TestInit alloc] initObject];
-    [obj release];
-}
 
 - (void)testSizeOfId {
     XCTAssertEqual(sizeof(id), sizeof(id<NSCopying>), @"");
@@ -68,7 +64,7 @@
 
 - (void)testHash {
     {
-        NSObject *obj = [[[NSObject alloc] init] autorelease];
+        NSObject *obj = [[NSObject alloc] init];
         NSUInteger p = (NSUInteger)obj;
         XCTAssertEqual(obj.hash, p, @"");
     }
@@ -77,7 +73,7 @@
         NSMutableArray *a2 = [NSMutableArray arrayWithObjects:@1, @2, [NSNumber numberWithInteger:3], nil];
         XCTAssertEqualObjects(a1, a2, @"");
         XCTAssertEqual(a1.hash, a2.hash, @"");
-        NSArray *a3 = [[a2 copy] autorelease];
+        NSArray *a3 = [a2 copy];
         XCTAssertEqualObjects(a1, a3, @"");
         XCTAssertEqual(a1.class, a3.class, @"");
         XCTAssertEqual(a1.hash, a3.hash, @"");

@@ -6,7 +6,16 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import "CocoaExtensionTests.h"
+#import <XCTest/XCTest.h>
+#import <CocoaExtension/CocoaExtension.h>
+
+@interface CocoaExtensionTests : XCTestCase<FSEventStreamDelegate> {
+    NSURL *tmpURL;
+    BOOL testFSEvents;
+}
+
+@end
+
 
 @implementation CocoaExtensionTests
 
@@ -14,13 +23,11 @@
 {
     [super setUp];
 
-    tmpURL = [@"tmp://blah.file".temporaryURL retain];
+    tmpURL = @"tmp://blah.file".temporaryURL;
 }
 
 - (void)tearDown
 {
-    [tmpURL release];
-
     [super tearDown];
 }
 
@@ -36,7 +43,8 @@
     NSString *watchPath = [tmpURL.path stringByDeletingLastPathComponent];
     FSEventStream *eventStream = [FSEventStream scheduledEventStreamWithPath:watchPath latency:0.05 flags:kFSEventStreamEventFlagItemCreated|kFSEventStreamEventFlagItemModified delegate:self];
     // not working
-    [eventStream release];
+
+    [eventStream self];
 }
 
 - (void)testStringAttribute
@@ -63,7 +71,7 @@
     TEST_ITEM_VALUE(superscript, YES);
     TEST_ITEM_VALUE(superscript, NO);
     TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
-    NSTextAttachment *attach = [[[NSTextAttachment alloc] initWithFileWrapper:[[[NSFileWrapper alloc] initWithPath:@"/"] autorelease]] autorelease];
+    NSTextAttachment *attach = [[NSTextAttachment alloc] initWithFileWrapper:[[NSFileWrapper alloc] initWithPath:@"/"]];
     TEST_ITEM(attachment, attach);
     TEST_ITEM(ligatureNumber, @(NSLigatureNo));
     TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureAll);
@@ -79,7 +87,7 @@
     TEST_ITEM(underlineColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
     TEST_ITEM(strikethroughStyleNumber, @(NSUnderlineStyleDouble));
     TEST_ITEM_VALUE(strikethroughStyle, (NSUnderlineStyle)NSUnderlineStyleDouble);
-    TEST_ITEM(shadow, [[[NSShadow alloc] init] autorelease]);
+    TEST_ITEM(shadow, [[NSShadow alloc] init]);
     TEST_ITEM(obliquenessNumber, @0.2f);
     TEST_ITEM_VALUE(obliqueness, 0.4f);
     TEST_ITEM(expansionNumber, @0.2f);

@@ -38,6 +38,19 @@
     object_setInstanceVariable(self, name.UTF8String, value);
 }
 
+- (void)setAndRetainVariable:(id)value forName:(NSString *)name {
+    [value retain];
+    id stored = [self variableForName:name];
+    [stored release];
+    [self setVariable:value forName:name];
+}
+
+- (void)setAndCopyVariable:(id)value forName:(NSString *)name {
+    id copy = [value copy];
+    id stored = [self variableForName:name];
+    [stored release];
+    [self setVariable:copy forName:name];
+}
 
 - (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 {
     IMP msg;

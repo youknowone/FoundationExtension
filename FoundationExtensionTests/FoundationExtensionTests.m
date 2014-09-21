@@ -280,6 +280,39 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     [timer invalidate];
 }
 
+- (void)testEnumerator {
+    NSInteger count = 0;
+    for (NSString *test in [NSAInfiniteEnumerator enumeratorWithObject:@"test"]) {
+        XCTAssertEqualObjects(test, @"test");
+        count ++;
+        if (count == 10000) {
+            break;
+        }
+    }
+
+    NSInteger sum = 0;
+    for (NSNumber *n in [NSARangeEnumerator enumeratorWithCount:10]) {
+        sum += n.integerValue;
+    }
+    XCTAssertEqual(sum, 45);
+    for (NSNumber *n in [NSARangeEnumerator enumeratorWithRange:NSMakeRange(10, 91)]) {
+        sum += n.integerValue;
+    }
+    XCTAssertEqual(sum, 5050);
+
+    NSABlockEnumerator *enumerator = [NSABlockEnumerator enumeratorWithBlock:^id(NSUInteger index, BOOL *stop) {
+        if (index >= 100) {
+            *stop = YES;
+        }
+        return @(index);
+    }];
+    sum = 0;
+    for (NSNumber *n in enumerator) {
+        sum += n.integerValue;
+    }
+    XCTAssertEqual(sum, 5050);
+}
+
 - (void)testFunctional {
     {
         NSSet *a = [NSSet setWithObjects:@1, @2, @3, @4, nil];

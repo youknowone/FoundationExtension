@@ -264,6 +264,11 @@
 		38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FCECDC16590A1100D3D0F0 /* NSTextView.m */; };
 		38FD75AF17E0759700153727 /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; };
 		38FD75B017E0759700153727 /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
+		38FD946B19CDED210092433C /* NSAEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD946919CDED210092433C /* NSAEnumerator.h */; };
+		38FD946C19CDED210092433C /* NSAEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD946919CDED210092433C /* NSAEnumerator.h */; };
+		38FD946D19CDED210092433C /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
+		38FD946E19CDED210092433C /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
+		38FD946F19CDED210092433C /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -549,6 +554,8 @@
 		38FCECDC16590A1100D3D0F0 /* NSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSTextView.m; sourceTree = "<group>"; };
 		38FD75AD17E0759700153727 /* NSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSet.h; sourceTree = "<group>"; };
 		38FD75AE17E0759700153727 /* NSSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSet.m; sourceTree = "<group>"; };
+		38FD946919CDED210092433C /* NSAEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAEnumerator.h; sourceTree = "<group>"; };
+		38FD946A19CDED210092433C /* NSAEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAEnumerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +845,8 @@
 				3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */,
 				3868F3B5162885D300C31163 /* NSADataObject.h */,
 				3868F3B6162885D300C31163 /* NSADataObject.m */,
+				38FD946919CDED210092433C /* NSAEnumerator.h */,
+				38FD946A19CDED210092433C /* NSAEnumerator.m */,
 				38B0C6E7163F737F0044C73C /* NSAFunctional.h */,
 				38B0C6E8163F73800044C73C /* NSAFunctional.m */,
 				38505CB9164647910059773B /* NSAOrderedDictionary.h */,
@@ -1085,6 +1094,7 @@
 				38B0C6EA163F73800044C73C /* NSAFunctional.h in Headers */,
 				38B0C73F1641382D0044C73C /* NSAttributedString.h in Headers */,
 				38B0C74616414B1D0044C73C /* NSAttributedString+Cocoa.h in Headers */,
+				38FD946C19CDED210092433C /* NSAEnumerator.h in Headers */,
 				38505C891642EC5B0059773B /* NSURLRequestCreations.h in Headers */,
 				38505C951645837E0059773B /* NSJSONSerialization.h in Headers */,
 				38505CBC164647910059773B /* NSAOrderedDictionary.h in Headers */,
@@ -1106,6 +1116,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FD946B19CDED210092433C /* NSAEnumerator.h in Headers */,
 				38C98B1D161ADAD700C4A389 /* FoundationExtension.h in Headers */,
 				38C98B1E161ADAD700C4A389 /* NSArray.h in Headers */,
 				38C98B20161ADAD700C4A389 /* NSBundle.h in Headers */,
@@ -1458,6 +1469,7 @@
 				3855B078163D4200005584CD /* NSACommonDigest.m in Sources */,
 				3855B07A163D4200005584CD /* NSADataObject.m in Sources */,
 				38B0C6EC163F73800044C73C /* NSAFunctional.m in Sources */,
+				38FD946E19CDED210092433C /* NSAEnumerator.m in Sources */,
 				38B0C7411641382D0044C73C /* NSAttributedString.m in Sources */,
 				38B0C74716414B1D0044C73C /* NSAttributedString+Cocoa.m in Sources */,
 				38505C8B1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
@@ -1504,6 +1516,7 @@
 			files = (
 				38C98B1F161ADAD700C4A389 /* NSArray.m in Sources */,
 				38C98B21161ADAD700C4A389 /* NSBundle.m in Sources */,
+				38FD946D19CDED210092433C /* NSAEnumerator.m in Sources */,
 				38C98B23161ADAD700C4A389 /* NSData.m in Sources */,
 				38C98B25161ADAD700C4A389 /* NSDate.m in Sources */,
 				38C98B27161ADAD700C4A389 /* NSDictionary.m in Sources */,
@@ -1539,6 +1552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38FD946F19CDED210092433C /* NSAEnumerator.m in Sources */,
 				3868F3BC162885D300C31163 /* NSACommonDigest.m in Sources */,
 				3868F3C3162885D300C31163 /* NSADataObject.m in Sources */,
 				3868F7B5162D57EB00C31163 /* NSObject.m in Sources */,

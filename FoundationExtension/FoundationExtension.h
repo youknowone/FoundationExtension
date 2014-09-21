@@ -61,6 +61,7 @@
 #import <FoundationExtension/NSACommonDigest.h>             // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(1): NSASubscript / internal(1): NSArray
 #import <FoundationExtension/NSADictionary.h>               // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSAEnumerator.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAFunctional.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOrderedDictionary.h>        // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAOverridingMediator.h>       // level: 20 / deps(0):  / internal(0):

@@ -1,6 +1,6 @@
 var interfaceUIAResultDisplayController =
 [
-    [ "initWithContentsController:", "interfaceUIAResultDisplayController.html#aa3daf75e7c3727ed7daf9389e0154c2d", null ],
+    [ "initWithContentsController:", "interfaceUIAResultDisplayController.html#aa7bec0d5e121447b4f668d141a64a970", null ],
     [ "reloadResult", "interfaceUIAResultDisplayController.html#a3e78fff5c538adac3e3b801a51ff8e13", null ],
     [ "setActive:animated:", "interfaceUIAResultDisplayController.html#aec642ab1ca07cd57d10dbe1cbc83b393", null ],
     [ "animating", "interfaceUIAResultDisplayController.html#a0c3237d7666316bca5bac44697976c37", null ],

@@ -123,10 +123,10 @@ Instance Methods</h2></td></tr>
 <tr class="memdesc:a021f80572f0b3de4882869f462142e9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply procedure to objects.  <a href="#a021f80572f0b3de4882869f462142e9e">More...</a><br /></td></tr>
 <tr class="separator:a021f80572f0b3de4882869f462142e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e1515748bdd149e526ec40d65a60fd8"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSSet_07Functional_08.html#a7e1515748bdd149e526ec40d65a60fd8">arrayByMappingOperator:</a></td></tr>
-<tr class="memdesc:a7e1515748bdd149e526ec40d65a60fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps mapper to objects and returns the result as array.  <a href="#a7e1515748bdd149e526ec40d65a60fd8">More...</a><br /></td></tr>
+<tr class="memdesc:a7e1515748bdd149e526ec40d65a60fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of the result objects of mapping the given mappter to objects.  <a href="#a7e1515748bdd149e526ec40d65a60fd8">More...</a><br /></td></tr>
 <tr class="separator:a7e1515748bdd149e526ec40d65a60fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74ce2eded2720520b23b5e650cf9fa48"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSSet_07Functional_08.html#a74ce2eded2720520b23b5e650cf9fa48">arrayByMapFilteringOperator:</a></td></tr>
-<tr class="memdesc:a74ce2eded2720520b23b5e650cf9fa48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maps mapper to objects and filters nil result and returns the result as array.  <a href="#a74ce2eded2720520b23b5e650cf9fa48">More...</a><br /></td></tr>
+<tr class="memdesc:a74ce2eded2720520b23b5e650cf9fa48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of the result objects of mapping the given mappter to objects which is not nil.  <a href="#a74ce2eded2720520b23b5e650cf9fa48">More...</a><br /></td></tr>
 <tr class="separator:a74ce2eded2720520b23b5e650cf9fa48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbff61cdc90444daebaa6dc7ff335ff6"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSSet_07Functional_08.html#acbff61cdc90444daebaa6dc7ff335ff6">arrayByFilteringOperator:</a></td></tr>
 <tr class="memdesc:acbff61cdc90444daebaa6dc7ff335ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filters objects and returns result as array.  <a href="#acbff61cdc90444daebaa6dc7ff335ff6">More...</a><br /></td></tr>
@@ -188,7 +188,9 @@ Instance Methods</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Filters objects and returns result as array. </p>
-<p>Shallow wrapper of <a class="el" href="NSAFunctional_8h.html#a5d18f0fe5c9adfc0e82f222a0a59508f">NSAFilter</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="NSAFunctional_8h.html#a5d18f0fe5c9adfc0e82f222a0a59508f" title="Applies filter to every item of given enumerator and returns an enumerator with the filter result is ...">NSAFilter</a> </dd></dl>
+<p>Shallow wrapper of <a class="el" href="NSAFunctional_8h.html#a5d18f0fe5c9adfc0e82f222a0a59508f">NSAFilter</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="NSAFunctional_8h.html#a5d18f0fe5c9adfc0e82f222a0a59508f" title="Applies filter to every item of given enumerator and returns an enumerator with the filter result is ...">NSAFilter</a> </dd>
+<dd>
+objectsPassingTest: </dd></dl>
 
 </div>
 </div>
@@ -206,7 +208,7 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Maps mapper to objects and filters nil result and returns the result as array. </p>
+<p>Returns an array of the result objects of mapping the given mappter to objects which is not nil. </p>
 <p>Shallow wrapper of <a class="el" href="NSAFunctional_8h.html#a67bd8c44d7e741c0a6d5e79a9ef9418d">NSAMapFilter</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="NSAFunctional_8h.html#a67bd8c44d7e741c0a6d5e79a9ef9418d" title="Applies mapper to every item of enumerator and returns an enumerator with every result items except n...">NSAMapFilter</a> </dd></dl>
 
 </div>
@@ -225,7 +227,7 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Maps mapper to objects and returns the result as array. </p>
+<p>Returns an array of the result objects of mapping the given mappter to objects. </p>
 <p>Shallow wrapper of <a class="el" href="NSAFunctional_8h.html#a0698c19d203cc1bf208000e14b3e4bd1">NSAMap</a> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="NSAFunctional_8h.html#a0698c19d203cc1bf208000e14b3e4bd1" title="Applies mapper to every item of enumerator and returns an enumerator with every result items...">NSAMap</a> </dd></dl>
 
 </div>

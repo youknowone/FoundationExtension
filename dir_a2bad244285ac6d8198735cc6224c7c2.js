@@ -17,6 +17,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     ] ],
     [ "NSADataObject.h", "NSADataObject_8h.html", [
       [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", "protocolNSAArrayLikeDataObject-p" ],
+      [ "<NSAMutableArrayLikeDataObject>", "protocolNSAMutableArrayLikeDataObject-p.html", "protocolNSAMutableArrayLikeDataObject-p" ],
       [ "NSATuple", "interfaceNSATuple.html", "interfaceNSATuple" ],
       [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", "interfaceNSAMutableTuple" ],
       [ "NSATriple", "interfaceNSATriple.html", "interfaceNSATriple" ],
@@ -26,6 +27,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSADictionary", "interfaceNSADictionary.html", "interfaceNSADictionary" ],
       [ "NSAMutableDictionary", "interfaceNSAMutableDictionary.html", "interfaceNSAMutableDictionary" ]
     ] ],
+    [ "NSAEnumerator.h", "NSAEnumerator_8h.html", "NSAEnumerator_8h" ],
     [ "NSAFunctional.h", "NSAFunctional_8h.html", "NSAFunctional_8h" ],
     [ "NSAOrderedDictionary.h", "NSAOrderedDictionary_8h.html", [
       [ "NSAOrderedDictionary", "interfaceNSAOrderedDictionary.html", "interfaceNSAOrderedDictionary" ],
@@ -40,11 +42,19 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSArray(Rearrange)", "categoryNSArray_07Rearrange_08.html", "categoryNSArray_07Rearrange_08" ],
       [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", "categoryNSArray_07NSNumber_08" ],
       [ "NSArray(Random)", "categoryNSArray_07Random_08.html", "categoryNSArray_07Random_08" ],
-      [ "NSMutableArray(Random)", "categoryNSMutableArray_07Random_08.html", "categoryNSMutableArray_07Random_08" ]
+      [ "NSMutableArray(Random)", "categoryNSMutableArray_07Random_08.html", "categoryNSMutableArray_07Random_08" ],
+      [ "NSArray(Deprecated)", "categoryNSArray_07Deprecated_08.html", "categoryNSArray_07Deprecated_08" ],
+      [ "NSMutableArray(Deprecated)", "categoryNSMutableArray_07Deprecated_08.html", "categoryNSMutableArray_07Deprecated_08" ]
     ] ],
     [ "NSAString.h", "NSAString_8h.html", [
       [ "NSAString", "interfaceNSAString.html", "interfaceNSAString" ],
       [ "NSAMutableString", "interfaceNSAMutableString.html", "interfaceNSAMutableString" ]
+    ] ],
+    [ "NSASubscript.h", "NSASubscript_8h.html", [
+      [ "<NSAIndexedSubscript>", "protocolNSAIndexedSubscript-p.html", "protocolNSAIndexedSubscript-p" ],
+      [ "<NSAMutableIndexedSubscript>", "protocolNSAMutableIndexedSubscript-p.html", "protocolNSAMutableIndexedSubscript-p" ],
+      [ "<NSAKeyedSubscript>", "protocolNSAKeyedSubscript-p.html", "protocolNSAKeyedSubscript-p" ],
+      [ "<NSAMutableKeyedSubscript>", "protocolNSAMutableKeyedSubscript-p.html", "protocolNSAMutableKeyedSubscript-p" ]
     ] ],
     [ "NSAttributedString.h", "NSAttributedString_8h.html", [
       [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", "categoryNSAttributedString_07Shortcuts_08" ]
@@ -61,7 +71,8 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     ] ],
     [ "NSDictionary.h", "NSDictionary_8h.html", [
       [ "NSDictionary(Shortcuts)", "categoryNSDictionary_07Shortcuts_08.html", "categoryNSDictionary_07Shortcuts_08" ],
-      [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", "categoryNSDictionary_07NSData_08" ]
+      [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", "categoryNSDictionary_07NSData_08" ],
+      [ "NSDictionary(Deprecated)", "categoryNSDictionary_07Deprecated_08.html", "categoryNSDictionary_07Deprecated_08" ]
     ] ],
     [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", [
       [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", "categoryNSJSONSerialization_07Shortcuts_08" ]

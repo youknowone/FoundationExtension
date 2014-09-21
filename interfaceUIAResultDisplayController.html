@@ -129,9 +129,9 @@ Inheritance diagram for UIAResultDisplayController:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:aa3daf75e7c3727ed7daf9389e0154c2d"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceUIAResultDisplayController.html#aa3daf75e7c3727ed7daf9389e0154c2d">initWithContentsController:</a></td></tr>
-<tr class="memdesc:aa3daf75e7c3727ed7daf9389e0154c2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a display controller initialized with the given contents controller.  <a href="#aa3daf75e7c3727ed7daf9389e0154c2d">More...</a><br /></td></tr>
-<tr class="separator:aa3daf75e7c3727ed7daf9389e0154c2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7bec0d5e121447b4f668d141a64a970"><td class="memItemLeft" align="right" valign="top">(instancetype)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceUIAResultDisplayController.html#aa7bec0d5e121447b4f668d141a64a970">initWithContentsController:</a></td></tr>
+<tr class="memdesc:aa7bec0d5e121447b4f668d141a64a970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a display controller initialized with the given contents controller.  <a href="#aa7bec0d5e121447b4f668d141a64a970">More...</a><br /></td></tr>
+<tr class="separator:aa7bec0d5e121447b4f668d141a64a970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e78fff5c538adac3e3b801a51ff8e13"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interfaceUIAResultDisplayController.html#a3e78fff5c538adac3e3b801a51ff8e13">reloadResult</a></td></tr>
 <tr class="memdesc:a3e78fff5c538adac3e3b801a51ff8e13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to reload result view.  <a href="#a3e78fff5c538adac3e3b801a51ff8e13">More...</a><br /></td></tr>
 <tr class="separator:a3e78fff5c538adac3e3b801a51ff8e13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,12 +171,12 @@ Properties</h2></td></tr>
 <div class="textblock"><p>A result display controller manages display of a input view and a result view that displays the results of a search of data by view insertion. This is working as a general version of UISearchDisplayController. </p>
 <p>You initialize a search display controller with a view controller responsible for managing the input view. When reloading is requested, the result display controller is responsible for superimposing the result interface over the original view controller’s view and showing the result view. The results are fully custumizable through delegate. The delegate conforms to the <a class="el" href="protocolUIAResultDisplayDelegate-p.html">UIAResultDisplayDelegate</a> protocol. It is a wrapped interface to simplify output from raw inputs. Note that inputView should be subview of contentsViewController.view. And the contentsViewController's implementation should not depend on its view order. This controller will insert and remove others views to below and above of the inputView. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="aa3daf75e7c3727ed7daf9389e0154c2d"></a>
+<a class="anchor" id="aa7bec0d5e121447b4f668d141a64a970"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (id) initWithContentsController: </td>
+          <td class="memname">- (instancetype) initWithContentsController: </td>
           <td></td>
           <td class="paramtype">(UIViewController *)&#160;</td>
           <td class="paramname"><em>viewController</em></td>

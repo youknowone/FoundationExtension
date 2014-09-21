@@ -128,15 +128,15 @@ $(document).ready(function(){initNavTree('UIColor_8h_source.html','');});
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="categoryUIColor_07Creations_08.html">   44</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryUIColor_07Creations_08.html">UIColor (Creations)</a></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (id)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;+ (id)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (UIColor *)initWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;+ (UIColor *)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (id)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;- (UIColor *)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;+ (id)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;+ (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (id)initWith32bitColor:(UInt32)value;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;+ (id)colorWith32bitColor:(UInt32)value;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;- (UIColor *)initWith32bitColor:(UInt32)value;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;+ (UIColor *)colorWith32bitColor:(UInt32)value;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
@@ -164,8 +164,8 @@ $(document).ready(function(){initNavTree('UIColor_8h_source.html','');});
 <div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="interfaceUIAColorComponents.html#adc9699e4066ea4fecab411ac18ffa2c5">  140</a></span>&#160;<span class="keyword">@property</span>(nonatomic,readonly) CGFloat blue;</div>
 <div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="interfaceUIAColorComponents.html#aa957c44c9aa8a76c1cf1c59982f5ac18">  142</a></span>&#160;<span class="keyword">@property</span>(nonatomic,readonly) CGFloat alpha;</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;- (id)initWithColor:(UIColor *)color;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;+ (id)componentsWithColor:(UIColor *)color;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;- (instancetype)initWithColor:(UIColor *)color;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;+ (instancetype)componentsWithColor:(UIColor *)color;</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="categoryUIColor_07UIAColorComponents_08_html"><div class="ttname"><a href="categoryUIColor_07UIAColorComponents_08.html">UIColor(UIAColorComponents)</a></div><div class="ttdoc">UIColor creations using UIAColorComponents. </div><div class="ttdef"><b>Definition:</b> UIColor.h:115</div></div>

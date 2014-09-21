@@ -120,11 +120,14 @@ $(document).ready(function(){initNavTree('categoryNSArray_07Random_08.html','');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a1de0ab9407399e553bdcd2019bcd2077"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Random_08.html#a1de0ab9407399e553bdcd2019bcd2077">randomObject</a></td></tr>
-<tr class="memdesc:a1de0ab9407399e553bdcd2019bcd2077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select random object from NSArray.  <a href="#a1de0ab9407399e553bdcd2019bcd2077">More...</a><br /></td></tr>
+<tr class="memdesc:a1de0ab9407399e553bdcd2019bcd2077"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one of the objects in the array, or nil if the array contains no objects.  <a href="#a1de0ab9407399e553bdcd2019bcd2077">More...</a><br /></td></tr>
 <tr class="separator:a1de0ab9407399e553bdcd2019bcd2077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36625c57ca00ca3fa91a73c1c7cf4235"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Random_08.html#a36625c57ca00ca3fa91a73c1c7cf4235">randomObjectsOfCount:</a></td></tr>
-<tr class="memdesc:a36625c57ca00ca3fa91a73c1c7cf4235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select the given count number of random objects form NSArray.  <a href="#a36625c57ca00ca3fa91a73c1c7cf4235">More...</a><br /></td></tr>
+<tr class="memdesc:a36625c57ca00ca3fa91a73c1c7cf4235"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of random objects of given number in the array without duplication.  <a href="#a36625c57ca00ca3fa91a73c1c7cf4235">More...</a><br /></td></tr>
 <tr class="separator:a36625c57ca00ca3fa91a73c1c7cf4235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ed3d3e768ccff8860084a44c2409dbd"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Random_08.html#a8ed3d3e768ccff8860084a44c2409dbd">shuffledArray</a></td></tr>
+<tr class="memdesc:a8ed3d3e768ccff8860084a44c2409dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new shuffled array from the array;.  <a href="#a8ed3d3e768ccff8860084a44c2409dbd">More...</a><br /></td></tr>
+<tr class="separator:a8ed3d3e768ccff8860084a44c2409dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Random selection in NSArray objects. </p>
@@ -142,7 +145,8 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Select random object from NSArray. </p>
+<p>Returns one of the objects in the array, or nil if the array contains no objects. </p>
+<dl class="section return"><dt>Returns</dt><dd>One of the objects in the array, or nil if the array contains no objects. </dd></dl>
 
 </div>
 </div>
@@ -160,13 +164,31 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Select the given count number of random objects form NSArray. </p>
+<p>Returns an array of random objects of given number in the array without duplication. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">count</td><td>The number of items to select. </td></tr>
+    <tr><td class="paramname">count</td><td>A number of items to select. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>An array of random objects of given number in the array without duplication. If given count is bigger than the size of receiver array, it returns a shuffled array of the array. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8ed3d3e768ccff8860084a44c2409dbd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray *) shuffledArray </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new shuffled array from the array;. </p>
 
 </div>
 </div>

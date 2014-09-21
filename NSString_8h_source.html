@@ -118,17 +118,17 @@ $(document).ready(function(){initNavTree('NSString_8h_source.html','');});
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="categoryNSString_07Creations_08.html">   21</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSString_07Creations_08.html">NSString (Creations)</a></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;- (id)initWithInteger:(NSInteger)value;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;- (instancetype)initWithInteger:(NSInteger)value;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;- (id)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;- (instancetype)initWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (id)stringWithInteger:(NSInteger)value;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;+ (instancetype)stringWithInteger:(NSInteger)value;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+ (id)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+ (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList NS_FORMAT_FUNCTION(1,0);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;+ (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;+ (instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;+ (id)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;+ (instancetype)stringWithConcatnatingStrings:(NSString *)first, ... NS_REQUIRES_NIL_TERMINATION;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('NSString_8h_source.html','');});
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
 <div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="categoryNSString_07NSUTF8StringEncoding_08.html">  171</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSString_07NSUTF8StringEncoding_08.html">NSString (NSUTF8StringEncoding)</a></div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;+ (NSString *)stringWithUTF8Data:(NSData *)data;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;+ (instancetype)stringWithUTF8Data:(NSData *)data;</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;</div>

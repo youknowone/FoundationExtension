@@ -2,10 +2,31 @@ var hierarchy =
 [
     [ "<FSEventStreamDelegate>", "protocolFSEventStreamDelegate-p.html", null ],
     [ "NSAClass(Deprecated)", "categoryNSAClass_07Deprecated_08.html", null ],
+    [ "<NSAIndexedSubscript>", "protocolNSAIndexedSubscript-p.html", [
+      [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", [
+        [ "<NSAMutableArrayLikeDataObject>", "protocolNSAMutableArrayLikeDataObject-p.html", [
+          [ "NSAMutableTriple", "interfaceNSAMutableTriple.html", null ],
+          [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", null ]
+        ] ],
+        [ "NSATriple", "interfaceNSATriple.html", [
+          [ "NSAMutableTriple", "interfaceNSAMutableTriple.html", null ]
+        ] ],
+        [ "NSATuple", "interfaceNSATuple.html", [
+          [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", null ]
+        ] ]
+      ] ],
+      [ "<NSAMutableIndexedSubscript>", "protocolNSAMutableIndexedSubscript-p.html", [
+        [ "<NSAMutableArrayLikeDataObject>", "protocolNSAMutableArrayLikeDataObject-p.html", null ]
+      ] ]
+    ] ],
+    [ "<NSAKeyedSubscript>", "protocolNSAKeyedSubscript-p.html", [
+      [ "<NSAMutableKeyedSubscript>", "protocolNSAMutableKeyedSubscript-p.html", null ]
+    ] ],
     [ "NSArray", null, [
       [ "NSAArray", "interfaceNSAArray.html", null ]
     ] ],
     [ "NSArray(Creations)", "categoryNSArray_07Creations_08.html", null ],
+    [ "NSArray(Deprecated)", "categoryNSArray_07Deprecated_08.html", null ],
     [ "NSArray(Functional)", "categoryNSArray_07Functional_08.html", null ],
     [ "NSArray(NSNumber)", "categoryNSArray_07NSNumber_08.html", null ],
     [ "NSArray(NSURLRequest)", "categoryNSArray_07NSURLRequest_08.html", null ],
@@ -17,13 +38,10 @@ var hierarchy =
     [ "NSBundle(Shortcuts)", "categoryNSBundle_07Shortcuts_08.html", null ],
     [ "NSControl(Properties)", "categoryNSControl_07Properties_08.html", null ],
     [ "<NSCopying>", null, [
-      [ "NSATriple", "interfaceNSATriple.html", [
-        [ "NSAMutableTriple", "interfaceNSAMutableTriple.html", null ]
-      ] ],
-      [ "NSATuple", "interfaceNSATuple.html", [
-        [ "NSAMutableTuple", "interfaceNSAMutableTuple.html", null ]
-      ] ]
+      [ "NSATriple", "interfaceNSATriple.html", null ],
+      [ "NSATuple", "interfaceNSATuple.html", null ]
     ] ],
+    [ "NSCountedSet(Functional)", "categoryNSCountedSet_07Functional_08.html", null ],
     [ "NSData(CommonCrypto)", "categoryNSData_07CommonCrypto_08.html", null ],
     [ "NSData(CommonCryptor)", "categoryNSData_07CommonCryptor_08.html", null ],
     [ "NSData(CommonCryptorString)", "categoryNSData_07CommonCryptorString_08.html", null ],
@@ -37,6 +55,7 @@ var hierarchy =
       [ "NSADictionary", "interfaceNSADictionary.html", null ],
       [ "NSAOrderedDictionary", "interfaceNSAOrderedDictionary.html", null ]
     ] ],
+    [ "NSDictionary(Deprecated)", "categoryNSDictionary_07Deprecated_08.html", null ],
     [ "NSDictionary(Functional)", "categoryNSDictionary_07Functional_08.html", null ],
     [ "NSDictionary(NSData)", "categoryNSDictionary_07NSData_08.html", null ],
     [ "NSDictionary(NSURLRequest)", "categoryNSDictionary_07NSURLRequest_08.html", null ],
@@ -44,10 +63,14 @@ var hierarchy =
     [ "<NSDraggingDestination>", null, [
       [ "NSAImageWell", "interfaceNSAImageWell.html", null ]
     ] ],
+    [ "NSEnumerator", null, [
+      [ "NSABlockEnumerator", "interfaceNSABlockEnumerator.html", null ],
+      [ "NSAInfiniteEnumerator", "interfaceNSAInfiniteEnumerator.html", null ],
+      [ "NSARangeEnumerator", "interfaceNSARangeEnumerator.html", null ]
+    ] ],
     [ "NSEnumerator(Functional)", "categoryNSEnumerator_07Functional_08.html", null ],
     [ "<NSFastEnumeration>", null, [
-      [ "NSATriple", "interfaceNSATriple.html", null ],
-      [ "NSATuple", "interfaceNSATuple.html", null ]
+      [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", null ]
     ] ],
     [ "NSImage(Shortcuts)", "categoryNSImage_07Shortcuts_08.html", null ],
     [ "NSImageView", null, [
@@ -57,6 +80,7 @@ var hierarchy =
     [ "NSMutableArray", null, [
       [ "NSAMutableArray", "interfaceNSAMutableArray.html", null ]
     ] ],
+    [ "NSMutableArray(Deprecated)", "categoryNSMutableArray_07Deprecated_08.html", null ],
     [ "NSMutableArray(Functional)", "categoryNSMutableArray_07Functional_08.html", null ],
     [ "NSMutableArray(Random)", "categoryNSMutableArray_07Random_08.html", null ],
     [ "NSMutableAttributedString(AttributeProperties)", "categoryNSMutableAttributedString_07AttributeProperties_08.html", null ],
@@ -99,10 +123,7 @@ var hierarchy =
     [ "NSObject(ObjCRuntime)", "categoryNSObject_07ObjCRuntime_08.html", null ],
     [ "NSObject(ObjCRuntimeClass)", "categoryNSObject_07ObjCRuntimeClass_08.html", null ],
     [ "<NSObject>", null, [
-      [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", [
-        [ "NSATriple", "interfaceNSATriple.html", null ],
-        [ "NSATuple", "interfaceNSATuple.html", null ]
-      ] ],
+      [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", null ],
       [ "<NSAImageWellDelegate>", "protocolNSAImageWellDelegate-p.html", null ],
       [ "<UIAResultDisplayDelegate>", "protocolUIAResultDisplayDelegate-p.html", null ],
       [ "<UIASubviewTableSubviewSource>", "protocolUIASubviewTableSubviewSource-p.html", null ],

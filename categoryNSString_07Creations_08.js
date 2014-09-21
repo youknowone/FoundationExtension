@@ -1,9 +1,9 @@
 var categoryNSString_07Creations_08 =
 [
-    [ "initWithConcatnatingStrings:", "categoryNSString_07Creations_08.html#af282417e854a13eebda8f6895b97fb76", null ],
-    [ "initWithInteger:", "categoryNSString_07Creations_08.html#a5a5ee01c32ac32af48964839dfd58b0c", null ],
-    [ "stringWithConcatnatingStrings:", "categoryNSString_07Creations_08.html#ad592316cefbfe8985f52b437453b6c86", null ],
-    [ "stringWithData:encoding:", "categoryNSString_07Creations_08.html#a3c5d1d934d5f176b4d3190345282d4cc", null ],
-    [ "stringWithFormat:arguments:", "categoryNSString_07Creations_08.html#abe9b5fd5bf6237356f2762196887514f", null ],
-    [ "stringWithInteger:", "categoryNSString_07Creations_08.html#abd5fa0d5e94d5e29cc75209f52ed2f5a", null ]
+    [ "initWithConcatnatingStrings:", "categoryNSString_07Creations_08.html#a7063e298953abe124235014efc0887e7", null ],
+    [ "initWithInteger:", "categoryNSString_07Creations_08.html#a00ea3e1031bfde2973ee32fe58725d76", null ],
+    [ "stringWithConcatnatingStrings:", "categoryNSString_07Creations_08.html#a18dd892d99c506419d053a8621722062", null ],
+    [ "stringWithData:encoding:", "categoryNSString_07Creations_08.html#af9c92717409e58683fe67e888a960b3e", null ],
+    [ "stringWithFormat:arguments:", "categoryNSString_07Creations_08.html#a93e0c474057b0ed95908832b8c4ef0e7", null ],
+    [ "stringWithInteger:", "categoryNSString_07Creations_08.html#ab9794dcdbd0526b7839a01d0bd5a087d", null ]
 ];

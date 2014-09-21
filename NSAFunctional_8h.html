@@ -138,6 +138,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSSet_07Functional_08.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSOrderedSet_07Functional_08.html">NSOrderedSet(Functional)</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSOrderedSet_07Functional_08.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">category &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="categoryNSCountedSet_07Functional_08.html">NSCountedSet(Functional)</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">See <a class="el" href="Map_2Filter_2Reduce.html">Map/Filter/Reduce</a> for concept of functional tools.  <a href="categoryNSCountedSet_07Functional_08.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -172,6 +176,12 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ac3a87059af1d79cceaef4c4c4cbb7be0"><td class="memItemLeft" align="right" valign="top">typedef id(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#ac3a87059af1d79cceaef4c4c4cbb7be0">NSAObjectBinaryOperator</a> )(id obj1, id obj2)</td></tr>
 <tr class="memdesc:ac3a87059af1d79cceaef4c4c4cbb7be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object binary operation block. Take 2 objects and returns an object.  <a href="#ac3a87059af1d79cceaef4c4c4cbb7be0">More...</a><br /></td></tr>
 <tr class="separator:ac3a87059af1d79cceaef4c4c4cbb7be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a0eb5f377b341af6bb88e24184d809"><td class="memItemLeft" align="right" valign="top">typedef void(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a47a0eb5f377b341af6bb88e24184d809">NSAObjectProcedureWithCount</a> )(id obj, NSUInteger count)</td></tr>
+<tr class="separator:a47a0eb5f377b341af6bb88e24184d809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af010d194ddd509186edf8acd518d362c"><td class="memItemLeft" align="right" valign="top">typedef id(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#af010d194ddd509186edf8acd518d362c">NSAObjectUnaryOperatorWithCount</a> )(id obj, NSUInteger count)</td></tr>
+<tr class="separator:af010d194ddd509186edf8acd518d362c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a112f9626a42e4f351f0417ddf69f6e25"><td class="memItemLeft" align="right" valign="top">typedef BOOL(^&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="NSAFunctional_8h.html#a112f9626a42e4f351f0417ddf69f6e25">NSAObjectPickerWithCount</a> )(id obj, NSUInteger count)</td></tr>
+<tr class="separator:a112f9626a42e4f351f0417ddf69f6e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -237,6 +247,18 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a112f9626a42e4f351f0417ddf69f6e25"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef BOOL(^ NSAObjectPickerWithCount)(id obj, NSUInteger count)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a6729144064b79f07061fb32f69d9f112"></a>
 <div class="memitem">
 <div class="memproto">
@@ -279,6 +301,18 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a47a0eb5f377b341af6bb88e24184d809"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(^ NSAObjectProcedureWithCount)(id obj, NSUInteger count)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="ad666d0c20c04fb3902012b7475ecb83b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -318,6 +352,18 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Object unary operation block. Take an object and returns an object. </p>
+
+</div>
+</div>
+<a class="anchor" id="af010d194ddd509186edf8acd518d362c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef id(^ NSAObjectUnaryOperatorWithCount)(id obj, NSUInteger count)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

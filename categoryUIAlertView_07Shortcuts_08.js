@@ -1,6 +1,6 @@
 var categoryUIAlertView_07Shortcuts_08 =
 [
-    [ "initNoticeWithTitle:message:cancelButtonTitle:", "categoryUIAlertView_07Shortcuts_08.html#a8696cb61c7e8ee9db73690bd577f4d47", null ],
-    [ "showLog:file:line:", "categoryUIAlertView_07Shortcuts_08.html#ad1a6cfe0c94272ef8077797fdcf33b94", null ],
-    [ "showNoticeWithTitle:message:cancelButtonTitle:", "categoryUIAlertView_07Shortcuts_08.html#a451b9643274e35ce31c25de55c6a2333", null ]
+    [ "initNoticeWithTitle:message:cancelButtonTitle:", "categoryUIAlertView_07Shortcuts_08.html#ab4473bf71f84520d075a5b1b25b47f6f", null ],
+    [ "showLog:file:line:", "categoryUIAlertView_07Shortcuts_08.html#a8f273720008e03d7dce069d694854b31", null ],
+    [ "showNoticeWithTitle:message:cancelButtonTitle:", "categoryUIAlertView_07Shortcuts_08.html#a69c385fb3bbf12734b6c1930319e5e0d", null ]
 ];

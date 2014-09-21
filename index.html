@@ -106,11 +106,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention.</li>
 </ul>
 <p>See document on <a href="http://youknowone.github.com/FoundationExtension">Github</a></p>
-<h1>Download</h1>
-<pre class="fragment">git clone git://github.com/youknowone/FoundationExtension.git
-cd FoundationExtension
-git submodule update --init
-</pre><h1>How to use</h1>
+<h1>How to use</h1>
 <ul>
 <li>Compiled library<ol type="1">
 <li>Build project</li>
@@ -127,7 +123,11 @@ git submodule update --init
 </li>
 </ul>
 <p>If your compiler is gcc or old clang, add '-force_load' to static library.</p>
-<h1>Why useful</h1>
+<h1>Download for editing</h1>
+<pre class="fragment">git clone git://github.com/youknowone/FoundationExtension.git
+cd FoundationExtension
+git submodule update --init
+</pre><h1>Why useful</h1>
 <p>Make your code short! Do not allow evil objc to make your code verbose. This library includes many shortcuts for common work.</p>
 <h2>NSData from URL</h2>
 <p>Foundation </p><pre class="fragment">NSString *URLString = [NSSring stringWithFormat:@"http://"HOST_URL"/api/%@", key];

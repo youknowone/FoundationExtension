@@ -123,10 +123,14 @@ Inheritance diagram for &lt;NSAArrayLikeDataObject&gt;:</div>
  <div class="center">
   <img src="protocolNSAArrayLikeDataObject-p.png" usemap="#&lt;NSAArrayLikeDataObject&gt;_map" alt=""/>
   <map id="&lt;NSAArrayLikeDataObject&gt;_map" name="&lt;NSAArrayLikeDataObject&gt;_map">
-<area href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects. " alt="NSATriple" shape="rect" coords="0,112,171,136"/>
-<area href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects. " alt="NSATuple" shape="rect" coords="181,112,352,136"/>
-<area href="interfaceNSAMutableTriple.html" title="Manages ordered collections of 3 objects. " alt="NSAMutableTriple" shape="rect" coords="0,168,171,192"/>
-<area href="interfaceNSAMutableTuple.html" title="Manages ordered collections of 2 objects. " alt="NSAMutableTuple" shape="rect" coords="181,168,352,192"/>
+<area href="protocolNSAIndexedSubscript-p.html" title="The indexed subscript getter protocol NSAIndexedSubscript must be adopted and implemented by immutabl..." alt="&lt;NSAIndexedSubscript&gt;" shape="rect" coords="678,0,894,24"/>
+<area href="protocolNSAMutableArrayLikeDataObject-p.html" title="This protocol defines NSMutableArray-like interface methods for data objects. " alt="&lt;NSAMutableArrayLikeDataObject&gt;" shape="rect" coords="113,112,329,136"/>
+<area href="interfaceNSATriple.html" title="Manages ordered collections of 3 objects. " alt="NSATriple" shape="rect" coords="452,112,668,136"/>
+<area href="interfaceNSATuple.html" title="Manages ordered collections of 2 objects. " alt="NSATuple" shape="rect" coords="678,112,894,136"/>
+<area href="interfaceNSAMutableTriple.html" title="Manages ordered collections of 3 objects. " alt="NSAMutableTriple" shape="rect" coords="0,168,216,192"/>
+<area href="interfaceNSAMutableTuple.html" title="Manages ordered collections of 2 objects. " alt="NSAMutableTuple" shape="rect" coords="226,168,442,192"/>
+<area href="interfaceNSAMutableTriple.html" title="Manages ordered collections of 3 objects. " alt="NSAMutableTriple" shape="rect" coords="452,168,668,192"/>
+<area href="interfaceNSAMutableTuple.html" title="Manages ordered collections of 2 objects. " alt="NSAMutableTuple" shape="rect" coords="678,168,894,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -135,26 +139,33 @@ Instance Methods</h2></td></tr>
 <tr class="memitem:a3f5dc23a7de872f6692a350efe2eb9d5"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAArrayLikeDataObject-p.html#a3f5dc23a7de872f6692a350efe2eb9d5">objectAtIndex:</a></td></tr>
 <tr class="memdesc:a3f5dc23a7de872f6692a350efe2eb9d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object located at index.  <a href="#a3f5dc23a7de872f6692a350efe2eb9d5">More...</a><br /></td></tr>
 <tr class="separator:a3f5dc23a7de872f6692a350efe2eb9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a068fd535b4665f662a84706630c3d49b"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAArrayLikeDataObject-p.html#a068fd535b4665f662a84706630c3d49b">:</a></td></tr>
-<tr class="memdesc:a068fd535b4665f662a84706630c3d49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object located at index. Shortcut of <a class="el" href="protocolNSAArrayLikeDataObject-p.html#a3f5dc23a7de872f6692a350efe2eb9d5">objectAtIndex:</a>  <a href="#a068fd535b4665f662a84706630c3d49b">More...</a><br /></td></tr>
-<tr class="separator:a068fd535b4665f662a84706630c3d49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab55907a80f4fd0e55372964bb3b3d26e"><td class="memItemLeft" align="right" valign="top">(NSUInteger)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAArrayLikeDataObject-p.html#ab55907a80f4fd0e55372964bb3b3d26e">indexOfObject:</a></td></tr>
 <tr class="memdesc:ab55907a80f4fd0e55372964bb3b3d26e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the lowest index whose corresponding member value is equal to a given object.  <a href="#ab55907a80f4fd0e55372964bb3b3d26e">More...</a><br /></td></tr>
 <tr class="separator:ab55907a80f4fd0e55372964bb3b3d26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa95b57e6e771a74d1cdba808a90c2577"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAArrayLikeDataObject-p.html#aa95b57e6e771a74d1cdba808a90c2577">containsObject:</a></td></tr>
 <tr class="memdesc:aa95b57e6e771a74d1cdba808a90c2577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether a given object is present in the array.  <a href="#aa95b57e6e771a74d1cdba808a90c2577">More...</a><br /></td></tr>
 <tr class="separator:aa95b57e6e771a74d1cdba808a90c2577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a954a29cc5fd66d2d124f8f8f4cd922cf"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAArrayLikeDataObject-p.html#a954a29cc5fd66d2d124f8f8f4cd922cf">:</a></td></tr>
+<tr class="memdesc:a954a29cc5fd66d2d124f8f8f4cd922cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object located at index. Shortcut of <a class="el" href="protocolNSAArrayLikeDataObject-p.html#a3f5dc23a7de872f6692a350efe2eb9d5">objectAtIndex:</a>  <a href="#a954a29cc5fd66d2d124f8f8f4cd922cf">More...</a><br /></td></tr>
+<tr class="separator:a954a29cc5fd66d2d124f8f8f4cd922cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_protocolNSAIndexedSubscript-p"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_protocolNSAIndexedSubscript-p')"><img src="closed.png" alt="-"/>&#160;Instance Methods inherited from <a class="el" href="protocolNSAIndexedSubscript-p.html">&lt;NSAIndexedSubscript&gt;</a></td></tr>
+<tr class="memitem:a92e6ffc2dd1c7ffb0a8d8317a4eb6c86 inherit pub_methods_protocolNSAIndexedSubscript-p"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="protocolNSAIndexedSubscript-p.html#a92e6ffc2dd1c7ffb0a8d8317a4eb6c86">objectAtIndexedSubscript:</a></td></tr>
+<tr class="memdesc:a92e6ffc2dd1c7ffb0a8d8317a4eb6c86 inherit pub_methods_protocolNSAIndexedSubscript-p"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the object located at the specified index.  <a href="#a92e6ffc2dd1c7ffb0a8d8317a4eb6c86">More...</a><br /></td></tr>
+<tr class="separator:a92e6ffc2dd1c7ffb0a8d8317a4eb6c86 inherit pub_methods_protocolNSAIndexedSubscript-p"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ab040cae87c279ddb504e971816090f28"><td class="memItemLeft" align="right" valign="top">NSUInteger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocolNSAArrayLikeDataObject-p.html#ab040cae87c279ddb504e971816090f28">count</a></td></tr>
 <tr class="memdesc:ab040cae87c279ddb504e971816090f28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of objects currently in the data object.  <a href="#ab040cae87c279ddb504e971816090f28">More...</a><br /></td></tr>
 <tr class="separator:ab040cae87c279ddb504e971816090f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570f5510296c0c2f265b8efacf781dd5"><td class="memItemLeft" align="right" valign="top">NSArray *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="protocolNSAArrayLikeDataObject-p.html#a570f5510296c0c2f265b8efacf781dd5">allObjects</a></td></tr>
+<tr class="memdesc:a570f5510296c0c2f265b8efacf781dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array containing the container’s members, or an empty array if the container has no members.  <a href="#a570f5510296c0c2f265b8efacf781dd5">More...</a><br /></td></tr>
+<tr class="separator:a570f5510296c0c2f265b8efacf781dd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This protocol defines NSArray-like interface methods for data objects. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a068fd535b4665f662a84706630c3d49b"></a>
+<a class="anchor" id="a954a29cc5fd66d2d124f8f8f4cd922cf"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -162,7 +173,7 @@ Properties</h2></td></tr>
           <td class="memname">- (id) : </td>
           <td></td>
           <td class="paramtype">(NSUInteger)&#160;</td>
-          <td class="paramname"><em>index</em></td>
+          <td class="paramname"><em>__deprecated</em></td>
           <td></td>
         </tr>
       </table>
@@ -176,6 +187,7 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The object located at index. </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000025">Deprecated:</a></b></dt><dd>Use (obj)[index] syntax of Modern Objective-C instead of this method. </dd></dl>
 
 </div>
 </div>
@@ -255,6 +267,28 @@ Properties</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a570f5510296c0c2f265b8efacf781dd5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray*) allObjects</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">atomic</span><span class="mlabel">copy</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns an array containing the container’s members, or an empty array if the container has no members. </p>
+
+</div>
+</div>
 <a class="anchor" id="ab040cae87c279ddb504e971816090f28"></a>
 <div class="memitem">
 <div class="memproto">

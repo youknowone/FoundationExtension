@@ -26,6 +26,8 @@ var searchData=
   ['_5fplaceholderanimated',['_placeholderAnimated',['../interfaceUIAPlaceholderTextView.html#a82da39e2ea50f03f8ed0bf6a78a640cc',1,'UIAPlaceholderTextView']]],
   ['_5fplaceholderstring',['_placeholderString',['../interfaceUIAPlaceholderTextView.html#a8de147d94c5b67b35bdc13f542c98d64',1,'UIAPlaceholderTextView']]],
   ['_5fplaceholdertextview',['_placeholderTextView',['../interfaceUIAPlaceholderTextView.html#afc3eb92e6234b04858e6a91dd89736e5',1,'UIAPlaceholderTextView']]],
+  ['_5fpool',['_pool',['../interfaceNSAInfiniteEnumerator.html#ac5435d77e4ab96868ae7c754cc03bf34',1,'NSAInfiniteEnumerator']]],
+  ['_5frange',['_range',['../interfaceNSARangeEnumerator.html#a72006ed5c5e46220a4b4c00f8cb1074b',1,'NSARangeEnumerator']]],
   ['_5fsecond',['_second',['../interfaceNSATuple.html#a22b3b12675184c2492850cbc45a6dd72',1,'NSATuple::_second()'],['../interfaceNSATriple.html#a28fc5ce469d2dd8242cb9293912c1295',1,'NSATriple::_second()']]],
   ['_5fstream',['_stream',['../interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3',1,'FSEventStream']]],
   ['_5fstring',['_string',['../interfaceNSAVersion.html#abfbaed3e9e43113ce285999d60da3ac8',1,'NSAVersion']]],

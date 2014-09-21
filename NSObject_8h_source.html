@@ -132,75 +132,80 @@ $(document).ready(function(){initNavTree('NSObject_8h_source.html','');});
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a4c38e31a5e5a383792fa5fedba097ee1">   70</a></span>&#160;<span class="preprocessor">#define NSAPropertyGetterForType(methodName, nameString, type) - (type)methodName { type outValue;  [self getVariable:(void **)&amp;outValue forName:nameString]; return outValue; }</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (void)setVariable:(<span class="keywordtype">void</span> *)value forName:(NSString *)name;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a6f31f9b0e59621804cd6e5eda65fcd46">   89</a></span>&#160;<span class="preprocessor">#define NSAPropertyAssignSetter(methodName, nameString) - (void)methodName:(id)value { [self setVariable:value forName:nameString]; }</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="NSObject_8h.html#ad8108be76237897171a136dcec9edfa6">   97</a></span>&#160;<span class="preprocessor">#define NSAPropertyRetainSetter(methodName, nameString) - (void)methodName:(id)value { [value retain]; [[self variableForName:nameString] release]; [self setVariable:value forName:nameString]; }</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a168f2c6750762f875f6c6cbe6e2fabb7">  105</a></span>&#160;<span class="preprocessor">#define NSAPropertyCopySetter(methodName, nameString) - (void)methodName:(id)value { id copied = [value copy]; [[self variableForName:nameString] release]; [self setVariable:copied forName:nameString]; }</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;- (id)performSelector:(<span class="keywordtype">SEL</span>)aSelector withObject:(<span class="keywordtype">id</span>)object1 withObject:(<span class="keywordtype">id</span>)object2 withObject:(<span class="keywordtype">id</span>)object3;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;- (id)performSelector:(<span class="keywordtype">SEL</span>)aSelector withObject:(<span class="keywordtype">id</span>)object1 withObject:(<span class="keywordtype">id</span>)object2 withObject:(<span class="keywordtype">id</span>)object3 withObject:(<span class="keywordtype">id</span>)object4;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;- (id)associatedObjectForKey:(<span class="keywordtype">void</span> *)key;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;- (void)setAssociatedObject:(<span class="keywordtype">id</span>)object forKey:(<span class="keywordtype">void</span> *)key;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;- (void)setAssociatedObject:(<span class="keywordtype">id</span>)object forKey:(<span class="keywordtype">void</span> *)key policy:(objc_AssociationPolicy)policy;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;- (void)removeAssociatedObjectForKey:(<span class="keywordtype">void</span> *)key;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;- (void)setAndRetainVariable:(<span class="keywordtype">id</span>)value forName:(NSString *)name;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;- (void)setAndCopyVariable:(<span class="keywordtype">id</span>)value forName:(NSString *)name;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a020bf984a759ccf0d0d4448349df1e8d">  107</a></span>&#160;<span class="preprocessor">#define NSAPropertyAssignSetter(METHOD, PROPERTY) \</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">    - (void)METHOD:(id)value { [self setVariable:(__bridge void *)value forName:PROPERTY]; }</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a2e29361380fb92cf4e0293346341c5d3">  116</a></span>&#160;<span class="preprocessor">#define NSAPropertyRetainSetter(METHOD, PROPERTY) \</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">    - (void)METHOD:(id)value { [self setAndRetainVariable:value forName:PROPERTY]; }</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="NSObject_8h.html#a9b926c409623f1737f566673444bcf86">  125</a></span>&#160;<span class="preprocessor">#define NSAPropertyCopySetter(METHOD, PROPERTY) \</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">    - (void)METHOD:(__weak id)value { [self setAndCopyVariable:value forName:PROPERTY]; }</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;- (id)performSelector:(<span class="keywordtype">SEL</span>)aSelector withObject:(<span class="keywordtype">id</span>)object1 withObject:(<span class="keywordtype">id</span>)object2 withObject:(<span class="keywordtype">id</span>)object3;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;- (id)performSelector:(<span class="keywordtype">SEL</span>)aSelector withObject:(<span class="keywordtype">id</span>)object1 withObject:(<span class="keywordtype">id</span>)object2 withObject:(<span class="keywordtype">id</span>)object3 withObject:(<span class="keywordtype">id</span>)object4;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;- (id)associatedObjectForKey:(<span class="keywordtype">void</span> *)key;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;- (void)setAssociatedObject:(<span class="keywordtype">id</span>)object forKey:(<span class="keywordtype">void</span> *)key;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;- (void)removeAssociatedObjectForKey:(<span class="keywordtype">void</span> *)key policy:(objc_AssociationPolicy)policy;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;- (void)setAssociatedObject:(<span class="keywordtype">id</span>)object forKey:(<span class="keywordtype">void</span> *)key policy:(objc_AssociationPolicy)policy;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="categoryNSObject_07ObjCRuntimeClass_08.html">  201</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject (ObjCRuntimeClass)</a></div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;+ (NSString *)name;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;+ (NSString *)className __deprecated;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;- (void)removeAssociatedObjectForKey:(<span class="keywordtype">void</span> *)key;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;- (void)removeAssociatedObjectForKey:(<span class="keywordtype">void</span> *)key policy:(objc_AssociationPolicy)policy;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;+ (Method)methodValueForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;+ (<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)methodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;+ (Method)classMethodValueForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00222"></a><span class="lineno"><a class="line" href="categoryNSObject_07ObjCRuntimeClass_08.html">  222</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject (ObjCRuntimeClass)</a></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;+ (NSString *)name;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;+ (NSString *)className __deprecated;</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;+ (<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)classMethodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;+ (Method)methodValueForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;+ (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;+ (<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)methodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;+ (void)addMethodForSelector:(<span class="keywordtype">SEL</span>)selector fromMethod:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;+ (Method)classMethodValueForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;+ (void)addMethodForSelector:(<span class="keywordtype">SEL</span>)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;+ (<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)classMethodObjectForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;+ (void)addClassMethodForSelector:(<span class="keywordtype">SEL</span>)selector fromMethod:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;+ (IMP)methodImplementationForSelector:(<span class="keywordtype">SEL</span>)selector;</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;+ (void)addClassMethodForSelector:(<span class="keywordtype">SEL</span>)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;+ (void)addMethodForSelector:(<span class="keywordtype">SEL</span>)selector fromMethod:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
-<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html">  287</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html">NSAMethod</a> : NSObject {</div>
-<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  288</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
-<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  295</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
-<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  303</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
-<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#ac04d855f943fc17f1e166596f794fc34">  311</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString *typeEncoding;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;- (void)exchangeImplementationWith:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="interfaceNSAMethod_html_a0e909f23642478900b770d0c7e96c1b3"><div class="ttname"><a href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">NSAMethod::_method</a></div><div class="ttdeci">Method _method</div><div class="ttdef"><b>Definition:</b> NSObject.h:288</div></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;+ (void)addMethodForSelector:(<span class="keywordtype">SEL</span>)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;+ (void)addClassMethodForSelector:(<span class="keywordtype">SEL</span>)selector fromMethod:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;+ (void)addClassMethodForSelector:(<span class="keywordtype">SEL</span>)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html">  308</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceNSAMethod.html">NSAMethod</a> : NSObject {</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">  309</a></span>&#160;    Method <a class="code" href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">_method</a>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a612187ff8acea59c6c303daff03469d2">  316</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) Method method;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#a38aee06158814227e3859155333941a4">  324</a></span>&#160;<span class="keyword">@property</span>(nonatomic, assign) IMP implementation;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00332"></a><span class="lineno"><a class="line" href="interfaceNSAMethod.html#ac04d855f943fc17f1e166596f794fc34">  332</a></span>&#160;<span class="keyword">@property</span>(nonatomic, readonly) NSString *typeEncoding;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;- (void)exchangeImplementationWith:(<a class="code" href="interfaceNSAMethod.html">NSAMethod</a> *)method;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="interfaceNSAMethod_html_a0e909f23642478900b770d0c7e96c1b3"><div class="ttname"><a href="interfaceNSAMethod.html#a0e909f23642478900b770d0c7e96c1b3">NSAMethod::_method</a></div><div class="ttdeci">Method _method</div><div class="ttdef"><b>Definition:</b> NSObject.h:309</div></div>
 <div class="ttc" id="categoryNSObject_07ObjCRuntime_08_html"><div class="ttname"><a href="categoryNSObject_07ObjCRuntime_08.html">NSObject(ObjCRuntime)</a></div><div class="ttdoc">NSObject <objc/runtime.h> extensions. </div><div class="ttdef"><b>Definition:</b> NSObject.h:25</div></div>
-<div class="ttc" id="categoryNSObject_07ObjCRuntimeClass_08_html"><div class="ttname"><a href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject(ObjCRuntimeClass)</a></div><div class="ttdoc">Class extensions. </div><div class="ttdef"><b>Definition:</b> NSObject.h:201</div></div>
-<div class="ttc" id="interfaceNSAMethod_html"><div class="ttname"><a href="interfaceNSAMethod.html">NSAMethod</a></div><div class="ttdoc">Object wrapper for Method. </div><div class="ttdef"><b>Definition:</b> NSObject.h:287</div></div>
+<div class="ttc" id="categoryNSObject_07ObjCRuntimeClass_08_html"><div class="ttname"><a href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject(ObjCRuntimeClass)</a></div><div class="ttdoc">Class extensions. </div><div class="ttdef"><b>Definition:</b> NSObject.h:222</div></div>
+<div class="ttc" id="interfaceNSAMethod_html"><div class="ttname"><a href="interfaceNSAMethod.html">NSAMethod</a></div><div class="ttdoc">Object wrapper for Method. </div><div class="ttdef"><b>Definition:</b> NSObject.h:308</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -1,8 +1,8 @@
 var interfaceNSAVersion =
 [
-    [ "initWithString:", "interfaceNSAVersion.html#af9625d14f930ca0c975fabc487ebd7ae", null ],
+    [ "initWithString:", "interfaceNSAVersion.html#ac225d225eb71027c88735f1477019694", null ],
     [ "systemVersion", "interfaceNSAVersion.html#a20b97798a0d1dba5a7d5aed8a10e4540", null ],
-    [ "versionWithString:", "interfaceNSAVersion.html#a5975f41b4fc2ae1218f492149a963ef4", null ],
+    [ "versionWithString:", "interfaceNSAVersion.html#a5aec2e28d972a752ade80ee5851bbc49", null ],
     [ "_bugfix", "interfaceNSAVersion.html#a72e4fc269f358fe70f2ec6baafcd353a", null ],
     [ "_major", "interfaceNSAVersion.html#a4238b3c719f02f38dfb83f1759b3e3f3", null ],
     [ "_minor", "interfaceNSAVersion.html#a82654cdf5678936a234479d665b962e2", null ],

@@ -1,9 +1,9 @@
 var interfaceUIASegmentedImageView =
 [
     [ "arrange", "interfaceUIASegmentedImageView.html#a486b2e466d10300164ef7cf404d58928", null ],
-    [ "initWithCenterImage:", "interfaceUIASegmentedImageView.html#a19a9b38a9cc12157b8d0c9f256b1c396", null ],
-    [ "initWithLeftImage:centerImage:rightImage:", "interfaceUIASegmentedImageView.html#a6373c5729ab08838d45a14ae3423afc7", null ],
-    [ "initWithTopImage:centerImage:bottomImage:", "interfaceUIASegmentedImageView.html#ad93772f507d1b07b80f93ba6a51df94c", null ],
+    [ "initWithCenterImage:", "interfaceUIASegmentedImageView.html#a96d5a6e636c216dc418d16a797059f8d", null ],
+    [ "initWithLeftImage:centerImage:rightImage:", "interfaceUIASegmentedImageView.html#af1ee303eb8014d1279ce24b64a27c756", null ],
+    [ "initWithTopImage:centerImage:bottomImage:", "interfaceUIASegmentedImageView.html#aa227d3eee6344e3e8a6226a19a21a7e8", null ],
     [ "autosizing", "interfaceUIASegmentedImageView.html#ad7e936d7b5e4928e19b3a1dd0033b5ad", null ],
     [ "bottomImage", "interfaceUIASegmentedImageView.html#acf24f2846f9a57d4972c69a491103c9f", null ],
     [ "bottomLeftImage", "interfaceUIASegmentedImageView.html#a6ec65529eaddffef8a2c22cd09ef63f9", null ],

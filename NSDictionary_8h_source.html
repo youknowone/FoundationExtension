@@ -116,24 +116,34 @@ $(document).ready(function(){initNavTree('NSDictionary_8h_source.html','');});
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="categoryNSDictionary_07Shortcuts_08.html">   18</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSDictionary_07Shortcuts_08.html">NSDictionary (Shortcuts)</a></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;- (id):(<span class="keywordtype">id</span>)key __deprecated;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;- (BOOL)containsKey:(<span class="keywordtype">id</span>)aKey;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;- (BOOL)containsKey:(<span class="keywordtype">id</span>)aKey;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;- (id)anyKey;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="categoryNSDictionary_07NSData_08.html">   40</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSDictionary_07NSData_08.html">NSDictionary (NSData)</a></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;- (id)initWithData:(NSData *)data;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;- (id)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;+ (id)dictionaryWithData:(NSData *)data;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;+ (id)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;- (id)anyObject;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="categoryNSDictionary_07NSData_08.html">   46</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSDictionary_07NSData_08.html">NSDictionary (NSData)</a></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;- (instancetype)initWithData:(NSData *)data;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;+ (instancetype)dictionaryWithData:(NSData *)data;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="categoryNSDictionary_07NSData_08_html"><div class="ttname"><a href="categoryNSDictionary_07NSData_08.html">NSDictionary(NSData)</a></div><div class="ttdoc">NSDictionary creation methods extension with NSData. </div><div class="ttdef"><b>Definition:</b> NSDictionary.h:40</div></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;+ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="categoryNSDictionary_07Deprecated_08.html">   91</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSDictionary_07Deprecated_08.html">NSDictionary (Deprecated)</a></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;- (id):(<span class="keywordtype">id</span>)key __deprecated;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="categoryNSDictionary_07Deprecated_08_html"><div class="ttname"><a href="categoryNSDictionary_07Deprecated_08.html">NSDictionary(Deprecated)</a></div><div class="ttdoc">Deprecated methods of NSDictionary extensions. </div><div class="ttdef"><b>Definition:</b> NSDictionary.h:91</div></div>
+<div class="ttc" id="categoryNSDictionary_07NSData_08_html"><div class="ttname"><a href="categoryNSDictionary_07NSData_08.html">NSDictionary(NSData)</a></div><div class="ttdoc">NSDictionary creation methods extension with NSData. </div><div class="ttdef"><b>Definition:</b> NSDictionary.h:46</div></div>
 <div class="ttc" id="categoryNSDictionary_07Shortcuts_08_html"><div class="ttname"><a href="categoryNSDictionary_07Shortcuts_08.html">NSDictionary(Shortcuts)</a></div><div class="ttdoc">NSDictionary shortcut methods extension. </div><div class="ttdef"><b>Definition:</b> NSDictionary.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

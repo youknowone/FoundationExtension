@@ -119,32 +119,52 @@ $(document).ready(function(){initNavTree('categoryNSDictionary_07Shortcuts_08.ht
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:abe145aab099c89e482e7dfc71eba4193"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSDictionary_07Shortcuts_08.html#abe145aab099c89e482e7dfc71eba4193">:</a></td></tr>
-<tr class="memdesc:abe145aab099c89e482e7dfc71eba4193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extreme short form of 'ObjectForKey:'.  <a href="#abe145aab099c89e482e7dfc71eba4193">More...</a><br /></td></tr>
-<tr class="separator:abe145aab099c89e482e7dfc71eba4193"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1d8b3cbf895a35cf90264ad6a11d80b"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSDictionary_07Shortcuts_08.html#ac1d8b3cbf895a35cf90264ad6a11d80b">containsKey:</a></td></tr>
 <tr class="memdesc:ac1d8b3cbf895a35cf90264ad6a11d80b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether a given object is present in the keys.  <a href="#ac1d8b3cbf895a35cf90264ad6a11d80b">More...</a><br /></td></tr>
 <tr class="separator:ac1d8b3cbf895a35cf90264ad6a11d80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ea4e3adc5f218e5eb1cb3015876661"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSDictionary_07Shortcuts_08.html#a93ea4e3adc5f218e5eb1cb3015876661">anyKey</a></td></tr>
+<tr class="memdesc:a93ea4e3adc5f218e5eb1cb3015876661"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one of the keys in the dictionary, or nil if the dictionary contains no objects.  <a href="#a93ea4e3adc5f218e5eb1cb3015876661">More...</a><br /></td></tr>
+<tr class="separator:a93ea4e3adc5f218e5eb1cb3015876661"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94f8f0a75d57afe2c2b6095f1dc5d345"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSDictionary_07Shortcuts_08.html#a94f8f0a75d57afe2c2b6095f1dc5d345">anyObject</a></td></tr>
+<tr class="memdesc:a94f8f0a75d57afe2c2b6095f1dc5d345"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns one of the objects in the dictionary, or nil if the dictionary contains no objects.  <a href="#a94f8f0a75d57afe2c2b6095f1dc5d345">More...</a><br /></td></tr>
+<tr class="separator:a94f8f0a75d57afe2c2b6095f1dc5d345"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NSDictionary shortcut methods extension. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="abe145aab099c89e482e7dfc71eba4193"></a>
+<a class="anchor" id="a93ea4e3adc5f218e5eb1cb3015876661"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (id) : </td>
+          <td class="memname">- (id) anyKey </td>
           <td></td>
-          <td class="paramtype">(id)&#160;</td>
-          <td class="paramname"><em>__deprecated</em></td>
+          <td class="paramname"></td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Extreme short form of 'ObjectForKey:'. </p>
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000027">Deprecated:</a></b></dt><dd>Use (array)[index] syntax instead of this. </dd></dl>
+<p>Returns one of the keys in the dictionary, or nil if the dictionary contains no objects. </p>
+<dl class="section return"><dt>Returns</dt><dd>One of the keys in the dictionary, or nil if the dictionary contains no objects. The key returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94f8f0a75d57afe2c2b6095f1dc5d345"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) anyObject </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns one of the objects in the dictionary, or nil if the dictionary contains no objects. </p>
+<dl class="section return"><dt>Returns</dt><dd>One of the objects in the dictionary, or nil if the dictionary contains no objects. The object returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random. </dd></dl>
 
 </div>
 </div>

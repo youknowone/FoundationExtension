@@ -7,7 +7,7 @@ var searchData=
   ['tableview_3amoverowatindexpath_3atoindexpath_3a',['tableView:moveRowAtIndexPath:toIndexPath:',['../protocolUIASubviewTableSubviewSource-p.html#aaa8855dbb191f04764048c8849a6a567',1,'UIASubviewTableSubviewSource-p']]],
   ['tableview_3asectionforsectionindextitle_3aatindex_3a',['tableView:sectionForSectionIndexTitle:atIndex:',['../protocolUIASubviewTableSubviewSource-p.html#a6ec0c8c1229032d96ae271e65324f4cd',1,'UIASubviewTableSubviewSource-p']]],
   ['temporaryurl',['temporaryURL',['../categoryNSString_07NSURL_08.html#a9df0212edd24bcbcb6dda0da8a241968',1,'NSString(NSURL)']]],
-  ['temporaryurlwithpath_3a',['temporaryURLWithPath:',['../categoryNSURL_07Creations_08.html#a708517f940d8b3c0beeb756fbbd1bfe1',1,'NSURL(Creations)']]],
+  ['temporaryurlwithpath_3a',['temporaryURLWithPath:',['../categoryNSURL_07Creations_08.html#a8dfdba41ef6c97d603c1bbcfa059ca77',1,'NSURL(Creations)']]],
   ['third',['third',['../interfaceNSATriple.html#adb9e9042aab45ea1539c9addb67549c0',1,'NSATriple::third()'],['../interfaceNSAMutableTriple.html#aa2e6f7b342f24f8bb1f81f896926be7f',1,'NSAMutableTriple::third()']]],
   ['timeoutinterval',['timeoutInterval',['../categoryNSURLRequest_07Properties_08.html#a9cffd3690dd46d3b6fa2bf50dc3745a4',1,'NSURLRequest(Properties)::timeoutInterval()'],['../categoryNSMutableURLRequest_07Properties_08.html#ac4d9f2c6626b0a2da7f408ccc7631894',1,'NSMutableURLRequest(Properties)::timeoutInterval()']]],
   ['timerdidfire_3a',['timerDidFire:',['../protocolNSTimerDelegate-p.html#a66b369b0edd671b0c8aa3d2f36f4b079',1,'NSTimerDelegate-p']]],
@@ -20,10 +20,10 @@ var searchData=
   ['topleftimage',['topLeftImage',['../interfaceUIASegmentedImageView.html#a170ad1482dc2727c261d4049a9febbe7',1,'UIASegmentedImageView']]],
   ['topmargin',['topMargin',['../interfaceUIASegmentedImageView.html#a8167a18108efa267641be7ceb5606288',1,'UIASegmentedImageView']]],
   ['toprightimage',['topRightImage',['../interfaceUIASegmentedImageView.html#a756f4e76afacdcc518fd6773370214d0',1,'UIASegmentedImageView']]],
-  ['triple',['triple',['../interfaceNSATriple.html#a2ade5b9215141dc45aef34f7f42ff4c3',1,'NSATriple']]],
-  ['triplewithfirst_3asecond_3athird_3a',['tripleWithFirst:second:third:',['../interfaceNSATriple.html#a37dd48b6e2c40bf456ef9e83894e1cb2',1,'NSATriple']]],
-  ['tuple',['tuple',['../interfaceNSATuple.html#a93b9ba4f09e28f22bae82ab84b72fdf1',1,'NSATuple']]],
-  ['tuplewithfirst_3asecond_3a',['tupleWithFirst:second:',['../interfaceNSATuple.html#a965fca01afa981949fba7b711d0f81ab',1,'NSATuple']]],
+  ['triple',['triple',['../interfaceNSATriple.html#abd38fe70bebae99ff5c33692a95c441b',1,'NSATriple']]],
+  ['triplewithfirst_3asecond_3athird_3a',['tripleWithFirst:second:third:',['../interfaceNSATriple.html#aeef80b482be564d7944a78beacf50371',1,'NSATriple']]],
+  ['tuple',['tuple',['../interfaceNSATuple.html#a2c01416cca4a5282d499640ea9cc0641',1,'NSATuple']]],
+  ['tuplewithfirst_3asecond_3a',['tupleWithFirst:second:',['../interfaceNSATuple.html#a04e8cba0ec09593b487fa2211022408c',1,'NSATuple']]],
   ['typeencoding',['typeEncoding',['../interfaceNSAMethod.html#ac04d855f943fc17f1e166596f794fc34',1,'NSAMethod']]],
   ['typeformeddescription',['typeFormedDescription',['../categoryNSNumber_07Description_08.html#a335b56ec7a1765b286272b412c0f5621',1,'NSNumber(Description)::typeFormedDescription()'],['../categoryNSDecimalNumber_07Description_08.html#a079b8cd421eef51869eb6e4f6b4e937f',1,'NSDecimalNumber(Description)::typeFormedDescription()']]]
 ];

@@ -35,11 +35,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CocoaExtension_8h.html",
-"NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bacb7c5bf5dc4e06d375af0c89e42157b1",
-"categoryNSEnumerator_07Functional_08.html#a5e47145ca112e64d16e68fdee370a244",
-"categoryNSString_07Shortcuts_08.html",
-"interfaceNSAClass.html#ad0f7e4b9df27ea8d183a36a130e6050c",
-"protocolNSTimerDelegate-p.html#a57e51a10b0f1549b803fd5813f766640"
+"NSStringEncoding_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab183b47d761c5a7e55340e620d86588e",
+"categoryNSDictionary_07NSData_08.html#a0d48b75a1a5e0dbc30bc12b8f86234a4",
+"categoryNSString_07NSPasteboard_08.html",
+"interfaceFSEventStream.html#a6bceb8706017180552ddab5829cc78ea",
+"interfaceUIASegmentedImageView.html#af1ee303eb8014d1279ce24b64a27c756"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

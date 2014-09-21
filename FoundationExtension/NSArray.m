@@ -66,6 +66,32 @@
     return [self initWithArray:array];
 }
 
+- (instancetype)initWithObject:(id)object count:(NSUInteger)count {
+    id *objects = malloc(sizeof(id) * count);
+    for (NSUInteger i = 0; i < count; i++) {
+        objects[i] = object;
+    }
+    return [self initWithObjects:objects count:count];
+}
+
++ (instancetype)arrayWithObject:(id)object count:(NSUInteger)count {
+    return [[self alloc] initWithObject:object count:count];
+}
+
+- (instancetype)initWithObjectCopy:(id)object count:(NSUInteger)count mutable:(BOOL)flag {
+    id *objects = malloc(sizeof(id) * count);
+    if (flag) {
+        for (NSUInteger i = 0; i < count; i++) {
+            objects[i] = [object mutableCopy];
+        }
+    } else {
+        for (NSUInteger i = 0; i < count; i++) {
+            objects[i] = [object copy];
+        }
+    }
+    return [self initWithObjects:objects count:count];
+}
+
 @end
 
 

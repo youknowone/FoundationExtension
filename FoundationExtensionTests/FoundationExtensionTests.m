@@ -311,6 +311,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
         sum += n.integerValue;
     }
     XCTAssertEqual(sum, 5050);
+
+    NSArray *objects = [[NSARangeEnumerator enumeratorWithCount:5] arrayByMappingOperator:^id(id obj) {
+        return [NSNull null];
+    }];
+    NSArray *nullObjects = [NSArray arrayWithObject:[NSNull null] count:5];
+    XCTAssertEqualObjects(objects, nullObjects, @"enum: %@ / init: %@", objects, nullObjects);
 }
 
 - (void)testFunctional {

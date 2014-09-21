@@ -49,16 +49,10 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
     [super dealloc];
 }
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])stackbuf count:(NSUInteger)len {
-    if(state->state == 0)
-    {
-        state->state = 1;
-        state->mutationsPtr = &state->extra[0];
-    }
-
-    NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:stackbuf count:len];
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+    NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:buffer count:len];
     for (NSUInteger i = 0; i < count; i++) {
-        stackbuf[i] = self->_mapper(stackbuf[i]);
+        buffer[i] = self->_mapper(buffer[i]);
     }
     return count;
 }
@@ -96,9 +90,7 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
 }
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
-    if(state->state == 0)
-    {
-        state->mutationsPtr = &state->extra[0];
+    if(state->state == 0) {
         state->extra[4] = 0;
     }
 
@@ -206,8 +198,7 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
 
     NSUInteger count = 0;
     id obj;
-    while((obj = [_enumerator nextObject]) && (count < len))
-    {
+    while((obj = [self->_enumerator nextObject]) && (count < len)) {
         id res = self->_mapper(obj, state->state);
         state->state++;
         if (res == nil) {

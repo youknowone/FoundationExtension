@@ -45,12 +45,11 @@
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
     if (state->state == 0) {
+        state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
         memcpy(buffer, self->_pool, 16 * sizeof(id));
         state->state = 1;
     }
-
-    state->itemsPtr = buffer;
     return 16;
 }
 
@@ -59,8 +58,14 @@
 
 @implementation NSARangeEnumerator
 
+- (instancetype)init {
+    self = [self initWithCount:0];
+    return self;
+}
+
 - (instancetype)initWithCount:(NSUInteger)count {
-    return [self initWithRange:NSMakeRange(0, count)];
+    self = [self initWithRange:NSMakeRange(0, count)];
+    return self;
 }
 
 - (instancetype)initWithRange:(NSRange)range {
@@ -93,7 +98,7 @@
 
     NSUInteger count = 0;
     for (; count < len && cursor < endpoint; count++, cursor++) {
-        buffer[count] = [@(cursor) retain];
+        buffer[count] = @(cursor);
     }
     state->state = cursor;
     return count;
@@ -105,6 +110,11 @@
 @implementation NSABlockEnumerator
 
 @synthesize block=_block;
+
+- (id)init {
+    [self release];
+    return nil;
+}
 
 - (instancetype)initWithBlock:(NSABlockEnumeration)aBlock {
     self = [super init];

@@ -71,11 +71,13 @@
     for (NSUInteger i = 0; i < count; i++) {
         objects[i] = object;
     }
-    return [self initWithObjects:objects count:count];
+    self = [self initWithObjects:objects count:count];
+    free(objects);
+    return self;
 }
 
 + (instancetype)arrayWithObject:(id)object count:(NSUInteger)count {
-    return [[self alloc] initWithObject:object count:count];
+    return [[[self alloc] initWithObject:object count:count] autorelease];
 }
 
 - (instancetype)initWithObjectCopy:(id)object count:(NSUInteger)count mutable:(BOOL)flag {

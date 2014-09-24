@@ -125,6 +125,39 @@
  */
 + (instancetype)arrayWithObject:(id)object count:(NSUInteger)count;
 
+/*!
+ *  @brief Returns a new array containing the receiving array’s elements from the one at a given index to the end.
+ *  @param index An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @return A new array containing the elements of the receiver from the one at index to the end. If index is equal to the length of the array, returns an empty array.
+ *  @details Raises an NSRangeException if (index - 1) lies beyond the end of the receiver.
+ */
+- (NSArray *)subarrayFromIndex:(NSUInteger)index;
+
+/*!
+ *  @brief Returns a new array containing the receiving array’s elements of the receiver up to, but not including, the one at a given index.
+ *  @param index An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @return A new array containing the receiving array’s elements of the receiver up to, but not including, the one at anIndex. If anIndex is equal to the length of the array, returns a copy of the receiver.
+ *  @details Raises an NSRangeException if (anIndex - 1) lies beyond the end of the receiver.
+ */
+- (NSArray *)subarrayToIndex:(NSUInteger)index;
+
+/*!
+ *  @brief Returns a new array containing the receiving array’s elements of the receiver from the one at a given index to up to, but not including, the one at a given index.
+ *  @param fromIndex An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @param toIndex An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @return A new array containing the receiving array’s elements of the receiver from the one at fromIndex to up to, but not including, the one at toIndex.
+ *  @details Raises an NSRangeException if (toIndex - 1) lies beyond the end of the receiver.
+ */
+- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;
+
+/*!
+ *  @brief Returns a new array containing the receiving array’s elements that fall within the limits specified by a given range made by fromIndex and length.
+ *  @param fromIndex An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @param length A length. The summation of the value and fromIndex must lie within the bounds of the receiver, or be equal to the length of the receiver.
+ *  @return A new array containing the receiving array’s elements that fall within the limits specified by range made by fromIndex and length.
+ */
+- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex length:(NSUInteger)length;
+
 @end
 
 

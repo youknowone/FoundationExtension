@@ -94,6 +94,22 @@
     return [self initWithObjects:objects count:count];
 }
 
+- (NSArray *)subarrayFromIndex:(NSUInteger)index {
+    return [self subarrayWithRange:NSMakeRange(index, self.count - index)];
+}
+
+- (NSArray *)subarrayToIndex:(NSUInteger)index {
+    return [self subarrayWithRange:NSMakeRange(0, index)];
+}
+
+- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
+    return [self subarrayWithRange:NSMakeRange(fromIndex, toIndex - fromIndex)];
+}
+
+- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex length:(NSUInteger)length {
+    return [self subarrayWithRange:NSMakeRange(fromIndex, length)];
+}
+
 @end
 
 

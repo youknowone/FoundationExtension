@@ -8,7 +8,7 @@
 
 /*!
  *  @page Map/Filter/Reduce
- *  @brief This document describes basic concept of functional tools: Map/Filter/Reduce
+ *  @brief This document describes the basic concept of functional tools: Map/Filter/Reduce
  *
  *  FoundationExtension adds small functional programming tools, called Map, Filter and Reduce.
  *  These are useful when used with array.

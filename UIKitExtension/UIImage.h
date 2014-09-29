@@ -79,12 +79,20 @@
 @interface UIImage (UIGraphics)
 
 /*!
- *  @brief Resized image by given size.
+ *  @brief Returns a resized image by given size.
  *  @param size The size to resize.
  *  @return An UIImage object containing a resized image from the image.
  *  @details This method depends on CoreGraphics.
  */
 - (UIImage *)imageByResizingToSize:(CGSize)size;
+
+/*!
+ *  @brief Returns a cropped image by given rect.
+ *  @param rect The rect to crop.
+ *  @return An UIImage object containing a cropped image from the image.
+ *  @details This method depends on CoreGraphics.
+ */
+- (UIImage *)imageByCroppedToRect:(CGRect)rect;
 
 /*!
  *  @brief Color filled image with given color.

@@ -59,6 +59,19 @@
     return result;
 }
 
+- (UIImage *)imageByCroppedToRect:(CGRect)rect {
+    CGFloat scale = self.scale;
+    CGRect scaledRect = rect;
+    scaledRect.origin.x *= scale;
+    scaledRect.origin.y *= scale;
+    scaledRect.size.width *= scale;
+    scaledRect.size.height *= scale;
+    CGImageRef ref = CGImageCreateWithImageInRect(self.CGImage, scaledRect);
+    UIImage *image = [UIImage imageWithCGImage:ref scale:self.scale orientation:self.imageOrientation];
+    CGImageRelease(ref);
+    return image;
+}
+
 - (UIImage *)imageByFilledWithColor:(UIColor *)color {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, .0);
     [color set];

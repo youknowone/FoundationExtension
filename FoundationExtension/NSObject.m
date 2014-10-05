@@ -52,22 +52,14 @@
     [self setVariable:copy forName:name];
 }
 
-- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 {
-    IMP msg;
-    msg = class_getMethodImplementation(self.class, aSelector);
-    if (msg == 0) {
-        return nil;
-    }
-    return (*msg)(self, aSelector, object1, object2, object3);
+- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 {
+    if (!sel) [self doesNotRecognizeSelector:sel];
+        return ((id(*)(id, SEL, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3);
 }
 
-- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4 {
-    IMP msg;
-    msg = class_getMethodImplementation(self.class, aSelector);
-    if (msg == 0) {
-        return nil;
-    }
-    return (*msg)(self, aSelector, object1, object2, object3, object4);
+- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 withObject:(id)obj4 {
+    if (!sel) [self doesNotRecognizeSelector:sel];
+        return ((id(*)(id, SEL, id, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3, obj4);
 }
 
 - (id)associatedObjectForKey:(void *)key {

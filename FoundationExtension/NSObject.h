@@ -130,32 +130,32 @@
 
 /*!
  *  @brief Invokes a method of the receiver with 3 parameter
- *  @param aSelector A selector that identifies the method to invoke. The method should take 3 argument of type id.
- *  @param object1 a parameter
- *  @param object2 a parameter
- *  @param object3 a parameter
+ *  @param sel A selector that identifies the method to invoke. The method should take 3 argument of type id.
+ *  @param obj1 a parameter
+ *  @param obj2 a parameter
+ *  @param obj3 a parameter
  *  @see [performSelector:withObject:][1]
  *  @see [performSelector:withObject:withObject:][2]
  *  @see performSelector:withObject:withObject:withObject:withObject:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:withObject:
  */
-- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3;
+- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3;
 
 /*!
  *  @brief Invokes a method of the receiver with 4 parameter
- *  @param aSelector A selector that identifies the method to invoke. The method should take 4 argument of type id.
- *  @param object1 a parameter
- *  @param object2 a parameter
- *  @param object3 a parameter
- *  @param object4 a parameter
+ *  @param sel A selector that identifies the method to invoke. The method should take 4 argument of type id.
+ *  @param obj1 a parameter
+ *  @param obj2 a parameter
+ *  @param obj3 a parameter
+ *  @param obj4 a parameter
  *  @see [performSelector:withObject:][1]
  *  @see [performSelector:withObject:withObject:][2]
  *  @see performSelector:withObject:withObject:withObject:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:withObject:
  */
-- (id)performSelector:(SEL)aSelector withObject:(id)object1 withObject:(id)object2 withObject:(id)object3 withObject:(id)object4;
+- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 withObject:(id)obj4;
 
 /*!
  *  @name Associative References

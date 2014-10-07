@@ -177,19 +177,6 @@
 + (instancetype)stringWithUTF8Data:(NSData *)data;
 
 /*!
- *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
- *  @see [stringByAddingPercentEscapesUsingEncoding:][0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
- */
-- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;
-/*!
- *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
- *  @see [stringByReplacingPercentEscapesUsingEncoding:][0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
- */
-- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;
-
-/*!
  *  @brief Returns an NSData object containing a representation of the receiver encoded using UTF8 encoding.
  *  @see [dataUsingEncoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/dataUsingEncoding:

@@ -541,5 +541,12 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     XCTAssertEqual(array.count, (NSUInteger)3);
 }
 
+- (void)testEscape {
+    NSString *stuff = @"+=";
+    NSString *escaped1 = [stuff stringByAddingPercentEscapesUsingUTF8Encoding];
+    XCTAssertEqualObjects(stuff, escaped1);
+    NSString *escaped2 = [stuff stringByAddingPercentEncodingWithoutAllowedCharacters];
+    XCTAssertEqualObjects(escaped2, @"%2B%3D");
+}
 
 @end

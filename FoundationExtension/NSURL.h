@@ -116,7 +116,29 @@
  */
 @interface NSString (NSURL)
 
-/*! URL prefix */
+/*! @name UTF8 shortcuts */
+
+/*!
+ *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
+ *  @see [stringByAddingPercentEscapesUsingEncoding:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
+ */
+- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;
+/*!
+ *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
+ *  @see [stringByReplacingPercentEscapesUsingEncoding:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
+ */
+- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;
+
+/*!
+ *  @brief Returns a new string made from the receiver by replacing all characters with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string.
+ *  @see [stringByAddingPercentEncodingWithAllowedCharacters:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEncodingWithAllowedCharacters:
+ */
+- (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters;
+
+/*! @name URL prefix */
 
 /*!
  *  @brief Returns a Boolean value that indicates whether 'http://' or 'https://' matches the beginning characters of the receiver.
@@ -138,7 +160,7 @@
  */
 - (NSString *)URLProtocol;
 
-/*! @brief Creating an URL */
+/*! @name Creating an URL */
 
 /*!
  *  @brief Returns a URL from self value.

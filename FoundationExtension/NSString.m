@@ -138,14 +138,6 @@
     return [[[self alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
 }
 
-- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
-    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-}
-
-- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding {
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-}
-
 - (NSData *) dataUsingUTF8Encoding {
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }

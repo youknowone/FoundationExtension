@@ -165,6 +165,19 @@
 
 @implementation NSString (NSURL)
 
+- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
+    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding {
+    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters {
+    NSCharacterSet *characterSet = [[[NSCharacterSet alloc] init] autorelease];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+}
+
 - (BOOL)hasHTTPPrefix {
     NSString *regexkey = @"^https?://.*";
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];

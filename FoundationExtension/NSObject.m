@@ -7,6 +7,7 @@
 //
 
 #import <objc/runtime.h>
+#import <objc/message.h>
 
 #import "NSObject.h"
 
@@ -54,12 +55,12 @@
 
 - (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 {
     if (!sel) [self doesNotRecognizeSelector:sel];
-        return ((id(*)(id, SEL, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3);
+    return objc_msgSend(self, sel, obj1, obj2, obj3);
 }
 
 - (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 withObject:(id)obj4 {
     if (!sel) [self doesNotRecognizeSelector:sel];
-        return ((id(*)(id, SEL, id, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3, obj4);
+    return objc_msgSend(self, sel, obj1, obj2, obj3, obj4);
 }
 
 - (id)associatedObjectForKey:(void *)key {

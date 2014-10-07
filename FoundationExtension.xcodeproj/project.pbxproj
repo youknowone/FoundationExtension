@@ -15,6 +15,11 @@
 		3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBB117AA901D008487A9 /* NSAVersion+System.h */; };
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
 		3819C11719E3A0DA003CFF60 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
+		3819C11A19E45442003CFF60 /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; };
+		3819C11B19E45442003CFF60 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
+		3819C11C19E45653003CFF60 /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; };
+		3819C11D19E4565C003CFF60 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
+		3819C11E19E4565D003CFF60 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
 		381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */; };
 		381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */; };
 		381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */; };
@@ -340,6 +345,8 @@
 		3805FBB217AA901D008487A9 /* NSAVersion+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAVersion+System.m"; sourceTree = "<group>"; };
 		381512D517C3A3AA000E06D0 /* MPMediaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPMediaItem.h; sourceTree = "<group>"; };
 		381512D617C3A3AA000E06D0 /* MPMediaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPMediaItem.m; sourceTree = "<group>"; };
+		3819C11819E45442003CFF60 /* NSCharacterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet.h; sourceTree = "<group>"; };
+		3819C11919E45442003CFF60 /* NSCharacterSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet.m; sourceTree = "<group>"; };
 		381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAPlaceholderTextView.h; sourceTree = "<group>"; };
 		381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAPlaceholderTextView.m; sourceTree = "<group>"; };
 		381C00AA17172CE20067C936 /* UITPlaceholderTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITPlaceholderTextViewController.h; sourceTree = "<group>"; };
@@ -795,6 +802,8 @@
 				38B0C73D1641382D0044C73C /* NSAttributedString.m */,
 				38660A50161AD9AE00C5CE06 /* NSBundle.h */,
 				38660A51161AD9AE00C5CE06 /* NSBundle.m */,
+				3819C11819E45442003CFF60 /* NSCharacterSet.h */,
+				3819C11919E45442003CFF60 /* NSCharacterSet.m */,
 				38660A52161AD9AE00C5CE06 /* NSData.h */,
 				38660A53161AD9AE00C5CE06 /* NSData.m */,
 				38660A54161AD9AE00C5CE06 /* NSDate.h */,
@@ -1071,6 +1080,7 @@
 				3855B079163D4200005584CD /* NSADataObject.h in Headers */,
 				38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */,
 				3855B053163D41F9005584CD /* FSEventStream.h in Headers */,
+				3819C11C19E45653003CFF60 /* NSCharacterSet.h in Headers */,
 				38B0C6EA163F73800044C73C /* NSAFunctional.h in Headers */,
 				38B0C73F1641382D0044C73C /* NSAttributedString.h in Headers */,
 				38B0C74616414B1D0044C73C /* NSAttributedString+Cocoa.h in Headers */,
@@ -1098,6 +1108,7 @@
 			files = (
 				38FD946B19CDED210092433C /* NSAEnumerator.h in Headers */,
 				38C98B1D161ADAD700C4A389 /* FoundationExtension.h in Headers */,
+				3819C11A19E45442003CFF60 /* NSCharacterSet.h in Headers */,
 				38C98B1E161ADAD700C4A389 /* NSArray.h in Headers */,
 				38C98B20161ADAD700C4A389 /* NSBundle.h in Headers */,
 				38C98B22161ADAD700C4A389 /* NSData.h in Headers */,
@@ -1455,6 +1466,7 @@
 				38505C8B1642EC5B0059773B /* NSURLRequestCreations.m in Sources */,
 				38505C971645837E0059773B /* NSJSONSerialization.m in Sources */,
 				38505CBE164647910059773B /* NSAOrderedDictionary.m in Sources */,
+				3819C11D19E4565C003CFF60 /* NSCharacterSet.m in Sources */,
 				38FCECDE16590A1100D3D0F0 /* NSTextView.m in Sources */,
 				3877F44C16A5FC4B007CD975 /* NSACommonCrypto.m in Sources */,
 				387B1EB816EBD0F50059722B /* NSNumber.m in Sources */,
@@ -1499,6 +1511,7 @@
 				38FD946D19CDED210092433C /* NSAEnumerator.m in Sources */,
 				38C98B23161ADAD700C4A389 /* NSData.m in Sources */,
 				38C98B25161ADAD700C4A389 /* NSDate.m in Sources */,
+				3819C11B19E45442003CFF60 /* NSCharacterSet.m in Sources */,
 				38C98B27161ADAD700C4A389 /* NSDictionary.m in Sources */,
 				38C98B29161ADAD700C4A389 /* NSNumberFormatter.m in Sources */,
 				38C98B2B161ADAD700C4A389 /* NSPathUtilities.m in Sources */,
@@ -1545,6 +1558,7 @@
 				3868F7DB162D9CDE00C31163 /* UIImage.m in Sources */,
 				3868F7DC162D9CDE00C31163 /* UIScrollView.m in Sources */,
 				3868F7DE162D9CDE00C31163 /* UIWebView.m in Sources */,
+				3819C11E19E4565D003CFF60 /* NSCharacterSet.m in Sources */,
 				38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */,
 				38A90FDE163591FC001DB09E /* NSURL.m in Sources */,
 				3865D8F619C6AEB400B4DC72 /* ABMultiValue.m in Sources */,

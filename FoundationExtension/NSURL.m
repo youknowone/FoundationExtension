@@ -10,6 +10,7 @@
 
 #import "NSBundle.h"
 #import "NSPathUtilities.h"
+#import "NSCharacterSet.h"
 #import "NSString.h"
 #import "NSURL.h"
 
@@ -174,8 +175,9 @@
 }
 
 - (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters {
-    NSCharacterSet *characterSet = [[[NSCharacterSet alloc] init] autorelease];
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+    NSCharacterSet *characterSet = [NSCharacterSet emptyCharacterSet];
+    NSString *escaped = [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+    return escaped;
 }
 
 - (BOOL)hasHTTPPrefix {

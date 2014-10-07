@@ -38,6 +38,7 @@
 #import <FoundationExtension/NSArray.h>                     // level: 0 / deps(0):  / internal(1): NSData
 #import <FoundationExtension/NSAttributedString.h>          // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSBundle.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSCharacterSet.h>              // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSData.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSDate.h>                      // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSDictionary.h>                // level: 0 / deps(0):  / internal(1): NSData
@@ -50,7 +51,7 @@
 #import <FoundationExtension/NSSet.h>                       // level: 0 / deps(0):  / internal(1): NSArray
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
-#import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(3): NSBundle, NSPathUtilities, NSString
+#import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(4): NSBundle, NSPathUtilities, NSCharacterSet, NSString
 #import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
 #import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):

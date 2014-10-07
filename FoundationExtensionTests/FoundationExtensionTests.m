@@ -18,6 +18,9 @@
     NSInteger val;
 }
 
+- (id)methodWithParam1:(id)param1 param2:(id)param2 param3:(id)param3;
+- (id)methodWithParam1:(id)param1 param2:(id)param2 param3:(id)param3 param4:(id)param4;
+
 @end
 
 @implementation TestObject
@@ -29,6 +32,14 @@
     self->obj3 = nil;
     self->val = 42;
     return self;
+}
+
+- (id)methodWithParam1:(id)param1 param2:(id)param2 param3:(id)param3 {
+    return param3;
+}
+
+- (id)methodWithParam1:(id)param1 param2:(id)param2 param3:(id)param3 param4:(id)param4 {
+    return param4;
 }
 
 @end
@@ -145,6 +156,13 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     }
 }
 
+- (void)testPerformSelector {
+    TestObject *obj = [[TestObject alloc] init];
+    id p3 = [obj methodWithParam1:@1 param2:@2 param3:@3];
+    XCTAssertEqualObjects(p3, @3);
+    id p4 = [obj methodWithParam1:@1 param2:@2 param3:@3 param4:@4];
+    XCTAssertEqualObjects(p4, @4);
+}
 
 
 - (void)testString {

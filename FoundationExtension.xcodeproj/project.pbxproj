@@ -14,6 +14,7 @@
 		3805FBAC17AA89E2008487A9 /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
 		3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBB117AA901D008487A9 /* NSAVersion+System.h */; };
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
+		3819C11719E3A0DA003CFF60 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		381C00A917172C5F0067C936 /* UIAPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00A817172C5F0067C936 /* UIAPlaceholderTextView.m */; };
 		381C00AD17172CE20067C936 /* UITPlaceholderTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 381C00AB17172CE20067C936 /* UITPlaceholderTextViewController.m */; };
 		381C00AE17172CE20067C936 /* UITPlaceholderTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381C00AC17172CE20067C936 /* UITPlaceholderTextViewController.xib */; };
@@ -222,7 +223,6 @@
 		38D930ED1726CEC300BD0938 /* NSImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D930EB1726CEC200BD0938 /* NSImage.m */; };
 		38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D930EE1726EDD200BD0938 /* NSPasteboard.h */; };
 		38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D930EF1726EDD200BD0938 /* NSPasteboard.m */; };
-		38E48AC719CDA45700EE7FFC /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E48AC619CDA45700EE7FFC /* FoundationExtensionTests.m */; };
 		38E48ACB19CDA7A000EE7FFC /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		38E48D93167FB28700BD4F6D /* UIATableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E48D92167FB28700BD4F6D /* UIATableView.m */; };
 		38EF3289163D4349003086B2 /* CocoaExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B034163CF2B1005584CD /* CocoaExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -509,8 +509,6 @@
 		38D930EE1726EDD200BD0938 /* NSPasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPasteboard.h; sourceTree = "<group>"; };
 		38D930EF1726EDD200BD0938 /* NSPasteboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPasteboard.m; sourceTree = "<group>"; };
 		38E48AC219CDA45700EE7FFC /* FoundationExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoundationExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38E48AC519CDA45700EE7FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38E48AC619CDA45700EE7FFC /* FoundationExtensionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoundationExtensionTests.m; sourceTree = "<group>"; };
 		38E48D91167FB28700BD4F6D /* UIATableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIATableView.h; sourceTree = "<group>"; };
 		38E48D92167FB28700BD4F6D /* UIATableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIATableView.m; sourceTree = "<group>"; };
 		38EF66AD16AEEB8100781497 /* UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableView.h; sourceTree = "<group>"; };
@@ -789,7 +787,6 @@
 			isa = PBXGroup;
 			children = (
 				38660A3C161AD8D700C5CE06 /* Supporting Files */,
-				38E48AC319CDA45700EE7FFC /* FoundationExtensionTests */,
 				383764EA13373155007072FD /* Tests */,
 				38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */,
 				38660A4E161AD9AD00C5CE06 /* NSArray.h */,
@@ -966,23 +963,6 @@
 			isa = PBXGroup;
 			children = (
 				38C98B57161AE30300C4A389 /* UIKitExtension-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		38E48AC319CDA45700EE7FFC /* FoundationExtensionTests */ = {
-			isa = PBXGroup;
-			children = (
-				38E48AC619CDA45700EE7FFC /* FoundationExtensionTests.m */,
-				38E48AC419CDA45700EE7FFC /* Supporting Files */,
-			);
-			path = FoundationExtensionTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		38E48AC419CDA45700EE7FFC /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				38E48AC519CDA45700EE7FFC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1614,10 +1594,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3819C11719E3A0DA003CFF60 /* FoundationExtensionTests.m in Sources */,
 				38D5BD3219CDB1FC00DC7C8D /* FoundationExtensionCppTests.mm in Sources */,
 				38D5BD3019CDB1FC00DC7C8D /* FoundationTests.m in Sources */,
 				38D5BD3119CDB1FC00DC7C8D /* FoundationExtensionCoreFoundationTest.m in Sources */,
-				38E48AC719CDA45700EE7FFC /* FoundationExtensionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

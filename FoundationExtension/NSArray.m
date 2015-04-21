@@ -91,7 +91,10 @@
             objects[i] = [object copy];
         }
     }
-    return [self initWithObjects:objects count:count];
+    typeof(self) result = [self initWithObjects:objects count:count];
+    free(objects);
+    return result;
+
 }
 
 - (NSArray *)subarrayFromIndex:(NSUInteger)index {

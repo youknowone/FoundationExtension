@@ -118,18 +118,6 @@ FoundationExtension
 @see @ref NSObject(ObjCRuntime)
 @see @ref NSObject(ObjCRuntimeClass)
 
-## encode/decode base64 string (especially for In-App Purchase / Facebook API)
-Foundation
-  * No way.
-
-FoundationExtension
-
-    NSString *base64String = [data base64String];
-
-    NSData *data = [NSData dataWithBase64String:base64]
-
-@see @ref NSData(Serialization)
-
 ## Get hexadecimal value from base 16 string
 Foundation
 

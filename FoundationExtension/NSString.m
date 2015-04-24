@@ -61,10 +61,6 @@
 
 @implementation NSString (Shortcuts)
 
-- (BOOL)hasSubstring:(NSString *)aString {
-    return [self rangeOfString:aString].location != NSNotFound;
-}
-
 // slow! proof of concept
 - (NSString *)format:(id)first, ... {
     NSUInteger len = self.length;
@@ -216,6 +212,15 @@
 
 - (NSString *)stringUsingUTF8Encoding {
     return [NSString stringWithUTF8Data:self];
+}
+
+@end
+
+
+@implementation NSString (Deprecation)
+
+- (BOOL)hasSubstring:(NSString *)aString {
+    return [self rangeOfString:aString].location != NSNotFound;
 }
 
 @end

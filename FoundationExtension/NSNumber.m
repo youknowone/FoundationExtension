@@ -16,7 +16,7 @@
     if ([self.className isEqualToString:@"__NSCFNumber"]) {
         NSString *defaultDescription = [self description];
         if (strcmp(self.objCType, @encode(float)) == 0 || strcmp(self.objCType, @encode(double)) == 0) {
-            if (![defaultDescription hasSubstring:@"."]) {
+            if ([defaultDescription rangeOfString:@"."].location == NSNotFound) {
                 return [defaultDescription stringByAppendingString:@".0"];
             }
         }
@@ -35,7 +35,7 @@
 - (NSString *)typeFormedDescription {
     NSString *defaultDescription = [self description];
     if (strcmp(self.objCType, @encode(float)) == 0 || strcmp(self.objCType, @encode(double)) == 0) {
-        if (![defaultDescription hasSubstring:@"."]) {
+        if ([defaultDescription rangeOfString:@"."].location == NSNotFound) {
             return [defaultDescription stringByAppendingString:@".0"];
         }
     }

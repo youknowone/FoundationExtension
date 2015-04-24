@@ -73,6 +73,10 @@ static const char NSDataHexadecimalDecodingTable[0x80] =
     return [[[self alloc] initWithHexadecimalString:hexadecimal] autorelease];
 }
 
+@end
+
+
+@implementation NSData (Deprecation)
 
 char NSDataBase64EncodingTable[64] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 

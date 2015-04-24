@@ -70,15 +70,6 @@
  */
 @interface NSString (Shortcuts)
 
-/*!
- *  @brief Returns a Boolean value that indicates whether a given string is contained in the receiver.
- *  @param aString A string.
- *  @returns YES if aString is contained in the receiver, otherwise NO. Returns NO if aString is empty.
- *  @see [rangeOfString:][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/rangeOfString:
- */
-- (BOOL)hasSubstring:(NSString *)aString;
-
 /*! @name Format */
 
 /*!
@@ -224,5 +215,21 @@
  *  @see @ref NSString(Creations)::stringWithData:encoding:
  */
 @property(nonatomic, readonly) NSString *stringUsingUTF8Encoding;
+
+@end
+
+
+@interface NSString (Deprecation)
+
+/*!
+ *  @brief Returns a Boolean value that indicates whether a given string is contained in the receiver.
+ *  @param aString A string.
+ *  @returns YES if aString is contained in the receiver, otherwise NO. Returns NO if aString is empty.
+ *  @see [rangeOfString:][1]
+ *  @deprecated [containsString:][2]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/rangeOfString:
+ *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/containsString:
+ */
+- (BOOL)hasSubstring:(NSString *)aString __deprecated;
 
 @end

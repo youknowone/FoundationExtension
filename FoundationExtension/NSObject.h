@@ -79,6 +79,7 @@
  *      [1]: [https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/object_setInstanceVariable]
  */
 - (void)setVariable:(void *)value forName:(NSString *)name;
+
 /*!
  *  @brief Changes the value of an instance variable of a class instance and ratain the value.
  *  @param value The new value for the instance variable.

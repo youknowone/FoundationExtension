@@ -220,19 +220,19 @@
                 }
             }
 
-            if (self->_resultDisplayControllerFlags.resultViewLoaded) {
-                if ([self->_delegate respondsToSelector:@selector(resultDisplayController:unloadResultView:)]) {
-                    [self->_delegate resultDisplayController:self unloadResultView:resultView];
-                }
-                self.resultView = nil;
-            }
-
             if (!animated && [self->_delegate respondsToSelector:@selector(resultDisplayController:willUnloadResultView:)]) {
                 [self->_delegate resultDisplayController:self willUnloadResultView:resultView];
             }
 
             if ([self->_delegate respondsToSelector:@selector(resultDisplayController:didUnloadResultView:)]) {
                 [self->_delegate resultDisplayController:self didUnloadResultView:resultView];
+            }
+
+            if (self->_resultDisplayControllerFlags.resultViewLoaded) {
+                if ([self->_delegate respondsToSelector:@selector(resultDisplayController:unloadResultView:)]) {
+                    [self->_delegate resultDisplayController:self unloadResultView:resultView];
+                }
+                self.resultView = nil;
             }
         };
 

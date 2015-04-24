@@ -39,19 +39,23 @@
     object_setInstanceVariable(self, name.UTF8String, value);
 }
 
+#if !__has_feature(objc_arc)
 - (void)setAndRetainVariable:(id)value forName:(NSString *)name {
     [value retain];
     id stored = [self variableForName:name];
     [stored release];
     [self setVariable:value forName:name];
 }
+#endif
 
+#if !__has_feature(objc_arc)
 - (void)setAndCopyVariable:(id)value forName:(NSString *)name {
     id copy = [value copy];
     id stored = [self variableForName:name];
     [stored release];
     [self setVariable:copy forName:name];
 }
+#endif
 
 - (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 {
     if (!sel) [self doesNotRecognizeSelector:sel];

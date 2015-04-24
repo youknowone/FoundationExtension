@@ -14,6 +14,8 @@
 
 @implementation UIAViewController
 
+@dynamic view;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([self.view respondsToSelector:@selector(viewDidLoad)]) {

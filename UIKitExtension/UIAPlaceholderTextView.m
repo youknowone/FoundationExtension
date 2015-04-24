@@ -66,7 +66,6 @@
 }
 
 - (void)dealloc {
-    [self->_placeholderTextView release];
     self.placeholderString = nil;
     [super dealloc];
 }

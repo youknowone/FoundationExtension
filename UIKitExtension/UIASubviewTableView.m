@@ -104,8 +104,10 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self != nil) {
+        #if DEBUG
         id dataSource = self.dataSource;
         NSAssert(dataSource == nil || dataSource == self, @"");
+        #endif
         [self _subviewTableViewInit];
     }
     return self;

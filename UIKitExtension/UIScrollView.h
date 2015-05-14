@@ -32,4 +32,8 @@
  */
 @property(nonatomic, readonly) CGRect contentBounds;
 
+- (void)setContentSizeBySubviewBoundary;
+- (void)setContentSizeBySubviewBoundaryWithAutoMargins;
+- (void)setContentSizeBySubviewBoundaryWithAdditionalMargins:(CGPoint)margins;
+
 @end

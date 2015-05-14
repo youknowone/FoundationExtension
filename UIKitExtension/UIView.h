@@ -28,7 +28,7 @@ typedef void (^UIAViewAnimationBlock)();
  *  @brief Animation completion block signature for UIView animation methods.
  */
 typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
-
+#endif
 
 /*!
  *  @brief A holder of UIView for interface builder instead of UIViewController.
@@ -59,6 +59,7 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
  */
 @interface UIView (Animation)
 
+#if NS_BLOCKS_AVAILABLE
 /*!
  *  @brief Animate changes to one or more views using the UIKit deafult animation duration @ref UIAViewAnimationDefaultDuraton.
  *  @param animations A block object containing the changes to commit to the views. This is where you programmatically change any animatable properties of the views in your view hierarchy. This block takes no parameters and has no return value. This parameter must not be NULL.
@@ -69,6 +70,7 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
  *      [0]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/UIView/UIView.html#//apple_ref/occ/clm/UIView/animateWithDuration:animations:
  */
 + (void)animateWithDefaultDurationAnimations:(UIAViewAnimationBlock)animations;
+#endif
 
 /*!
  *  @brief Set whether the view is hidden.
@@ -85,7 +87,7 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
 /*!
  *  @brief See UIView layer for more informations.
  */
-@interface UIView (CALayer)
+@interface UIView (CALayerShortcut)
 
 @property(assign) CGFloat borderWidth;
 @property(copy) UIColor *borderColor;
@@ -98,4 +100,12 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
 
 @end
 
-#endif
+
+@interface UIView (UIViewGeometryShortcut)
+
+/*!
+ *  @brief The point of frame origin + size
+ */
+@property(readonly) CGPoint frameEnd;
+
+@end

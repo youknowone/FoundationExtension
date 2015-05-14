@@ -33,12 +33,13 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 
 @end
 
-#if NS_BLOCKS_AVAILABLE
 @implementation UIView (Animation)
 
+#if NS_BLOCKS_AVAILABLE
 + (void)animateWithDefaultDurationAnimations:(UIAViewAnimationBlock)animations {
     [self animateWithDuration:UIAViewAnimationDefaultDuraton animations:animations];
 }
+#endif
 
 - (void)setHidden:(BOOL)hidden animated:(BOOL)animated {
     if (!animated || self.hidden == hidden) {
@@ -70,7 +71,7 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 @end
 
 
-@implementation UIView (CALayer)
+@implementation UIView (CALayerShortcut)
 
 - (UIColor *)borderColor {
     return [UIColor colorWithCGColor:self.layer.borderColor];
@@ -130,4 +131,13 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 
 @end
 
-#endif
+
+@implementation UIView (UIViewGeometryShortcut)
+
+- (CGPoint)frameEnd {
+    CGRect frame = self.frame;
+    CGPoint end = CGPointMake(frame.origin.x + frame.size.width, frame.origin.y + frame.size.height);
+    return end;
+}
+
+@end

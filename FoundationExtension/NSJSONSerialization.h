@@ -23,8 +23,8 @@
 
 + (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error;
 + (NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error;
-+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONWritingOptions)opt error:(NSError **)error;;
-+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONWritingOptions)opt error:(NSError **)error;;
++ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(NSError **)error;
++ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(NSError **)error;
 
 @end
 

@@ -23,20 +23,20 @@
     return [NSString stringWithUTF8Data:[self dataWithJSONObject:obj options:opt error:error]];
 }
 
-+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONWritingOptions)opt error:(NSError **)error {
++ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:URLRequest error:error];
     if (data == nil) {
         return nil;
     }
-    return [self JSONObjectWithData:data options:opterr error:error];
+    return [self JSONObjectWithData:data options:opt error:error];
 }
 
-+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONWritingOptions)opt error:(NSError **)error {
++ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(NSError **)error {
     NSData *data = [NSData dataWithContentsOfURL:URL options:0 error:error];
     if (data == nil) {
         return nil;
     }
-    return [self JSONObjectWithData:data options:0 error:error];
+    return [self JSONObjectWithData:data options:opt error:error];
 }
 
 @end

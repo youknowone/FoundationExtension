@@ -174,31 +174,30 @@
  *  @return Result of [NSURL -fileURLWithPath:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURL/fileURLWithPath:
  */
-
 - (NSURL *)fileURL;
+
 /*!
  *  @brief Returns a resource URL from self value.
  *  @return Result of @ref NSURL(Creations)::resourceURLWithPath:
  */
-
 - (NSURL *)resourceURL;
+
 /*!
  *  @brief Returns a configuration URL from self value.
  *  @return Result of @ref NSURL(Creations)::configurationURLWithPath:
  */
-
 - (NSURL *)configurationURL;
+
 /*!
  *  @brief Returns a temporary URL from self value.
  *  @return Result of @ref NSURL(Creations)::temporaryURLWithPath:
  */
-
 - (NSURL *)temporaryURL;
+
 /*!
  *  @brief Returns a smart URL from self value.
  *  @return Result of @ref NSURL(Creations)::smartURLWithPath:
  */
-
 - (NSURL *)smartURL;
 
 

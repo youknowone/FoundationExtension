@@ -341,7 +341,7 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     {
         NSSet *a = [NSSet setWithObjects:@1, @2, @3, @4, nil];
         NSInteger idx = 0;
-        for (id i in NSAMap(a.objectEnumerator, ^(id obj) { return @([obj integerValue] - 1); })) {
+        for (id _ in NSAMap(a.objectEnumerator, ^(id obj) { return @([obj integerValue] - 1); })) {
             idx += 1;
         }
         XCTAssertEqual((int)idx, 4, @"");
@@ -356,7 +356,7 @@ NSAPropertyCopySetter(setObj3, @"obj3")
         XCTAssertEqual((int)idx, 2, @"");
 
         idx = 0;
-        for (id i in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; })) {
+        for (id _ in NSAMapFilter(a.objectEnumerator, ^(id obj) { return ([obj integerValue] % 2 != 0) ? @([obj integerValue] - 1) : nil; })) {
             idx += 1;
         }
         XCTAssertEqual((int)idx, 2, @"");

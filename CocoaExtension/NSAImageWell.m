@@ -25,7 +25,7 @@
 - (void)_NSAImageWellInit {
     self->_imageURLs = [[NSMutableArray alloc] init];
     self->_nonImageURLs = [[NSMutableArray alloc] init];
-    NSArray *pasteboardTypes = [[NSImage imagePasteboardTypes] arrayByAddingObject:NSPasteboardTypeString];
+    NSArray *pasteboardTypes = [[NSImage imageTypes] arrayByAddingObject:NSPasteboardTypeString];
     [self registerForDraggedTypes:pasteboardTypes];
 }
 
@@ -90,7 +90,7 @@ NSURL *NSAImageWellURLFromPasteboard(NSPasteboard *pasteboard) {
         }
         URL = URLString.smartURL;
         if (URL == nil) {
-            URL = [URLString stringByAddingPercentEscapesUsingUTF8Encoding].smartURL;
+            URL = [URLString stringByAddingPercentEncodingForURLQuery].smartURL;
             if (URL == nil) {
                 return nil;
             }

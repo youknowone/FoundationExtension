@@ -99,13 +99,22 @@
 /*!
  *  @brief Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format.
  *  @param bodyDictionary The new request body of the receiver to the specified data from dictionary with url form encoding. Objects should be NSString compatible objects only.
+ *  @see [setHTTPBody:][1]
+ *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableURLRequest/setHTTPBody:
+ */
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary;
+
+/*!
+ *  @brief Sets the request body of the receiver to the specified data from bodyDictionary as url form format.
+ *  @param bodyDictionary The new request body of the receiver to the specified data from dictionary with url form encoding. Objects should be NSString compatible objects only.
  *  @param encoding String encoding of bodyDictionary values.
  *  @see [setHTTPBody:][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableURLRequest/setHTTPBody:
  */
-- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -setHTTPPostBody: instead, which always uses the recommended UTF-8 encoding.");;
 
 @end
+
 
 /*!
  *  @brief Multipart Form POST data formatter for NSMutableURLRequest

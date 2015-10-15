@@ -19,21 +19,6 @@
 #import <FoundationExtension/NSADictionary.h>
 
 /*!
- *  @brief Type for NSUnderlinePattern*, NSUnderlineStyle* and NSUnderlineMask*.
- *  @see [NSUnderlineStyleAttributeName][0]
- *  @see [NSStrikethroughStyleAttributeName][0]
- *  @see [NSUnderlinePattern*][2]
- *  @see [NSUnderlineStyle*][3]
- *  @see [NSUnderlineMask][4]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/c/data/NSUnderlineStyleAttributeName
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/c/data/NSStrikethroughStyleAttributeName
- *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underlining_Patterns
- *      [3]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underlining_Styles
- *      [4]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/constant_group/Underline_Masks
- */
-typedef NSInteger NSUnderlineStyle;
-
-/*!
  *  @brief Values for ligature style.
  *  @see [NSLigatureAttributeName][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/c_ref/NSLigatureAttributeName
@@ -57,10 +42,10 @@ typedef NSUInteger NSLigatureType;
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/c_ref/NSWritingDirectionAttributeName
  */
 enum {
-    NSWritingDirectionAttributeLRE = 1 << (NSWritingDirectionLeftToRight | NSTextWritingDirectionEmbedding),
-    NSWritingDirectionAttributeRLE = 1 << (NSWritingDirectionRightToLeft | NSTextWritingDirectionEmbedding),
-    NSWritingDirectionAttributeLRO = 1 << (NSWritingDirectionLeftToRight | NSTextWritingDirectionOverride),
-    NSWritingDirectionAttributeRLO = 1 << (NSWritingDirectionRightToLeft | NSTextWritingDirectionOverride),
+    NSWritingDirectionAttributeLRE = 1 << (NSWritingDirectionLeftToRight | NSWritingDirectionEmbedding),
+    NSWritingDirectionAttributeRLE = 1 << (NSWritingDirectionRightToLeft | NSWritingDirectionEmbedding),
+    NSWritingDirectionAttributeLRO = 1 << (NSWritingDirectionLeftToRight | NSWritingDirectionOverride),
+    NSWritingDirectionAttributeRLO = 1 << (NSWritingDirectionRightToLeft | NSWritingDirectionOverride),
 };
 /*!
  *  @brief Type for writing direction.

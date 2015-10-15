@@ -47,6 +47,22 @@
 
 @implementation NSMutableURLRequest (HTTPMethod)
 
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary {
+    self.HTTPMethod = @"POST";
+    if (bodyDictionary.count == 0) return;
+
+    NSMutableArray *parts = [[NSMutableArray alloc] initWithCapacity:[bodyDictionary count]];
+
+    for (NSString *key in [bodyDictionary keyEnumerator]) {
+        NSString *value = bodyDictionary[key];
+        NSString *part = [@"%@=%@" format:[key stringByAddingPercentEncodingWithoutAllowedCharacters], [value stringByAddingPercentEncodingWithoutAllowedCharacters]];
+        [parts addObject:part];
+    }
+
+    self.HTTPBody = [[parts componentsJoinedByString:@"&"] dataUsingEncoding:NSASCIIStringEncoding];
+    [parts release];
+}
+
 - (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     self.HTTPMethod = @"POST";
     if (bodyDictionary.count == 0) return;

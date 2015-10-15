@@ -148,6 +148,73 @@
 		3888FC5D176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
 		3888FC5E176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
 		3888FC5F176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
+		388D08801BD01DB2004B648C /* NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArray.m */; };
+		388D08811BD01DB2004B648C /* NSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundle.m */; };
+		388D08821BD01DB2004B648C /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
+		388D08831BD01DB2004B648C /* NSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSData.m */; };
+		388D08841BD01DB2004B648C /* NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDate.m */; };
+		388D08851BD01DB2004B648C /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
+		388D08861BD01DB2004B648C /* NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionary.m */; };
+		388D08871BD01DB2004B648C /* NSNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatter.m */; };
+		388D08881BD01DB2004B648C /* NSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilities.m */; };
+		388D08891BD01DB2004B648C /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSString.m */; };
+		388D088A1BD01DB2004B648C /* NSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A60161AD9AE00C5CE06 /* NSTimer.m */; };
+		388D088B1BD01DB2004B648C /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
+		388D088C1BD01DB2004B648C /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
+		388D088D1BD01DB2004B648C /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
+		388D088E1BD01DB2004B648C /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
+		388D088F1BD01DB2004B648C /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
+		388D08901BD01DB2004B648C /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
+		388D08911BD01DB2004B648C /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
+		388D08921BD01DB2004B648C /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
+		388D08931BD01DB2004B648C /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
+		388D08941BD01DB2004B648C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
+		388D08951BD01DB2004B648C /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedString.m */; };
+		388D08961BD01DB2004B648C /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C871642EC5B0059773B /* NSURLRequestCreations.m */; };
+		388D08971BD01DB2004B648C /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
+		388D08981BD01DB2004B648C /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
+		388D08991BD01DB2004B648C /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
+		388D089A1BD01DB2004B648C /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
+		388D089B1BD01DB2004B648C /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
+		388D089C1BD01DB2004B648C /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
+		388D089D1BD01DB2004B648C /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
+		388D089E1BD01DB2004B648C /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
+		388D089F1BD01DB2004B648C /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
+		388D08A11BD01DB2004B648C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
+		388D08A31BD01DB2004B648C /* NSAEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD946919CDED210092433C /* NSAEnumerator.h */; };
+		388D08A41BD01DB2004B648C /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08A51BD01DB2004B648C /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; };
+		388D08A61BD01DB2004B648C /* NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08A71BD01DB2004B648C /* NSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A50161AD9AE00C5CE06 /* NSBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08A81BD01DB2004B648C /* NSData.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A52161AD9AE00C5CE06 /* NSData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08A91BD01DB2004B648C /* NSDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A54161AD9AE00C5CE06 /* NSDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AA1BD01DB2004B648C /* NSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A56161AD9AE00C5CE06 /* NSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AB1BD01DB2004B648C /* NSNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A58161AD9AE00C5CE06 /* NSNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AC1BD01DB2004B648C /* NSPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5A161AD9AE00C5CE06 /* NSPathUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AD1BD01DB2004B648C /* NSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5C161AD9AE00C5CE06 /* NSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AE1BD01DB2004B648C /* NSStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5E161AD9AE00C5CE06 /* NSStringEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08AF1BD01DB2004B648C /* NSTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5F161AD9AE00C5CE06 /* NSTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B01BD01DB2004B648C /* NSURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A61161AD9AE00C5CE06 /* NSURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B11BD01DB2004B648C /* NSURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A63161AD9AE00C5CE06 /* NSURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B21BD01DB2004B648C /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B31BD01DB2004B648C /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B41BD01DB2004B648C /* NSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B51BD01DB2004B648C /* NSAClassDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B61BD01DB2004B648C /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B71BD01DB2004B648C /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B81BD01DB2004B648C /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388D08B91BD01DB2004B648C /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; };
+		388D08BA1BD01DB2004B648C /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; };
+		388D08BB1BD01DB2004B648C /* NSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedString.h */; };
+		388D08BC1BD01DB2004B648C /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; };
+		388D08BD1BD01DB2004B648C /* NSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C921645837A0059773B /* NSJSONSerialization.h */; };
+		388D08BE1BD01DB2004B648C /* NSAOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505CB9164647910059773B /* NSAOrderedDictionary.h */; };
+		388D08BF1BD01DB2004B648C /* NSACommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */; };
+		388D08C01BD01DB2004B648C /* NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 387B1EB316EBD0F50059722B /* NSNumber.h */; };
+		388D08C11BD01DB2004B648C /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C69171463F60001A99D /* NSNull.h */; };
+		388D08C21BD01DB2004B648C /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; };
+		388D08C31BD01DB2004B648C /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; };
+		388D08C41BD01DB2004B648C /* NSAVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBA617AA89E2008487A9 /* NSAVersion.h */; };
 		388D1C1B176E22FD0061527C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C16176E22FD0061527C /* 3.png */; };
 		388D1C1C176E22FD0061527C /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C17176E22FD0061527C /* 0.png */; };
 		388D1C1D176E22FD0061527C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C18176E22FD0061527C /* 1.png */; };
@@ -477,6 +544,10 @@
 		387B1EB416EBD0F50059722B /* NSNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSNumber.m; sourceTree = "<group>"; };
 		3888FC59176C778D00489638 /* NSValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValue.h; sourceTree = "<group>"; };
 		3888FC5A176C778D00489638 /* NSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValue.m; sourceTree = "<group>"; };
+		388D08781BD01DA9004B648C /* FoundationExtension_watchos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtension_watchos.h; sourceTree = "<group>"; };
+		388D087A1BD01DA9004B648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		388D08CA1BD01DB2004B648C /* FoundationExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FoundationExtension copy-Info.plist"; path = "/Volumes/Userspace/Projects/FoundationExtension/FoundationExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		388D1C16176E22FD0061527C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		388D1C17176E22FD0061527C /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		388D1C18176E22FD0061527C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -594,6 +665,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		388D08A01BD01DB2004B648C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388D08A11BD01DB2004B648C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38C7A96E1495181800381910 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,8 +739,10 @@
 				38C98B55161AE30300C4A389 /* UIKitExtension */,
 				381512D417C3A394000E06D0 /* MediaPlayerExtension */,
 				3865D8E119C5E26900B4DC72 /* AddressBookExtension */,
+				388D08771BD01DA9004B648C /* FoundationExtension_watchos */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
+				388D08CA1BD01DB2004B648C /* FoundationExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -676,6 +757,7 @@
 				3855B03C163CF2B1005584CD /* CocoaExtensionTests.xctest */,
 				38FCECBE165904AE00D3D0F0 /* CocoaExtensionTestApp.app */,
 				38E48AC219CDA45700EE7FFC /* FoundationExtensionTests.xctest */,
+				388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -905,6 +987,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		388D08771BD01DA9004B648C /* FoundationExtension_watchos */ = {
+			isa = PBXGroup;
+			children = (
+				388D08781BD01DA9004B648C /* FoundationExtension_watchos.h */,
+				388D087A1BD01DA9004B648C /* Info.plist */,
+			);
+			path = FoundationExtension_watchos;
+			sourceTree = "<group>";
+		};
 		38C7A9751495181800381910 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1102,6 +1193,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		388D08A21BD01DB2004B648C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388D08A31BD01DB2004B648C /* NSAEnumerator.h in Headers */,
+				388D08A41BD01DB2004B648C /* FoundationExtension.h in Headers */,
+				388D08A51BD01DB2004B648C /* NSCharacterSet.h in Headers */,
+				388D08A61BD01DB2004B648C /* NSArray.h in Headers */,
+				388D08A71BD01DB2004B648C /* NSBundle.h in Headers */,
+				388D08A81BD01DB2004B648C /* NSData.h in Headers */,
+				388D08A91BD01DB2004B648C /* NSDate.h in Headers */,
+				388D08AA1BD01DB2004B648C /* NSDictionary.h in Headers */,
+				388D08AB1BD01DB2004B648C /* NSNumberFormatter.h in Headers */,
+				388D08AC1BD01DB2004B648C /* NSPathUtilities.h in Headers */,
+				388D08AD1BD01DB2004B648C /* NSString.h in Headers */,
+				388D08AE1BD01DB2004B648C /* NSStringEncoding.h in Headers */,
+				388D08AF1BD01DB2004B648C /* NSTimer.h in Headers */,
+				388D08B01BD01DB2004B648C /* NSURL.h in Headers */,
+				388D08B11BD01DB2004B648C /* NSURLRequest.h in Headers */,
+				388D08B21BD01DB2004B648C /* NSACommonDigest.h in Headers */,
+				388D08B31BD01DB2004B648C /* NSADataObject.h in Headers */,
+				388D08B41BD01DB2004B648C /* NSObject.h in Headers */,
+				388D08B51BD01DB2004B648C /* NSAClassDeprecated.h in Headers */,
+				388D08B61BD01DB2004B648C /* NSAArray.h in Headers */,
+				388D08B71BD01DB2004B648C /* NSADictionary.h in Headers */,
+				388D08B81BD01DB2004B648C /* NSAString.h in Headers */,
+				388D08B91BD01DB2004B648C /* NSSet.h in Headers */,
+				388D08BA1BD01DB2004B648C /* NSAFunctional.h in Headers */,
+				388D08BB1BD01DB2004B648C /* NSAttributedString.h in Headers */,
+				388D08BC1BD01DB2004B648C /* NSURLRequestCreations.h in Headers */,
+				388D08BD1BD01DB2004B648C /* NSJSONSerialization.h in Headers */,
+				388D08BE1BD01DB2004B648C /* NSAOrderedDictionary.h in Headers */,
+				388D08BF1BD01DB2004B648C /* NSACommonCrypto.h in Headers */,
+				388D08C01BD01DB2004B648C /* NSNumber.h in Headers */,
+				388D08C11BD01DB2004B648C /* NSNull.h in Headers */,
+				388D08C21BD01DB2004B648C /* NSAOverridingMediator.h in Headers */,
+				388D08C31BD01DB2004B648C /* NSValue.h in Headers */,
+				388D08C41BD01DB2004B648C /* NSAVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38C7A96F1495181800381910 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1202,6 +1334,24 @@
 			productReference = 38730441133732DE004C8E89 /* UIKitExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		388D087E1BD01DB2004B648C /* FoundationExtension_watchos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 388D08C61BD01DB2004B648C /* Build configuration list for PBXNativeTarget "FoundationExtension_watchos" */;
+			buildPhases = (
+				388D087F1BD01DB2004B648C /* Sources */,
+				388D08A01BD01DB2004B648C /* Frameworks */,
+				388D08A21BD01DB2004B648C /* Headers */,
+				388D08C51BD01DB2004B648C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FoundationExtension_watchos;
+			productName = FoundationExtension;
+			productReference = 388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		38C7A9711495181800381910 /* FoundationExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38C7A9981495181900381910 /* Build configuration list for PBXNativeTarget "FoundationExtension" */;
@@ -1298,7 +1448,7 @@
 		383764CB13373154007072FD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = youknowone.org;
 				TargetAttributes = {
 					38E48AC119CDA45700EE7FFC = {
@@ -1326,6 +1476,7 @@
 				38C98B52161AE30300C4A389 /* UIKitExtension */,
 				38730440133732DE004C8E89 /* UIKitExtensionTests */,
 				38F068151636F8C8002723AB /* UIKitExtensionTestApp */,
+				388D087E1BD01DB2004B648C /* FoundationExtension_watchos */,
 			);
 		};
 /* End PBXProject section */
@@ -1351,6 +1502,13 @@
 			files = (
 				38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */,
 				38D52568174EB6BA00B46322 /* ViewHolder.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388D08C51BD01DB2004B648C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,6 +1657,45 @@
 				38D5BD2D19CDB1FA00DC7C8D /* FoundationExtensionTests.m in Sources */,
 				38D5BD2E19CDB1FA00DC7C8D /* FoundationExtensionCoreFoundationTest.m in Sources */,
 				38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		388D087F1BD01DB2004B648C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				388D08801BD01DB2004B648C /* NSArray.m in Sources */,
+				388D08811BD01DB2004B648C /* NSBundle.m in Sources */,
+				388D08821BD01DB2004B648C /* NSAEnumerator.m in Sources */,
+				388D08831BD01DB2004B648C /* NSData.m in Sources */,
+				388D08841BD01DB2004B648C /* NSDate.m in Sources */,
+				388D08851BD01DB2004B648C /* NSCharacterSet.m in Sources */,
+				388D08861BD01DB2004B648C /* NSDictionary.m in Sources */,
+				388D08871BD01DB2004B648C /* NSNumberFormatter.m in Sources */,
+				388D08881BD01DB2004B648C /* NSPathUtilities.m in Sources */,
+				388D08891BD01DB2004B648C /* NSString.m in Sources */,
+				388D088A1BD01DB2004B648C /* NSTimer.m in Sources */,
+				388D088B1BD01DB2004B648C /* NSURL.m in Sources */,
+				388D088C1BD01DB2004B648C /* NSURLRequest.m in Sources */,
+				388D088D1BD01DB2004B648C /* NSACommonDigest.m in Sources */,
+				388D088E1BD01DB2004B648C /* NSADataObject.m in Sources */,
+				388D088F1BD01DB2004B648C /* NSObject.m in Sources */,
+				388D08901BD01DB2004B648C /* NSAClassDeprecated.m in Sources */,
+				388D08911BD01DB2004B648C /* NSAArray.m in Sources */,
+				388D08921BD01DB2004B648C /* NSADictionary.m in Sources */,
+				388D08931BD01DB2004B648C /* NSAString.m in Sources */,
+				388D08941BD01DB2004B648C /* NSAFunctional.m in Sources */,
+				388D08951BD01DB2004B648C /* NSAttributedString.m in Sources */,
+				388D08961BD01DB2004B648C /* NSURLRequestCreations.m in Sources */,
+				388D08971BD01DB2004B648C /* NSSet.m in Sources */,
+				388D08981BD01DB2004B648C /* NSJSONSerialization.m in Sources */,
+				388D08991BD01DB2004B648C /* NSAOrderedDictionary.m in Sources */,
+				388D089A1BD01DB2004B648C /* NSACommonCrypto.m in Sources */,
+				388D089B1BD01DB2004B648C /* NSNumber.m in Sources */,
+				388D089C1BD01DB2004B648C /* NSNull.m in Sources */,
+				388D089D1BD01DB2004B648C /* NSAOverridingMediator.m in Sources */,
+				388D089E1BD01DB2004B648C /* NSValue.m in Sources */,
+				388D089F1BD01DB2004B648C /* NSAVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,6 +1946,7 @@
 				CLANG_WARN_OBJC_RECEIVER_WEAK = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1823,6 +2021,7 @@
 				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1842,6 +2041,7 @@
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtension/CocoaExtension-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1867,6 +2067,7 @@
 				);
 				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1887,6 +2088,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaExtension/CocoaExtension-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtensionTests/CocoaExtensionTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -1908,6 +2110,7 @@
 					"$(inherited)",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -1929,8 +2132,54 @@
 					"$(inherited)",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		388D08C71BD01DB2004B648C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		388D08C81BD01DB2004B648C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
+				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
+				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
@@ -1952,6 +2201,7 @@
 				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1971,6 +2221,7 @@
 				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
 				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
 				INSTALL_PATH = "@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -2047,6 +2298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -2083,6 +2335,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -2107,6 +2360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2129,6 +2383,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2157,6 +2412,7 @@
 				INFOPLIST_FILE = "CocoaExtensionTestApp/CocoaExtensionTestApp-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -2178,6 +2434,7 @@
 				GCC_PREFIX_HEADER = "CocoaExtensionTestApp/CocoaExtensionTestApp-Prefix.pch";
 				INFOPLIST_FILE = "CocoaExtensionTestApp/CocoaExtensionTestApp-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
@@ -2219,6 +2476,15 @@
 			buildConfigurations = (
 				38730455133732DE004C8E89 /* Debug */,
 				38730456133732DE004C8E89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		388D08C61BD01DB2004B648C /* Build configuration list for PBXNativeTarget "FoundationExtension_watchos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				388D08C71BD01DB2004B648C /* Debug */,
+				388D08C81BD01DB2004B648C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

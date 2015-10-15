@@ -166,18 +166,14 @@
 
 @implementation NSString (NSURL)
 
-- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
-    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-}
-
-- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding {
-    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-}
-
 - (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters {
     NSCharacterSet *characterSet = [NSCharacterSet emptyCharacterSet];
-    NSString *escaped = [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
-    return escaped;
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+}
+
+- (NSString *)stringByAddingPercentEncodingForURLQuery {
+    NSCharacterSet *characterSet = [NSCharacterSet URLQueryAllowedCharacterSet];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
 }
 
 - (BOOL)hasHTTPPrefix {
@@ -238,6 +234,20 @@
 }
 
 @end
+
+
+@implementation NSString (NSURL_deprecated)
+
+- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
+    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding {
+    return [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
+@end
+
 
 @implementation NSData (NSURL_deprecated)
 

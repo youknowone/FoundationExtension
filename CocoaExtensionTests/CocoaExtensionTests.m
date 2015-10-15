@@ -71,7 +71,7 @@
     TEST_ITEM_VALUE(superscript, YES);
     TEST_ITEM_VALUE(superscript, NO);
     TEST_ITEM(backgroundColor, [NSColor colorWithDeviceRed:0.2 green:0.4 blue:0.6 alpha:1.0]);
-    NSTextAttachment *attach = [[NSTextAttachment alloc] initWithFileWrapper:[[NSFileWrapper alloc] initWithPath:@"/"]];
+    NSTextAttachment *attach = [[NSTextAttachment alloc] initWithFileWrapper:[[NSFileWrapper alloc] initWithURL:@"/".URL options:0 error:NULL]];
     TEST_ITEM(attachment, attach);
     TEST_ITEM(ligatureNumber, @(NSLigatureNo));
     TEST_ITEM_VALUE(ligature, (NSUInteger)NSLigatureAll);

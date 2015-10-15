@@ -543,10 +543,16 @@ NSAPropertyCopySetter(setObj3, @"obj3")
 
 - (void)testEscape {
     NSString *stuff = @"+=";
-    NSString *escaped1 = [stuff stringByAddingPercentEscapesUsingUTF8Encoding];
+    NSString *escaped1 = [stuff stringByAddingPercentEncodingForURLQuery];
     XCTAssertEqualObjects(stuff, escaped1);
     NSString *escaped2 = [stuff stringByAddingPercentEncodingWithoutAllowedCharacters];
     XCTAssertEqualObjects(escaped2, @"%2B%3D");
 }
+
+//- (void)testDataWithURLRequest {
+//    NSURLRequest *request = [NSURLRequest requestWithURL:@"https://google.com/".URL];
+//    NSData *data = [NSData dataWithContentsOfURLRequest:request];
+//    XCTAssertNotNil(data);
+//}
 
 @end

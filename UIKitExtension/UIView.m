@@ -21,7 +21,7 @@ const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;
 @implementation UIView (InterfaceBuilder)
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    [self release];
+    [[self init] release];
     UIViewController *holder = [[[UIViewController alloc] initWithNibName:nibNameOrNil bundle:nibBundleOrNil] autorelease];
     return [holder.view retain];
 }

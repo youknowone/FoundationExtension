@@ -12,22 +12,22 @@
 static NSArray *__NSWritingDirectionAttributeArrayFromAttributes(NSWritingDirectionAttributes writingDirection) {
     NSMutableArray *array = [NSMutableArray array];
     if (writingDirection & NSWritingDirectionAttributeLRE) {
-        const NSWritingDirectionAttributes LRE = NSWritingDirectionLeftToRight | NSTextWritingDirectionEmbedding;
+        const NSWritingDirectionAttributes LRE = NSWritingDirectionLeftToRight | NSWritingDirectionEmbedding;
         dassert(LRE == 0);
         [array addObject:@(LRE)];
     }
     if (writingDirection & NSWritingDirectionAttributeRLE) {
-        const NSWritingDirectionAttributes RLE = NSWritingDirectionRightToLeft | NSTextWritingDirectionEmbedding;
+        const NSWritingDirectionAttributes RLE = NSWritingDirectionRightToLeft | NSWritingDirectionEmbedding;
         dassert(RLE == 1);
         [array addObject:@(RLE)];
     }
     if (writingDirection & NSWritingDirectionAttributeLRO) {
-        const NSWritingDirectionAttributes LRO = NSWritingDirectionLeftToRight | NSTextWritingDirectionOverride;
+        const NSWritingDirectionAttributes LRO = NSWritingDirectionLeftToRight | NSWritingDirectionOverride;
         dassert(LRO == 2);
         [array addObject:@(LRO)];
     }
     if (writingDirection & NSWritingDirectionAttributeRLO) {
-        const NSWritingDirectionAttributes RLO = NSWritingDirectionRightToLeft | NSTextWritingDirectionOverride;
+        const NSWritingDirectionAttributes RLO = NSWritingDirectionRightToLeft | NSWritingDirectionOverride;
         dassert(RLO == 3);
         [array addObject:@(RLO)];
     }

@@ -16,7 +16,12 @@
 @implementation NSData (NSURLRequest)
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
-    return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
+    NSError *error = nil;
+    NSData *data = [self initWithContentsOfURLRequest:request error:&error];
+    if (error) {
+        @throw error;
+    }
+    return data;
 }
 
 + (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request {
@@ -24,7 +29,21 @@
 }
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
-    return [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:error]];
+    NSURLSession *session = [NSURLSession sharedSession];
+    __block NSData *data = nil;
+    __block NSError *block_error = nil;
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable _data, NSURLResponse * __nullable response, NSError * __nullable _error) {
+        data = _data;
+        block_error = _error;
+    }];
+    [task resume];
+    while (!data && !block_error) {
+        usleep(1000);
+    }
+    if (error) {
+        *error = block_error;
+    }
+    return [self initWithData:data];
 }
 
 + (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
@@ -34,7 +53,7 @@
 - (instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPPostBody:bodyDictionary encoding:encoding];
-    id result = [self initWithData:[NSURLConnection sendSynchronousRequest:request returningResponse:NULL error:NULL]];
+    id result = [self initWithContentsOfURLRequest:request];
     [request release];
     return result;
 }

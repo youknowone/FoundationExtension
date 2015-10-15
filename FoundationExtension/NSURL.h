@@ -119,24 +119,18 @@
 /*! @name UTF8 shortcuts */
 
 /*!
- *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
- *  @see [stringByAddingPercentEscapesUsingEncoding:][0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
- */
-- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding;
-/*!
- *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
- *  @see [stringByReplacingPercentEscapesUsingEncoding:][0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
- */
-- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding;
-
-/*!
  *  @brief Returns a new string made from the receiver by replacing all characters with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string.
  *  @see [stringByAddingPercentEncodingWithAllowedCharacters:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEncodingWithAllowedCharacters:
  */
 - (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters;
+
+/*!
+ *  @brief Returns a new string made from the receiver by replacing characters with percent encoded characters except for URL query characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded.
+ *  @see [stringByAddingPercentEncodingWithAllowedCharacters:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEncodingWithAllowedCharacters:
+ */
+- (NSString *)stringByAddingPercentEncodingForURLQuery;
 
 /*! @name URL prefix */
 
@@ -211,6 +205,26 @@
 
 //! @deprecated Use @link URLProtocol @endlink
 - (NSString *)pathProtocol;
+
+@end
+
+
+@interface NSString (NSURL_deprecated)
+
+/*!
+ *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
+ *  @deprecated Use stringByAddingPercentEncodingForURLQuery
+ *  @see [stringByAddingPercentEscapesUsingEncoding:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
+ */
+- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByAddingPercentEscapesUsingEncoding:");
+/*!
+ *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
+ *  @deprecated Use stringByRemovingPercentEncoding
+ *  @see [stringByReplacingPercentEscapesUsingEncoding:][0]
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
+ */
+- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByRemovingPercentEncoding:");;
 
 @end
 

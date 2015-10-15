@@ -23,7 +23,7 @@
 }
 
 - (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType properties:(NSDictionary *)properties {
-    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation][0];
+    NSBitmapImageRep *imageRep = (NSBitmapImageRep *)([NSBitmapImageRep imageRepsWithData:self.TIFFRepresentation][0]);
     NSData *pngData = [imageRep representationUsingType:fileType properties:properties];
     return pngData;
 }

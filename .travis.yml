@@ -1,4 +1,6 @@
 language: objective-c
+osx_image: xcode7
 xcode_project: FoundationExtension.xcodeproj # path to your xcodeproj folder
-xcode_scheme: CocoaExtensionTests
-script: xcodebuild test -project FoundationExtension.xcodeproj -scheme UIKitExtensionTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+xcode_scheme:
+  - CocoaExtensionTests
+  - UIKitExtensionTests

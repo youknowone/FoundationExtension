@@ -230,12 +230,6 @@
 + (NSString *)name;
 
 /*!
- *  @brief Returns name of class.
- *  @deprecated Renamed to name
- */
-+ (NSString *)className __deprecated;
-
-/*!
  *  @brief Returns Method from given selector;
  *  @see [class_getInstanceMethod][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_getInstanceMethod
@@ -297,6 +291,12 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/class_addMethod
  */
 + (void)addClassMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
+
+/*!
+ *  @brief Returns name of class.
+ *  @deprecated Renamed to name
+ */
++ (NSString *)className __deprecated;
 
 @end
 

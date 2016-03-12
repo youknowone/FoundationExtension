@@ -22,6 +22,7 @@
 
 #import <Cocoa/Cocoa.h>
 // depenency level 0
+#import <CocoaExtension/NSPasteboard.h>
 #import <CocoaExtension/FSEventStream.h>                    // level: 0 / deps(0):  / internal(0):
 #import <CocoaExtension/NSAttributedString+Cocoa.h>         // level: 0 / deps(1): NSADictionary / internal(0):
 #import <CocoaExtension/NSControl.h>                        // level: 0 / deps(0):  / internal(0):

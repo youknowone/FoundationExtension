@@ -221,6 +221,7 @@
 		388D1C1E176E22FD0061527C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C19176E22FD0061527C /* 2.png */; };
 		388D1C1F176E22FD0061527C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C1A176E22FD0061527C /* 4.png */; };
 		388D7D7C19C456800006B243 /* MPMediaItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 381512D617C3A3AA000E06D0 /* MPMediaItem.m */; };
+		389161FF1C947396006B6A98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389161FE1C947396006B6A98 /* QuartzCore.framework */; };
 		38A90FDD163591F7001DB09E /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
 		38A90FDE163591FC001DB09E /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
 		38A90FDF163591FF001DB09E /* NSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A60161AD9AE00C5CE06 /* NSTimer.m */; };
@@ -548,12 +549,12 @@
 		388D08781BD01DA9004B648C /* FoundationExtension_watchos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtension_watchos.h; sourceTree = "<group>"; };
 		388D087A1BD01DA9004B648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		388D08CA1BD01DB2004B648C /* FoundationExtension copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "FoundationExtension copy-Info.plist"; path = "/Volumes/Userspace/Projects/FoundationExtension/FoundationExtension copy-Info.plist"; sourceTree = "<absolute>"; };
 		388D1C16176E22FD0061527C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		388D1C17176E22FD0061527C /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		388D1C18176E22FD0061527C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		388D1C19176E22FD0061527C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		388D1C1A176E22FD0061527C /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		389161FE1C947396006B6A98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		38B0C6E7163F737F0044C73C /* NSAFunctional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAFunctional.h; sourceTree = "<group>"; };
 		38B0C6E8163F73800044C73C /* NSAFunctional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSAFunctional.m; sourceTree = "<group>"; };
 		38B0C73C1641382D0044C73C /* NSAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSAttributedString.h; sourceTree = "<group>"; };
@@ -640,6 +641,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				389161FF1C947396006B6A98 /* QuartzCore.framework in Frameworks */,
 				3855B02C163CF2B1005584CD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,7 +746,6 @@
 				388D08771BD01DA9004B648C /* FoundationExtension_watchos */,
 				383764D613373154007072FD /* Frameworks */,
 				383764D513373154007072FD /* Products */,
-				388D08CA1BD01DB2004B648C /* FoundationExtension copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -767,6 +768,7 @@
 		383764D613373154007072FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				389161FE1C947396006B6A98 /* QuartzCore.framework */,
 				3865D90419C6B5D100B4DC72 /* UIKit.framework */,
 				3865D90119C6B48100B4DC72 /* MediaPlayer.framework */,
 				3865D8FE19C6B46600B4DC72 /* AddressBook.framework */,

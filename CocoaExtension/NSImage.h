@@ -53,3 +53,38 @@
 - (NSData *)JPEGRepresentationWithCompressionFactor:(CGFloat)compressionFactor;
 
 @end
+
+
+/*!
+ *  @brief [NSDrawNinePartImage][0] convinient methods.
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Miscellaneous/AppKit_Functions/#//apple_ref/c/func/NSDrawNinePartImage
+ */
+@interface NSImage (NSDrawNinePartImage)
+
+/*!
+ *  @brief Draws nine part image with given cap insets.
+ *  @see [NSDrawNinePartImage][0] for the implementation and [UIImage resizableImageWithCapInsets:][1] for the cap insets.
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Miscellaneous/AppKit_Functions/#//apple_ref/c/func/NSDrawNinePartImage
+ *      [1]: https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImage_Class/#//apple_ref/occ/instm/UIImage/resizableImageWithCapInsets:
+ */
+- (void)drawNinePartImageInRect:(NSRect)toRect capInsets:(NSEdgeInsets)capInsets;
+/*!
+ *  @brief Creates and returns nine part image with given cap insets.
+ *  @see [NSDrawNinePartImage][0] for the implementation and [UIImage resizableImageWithCapInsets:][1] for the cap insets.
+ *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Miscellaneous/AppKit_Functions/#//apple_ref/c/func/NSDrawNinePartImage
+ *      [1]: https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImage_Class/#//apple_ref/occ/instm/UIImage/resizableImageWithCapInsets:
+ */
+- (NSImage*)ninePartImageWithSize:(NSSize)size capInsets:(NSEdgeInsets)capInsets;
+
+@end
+
+
+@interface CAANinePartImageLayer : CALayer
+
+@property(nonatomic,strong) NSImage *image;
+@property(nonatomic,assign) NSEdgeInsets capInsets;
+
+- (instancetype)initWithImage:(NSImage *)image capInsets:(NSEdgeInsets)capInsets;
++ (instancetype)layerWithImage:(NSImage *)image capInsets:(NSEdgeInsets)capInsets;
+
+@end

@@ -26,6 +26,6 @@
  *  @brief The array of cells or array of arrays of cells to be used.
  *  @details Array of cells if hasUniqueSection is YES; otherwise Array of arrays of cells.
  */
-@property(nonatomic, retain) NSArray *cells; // should be array of array
+@property(nonatomic, strong) NSArray *cells; // should be array of array
 
 @end

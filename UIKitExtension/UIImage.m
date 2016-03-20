@@ -14,27 +14,25 @@
 - (instancetype)initWithContentsOfURL:(NSURL *)URL {
     NSData *data = [NSData dataWithContentsOfURL:URL];
     if (data == nil) {
-        [self release];
         return nil;
     }
     return [self initWithData:data];
 }
 
 + (instancetype)imageWithContentsOfURL:(NSURL *)URL {
-    return [[[self alloc] initWithContentsOfURL:URL] autorelease];
+    return [[self alloc] initWithContentsOfURL:URL];
 }
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
     NSData *data = [NSData dataWithContentsOfURLRequest:request];
     if (data == nil) {
-        [self release];
         return nil;
     }
     return [self initWithData:data];
 }
 
 + (instancetype)imageWithContentsOfURLRequest:(NSURLRequest *)request {
-    return [[[self alloc] initWithContentsOfURLRequest:request] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request];
 }
 
 - (instancetype)initWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy {
@@ -43,7 +41,7 @@
 }
 
 + (instancetype)imageWithContentsOfURL:(NSURL *)URL cachePolicy:(NSURLRequestCachePolicy)cachePolicy {
-    return [[[self alloc] initWithContentsOfURL:URL cachePolicy:cachePolicy] autorelease];
+    return [[self alloc] initWithContentsOfURL:URL cachePolicy:cachePolicy];
 }
 
 @end
@@ -103,7 +101,6 @@
     static UIImage *image = nil;
     if (image == nil) {
         image = [UIImage imageWithColor:[UIColor clearColor] size:CGSizeMake(1.0, 1.0)];
-        [image retain];
     }
     return image;
 }

@@ -34,8 +34,8 @@
 + (instancetype)mediatorWithOrigin:(id)origin override:(id)override;
 + (instancetype)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive;
 
-@property(nonatomic, retain) id origin;
-@property(nonatomic, retain) id override;
+@property(nonatomic, strong) id origin;
+@property(nonatomic, strong) id override;
 @property(nonatomic, assign) BOOL suppressive;
 
 @end

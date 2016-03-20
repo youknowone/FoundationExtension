@@ -9,7 +9,6 @@
 #import "UIKitExtensionTests.h"
 
 #import <UIKitExtension/UIKitExtension.h>
-#import <AddressBookExtension/ABAddressBook.h>
 
 @implementation UIKitExtensionTests
 

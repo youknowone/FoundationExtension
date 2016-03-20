@@ -38,7 +38,7 @@
 }
 
 + (UIColor *)colorWith8bitRed:(UInt8)red green:(UInt8)green blue:(UInt8)blue alpha:(UInt8)alpha {
-    return [[[self alloc] initWith8bitRed:red green:green blue:blue alpha:alpha] autorelease];
+    return [[self alloc] initWith8bitRed:red green:green blue:blue alpha:alpha];
 }
 
 - (UIColor *)initWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
@@ -47,7 +47,7 @@
 }
 
 + (UIColor *)colorWith8bitWhite:(UInt8)white alpha:(UInt8)alpha {
-    return [[[self alloc] initWith8bitWhite:white alpha:alpha] autorelease];
+    return [[self alloc] initWith8bitWhite:white alpha:alpha];
 }
 
 - (UIColor *)initWith32bitColor:(UInt32)value {
@@ -58,7 +58,7 @@
 }
 
 + (UIColor *)colorWith32bitColor:(UInt32)value {
-    return [[[self alloc] initWith32bitColor:value] autorelease];
+    return [[self alloc] initWith32bitColor:value];
 }
 
 @end
@@ -179,19 +179,19 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 }
 
 + (UIColor *)colorWithHTMLHexExpression16:(NSString *)code {
-    return [[[self alloc] initWithHTMLHexExpression16:code] autorelease];
+    return [[self alloc] initWithHTMLHexExpression16:code];
 }
 
 + (UIColor *)colorWithHTMLHexExpression32:(NSString *)code {
-    return [[[self alloc] initWithHTMLHexExpression32:code] autorelease];
+    return [[self alloc] initWithHTMLHexExpression32:code];
 }
 
 + (UIColor *)colorWithHTMLHexExpression16a:(NSString *)code {
-    return [[[self alloc] initWithHTMLHexExpression16a:code] autorelease];
+    return [[self alloc] initWithHTMLHexExpression16a:code];
 }
 
 + (UIColor *)colorWithHTMLHexExpression32a:(NSString *)code {
-    return [[[self alloc] initWithHTMLHexExpression32a:code] autorelease];
+    return [[self alloc] initWithHTMLHexExpression32a:code];
 }
 
 @end
@@ -201,8 +201,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 
 - (UIColor *)initWithHTMLExpression:(NSString *)code {
     if (![code hasPrefix:@"#"]) {
-        [self autorelease];
-        return [[[self class] colorWithHTMLColorName:code] retain];
+        return [[self class] colorWithHTMLColorName:code];
     }
     switch (code.length) {
         case 4: return [self initWithHTMLHexExpression16:code];
@@ -210,12 +209,11 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
         case 7: return [self initWithHTMLHexExpression32:code];
         case 9: return [self initWithHTMLHexExpression32a:code];
     }
-    [self release];
     return nil;
 }
 
 + (UIColor *)colorWithHTMLExpression:(NSString *)code {
-    return [[[self alloc] initWithHTMLExpression:code] autorelease];
+    return [[self alloc] initWithHTMLExpression:code];
 }
 
 @end
@@ -344,7 +342,6 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 }
 
 - (instancetype)initWithCGColor:(CGColorRef)color {
-    [self release];
     CGColorSpaceRef colorSpace = CGColorGetColorSpace(color);
     CGColorSpaceModel colorSpaceModel = CGColorSpaceGetModel(colorSpace);
     switch (colorSpaceModel) {
@@ -362,7 +359,7 @@ NSDictionary *FoundationExtensionUIColorHTMLColorTable = nil;
 }
 
 + (instancetype)componentsWithCGColor:(CGColorRef)color {
-    return [[(UIAColorComponents *)[self alloc] initWithCGColor:color] autorelease];
+    return [(UIAColorComponents *)[self alloc] initWithCGColor:color];
 }
 
 @end

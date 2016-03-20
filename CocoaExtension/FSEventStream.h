@@ -41,13 +41,13 @@
  */
 @interface FSEventStream : NSObject {
     FSEventStreamRef _stream;
-    id<FSEventStreamDelegate> _delegate;
+    id<FSEventStreamDelegate> __unsafe_unretained _delegate;
 
     NSUInteger _managedRetainCount;
 }
 
 //! @brief Delegate object for event stream.
-@property(nonatomic, assign) id<FSEventStreamDelegate> delegate;
+@property(nonatomic, unsafe_unretained) id<FSEventStreamDelegate> delegate;
 //! @brief Latest event id of event stream.
 @property(nonatomic, readonly) FSEventStreamEventId latestEventId;
 

@@ -26,7 +26,7 @@
 /*!
  *  @brief The table view's subview source.
  */
-@property(nonatomic, assign) IBOutlet id<UIASubviewTableSubviewSource> subviewSource;
+@property(nonatomic, weak) IBOutlet id<UIASubviewTableSubviewSource> subviewSource;
 
 @end
 

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <FoundationExtension/FoundationExtension.h>
+
 #import "NSObject.h"
 #import "UITableView.h"
 
@@ -14,7 +16,7 @@
 NSAPropertyRetainSetter(setReuseIdentifier, @"_reuseIdentifier")
 
 + (instancetype)cellWithStyle:(UITableViewCellStyle)style reuseIdentifier:(id)reuseIdentifier {
-    return [[[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier] autorelease];
+    return [[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
 }
 
 - (UITableView *)tableView {

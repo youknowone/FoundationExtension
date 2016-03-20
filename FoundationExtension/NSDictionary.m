@@ -34,20 +34,19 @@
 }
 
 + (instancetype)dictionaryWithData:(NSData *)data {
-    return [[[self alloc] initWithData:data] autorelease];
+    return [[self alloc] initWithData:data];
 }
 
 - (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSDictionary *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
-        [self release];
         return nil;
     }
     return [self initWithDictionary:contents];
 }
 
 + (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
-    return [[[self alloc] initWithData:data format:format error:error] autorelease];
+    return [[self alloc] initWithData:data format:format error:error];
 }
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-#import "NSData.h"
-
 #import "NSArray.h"
+
+#import "NSData.h"
 
 @implementation NSArray (Shortcuts)
 
@@ -26,20 +26,19 @@
 }
 
 + (instancetype)arrayWithData:(NSData *)data {
-    return [[[self alloc] initWithData:data] autorelease];
+    return [[self alloc] initWithData:data];
 }
 
 - (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSArray *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
-        [self release];
         return nil;
     }
     return [self initWithArray:contents];
 }
 
 + (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
-    return [[[self alloc] initWithData:data format:format error:error] autorelease];
+    return [[self alloc] initWithData:data format:format error:error];
 }
 
 - (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
@@ -47,7 +46,7 @@
 }
 
 + (instancetype)arrayWithEnumerator:(id<NSFastEnumeration>)enumerator {
-    return [[[self alloc] initWithEnumerator:enumerator] autorelease];
+    return [[self alloc] initWithEnumerator:enumerator];
 }
 
 - (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator copyItems:(BOOL)flag {
@@ -60,42 +59,11 @@
         for (id object in enumerator) {
             id newObject = [object copy];
             [array addObject:newObject];
-            [newObject release];
         }
     }
     return [self initWithArray:array];
 }
 
-- (instancetype)initWithObject:(id)object count:(NSUInteger)count {
-    id *objects = malloc(sizeof(id) * count);
-    for (NSUInteger i = 0; i < count; i++) {
-        objects[i] = object;
-    }
-    self = [self initWithObjects:objects count:count];
-    free(objects);
-    return self;
-}
-
-+ (instancetype)arrayWithObject:(id)object count:(NSUInteger)count {
-    return [[[self alloc] initWithObject:object count:count] autorelease];
-}
-
-- (instancetype)initWithObjectCopy:(id)object count:(NSUInteger)count mutable:(BOOL)flag {
-    id *objects = malloc(sizeof(id) * count);
-    if (flag) {
-        for (NSUInteger i = 0; i < count; i++) {
-            objects[i] = [object mutableCopy];
-        }
-    } else {
-        for (NSUInteger i = 0; i < count; i++) {
-            objects[i] = [object copy];
-        }
-    }
-    typeof(self) result = [self initWithObjects:objects count:count];
-    free(objects);
-    return result;
-
-}
 
 - (NSArray *)subarrayFromIndex:(NSUInteger)index {
     return [self subarrayWithRange:NSMakeRange(index, self.count - index)];
@@ -120,10 +88,8 @@
 
 - (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     id obj = self[fromIndex];
-    [obj retain];
     [self removeObjectAtIndex:fromIndex];
     [self insertObject:obj atIndex:toIndex];
-    [obj release];
 }
 
 @end
@@ -164,7 +130,6 @@
         [copy removeObjectAtIndex:index];
     }
 
-    [copy release];
     return selected;
 }
 
@@ -183,9 +148,9 @@
         return self[0]; // raise index error
     }
     uint32_t index = arc4random_uniform((uint32_t)count);
-    id result = [self[index] retain];
+    id result = self[index];
     [self removeObjectAtIndex:index];
-    return [result autorelease];
+    return result;
 }
 
 - (void)shuffle {
@@ -194,7 +159,6 @@
     while (pool.count) {
         [self addObject:[pool removeRandomObject]];
     }
-    [pool release];
 }
 
 @end

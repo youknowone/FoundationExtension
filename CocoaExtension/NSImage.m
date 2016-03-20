@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <cdebug/debug.h>
 
 #import "NSImage.h"
@@ -13,15 +14,15 @@
 @implementation NSImage (Shortcuts)
 
 + (id)imageWithContentsOfURL:(NSURL *)url {
-    return [[[self alloc] initWithContentsOfURL:url] autorelease];
+    return [[self alloc] initWithContentsOfURL:url];
 }
 
 + (id)imageByReferencingURL:(NSURL *)url {
-    return [[[self alloc] initByReferencingURL:url] autorelease];
+    return [[self alloc] initByReferencingURL:url];
 }
 
 + (id)imageWithPasteboard:(NSPasteboard *)pasteboard {
-    return [[[self alloc] initWithPasteboard:pasteboard] autorelease];
+    return [[self alloc] initWithPasteboard:pasteboard];
 }
 
 - (NSData *)dataRepresentationUsingType:(NSBitmapImageFileType)fileType properties:(NSDictionary *)properties {
@@ -151,13 +152,13 @@ NSRect _NSRectWithSize(NSSize size) {
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.capInsets = NSEdgeInsetsZero;
+        self.capInsets = NSEdgeInsetsMake(0.0f, 0.0f, 0.0f, 0.0f);
     }
     return self;
 }
 
 + (instancetype)layer {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (instancetype)initWithImage:(NSImage *)_image capInsets:(NSEdgeInsets)_capInsets {
@@ -170,7 +171,7 @@ NSRect _NSRectWithSize(NSSize size) {
 }
 
 + (instancetype)layerWithImage:(NSImage *)image capInsets:(NSEdgeInsets)capInsets {
-    return [[[self alloc] initWithImage:image capInsets:capInsets] autorelease];
+    return [[self alloc] initWithImage:image capInsets:capInsets];
 }
 
 - (void)display {

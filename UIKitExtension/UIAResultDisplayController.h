@@ -19,7 +19,7 @@
 /*!
  *  @brief The view's delegate.
  */
-@property(nonatomic, assign) IBOutlet id<UIADimmingViewDelegate> delegate;
+@property(nonatomic, weak) IBOutlet id<UIADimmingViewDelegate> delegate;
 
 @end
 
@@ -53,7 +53,6 @@
     UIADimmingView *_dimmingView;
     UIView *_resultView;
     id<UIAResultDisplayDelegate> _delegate;
-    UIView *_inputView;
     struct {
         unsigned int visible:1;
         unsigned int animating:1;
@@ -85,12 +84,12 @@
 /*!
  *  @brief The controller's delegate.
  */
-@property(nonatomic,assign) IBOutlet id<UIAResultDisplayDelegate> delegate;
+@property(nonatomic,weak) IBOutlet id<UIAResultDisplayDelegate> delegate;
 /*!
  *  @brief The controller's dimming view.
  *  @details If nil, new one will be created.
  */
-@property(nonatomic,retain) IBOutlet UIADimmingView *dimmingView;
+@property(nonatomic,strong) IBOutlet UIADimmingView *dimmingView;
 
 /*!
  *  @brief The visibility state of the search interface.
@@ -116,12 +115,12 @@
  *  @brief The input view.
  *  @details When active becomes YES, the input view must not be nil. And it must should keep identical view unless active becomes NO.
  */
-@property(nonatomic,assign) IBOutlet UIView *inputView; // this view must not be nil.
+@property(nonatomic,weak) IBOutlet UIView *inputView; // this view must not be nil.
 /*!
  *  @brief The result view.
  *  @details When active becomes YES, if the result view is nil, controller sends resultDisplayControllerLoadResultView: message to delegate. If the view is nil and delegate doesn't implement the message, controller raise an exception.
  */
-@property(nonatomic,retain) IBOutlet UIView *resultView;
+@property(nonatomic,strong) IBOutlet UIView *resultView;
 
 @end
 

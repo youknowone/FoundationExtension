@@ -14,7 +14,7 @@
 @dynamic locale;
 
 + (NSNumberFormatter *)formatter {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (instancetype)initWithNumberStyle:(NSNumberFormatterStyle)style {
@@ -26,7 +26,7 @@
 }
 
 + (NSNumberFormatter *)formatterWithNumberStyle:(NSNumberFormatterStyle)style {
-    return [[[self alloc] initWithNumberStyle:style] autorelease];
+    return [[self alloc] initWithNumberStyle:style];
 }
 
 + (NSString *)formattedStringByDecimalStyleForNumber:(NSNumber *)number {

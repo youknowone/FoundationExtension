@@ -21,14 +21,14 @@
 - (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl {
     self = [super init];
     if (self != nil) {
-        self->_order = [order retain];
-        self->_impl = [impl retain];
+        self->_order = order;
+        self->_impl = impl;
     }
     return self;
 }
 
 + (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
-    return [[[self alloc] initWithImplementationOrder:order dictionary:impl] autorelease];
+    return [[self alloc] initWithImplementationOrder:order dictionary:impl];
 }
 
 - (instancetype)initWithObjects:(const id [])objects forKeys:(const id<NSCopying> [])keys count:(NSUInteger)cnt {
@@ -54,18 +54,13 @@
     [self->_impl encodeWithCoder:aCoder];
 }
 
-- (void)dealloc {
-    [self->_order release];
-    [self->_impl release];
-    [super dealloc];
-}
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationOrder:[[self->_order copyWithZone:zone] autorelease] dictionary:[[self->_impl copyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationOrder:[self->_order copyWithZone:zone] dictionary:[self->_impl copyWithZone:zone]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationOrder:[[self->_order mutableCopyWithZone:zone] autorelease] dictionary:[[self->_impl mutableCopyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationOrder:[self->_order mutableCopyWithZone:zone] dictionary:[self->_impl mutableCopyWithZone:zone]];
 }
 
 - (NSUInteger)count {
@@ -123,14 +118,14 @@
 - (instancetype)initWithImplementationOrder:(id)order dictionary:(id)impl {
     self = [super init];
     if (self != nil) {
-        self->_order = [order retain];
-        self->_impl = [impl retain];
+        self->_order = order;
+        self->_impl = impl;
     }
     return self;
 }
 
 + (instancetype)dictionaryWithImplementationOrder:(id)order dictionary:(id)impl {
-    return [[[self alloc] initWithImplementationOrder:order dictionary:impl] autorelease];
+    return [[self alloc] initWithImplementationOrder:order dictionary:impl];
 }
 
 - (instancetype)init {
@@ -165,11 +160,6 @@
     [self->_impl encodeWithCoder:aCoder];
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [self->_order release];
-    [super dealloc];
-}
 
 - (NSUInteger)count {
     dassert(self->_impl);
@@ -195,11 +185,11 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationOrder:[[self->_order copyWithZone:zone] autorelease] dictionary:[[self->_impl copyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationOrder:[self->_order copyWithZone:zone] dictionary:[self->_impl copyWithZone:zone]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationOrder:[[self->_order mutableCopyWithZone:zone] autorelease] dictionary:[[self->_impl mutableCopyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationOrder:[self->_order mutableCopyWithZone:zone] dictionary:[self->_impl mutableCopyWithZone:zone]];
 }
 
 // mutable methods

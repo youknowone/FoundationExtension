@@ -1,8 +1,0 @@
-//
-// Prefix header for all source files of the 'FoundationExtensionTests' target in the 'FoundationExtensionTests' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-    #import <FoundationExtension/FoundationExtension.h>
-#endif

@@ -59,7 +59,7 @@ static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest,
     NSMutableString *result = [[NSMutableString alloc] init];
     for ( int i = 0; i<CC_MD5_DIGEST_LENGTH; i++ )
         [result appendFormat:@"%02x", *(hashedChars+i)];
-    return [result autorelease];
+    return result;
 }
 
 - (NSString *)digestStringBySHA1 {
@@ -69,7 +69,7 @@ static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest,
     for ( int i = 0; i<CC_SHA1_DIGEST_LENGTH; i++ ) {
         [result appendFormat:@"%02x", *(hashedChars+i)];
     }
-    return [result autorelease];
+    return result;
 }
 
 @end

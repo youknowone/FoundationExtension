@@ -28,12 +28,8 @@
 }
 
 + (instancetype)versionWithString:(NSString *)string {
-    return [[[self alloc] initWithString:string] autorelease];
+    return [[self alloc] initWithString:string];
 }
 
-- (void)dealloc {
-    [self->_string release];
-    [super dealloc];
-}
 
 @end

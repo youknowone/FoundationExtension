@@ -15,10 +15,10 @@
 
 
 @interface _UIASubviewTableViewDataSource: NSObject<UITableViewDataSource> {
-    UIASubviewTableView *_owner;
+    UIASubviewTableView *__weak _owner;
 }
 
-@property(nonatomic, readonly) UIASubviewTableView *owner;
+@property(weak, nonatomic, readonly) UIASubviewTableView *owner;
 
 @end
 
@@ -121,11 +121,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_dataSourceImpl release];
-    [self->_delegateMediator release];
-    [super dealloc];
-}
 
 - (id<UITableViewDataSource>)dataSource {
     return self->_dataSourceImpl;
@@ -150,7 +145,6 @@
     if (delegate == self) {
         [super setDelegate:delegate];
     } else {
-        [self->_delegateMediator release];
         self->_delegateMediator = [[NSAOverridingMediator alloc] initWithOrigin:self override:delegate suppressive:NO];
         [super setDelegate:self->_delegateMediator];
     }

@@ -26,7 +26,6 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     [recognizer setMinimumPressDuration:kLongPressMinimumDurationSeconds];
     [self addGestureRecognizer:recognizer];
-    [recognizer release];
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -37,9 +36,6 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
     return self;
 }
 
-- (void)dealloc {
-    [super dealloc];
-}
 
 - (void)setDelegate:(id<UIATableViewCellCopyableDelegate>)delegate {
     self->_delegate = delegate;

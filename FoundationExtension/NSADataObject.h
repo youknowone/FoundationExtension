@@ -91,11 +91,11 @@
 /*!
  *  @brief first object
  */
-@property(nonatomic, readonly) id first;
+@property(unsafe_unretained, nonatomic, readonly) id first;
 /*!
  *  @brief second object
  */
-@property(nonatomic, readonly) id second;
+@property(unsafe_unretained, nonatomic, readonly) id second;
 
 /*!
  *  @brief Creates and returns an empty tuple.
@@ -129,11 +129,11 @@
 /*!
  *  @brief first object
  */
-@property(nonatomic, retain) id first;
+@property(nonatomic, strong) id first;
 /*!
  *  @brief second object
  */
-@property(nonatomic, retain) id second;
+@property(nonatomic, strong) id second;
 
 /*!
  *  @brief Swap first and second.
@@ -159,15 +159,15 @@
 /*!
  *  @brief first object
  */
-@property(nonatomic, readonly) id first;
+@property(unsafe_unretained, nonatomic, readonly) id first;
 /*!
  *  @brief second object
  */
-@property(nonatomic, readonly) id second;
+@property(unsafe_unretained, nonatomic, readonly) id second;
 /*!
  *  @brief third object
  */
-@property(nonatomic, readonly) id third;
+@property(unsafe_unretained, nonatomic, readonly) id third;
 
 /*!
  *  @brief Creates and returns an empty triple.
@@ -203,15 +203,15 @@
 /*!
  *  @brief first object
  */
-@property(nonatomic, retain) id first;
+@property(nonatomic, strong) id first;
 /*!
  *  @brief second object
  */
-@property(nonatomic, retain) id second;
+@property(nonatomic, strong) id second;
 /*!
  *  @brief third object
  */
-@property(nonatomic, retain) id third;
+@property(nonatomic, strong) id third;
 
 /*!
  *  @brief Sets the receiving triple's elements to those in another given triple.

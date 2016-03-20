@@ -49,7 +49,7 @@
 /*!
  *  @brief The image well's delegate.
  */
-@property(nonatomic, retain) IBOutlet id<NSAImageWellDelegate> delegate;
+@property(nonatomic, strong) IBOutlet id<NSAImageWellDelegate> delegate;
 
 @end
 

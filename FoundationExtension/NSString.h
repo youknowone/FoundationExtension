@@ -15,6 +15,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief NSString creation method extension
  */
@@ -55,7 +57,7 @@
  *  @see [initWithData:encoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/initWithData:encoding:
  */
-+ (instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
++ (nullable instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 
 /*!
  *  @brief Creates and returns an NSString object with concatnating given arguments.
@@ -93,7 +95,7 @@
  *  @see [stringWithFormat:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/clm/NSString/stringWithFormat:
  */
-- (NSString *)format0:(id)dummyLikeNil, ...;
+- (NSString *)format0:(nullable id)dummyLikeNil, ...;
 
 /*! @name Range */
 
@@ -172,7 +174,7 @@
  *  @see [dataUsingEncoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/dataUsingEncoding:
  */
-- (NSData *)dataUsingUTF8Encoding;
+- (nullable NSData *)dataUsingUTF8Encoding;
 
 @end
 
@@ -200,6 +202,13 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/integerValue
  */
 - (NSInteger)hexadecimalValue;
+
+@end
+
+
+@interface NSString (RegularExpression)
+
+- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError * _Nullable __autoreleasing * _Nullable)error;
 
 @end
 
@@ -233,3 +242,5 @@
 - (BOOL)hasSubstring:(NSString *)aString __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END

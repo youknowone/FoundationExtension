@@ -23,7 +23,6 @@
 @synthesize class=_class;
 
 - (id)initWithClass:(Class)class {
-    [self release];
     return (id)class;
 }
 

@@ -33,7 +33,17 @@
  */
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+//! Project version number for FoundationExtension.
+FOUNDATION_EXPORT double FoundationExtensionVersionNumber;
+
+//! Project version string for FoundationExtension.
+FOUNDATION_EXPORT const unsigned char FoundationExtensionVersionString[];
+
+
+#import <FoundationExtensionRC/FoundationExtensionRC.h>
+
 // depenency level 0
 #import <FoundationExtension/NSArray.h>                     // level: 0 / deps(0):  / internal(1): NSData
 #import <FoundationExtension/NSAttributedString.h>          // level: 0 / deps(0):  / internal(0):
@@ -50,7 +60,6 @@
 #import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSSet.h>                       // level: 0 / deps(0):  / internal(1): NSArray
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
-#import <FoundationExtension/NSTimer.h>                     // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSURL.h>                       // level: 0 / deps(0):  / internal(4): NSBundle, NSPathUtilities, NSCharacterSet, NSString
 #import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest

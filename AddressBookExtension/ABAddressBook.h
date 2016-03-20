@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AddressBook/ABAddressBook.h>
+#import <AddressBook/AddressBook.h>
 
 @class ABRecord;
 

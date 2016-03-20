@@ -13,17 +13,17 @@
 
 @interface UIASegmentedImageView ()
 
-@property(nonatomic, assign) UIImageView *centerImageView;
+@property(nonatomic, strong) UIImageView *centerImageView;
 
-@property(nonatomic, assign) UIImageView *topImageView;
-@property(nonatomic, assign) UIImageView *bottomImageView;
-@property(nonatomic, assign) UIImageView *leftImageView;
-@property(nonatomic, assign) UIImageView *rightImageView;
+@property(nonatomic, strong) UIImageView *topImageView;
+@property(nonatomic, strong) UIImageView *bottomImageView;
+@property(nonatomic, strong) UIImageView *leftImageView;
+@property(nonatomic, strong) UIImageView *rightImageView;
 
-@property(nonatomic, assign) UIImageView *topLeftImageView;
-@property(nonatomic, assign) UIImageView *topRightImageView;
-@property(nonatomic, assign) UIImageView *bottomLeftImageView;
-@property(nonatomic, assign) UIImageView *bottomRightImageView;
+@property(nonatomic, strong) UIImageView *topLeftImageView;
+@property(nonatomic, strong) UIImageView *topRightImageView;
+@property(nonatomic, strong) UIImageView *bottomLeftImageView;
+@property(nonatomic, strong) UIImageView *bottomRightImageView;
 
 @end
 
@@ -47,15 +47,15 @@
 - (void)_segmentedImageViewInit {
     self.contentMode = UIViewContentModeScaleToFill;
 
-    self.centerImageView = [[[UIImageView alloc] initWithFrame:self.bounds] autorelease];
-    self.topImageView = [[[UIImageView alloc] init] autorelease];
-    self.bottomImageView = [[[UIImageView alloc] init] autorelease];
-    self.leftImageView = [[[UIImageView alloc] init] autorelease];
-    self.rightImageView = [[[UIImageView alloc] init] autorelease];
-    self.topLeftImageView = [[[UIImageView alloc] init] autorelease];
-    self.topRightImageView = [[[UIImageView alloc] init] autorelease];
-    self.bottomLeftImageView = [[[UIImageView alloc] init] autorelease];
-    self.bottomRightImageView = [[[UIImageView alloc] init] autorelease];
+    self.centerImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.topImageView = [[UIImageView alloc] init];
+    self.bottomImageView = [[UIImageView alloc] init];
+    self.leftImageView = [[UIImageView alloc] init];
+    self.rightImageView = [[UIImageView alloc] init];
+    self.topLeftImageView = [[UIImageView alloc] init];
+    self.topRightImageView = [[UIImageView alloc] init];
+    self.bottomLeftImageView = [[UIImageView alloc] init];
+    self.bottomRightImageView = [[UIImageView alloc] init];
 
     self.centerImageView.autoresizingMask = UIViewAutoresizingFlexibleSize;
 
@@ -136,22 +136,6 @@
     return self;
 }
 
-- (void)dealloc {
-    self.centerImage = nil;
-
-    self.topImage = nil;
-    self.bottomImage = nil;
-    self.leftImage = nil;
-    self.rightImage = nil;
-
-    self.topLeftImage = nil;
-    self.topRightImage = nil;
-    self.bottomLeftImage = nil;
-    self.bottomRightImage = nil;
-
-    [super dealloc];
-}
-
 - (void)arrange {
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
@@ -180,15 +164,11 @@
 }
 
 - (void)setCenterImage:(UIImage *)image {
-    [image retain];
-    [self->_centerImage release];
     self->_centerImage = image;
     self.centerImageView.image = image;
 }
 
 - (void)setTopImage:(UIImage *)image {
-    [image retain];
-    [self->_topImage release];
     self->_topImage = image;
     if (self.autosizing) {
         self.topMargin = image.size.height;
@@ -197,8 +177,6 @@
 }
 
 - (void)setBottomImage:(UIImage *)image {
-    [image retain];
-    [self->_bottomImage release];
     self->_bottomImage = image;
     if (self.autosizing) {
         self.bottomMargin = image.size.height;
@@ -207,8 +185,6 @@
 }
 
 - (void)setLeftImage:(UIImage *)image {
-    [image retain];
-    [self->_leftImage release];
     self->_leftImage = image;
     if (self.autosizing) {
         self.leftMargin = image.size.width;
@@ -217,8 +193,6 @@
 }
 
 - (void)setRightImage:(UIImage *)image {
-    [image retain];
-    [self->_rightImage release];
     self->_rightImage = image;
     if (self.autosizing) {
         self.rightMargin = image.size.width;
@@ -227,8 +201,6 @@
 }
 
 - (void)setTopLeftImage:(UIImage *)image {
-    [image retain];
-    [self->_topLeftImage release];
     self->_topLeftImage = image;
     if (self.autosizing) {
         self.topMargin = image.size.height;
@@ -238,8 +210,6 @@
 }
 
 - (void)setTopRightImage:(UIImage *)image {
-    [image retain];
-    [self->_topRightImage release];
     self->_topRightImage = image;
     if (self.autosizing) {
         self.topMargin = image.size.height;
@@ -249,8 +219,6 @@
 }
 
 - (void)setBottomLeftImage:(UIImage *)image {
-    [image retain];
-    [self->_bottomLeftImage release];
     self->_bottomLeftImage = image;
     if (self.autosizing) {
         self.bottomMargin = image.size.height;
@@ -260,8 +228,6 @@
 }
 
 - (void)setBottomRightImage:(UIImage *)image {
-    [image retain];
-    [self->_bottomRightImage release];
     self->_bottomRightImage = image;
     if (self.autosizing) {
         self.topMargin = image.size.height;

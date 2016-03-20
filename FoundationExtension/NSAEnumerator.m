@@ -23,7 +23,6 @@
 
 - (instancetype)initWithObject:(id)object {
     self = [super init];
-    [object retain];
     for (int i = 0; i < 16; i++) {
         self->_pool[i] = object;
     }
@@ -31,19 +30,15 @@
 }
 
 + (instancetype)enumeratorWithObject:(id)object {
-    return [[[self alloc] initWithObject:object] autorelease];
+    return [[self alloc] initWithObject:object];
 }
 
-- (void)dealloc {
-    [self->_pool[0] release];
-    [super dealloc];
-}
 
 + (instancetype)infiniteEnumerator {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if (state->state == 0) {
         state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
@@ -77,16 +72,16 @@
 }
 
 + (instancetype)enumeratorWithCount:(NSUInteger)count {
-    return [[[self alloc] initWithCount:count] autorelease];
+    return [[self alloc] initWithCount:count];
 }
 
 + (instancetype)enumeratorWithRange:(NSRange)range {
-    return [[[self alloc] initWithRange:range] autorelease];
+    return [[self alloc] initWithRange:range];
 }
 
 #pragma mark - NSFastEnumeration
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->mutationsPtr = &state->extra[0];
         state->itemsPtr = buffer;
@@ -112,7 +107,6 @@
 @synthesize block=_block;
 
 - (id)init {
-    [self release];
     return nil;
 }
 
@@ -125,15 +119,11 @@
 }
 
 + (instancetype)enumeratorWithBlock:(NSABlockEnumeration)block {
-    return [[[self alloc] initWithBlock:block] autorelease];
+    return [[self alloc] initWithBlock:block];
 }
 
-- (void)dealloc {
-    self.block = nil;
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if (state->state == NSNotFound) {
         return 0;
     }

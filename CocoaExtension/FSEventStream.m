@@ -27,8 +27,8 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
                                         void *eventPaths,
                                         const FSEventStreamEventFlags eventFlags[],
                                         const FSEventStreamEventId eventIds[]) {
-    FSEventStream *self = (FSEventStream *)userData;
-    NSArray *paths = (NSArray *)eventPaths;
+    FSEventStream *self = (__bridge FSEventStream *)userData;
+    NSArray *paths = (__bridge NSArray *)eventPaths;
     for (size_t i = 0; i < numEvents; i += 1) {
         [self.delegate eventStream:self path:paths[i] event:eventFlags[i] id:eventIds[i]];
     }
@@ -38,11 +38,11 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     self = [super init];
     if (self != nil) {
         self.delegate = delegate;
-        FSEventStreamContext context = {0, (void *)self, NULL, NULL, NULL};
+        FSEventStreamContext context = {0, (__bridge void *)self, NULL, NULL, NULL};
         self->_stream = FSEventStreamCreate(NULL,
                                             &FSEventStreamCommonCallback,
                                             &context,
-                                            (CFArrayRef)paths,
+                                            (__bridge CFArrayRef)paths,
                                             kFSEventStreamEventIdSinceNow, /* Or a previous event ID */
                                             (CFAbsoluteTime)latency,
                                             flags|kFSEventStreamCreateFlagUseCFTypes
@@ -60,12 +60,11 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     FSEventStream *obj = [[self alloc] initWithPaths:paths latency:latency flags:flags delegate:delegate];
     [obj scheduleWithRunLoop:[NSRunLoop currentRunLoop] mode:NSDefaultRunLoopMode];
     [obj start];
-    return [obj autorelease];
+    return obj;
 }
 
 - (void)dealloc {
     FSEventStreamRelease(self->_stream);
-    [super dealloc];
 }
 
 - (FSEventStreamEventId)latestEventId {
@@ -73,9 +72,6 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
 }
 
 - (id)_managedRetain {
-    if (self->_managedRetainCount == 0) {
-        [self retain];
-    }
     self->_managedRetainCount += 1;
     return self;
 }
@@ -83,19 +79,16 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
 - (id)_managedRelease {
     dassertlog(self->_managedRetainCount > 0, @"Over-released");
     self->_managedRetainCount -= 1;
-    if (self->_managedRetainCount == 0) {
-        [self release];
-    }
     return self;
 }
 
 - (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode {
     [self _managedRetain];
-    FSEventStreamScheduleWithRunLoop(self->_stream, [runLoop getCFRunLoop], (CFStringRef)mode);
+    FSEventStreamScheduleWithRunLoop(self->_stream, [runLoop getCFRunLoop], (__bridge CFStringRef)mode);
 }
 
 - (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode {
-    FSEventStreamUnscheduleFromRunLoop(self->_stream, [runLoop getCFRunLoop], (CFStringRef)mode);
+    FSEventStreamUnscheduleFromRunLoop(self->_stream, [runLoop getCFRunLoop], (__bridge CFStringRef)mode);
     [self _managedRelease];
 }
 
@@ -103,7 +96,6 @@ static void FSEventStreamCommonCallback(ConstFSEventStreamRef streamRef,
     FSEventStreamInvalidate(self->_stream);
     if (self->_managedRetainCount > 0) {
         self->_managedRetainCount = 0;
-        [self release];
     }
 }
 

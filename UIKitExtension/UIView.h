@@ -35,7 +35,7 @@ typedef void (^UIAViewAnimationCompletionBlock)(BOOL finished);
  */
 @interface UIAViewHolder: NSObject
 
-@property(nonatomic, retain) IBOutlet id view;
+@property(nonatomic, strong) IBOutlet id view;
 
 @end
 

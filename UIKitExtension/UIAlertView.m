@@ -17,7 +17,7 @@
                                        cancelButtonTitle:NSLocalizedStringFromTable(@"OK", @"common", @"")
                                        otherButtonTitles:nil];
     [alertView show];
-    return [alertView autorelease];
+    return alertView;
 }
 
 
@@ -29,7 +29,7 @@
 + (instancetype)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle {
     UIAlertView *alert = [[self alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:nil];
     [alert show];
-    return [alert autorelease];
+    return alert;
 }
 
 @end

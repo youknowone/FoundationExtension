@@ -16,9 +16,9 @@
 
 @interface UIAlertView (Shortcuts)
 
-+ (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line;
++ (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line __deprecated;
 
-- (instancetype)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
-+ (instancetype)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle;
+- (instancetype)initNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle __deprecated;
++ (instancetype)showNoticeWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle __deprecated;
 
 @end

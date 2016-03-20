@@ -14,27 +14,22 @@
 @implementation NSATuple
 
 + (instancetype)tuple {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (instancetype)initWithFirst:(id)first second:(id)second {
     self = [super init];
     if (self != nil) {
-        self->_first = [first retain];
-        self->_second = [second retain];
+        self->_first = first;
+        self->_second = second;
     }
     return self;
 }
 
 + (instancetype)tupleWithFirst:(id)first second:(id)second {
-    return [[[self alloc] initWithFirst:first second:second] autorelease];
+    return [[self alloc] initWithFirst:first second:second];
 }
 
-- (void)dealloc {
-    [self->_first release];
-    [self->_second release];
-    [super dealloc];
-}
 
 - (id)first {
     return self->_first;
@@ -105,7 +100,7 @@
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [self retain];
+    return self;
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
@@ -114,7 +109,7 @@
 
 #pragma mark NSFastEnumeration
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state != 0) {
         return 0;
     }
@@ -138,14 +133,10 @@
 // implementation should be thread-safe?
 
 - (void)setFirst:(id)first {
-    [first retain];
-    [self->_first release];
     self->_first = first;
 }
 
 - (void)setSecond:(id)second {
-    [second retain];
-    [self->_second release];
     self->_second = second;
 }
 
@@ -189,29 +180,23 @@
 @implementation NSATriple
 
 + (instancetype)triple {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 - (instancetype)initWithFirst:(id)first second:(id)second third:(id)third {
     self = [super init];
     if (self != nil) {
-        self->_first = [first retain];
-        self->_second = [second retain];
-        self->_third = [third retain];
+        self->_first = first;
+        self->_second = second;
+        self->_third = third;
     }
     return self;
 }
 
 + (instancetype)tripleWithFirst:(id)first second:(id)second third:(id)third {
-    return [[[self alloc] initWithFirst:first second:second third:third] autorelease];
+    return [[self alloc] initWithFirst:first second:second third:third];
 }
 
-- (void)dealloc {
-    [self->_first release];
-    [self->_second release];
-    [self->_third release];
-    [super dealloc];
-}
 
 - (id)first {
     return self->_first;
@@ -291,7 +276,7 @@
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [self retain];
+    return self;
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
@@ -300,7 +285,7 @@
 
 #pragma mark NSFastEnumeration
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state != 0) {
         return 0;
     }
@@ -325,20 +310,14 @@
 // implementation should be thread-safe?
 
 - (void)setFirst:(id)first {
-    [first retain];
-    [self->_first release];
     self->_first = first;
 }
 
 - (void)setSecond:(id)second {
-    [second retain];
-    [self->_second release];
     self->_second = second;
 }
 
 - (void)setThird:(id)third {
-    [third retain];
-    [self->_third release];
     self->_third = third;
 }
 

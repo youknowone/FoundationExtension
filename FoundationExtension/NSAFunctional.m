@@ -39,17 +39,13 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     NSUInteger count = [self->_enumerator countByEnumeratingWithState:state objects:buffer count:len];
     for (NSUInteger i = 0; i < count; i++) {
         buffer[i] = self->_mapper(buffer[i]);
@@ -60,7 +56,7 @@ void NSAApplyWithIndex(id<NSFastEnumeration> enumerator, NSAObjectProcedureWithI
 @end
 
 NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
-    return [[[_NSAFunctionalMapEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+    return [[_NSAFunctionalMapEnumerator alloc] initWithEnumerator:enumerator mapper:mapper];
 }
 
 
@@ -79,17 +75,13 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->extra[4] = 0;
     }
@@ -107,7 +99,7 @@ NSEnumerator *NSAMap(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
 @end
 
 NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper) {
-    return [[[_NSAFunctionalMapWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+    return [[_NSAFunctionalMapWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper];
 }
 
 #pragma mark -
@@ -127,17 +119,13 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->state = 1;
         state->mutationsPtr = &state->extra[0];
@@ -161,7 +149,7 @@ NSEnumerator *NSAMapWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWi
 @end
 
 NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapper) {
-    return [[[_NSAFunctionalMapFilterEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+    return [[_NSAFunctionalMapFilterEnumerator alloc] initWithEnumerator:enumerator mapper:mapper];
 }
 
 
@@ -180,17 +168,13 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
     self = [super init];
     if (self != nil) {
         self->_mapper = mapper;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
@@ -213,7 +197,7 @@ NSEnumerator *NSAMapFilter(NSEnumerator *enumerator, NSAObjectUnaryOperator mapp
 @end
 
 NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOperatorWithIndex mapper) {
-    return [[[_NSAFunctionalMapFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper] autorelease];
+    return [[_NSAFunctionalMapFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator mapper:mapper];
 }
 
 #pragma mark -
@@ -233,17 +217,13 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
     self = [super init];
     if (self != nil) {
         self->_filter = filter;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
@@ -266,7 +246,7 @@ NSEnumerator *NSAMapFilterWithIndex(NSEnumerator *enumerator, NSAObjectUnaryOper
 @end
 
 NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
-    return [[[_NSAFunctionalFilterEnumerator alloc] initWithEnumerator:enumerator filter:filter] autorelease];
+    return [[_NSAFunctionalFilterEnumerator alloc] initWithEnumerator:enumerator filter:filter];
 }
 
 
@@ -285,17 +265,13 @@ NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
     self = [super init];
     if (self != nil) {
         self->_filter = filter;
-        self->_enumerator = [enumerator retain];
+        self->_enumerator = enumerator;
     }
     return self;
 }
 
-- (void)dealloc {
-    [self->_enumerator release];
-    [super dealloc];
-}
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id [])buffer count:(NSUInteger)len {
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len {
     if(state->state == 0) {
         state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
@@ -319,7 +295,7 @@ NSEnumerator *NSAFilter(NSEnumerator *enumerator, NSAObjectPicker filter) {
 @end
 
 NSEnumerator *NSAFilterWithIndex(NSEnumerator *enumerator, NSAObjectPickerWithIndex filter) {
-    return [[[_NSAFunctionalFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator filter:filter] autorelease];
+    return [[_NSAFunctionalFilterWithIndexEnumerator alloc] initWithEnumerator:enumerator filter:filter];
 }
 
 #pragma mark -
@@ -485,7 +461,6 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
         }
     }
     [self removeObjectsAtIndexes:removes];
-    [removes release];
 }
 
 - (void)mapFilterWithIndex:(NSAObjectUnaryOperatorWithIndex)mapper {
@@ -500,7 +475,6 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
         }
     }
     [self removeObjectsAtIndexes:removes];
-    [removes release];
 }
 
 - (void)filter:(NSAObjectPicker)filter {
@@ -513,7 +487,6 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
         }
     }
     [self removeObjectsAtIndexes:removes];
-    [removes release];
 }
 
 - (void)filterWithIndex:(NSAObjectPickerWithIndex)filter {
@@ -526,7 +499,6 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
         }
     }
     [self removeObjectsAtIndexes:removes];
-    [removes release];
 }
 
 @end
@@ -542,8 +514,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByMappingOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id<NSCopying> *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
@@ -558,8 +530,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByMappingOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         keys[i] = key;
@@ -574,8 +546,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByMapFilteringOperator:(NSAObjectUnaryOperator)mapper {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key]);
@@ -593,8 +565,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByMapFilteringOperatorWithKey:(NSAObjectUnaryOperatorWithKey)mapper {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = mapper(self[key], key);
@@ -612,8 +584,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByFilteringOperator:(NSAObjectPicker)filter {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = self[key];
@@ -631,8 +603,8 @@ id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator, NSAObjectBinaryO
 
 - (NSDictionary *)dictionaryByFilteringOperatorWithKey:(NSAObjectPickerWithKey)filter {
     NSUInteger length = self.count;
-    id *objects = malloc(sizeof(id) * length);
-    id<NSCopying> *keys = malloc(sizeof(id<NSCopying>) * length);
+    _Nonnull __unsafe_unretained id *objects = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id) * length);
+    _Nonnull __unsafe_unretained id<NSCopying> *keys = (_Nonnull __unsafe_unretained id *)malloc(sizeof(id<NSCopying>) * length);
     NSInteger i = 0;
     for (id key in self.keyEnumerator) {
         id object = self[key];

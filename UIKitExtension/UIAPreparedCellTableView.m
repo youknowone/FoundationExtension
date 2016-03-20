@@ -56,8 +56,6 @@
 - (void)setCells:(NSArray *)cells {
     if (self->_cells == cells) return;
 
-    [cells retain];
-    [self->_cells release];
     self->_cells = cells;
 
     [self reloadData];

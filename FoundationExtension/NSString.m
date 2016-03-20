@@ -21,11 +21,11 @@
 }
 
 + (instancetype)stringWithInteger:(NSInteger)value {
-    return [[[self alloc] initWithInteger:value] autorelease];
+    return [[self alloc] initWithInteger:value];
 }
 
-+ (instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
-    return [[[self alloc] initWithData:data encoding:encoding] autorelease];
++ (nullable instancetype)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding {
+    return [[self alloc] initWithData:data encoding:encoding];
 }
 
 - (instancetype)initWithConcatnatingStrings:(NSString *)first, ... {
@@ -52,7 +52,7 @@
 }
 
 + (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList {
-    NSString *string = [[[NSString alloc] initWithFormat:format arguments:argList] autorelease];
+    NSString *string = [[NSString alloc] initWithFormat:format arguments:argList];
     return string;
 }
 
@@ -93,7 +93,7 @@
     }
 }
 
-- (NSString *)format0:(id)dummy, ... {
+- (NSString *)format0:(nullable id)dummy, ... {
     va_list args;
     va_start(args, dummy);
     id result = [NSString stringWithFormat:self arguments:args];
@@ -131,10 +131,10 @@
 @implementation NSString (NSUTF8StringEncoding)
 
 + (instancetype)stringWithUTF8Data:(NSData *)data {
-    return [[[self alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    return [[self alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
-- (NSData *) dataUsingUTF8Encoding {
+- (nullable NSData *)dataUsingUTF8Encoding {
     return [self dataUsingEncoding:NSUTF8StringEncoding];
 }
 
@@ -169,10 +169,24 @@
 @end
 
 
+@implementation NSString (RegularExpression)
+
+- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError *__autoreleasing  _Nullable * _Nullable)error {
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:error];
+    if (regex == nil) {
+        return nil;
+    }
+    return [regex stringByReplacingMatchesInString:self options:0 range:self.range withTemplate:templ];
+}
+
+
+@end
+
+
 @implementation NSMutableString (Creations)
 
 + (instancetype)stringWithFormat:(NSString *)format arguments:(va_list)argList {
-    id string = [[[NSMutableString alloc] initWithFormat:format arguments:argList] autorelease];
+    id string = [[NSMutableString alloc] initWithFormat:format arguments:argList];
     return string;
 }
 

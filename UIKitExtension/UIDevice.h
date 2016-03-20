@@ -46,9 +46,6 @@ typedef enum {
 //! @deprecated Use -userInterfaceIdiom
 + (UIADeviceType)currentDeviceType __deprecated;
 
-//! @deprecated Deprecated by implementation deprecation. Use @ref uniqueToken.
-+ (NSString *)uniqueIdentifier __deprecated;
-
 @end
 
 /*!

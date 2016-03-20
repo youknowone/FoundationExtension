@@ -20,7 +20,6 @@
 
 - (instancetype)initResourceURLWithPath:(NSString *)path {
     if (path == nil) {
-        [self release];
         return nil;
     }
     NSString *prefix = @"res://";
@@ -37,7 +36,6 @@
 
 - (instancetype)initConfigurationURLWithPath:(NSString *)path {
     if (path == nil) {
-        [self release];
         return nil;
     }
     NSString *prefix = @"conf://";
@@ -51,7 +49,6 @@
 
 - (instancetype)initTemporaryURLWithPath:(NSString *)path {
     if (path == nil) {
-        [self release];
         return nil;
     }
     NSString *prefix = @"tmp://";
@@ -80,19 +77,19 @@
 }
 
 + (instancetype)resourceURLWithPath:(NSString *)path {
-    return [[[self alloc] initResourceURLWithPath:path] autorelease];
+    return [[self alloc] initResourceURLWithPath:path];
 }
 
 + (instancetype)configurationURLWithPath:(NSString *)path {
-    return [[[self alloc] initConfigurationURLWithPath:path] autorelease];
+    return [[self alloc] initConfigurationURLWithPath:path];
 }
 
 + (instancetype)temporaryURLWithPath:(NSString *)path {
-    return [[[self alloc] initTemporaryURLWithPath:path] autorelease];
+    return [[self alloc] initTemporaryURLWithPath:path];
 }
 
 + (instancetype)smartURLWithPath:(NSString *)path {
-    return [[[self alloc] initSmartURLWithPath:path] autorelease];
+    return [[self alloc] initSmartURLWithPath:path];
 }
 
 // deprecated methods
@@ -130,11 +127,11 @@
     va_start(args, format);
     NSURL *url = [[self alloc] initWithString:[NSString stringWithFormat:format arguments:args]];
     va_end(args);
-    return [url autorelease];
+    return url;
 }
 
 + (NSURL *)URLWithAbstractPath:(NSString *)path {
-    return [[[self alloc] initWithAbstractPath:path] autorelease];
+    return [[self alloc] initWithAbstractPath:path];
 }
 
 + (NSURL *)URLWithAbstractFormat:(NSString *)format, ... {
@@ -142,7 +139,7 @@
     va_start(args, format);
     NSURL *url = [[self alloc] initWithAbstractPath:[NSString stringWithFormat:format arguments:args]];
     va_end(args);
-    return [url autorelease];
+    return url;
 }
 
 + (NSURL *)fileURLWithFormat:(NSString *)format, ... {
@@ -150,7 +147,7 @@
     va_start(args, format);
     NSURL *url = [[self alloc] initFileURLWithPath:[NSString stringWithFormat:format arguments:args]];
     va_end(args);
-    return [url autorelease];
+    return url;
 }
 
 @end
@@ -256,7 +253,7 @@
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path {
-    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]] autorelease];
+    return [[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
 }
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
@@ -264,7 +261,7 @@
 }
 
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
-    return [[[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error] autorelease];
+    return [[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
 }
 
 @end

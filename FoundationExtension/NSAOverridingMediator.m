@@ -24,18 +24,13 @@
     return self;
 }
 
-- (void)dealloc {
-    self.origin = nil;
-    self.override = nil;
-    [super dealloc];
-}
 
 + (instancetype)mediatorWithOrigin:(id)origin override:(id)override {
     return [self mediatorWithOrigin:origin override:override suppressive:NO];
 }
 
 + (instancetype)mediatorWithOrigin:(id)origin override:(id)override suppressive:(BOOL)suppressive {
-    return [[[self alloc] initWithOrigin:origin override:override suppressive:suppressive] autorelease];
+    return [[self alloc] initWithOrigin:origin override:override suppressive:suppressive];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector {

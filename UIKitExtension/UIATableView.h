@@ -11,7 +11,7 @@
 @protocol UIATableViewCellCopyableDelegate;
 
 @interface UIATableViewCellCopyable : UITableViewCell {
-    id<UIATableViewCellCopyableDelegate> _delegate;
+    id<UIATableViewCellCopyableDelegate> __weak _delegate;
     struct {
         int hasDelegateSelectionStyle:1;
         int hasDelegateString:1;
@@ -20,7 +20,7 @@
     } _copyableFlags;
 }
 
-@property(nonatomic, assign) id<UIATableViewCellCopyableDelegate> delegate;
+@property(nonatomic, weak) id<UIATableViewCellCopyableDelegate> delegate;
 
 @end
 

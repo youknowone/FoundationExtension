@@ -21,13 +21,13 @@
 - (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
-        self->_impl = [impl retain];
+        self->_impl = impl;
     }
     return self;
 }
 
 + (instancetype)dictionaryWithImplementationDelegate:(id)impl {
-    return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
+    return [[self alloc] initWithImplementationDelegate:impl];
 }
 
 - (instancetype)init {
@@ -58,17 +58,13 @@
     [self->_impl encodeWithCoder:aCoder];
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
 }
 
 - (NSUInteger)count {
@@ -109,13 +105,13 @@
 - (instancetype)initWithImplementationDelegate:(id)impl {
     self = [super init];
     if (self != nil) {
-        self->_impl = [impl retain];
+        self->_impl = impl;
     }
     return self;
 }
 
 + (instancetype)dictionaryWithImplementationDelegate:(id)impl {
-    return [[[self alloc] initWithImplementationDelegate:impl] autorelease];
+    return [[self alloc] initWithImplementationDelegate:impl];
 }
 
 - (instancetype)init {
@@ -146,10 +142,6 @@
     [self->_impl encodeWithCoder:aCoder];
 }
 
-- (void)dealloc {
-    [self->_impl release];
-    [super dealloc];
-}
 
 - (NSUInteger)count {
     dassert(self->_impl);
@@ -175,11 +167,11 @@
 }
 
 - (id)copyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl copyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl copyWithZone:zone]];
 }
 
 - (id)mutableCopyWithZone:(NSZone *)zone {
-    return [[[self class] alloc] initWithImplementationDelegate:[[self->_impl mutableCopyWithZone:zone] autorelease]];
+    return [[[self class] alloc] initWithImplementationDelegate:[self->_impl mutableCopyWithZone:zone]];
 }
 
 // mutable methods

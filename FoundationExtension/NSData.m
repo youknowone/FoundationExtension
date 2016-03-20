@@ -38,7 +38,7 @@ const char NSDataHexadecimalEncodingTable[16] = "0123456789abcdef";
         *(outpos + 0) = NSDataHexadecimalEncodingTable[*inpos >> 4];
         *(outpos + 1) = NSDataHexadecimalEncodingTable[*inpos & 0x0f];
     }
-    return [[[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
+    return [[NSString alloc] initWithBytesNoCopy:buffer length:length * 2 encoding:NSUTF8StringEncoding freeWhenDone:YES];
 }
 
 static const char NSDataHexadecimalDecodingTable[0x80] =
@@ -70,7 +70,7 @@ static const char NSDataHexadecimalDecodingTable[0x80] =
 }
 
 + (instancetype)dataWithHexadecimalString:(NSString *)hexadecimal {
-    return [[[self alloc] initWithHexadecimalString:hexadecimal] autorelease];
+    return [[self alloc] initWithHexadecimalString:hexadecimal];
 }
 
 @end
@@ -123,7 +123,7 @@ static void NSDataBase64EncodeData(const unsigned char *input, char *output) {
         dassert(outpos + 4 == outbuf + outlen);
     }
 
-    return [[[NSString alloc] initWithBytesNoCopy:outbuf length:outlen encoding:NSUTF8StringEncoding freeWhenDone:YES] autorelease];
+    return [[NSString alloc] initWithBytesNoCopy:outbuf length:outlen encoding:NSUTF8StringEncoding freeWhenDone:YES];
 }
 
 unsigned char NSDataBase64DecodingTable[0x80] = {
@@ -204,7 +204,7 @@ static void NSDataBase64DecodeData(const char *input, unsigned char *output) {
 }
 
 + (instancetype)dataWithBase64String:(NSString *)base64 {
-    return [[[self alloc] initWithBase64String:base64] autorelease];
+    return [[self alloc] initWithBase64String:base64];
 }
 
 @end

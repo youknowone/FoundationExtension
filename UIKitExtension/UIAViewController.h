@@ -27,6 +27,6 @@
  */
 @interface UIAViewController : UIViewController
 
-@property(nonatomic, retain) UIView<UIAViewLifeCycle> *view;
+@property(nonatomic, strong) UIView<UIAViewLifeCycle> *view;
 
 @end

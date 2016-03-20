@@ -18,9 +18,16 @@
  *  @see @ref FoundationExtension
  */
 
+@import Cocoa;
+
+//! Project version number for FoundationExtension.
+FOUNDATION_EXPORT double CocoaExtensionVersionNumber;
+
+//! Project version string for FoundationExtension.
+FOUNDATION_EXPORT const unsigned char CocoaExtensionVersionString[];
+
 #import <FoundationExtension/FoundationExtension.h>
 
-#import <Cocoa/Cocoa.h>
 // depenency level 0
 #import <CocoaExtension/NSPasteboard.h>
 #import <CocoaExtension/FSEventStream.h>                    // level: 0 / deps(0):  / internal(0):

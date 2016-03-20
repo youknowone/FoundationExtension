@@ -40,21 +40,19 @@
 @implementation UIAResultDisplayController
 
 @synthesize contentsController=_contentsController;
-@synthesize inputView=_inputView;
+@synthesize inputView;
 
 - (instancetype)initWithContentsController:(UIViewController *)viewController {
     self = [super init];
     if (self != nil) {
-        self->_contentsController = [viewController retain];
+        self->_contentsController = viewController;
     }
     return self;
 }
 
 - (void)dealloc {
-    [self->_contentsController release];
     self.dimmingView = nil;
     self.resultView = nil;
-    [super dealloc];
 }
 
 - (id<UIAResultDisplayDelegate>)delegate {
@@ -145,15 +143,13 @@
 
 - (UIADimmingView *)dimmingView {
     if (self->_dimmingView == nil) {
-        self.dimmingView = [[[UIADimmingView alloc] initWithFrame:self.contentsController.view.bounds] autorelease];
+        self.dimmingView = [[UIADimmingView alloc] initWithFrame:self.contentsController.view.bounds];
     }
     return self->_dimmingView;
 }
 
 - (void)setDimmingView:(UIADimmingView *)dimmingView {
     if (self->_dimmingView == dimmingView) return;
-    [dimmingView retain];
-    [self->_dimmingView release];
     self->_dimmingView = dimmingView;
     self->_dimmingView.delegate = self;
 }
@@ -270,14 +266,13 @@
     self->_resultDisplayControllerFlags.resultViewLoaded = NO;
     BOOL origHiden = (self->_resultView == nil) || self->_resultView.hidden;
 
-    [self->_resultView release];
 
     if (resultView == nil) {
         self->_resultView = nil;
         return;
     }
 
-    self->_resultView = [resultView retain];
+    self->_resultView = resultView;
     self->_resultView.hidden = origHiden;
 }
 

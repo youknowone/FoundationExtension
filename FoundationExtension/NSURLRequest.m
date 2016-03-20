@@ -60,7 +60,6 @@
     }
 
     self.HTTPBody = [[parts componentsJoinedByString:@"&"] dataUsingEncoding:NSASCIIStringEncoding];
-    [parts release];
 }
 
 - (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
@@ -76,7 +75,6 @@
     }
 
     self.HTTPBody = [[parts componentsJoinedByString:@"&"] dataUsingEncoding:NSASCIIStringEncoding];
-    [parts release];
 }
 
 @end
@@ -113,10 +111,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [_body release];
-    [super dealloc];
-}
 
 - (void)_appendBodyBoundaryWithEncoding:(NSStringEncoding)encoding {
     [_body appendData:[[@"\r\n--%@\r\n" format:[self _bodyBoundaryString]] dataUsingEncoding:encoding]];
@@ -189,7 +183,6 @@
         }
     }
     self.HTTPBody = formatter.HTTPBody;
-    [formatter release];
 }
 
 @end
@@ -234,7 +227,7 @@
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
-    return [request autorelease];
+    return request;
 }
 
 + (id)URLRequestWithFilePath:(NSString *)filePath {
@@ -246,7 +239,7 @@
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
-    return [request autorelease];
+    return request;
 }
 
 + (id)URLRequestWithAbstractPath:(NSString *)filePath {
@@ -258,7 +251,7 @@
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
     va_end(args);
-    return [request autorelease];
+    return request;
 }
 
 @end

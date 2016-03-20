@@ -22,13 +22,6 @@
     return [NSAVersion versionWithString:self.systemVersion];
 }
 
-+ (NSString *)uniqueIdentifier {
-    #pragma clang diagnostic push
-    #pragma clang diagnostic ignored "-Wobjc-method-access"
-    return [[UIDevice currentDevice] uniqueIdentifier];
-    #pragma clang diagnostic pop
-}
-
 + (UIADeviceType)currentDeviceType {
     switch ([[self currentDevice] userInterfaceIdiom]) {
         case UIUserInterfaceIdiomPad:
@@ -40,10 +33,6 @@
 }
 
 - (NSString *)uniqueToken {
-    #ifndef USE_IOS5_UUID
-        #define __USE_IOS5_UUID
-        #define USE_IOS5_UUID 0
-    #endif
     NSString *token = nil;
     if ([self respondsToSelector:@selector(identifierForVendor)]) {
         // iOS6
@@ -52,22 +41,10 @@
     }
     else {
         // under iOS6
-        #if USE_IOS5_UUID
         CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
-        token = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuid);
-        #else
-        #pragma clang diagnostic push
-        #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        #pragma clang diagnostic ignored "-Wobjc-method-access"
-        token = [self uniqueIdentifier];
-        #pragma clang diagnostic pop
-        #endif
+        token = (NSString *)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, uuid));
     }
     return token;
-    #ifdef __USE_IOS5_UUID
-        #undef __USE_IOS5_UUID
-        #undef USE_IOS5_UUID
-    #endif
 }
 
 @end

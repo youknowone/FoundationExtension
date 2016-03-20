@@ -45,11 +45,6 @@
     return self;
 }
 
-- (void)dealloc {
-    [self->_imageURLs release];
-    [self->_nonImageURLs release];
-    [super dealloc];
-}
 
 - (id<NSAImageWellDelegate>)delegate {
     return self->_delegate;
@@ -57,8 +52,6 @@
 
 - (void)setDelegate:(id<NSAImageWellDelegate>)delegate {
     if (self->_delegate == delegate) return;
-    [delegate retain];
-    [self->_delegate release];
     self->_delegate = delegate;
     self->_imageWellFlags.delegateShouldAcceptURLString = [delegate respondsToSelector:@selector(imageWellShouldAcceptURLString:)];
     self->_imageWellFlags.delegateDidDraggingEntered = [delegate respondsToSelector:@selector(imageWell:didDraggingEntered:)];
@@ -73,7 +66,6 @@
 
 - (void)setImageURL:(NSURL *)imageURL {
     if (self->_imageURL == imageURL) return;
-    [self->_imageURL release];
     self->_imageURL = [imageURL copy];
     self.image = [NSImage imageByReferencingURL:imageURL];
 }
@@ -170,7 +162,6 @@ reject:
         }
         if (image != nil) {
             self.image = image;
-            [self->_imageURL release];
             self->_imageURL = [URL copy];
             if (self->_imageWellFlags.delegateDidReceiveDragging) {
                 [self->_delegate imageWell:self didReceiveDragging:sender];

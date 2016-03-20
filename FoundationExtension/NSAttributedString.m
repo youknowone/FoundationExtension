@@ -11,7 +11,7 @@
 @implementation NSAttributedString (Shortcuts)
 
 + (id)attributedString {
-    return [[[self alloc] init] autorelease];
+    return [[self alloc] init];
 }
 
 @end

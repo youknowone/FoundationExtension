@@ -10,17 +10,17 @@
 
 @interface UIASegmentedImageView : UIImageView
 
-@property(nonatomic, retain) UIImage *centerImage;
+@property(nonatomic, strong) UIImage *centerImage;
 
-@property(nonatomic, retain) UIImage *topImage;
-@property(nonatomic, retain) UIImage *bottomImage;
-@property(nonatomic, retain) UIImage *leftImage;
-@property(nonatomic, retain) UIImage *rightImage;
+@property(nonatomic, strong) UIImage *topImage;
+@property(nonatomic, strong) UIImage *bottomImage;
+@property(nonatomic, strong) UIImage *leftImage;
+@property(nonatomic, strong) UIImage *rightImage;
 
-@property(nonatomic, retain) UIImage *topLeftImage;
-@property(nonatomic, retain) UIImage *topRightImage;
-@property(nonatomic, retain) UIImage *bottomLeftImage;
-@property(nonatomic, retain) UIImage *bottomRightImage;
+@property(nonatomic, strong) UIImage *topLeftImage;
+@property(nonatomic, strong) UIImage *topRightImage;
+@property(nonatomic, strong) UIImage *bottomLeftImage;
+@property(nonatomic, strong) UIImage *bottomRightImage;
 
 @property(nonatomic, assign) BOOL autosizing;
 

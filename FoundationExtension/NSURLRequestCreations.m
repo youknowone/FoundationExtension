@@ -25,7 +25,7 @@
 }
 
 + (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request {
-    return [[[self alloc] initWithContentsOfURLRequest:request] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request];
 }
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
@@ -47,19 +47,18 @@
 }
 
 + (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
-    return [[[self alloc] initWithContentsOfURLRequest:request error:error] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request error:error];
 }
 
 - (instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPPostBody:bodyDictionary encoding:encoding];
     id result = [self initWithContentsOfURLRequest:request];
-    [request release];
     return result;
 }
 
 + (instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-    return [[[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding] autorelease];
+    return [[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding];
 }
 
 @end
@@ -72,20 +71,19 @@
 }
 
 + (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request {
-    return [[[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:request error:error];
     if (data == nil) {
-        [self release];
         return nil;
     }
     return [self initWithData:data format:format error:error];
 }
 
 + (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
-    return [[[self alloc] initWithContentsOfURLRequest:request format:format error:error] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request format:format error:error];
 }
 
 @end
@@ -98,20 +96,19 @@
 }
 
 + (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request {
-    return [[[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:request error:error];
     if (data == nil) {
-        [self release];
         return nil;
     }
     return [self initWithData:data format:format error:error];
 }
 
 + (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
-    return [[[self alloc] initWithContentsOfURLRequest:request format:format error:error] autorelease];
+    return [[self alloc] initWithContentsOfURLRequest:request format:format error:error];
 }
 
 @end

@@ -20,6 +20,13 @@
 
 #import <FoundationExtension/FoundationExtension.h>
 
+//! Project version number for UIKitExtension.
+FOUNDATION_EXPORT double UIKitExtensionVersionNumber;
+
+//! Project version string for UIKitExtension.
+FOUNDATION_EXPORT const unsigned char UIKitExtensionVersionString[];
+
+
 #import <UIKit/UIKit.h>
 // depenency level 0
 #import <UIKitExtension/NSAttributedString+UIKit.h>         // level: 0 / deps(1): NSADictionary / internal(0):

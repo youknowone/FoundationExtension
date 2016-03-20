@@ -16,7 +16,8 @@
 @implementation NSJSONSerialization (Shortcuts)
 
 + (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error {
-    return [self JSONObjectWithData:[string dataUsingUTF8Encoding] options:opt error:error];
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    return [self JSONObjectWithData:data options:opt error:error];
 }
 
 + (NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error {

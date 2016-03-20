@@ -25,38 +25,6 @@
     return @(object_getClassName(self));
 }
 
-- (id)variableForName:(NSString *)name {
-    void *value;
-    object_getInstanceVariable(self, name.UTF8String, &value);
-    return value;
-}
-
-- (void)getVariable:(void **)outValue forName:(NSString *)name {
-    object_getInstanceVariable(self, name.UTF8String, outValue);
-}
-
-- (void)setVariable:(void *)value forName:(NSString *)name {
-    object_setInstanceVariable(self, name.UTF8String, value);
-}
-
-#if !__has_feature(objc_arc)
-- (void)setAndRetainVariable:(id)value forName:(NSString *)name {
-    [value retain];
-    id stored = [self variableForName:name];
-    [stored release];
-    [self setVariable:value forName:name];
-}
-#endif
-
-#if !__has_feature(objc_arc)
-- (void)setAndCopyVariable:(id)value forName:(NSString *)name {
-    id copy = [value copy];
-    id stored = [self variableForName:name];
-    [stored release];
-    [self setVariable:copy forName:name];
-}
-#endif
-
 - (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 {
     if (!sel) [self doesNotRecognizeSelector:sel];
     return ((id(*)(id, SEL, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3);
@@ -145,7 +113,6 @@
 
 - (instancetype)initWithMethod:(Method)method {
     if (method == nil) {
-        [self release];
         return nil;
     }
     self = [super init];
@@ -156,7 +123,7 @@
 }
 
 + (instancetype)methodWithMethod:(Method)method {
-    return [[[self alloc] initWithMethod:method] autorelease];
+    return [[self alloc] initWithMethod:method];
 }
 
 - (IMP)implementation {

@@ -67,7 +67,6 @@
 
 - (void)dealloc {
     self.placeholderString = nil;
-    [super dealloc];
 }
 
 - (void)setFrame:(CGRect)frame {
@@ -96,7 +95,6 @@
         [self->_placeholderTextView setHidden:YES];
         [self->_placeholderTextView setHidden:NO animated:YES];
     }
-    [self->_placeholderString autorelease];
     self->_placeholderString = [placeholderString copy];
 
     self->_placeholderTextView.text = placeholderString;

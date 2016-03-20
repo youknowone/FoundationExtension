@@ -6,6 +6,8 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+#import <FoundationExtension/FoundationExtension.h>
+
 #import "UIApplication.h"
 #import "NSObject.h"
 

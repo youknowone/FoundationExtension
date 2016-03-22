@@ -32,9 +32,9 @@
     NSURLSession *session = [NSURLSession sharedSession];
     __block NSData *data = nil;
     __block NSError *block_error = nil;
-    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable _data, NSURLResponse * __nullable response, NSError * __nullable _error) {
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable _data, NSURLResponse * __nullable response, NSError * __nullable pError) {
         data = _data;
-        block_error = _error;
+        block_error = pError;
     }];
     [task resume];
     while (!data && !block_error) {

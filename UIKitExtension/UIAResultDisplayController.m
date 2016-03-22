@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import "NSTimer.h"
+#import <FoundationExtension/FoundationExtension.h>
 #import "UIView.h"
 
 #import "UIAResultDisplayController.h"

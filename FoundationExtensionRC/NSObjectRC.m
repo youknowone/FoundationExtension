@@ -9,7 +9,8 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 
-#import "NSObject.h"
+#import "NSObjectRC.h"
+
 
 @implementation NSObject (AntiARC)
 

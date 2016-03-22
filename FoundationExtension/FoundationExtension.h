@@ -8,7 +8,7 @@
 
 /*!
  *  @page FoundationExtension
- *  @brief FoundationExtension is Foundation extension implementatino for both OS X / iOS
+ *  @brief FoundationExtension is Foundation extension implementation for both OS X / iOS
  *
  *  Prefix 'NS' means they are implemented as pure Foundation extension, in expected way for original framework.
  *  For example, there were property access extension for lagecy getter/setter available interface. This is now compiler supported feature.
@@ -64,6 +64,7 @@ FOUNDATION_EXPORT const unsigned char FoundationExtensionVersionString[];
 #import <FoundationExtension/NSURLRequest.h>                // level: 0 / deps(0):  / internal(3): NSString, NSData, NSURL
 #import <FoundationExtension/NSURLRequestCreations.h>       // level: 0 / deps(0):  / internal(4): NSData, NSArray, NSDictionary, NSURLRequest
 #import <FoundationExtension/NSValue.h>                     // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSTimer.h>
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAClassDeprecated.h>          // level: 20 / deps(0):  / internal(1): NSObject

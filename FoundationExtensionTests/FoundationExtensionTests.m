@@ -488,7 +488,7 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     XCTAssertEqualObjects(obj, [[NSAttributedString alloc] initWithString:@""], @"");
 }
 
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
 - (void)testJSON {
     NSError *error = nil;
     id object = [NSJSONSerialization JSONObjectWithString:@"[1, 2, 3]" options:0 error:&error];

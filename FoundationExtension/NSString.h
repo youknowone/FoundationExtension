@@ -15,6 +15,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <FoundationExtension/NSMacro.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
 /*!

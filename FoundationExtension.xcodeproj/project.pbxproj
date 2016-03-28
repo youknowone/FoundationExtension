@@ -100,7 +100,6 @@
 		383060E11C9F75870077325F /* NSAVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBA617AA89E2008487A9 /* NSAVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		383060E21C9F75870077325F /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		383060E31C9F75870077325F /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060EE1C9F76910077325F /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060E81C9F75870077325F /* FoundationExtension.framework */; };
 		383060EF1C9F76A10077325F /* FoundationExtensionRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060981C9F75360077325F /* FoundationExtensionRC.framework */; };
 		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
 		38485C51170F14820001A99D /* NSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C4F170F14820001A99D /* NSGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -122,6 +121,9 @@
 		3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B049163CF2B1005584CD /* CocoaExtensionTests.m */; };
 		3855B053163D41F9005584CD /* FSEventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B051163D41F9005584CD /* FSEventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3855B054163D41F9005584CD /* FSEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B052163D41F9005584CD /* FSEventStream.m */; };
+		3859104F1CA98D6A0028A51A /* NSASubscript.h in Headers */ = {isa = PBXBuildFile; fileRef = 384852E219CB2E0D00304965 /* NSASubscript.h */; };
+		385910761CA98E9B0028A51A /* UIKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F74E621C9ECB6A00D94A45 /* UIKitExtension.framework */; };
+		385910771CA98EA60028A51A /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060E81C9F75870077325F /* FoundationExtension.framework */; };
 		3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90119C6B48100B4DC72 /* MediaPlayer.framework */; };
 		3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90419C6B5D100B4DC72 /* UIKit.framework */; };
 		3868F3B8162885D300C31163 /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -228,6 +230,7 @@
 		38BC0E5E173E821700F36497 /* UITSubviewTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BC0E5C173E821700F36497 /* UITSubviewTableViewController.xib */; };
 		38BC0E61173ED68900F36497 /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
+		38BDFA181CA9873B00A2FD9C /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060E81C9F75870077325F /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		38C98B1D161ADAD700C4A389 /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C98B1E161ADAD700C4A389 /* NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -349,38 +352,6 @@
 		38F74E961C9ECBE300D94A45 /* UIAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D52562174EAC3A00B46322 /* UIAView.m */; };
 		38F74E971C9ECBE300D94A45 /* UIAViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D52564174EAC4D00B46322 /* UIAViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F74E981C9ECBE300D94A45 /* UIAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D52565174EAC4D00B46322 /* UIAViewController.m */; };
-		38F74E9E1C9ECE1B00D94A45 /* NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArray.m */; };
-		38F74EA01C9ECE1B00D94A45 /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedString.m */; };
-		38F74EA21C9ECE1B00D94A45 /* NSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundle.m */; };
-		38F74EA41C9ECE1B00D94A45 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
-		38F74EA61C9ECE1B00D94A45 /* NSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSData.m */; };
-		38F74EA81C9ECE1B00D94A45 /* NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDate.m */; };
-		38F74EAA1C9ECE1B00D94A45 /* NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionary.m */; };
-		38F74EAC1C9ECE1B00D94A45 /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
-		38F74EAE1C9ECE1B00D94A45 /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
-		38F74EB01C9ECE1B00D94A45 /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
-		38F74EB21C9ECE1B00D94A45 /* NSNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatter.m */; };
-		38F74EB41C9ECE1B00D94A45 /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
-		38F74EB61C9ECE1B00D94A45 /* NSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilities.m */; };
-		38F74EB81C9ECE1B00D94A45 /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
-		38F74EBA1C9ECE1B00D94A45 /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSString.m */; };
-		38F74EBD1C9ECE1B00D94A45 /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
-		38F74EBF1C9ECE1B00D94A45 /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
-		38F74EC11C9ECE1B00D94A45 /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C871642EC5B0059773B /* NSURLRequestCreations.m */; };
-		38F74EC31C9ECE1B00D94A45 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
-		38F74EC51C9ECE1B00D94A45 /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
-		38F74EC71C9ECE1B00D94A45 /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
-		38F74EC91C9ECE1B00D94A45 /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
-		38F74ECB1C9ECE1B00D94A45 /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
-		38F74ECD1C9ECE1B00D94A45 /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
-		38F74ECF1C9ECE1B00D94A45 /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
-		38F74ED11C9ECE1B00D94A45 /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
-		38F74ED31C9ECE1B00D94A45 /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
-		38F74ED51C9ECE1B00D94A45 /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
-		38F74ED71C9ECE1B00D94A45 /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
-		38F74ED91C9ECE1B00D94A45 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
-		38F74EDC1C9ECE1B00D94A45 /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
-		38F74EDF1C9ECE8200D94A45 /* UIKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F74E621C9ECB6A00D94A45 /* UIKitExtension.framework */; };
 		38FCECC0165904AE00D3D0F0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38660A24161AD86000C5CE06 /* Cocoa.framework */; };
 		38FCECC6165904AE00D3D0F0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38FCECC4165904AE00D3D0F0 /* InfoPlist.strings */; };
 		38FCECC8165904AE00D3D0F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FCECC7165904AE00D3D0F0 /* main.m */; };
@@ -419,19 +390,19 @@
 			remoteGlobalIDString = 383060881C9F75360077325F;
 			remoteInfo = "FoundationExtensionRC iOS";
 		};
-		383060EC1C9F76790077325F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 383764CB13373154007072FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38C7A9711495181800381910;
-			remoteInfo = FoundationExtension;
-		};
 		3855B03F163CF2B1005584CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 383764CB13373154007072FD /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3855B02A163CF2B1005584CD;
 			remoteInfo = CocoaExtension;
+		};
+		38BDFA161CA9872F00A2FD9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 383764CB13373154007072FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3830609A1C9F75870077325F;
+			remoteInfo = "FoundationExtension iOS";
 		};
 		38E48ACC19CDA7A200EE7FFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -776,7 +747,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F74EDF1C9ECE8200D94A45 /* UIKitExtension.framework in Frameworks */,
+				385910771CA98EA60028A51A /* FoundationExtension.framework in Frameworks */,
+				385910761CA98E9B0028A51A /* UIKitExtension.framework in Frameworks */,
 				3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */,
 				3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */,
 				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
@@ -831,7 +803,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383060EE1C9F76910077325F /* FoundationExtension.framework in Frameworks */,
+				38BDFA181CA9873B00A2FD9C /* FoundationExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1342,6 +1314,7 @@
 				383060DC1C9F75870077325F /* NSACommonCrypto.h in Headers */,
 				383060DD1C9F75870077325F /* NSNumber.h in Headers */,
 				383060DE1C9F75870077325F /* NSNull.h in Headers */,
+				3859104F1CA98D6A0028A51A /* NSASubscript.h in Headers */,
 				383060DF1C9F75870077325F /* NSAOverridingMediator.h in Headers */,
 				383060E01C9F75870077325F /* NSValue.h in Headers */,
 				383060E11C9F75870077325F /* NSAVersion.h in Headers */,
@@ -1711,7 +1684,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				383060ED1C9F76790077325F /* PBXTargetDependency */,
+				38BDFA171CA9872F00A2FD9C /* PBXTargetDependency */,
 			);
 			name = UIKitExtension;
 			productName = UIKitExtension;
@@ -2151,56 +2124,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F74EA21C9ECE1B00D94A45 /* NSBundle.m in Sources */,
-				38F74EBA1C9ECE1B00D94A45 /* NSString.m in Sources */,
-				38F74EBF1C9ECE1B00D94A45 /* NSURLRequest.m in Sources */,
-				38F74ED91C9ECE1B00D94A45 /* NSAOverridingMediator.m in Sources */,
-				38F74EB81C9ECE1B00D94A45 /* NSSet.m in Sources */,
-				38F74EC71C9ECE1B00D94A45 /* NSADictionary.m in Sources */,
 				38F74E8C1C9ECBE300D94A45 /* UIASegmentedImageView.m in Sources */,
-				38F74EDC1C9ECE1B00D94A45 /* NSAVersion.m in Sources */,
 				38F74E7C1C9ECBE300D94A45 /* UIDevice.m in Sources */,
 				38F74E761C9ECBE300D94A45 /* UIApplication.m in Sources */,
-				38F74EAA1C9ECE1B00D94A45 /* NSDictionary.m in Sources */,
 				38F74E881C9ECBE300D94A45 /* UIWebView.m in Sources */,
 				38F74E921C9ECBE300D94A45 /* UIAPreparedCellTableView.m in Sources */,
-				38F74EB01C9ECE1B00D94A45 /* NSNumber.m in Sources */,
-				38F74EA61C9ECE1B00D94A45 /* NSData.m in Sources */,
-				38F74ED51C9ECE1B00D94A45 /* NSAFunctional.m in Sources */,
-				38F74EB41C9ECE1B00D94A45 /* NSObject.m in Sources */,
-				38F74ECD1C9ECE1B00D94A45 /* NSACommonDigest.m in Sources */,
-				38F74EC51C9ECE1B00D94A45 /* NSAArray.m in Sources */,
 				38F74E941C9ECBE300D94A45 /* UIAResultDisplayController.m in Sources */,
 				38F74E8A1C9ECBE300D94A45 /* UIATableView.m in Sources */,
-				38F74EA41C9ECE1B00D94A45 /* NSCharacterSet.m in Sources */,
-				38F74EB21C9ECE1B00D94A45 /* NSNumberFormatter.m in Sources */,
 				38F74E861C9ECBE300D94A45 /* UIViewController.m in Sources */,
-				38F74EC91C9ECE1B00D94A45 /* NSAString.m in Sources */,
-				38F74EC31C9ECE1B00D94A45 /* NSValue.m in Sources */,
-				38F74E9E1C9ECE1B00D94A45 /* NSArray.m in Sources */,
 				38F74E7A1C9ECBE300D94A45 /* UIControl.m in Sources */,
-				38F74ECB1C9ECE1B00D94A45 /* NSAClassDeprecated.m in Sources */,
 				38F74E8E1C9ECBE300D94A45 /* UIASubviewTableView.m in Sources */,
 				38F74E821C9ECBE300D94A45 /* UITableView.m in Sources */,
 				38F74E801C9ECBE300D94A45 /* UIScrollView.m in Sources */,
 				38F74E901C9ECBE300D94A45 /* UIAPlaceholderTextView.m in Sources */,
-				38F74ED31C9ECE1B00D94A45 /* NSAEnumerator.m in Sources */,
-				38F74EA81C9ECE1B00D94A45 /* NSDate.m in Sources */,
-				38F74EAC1C9ECE1B00D94A45 /* NSJSONSerialization.m in Sources */,
-				38F74ED11C9ECE1B00D94A45 /* NSADataObject.m in Sources */,
 				38F74E741C9ECBE300D94A45 /* UIAlertView.m in Sources */,
 				38F74E961C9ECBE300D94A45 /* UIAView.m in Sources */,
 				38F74E701C9ECBE300D94A45 /* NSAttributedString+UIKit.m in Sources */,
-				38F74EB61C9ECE1B00D94A45 /* NSPathUtilities.m in Sources */,
-				38F74ECF1C9ECE1B00D94A45 /* NSACommonCrypto.m in Sources */,
-				38F74EAE1C9ECE1B00D94A45 /* NSNull.m in Sources */,
 				38F74E981C9ECBE300D94A45 /* UIAViewController.m in Sources */,
-				38F74EC11C9ECE1B00D94A45 /* NSURLRequestCreations.m in Sources */,
 				38F74E7E1C9ECBE300D94A45 /* UIImage.m in Sources */,
-				38F74ED71C9ECE1B00D94A45 /* NSAOrderedDictionary.m in Sources */,
 				38F74E841C9ECBE300D94A45 /* UIView.m in Sources */,
-				38F74EBD1C9ECE1B00D94A45 /* NSURL.m in Sources */,
-				38F74EA01C9ECE1B00D94A45 /* NSAttributedString.m in Sources */,
 				38F74E781C9ECBE300D94A45 /* UIColor.m in Sources */,
 				38F74E721C9ECBE300D94A45 /* UIActivityIndicatorView.m in Sources */,
 			);
@@ -2233,15 +2175,15 @@
 			target = 383060881C9F75360077325F /* FoundationExtensionRC iOS */;
 			targetProxy = 383060EA1C9F764F0077325F /* PBXContainerItemProxy */;
 		};
-		383060ED1C9F76790077325F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38C7A9711495181800381910 /* FoundationExtension */;
-			targetProxy = 383060EC1C9F76790077325F /* PBXContainerItemProxy */;
-		};
 		3855B040163CF2B1005584CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3855B02A163CF2B1005584CD /* CocoaExtension */;
 			targetProxy = 3855B03F163CF2B1005584CD /* PBXContainerItemProxy */;
+		};
+		38BDFA171CA9872F00A2FD9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3830609A1C9F75870077325F /* FoundationExtension iOS */;
+			targetProxy = 38BDFA161CA9872F00A2FD9C /* PBXContainerItemProxy */;
 		};
 		38E48ACD19CDA7A200EE7FFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2363,7 +2305,6 @@
 				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
@@ -2401,7 +2342,6 @@
 				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
@@ -2444,13 +2384,10 @@
 				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = FoundationExtensionRC;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
@@ -2480,13 +2417,11 @@
 				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = FoundationExtensionRC;
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
@@ -2507,7 +2442,6 @@
 				INFOPLIST_FILE = FoundationExtension/Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = iphoneos;
@@ -2528,7 +2462,6 @@
 				INFOPLIST_FILE = FoundationExtension/Info.plist;
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = iphoneos;
@@ -2581,6 +2514,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = .;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wall";
@@ -2629,6 +2563,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = .;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				VERSIONING_SYSTEM = "apple-generic";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -2885,7 +2820,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = FoundationExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2920,7 +2854,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = FoundationExtensionTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

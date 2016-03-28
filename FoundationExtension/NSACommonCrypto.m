@@ -110,7 +110,7 @@ static size_t NSDataCommonCryptoCryptKeySize(NSData *key, size_t minLength, size
     return NSDataCommonCryptoCrypt(kCCEncrypt, self, key, kCCAlgorithmRC4, options, keyLength, kCCBlockSizeRC2);
 }
 
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1080
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1080
 - (NSData *)encryptedBlowfishDataWithKey:(NSData *)key options:(CCOptions)options {
     size_t keyLength = NSDataCommonCryptoCryptKeySize(key, kCCKeySizeMinBlowfish, kCCKeySizeMaxBlowfish);
     if (keyLength == 0) {
@@ -177,7 +177,7 @@ static size_t NSDataCommonCryptoCryptKeySize(NSData *key, size_t minLength, size
     return NSDataCommonCryptoCrypt(kCCDecrypt, self, key, kCCAlgorithmRC4, options, keyLength, kCCBlockSizeRC2);
 }
 
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1080
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1080
 - (NSData *)decryptedBlowfishDataWithKey:(NSData *)key options:(CCOptions)options {
     size_t keyLength = NSDataCommonCryptoCryptKeySize(key, kCCKeySizeMinBlowfish, kCCKeySizeMaxBlowfish);
     if (keyLength == 0) {

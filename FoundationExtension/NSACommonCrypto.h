@@ -41,7 +41,7 @@
 - (NSData *)encryptedCastDataWithKey:(NSData *)key options:(CCOptions)options;
 - (NSData *)encryptedRC2DataWithKey:(NSData *)key options:(CCOptions)options;
 - (NSData *)encryptedRC4DataWithKey:(NSData *)key options:(CCOptions)options;
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1080
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1080
 - (NSData *)encryptedBlowfishDataWithKey:(NSData *)key options:(CCOptions)options;
 #endif
 
@@ -63,7 +63,7 @@
 - (NSData *)decrypted3DESDataWithKey:(NSData *)key options:(CCOptions)options;
 - (NSData *)decryptedCastDataWithKey:(NSData *)key options:(CCOptions)options;
 - (NSData *)decryptedRC2DataWithKey:(NSData *)key options:(CCOptions)options;
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1080
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1080
 - (NSData *)decryptedBlowfishDataWithKey:(NSData *)key options:(CCOptions)options;
 #endif
 

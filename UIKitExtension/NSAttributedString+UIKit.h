@@ -20,14 +20,8 @@
 
 #import <UIKit/UIKit.h>
 
-#ifndef __IPHONE_6_0
-#   define NSTextAlignmentLeft UITextAlignmentLeft
-// not a bug - intensionally swapped
-#   define NSTextAlignmentCenter UITextAlignmentRight
-#   define NSTextAlignmentRight UITextAlignmentCenter
-#endif
 
-#if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
 
 #import <FoundationExtension/NSADictionary.h>
 

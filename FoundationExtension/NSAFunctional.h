@@ -45,6 +45,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import <FoundationExtension/NSMacro.h>
+
 #if NS_BLOCKS_AVAILABLE
 
 /*!

@@ -8,6 +8,8 @@
 
 #import "NSAFunctional.h"
 
+#import "NSMacro.h"
+
 void NSAApply(id<NSFastEnumeration> enumerator, NSAObjectProcedure procedure) {
     for (id item in enumerator) {
         procedure(item);

@@ -90,7 +90,7 @@
         return nil;
     }
     const unsigned char *m = MACData.bytes;
-    return [@"%02x:%02x:%02x:%02x:%02x:%02x" format0:nil, m[0], m[1], m[2], m[3], m[4], m[5], m[6]];
+    return [NSString stringWithFormat:@"%02x:%02x:%02x:%02x:%02x:%02x", m[0], m[1], m[2], m[3], m[4], m[5], m[6]];
 }
 
 @end

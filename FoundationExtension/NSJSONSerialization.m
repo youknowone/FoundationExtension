@@ -6,12 +6,13 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED >= 50000
 
 #import "NSString.h"
 #import "NSURLRequestCreations.h"
 
 #import "NSJSONSerialization.h"
+
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1070 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 50000
 
 @implementation NSJSONSerialization (Shortcuts)
 

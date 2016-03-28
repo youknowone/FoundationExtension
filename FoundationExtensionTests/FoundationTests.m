@@ -84,4 +84,13 @@
     }
 }
 
+- (void)testMacro {
+    #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
+    NSLog(@"%d", __MAC_OS_X_VERSION_MIN_REQUIRED);
+    #endif
+    #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+    NSLog(@"%d", __IPHONE_OS_VERSION_MIN_REQUIRED);
+    #endif
+}
+
 @end

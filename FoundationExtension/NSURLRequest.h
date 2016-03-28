@@ -111,7 +111,11 @@
  *  @see [setHTTPBody:][1]
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableURLRequest/setHTTPBody:
  */
-- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -setHTTPPostBody: instead, which always uses the recommended UTF-8 encoding.");;
+- (void)setHTTPPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101100 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 90000
+NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -setHTTPPostBody: instead, which always uses the recommended UTF-8 encoding.")
+#endif
+;
 
 @end
 

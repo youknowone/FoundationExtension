@@ -217,14 +217,22 @@
  *  @see [stringByAddingPercentEscapesUsingEncoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
  */
-- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByAddingPercentEscapesUsingEncoding:");
+- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101100 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 90000
+NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByAddingPercentEscapesUsingEncoding:")
+#endif
+;
 /*!
  *  @brief Returns a new string made by replacing in the receiver all percent escapes with the matching characters as determined by UTF8 encoding.
  *  @deprecated Use stringByRemovingPercentEncoding
  *  @see [stringByReplacingPercentEscapesUsingEncoding:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEscapesUsingEncoding:
  */
-- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByRemovingPercentEncoding:");;
+- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101100 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 90000
+NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByRemovingPercentEncoding:")
+#endif
+;
 
 @end
 

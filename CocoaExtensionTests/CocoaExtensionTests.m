@@ -97,7 +97,7 @@
     TEST_ITEM(toolTip, @"Test tooptip");
     TEST_ITEM(writingDirectionArray, (@[@[@1, @2, @3]]));
     TEST_ITEM_VALUE(writingDirection, (NSUInteger)3);
-    #if __MAC_OS_X_VERSION_MIN_REQUIRED >= 1070
+    #if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
     TEST_ITEM(verticalGlyphFormNumber, @(NSVerticalGlyphFormHorizontal));
     TEST_ITEM_VALUE(verticalGlyphForm, (NSUInteger)NSVerticalGlyphFormHorizontal);
     #endif

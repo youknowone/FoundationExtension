@@ -9,9 +9,14 @@
 #import <Foundation/Foundation.h>
 
 
-#if !__has_feature(nullability)
+#if !defined(NS_ASSUME_NONNULL_BEGIN)
 #define NS_ASSUME_NONNULL_BEGIN
 #define NS_ASSUME_NONNULL_END
+#endif
+
+#if !defined(_Nullable)
 #define _Nullable
+#define _Nonnull
 #define nullable
+#define nonnull
 #endif

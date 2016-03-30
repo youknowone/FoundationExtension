@@ -19,6 +19,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.osx.deployment_target = '10.9'
   s.ios.deployment_target = '7.0'
+  s.tvos.deployment_target = '9.0'
 
   s.subspec "FoundationExtensionRC" do |ss|
     ss.source_files = "FoundationExtensionRC/*.{h,m}"

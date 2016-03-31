@@ -13,6 +13,7 @@
 #import "NSURLRequest.h"
 #import "NSURLRequestCreations.h"
 
+
 @implementation NSData (NSURLRequest)
 
 - (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
@@ -32,7 +33,7 @@
     NSURLSession *session = [NSURLSession sharedSession];
     __block NSData *data = nil;
     __block NSError *block_error = nil;
-    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * __nullable _data, NSURLResponse * __nullable response, NSError * __nullable pError) {
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *_data, NSURLResponse *response, NSError *pError) {
         data = _data;
         block_error = pError;
     }];

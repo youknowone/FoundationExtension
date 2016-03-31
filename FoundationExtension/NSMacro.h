@@ -20,3 +20,7 @@
 #define nullable
 #define nonnull
 #endif
+
+#if !__has_feature(nullability)
+#define __nullable
+#endif

@@ -1,6 +1,16 @@
 language: objective-c
-osx_image: xcode7
-xcode_project: FoundationExtension.xcodeproj # path to your xcodeproj folder
 sudo: false
+xcode_project: FoundationExtension.xcodeproj # path to your xcodeproj folder
+osx_image: xcode7
+xcode_sdk:
+  - macosx
+  - iphonesimulator
 xcode_scheme:
   - CocoaExtension
+  - UIKitExtension
+matrix:
+  exclude:
+    - xcode_sdk: iphonesimulator
+      xcode_scheme: CocoaExtension
+    - xcode_sdk: macosx
+      xcode_scheme: UIKitExtension

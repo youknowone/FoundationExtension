@@ -1,5 +1,7 @@
 @mainpage FoundationExtension
 
+[![Build Status](https://travis-ci.org/youknowone/FoundationExtension.svg?branch=master)](https://travis-ci.org/youknowone/FoundationExtension)
+
 This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
 
  * Many common snippets in a method call.

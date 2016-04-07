@@ -1,6 +1,6 @@
 language: objective-c
 osx_image: xcode7
 xcode_project: FoundationExtension.xcodeproj # path to your xcodeproj folder
+sudo: false
 xcode_scheme:
-  - CocoaExtensionTests
-  - UIKitExtensionTests
+  - CocoaExtension

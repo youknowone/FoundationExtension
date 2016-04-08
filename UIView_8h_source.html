@@ -127,11 +127,11 @@ $(document).ready(function(){initNavTree('UIView_8h_source.html','');});
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">   26</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">UIAViewAnimationBlock</a>)();</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="UIView_8h.html#a98e92f80cf92a30c5bcb36455261cd61">   30</a></span>&#160;<span class="keyword">typedef</span> void (^<a class="code" href="UIView_8h.html#a98e92f80cf92a30c5bcb36455261cd61">UIAViewAnimationCompletionBlock</a>)(BOOL finished);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="interfaceUIAViewHolder.html">   36</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceUIAViewHolder.html">UIAViewHolder</a>: NSObject</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interfaceUIAViewHolder.html#a1d7f0c7bf3c5db22c9a100007eccebe3">   38</a></span>&#160;<span class="keyword">@property</span>(nonatomic, retain) IBOutlet <span class="keywordtype">id</span> <a class="code" href="interfaceUIAViewHolder.html#a1d7f0c7bf3c5db22c9a100007eccebe3">view</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="interfaceUIAViewHolder.html#a1d7f0c7bf3c5db22c9a100007eccebe3">   38</a></span>&#160;<span class="keyword">@property</span>(nonatomic, strong) IBOutlet <span class="keywordtype">id</span> <a class="code" href="interfaceUIAViewHolder.html#a1d7f0c7bf3c5db22c9a100007eccebe3">view</a>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
@@ -145,34 +145,43 @@ $(document).ready(function(){initNavTree('UIView_8h_source.html','');});
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="categoryUIView_07Animation_08.html">   60</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryUIView_07Animation_08.html">UIView (Animation)</a></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;+ (void)animateWithDefaultDurationAnimations:(<a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">UIAViewAnimationBlock</a>)animations;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;- (void)setHidden:(BOOL)hidden animated:(BOOL)animated;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#if NS_BLOCKS_AVAILABLE</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;+ (void)animateWithDefaultDurationAnimations:(<a class="code" href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">UIAViewAnimationBlock</a>)animations;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;- (void)setHidden:(BOOL)hidden animated:(BOOL)animated;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html">   88</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryUIView_07CALayer_08.html">UIView (CALayer)</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#a426e863de626bbd86486390713675b9b">   90</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat borderWidth;</div>
-<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#a82509ecb0cc1b864c1f450f95fa00b02">   91</a></span>&#160;<span class="keyword">@property</span>(copy) UIColor *borderColor;</div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#a3acc99e6f2b46ca3d2738c652a2fb12c">   92</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat cornerRadius;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#aa61282c1c375205f1006d90b98bc477e">   94</a></span>&#160;<span class="keyword">@property</span>(retain) UIColor *shadowColor;</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#a67b5260a47eeb6b49c32d5bf446c74b5">   95</a></span>&#160;<span class="keyword">@property</span>(assign) CGSize shadowOffset;</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#ad16339e1509a2626ffb2fcf179c52937">   96</a></span>&#160;<span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> shadowAlpha;</div>
-<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayer_08.html#a56f035531afd0751546bc7bf31dc917c">   97</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat shadowRadius;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html">   90</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryUIView_07CALayerShortcut_08.html">UIView (CALayerShortcut)</a></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#a3bc2465bbbf2caf37e9ce3b517c69687">   92</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat borderWidth;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#a92c1963858c5f5b59bdaeca7f4fee058">   93</a></span>&#160;<span class="keyword">@property</span>(copy) UIColor *borderColor;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#a0133fef2c1dde7fc97fdd6e6a5441c39">   94</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat cornerRadius;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#ae944774b7eda10a25937d9f35993d3f4">   96</a></span>&#160;<span class="keyword">@property</span>(retain) UIColor *shadowColor;</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#a783166638c51c3f956b72ea126997616">   97</a></span>&#160;<span class="keyword">@property</span>(assign) CGSize shadowOffset;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#ac0682f40e8f71c517a9e51bf0e0ae203">   98</a></span>&#160;<span class="keyword">@property</span>(assign) <span class="keywordtype">float</span> shadowAlpha;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="categoryUIView_07CALayerShortcut_08.html#aeba4799f4e35fa2a5144248cb1f5d876">   99</a></span>&#160;<span class="keyword">@property</span>(assign) CGFloat shadowRadius;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="categoryUIView_07UIViewGeometryShortcut_08.html">  104</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryUIView_07UIViewGeometryShortcut_08.html">UIView (UIViewGeometryShortcut)</a></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="categoryUIView_07UIViewGeometryShortcut_08.html#a6e721c3fee0362d9f24a25557040051d">  109</a></span>&#160;<span class="keyword">@property</span>(readonly) CGPoint frameEnd;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="interfaceUIAViewHolder_html_a1d7f0c7bf3c5db22c9a100007eccebe3"><div class="ttname"><a href="interfaceUIAViewHolder.html#a1d7f0c7bf3c5db22c9a100007eccebe3">UIAViewHolder::view</a></div><div class="ttdeci">IBOutlet id view</div><div class="ttdef"><b>Definition:</b> UIView.h:38</div></div>
+<div class="ttc" id="categoryUIView_07CALayerShortcut_08_html"><div class="ttname"><a href="categoryUIView_07CALayerShortcut_08.html">UIView(CALayerShortcut)</a></div><div class="ttdoc">See UIView layer for more informations. </div><div class="ttdef"><b>Definition:</b> UIView.h:90</div></div>
 <div class="ttc" id="UIView_8h_html_a6292e8366060f8ce86c6e3cf85720d23"><div class="ttname"><a href="UIView_8h.html#a6292e8366060f8ce86c6e3cf85720d23">UIAViewAnimationBlock</a></div><div class="ttdeci">void(^ UIAViewAnimationBlock)()</div><div class="ttdoc">Animation block signature for UIView animation methods. </div><div class="ttdef"><b>Definition:</b> UIView.h:26</div></div>
 <div class="ttc" id="categoryUIView_07InterfaceBuilder_08_html"><div class="ttname"><a href="categoryUIView_07InterfaceBuilder_08.html">UIView(InterfaceBuilder)</a></div><div class="ttdoc">UIView loader from InterfaceBuilder. </div><div class="ttdef"><b>Definition:</b> UIView.h:45</div></div>
 <div class="ttc" id="interfaceUIAViewHolder_html"><div class="ttname"><a href="interfaceUIAViewHolder.html">UIAViewHolder</a></div><div class="ttdoc">A holder of UIView for interface builder instead of UIViewController. </div><div class="ttdef"><b>Definition:</b> UIView.h:36</div></div>
 <div class="ttc" id="UIView_8h_html_a410479f6c0c0e0766b2a1a8ce31a872a"><div class="ttname"><a href="UIView_8h.html#a410479f6c0c0e0766b2a1a8ce31a872a">UIAViewAnimationDefaultDuraton</a></div><div class="ttdeci">FOUNDATION_EXTERN const NSTimeInterval UIAViewAnimationDefaultDuraton</div><div class="ttdoc">The common animation duration constant of UIKit. </div><div class="ttdef"><b>Definition:</b> UIView.h:20</div></div>
+<div class="ttc" id="categoryUIView_07UIViewGeometryShortcut_08_html"><div class="ttname"><a href="categoryUIView_07UIViewGeometryShortcut_08.html">UIView(UIViewGeometryShortcut)</a></div><div class="ttdef"><b>Definition:</b> UIView.h:104</div></div>
 <div class="ttc" id="categoryUIView_07Animation_08_html"><div class="ttname"><a href="categoryUIView_07Animation_08.html">UIView(Animation)</a></div><div class="ttdoc">UIView animation shortcuts. </div><div class="ttdef"><b>Definition:</b> UIView.h:60</div></div>
 <div class="ttc" id="UIView_8h_html_a98e92f80cf92a30c5bcb36455261cd61"><div class="ttname"><a href="UIView_8h.html#a98e92f80cf92a30c5bcb36455261cd61">UIAViewAnimationCompletionBlock</a></div><div class="ttdeci">void(^ UIAViewAnimationCompletionBlock)(BOOL finished)</div><div class="ttdoc">Animation completion block signature for UIView animation methods. </div><div class="ttdef"><b>Definition:</b> UIView.h:30</div></div>
-<div class="ttc" id="categoryUIView_07CALayer_08_html"><div class="ttname"><a href="categoryUIView_07CALayer_08.html">UIView(CALayer)</a></div><div class="ttdoc">See UIView layer for more informations. </div><div class="ttdef"><b>Definition:</b> UIView.h:88</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

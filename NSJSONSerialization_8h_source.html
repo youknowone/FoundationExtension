@@ -115,14 +115,14 @@ $(document).ready(function(){initNavTree('NSJSONSerialization_8h_source.html',''
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if __MAC_OS_X_VERSION_MIN_REQUIRED &gt;= 1070 || __IPHONE_OS_VERSION_MIN_REQUIRED &gt;= 50000</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#if __MAC_OS_X_VERSION_MAX_ALLOWED &gt;= 1070 || __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= 50000</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="categoryNSJSONSerialization_07Shortcuts_08.html">   22</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSJSONSerialization_07Shortcuts_08.html">NSJSONSerialization (Shortcuts)</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;+ (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;+ (NSString *)stringWithJSONObject:(<span class="keywordtype">id</span>)obj options:(NSJSONWritingOptions)opt error:(NSError **)error;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONWritingOptions)opt error:(NSError **)error;;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONWritingOptions)opt error:(NSError **)error;;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(NSError **)error;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(NSError **)error;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>

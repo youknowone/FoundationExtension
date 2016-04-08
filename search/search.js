@@ -8,15 +8,15 @@
 var indexSectionsWithContent =
 {
   0: ":_abcdefghijklmnoprstuvz",
-  1: "fnu",
+  1: "cfnu",
   2: "cfnru",
-  3: ":_abcdefghijklmnoprstuvz",
-  4: "_adhnru",
+  3: ":_acdefhijklmnoprstuvz",
+  4: "_acdfhnru",
   5: "nu",
   6: "u",
   7: "nu",
   8: "_abcdefghijklmnoprstuv",
-  9: "cnu",
+  9: "_cnu",
   10: "dfr"
 };
 

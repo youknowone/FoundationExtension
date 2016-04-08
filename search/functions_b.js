@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['jpegrepresentationwithcompressionfactor_3a',['JPEGRepresentationWithCompressionFactor:',['../categoryNSImage_07Shortcuts_08.html#acc1b5858ceba0db2510fedd0afa66bec',1,'NSImage(Shortcuts)']]],
-  ['jsonobjectwithstring_3aoptions_3aerror_3a',['JSONObjectWithString:options:error:',['../categoryNSJSONSerialization_07Shortcuts_08.html#a9290960c8c165579792786707f481785',1,'NSJSONSerialization(Shortcuts)']]],
-  ['jsonobjectwithurl_3aoptions_3aerror_3a',['JSONObjectWithURL:options:error:',['../categoryNSJSONSerialization_07Shortcuts_08.html#a6566b175ae0c691972d1c974564c84bd',1,'NSJSONSerialization(Shortcuts)']]],
-  ['jsonobjectwithurlrequest_3aoptions_3aerror_3a',['JSONObjectWithURLRequest:options:error:',['../categoryNSJSONSerialization_07Shortcuts_08.html#ab453db796f83699fbb8bba16e8bd42dd',1,'NSJSONSerialization(Shortcuts)']]]
+  ['layerwithimage_3acapinsets_3a',['layerWithImage:capInsets:',['../interfaceCAANinePartImageLayer.html#a573372aebc2875be511c9f79fbb9a162',1,'CAANinePartImageLayer']]],
+  ['loadrequestforfilepath_3a',['loadRequestForFilePath:',['../categoryUIWebView_07Shortcuts_08.html#a69d840cfade0f4cd8cc217407594e36f',1,'UIWebView(Shortcuts)']]],
+  ['loadrequestforurl_3a',['loadRequestForURL:',['../categoryUIWebView_07Shortcuts_08.html#a35b0f38fce89009029a081bccc9420b4',1,'UIWebView(Shortcuts)']]]
 ];

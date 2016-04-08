@@ -1,18 +1,8 @@
 var searchData=
 [
-  ['macaddress',['MACAddress',['../categoryUIDevice_07MACAddress_08.html#a521fdba25cce80b899add0592edd2456',1,'UIDevice(MACAddress)']]],
-  ['macaddressdata',['MACAddressData',['../categoryUIDevice_07MACAddress_08.html#a96c1576855affdb5108df31dee86478d',1,'UIDevice(MACAddress)']]],
-  ['map_3a',['map:',['../categoryNSMutableArray_07Functional_08.html#a3d41224bbe61fb46f74bc0297daa56e8',1,'NSMutableArray(Functional)::map:()'],['../categoryNSMutableDictionary_07Functional_08.html#a4c2aee03a558d8cedab3df5a08f55226',1,'NSMutableDictionary(Functional)::map:()']]],
-  ['mapfilter_3a',['mapFilter:',['../categoryNSMutableArray_07Functional_08.html#a6c4442ca26d7317f37dd5cf2947b7989',1,'NSMutableArray(Functional)::mapFilter:()'],['../categoryNSMutableDictionary_07Functional_08.html#a3eb971ee33ca481be67b0b9b127436b1',1,'NSMutableDictionary(Functional)::mapFilter:()']]],
-  ['mapfilterwithindex_3a',['mapFilterWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a27ce349f8be2319c998a87d4b73157ce',1,'NSMutableArray(Functional)']]],
-  ['mapfilterwithkey_3a',['mapFilterWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#a1108d90d1b64589f4f2e4bf782467f3d',1,'NSMutableDictionary(Functional)']]],
-  ['mapwithindex_3a',['mapWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a5e9afc9721d1005b35e1a597bec8c98d',1,'NSMutableArray(Functional)']]],
-  ['mapwithkey_3a',['mapWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#ac0ac1bb66a6cb375b3b40c4bdc73243a',1,'NSMutableDictionary(Functional)']]],
-  ['mediatorwithorigin_3aoverride_3a',['mediatorWithOrigin:override:',['../interfaceNSAOverridingMediator.html#ac22a922a3c1ee4153f5e8d0355834c88',1,'NSAOverridingMediator']]],
-  ['mediatorwithorigin_3aoverride_3asuppressive_3a',['mediatorWithOrigin:override:suppressive:',['../interfaceNSAOverridingMediator.html#a24fa7fcf0a3616e13f22f1bced2eb459',1,'NSAOverridingMediator']]],
-  ['methodimplementationforselector_3a',['methodImplementationForSelector:',['../categoryNSAClass_07Deprecated_08.html#a0b1e8a43b8a4b366630892038f8532a0',1,'NSAClass(Deprecated)::methodImplementationForSelector:()'],['../categoryNSObject_07ObjCRuntimeClass_08.html#a5ebfa496e65bc65adc34b1747211d737',1,'NSObject(ObjCRuntimeClass)::methodImplementationForSelector:()'],['../interfaceNSAClass.html#a0b1e8a43b8a4b366630892038f8532a0',1,'NSAClass::methodImplementationForSelector:()']]],
-  ['methodobjectforselector_3a',['methodObjectForSelector:',['../categoryNSObject_07ObjCRuntimeClass_08.html#a67fcd56ca90100214b64ecb9346b4da1',1,'NSObject(ObjCRuntimeClass)']]],
-  ['methodvalueforselector_3a',['methodValueForSelector:',['../categoryNSObject_07ObjCRuntimeClass_08.html#a3aa5dbb5cc8c548e70fbce232bc4a112',1,'NSObject(ObjCRuntimeClass)']]],
-  ['mixedcolorwithcolor_3aratio_3a',['mixedColorWithColor:ratio:',['../categoryUIColor_07UIAColorComponents_08.html#a856ce0cea714323afca85afe393b60fb',1,'UIColor(UIAColorComponents)']]],
-  ['moveobjectatindex_3atoindex_3a',['moveObjectAtIndex:toIndex:',['../categoryNSArray_07Rearrange_08.html#aadb48bda6b9b6f467b1efc236b2e41e2',1,'NSArray(Rearrange)']]]
+  ['objectatindex_3a',['objectAtIndex:',['../protocolNSAArrayLikeDataObject-p.html#a3f5dc23a7de872f6692a350efe2eb9d5',1,'NSAArrayLikeDataObject-p::objectAtIndex:()'],['../interfaceNSAOrderedDictionary.html#abe3ea79e59f76426e1c421ab88eba024',1,'NSAOrderedDictionary::objectAtIndex:()'],['../interfaceNSAMutableOrderedDictionary.html#a6d4829e29c871b62193f4c59aecf5b24',1,'NSAMutableOrderedDictionary::objectAtIndex:()']]],
+  ['objectatindexedsubscript_3a',['objectAtIndexedSubscript:',['../protocolNSAIndexedSubscript-p.html#a92e6ffc2dd1c7ffb0a8d8317a4eb6c86',1,'NSAIndexedSubscript-p']]],
+  ['objectforkeyedsubscript_3a',['objectForKeyedSubscript:',['../protocolNSAKeyedSubscript-p.html#a815c71aab0aca162cd4b18e72441a8b4',1,'NSAKeyedSubscript-p']]],
+  ['objectisnilornull_3a',['objectIsNilOrNull:',['../categoryNSNull_07Tools_08.html#a2bd7f89815a52b71d836be3da6201730',1,'NSNull(Tools)']]],
+  ['objectisnull_3a',['objectIsNull:',['../categoryNSNull_07Tools_08.html#a86b3bf0b2991d4e11d2a69feeb3b965e',1,'NSNull(Tools)']]]
 ];

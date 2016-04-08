@@ -137,61 +137,69 @@ $(document).ready(function(){initNavTree('NSArray_8h_source.html','');});
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;+ (instancetype)arrayWithEnumerator:(<span class="keywordtype">id</span>&lt;NSFastEnumeration&gt;)enumerator;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="categoryNSArray_07Rearrange_08.html">  109</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Rearrange_08.html">NSArray (Rearrange)</a></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;- (NSArray *)subarrayFromIndex:(NSUInteger)index;</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="categoryNSArray_07NSNumber_08.html">  125</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07NSNumber_08.html">NSArray (NSNumber)</a></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;- (NSInteger)integerAtIndex:(NSUInteger)index;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;- (NSArray *)subarrayToIndex:(NSUInteger)index;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;- (NSArray *)subarrayFromIndex:(NSUInteger)fromIndex length:(NSUInteger)length;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="keyword">@end</span></div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;- (NSUInteger)indexOfInteger:(NSInteger)value;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="categoryNSArray_07Random_08.html">  155</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Random_08.html">NSArray (Random)</a></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;- (id)randomObject;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;- (NSArray *)randomObjectsOfCount:(NSUInteger)count;</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;- (NSArray *)shuffledArray;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
-<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="categoryNSMutableArray_07Random_08.html">  180</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSMutableArray_07Random_08.html">NSMutableArray (Random)</a></div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;- (id)removeRandomObject;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;- (void)shuffle;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="categoryNSArray_07Deprecated_08.html">  198</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Deprecated_08.html">NSArray (Deprecated)</a></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;- (id):(NSUInteger)index __deprecated;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="categoryNSArray_07Rearrange_08.html">  142</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Rearrange_08.html">NSArray (Rearrange)</a></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;- (void)moveObjectAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="categoryNSArray_07NSNumber_08.html">  158</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07NSNumber_08.html">NSArray (NSNumber)</a></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;- (NSInteger)integerAtIndex:(NSUInteger)index;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;- (NSUInteger)indexOfInteger:(NSInteger)value;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="categoryNSArray_07Random_08.html">  188</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Random_08.html">NSArray (Random)</a></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;- (id)randomObject;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;- (NSArray *)randomObjectsOfCount:(NSUInteger)count;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;- (NSArray *)shuffledArray;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00211"></a><span class="lineno"><a class="line" href="categoryNSMutableArray_07Deprecated_08.html">  211</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSMutableArray_07Deprecated_08.html">NSMutableArray (Deprecated)</a></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;- (id)popRandomObject __deprecated;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="categoryNSArray_07Deprecated_08_html"><div class="ttname"><a href="categoryNSArray_07Deprecated_08.html">NSArray(Deprecated)</a></div><div class="ttdoc">Deprecated methods of NSArray extensions. </div><div class="ttdef"><b>Definition:</b> NSArray.h:198</div></div>
-<div class="ttc" id="categoryNSArray_07NSNumber_08_html"><div class="ttname"><a href="categoryNSArray_07NSNumber_08.html">NSArray(NSNumber)</a></div><div class="ttdoc">NSArray shortcut methods for NSNumber. </div><div class="ttdef"><b>Definition:</b> NSArray.h:125</div></div>
-<div class="ttc" id="categoryNSMutableArray_07Deprecated_08_html"><div class="ttname"><a href="categoryNSMutableArray_07Deprecated_08.html">NSMutableArray(Deprecated)</a></div><div class="ttdoc">Deprecated methods of NSMutableArray extensions. </div><div class="ttdef"><b>Definition:</b> NSArray.h:211</div></div>
-<div class="ttc" id="categoryNSArray_07Random_08_html"><div class="ttname"><a href="categoryNSArray_07Random_08.html">NSArray(Random)</a></div><div class="ttdoc">Random selection in NSArray objects. </div><div class="ttdef"><b>Definition:</b> NSArray.h:155</div></div>
-<div class="ttc" id="categoryNSMutableArray_07Random_08_html"><div class="ttname"><a href="categoryNSMutableArray_07Random_08.html">NSMutableArray(Random)</a></div><div class="ttdoc">Random selection in NSMutableArray objects. </div><div class="ttdef"><b>Definition:</b> NSArray.h:180</div></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno"><a class="line" href="categoryNSMutableArray_07Random_08.html">  213</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSMutableArray_07Random_08.html">NSMutableArray (Random)</a></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;- (id)removeRandomObject;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;- (void)shuffle;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
+<div class="line"><a name="l00231"></a><span class="lineno"><a class="line" href="categoryNSArray_07Deprecated_08.html">  231</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSArray_07Deprecated_08.html">NSArray (Deprecated)</a></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;- (id):(NSUInteger)index __deprecated;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="categoryNSMutableArray_07Deprecated_08.html">  244</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSMutableArray_07Deprecated_08.html">NSMutableArray (Deprecated)</a></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;- (id)popRandomObject __deprecated;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="categoryNSArray_07Deprecated_08_html"><div class="ttname"><a href="categoryNSArray_07Deprecated_08.html">NSArray(Deprecated)</a></div><div class="ttdoc">Deprecated methods of NSArray extensions. </div><div class="ttdef"><b>Definition:</b> NSArray.h:231</div></div>
+<div class="ttc" id="categoryNSArray_07NSNumber_08_html"><div class="ttname"><a href="categoryNSArray_07NSNumber_08.html">NSArray(NSNumber)</a></div><div class="ttdoc">NSArray shortcut methods for NSNumber. </div><div class="ttdef"><b>Definition:</b> NSArray.h:158</div></div>
+<div class="ttc" id="categoryNSMutableArray_07Deprecated_08_html"><div class="ttname"><a href="categoryNSMutableArray_07Deprecated_08.html">NSMutableArray(Deprecated)</a></div><div class="ttdoc">Deprecated methods of NSMutableArray extensions. </div><div class="ttdef"><b>Definition:</b> NSArray.h:244</div></div>
+<div class="ttc" id="categoryNSArray_07Random_08_html"><div class="ttname"><a href="categoryNSArray_07Random_08.html">NSArray(Random)</a></div><div class="ttdoc">Random selection in NSArray objects. </div><div class="ttdef"><b>Definition:</b> NSArray.h:188</div></div>
+<div class="ttc" id="categoryNSMutableArray_07Random_08_html"><div class="ttname"><a href="categoryNSMutableArray_07Random_08.html">NSMutableArray(Random)</a></div><div class="ttdoc">Random selection in NSMutableArray objects. </div><div class="ttdef"><b>Definition:</b> NSArray.h:213</div></div>
 <div class="ttc" id="categoryNSArray_07Shortcuts_08_html"><div class="ttname"><a href="categoryNSArray_07Shortcuts_08.html">NSArray(Shortcuts)</a></div><div class="ttdoc">NSArray shortcut methods extension. </div><div class="ttdef"><b>Definition:</b> NSArray.h:21</div></div>
-<div class="ttc" id="categoryNSArray_07Rearrange_08_html"><div class="ttname"><a href="categoryNSArray_07Rearrange_08.html">NSArray(Rearrange)</a></div><div class="ttdoc">NSArray rearrangement methods extension. </div><div class="ttdef"><b>Definition:</b> NSArray.h:109</div></div>
+<div class="ttc" id="categoryNSArray_07Rearrange_08_html"><div class="ttname"><a href="categoryNSArray_07Rearrange_08.html">NSArray(Rearrange)</a></div><div class="ttdoc">NSArray rearrangement methods extension. </div><div class="ttdef"><b>Definition:</b> NSArray.h:142</div></div>
 <div class="ttc" id="categoryNSArray_07Creations_08_html"><div class="ttname"><a href="categoryNSArray_07Creations_08.html">NSArray(Creations)</a></div><div class="ttdoc">NSArray creation methods extension with NSData or NSFastEnumeration </div><div class="ttdef"><b>Definition:</b> NSArray.h:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

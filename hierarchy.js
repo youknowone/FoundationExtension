@@ -1,5 +1,8 @@
 var hierarchy =
 [
+    [ "CALayer", null, [
+      [ "CAANinePartImageLayer", "interfaceCAANinePartImageLayer.html", null ]
+    ] ],
     [ "<FSEventStreamDelegate>", "protocolFSEventStreamDelegate-p.html", null ],
     [ "NSAClass(Deprecated)", "categoryNSAClass_07Deprecated_08.html", null ],
     [ "<NSAIndexedSubscript>", "protocolNSAIndexedSubscript-p.html", [
@@ -36,6 +39,7 @@ var hierarchy =
     [ "NSAttributedString(Shortcuts)", "categoryNSAttributedString_07Shortcuts_08.html", null ],
     [ "NSAVersion(OSX)", "categoryNSAVersion_07OSX_08.html", null ],
     [ "NSBundle(Shortcuts)", "categoryNSBundle_07Shortcuts_08.html", null ],
+    [ "NSCharacterSet(Shortcut)", "categoryNSCharacterSet_07Shortcut_08.html", null ],
     [ "NSControl(Properties)", "categoryNSControl_07Properties_08.html", null ],
     [ "<NSCopying>", null, [
       [ "NSATriple", "interfaceNSATriple.html", null ],
@@ -45,6 +49,7 @@ var hierarchy =
     [ "NSData(CommonCrypto)", "categoryNSData_07CommonCrypto_08.html", null ],
     [ "NSData(CommonCryptor)", "categoryNSData_07CommonCryptor_08.html", null ],
     [ "NSData(CommonCryptorString)", "categoryNSData_07CommonCryptorString_08.html", null ],
+    [ "NSData(Deprecation)", "categoryNSData_07Deprecation_08.html", null ],
     [ "NSData(NSStringUTF8)", "categoryNSData_07NSStringUTF8_08.html", null ],
     [ "NSData(NSURL_deprecated)", "categoryNSData_07NSURL__deprecated_08.html", null ],
     [ "NSData(NSURLRequest)", "categoryNSData_07NSURLRequest_08.html", null ],
@@ -72,6 +77,7 @@ var hierarchy =
     [ "<NSFastEnumeration>", null, [
       [ "<NSAArrayLikeDataObject>", "protocolNSAArrayLikeDataObject-p.html", null ]
     ] ],
+    [ "NSImage(NSDrawNinePartImage)", "categoryNSImage_07NSDrawNinePartImage_08.html", null ],
     [ "NSImage(Shortcuts)", "categoryNSImage_07Shortcuts_08.html", null ],
     [ "NSImageView", null, [
       [ "NSAImageWell", "interfaceNSAImageWell.html", null ]
@@ -141,18 +147,19 @@ var hierarchy =
     [ "NSString(CommonCrypto)", "categoryNSString_07CommonCrypto_08.html", null ],
     [ "NSString(CommonCryptorString)", "categoryNSString_07CommonCryptorString_08.html", null ],
     [ "NSString(Creations)", "categoryNSString_07Creations_08.html", null ],
+    [ "NSString(Deprecation)", "categoryNSString_07Deprecation_08.html", null ],
     [ "NSString(Evaluation)", "categoryNSString_07Evaluation_08.html", null ],
     [ "NSString(NSPasteboard)", "categoryNSString_07NSPasteboard_08.html", null ],
     [ "NSString(NSPathUtilities)", "categoryNSString_07NSPathUtilities_08.html", null ],
     [ "NSString(NSURL)", "categoryNSString_07NSURL_08.html", null ],
+    [ "NSString(NSURL_deprecated)", "categoryNSString_07NSURL__deprecated_08.html", null ],
     [ "NSString(NSUTF8StringEncoding)", "categoryNSString_07NSUTF8StringEncoding_08.html", null ],
+    [ "NSString(RegularExpression)", "categoryNSString_07RegularExpression_08.html", null ],
     [ "NSString(Shortcuts)", "categoryNSString_07Shortcuts_08.html", null ],
     [ "NSTextView(Placeholder)", "categoryNSTextView_07Placeholder_08.html", null ],
-    [ "NSTimer(Delegate)", "categoryNSTimer_07Delegate_08.html", null ],
     [ "NSTimer(dispatch)", "categoryNSTimer_07dispatch_08.html", null ],
     [ "NSTimer(NSRunLoop)", "categoryNSTimer_07NSRunLoop_08.html", null ],
     [ "NSTimer(Shortcuts)", "categoryNSTimer_07Shortcuts_08.html", null ],
-    [ "<NSTimerDelegate>", "protocolNSTimerDelegate-p.html", null ],
     [ "NSURL(CFURL)", "categoryNSURL_07CFURL_08.html", null ],
     [ "NSURL(Creations)", "categoryNSURL_07Creations_08.html", null ],
     [ "NSURLRequest(Creations_deprecated)", "categoryNSURLRequest_07Creations__deprecated_08.html", null ],
@@ -202,8 +209,9 @@ var hierarchy =
       [ "UIAView", "interfaceUIAView.html", null ]
     ] ],
     [ "UIView(Animation)", "categoryUIView_07Animation_08.html", null ],
-    [ "UIView(CALayer)", "categoryUIView_07CALayer_08.html", null ],
+    [ "UIView(CALayerShortcut)", "categoryUIView_07CALayerShortcut_08.html", null ],
     [ "UIView(InterfaceBuilder)", "categoryUIView_07InterfaceBuilder_08.html", null ],
+    [ "UIView(UIViewGeometryShortcut)", "categoryUIView_07UIViewGeometryShortcut_08.html", null ],
     [ "UIViewController", null, [
       [ "UIAViewController", "interfaceUIAViewController.html", null ]
     ] ],

@@ -6,7 +6,7 @@ var searchData=
   ['_5fclass',['_class',['../interfaceNSAClass.html#adc318203754dcdf8a3e66610ddd7e4cd',1,'NSAClass']]],
   ['_5fcopyableflags',['_copyableFlags',['../interfaceUIATableViewCellCopyable.html#addf55dca300a7bb966cd7fb47ec8f5c2',1,'UIATableViewCellCopyable']]],
   ['_5fdatasourceimpl',['_dataSourceImpl',['../interfaceUIASubviewTableView.html#af8a0e65e09d4a63a8afb5d6aa27bed74',1,'UIASubviewTableView']]],
-  ['_5fdelegate',['_delegate',['../interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa',1,'FSEventStream::_delegate()'],['../interfaceNSAImageWell.html#a7f41eb78e4d00896b21d683441a099e8',1,'NSAImageWell::_delegate()'],['../interfaceUIATableViewCellCopyable.html#a17b8ac55db5ba9d71e93080788273e9a',1,'UIATableViewCellCopyable::_delegate()']]],
+  ['_5fdelegate',['_delegate',['../interfaceFSEventStream.html#ab7dbfa03924e8723e44c1934046f1f4d',1,'FSEventStream::_delegate()'],['../interfaceNSAImageWell.html#a7f41eb78e4d00896b21d683441a099e8',1,'NSAImageWell::_delegate()'],['../interfaceUIATableViewCellCopyable.html#a5fb1b8c94c6590861fc7c02d9c79033c',1,'UIATableViewCellCopyable::_delegate()']]],
   ['_5fdelegatemediator',['_delegateMediator',['../interfaceUIASubviewTableView.html#ad4c5fd52e553ccca4ce7104e3c866058',1,'UIASubviewTableView']]],
   ['_5fediting',['_editing',['../interfaceUIAPlaceholderTextView.html#aa208c7a810463649d9132598354fad16',1,'UIAPlaceholderTextView']]],
   ['_5fencoding',['_encoding',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#aeb7cf86f87e3200b4e70d41b235c1d4b',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]],

@@ -125,13 +125,19 @@ $(document).ready(function(){initNavTree('NSData_8h_source.html','');});
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;- (instancetype)initWithHexadecimalString:(NSString *)hexadecimal;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;+ (instancetype)dataWithHexadecimalString:(NSString *)hexadecimal;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;- (NSString *)<a class="code" href="categoryNSData_07Serialization_08.html#adcd1b76cca46bd7e1dcb9cb10a8d22fc">base64String</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;- (instancetype)initWithBase64String:(NSString *)base64;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;+ (instancetype)dataWithBase64String:(NSString *)base64;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="categoryNSData_07Serialization_08_html_adcd1b76cca46bd7e1dcb9cb10a8d22fc"><div class="ttname"><a href="categoryNSData_07Serialization_08.html#adcd1b76cca46bd7e1dcb9cb10a8d22fc">-[NSData(Serialization) base64String]</a></div><div class="ttdeci">NSString * base64String()</div><div class="ttdoc">Serialized string in base64 format. </div></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="categoryNSData_07Deprecation_08.html">   56</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSData_07Deprecation_08.html">NSData (Deprecation)</a></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;- (NSString *)base64String <a class="code" href="categoryNSData_07Deprecation_08.html#ace33abc64e3743089b4a9dd6eaac0df2">__deprecated</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;- (instancetype)initWithBase64String:(NSString *)base64 __deprecated;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;+ (instancetype)dataWithBase64String:(NSString *)base64 __deprecated;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="categoryNSData_07Deprecation_08_html"><div class="ttname"><a href="categoryNSData_07Deprecation_08.html">NSData(Deprecation)</a></div><div class="ttdef"><b>Definition:</b> NSData.h:56</div></div>
+<div class="ttc" id="categoryNSData_07Deprecation_08_html_ace33abc64e3743089b4a9dd6eaac0df2"><div class="ttname"><a href="categoryNSData_07Deprecation_08.html#ace33abc64e3743089b4a9dd6eaac0df2">-[NSData(Deprecation) __deprecated]</a></div><div class="ttdeci">NSString * __deprecated()</div><div class="ttdoc">Serialized string in base64 format. </div></div>
 <div class="ttc" id="categoryNSData_07Serialization_08_html"><div class="ttname"><a href="categoryNSData_07Serialization_08.html">NSData(Serialization)</a></div><div class="ttdoc">NSData serialization/deserialization extension collection. </div><div class="ttdef"><b>Definition:</b> NSData.h:20</div></div>
 <div class="ttc" id="categoryNSData_07Serialization_08_html_a9931ce3beebaddad3803ee6411d564fb"><div class="ttname"><a href="categoryNSData_07Serialization_08.html#a9931ce3beebaddad3803ee6411d564fb">-[NSData(Serialization) hexadecimalString]</a></div><div class="ttdeci">NSString * hexadecimalString()</div><div class="ttdoc">Serialized string in hexadecimal format. </div></div>
 </div><!-- fragment --></div><!-- contents -->

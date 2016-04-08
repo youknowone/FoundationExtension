@@ -121,8 +121,11 @@ $(document).ready(function(){initNavTree('categoryUIImage_07UIGraphics_08.html',
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a45337a32a1331728e314b1cfc073a9ea"><td class="memItemLeft" align="right" valign="top">(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIImage_07UIGraphics_08.html#a45337a32a1331728e314b1cfc073a9ea">imageByResizingToSize:</a></td></tr>
-<tr class="memdesc:a45337a32a1331728e314b1cfc073a9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resized image by given size.  <a href="#a45337a32a1331728e314b1cfc073a9ea">More...</a><br /></td></tr>
+<tr class="memdesc:a45337a32a1331728e314b1cfc073a9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a resized image by given size.  <a href="#a45337a32a1331728e314b1cfc073a9ea">More...</a><br /></td></tr>
 <tr class="separator:a45337a32a1331728e314b1cfc073a9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c7aea7165fd877fc9025292124eb29"><td class="memItemLeft" align="right" valign="top">(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIImage_07UIGraphics_08.html#ac7c7aea7165fd877fc9025292124eb29">imageByCroppedToRect:</a></td></tr>
+<tr class="memdesc:ac7c7aea7165fd877fc9025292124eb29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a cropped image by given rect.  <a href="#ac7c7aea7165fd877fc9025292124eb29">More...</a><br /></td></tr>
+<tr class="separator:ac7c7aea7165fd877fc9025292124eb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab525970228fefae6815b8d7e30e002c7"><td class="memItemLeft" align="right" valign="top">(UIImage *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryUIImage_07UIGraphics_08.html#ab525970228fefae6815b8d7e30e002c7">imageByFilledWithColor:</a></td></tr>
 <tr class="memdesc:ab525970228fefae6815b8d7e30e002c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Color filled image with given color.  <a href="#ab525970228fefae6815b8d7e30e002c7">More...</a><br /></td></tr>
 <tr class="separator:ab525970228fefae6815b8d7e30e002c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,6 +159,32 @@ Class Methods</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Clear colored image. </p>
+
+</div>
+</div>
+<a class="anchor" id="ac7c7aea7165fd877fc9025292124eb29"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (UIImage *) imageByCroppedToRect: </td>
+          <td></td>
+          <td class="paramtype">(CGRect)&#160;</td>
+          <td class="paramname"><em>rect</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a cropped image by given rect. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>The rect to crop. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An UIImage object containing a cropped image from the image.</dd></dl>
+<p>This method depends on CoreGraphics. </p>
 
 </div>
 </div>
@@ -198,7 +227,7 @@ Class Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Resized image by given size. </p>
+<p>Returns a resized image by given size. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>The size to resize. </td></tr>

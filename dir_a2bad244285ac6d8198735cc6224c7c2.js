@@ -1,6 +1,6 @@
 var dir_a2bad244285ac6d8198735cc6224c7c2 =
 [
-    [ "FoundationExtension.h", "FoundationExtension_8h.html", null ],
+    [ "FoundationExtension.h", "FoundationExtension_8h.html", "FoundationExtension_8h" ],
     [ "NSAArray.h", "NSAArray_8h.html", [
       [ "NSAArray", "interfaceNSAArray.html", "interfaceNSAArray" ],
       [ "NSAMutableArray", "interfaceNSAMutableArray.html", "interfaceNSAMutableArray" ]
@@ -63,8 +63,12 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
       [ "NSAVersion", "interfaceNSAVersion.html", "interfaceNSAVersion" ]
     ] ],
     [ "NSBundle.h", "NSBundle_8h.html", "NSBundle_8h" ],
+    [ "NSCharacterSet.h", "NSCharacterSet_8h.html", [
+      [ "NSCharacterSet(Shortcut)", "categoryNSCharacterSet_07Shortcut_08.html", "categoryNSCharacterSet_07Shortcut_08" ]
+    ] ],
     [ "NSData.h", "NSData_8h.html", [
-      [ "NSData(Serialization)", "categoryNSData_07Serialization_08.html", "categoryNSData_07Serialization_08" ]
+      [ "NSData(Serialization)", "categoryNSData_07Serialization_08.html", "categoryNSData_07Serialization_08" ],
+      [ "NSData(Deprecation)", "categoryNSData_07Deprecation_08.html", "categoryNSData_07Deprecation_08" ]
     ] ],
     [ "NSDate.h", "NSDate_8h.html", [
       [ "NSDate(Shortcuts)", "categoryNSDate_07Shortcuts_08.html", "categoryNSDate_07Shortcuts_08" ]
@@ -77,6 +81,7 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     [ "NSJSONSerialization.h", "NSJSONSerialization_8h.html", [
       [ "NSJSONSerialization(Shortcuts)", "categoryNSJSONSerialization_07Shortcuts_08.html", "categoryNSJSONSerialization_07Shortcuts_08" ]
     ] ],
+    [ "NSMacro.h", "NSMacro_8h.html", "NSMacro_8h" ],
     [ "NSNull.h", "NSNull_8h.html", [
       [ "NSNull(Tools)", "categoryNSNull_07Tools_08.html", "categoryNSNull_07Tools_08" ]
     ] ],
@@ -87,24 +92,23 @@ var dir_a2bad244285ac6d8198735cc6224c7c2 =
     [ "NSNumberFormatter.h", "NSNumberFormatter_8h.html", [
       [ "NSNumberFormatter(Shortcuts)", "categoryNSNumberFormatter_07Shortcuts_08.html", "categoryNSNumberFormatter_07Shortcuts_08" ]
     ] ],
-    [ "NSObject.h", "NSObject_8h.html", "NSObject_8h" ],
+    [ "NSObject.h", "NSObject_8h.html", [
+      [ "NSObject(ObjCRuntime)", "categoryNSObject_07ObjCRuntime_08.html", "categoryNSObject_07ObjCRuntime_08" ],
+      [ "NSObject(ObjCRuntimeClass)", "categoryNSObject_07ObjCRuntimeClass_08.html", "categoryNSObject_07ObjCRuntimeClass_08" ],
+      [ "NSAMethod", "interfaceNSAMethod.html", "interfaceNSAMethod" ]
+    ] ],
     [ "NSPathUtilities.h", "NSPathUtilities_8h.html", "NSPathUtilities_8h" ],
     [ "NSSet.h", "NSSet_8h.html", [
       [ "NSSet(Enumerator)", "categoryNSSet_07Enumerator_08.html", "categoryNSSet_07Enumerator_08" ]
     ] ],
-    [ "NSString.h", "NSString_8h.html", [
-      [ "NSString(Creations)", "categoryNSString_07Creations_08.html", "categoryNSString_07Creations_08" ],
-      [ "NSString(Shortcuts)", "categoryNSString_07Shortcuts_08.html", "categoryNSString_07Shortcuts_08" ],
-      [ "NSString(NSUTF8StringEncoding)", "categoryNSString_07NSUTF8StringEncoding_08.html", "categoryNSString_07NSUTF8StringEncoding_08" ],
-      [ "NSString(Evaluation)", "categoryNSString_07Evaluation_08.html", "categoryNSString_07Evaluation_08" ],
-      [ "NSData(NSStringUTF8)", "categoryNSData_07NSStringUTF8_08.html", "categoryNSData_07NSStringUTF8_08" ]
-    ] ],
+    [ "NSString.h", "NSString_8h.html", "NSString_8h" ],
     [ "NSStringEncoding.h", "NSStringEncoding_8h.html", "NSStringEncoding_8h" ],
     [ "NSTimer.h", "NSTimer_8h.html", "NSTimer_8h" ],
     [ "NSURL.h", "NSURL_8h.html", [
       [ "NSURL(Creations)", "categoryNSURL_07Creations_08.html", "categoryNSURL_07Creations_08" ],
       [ "NSURL(CFURL)", "categoryNSURL_07CFURL_08.html", "categoryNSURL_07CFURL_08" ],
       [ "NSString(NSURL)", "categoryNSString_07NSURL_08.html", "categoryNSString_07NSURL_08" ],
+      [ "NSString(NSURL_deprecated)", "categoryNSString_07NSURL__deprecated_08.html", "categoryNSString_07NSURL__deprecated_08" ],
       [ "NSData(NSURL_deprecated)", "categoryNSData_07NSURL__deprecated_08.html", "categoryNSData_07NSURL__deprecated_08" ]
     ] ],
     [ "NSURLRequest.h", "NSURLRequest_8h.html", [

@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['caaninepartimagelayer',['CAANinePartImageLayer',['../interfaceCAANinePartImageLayer.html',1,'']]],
   ['cachepolicy',['cachePolicy',['../categoryNSURLRequest_07Properties_08.html#a4cdfbb38f6776ab087c88138b29527ce',1,'NSURLRequest(Properties)::cachePolicy()'],['../categoryNSMutableURLRequest_07Properties_08.html#a8db71a71fc8e9cf00a6f17fd97e157c5',1,'NSMutableURLRequest(Properties)::cachePolicy()']]],
+  ['capinsets',['capInsets',['../interfaceCAANinePartImageLayer.html#aa032d8d7700e5e7b61928640ee28b064',1,'CAANinePartImageLayer']]],
   ['ccoptions',['CCOptions',['../NSACommonCrypto_8h.html#a305495ba3e4d391cf494435a32aaa9d1',1,'NSACommonCrypto.h']]],
   ['cells',['cells',['../interfaceUIAPreparedCellTableView.html#a607b9da3fcd0c7cc941554de0d7adebb',1,'UIAPreparedCellTableView']]],
   ['cellwillhidemenu_3a',['cellWillHideMenu:',['../protocolUIATableViewCellCopyableDelegate-p.html#a3320a76f9c423fcd116a66becaca6b68',1,'UIATableViewCellCopyableDelegate-p']]],
@@ -16,7 +18,10 @@ var searchData=
   ['classwithname_3a',['classWithName:',['../interfaceNSAClass.html#ad3b4e41d3520e10395c1bacee7ee41e4',1,'NSAClass']]],
   ['classwithutf8name_3a',['classWithUTF8Name:',['../interfaceNSAClass.html#a23caa5fdf73e7d35bbfe6e2087dff669',1,'NSAClass']]],
   ['clearimage',['clearImage',['../categoryUIImage_07UIGraphics_08.html#ab3deb42b707d2d1eff1537f51d0bdec6',1,'UIImage(UIGraphics)']]],
+  ['cocoa',['Cocoa',['../CocoaExtension_8h.html#ae853b35222a991719058bdedd9e3bd48',1,'CocoaExtension.h']]],
   ['cocoaextension_2eh',['CocoaExtension.h',['../CocoaExtension_8h.html',1,'']]],
+  ['cocoaextensionversionnumber',['CocoaExtensionVersionNumber',['../CocoaExtension_8h.html#ad86f7aa81d8ddd9c38a7b57cd4f0d0fd',1,'CocoaExtension.h']]],
+  ['cocoaextensionversionstring',['CocoaExtensionVersionString',['../CocoaExtension_8h.html#ad1e67cb21bd6b020bf6bc17a94628da7',1,'CocoaExtension.h']]],
   ['colorwith32bitcolor_3a',['colorWith32bitColor:',['../categoryUIColor_07Creations_08.html#aa907a1a287d2f8e5d726797ceb032e79',1,'UIColor(Creations)']]],
   ['colorwith8bitred_3agreen_3ablue_3aalpha_3a',['colorWith8bitRed:green:blue:alpha:',['../categoryUIColor_07Creations_08.html#a1079bbb75f5d2ca91aac83bf0d0e477e',1,'UIColor(Creations)']]],
   ['colorwith8bitwhite_3aalpha_3a',['colorWith8bitWhite:alpha:',['../categoryUIColor_07Creations_08.html#a70e2e5bd0ad0822d8a8b8ec7f505898b',1,'UIColor(Creations)']]],
@@ -31,7 +36,7 @@ var searchData=
   ['contentbounds',['contentBounds',['../categoryUIScrollView_07Shortcuts_08.html#adb78eb9f50d7f7acb306769c235243e7',1,'UIScrollView(Shortcuts)']]],
   ['contentframe',['contentFrame',['../categoryUIScrollView_07Shortcuts_08.html#a7ba43f43ae486adf01107ca87720cd88',1,'UIScrollView(Shortcuts)']]],
   ['contentscontroller',['contentsController',['../interfaceUIAResultDisplayController.html#adb58653223e6d882872e425a568773b1',1,'UIAResultDisplayController']]],
-  ['cornerradius',['cornerRadius',['../categoryUIView_07CALayer_08.html#a3acc99e6f2b46ca3d2738c652a2fb12c',1,'UIView(CALayer)']]],
+  ['cornerradius',['cornerRadius',['../categoryUIView_07CALayerShortcut_08.html#a0133fef2c1dde7fc97fdd6e6a5441c39',1,'UIView(CALayerShortcut)']]],
   ['count',['count',['../protocolNSAArrayLikeDataObject-p.html#ab040cae87c279ddb504e971816090f28',1,'NSAArrayLikeDataObject-p']]],
   ['cursor',['cursor',['../interfaceNSAttributedStringAttributeDictionary.html#ac13b1b8f1dec73b332aa30b5fab2a79d',1,'NSAttributedStringAttributeDictionary']]]
 ];

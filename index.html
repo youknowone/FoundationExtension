@@ -100,7 +100,8 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">FoundationExtension </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.</p>
+<div class="textblock"><p><a href="https://travis-ci.org/youknowone/FoundationExtension">![Build Status](https://travis-ci.org/youknowone/FoundationExtension.svg?branch=master)</a></p>
+<p>This library includes small Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.</p>
 <ul>
 <li>Many common snippets in a method call.</li>
 <li>Looks like native foundation methods - It follows Apple Coding Guideline and Foundation naming convention.</li>
@@ -179,14 +180,6 @@ for (NSString *s in array) {
 </pre><dl class="section see"><dt>See also</dt><dd><a class="el" href="categoryNSObject_07ObjCRuntime_08.html">NSObject(ObjCRuntime)</a> </dd>
 <dd>
 <a class="el" href="categoryNSObject_07ObjCRuntimeClass_08.html">NSObject(ObjCRuntimeClass)</a></dd></dl>
-<h2>encode/decode base64 string (especially for In-App Purchase / Facebook API)</h2>
-<p>Foundation</p><ul>
-<li>No way.</li>
-</ul>
-<p>FoundationExtension </p><pre class="fragment">NSString *base64String = [data base64String];
-
-NSData *data = [NSData dataWithBase64String:base64]
-</pre><dl class="section see"><dt>See also</dt><dd><a class="el" href="categoryNSData_07Serialization_08.html">NSData(Serialization)</a></dd></dl>
 <h2>Get hexadecimal value from base 16 string</h2>
 <p>Foundation </p><pre class="fragment">int value;
 sscanf(string.UTF8String, "%x", &amp;value);

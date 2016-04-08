@@ -1,6 +1,6 @@
 var dir_e076ad54aab45f8a582397419b81a886 =
 [
-    [ "CocoaExtension.h", "CocoaExtension_8h.html", null ],
+    [ "CocoaExtension.h", "CocoaExtension_8h.html", "CocoaExtension_8h" ],
     [ "FSEventStream.h", "FSEventStream_8h.html", [
       [ "<FSEventStreamDelegate>", "protocolFSEventStreamDelegate-p.html", "protocolFSEventStreamDelegate-p" ],
       [ "FSEventStream", "interfaceFSEventStream.html", "interfaceFSEventStream" ]
@@ -18,7 +18,9 @@ var dir_e076ad54aab45f8a582397419b81a886 =
     ] ],
     [ "NSGeometry.h", "NSGeometry_8h.html", "NSGeometry_8h" ],
     [ "NSImage.h", "NSImage_8h.html", [
-      [ "NSImage(Shortcuts)", "categoryNSImage_07Shortcuts_08.html", "categoryNSImage_07Shortcuts_08" ]
+      [ "NSImage(Shortcuts)", "categoryNSImage_07Shortcuts_08.html", "categoryNSImage_07Shortcuts_08" ],
+      [ "NSImage(NSDrawNinePartImage)", "categoryNSImage_07NSDrawNinePartImage_08.html", "categoryNSImage_07NSDrawNinePartImage_08" ],
+      [ "CAANinePartImageLayer", "interfaceCAANinePartImageLayer.html", "interfaceCAANinePartImageLayer" ]
     ] ],
     [ "NSPasteboard.h", "NSPasteboard_8h.html", [
       [ "NSPasteboard(Shortcuts)", "categoryNSPasteboard_07Shortcuts_08.html", "categoryNSPasteboard_07Shortcuts_08" ],

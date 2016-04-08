@@ -153,39 +153,64 @@ $(document).ready(function(){initNavTree('NSURL_8h_source.html','');});
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
 <div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="categoryNSString_07NSURL_08.html">  117</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSString_07NSURL_08.html">NSString (NSURL)</a></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;- (BOOL)hasHTTPPrefix;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;- (BOOL)hasSmartURLPrefix;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;- (NSString *)URLProtocol;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;- (NSURL *)URL;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;- (NSURL *)fileURL;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;- (NSURL *)resourceURL;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;- (NSURL *)configurationURL;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;- (NSURL *)temporaryURL;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;- (NSURL *)smartURL;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;- (NSURL *)abstractURL __deprecated;</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;- (BOOL)hasURLPrefix __deprecated;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;- (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;- (NSString *)stringByAddingPercentEncodingForURLQuery;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;- (BOOL)hasHTTPPrefix;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;- (BOOL)hasSmartURLPrefix;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;- (NSString *)URLProtocol;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;- (NSURL *)URL;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;- (NSURL *)fileURL;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;- (NSURL *)resourceURL;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;- (NSURL *)configurationURL;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;- (NSURL *)temporaryURL;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;- (NSString *)pathProtocol;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">@end</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;- (NSURL *)smartURL;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
-<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="categoryNSData_07NSURL__deprecated_08.html">  201</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSData_07NSURL__deprecated_08.html">NSData (NSURL_deprecated)</a></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;- (NSURL *)abstractURL __deprecated;</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">@end</span></div>
-<div class="ttc" id="categoryNSData_07NSURL__deprecated_08_html"><div class="ttname"><a href="categoryNSData_07NSURL__deprecated_08.html">NSData(NSURL_deprecated)</a></div><div class="ttdoc">NSData creation shortcuts from URL. </div><div class="ttdef"><b>Definition:</b> NSURL.h:201</div></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;- (BOOL)hasURLPrefix __deprecated;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;- (NSString *)pathProtocol;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
+<div class="line"><a name="l00212"></a><span class="lineno"><a class="line" href="categoryNSString_07NSURL__deprecated_08.html">  212</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSString_07NSURL__deprecated_08.html">NSString (NSURL_deprecated)</a></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;- (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;#if __MAC_OS_X_VERSION_MAX_ALLOWED &gt;= 101100 || __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= 90000</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, &quot;Use -stringByAddingPercentEscapesUsingEncoding:&quot;)</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;#endif</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;- (NSString *)stringByReplacingPercentEscapesUsingUTF8Encoding</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;#if __MAC_OS_X_VERSION_MAX_ALLOWED &gt;= 101100 || __IPHONE_OS_VERSION_MAX_ALLOWED &gt;= 90000</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, &quot;Use -stringByRemovingPercentEncoding:&quot;)</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;#endif</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno"><a class="line" href="categoryNSData_07NSURL__deprecated_08.html">  244</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSData_07NSURL__deprecated_08.html">NSData (NSURL_deprecated)</a></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="keyword">@end</span></div>
+<div class="ttc" id="categoryNSString_07NSURL__deprecated_08_html"><div class="ttname"><a href="categoryNSString_07NSURL__deprecated_08.html">NSString(NSURL_deprecated)</a></div><div class="ttdef"><b>Definition:</b> NSURL.h:212</div></div>
+<div class="ttc" id="categoryNSData_07NSURL__deprecated_08_html"><div class="ttname"><a href="categoryNSData_07NSURL__deprecated_08.html">NSData(NSURL_deprecated)</a></div><div class="ttdoc">NSData creation shortcuts from URL. </div><div class="ttdef"><b>Definition:</b> NSURL.h:244</div></div>
 <div class="ttc" id="categoryNSURL_07CFURL_08_html_a3e8e061549600057b6034dccd15505b2"><div class="ttname"><a href="categoryNSURL_07CFURL_08.html#a3e8e061549600057b6034dccd15505b2">NSURL(CFURL)::hasDirectoryPath</a></div><div class="ttdeci">BOOL hasDirectoryPath</div><div class="ttdoc">The URL status if a given URL&#39;s path represents a directory. </div><div class="ttdef"><b>Definition:</b> NSURL.h:109</div></div>
 <div class="ttc" id="categoryNSURL_07Creations_08_html"><div class="ttname"><a href="categoryNSURL_07Creations_08.html">NSURL(Creations)</a></div><div class="ttdoc">Creation method extension. </div><div class="ttdef"><b>Definition:</b> NSURL.h:18</div></div>
 <div class="ttc" id="categoryNSURL_07CFURL_08_html"><div class="ttname"><a href="categoryNSURL_07CFURL_08.html">NSURL(CFURL)</a></div><div class="ttdoc">NSURL missing bridge of CFURL. </div><div class="ttdef"><b>Definition:</b> NSURL.h:103</div></div>

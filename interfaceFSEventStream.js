@@ -10,7 +10,7 @@ var interfaceFSEventStream =
     [ "start", "interfaceFSEventStream.html#a2f2eaaaf2bffcd6480b7ecb5e8c275b1", null ],
     [ "stop", "interfaceFSEventStream.html#a25a5ddef61aae575ec3dc84bb4ec1dde", null ],
     [ "unscheduleFromRunLoop:mode:", "interfaceFSEventStream.html#a6bceb8706017180552ddab5829cc78ea", null ],
-    [ "_delegate", "interfaceFSEventStream.html#a9a512d165190425eba6411b4475e88aa", null ],
+    [ "_delegate", "interfaceFSEventStream.html#ab7dbfa03924e8723e44c1934046f1f4d", null ],
     [ "_managedRetainCount", "interfaceFSEventStream.html#a147b74e84ad11f2034ca368390febaa0", null ],
     [ "_stream", "interfaceFSEventStream.html#a311a7c22eaf679bbdb467c1e8ec901e3", null ],
     [ "delegate", "interfaceFSEventStream.html#ac4eefa54eed1b0da731aeff503b0a8fc", null ],

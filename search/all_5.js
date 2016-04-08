@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['datausingutf8encoding',['dataUsingUTF8Encoding',['../categoryNSString_07NSUTF8StringEncoding_08.html#a39bbc6b6085f94bd6aa1c43d2b46d1f5',1,'NSString(NSUTF8StringEncoding)']]],
-  ['datawithbase64string_3a',['dataWithBase64String:',['../categoryNSData_07Serialization_08.html#a2ee6675a57a26f3b291972f5b2c58cd1',1,'NSData(Serialization)']]],
+  ['datausingutf8encoding',['dataUsingUTF8Encoding',['../categoryNSString_07NSUTF8StringEncoding_08.html#a5167d10598ea76b3cf4cbb6cd3cb8f7d',1,'NSString(NSUTF8StringEncoding)']]],
+  ['datawithbase64string_3a',['dataWithBase64String:',['../categoryNSData_07Deprecation_08.html#ad2c26c5436f1d762140a8ca8f60a02c2',1,'NSData(Deprecation)']]],
   ['datawithcontentsofabstractpath_3a',['dataWithContentsOfAbstractPath:',['../categoryNSData_07NSURL__deprecated_08.html#a266b0338c2c4e53539ee07ff478048e5',1,'NSData(NSURL_deprecated)']]],
   ['datawithcontentsofabstractpath_3aoptions_3aerror_3a',['dataWithContentsOfAbstractPath:options:error:',['../categoryNSData_07NSURL__deprecated_08.html#ab8f264bca7e1571b22ec7e26fdf3f51f',1,'NSData(NSURL_deprecated)']]],
   ['datawithcontentsofurl_3apostbody_3aencoding_3a',['dataWithContentsOfURL:postBody:encoding:',['../categoryNSData_07NSURLRequest_08.html#a94f5d1a05c06118b580694cff14eaad6',1,'NSData(NSURLRequest)']]],
@@ -66,5 +66,6 @@ var searchData=
   ['digestbysha512usingencoding_3a',['digestBySHA512UsingEncoding:',['../categoryNSString_07CommonCrypto_08.html#ad18be0167a167e4accce807d5ca271b0',1,'NSString(CommonCrypto)']]],
   ['dimmingview',['dimmingView',['../interfaceUIAResultDisplayController.html#aa952531f0b8080b8f692575d59bab49d',1,'UIAResultDisplayController']]],
   ['dimmingviewdidcancel_3a',['dimmingViewDidCancel:',['../protocolUIADimmingViewDelegate-p.html#aa722cbdb033c79cf75b233f695ccb24e',1,'UIADimmingViewDelegate-p']]],
-  ['dispatchtimerwithtimeinterval_3ablock_3a',['dispatchTimerWithTimeInterval:block:',['../categoryNSTimer_07dispatch_08.html#ad4a52a498d09fde54c81947085609dc1',1,'NSTimer(dispatch)']]]
+  ['dispatchtimerwithtimeinterval_3ablock_3a',['dispatchTimerWithTimeInterval:block:',['../categoryNSTimer_07dispatch_08.html#ad4a52a498d09fde54c81947085609dc1',1,'NSTimer(dispatch)']]],
+  ['drawninepartimageinrect_3acapinsets_3a',['drawNinePartImageInRect:capInsets:',['../categoryNSImage_07NSDrawNinePartImage_08.html#a36ab7c0f599b323fcdb4376c82323205',1,'NSImage(NSDrawNinePartImage)']]]
 ];

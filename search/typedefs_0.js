@@ -18,5 +18,6 @@ var searchData=
   ['nsligaturetype',['NSLigatureType',['../NSAttributedString_09Cocoa_8h.html#a8799354ea0947b621292a96bd39eb236',1,'NSLigatureType():&#160;NSAttributedString+Cocoa.h'],['../NSAttributedString_09UIKit_8h.html#a8799354ea0947b621292a96bd39eb236',1,'NSLigatureType():&#160;NSAttributedString+UIKit.h']]],
   ['nsunderlinestyle',['NSUnderlineStyle',['../NSAttributedString_09Cocoa_8h.html#aac8d0ccdc7bade0bbb9174fa59f5eec3',1,'NSAttributedString+Cocoa.h']]],
   ['nsverticalglyphform',['NSVerticalGlyphForm',['../NSAttributedString_09Cocoa_8h.html#ac54573c8738e1cea34c6eaba9a022339',1,'NSVerticalGlyphForm():&#160;NSAttributedString+Cocoa.h'],['../NSAttributedString_09UIKit_8h.html#ac54573c8738e1cea34c6eaba9a022339',1,'NSVerticalGlyphForm():&#160;NSAttributedString+UIKit.h']]],
-  ['nswritingdirectionattributes',['NSWritingDirectionAttributes',['../NSAttributedString_09Cocoa_8h.html#a9386588bbd2a6a787cbccf634982debc',1,'NSAttributedString+Cocoa.h']]]
+  ['nswritingdirectionattributes',['NSWritingDirectionAttributes',['../NSAttributedString_09Cocoa_8h.html#a9386588bbd2a6a787cbccf634982debc',1,'NSAttributedString+Cocoa.h']]],
+  ['nswritingdirectionformattype',['NSWritingDirectionFormatType',['../NSAttributedString_09Cocoa_8h.html#a4a05964adf7323571292afa14b24144e',1,'NSAttributedString+Cocoa.h']]]
 ];

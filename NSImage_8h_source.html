@@ -127,9 +127,30 @@ $(document).ready(function(){initNavTree('NSImage_8h_source.html','');});
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;- (NSData *)JPEGRepresentationWithCompressionFactor:(CGFloat)compressionFactor;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="categoryNSImage_07NSDrawNinePartImage_08.html">   62</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="categoryNSImage_07NSDrawNinePartImage_08.html">NSImage (NSDrawNinePartImage)</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;- (void)drawNinePartImageInRect:(NSRect)toRect capInsets:(NSEdgeInsets)capInsets;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;- (NSImage*)ninePartImageWithSize:(NSSize)size capInsets:(NSEdgeInsets)capInsets;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="interfaceCAANinePartImageLayer.html">   82</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interfaceCAANinePartImageLayer.html">CAANinePartImageLayer</a> : CALayer</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="interfaceCAANinePartImageLayer.html#ac70b78171c164b7b7aaa20736b20ccd3">   84</a></span>&#160;<span class="keyword">@property</span>(nonatomic,strong) NSImage *image;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="interfaceCAANinePartImageLayer.html#aa032d8d7700e5e7b61928640ee28b064">   85</a></span>&#160;<span class="keyword">@property</span>(nonatomic,assign) NSEdgeInsets capInsets;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;- (instancetype)initWithImage:(NSImage *)image capInsets:(NSEdgeInsets)capInsets;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;+ (instancetype)layerWithImage:(NSImage *)image capInsets:(NSEdgeInsets)capInsets;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">@end</span></div>
 <div class="ttc" id="categoryNSImage_07Shortcuts_08_html_aa7c073874b0648f6cb506c9a84fad48c"><div class="ttname"><a href="categoryNSImage_07Shortcuts_08.html#aa7c073874b0648f6cb506c9a84fad48c">NSImage(Shortcuts)::JPEGRepresentation</a></div><div class="ttdeci">NSData * JPEGRepresentation</div><div class="ttdoc">JPEG representation of image. </div><div class="ttdef"><b>Definition:</b> NSImage.h:49</div></div>
 <div class="ttc" id="categoryNSImage_07Shortcuts_08_html"><div class="ttname"><a href="categoryNSImage_07Shortcuts_08.html">NSImage(Shortcuts)</a></div><div class="ttdoc">NSImage shortcuts. </div><div class="ttdef"><b>Definition:</b> NSImage.h:21</div></div>
+<div class="ttc" id="interfaceCAANinePartImageLayer_html"><div class="ttname"><a href="interfaceCAANinePartImageLayer.html">CAANinePartImageLayer</a></div><div class="ttdef"><b>Definition:</b> NSImage.h:82</div></div>
 <div class="ttc" id="categoryNSImage_07Shortcuts_08_html_a00cbfb3c963543f45c3831b4a221c6a2"><div class="ttname"><a href="categoryNSImage_07Shortcuts_08.html#a00cbfb3c963543f45c3831b4a221c6a2">NSImage(Shortcuts)::PNGRepresentation</a></div><div class="ttdeci">NSData * PNGRepresentation</div><div class="ttdoc">PNG representation of image. </div><div class="ttdef"><b>Definition:</b> NSImage.h:45</div></div>
+<div class="ttc" id="categoryNSImage_07NSDrawNinePartImage_08_html"><div class="ttname"><a href="categoryNSImage_07NSDrawNinePartImage_08.html">NSImage(NSDrawNinePartImage)</a></div><div class="ttdoc">NSDrawNinePartImage convinient methods. </div><div class="ttdef"><b>Definition:</b> NSImage.h:62</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

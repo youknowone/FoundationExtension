@@ -1,6 +1,7 @@
 var searchData=
 [
   ['latesteventid',['latestEventId',['../interfaceFSEventStream.html#ab05ac605476cc94a97ddc2ea7db15962',1,'FSEventStream']]],
+  ['layerwithimage_3acapinsets_3a',['layerWithImage:capInsets:',['../interfaceCAANinePartImageLayer.html#a573372aebc2875be511c9f79fbb9a162',1,'CAANinePartImageLayer']]],
   ['leftimage',['leftImage',['../interfaceUIASegmentedImageView.html#aa3bb1a2adc5b69022178b9af76a0f8e0',1,'UIASegmentedImageView']]],
   ['leftmargin',['leftMargin',['../interfaceUIASegmentedImageView.html#a35f26184e66d1e8db2e70347659351db',1,'UIASegmentedImageView']]],
   ['ligature',['ligature',['../interfaceNSAttributedStringAttributeDictionary.html#add49d8d71567ff7bb66aaa2316f554e5',1,'NSAttributedStringAttributeDictionary']]],

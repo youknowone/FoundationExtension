@@ -56,7 +56,7 @@ var dir_989e9cdee22463940a60ca84015bf6c0 =
       [ "UIColor(UIImage)", "categoryUIColor_07UIImage_08.html", "categoryUIColor_07UIImage_08" ],
       [ "UIBezierPath(UIImage)", "categoryUIBezierPath_07UIImage_08.html", "categoryUIBezierPath_07UIImage_08" ]
     ] ],
-    [ "UIKitExtension.h", "UIKitExtension_8h.html", null ],
+    [ "UIKitExtension.h", "UIKitExtension_8h.html", "UIKitExtension_8h" ],
     [ "UIScrollView.h", "UIScrollView_8h.html", [
       [ "UIScrollView(Shortcuts)", "categoryUIScrollView_07Shortcuts_08.html", "categoryUIScrollView_07Shortcuts_08" ]
     ] ],

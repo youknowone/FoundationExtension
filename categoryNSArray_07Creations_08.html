@@ -132,9 +132,20 @@ Instance Methods</h2></td></tr>
 <tr class="memdesc:a357dd0593fbdf034cbb1e7340b0c480a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a newly allocated array by placing in it the objects enumerated in a given enumerator.  <a href="#a357dd0593fbdf034cbb1e7340b0c480a">More...</a><br /></td></tr>
 <tr class="separator:a357dd0593fbdf034cbb1e7340b0c480a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Class Methods</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Creating an Array</div></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Creating an Array</h2></td></tr>
+<tr class="memitem:a314ed16279f77962ea21433db34088b2"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Creations_08.html#a314ed16279f77962ea21433db34088b2">subarrayFromIndex:</a></td></tr>
+<tr class="memdesc:a314ed16279f77962ea21433db34088b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new array containing the receiving array’s elements from the one at a given index to the end.  <a href="#a314ed16279f77962ea21433db34088b2">More...</a><br /></td></tr>
+<tr class="separator:a314ed16279f77962ea21433db34088b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8448f825bb26a34713b0e5fbb82a6907"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Creations_08.html#a8448f825bb26a34713b0e5fbb82a6907">subarrayToIndex:</a></td></tr>
+<tr class="memdesc:a8448f825bb26a34713b0e5fbb82a6907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new array containing the receiving array’s elements of the receiver up to, but not including, the one at a given index.  <a href="#a8448f825bb26a34713b0e5fbb82a6907">More...</a><br /></td></tr>
+<tr class="separator:a8448f825bb26a34713b0e5fbb82a6907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86e5ae72b7202ce46ad44b7fe1c3421e"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Creations_08.html#a86e5ae72b7202ce46ad44b7fe1c3421e">subarrayFromIndex:toIndex:</a></td></tr>
+<tr class="memdesc:a86e5ae72b7202ce46ad44b7fe1c3421e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new array containing the receiving array’s elements of the receiver from the one at a given index to up to, but not including, the one at a given index.  <a href="#a86e5ae72b7202ce46ad44b7fe1c3421e">More...</a><br /></td></tr>
+<tr class="separator:a86e5ae72b7202ce46ad44b7fe1c3421e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dfce31a98a7e018cd3d785a259ad6c7"><td class="memItemLeft" align="right" valign="top">(NSArray *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSArray_07Creations_08.html#a0dfce31a98a7e018cd3d785a259ad6c7">subarrayFromIndex:length:</a></td></tr>
+<tr class="memdesc:a0dfce31a98a7e018cd3d785a259ad6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new array containing the receiving array’s elements that fall within the limits specified by a given range made by fromIndex and length.  <a href="#a0dfce31a98a7e018cd3d785a259ad6c7">More...</a><br /></td></tr>
+<tr class="separator:a0dfce31a98a7e018cd3d785a259ad6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8609ab476c66b272a89fe5f320bd50dd"><td class="memItemLeft" align="right" valign="top">(instancetype)&#160;</td><td class="memItemRight" valign="bottom">+ <a class="el" href="categoryNSArray_07Creations_08.html#a8609ab476c66b272a89fe5f320bd50dd">arrayWithData:</a></td></tr>
 <tr class="memdesc:a8609ab476c66b272a89fe5f320bd50dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns an array containing the contents of data. Data must be property list.  <a href="#a8609ab476c66b272a89fe5f320bd50dd">More...</a><br /></td></tr>
 <tr class="separator:a8609ab476c66b272a89fe5f320bd50dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -359,6 +370,131 @@ arrayWithData: </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>initWithEnumerator: </dd>
 <dd>
 arrayWithEnumerator: </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a314ed16279f77962ea21433db34088b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray *) subarrayFromIndex: </td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>index</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new array containing the receiving array’s elements from the one at a given index to the end. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new array containing the elements of the receiver from the one at index to the end. If index is equal to the length of the array, returns an empty array.</dd></dl>
+<p>Raises an NSRangeException if (index - 1) lies beyond the end of the receiver. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0dfce31a98a7e018cd3d785a259ad6c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray *) subarrayFromIndex: </td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>fromIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">length:</td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new array containing the receiving array’s elements that fall within the limits specified by a given range made by fromIndex and length. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromIndex</td><td>An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+    <tr><td class="paramname">length</td><td>A length. The summation of the value and fromIndex must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new array containing the receiving array’s elements that fall within the limits specified by range made by fromIndex and length. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a86e5ae72b7202ce46ad44b7fe1c3421e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray *) subarrayFromIndex: </td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>fromIndex</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">toIndex:</td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>toIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new array containing the receiving array’s elements of the receiver from the one at a given index to up to, but not including, the one at a given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fromIndex</td><td>An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+    <tr><td class="paramname">toIndex</td><td>An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new array containing the receiving array’s elements of the receiver from the one at fromIndex to up to, but not including, the one at toIndex.</dd></dl>
+<p>Raises an NSRangeException if (toIndex - 1) lies beyond the end of the receiver. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8448f825bb26a34713b0e5fbb82a6907"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSArray *) subarrayToIndex: </td>
+          <td></td>
+          <td class="paramtype">(NSUInteger)&#160;</td>
+          <td class="paramname"><em>index</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new array containing the receiving array’s elements of the receiver up to, but not including, the one at a given index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>An index. The value must lie within the bounds of the receiver, or be equal to the length of the receiver. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new array containing the receiving array’s elements of the receiver up to, but not including, the one at anIndex. If anIndex is equal to the length of the array, returns a copy of the receiver.</dd></dl>
+<p>Raises an NSRangeException if (anIndex - 1) lies beyond the end of the receiver. </p>
 
 </div>
 </div>

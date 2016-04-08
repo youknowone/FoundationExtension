@@ -1,20 +1,10 @@
 var searchData=
 [
-  ['fileurl',['fileURL',['../categoryNSString_07NSURL_08.html#a85510986ee18efa4b8a40eda60cb2d94',1,'NSString(NSURL)']]],
-  ['fileurlwithformat_3a',['fileURLWithFormat:',['../categoryNSURL_07Creations_08.html#ae7e92fa29e162435385d32465123d620',1,'NSURL(Creations)']]],
-  ['filter_3a',['filter:',['../categoryNSMutableArray_07Functional_08.html#a671e6b020c85da68b65f91e26c15949c',1,'NSMutableArray(Functional)::filter:()'],['../categoryNSMutableDictionary_07Functional_08.html#ae0ad25e9477312317c195dc391752416',1,'NSMutableDictionary(Functional)::filter:()']]],
-  ['filterwithindex_3a',['filterWithIndex:',['../categoryNSMutableArray_07Functional_08.html#a9147180a536f05064e99c5355ac74d98',1,'NSMutableArray(Functional)']]],
-  ['filterwithkey_3a',['filterWithKey:',['../categoryNSMutableDictionary_07Functional_08.html#a825ea9bf6b6c0aee237ba7902bc48ba1',1,'NSMutableDictionary(Functional)']]],
-  ['firstkeybyfilteringoperatorwithkey_3a',['firstKeyByFilteringOperatorWithKey:',['../categoryNSDictionary_07Functional_08.html#a9ca396b4ffc0f45edb8627015898fd27',1,'NSDictionary(Functional)']]],
-  ['firstobjectbyfilteringoperator_3a',['firstObjectByFilteringOperator:',['../categoryNSEnumerator_07Functional_08.html#ace0236df00ad54c8ca03bd561453f59c',1,'NSEnumerator(Functional)::firstObjectByFilteringOperator:()'],['../categoryNSArray_07Functional_08.html#a65db3cb2cdb114442e5403fa0096c427',1,'NSArray(Functional)::firstObjectByFilteringOperator:()'],['../categoryNSDictionary_07Functional_08.html#a0382cd32e38bf3bf8a39560b02188088',1,'NSDictionary(Functional)::firstObjectByFilteringOperator:()'],['../categoryNSSet_07Functional_08.html#ac89cbb3abf2331d7c472a26dd374f8ad',1,'NSSet(Functional)::firstObjectByFilteringOperator:()']]],
-  ['firstobjectbyfilteringoperatorwithindex_3a',['firstObjectByFilteringOperatorWithIndex:',['../categoryNSArray_07Functional_08.html#a83adbd7094fae3724d9cf26cb07e3fda',1,'NSArray(Functional)']]],
-  ['firstobjectbyfilteringoperatorwithkey_3a',['firstObjectByFilteringOperatorWithKey:',['../categoryNSDictionary_07Functional_08.html#a448bfceb3308ce88ed8aad571738a44a',1,'NSDictionary(Functional)']]],
-  ['flushasync',['flushAsync',['../interfaceFSEventStream.html#a92da08a35b794e29e479c6d9b1476e38',1,'FSEventStream']]],
-  ['flushsync',['flushSync',['../interfaceFSEventStream.html#a155eb08448202e68e0a7b5e5e5efe7aa',1,'FSEventStream']]],
-  ['format0_3a',['format0:',['../categoryNSString_07Shortcuts_08.html#a85e6363d2b64170af9994a219edc4b0d',1,'NSString(Shortcuts)']]],
-  ['format_3a',['format:',['../categoryNSString_07Shortcuts_08.html#a30ff847a56662550f4699842709bffef',1,'NSString(Shortcuts)']]],
-  ['formattedstringbydecimalstyleforinteger_3a',['formattedStringByDecimalStyleForInteger:',['../categoryNSNumberFormatter_07Shortcuts_08.html#a6ddf318b3f25922f40c05ca5ef0c31b0',1,'NSNumberFormatter(Shortcuts)']]],
-  ['formattedstringbydecimalstylefornumber_3a',['formattedStringByDecimalStyleForNumber:',['../categoryNSNumberFormatter_07Shortcuts_08.html#a7de3e5af7f062d363e1f44a6788c1396',1,'NSNumberFormatter(Shortcuts)']]],
-  ['formatter',['formatter',['../categoryNSNumberFormatter_07Shortcuts_08.html#ad4611de50b1094bea75927960fe98228',1,'NSNumberFormatter(Shortcuts)']]],
-  ['formatterwithnumberstyle_3a',['formatterWithNumberStyle:',['../categoryNSNumberFormatter_07Shortcuts_08.html#a30a4bfaa6aa0f6220e29e6d5e76a0b2b',1,'NSNumberFormatter(Shortcuts)']]]
+  ['hashttpprefix',['hasHTTPPrefix',['../categoryNSString_07NSURL_08.html#a639ea9d6853df5abba34d0eb8d8c26eb',1,'NSString(NSURL)']]],
+  ['hasindex_3a',['hasIndex:',['../categoryNSArray_07Shortcuts_08.html#a1c287e1016a3d7416a0a64eca33698e3',1,'NSArray(Shortcuts)']]],
+  ['hassmarturlprefix',['hasSmartURLPrefix',['../categoryNSString_07NSURL_08.html#a41d4df2db8903116131affc46f195b16',1,'NSString(NSURL)']]],
+  ['hassubstring_3a',['hasSubstring:',['../categoryNSString_07Deprecation_08.html#afee0656c68201a246c31c20a485324d7',1,'NSString(Deprecation)']]],
+  ['hexadecimalstring',['hexadecimalString',['../categoryNSData_07Serialization_08.html#a9931ce3beebaddad3803ee6411d564fb',1,'NSData(Serialization)']]],
+  ['hexadecimalvalue',['hexadecimalValue',['../categoryNSString_07Evaluation_08.html#af4e3f0938e47549f44cc9c40cefc8448',1,'NSString(Evaluation)']]],
+  ['httpbody',['HTTPBody',['../interfaceNSAURLRequestHTTPBodyMultiPartFormPostFormatter.html#a1f556487ffd3b2f62cffbeeb60f440b9',1,'NSAURLRequestHTTPBodyMultiPartFormPostFormatter']]]
 ];

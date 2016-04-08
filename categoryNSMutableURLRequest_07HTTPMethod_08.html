@@ -119,19 +119,47 @@ $(document).ready(function(){initNavTree('categoryNSMutableURLRequest_07HTTPMeth
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
+<tr class="memitem:a071e5e0fa0606f4e8cb6386ff96ed6a8"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSMutableURLRequest_07HTTPMethod_08.html#a071e5e0fa0606f4e8cb6386ff96ed6a8">setHTTPPostBody:</a></td></tr>
+<tr class="memdesc:a071e5e0fa0606f4e8cb6386ff96ed6a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format.  <a href="#a071e5e0fa0606f4e8cb6386ff96ed6a8">More...</a><br /></td></tr>
+<tr class="separator:a071e5e0fa0606f4e8cb6386ff96ed6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e46661a1921b0d92ee1a7128951c652"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSMutableURLRequest_07HTTPMethod_08.html#a2e46661a1921b0d92ee1a7128951c652">setHTTPPostBody:encoding:</a></td></tr>
-<tr class="memdesc:a2e46661a1921b0d92ee1a7128951c652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format.  <a href="#a2e46661a1921b0d92ee1a7128951c652">More...</a><br /></td></tr>
+<tr class="memdesc:a2e46661a1921b0d92ee1a7128951c652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the request body of the receiver to the specified data from bodyDictionary as url form format.  <a href="#a2e46661a1921b0d92ee1a7128951c652">More...</a><br /></td></tr>
 <tr class="separator:a2e46661a1921b0d92ee1a7128951c652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NSMutableURLRequest POST extension. </p>
 </div><h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a2e46661a1921b0d92ee1a7128951c652"></a>
+<a class="anchor" id="a071e5e0fa0606f4e8cb6386ff96ed6a8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">- (void) setHTTPPostBody: </td>
+          <td></td>
+          <td class="paramtype">(NSDictionary *)&#160;</td>
+          <td class="paramname"><em>bodyDictionary</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bodyDictionary</td><td>The new request body of the receiver to the specified data from dictionary with url form encoding. Objects should be NSString compatible objects only. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSMutableURLRequest/setHTTPBody:">setHTTPBody:</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e46661a1921b0d92ee1a7128951c652"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) <a class="el" href="categoryNSMutableURLRequest_07HTTPMethod_08.html#a071e5e0fa0606f4e8cb6386ff96ed6a8">setHTTPPostBody:</a> </td>
           <td></td>
           <td class="paramtype">(NSDictionary *)&#160;</td>
           <td class="paramname"><em>bodyDictionary</em></td>
@@ -150,7 +178,7 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the request body of the receiver to the specified data from bodyDictionary and given encoding as url form format. </p>
+<p>Sets the request body of the receiver to the specified data from bodyDictionary as url form format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bodyDictionary</td><td>The new request body of the receiver to the specified data from dictionary with url form encoding. Objects should be NSString compatible objects only. </td></tr>

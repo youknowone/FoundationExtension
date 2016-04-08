@@ -1,7 +1,6 @@
 var searchData=
 [
   ['valueforobject',['valueForObject',['../categoryNSObject_07NSValue_08.html#a0daa826cfd0829cd5bc42ffa86f4e69c',1,'NSObject(NSValue)']]],
-  ['variableforname_3a',['variableForName:',['../categoryNSObject_07ObjCRuntime_08.html#ae3c73b8ddf25af1a5241713f1c4b94ad',1,'NSObject(ObjCRuntime)']]],
   ['versionwithstring_3a',['versionWithString:',['../interfaceNSAVersion.html#a5aec2e28d972a752ade80ee5851bbc49',1,'NSAVersion']]],
   ['verticalglyphform',['verticalGlyphForm',['../interfaceNSAttributedStringAttributeDictionary.html#a9e8a972e40f462742c84ec8b5ff7af08',1,'NSAttributedStringAttributeDictionary']]],
   ['verticalglyphformnumber',['verticalGlyphFormNumber',['../interfaceNSAttributedStringAttributeDictionary.html#ae6a9c0b89d6fc7d7ca9bbf5bac25443e',1,'NSAttributedStringAttributeDictionary']]],

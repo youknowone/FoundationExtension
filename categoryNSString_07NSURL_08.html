@@ -105,7 +105,6 @@ $(document).ready(function(){initNavTree('categoryNSString_07NSURL_08.html','');
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Instance Methods</a> &#124;
 <a href="categoryNSString_07NSURL_08-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">NSString(NSURL) Category Reference</div>  </div>
@@ -119,6 +118,14 @@ $(document).ready(function(){initNavTree('categoryNSString_07NSURL_08.html','');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">UTF8 shortcuts</div></td></tr>
+<tr class="memitem:a00a5ec08a072053fc0c4cfd1af51d1b4"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#a00a5ec08a072053fc0c4cfd1af51d1b4">stringByAddingPercentEncodingWithoutAllowedCharacters</a></td></tr>
+<tr class="memdesc:a00a5ec08a072053fc0c4cfd1af51d1b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new string made from the receiver by replacing all characters with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string.  <a href="#a00a5ec08a072053fc0c4cfd1af51d1b4">More...</a><br /></td></tr>
+<tr class="separator:a00a5ec08a072053fc0c4cfd1af51d1b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6da152d76ed38b8db7c395af9dfa6362"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#a6da152d76ed38b8db7c395af9dfa6362">stringByAddingPercentEncodingForURLQuery</a></td></tr>
+<tr class="memdesc:a6da152d76ed38b8db7c395af9dfa6362"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new string made from the receiver by replacing characters with percent encoded characters except for URL query characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded.  <a href="#a6da152d76ed38b8db7c395af9dfa6362">More...</a><br /></td></tr>
+<tr class="separator:a6da152d76ed38b8db7c395af9dfa6362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">URL prefix</div></td></tr>
 <tr class="memitem:a639ea9d6853df5abba34d0eb8d8c26eb"><td class="memItemLeft" align="right" valign="top">(BOOL)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#a639ea9d6853df5abba34d0eb8d8c26eb">hasHTTPPrefix</a></td></tr>
 <tr class="memdesc:a639ea9d6853df5abba34d0eb8d8c26eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value that indicates whether '<a href="http://'">http://'</a> or '<a href="https://'">https://'</a> matches the beginning characters of the receiver.  <a href="#a639ea9d6853df5abba34d0eb8d8c26eb">More...</a><br /></td></tr>
 <tr class="separator:a639ea9d6853df5abba34d0eb8d8c26eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -128,8 +135,9 @@ Instance Methods</h2></td></tr>
 <tr class="memitem:ae4df6b961f8a694c86ceede6b5daa69b"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#ae4df6b961f8a694c86ceede6b5daa69b">URLProtocol</a></td></tr>
 <tr class="memdesc:ae4df6b961f8a694c86ceede6b5daa69b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a String value that prefix matches "(^[a-zA-Z]*)://.*" or nil.  <a href="#ae4df6b961f8a694c86ceede6b5daa69b">More...</a><br /></td></tr>
 <tr class="separator:ae4df6b961f8a694c86ceede6b5daa69b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Creating an URL</div></td></tr>
 <tr class="memitem:afe8cfb6b0967d2c1af9afae69c346a8d"><td class="memItemLeft" align="right" valign="top">(NSURL *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#afe8cfb6b0967d2c1af9afae69c346a8d">URL</a></td></tr>
-<tr class="memdesc:afe8cfb6b0967d2c1af9afae69c346a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating an URL.  <a href="#afe8cfb6b0967d2c1af9afae69c346a8d">More...</a><br /></td></tr>
+<tr class="memdesc:afe8cfb6b0967d2c1af9afae69c346a8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a URL from self value.  <a href="#afe8cfb6b0967d2c1af9afae69c346a8d">More...</a><br /></td></tr>
 <tr class="separator:afe8cfb6b0967d2c1af9afae69c346a8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85510986ee18efa4b8a40eda60cb2d94"><td class="memItemLeft" align="right" valign="top">(NSURL *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="categoryNSString_07NSURL_08.html#a85510986ee18efa4b8a40eda60cb2d94">fileURL</a></td></tr>
 <tr class="memdesc:a85510986ee18efa4b8a40eda60cb2d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a file URL from self value.  <a href="#a85510986ee18efa4b8a40eda60cb2d94">More...</a><br /></td></tr>
@@ -169,7 +177,7 @@ Instance Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000040">Deprecated:</a></b></dt><dd>Use <a class="el" href="">smartURL</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000044">Deprecated:</a></b></dt><dd>Use <a class="el" href="">smartURL</a> </dd></dl>
 
 </div>
 </div>
@@ -185,7 +193,7 @@ Instance Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000041">Deprecated:</a></b></dt><dd>Use <a class="el" href="">hasHTTPPrefix</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000045">Deprecated:</a></b></dt><dd>Use <a class="el" href="">hasHTTPPrefix</a> </dd></dl>
 
 </div>
 </div>
@@ -239,7 +247,6 @@ Instance Methods</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a Boolean value that indicates whether '<a href="http://'">http://'</a> or '<a href="https://'">https://'</a> matches the beginning characters of the receiver. </p>
-<p>URL prefix</p>
 <dl class="section return"><dt>Returns</dt><dd>YES if '<a href="http://'">http://'</a> or '<a href="https://'">https://'</a> matches the beginning characters of the receiver, otherwise NO. Returns NO if aString is empty. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/hasPrefix:">hasPrefix:</a> </dd></dl>
 
@@ -276,7 +283,7 @@ Instance Methods</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000042">Deprecated:</a></b></dt><dd>Use <a class="el" href="">URLProtocol</a> </dd></dl>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000046">Deprecated:</a></b></dt><dd>Use <a class="el" href="">URLProtocol</a> </dd></dl>
 
 </div>
 </div>
@@ -316,6 +323,42 @@ Instance Methods</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a6da152d76ed38b8db7c395af9dfa6362"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) stringByAddingPercentEncodingForURLQuery </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new string made from the receiver by replacing characters with percent encoded characters except for URL query characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEncodingWithAllowedCharacters:">stringByAddingPercentEncodingWithAllowedCharacters:</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a00a5ec08a072053fc0c4cfd1af51d1b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) stringByAddingPercentEncodingWithoutAllowedCharacters </td>
+          <td></td>
+          <td class="paramname"></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new string made from the receiver by replacing all characters with percent encoded characters. UTF-8 encoding is used to determine the correct percent encoded characters. Entire URL strings cannot be percent-encoded. This method is intended to percent-encode an URL component or subcomponent string, NOT the entire URL string. </p>
+<dl class="section see"><dt>See also</dt><dd><a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/occ/instm/NSString/stringByAddingPercentEncodingWithAllowedCharacters:">stringByAddingPercentEncodingWithAllowedCharacters:</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9df0212edd24bcbcb6dda0da8a241968"></a>
 <div class="memitem">
 <div class="memproto">
@@ -347,8 +390,8 @@ Instance Methods</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creating an URL. </p>
-<p>Returns a URL from self value. </p><dl class="section return"><dt>Returns</dt><dd>Result of <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURL/URLWithString:">NSURL -URLWithString:</a> </dd></dl>
+<p>Returns a URL from self value. </p>
+<dl class="section return"><dt>Returns</dt><dd>Result of <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURL/URLWithString:">NSURL -URLWithString:</a> </dd></dl>
 
 </div>
 </div>

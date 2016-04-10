@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 @interface UIASegmentedImageView : UIImageView
 
 @property(nonatomic, strong) UIImage *centerImage;
@@ -35,3 +37,5 @@
 - (void)arrange;
 
 @end
+
+#endif

@@ -11,14 +11,8 @@
 #import "UIApplication.h"
 #import "NSObject.h"
 
-@implementation UIApplication (PrivatePatch)
 
-- (CGRect)__statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
-    assert(NO);
-    return CGRectZero;
-}
-
-@end
+#if TARGET_OS_IOS
 
 @implementation UIApplication (Shortcuts)
 
@@ -28,6 +22,21 @@
     [class methodObjectForSelector:@selector(__statusBarFrameForOrientation:)].implementation = [class methodObjectForSelector:NSSelectorFromString(selectorName)].implementation;
     return [self __statusBarFrameForOrientation:self.statusBarOrientation];
 }
+
+@end
+
+
+@implementation UIApplication (PrivatePatch)
+
+- (CGRect)__statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
+    assert(NO);
+    return CGRectZero;
+}
+
+@end
+
+
+@interface UIApplication (Deprecated)
 
 - (CGSize) statusBarOrientationReducedSize {
     return [self statusBarSizeForOrientation:self.statusBarOrientation];
@@ -39,3 +48,5 @@
 }
 
 @end
+
+#endif

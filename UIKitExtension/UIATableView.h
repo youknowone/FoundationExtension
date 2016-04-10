@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 @protocol UIATableViewCellCopyableDelegate;
 
 @interface UIATableViewCellCopyable : UITableViewCell {
@@ -33,3 +35,5 @@
 - (void)cellWillHideMenu:(UIATableViewCellCopyable *)cell;
 
 @end
+
+#endif

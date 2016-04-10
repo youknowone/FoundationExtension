@@ -8,6 +8,8 @@
 
 #import "UIAlertView.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIAlertView (Shortcuts)
 
 + (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line {
@@ -33,3 +35,5 @@
 }
 
 @end
+
+#endif

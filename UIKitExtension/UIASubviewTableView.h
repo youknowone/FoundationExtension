@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 @protocol UIASubviewTableSubviewSource;
 
 /*!
@@ -84,3 +86,5 @@
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath;
 
 @end
+
+#endif

@@ -14,6 +14,8 @@
 #import "UIASubviewTableView.h"
 
 
+#if TARGET_OS_IOS
+
 @interface _UIASubviewTableViewDataSource: NSObject<UITableViewDataSource> {
     UIASubviewTableView *__weak _owner;
 }
@@ -164,3 +166,5 @@
 @end
 
 #pragma clang diagnostic pop
+
+#endif

@@ -8,6 +8,8 @@
 
 #import "UIWebView.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIWebView (Shortcuts)
 
 - (void)loadRequestForURL:(NSURL *)URL {
@@ -19,3 +21,5 @@
 }
 
 @end
+
+#endif

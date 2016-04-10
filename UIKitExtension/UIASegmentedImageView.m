@@ -11,6 +11,8 @@
 
 #import "UIASegmentedImageView.h"
 
+#if TARGET_OS_IOS
+
 @interface UIASegmentedImageView ()
 
 @property(nonatomic, strong) UIImageView *centerImageView;
@@ -327,3 +329,5 @@
 }
 
 @end
+
+#endif

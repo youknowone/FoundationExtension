@@ -254,7 +254,6 @@
 		38C98B32161ADAD700C4A389 /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
 		38C98B33161ADAD700C4A389 /* NSURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A63161AD9AE00C5CE06 /* NSURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C98B34161ADAD700C4A389 /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
-		38D52568174EB6BA00B46322 /* ViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D52567174EB49500B46322 /* ViewHolder.xib */; };
 		38D52569174EB6E300B46322 /* ViewHolder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D52567174EB49500B46322 /* ViewHolder.xib */; };
 		38D5BD2C19CDB1FA00DC7C8D /* FoundationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06986163841F6002723AB /* FoundationTests.m */; };
 		38D5BD2D19CDB1FA00DC7C8D /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
@@ -1802,7 +1801,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */,
-				38D52568174EB6BA00B46322 /* ViewHolder.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2357,6 +2355,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = FoundationExtensionRC;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
@@ -2391,6 +2390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = FoundationExtensionRC;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
@@ -2415,6 +2415,7 @@
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -2435,6 +2436,7 @@
 				PRODUCT_NAME = FoundationExtension;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -2642,6 +2644,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 			};
 			name = Debug;
 		};
@@ -2662,6 +2665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -2992,6 +2996,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3026,6 +3031,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSION_INFO_PREFIX = "";

@@ -14,6 +14,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 /*!
  *  @brief UIWebView extension
  */
@@ -30,3 +32,5 @@
 - (void)loadRequestForFilePath:(NSString *)filePath __deprecated;
 
 @end
+
+#endif

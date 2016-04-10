@@ -8,6 +8,8 @@
 
 #import "UIATableView.h"
 
+#if TARGET_OS_IOS
+
 static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
 
 @interface UIATableViewCellCopyable ()
@@ -55,6 +57,7 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
     return [super canPerformAction:action withSender:sender];
 }
 
+#if TARGET_OS_IOS
 - (void)copy:(id)sender {
     if (self->_copyableFlags.hasDelegateString) {
         NSString *dataText = [self.delegate stringForCell:self];
@@ -66,6 +69,7 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
 
     [self resignFirstResponder];
 }
+#endif
 
 - (BOOL)canBecomeFirstResponder
 {
@@ -139,3 +143,5 @@ static const CFTimeInterval kLongPressMinimumDurationSeconds = 0.36;
 }
 
 @end
+
+#endif

@@ -10,6 +10,8 @@
 
 #import "UIAPlaceholderTextView.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIAPlaceholderTextView
 
 @synthesize placeholderAnimated=_placeholderAnimated;
@@ -113,3 +115,5 @@
 }
 
 @end
+
+#endif

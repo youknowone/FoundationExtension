@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 /*!
  *  @brief UITextView with placeholder.
  */
@@ -39,3 +41,5 @@
 @property(nonatomic, assign, getter=isPlaceholderAnimated) BOOL placeholderAnimated;
 
 @end
+
+#endif

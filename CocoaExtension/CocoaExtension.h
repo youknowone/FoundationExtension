@@ -18,7 +18,7 @@
  *  @see @ref FoundationExtension
  */
 
-@import Cocoa;
+#import <Cocoa/Cocoa.h>
 
 //! Project version number for FoundationExtension.
 FOUNDATION_EXPORT double CocoaExtensionVersionNumber;

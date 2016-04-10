@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-@import XCTest;
+#import <XCTest/XCTest.h>
 #import <CocoaExtension/CocoaExtension.h>
 
 @interface CocoaExtensionTests : XCTestCase<FSEventStreamDelegate> {

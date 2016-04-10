@@ -25,7 +25,7 @@
  *  @see @ref FoundationExtension
  */
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 //! Project version number for FoundationExtensionRC.
 FOUNDATION_EXPORT double FoundationExtensionRCVersionNumber;

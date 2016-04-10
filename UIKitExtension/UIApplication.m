@@ -12,7 +12,7 @@
 #import "NSObject.h"
 
 
-#if TARGET_OS_IOS
+#if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 
 @implementation UIApplication (PrivatePatch)
 

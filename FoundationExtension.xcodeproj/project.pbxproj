@@ -17,6 +17,8 @@
 		3805FBAA17AA89E2008487A9 /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
 		3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBB117AA901D008487A9 /* NSAVersion+System.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
+		380D3FA41CBA5A050081E527 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
+		380D3FA71CBA5A130081E527 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		3819C11719E3A0DA003CFF60 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		3819C11A19E45442003CFF60 /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3819C11B19E45442003CFF60 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
@@ -25,82 +27,6 @@
 		382E2208176DE62C005F0A98 /* Image.png in Resources */ = {isa = PBXBuildFile; fileRef = 382E2207176DE62C005F0A98 /* Image.png */; };
 		382E39AC1727C8F300099BC4 /* NSControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 382E39AA1727C8F300099BC4 /* NSControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382E39AD1727C8F300099BC4 /* NSControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 382E39AB1727C8F300099BC4 /* NSControl.m */; };
-		3830608A1C9F75360077325F /* NSTimerRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3801CF5E1C9E650400CA941C /* NSTimerRC.m */; };
-		3830608B1C9F75360077325F /* NSObjectRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3801CF571C9E618700CA941C /* NSObjectRC.m */; };
-		3830608C1C9F75360077325F /* NSArrayRC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D8E4E81C9F739600BAD2CE /* NSArrayRC.m */; };
-		3830608E1C9F75360077325F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383764D713373154007072FD /* Foundation.framework */; };
-		383060901C9F75360077325F /* FoundationExtensionRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3801CF4C1C9E60D200CA941C /* FoundationExtensionRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060911C9F75360077325F /* NSObjectRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3801CF561C9E618700CA941C /* NSObjectRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060921C9F75360077325F /* NSTimerRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 3801CF5D1C9E650400CA941C /* NSTimerRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060931C9F75360077325F /* NSArrayRC.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D8E4E71C9F739600BAD2CE /* NSArrayRC.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3830609E1C9F75870077325F /* NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArray.m */; };
-		3830609F1C9F75870077325F /* NSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundle.m */; };
-		383060A01C9F75870077325F /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
-		383060A11C9F75870077325F /* NSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSData.m */; };
-		383060A21C9F75870077325F /* NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDate.m */; };
-		383060A31C9F75870077325F /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
-		383060A41C9F75870077325F /* NSTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D8E4E41C9F720F00BAD2CE /* NSTimer.m */; };
-		383060A51C9F75870077325F /* NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionary.m */; };
-		383060A61C9F75870077325F /* NSNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatter.m */; };
-		383060A71C9F75870077325F /* NSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilities.m */; };
-		383060A81C9F75870077325F /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSString.m */; };
-		383060A91C9F75870077325F /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
-		383060AA1C9F75870077325F /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
-		383060AB1C9F75870077325F /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
-		383060AC1C9F75870077325F /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
-		383060AD1C9F75870077325F /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
-		383060AE1C9F75870077325F /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
-		383060AF1C9F75870077325F /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
-		383060B01C9F75870077325F /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
-		383060B11C9F75870077325F /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
-		383060B21C9F75870077325F /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
-		383060B31C9F75870077325F /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedString.m */; };
-		383060B41C9F75870077325F /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C871642EC5B0059773B /* NSURLRequestCreations.m */; };
-		383060B51C9F75870077325F /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
-		383060B61C9F75870077325F /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
-		383060B71C9F75870077325F /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
-		383060B81C9F75870077325F /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
-		383060B91C9F75870077325F /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
-		383060BA1C9F75870077325F /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
-		383060BB1C9F75870077325F /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
-		383060BC1C9F75870077325F /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
-		383060BD1C9F75870077325F /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
-		383060C01C9F75870077325F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
-		383060C21C9F75870077325F /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C31C9F75870077325F /* NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C41C9F75870077325F /* NSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A50161AD9AE00C5CE06 /* NSBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C51C9F75870077325F /* NSData.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A52161AD9AE00C5CE06 /* NSData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C61C9F75870077325F /* NSDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A54161AD9AE00C5CE06 /* NSDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C71C9F75870077325F /* NSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A56161AD9AE00C5CE06 /* NSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C81C9F75870077325F /* NSNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A58161AD9AE00C5CE06 /* NSNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060C91C9F75870077325F /* NSPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5A161AD9AE00C5CE06 /* NSPathUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CA1C9F75870077325F /* NSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5C161AD9AE00C5CE06 /* NSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CB1C9F75870077325F /* NSStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5E161AD9AE00C5CE06 /* NSStringEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CC1C9F75870077325F /* NSURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A61161AD9AE00C5CE06 /* NSURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CD1C9F75870077325F /* NSTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D8E4E31C9F720F00BAD2CE /* NSTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CE1C9F75870077325F /* NSURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A63161AD9AE00C5CE06 /* NSURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060CF1C9F75870077325F /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D01C9F75870077325F /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D11C9F75870077325F /* NSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D21C9F75870077325F /* NSAClassDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D31C9F75870077325F /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D41C9F75870077325F /* NSAEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD946919CDED210092433C /* NSAEnumerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D51C9F75870077325F /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D61C9F75870077325F /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D71C9F75870077325F /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D81C9F75870077325F /* NSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060D91C9F75870077325F /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DA1C9F75870077325F /* NSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C921645837A0059773B /* NSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DB1C9F75870077325F /* NSAOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505CB9164647910059773B /* NSAOrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DC1C9F75870077325F /* NSACommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DD1C9F75870077325F /* NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 387B1EB316EBD0F50059722B /* NSNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DE1C9F75870077325F /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C69171463F60001A99D /* NSNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060DF1C9F75870077325F /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060E01C9F75870077325F /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060E11C9F75870077325F /* NSAVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBA617AA89E2008487A9 /* NSAVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060E21C9F75870077325F /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060E31C9F75870077325F /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		383060EF1C9F76A10077325F /* FoundationExtensionRC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060981C9F75360077325F /* FoundationExtensionRC.framework */; };
 		38412DC0170762F10082ED4E /* UITResultDisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38412DBF17075D5F0082ED4E /* UITResultDisplayViewController.xib */; };
 		38485C51170F14820001A99D /* NSGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C4F170F14820001A99D /* NSGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38485C52170F14820001A99D /* NSGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C50170F14820001A99D /* NSGeometry.m */; };
@@ -121,9 +47,7 @@
 		3855B04A163CF2B1005584CD /* CocoaExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B049163CF2B1005584CD /* CocoaExtensionTests.m */; };
 		3855B053163D41F9005584CD /* FSEventStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 3855B051163D41F9005584CD /* FSEventStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3855B054163D41F9005584CD /* FSEventStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 3855B052163D41F9005584CD /* FSEventStream.m */; };
-		3859104F1CA98D6A0028A51A /* NSASubscript.h in Headers */ = {isa = PBXBuildFile; fileRef = 384852E219CB2E0D00304965 /* NSASubscript.h */; };
 		385910761CA98E9B0028A51A /* UIKitExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F74E621C9ECB6A00D94A45 /* UIKitExtension.framework */; };
-		385910771CA98EA60028A51A /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060E81C9F75870077325F /* FoundationExtension.framework */; };
 		3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90119C6B48100B4DC72 /* MediaPlayer.framework */; };
 		3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3865D90419C6B5D100B4DC72 /* UIKit.framework */; };
 		3868F3B8162885D300C31163 /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -146,71 +70,6 @@
 		387B1EB716EBD0F50059722B /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
 		3888FC5B176C778D00489638 /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3888FC5D176C778D00489638 /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
-		388D08801BD01DB2004B648C /* NSArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A4F161AD9AE00C5CE06 /* NSArray.m */; };
-		388D08811BD01DB2004B648C /* NSBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A51161AD9AE00C5CE06 /* NSBundle.m */; };
-		388D08821BD01DB2004B648C /* NSAEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD946A19CDED210092433C /* NSAEnumerator.m */; };
-		388D08831BD01DB2004B648C /* NSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A53161AD9AE00C5CE06 /* NSData.m */; };
-		388D08841BD01DB2004B648C /* NSDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A55161AD9AE00C5CE06 /* NSDate.m */; };
-		388D08851BD01DB2004B648C /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
-		388D08861BD01DB2004B648C /* NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A57161AD9AE00C5CE06 /* NSDictionary.m */; };
-		388D08871BD01DB2004B648C /* NSNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A59161AD9AE00C5CE06 /* NSNumberFormatter.m */; };
-		388D08881BD01DB2004B648C /* NSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5B161AD9AE00C5CE06 /* NSPathUtilities.m */; };
-		388D08891BD01DB2004B648C /* NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A5D161AD9AE00C5CE06 /* NSString.m */; };
-		388D088B1BD01DB2004B648C /* NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A62161AD9AE00C5CE06 /* NSURL.m */; };
-		388D088C1BD01DB2004B648C /* NSURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 38660A64161AD9AE00C5CE06 /* NSURLRequest.m */; };
-		388D088D1BD01DB2004B648C /* NSACommonDigest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B4162885D300C31163 /* NSACommonDigest.m */; };
-		388D088E1BD01DB2004B648C /* NSADataObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F3B6162885D300C31163 /* NSADataObject.m */; };
-		388D088F1BD01DB2004B648C /* NSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7AF162D57EB00C31163 /* NSObject.m */; };
-		388D08901BD01DB2004B648C /* NSAClassDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 3868F7B8162D58ED00C31163 /* NSAClassDeprecated.m */; };
-		388D08911BD01DB2004B648C /* NSAArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F06979163839D2002723AB /* NSAArray.m */; };
-		388D08921BD01DB2004B648C /* NSADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698A16384E3F002723AB /* NSADictionary.m */; };
-		388D08931BD01DB2004B648C /* NSAString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F0698F16385751002723AB /* NSAString.m */; };
-		388D08941BD01DB2004B648C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
-		388D08951BD01DB2004B648C /* NSAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C73D1641382D0044C73C /* NSAttributedString.m */; };
-		388D08961BD01DB2004B648C /* NSURLRequestCreations.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C871642EC5B0059773B /* NSURLRequestCreations.m */; };
-		388D08971BD01DB2004B648C /* NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD75AE17E0759700153727 /* NSSet.m */; };
-		388D08981BD01DB2004B648C /* NSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505C931645837C0059773B /* NSJSONSerialization.m */; };
-		388D08991BD01DB2004B648C /* NSAOrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 38505CBA164647910059773B /* NSAOrderedDictionary.m */; };
-		388D089A1BD01DB2004B648C /* NSACommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3877F44816A5FC4B007CD975 /* NSACommonCrypto.m */; };
-		388D089B1BD01DB2004B648C /* NSNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 387B1EB416EBD0F50059722B /* NSNumber.m */; };
-		388D089C1BD01DB2004B648C /* NSNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 38485C6A171463F70001A99D /* NSNull.m */; };
-		388D089D1BD01DB2004B648C /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
-		388D089E1BD01DB2004B648C /* NSValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC5A176C778D00489638 /* NSValue.m */; };
-		388D089F1BD01DB2004B648C /* NSAVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBA717AA89E2008487A9 /* NSAVersion.m */; };
-		388D08A11BD01DB2004B648C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
-		388D08A31BD01DB2004B648C /* NSAEnumerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD946919CDED210092433C /* NSAEnumerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A41BD01DB2004B648C /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A51BD01DB2004B648C /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A61BD01DB2004B648C /* NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A71BD01DB2004B648C /* NSBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A50161AD9AE00C5CE06 /* NSBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A81BD01DB2004B648C /* NSData.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A52161AD9AE00C5CE06 /* NSData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08A91BD01DB2004B648C /* NSDate.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A54161AD9AE00C5CE06 /* NSDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08AA1BD01DB2004B648C /* NSDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A56161AD9AE00C5CE06 /* NSDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08AB1BD01DB2004B648C /* NSNumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A58161AD9AE00C5CE06 /* NSNumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08AC1BD01DB2004B648C /* NSPathUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5A161AD9AE00C5CE06 /* NSPathUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08AD1BD01DB2004B648C /* NSString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5C161AD9AE00C5CE06 /* NSString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08AE1BD01DB2004B648C /* NSStringEncoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A5E161AD9AE00C5CE06 /* NSStringEncoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B01BD01DB2004B648C /* NSURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A61161AD9AE00C5CE06 /* NSURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B11BD01DB2004B648C /* NSURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A63161AD9AE00C5CE06 /* NSURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B21BD01DB2004B648C /* NSACommonDigest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B3162885D300C31163 /* NSACommonDigest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B31BD01DB2004B648C /* NSADataObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F3B5162885D300C31163 /* NSADataObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B41BD01DB2004B648C /* NSObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7AE162D57EB00C31163 /* NSObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B51BD01DB2004B648C /* NSAClassDeprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 3868F7B7162D58ED00C31163 /* NSAClassDeprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B61BD01DB2004B648C /* NSAArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F06978163839D2002723AB /* NSAArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B71BD01DB2004B648C /* NSADictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698916384E3E002723AB /* NSADictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B81BD01DB2004B648C /* NSAString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0698E16385750002723AB /* NSAString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08B91BD01DB2004B648C /* NSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FD75AD17E0759700153727 /* NSSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BA1BD01DB2004B648C /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BB1BD01DB2004B648C /* NSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BC1BD01DB2004B648C /* NSURLRequestCreations.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C861642EC5A0059773B /* NSURLRequestCreations.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BD1BD01DB2004B648C /* NSJSONSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505C921645837A0059773B /* NSJSONSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BE1BD01DB2004B648C /* NSAOrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 38505CB9164647910059773B /* NSAOrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08BF1BD01DB2004B648C /* NSACommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 3877F44716A5FC4B007CD975 /* NSACommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08C01BD01DB2004B648C /* NSNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 387B1EB316EBD0F50059722B /* NSNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08C11BD01DB2004B648C /* NSNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 38485C69171463F60001A99D /* NSNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08C21BD01DB2004B648C /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08C31BD01DB2004B648C /* NSValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3888FC59176C778D00489638 /* NSValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		388D08C41BD01DB2004B648C /* NSAVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 3805FBA617AA89E2008487A9 /* NSAVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		388D1C1B176E22FD0061527C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C16176E22FD0061527C /* 3.png */; };
 		388D1C1C176E22FD0061527C /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C17176E22FD0061527C /* 0.png */; };
 		388D1C1D176E22FD0061527C /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C18176E22FD0061527C /* 1.png */; };
@@ -218,8 +77,6 @@
 		388D1C1F176E22FD0061527C /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 388D1C1A176E22FD0061527C /* 4.png */; };
 		389161FF1C947396006B6A98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389161FE1C947396006B6A98 /* QuartzCore.framework */; };
 		38ABE3931CA014C6004D003A /* NSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ABE3921CA014C6004D003A /* NSMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38ABE3941CA0D49D004D003A /* NSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ABE3921CA014C6004D003A /* NSMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38ABE3951CA0D49F004D003A /* NSMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 38ABE3921CA014C6004D003A /* NSMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B0C6E9163F73800044C73C /* NSAFunctional.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C6E7163F737F0044C73C /* NSAFunctional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B0C6EB163F73800044C73C /* NSAFunctional.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B0C6E8163F73800044C73C /* NSAFunctional.m */; };
 		38B0C73E1641382D0044C73C /* NSAttributedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B0C73C1641382D0044C73C /* NSAttributedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -230,7 +87,6 @@
 		38BC0E5E173E821700F36497 /* UITSubviewTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BC0E5C173E821700F36497 /* UITSubviewTableViewController.xib */; };
 		38BC0E61173ED68900F36497 /* NSAOverridingMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BC0E5F173ED68900F36497 /* NSAOverridingMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BC0E62173ED68900F36497 /* NSAOverridingMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC0E60173ED68900F36497 /* NSAOverridingMediator.m */; };
-		38BDFA181CA9873B00A2FD9C /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383060E81C9F75870077325F /* FoundationExtension.framework */; };
 		38C7A9D114951D2C00381910 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9D014951D2C00381910 /* Foundation.framework */; };
 		38C98B1D161ADAD700C4A389 /* FoundationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4D161AD9AD00C5CE06 /* FoundationExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C98B1E161ADAD700C4A389 /* NSArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38660A4E161AD9AD00C5CE06 /* NSArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -382,12 +238,12 @@
 			remoteGlobalIDString = 38C7A9711495181800381910;
 			remoteInfo = FoundationExtension;
 		};
-		383060EA1C9F764F0077325F /* PBXContainerItemProxy */ = {
+		380D3FA51CBA5A090081E527 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 383764CB13373154007072FD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 383060881C9F75360077325F;
-			remoteInfo = "FoundationExtensionRC iOS";
+			remoteGlobalIDString = 38C7A9711495181800381910;
+			remoteInfo = FoundationExtension;
 		};
 		3855B03F163CF2B1005584CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -395,13 +251,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3855B02A163CF2B1005584CD;
 			remoteInfo = CocoaExtension;
-		};
-		38BDFA161CA9872F00A2FD9C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 383764CB13373154007072FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3830609A1C9F75870077325F;
-			remoteInfo = "FoundationExtension iOS";
 		};
 		38E48ACC19CDA7A200EE7FFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -482,8 +331,6 @@
 		382E2207176DE62C005F0A98 /* Image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Image.png; sourceTree = "<group>"; };
 		382E39AA1727C8F300099BC4 /* NSControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSControl.h; sourceTree = "<group>"; };
 		382E39AB1727C8F300099BC4 /* NSControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSControl.m; sourceTree = "<group>"; };
-		383060981C9F75360077325F /* FoundationExtensionRC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtensionRC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		383060E81C9F75870077325F /* FoundationExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		383764D713373154007072FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		383764E213373155007072FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		383764E513373155007072FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -602,7 +449,6 @@
 		3888FC5A176C778D00489638 /* NSValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValue.m; sourceTree = "<group>"; };
 		388D08781BD01DA9004B648C /* FoundationExtension_watchos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoundationExtension_watchos.h; sourceTree = "<group>"; };
 		388D087A1BD01DA9004B648C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoundationExtension_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		388D1C16176E22FD0061527C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		388D1C17176E22FD0061527C /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		388D1C18176E22FD0061527C /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
@@ -704,23 +550,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3830608D1C9F75360077325F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3830608E1C9F75360077325F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		383060BE1C9F75870077325F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				383060EF1C9F76A10077325F /* FoundationExtensionRC.framework in Frameworks */,
-				383060C01C9F75870077325F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3855B027163CF2B1005584CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -746,20 +575,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385910771CA98EA60028A51A /* FoundationExtension.framework in Frameworks */,
+				380D3FA71CBA5A130081E527 /* FoundationExtension.framework in Frameworks */,
 				385910761CA98E9B0028A51A /* UIKitExtension.framework in Frameworks */,
 				3865D90519C6B5D100B4DC72 /* UIKit.framework in Frameworks */,
 				3865D90219C6B48100B4DC72 /* MediaPlayer.framework in Frameworks */,
 				38730443133732DE004C8E89 /* Foundation.framework in Frameworks */,
 				38730444133732DE004C8E89 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388D08A01BD01DB2004B648C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388D08A11BD01DB2004B648C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,7 +623,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38BDFA181CA9873B00A2FD9C /* FoundationExtension.framework in Frameworks */,
+				380D3FA41CBA5A050081E527 /* FoundationExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,12 +689,9 @@
 				3855B03C163CF2B1005584CD /* CocoaExtensionTests.xctest */,
 				38FCECBE165904AE00D3D0F0 /* CocoaExtensionTestApp.app */,
 				38E48AC219CDA45700EE7FFC /* FoundationExtensionTests.xctest */,
-				388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */,
 				3801CF4A1C9E60D200CA941C /* FoundationExtensionRC.framework */,
 				38F74E3A1C9EC71B00D94A45 /* AddressBookExtension.framework */,
 				38F74E621C9ECB6A00D94A45 /* UIKitExtension.framework */,
-				383060981C9F75360077325F /* FoundationExtensionRC.framework */,
-				383060E81C9F75870077325F /* FoundationExtension.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1269,60 +1087,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3830608F1C9F75360077325F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				383060901C9F75360077325F /* FoundationExtensionRC.h in Headers */,
-				383060931C9F75360077325F /* NSArrayRC.h in Headers */,
-				383060911C9F75360077325F /* NSObjectRC.h in Headers */,
-				383060921C9F75360077325F /* NSTimerRC.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		383060C11C9F75870077325F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				383060C21C9F75870077325F /* FoundationExtension.h in Headers */,
-				383060C31C9F75870077325F /* NSArray.h in Headers */,
-				383060C41C9F75870077325F /* NSBundle.h in Headers */,
-				383060C51C9F75870077325F /* NSData.h in Headers */,
-				383060C61C9F75870077325F /* NSDate.h in Headers */,
-				383060C71C9F75870077325F /* NSDictionary.h in Headers */,
-				383060C81C9F75870077325F /* NSNumberFormatter.h in Headers */,
-				383060C91C9F75870077325F /* NSPathUtilities.h in Headers */,
-				383060CA1C9F75870077325F /* NSString.h in Headers */,
-				383060CB1C9F75870077325F /* NSStringEncoding.h in Headers */,
-				383060CC1C9F75870077325F /* NSURL.h in Headers */,
-				383060CE1C9F75870077325F /* NSURLRequest.h in Headers */,
-				383060CF1C9F75870077325F /* NSACommonDigest.h in Headers */,
-				383060D01C9F75870077325F /* NSADataObject.h in Headers */,
-				38ABE3941CA0D49D004D003A /* NSMacro.h in Headers */,
-				383060D11C9F75870077325F /* NSObject.h in Headers */,
-				383060D21C9F75870077325F /* NSAClassDeprecated.h in Headers */,
-				383060D31C9F75870077325F /* NSAArray.h in Headers */,
-				383060D41C9F75870077325F /* NSAEnumerator.h in Headers */,
-				383060D51C9F75870077325F /* NSCharacterSet.h in Headers */,
-				383060D61C9F75870077325F /* NSSet.h in Headers */,
-				383060D71C9F75870077325F /* NSAFunctional.h in Headers */,
-				383060D81C9F75870077325F /* NSAttributedString.h in Headers */,
-				383060D91C9F75870077325F /* NSURLRequestCreations.h in Headers */,
-				383060DA1C9F75870077325F /* NSJSONSerialization.h in Headers */,
-				383060DB1C9F75870077325F /* NSAOrderedDictionary.h in Headers */,
-				383060DC1C9F75870077325F /* NSACommonCrypto.h in Headers */,
-				383060DD1C9F75870077325F /* NSNumber.h in Headers */,
-				383060DE1C9F75870077325F /* NSNull.h in Headers */,
-				3859104F1CA98D6A0028A51A /* NSASubscript.h in Headers */,
-				383060DF1C9F75870077325F /* NSAOverridingMediator.h in Headers */,
-				383060E01C9F75870077325F /* NSValue.h in Headers */,
-				383060E11C9F75870077325F /* NSAVersion.h in Headers */,
-				383060E21C9F75870077325F /* NSADictionary.h in Headers */,
-				383060CD1C9F75870077325F /* NSTimer.h in Headers */,
-				383060E31C9F75870077325F /* NSAString.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3855B028163CF2B1005584CD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1337,47 +1101,6 @@
 				38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */,
 				382E39AC1727C8F300099BC4 /* NSControl.h in Headers */,
 				3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388D08A21BD01DB2004B648C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388D08A41BD01DB2004B648C /* FoundationExtension.h in Headers */,
-				388D08A61BD01DB2004B648C /* NSArray.h in Headers */,
-				388D08A71BD01DB2004B648C /* NSBundle.h in Headers */,
-				388D08A81BD01DB2004B648C /* NSData.h in Headers */,
-				388D08A91BD01DB2004B648C /* NSDate.h in Headers */,
-				388D08AA1BD01DB2004B648C /* NSDictionary.h in Headers */,
-				388D08AB1BD01DB2004B648C /* NSNumberFormatter.h in Headers */,
-				388D08AC1BD01DB2004B648C /* NSPathUtilities.h in Headers */,
-				388D08AD1BD01DB2004B648C /* NSString.h in Headers */,
-				388D08AE1BD01DB2004B648C /* NSStringEncoding.h in Headers */,
-				388D08B01BD01DB2004B648C /* NSURL.h in Headers */,
-				388D08B11BD01DB2004B648C /* NSURLRequest.h in Headers */,
-				388D08B21BD01DB2004B648C /* NSACommonDigest.h in Headers */,
-				388D08B31BD01DB2004B648C /* NSADataObject.h in Headers */,
-				388D08B41BD01DB2004B648C /* NSObject.h in Headers */,
-				388D08B51BD01DB2004B648C /* NSAClassDeprecated.h in Headers */,
-				388D08B61BD01DB2004B648C /* NSAArray.h in Headers */,
-				388D08A31BD01DB2004B648C /* NSAEnumerator.h in Headers */,
-				388D08A51BD01DB2004B648C /* NSCharacterSet.h in Headers */,
-				388D08B91BD01DB2004B648C /* NSSet.h in Headers */,
-				38ABE3951CA0D49F004D003A /* NSMacro.h in Headers */,
-				388D08BA1BD01DB2004B648C /* NSAFunctional.h in Headers */,
-				388D08BB1BD01DB2004B648C /* NSAttributedString.h in Headers */,
-				388D08BC1BD01DB2004B648C /* NSURLRequestCreations.h in Headers */,
-				388D08BD1BD01DB2004B648C /* NSJSONSerialization.h in Headers */,
-				388D08BE1BD01DB2004B648C /* NSAOrderedDictionary.h in Headers */,
-				388D08BF1BD01DB2004B648C /* NSACommonCrypto.h in Headers */,
-				388D08C01BD01DB2004B648C /* NSNumber.h in Headers */,
-				388D08C11BD01DB2004B648C /* NSNull.h in Headers */,
-				388D08C21BD01DB2004B648C /* NSAOverridingMediator.h in Headers */,
-				388D08C31BD01DB2004B648C /* NSValue.h in Headers */,
-				388D08C41BD01DB2004B648C /* NSAVersion.h in Headers */,
-				388D08B71BD01DB2004B648C /* NSADictionary.h in Headers */,
-				388D08B81BD01DB2004B648C /* NSAString.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1485,43 +1208,6 @@
 			productReference = 3801CF4A1C9E60D200CA941C /* FoundationExtensionRC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		383060881C9F75360077325F /* FoundationExtensionRC iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 383060951C9F75360077325F /* Build configuration list for PBXNativeTarget "FoundationExtensionRC iOS" */;
-			buildPhases = (
-				383060891C9F75360077325F /* Sources */,
-				3830608D1C9F75360077325F /* Frameworks */,
-				3830608F1C9F75360077325F /* Headers */,
-				383060941C9F75360077325F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "FoundationExtensionRC iOS";
-			productName = FoundationExtensionRC;
-			productReference = 383060981C9F75360077325F /* FoundationExtensionRC.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3830609A1C9F75870077325F /* FoundationExtension iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 383060E51C9F75870077325F /* Build configuration list for PBXNativeTarget "FoundationExtension iOS" */;
-			buildPhases = (
-				3830609D1C9F75870077325F /* Sources */,
-				383060BE1C9F75870077325F /* Frameworks */,
-				383060C11C9F75870077325F /* Headers */,
-				383060E41C9F75870077325F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				383060EB1C9F764F0077325F /* PBXTargetDependency */,
-			);
-			name = "FoundationExtension iOS";
-			productName = FoundationExtension;
-			productReference = 383060E81C9F75870077325F /* FoundationExtension.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3855B02A163CF2B1005584CD /* CocoaExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3855B04B163CF2B1005584CD /* Build configuration list for PBXNativeTarget "CocoaExtension" */;
@@ -1576,24 +1262,6 @@
 			productName = UIKitExtensionTests;
 			productReference = 38730441133732DE004C8E89 /* UIKitExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		388D087E1BD01DB2004B648C /* FoundationExtension_watchos */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 388D08C61BD01DB2004B648C /* Build configuration list for PBXNativeTarget "FoundationExtension_watchos" */;
-			buildPhases = (
-				388D087F1BD01DB2004B648C /* Sources */,
-				388D08A01BD01DB2004B648C /* Frameworks */,
-				388D08A21BD01DB2004B648C /* Headers */,
-				388D08C51BD01DB2004B648C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FoundationExtension_watchos;
-			productName = FoundationExtension;
-			productReference = 388D08C91BD01DB2004B648C /* FoundationExtension_watchos.framework */;
-			productType = "com.apple.product-type.framework";
 		};
 		38C7A9711495181800381910 /* FoundationExtension */ = {
 			isa = PBXNativeTarget;
@@ -1681,7 +1349,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				38BDFA171CA9872F00A2FD9C /* PBXTargetDependency */,
+				380D3FA61CBA5A090081E527 /* PBXTargetDependency */,
 			);
 			name = UIKitExtension;
 			productName = UIKitExtension;
@@ -1749,12 +1417,9 @@
 				3855B02A163CF2B1005584CD /* CocoaExtension */,
 				3855B03B163CF2B1005584CD /* CocoaExtensionTests */,
 				38FCECBD165904AE00D3D0F0 /* CocoaExtensionTestApp */,
-				383060881C9F75360077325F /* FoundationExtensionRC iOS */,
-				3830609A1C9F75870077325F /* FoundationExtension iOS */,
 				38F74E611C9ECB6A00D94A45 /* UIKitExtension */,
 				38730440133732DE004C8E89 /* UIKitExtensionTests */,
 				38F068151636F8C8002723AB /* UIKitExtensionTestApp */,
-				388D087E1BD01DB2004B648C /* FoundationExtension_watchos */,
 				38F74E391C9EC71B00D94A45 /* AddressBookExtension */,
 			);
 		};
@@ -1762,20 +1427,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		3801CF481C9E60D200CA941C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		383060941C9F75360077325F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		383060E41C9F75870077325F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1801,13 +1452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38730450133732DE004C8E89 /* UIKitExtensionTests.h in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388D08C51BD01DB2004B648C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1888,55 +1532,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		383060891C9F75360077325F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3830608A1C9F75360077325F /* NSTimerRC.m in Sources */,
-				3830608B1C9F75360077325F /* NSObjectRC.m in Sources */,
-				3830608C1C9F75360077325F /* NSArrayRC.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3830609D1C9F75870077325F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3830609E1C9F75870077325F /* NSArray.m in Sources */,
-				3830609F1C9F75870077325F /* NSBundle.m in Sources */,
-				383060A01C9F75870077325F /* NSAEnumerator.m in Sources */,
-				383060A11C9F75870077325F /* NSData.m in Sources */,
-				383060A21C9F75870077325F /* NSDate.m in Sources */,
-				383060A31C9F75870077325F /* NSCharacterSet.m in Sources */,
-				383060A41C9F75870077325F /* NSTimer.m in Sources */,
-				383060A51C9F75870077325F /* NSDictionary.m in Sources */,
-				383060A61C9F75870077325F /* NSNumberFormatter.m in Sources */,
-				383060A71C9F75870077325F /* NSPathUtilities.m in Sources */,
-				383060A81C9F75870077325F /* NSString.m in Sources */,
-				383060A91C9F75870077325F /* NSURL.m in Sources */,
-				383060AA1C9F75870077325F /* NSURLRequest.m in Sources */,
-				383060AB1C9F75870077325F /* NSACommonDigest.m in Sources */,
-				383060AC1C9F75870077325F /* NSADataObject.m in Sources */,
-				383060AD1C9F75870077325F /* NSObject.m in Sources */,
-				383060AE1C9F75870077325F /* NSAClassDeprecated.m in Sources */,
-				383060AF1C9F75870077325F /* NSAArray.m in Sources */,
-				383060B01C9F75870077325F /* NSADictionary.m in Sources */,
-				383060B11C9F75870077325F /* NSAString.m in Sources */,
-				383060B21C9F75870077325F /* NSAFunctional.m in Sources */,
-				383060B31C9F75870077325F /* NSAttributedString.m in Sources */,
-				383060B41C9F75870077325F /* NSURLRequestCreations.m in Sources */,
-				383060B51C9F75870077325F /* NSSet.m in Sources */,
-				383060B61C9F75870077325F /* NSJSONSerialization.m in Sources */,
-				383060B71C9F75870077325F /* NSAOrderedDictionary.m in Sources */,
-				383060B81C9F75870077325F /* NSACommonCrypto.m in Sources */,
-				383060B91C9F75870077325F /* NSNumber.m in Sources */,
-				383060BA1C9F75870077325F /* NSNull.m in Sources */,
-				383060BB1C9F75870077325F /* NSAOverridingMediator.m in Sources */,
-				383060BC1C9F75870077325F /* NSValue.m in Sources */,
-				383060BD1C9F75870077325F /* NSAVersion.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3855B026163CF2B1005584CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1970,44 +1565,6 @@
 				38D5BD2D19CDB1FA00DC7C8D /* FoundationExtensionTests.m in Sources */,
 				38D5BD2E19CDB1FA00DC7C8D /* FoundationExtensionCoreFoundationTest.m in Sources */,
 				38730452133732DE004C8E89 /* UIKitExtensionTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388D087F1BD01DB2004B648C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388D08801BD01DB2004B648C /* NSArray.m in Sources */,
-				388D08811BD01DB2004B648C /* NSBundle.m in Sources */,
-				388D08821BD01DB2004B648C /* NSAEnumerator.m in Sources */,
-				388D08831BD01DB2004B648C /* NSData.m in Sources */,
-				388D08841BD01DB2004B648C /* NSDate.m in Sources */,
-				388D08851BD01DB2004B648C /* NSCharacterSet.m in Sources */,
-				388D08861BD01DB2004B648C /* NSDictionary.m in Sources */,
-				388D08871BD01DB2004B648C /* NSNumberFormatter.m in Sources */,
-				388D08881BD01DB2004B648C /* NSPathUtilities.m in Sources */,
-				388D08891BD01DB2004B648C /* NSString.m in Sources */,
-				388D088B1BD01DB2004B648C /* NSURL.m in Sources */,
-				388D088C1BD01DB2004B648C /* NSURLRequest.m in Sources */,
-				388D088D1BD01DB2004B648C /* NSACommonDigest.m in Sources */,
-				388D088E1BD01DB2004B648C /* NSADataObject.m in Sources */,
-				388D088F1BD01DB2004B648C /* NSObject.m in Sources */,
-				388D08901BD01DB2004B648C /* NSAClassDeprecated.m in Sources */,
-				388D08911BD01DB2004B648C /* NSAArray.m in Sources */,
-				388D08921BD01DB2004B648C /* NSADictionary.m in Sources */,
-				388D08931BD01DB2004B648C /* NSAString.m in Sources */,
-				388D08941BD01DB2004B648C /* NSAFunctional.m in Sources */,
-				388D08951BD01DB2004B648C /* NSAttributedString.m in Sources */,
-				388D08961BD01DB2004B648C /* NSURLRequestCreations.m in Sources */,
-				388D08971BD01DB2004B648C /* NSSet.m in Sources */,
-				388D08981BD01DB2004B648C /* NSJSONSerialization.m in Sources */,
-				388D08991BD01DB2004B648C /* NSAOrderedDictionary.m in Sources */,
-				388D089A1BD01DB2004B648C /* NSACommonCrypto.m in Sources */,
-				388D089B1BD01DB2004B648C /* NSNumber.m in Sources */,
-				388D089C1BD01DB2004B648C /* NSNull.m in Sources */,
-				388D089D1BD01DB2004B648C /* NSAOverridingMediator.m in Sources */,
-				388D089E1BD01DB2004B648C /* NSValue.m in Sources */,
-				388D089F1BD01DB2004B648C /* NSAVersion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2137,20 +1694,15 @@
 			target = 38C7A9711495181800381910 /* FoundationExtension */;
 			targetProxy = 3801CF6B1C9E6DBB00CA941C /* PBXContainerItemProxy */;
 		};
-		383060EB1C9F764F0077325F /* PBXTargetDependency */ = {
+		380D3FA61CBA5A090081E527 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 383060881C9F75360077325F /* FoundationExtensionRC iOS */;
-			targetProxy = 383060EA1C9F764F0077325F /* PBXContainerItemProxy */;
+			target = 38C7A9711495181800381910 /* FoundationExtension */;
+			targetProxy = 380D3FA51CBA5A090081E527 /* PBXContainerItemProxy */;
 		};
 		3855B040163CF2B1005584CD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3855B02A163CF2B1005584CD /* CocoaExtension */;
 			targetProxy = 3855B03F163CF2B1005584CD /* PBXContainerItemProxy */;
-		};
-		38BDFA171CA9872F00A2FD9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3830609A1C9F75870077325F /* FoundationExtension iOS */;
-			targetProxy = 38BDFA161CA9872F00A2FD9C /* PBXContainerItemProxy */;
 		};
 		38E48ACD19CDA7A200EE7FFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2276,9 +1828,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				VALID_ARCHS = "i386 x86_64 armv7 arm64";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2313,130 +1864,10 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				VALID_ARCHS = "i386 x86_64 armv7 arm64";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		383060961C9F75360077325F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
-				PRODUCT_NAME = FoundationExtensionRC;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		383060971C9F75360077325F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_ENABLE_OBJC_ARC = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_VERSION = A;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = FoundationExtensionRC/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = org.youknowone.FoundationExtensionRC;
-				PRODUCT_NAME = FoundationExtensionRC;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos watchsimulator watchos";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		383060E61C9F75870077325F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = FoundationExtension/Info.plist;
-				INSTALL_PATH = "@loader_path/../Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = FoundationExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		383060E71C9F75870077325F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_ARC = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = FoundationExtension/Info.plist;
-				INSTALL_PATH = "@loader_path/../Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = FoundationExtension;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -2487,8 +1918,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Warc-non-pod-memaccess",
+				);
 			};
 			name = Debug;
 		};
@@ -2535,8 +1970,12 @@
 				HEADER_SEARCH_PATHS = .;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
-				WARNING_CFLAGS = "-Wall";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Warc-non-pod-memaccess",
+				);
 			};
 			name = Release;
 		};
@@ -2644,7 +2083,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 			};
 			name = Debug;
 		};
@@ -2665,52 +2104,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
-			};
-			name = Release;
-		};
-		388D08C71BD01DB2004B648C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
-				INSTALL_PATH = "@loader_path/../Frameworks";
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		388D08C81BD01DB2004B648C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FoundationExtension/FoundationExtension-Prefix.pch";
-				INFOPLIST_FILE = "FoundationExtension/FoundationExtension-Info.plist";
-				INSTALL_PATH = "@loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				WRAPPER_EXTENSION = framework;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 			};
 			name = Release;
 		};
@@ -2733,9 +2127,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "i386 x86_64 armv7 arm64";
 			};
@@ -2756,9 +2149,8 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FoundationExtension;
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
 				VALID_ARCHS = "i386 x86_64 armv7 arm64";
 			};
 			name = Release;
@@ -2797,6 +2189,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletv watchsimulator watchos";
 			};
 			name = Debug;
 		};
@@ -2831,6 +2224,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos appletvsimulator appletv watchsimulator watchos";
 			};
 			name = Release;
 		};
@@ -2843,21 +2237,18 @@
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIKitExtensionTestApp/UIKitExtensionTestApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "UIKitExtensionTestApp/UIKitExtensionTestApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2871,17 +2262,14 @@
 				CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIKitExtensionTestApp/UIKitExtensionTestApp-Prefix.pch";
 				INFOPLIST_FILE = "UIKitExtensionTestApp/UIKitExtensionTestApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2996,7 +2384,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3031,7 +2419,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos watchsimulator watchos appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos appletvsimulator appletvos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSION_INFO_PREFIX = "";
@@ -3103,24 +2491,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		383060951C9F75360077325F /* Build configuration list for PBXNativeTarget "FoundationExtensionRC iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				383060961C9F75360077325F /* Debug */,
-				383060971C9F75360077325F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		383060E51C9F75870077325F /* Build configuration list for PBXNativeTarget "FoundationExtension iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				383060E61C9F75870077325F /* Debug */,
-				383060E71C9F75870077325F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		383764CE13373154007072FD /* Build configuration list for PBXProject "FoundationExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3153,15 +2523,6 @@
 			buildConfigurations = (
 				38730455133732DE004C8E89 /* Debug */,
 				38730456133732DE004C8E89 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		388D08C61BD01DB2004B648C /* Build configuration list for PBXNativeTarget "FoundationExtension_watchos" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				388D08C71BD01DB2004B648C /* Debug */,
-				388D08C81BD01DB2004B648C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

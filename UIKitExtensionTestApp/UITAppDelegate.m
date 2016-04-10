@@ -14,35 +14,27 @@
 
 @implementation UITAppDelegate
 
-- (void)dealloc
-{
-    [_window release];
-    [_navigationController release];
-    [_splitViewController release];
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    UIView *view = [[[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil] autorelease];
+    UIView *view = [[UIView alloc] initWithNibName:@"ViewHolder" bundle:nil];
     NSAssert(view != nil, @"");
     NSAssert(view.tag == 42, @"");
 
 
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        UITMasterViewController *masterViewController = [[[UITMasterViewController alloc] initWithNibName:@"UITMasterViewController_iPhone" bundle:nil] autorelease];
-        self.navigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+        UITMasterViewController *masterViewController = [[UITMasterViewController alloc] initWithNibName:@"UITMasterViewController_iPhone" bundle:nil];
+        self.navigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
         self.window.rootViewController = self.navigationController;
     } else {
-        UITMasterViewController *masterViewController = [[[UITMasterViewController alloc] initWithNibName:@"UITMasterViewController_iPad" bundle:nil] autorelease];
-        UINavigationController *masterNavigationController = [[[UINavigationController alloc] initWithRootViewController:masterViewController] autorelease];
+        UITMasterViewController *masterViewController = [[UITMasterViewController alloc] initWithNibName:@"UITMasterViewController_iPad" bundle:nil];
+        UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
 
-        UITDetailViewController *detailViewController = [[[UITDetailViewController alloc] initWithNibName:@"UITDetailViewController_iPad" bundle:nil] autorelease];
-        UINavigationController *detailNavigationController = [[[UINavigationController alloc] initWithRootViewController:detailViewController] autorelease];
+        UITDetailViewController *detailViewController = [[UITDetailViewController alloc] initWithNibName:@"UITDetailViewController_iPad" bundle:nil];
+        UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     	
-        self.splitViewController = [[[UISplitViewController alloc] init] autorelease];
+        self.splitViewController = [[UISplitViewController alloc] init];
         self.splitViewController.delegate = masterViewController;
         self.splitViewController.viewControllers = @[masterNavigationController, detailNavigationController];
 

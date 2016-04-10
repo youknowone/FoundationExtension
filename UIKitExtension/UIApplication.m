@@ -14,6 +14,16 @@
 
 #if TARGET_OS_IOS
 
+@implementation UIApplication (PrivatePatch)
+
+- (CGRect)__statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
+    assert(NO);
+    return CGRectZero;
+}
+
+@end
+
+
 @implementation UIApplication (Shortcuts)
 
 - (CGRect)statusBarFrameForCurrentOrientation {
@@ -26,17 +36,7 @@
 @end
 
 
-@implementation UIApplication (PrivatePatch)
-
-- (CGRect)__statusBarFrameForOrientation:(UIInterfaceOrientation)orientation {
-    assert(NO);
-    return CGRectZero;
-}
-
-@end
-
-
-@interface UIApplication (Deprecated)
+@implementation UIApplication (Deprecated)
 
 - (CGSize) statusBarOrientationReducedSize {
     return [self statusBarSizeForOrientation:self.statusBarOrientation];

@@ -37,12 +37,6 @@
     }
     return self;
 }
-							
-- (void)dealloc
-{
-    [_details release];
-    [super dealloc];
-}
 
 - (void)viewDidLoad
 {
@@ -50,20 +44,20 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(changeTitle:)] autorelease];
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(changeTitle:)];
     self.navigationItem.rightBarButtonItem = addButton;
 
     // #TEST: NSTimerDelegate
     NSTimer *timer = [[NSTimer alloc] initWithFireDate:[NSDate date] interval:1.0 delegate:self];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 
-    _details = [@[
+    _details = @[
                 @"Detail",
                 @"ResultDisplay",
                 @"PreparedCellTable",
                 @"PlaceholderText",
                 @"SubviewTable",
-                ] retain];
+                ];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,7 +90,7 @@
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UIATableViewCellCopyable alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UIATableViewCellCopyable alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }

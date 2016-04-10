@@ -1,26 +1,20 @@
 language: objective-c
 sudo: false
-xcode_project: FoundationExtension.xcodeproj # path to your xcodeproj folder
+xcode_project: FoundationExtension.xcodeproj
 osx_image: xcode7
-xcode_sdk:
-  - macosx
-  - iphonesimulator
-  - appletvsimulator
-xcode_scheme:
-  - CocoaExtension
-  - UIKitExtension
 matrix:
-  exclude:
-    - xcode_sdk: iphonesimulator
-      xcode_scheme: CocoaExtension
-    - xcode_sdk: appletvsimulator
-      xcode_scheme: CocoaExtension
-    - xcode_sdk: macosx
-      xcode_scheme: UIKitExtension
   include:
-    - osx_image: xcode6
+    - osx_image: xcode7
+      xcode_sdk: macosx
+      xcode_scheme: CocoaExtension
+    - osx_image: xcode7
+      xcode_sdk: iphonesimulator
+      xcode_scheme: UIKitExtension
+    - osx_image: xcode7.3
+      xcode_sdk: appletvsimulator
+      xcode_scheme: UIKitExtension
+    - osx_image: xcode6  # legacy support
       xcode_sdk: macosx10.9
       xcode_scheme: CocoaExtension
-    - osx_image: xcode6
-      xcode_sdk: iphonesimulator7.0
-      xcode_scheme: UIKitExtension
+  allow_failures:
+    - xcode_sdk: appletvsimulator

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <UIKitExtension/UIKitExtension.h>
+
 @interface UITPreparedCellTableViewController : UIViewController<UITableViewDelegate>
 
 @property(nonatomic, retain) IBOutlet UIAPreparedCellTableView *tableView;

@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#import <UIKitExtension/UIKitExtension.h>
+
 @interface UITResultDisplayViewController : UIViewController<UITextFieldDelegate, UIAResultDisplayDelegate>
 
 @property(nonatomic, retain) IBOutlet UIAResultDisplayController *controller;

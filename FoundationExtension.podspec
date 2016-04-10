@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FoundationExtension"
-  s.version      = "1.2.2"
+  s.version      = "1.2.3"
   s.summary      = "Foundation/UIKit extension kit. It is category based and looks familiar to Foundation/UIKit. It includes many common snippets as shortcut."
   s.description  = <<-DESC
                     This library includes small Foundation/Cocoa/UIKit extensions. This library does not includes high-level data structure, algorithm or frameworks, but collection of code snippets.
@@ -15,12 +15,13 @@ Pod::Spec.new do |s|
   s.license      = "2-clause BSD"
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
   s.social_media_url   = "http://twitter.com/youknowone_"
-  s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "1.2.2" }
+  s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "1.2.3" }
   s.dependency "cdebug", "~> 1.0"
   s.requires_arc = true
   s.osx.deployment_target = '10.9'
   s.ios.deployment_target = '7.0'
   s.tvos.deployment_target = '9.0'
+  s.watchos.deployment_target = '2.0'
 
   s.subspec "FoundationExtensionRC" do |ss|
     ss.source_files = "FoundationExtensionRC/*.{h,m}"
@@ -37,7 +38,7 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "CocoaExtension" do |ss|
-    ss.platform     = :osx
+    ss.osx.deployment_target = '10.9'
     ss.source_files = "CocoaExtension/*.{h,m}"
     ss.public_header_files = "CocoaExtension/*.h"
     ss.header_dir = "CocoaExtension"
@@ -46,7 +47,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec "UIKitExtension" do |ss|
-    ss.platform     = :ios, '7.0'
+    ss.ios.deployment_target = '7.0'
+    ss.tvos.deployment_target = '9.0'
     ss.source_files = "UIKitExtension/*.{h,m}"
     ss.public_header_files = "UIKitExtension/*.h"
     ss.header_dir = "UIKitExtension"

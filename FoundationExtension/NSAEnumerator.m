@@ -42,7 +42,7 @@
     if (state->state == 0) {
         state->itemsPtr = buffer;
         state->mutationsPtr = &state->extra[0];
-        memcpy(buffer, self->_pool, 16 * sizeof(id));
+        memcpy(buffer, (void*)self->_pool, 16 * sizeof(id));
         state->state = 1;
     }
     return 16;

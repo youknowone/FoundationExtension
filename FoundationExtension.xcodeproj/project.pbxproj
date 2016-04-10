@@ -19,6 +19,8 @@
 		3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */ = {isa = PBXBuildFile; fileRef = 3805FBB217AA901D008487A9 /* NSAVersion+System.m */; };
 		380D3FA41CBA5A050081E527 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
 		380D3FA71CBA5A130081E527 /* FoundationExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38C7A9721495181800381910 /* FoundationExtension.framework */; };
+		38193A741CBA713A00F30DC2 /* NSView.h in Headers */ = {isa = PBXBuildFile; fileRef = 38193A721CBA713A00F30DC2 /* NSView.h */; };
+		38193A751CBA713A00F30DC2 /* NSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38193A731CBA713A00F30DC2 /* NSView.m */; };
 		3819C11719E3A0DA003CFF60 /* FoundationExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 383764F313373155007072FD /* FoundationExtensionTests.m */; };
 		3819C11A19E45442003CFF60 /* NSCharacterSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 3819C11819E45442003CFF60 /* NSCharacterSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3819C11B19E45442003CFF60 /* NSCharacterSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3819C11919E45442003CFF60 /* NSCharacterSet.m */; };
@@ -321,6 +323,8 @@
 		3805FBB217AA901D008487A9 /* NSAVersion+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAVersion+System.m"; sourceTree = "<group>"; };
 		381512D517C3A3AA000E06D0 /* MPMediaItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPMediaItem.h; sourceTree = "<group>"; };
 		381512D617C3A3AA000E06D0 /* MPMediaItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPMediaItem.m; sourceTree = "<group>"; };
+		38193A721CBA713A00F30DC2 /* NSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSView.h; sourceTree = "<group>"; };
+		38193A731CBA713A00F30DC2 /* NSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSView.m; sourceTree = "<group>"; };
 		3819C11819E45442003CFF60 /* NSCharacterSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCharacterSet.h; sourceTree = "<group>"; };
 		3819C11919E45442003CFF60 /* NSCharacterSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet.m; sourceTree = "<group>"; };
 		381C00A717172C5E0067C936 /* UIAPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAPlaceholderTextView.h; sourceTree = "<group>"; };
@@ -755,6 +759,8 @@
 				38D930EF1726EDD200BD0938 /* NSPasteboard.m */,
 				38FCECDB16590A1100D3D0F0 /* NSTextView.h */,
 				38FCECDC16590A1100D3D0F0 /* NSTextView.m */,
+				38193A721CBA713A00F30DC2 /* NSView.h */,
+				38193A731CBA713A00F30DC2 /* NSView.m */,
 				38D930E61726C9B400BD0938 /* NSAImageWell.h */,
 				38D930E71726C9B400BD0938 /* NSAImageWell.m */,
 				3805FBB117AA901D008487A9 /* NSAVersion+System.h */,
@@ -1098,6 +1104,7 @@
 				38485C51170F14820001A99D /* NSGeometry.h in Headers */,
 				38D930E81726C9B400BD0938 /* NSAImageWell.h in Headers */,
 				38D930EC1726CEC300BD0938 /* NSImage.h in Headers */,
+				38193A741CBA713A00F30DC2 /* NSView.h in Headers */,
 				38D930F01726EDD400BD0938 /* NSPasteboard.h in Headers */,
 				382E39AC1727C8F300099BC4 /* NSControl.h in Headers */,
 				3805FBB317AA901D008487A9 /* NSAVersion+System.h in Headers */,
@@ -1545,6 +1552,7 @@
 				38D930F11726EDD400BD0938 /* NSPasteboard.m in Sources */,
 				382E39AD1727C8F300099BC4 /* NSControl.m in Sources */,
 				3805FBB417AA901D008487A9 /* NSAVersion+System.m in Sources */,
+				38193A751CBA713A00F30DC2 /* NSView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1999,7 +2007,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -2019,7 +2026,6 @@
 				INSTALL_PATH = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.youknowone.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;

@@ -37,6 +37,7 @@ FOUNDATION_EXPORT const unsigned char CocoaExtensionVersionString[];
 #import <CocoaExtension/NSImage.h>                          // level: 0 / deps(0):  / internal(0):
 #import <CocoaExtension/NSPasteboard.h>                     // level: 0 / deps(0):  / internal(0):
 #import <CocoaExtension/NSTextView.h>                       // level: 0 / deps(0):  / internal(0):
+#import <CocoaExtension/NSView.h>
 // depenency level 20
 #import <CocoaExtension/NSAImageWell.h>                     // level: 20 / deps(0):  / internal(3): NSGeometry, NSImage, NSPasteboard
 #import <CocoaExtension/NSAVersion+System.h>                // level: 20 / deps(1): NSAVersion / internal(0):

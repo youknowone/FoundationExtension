@@ -14,3 +14,7 @@ matrix:
       xcode_scheme: CocoaExtension
     - xcode_sdk: macosx
       xcode_scheme: UIKitExtension
+  include:
+    - osx_image: xcode6
+      xcode_sdk: macosx10.9
+      xcode_scheme: CocoaExtension

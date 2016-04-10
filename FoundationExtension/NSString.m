@@ -171,7 +171,7 @@
 
 @implementation NSString (RegularExpression)
 
-- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError *__autoreleasing  _Nullable * _Nullable)error {
+- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError *__nullable __autoreleasing *)error {
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:error];
     if (regex == nil) {
         return nil;

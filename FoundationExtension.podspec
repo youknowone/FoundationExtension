@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/youknowone/FoundationExtension"
   s.license      = "2-clause BSD"
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
+  s.social_media_url   = "http://twitter.com/youknowone_"
   s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "1.2.2" }
   s.dependency "cdebug", "~> 1.0"
   s.requires_arc = true

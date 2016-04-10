@@ -14,13 +14,9 @@
 #define NS_ASSUME_NONNULL_END
 #endif
 
-#if !defined(_Nullable)
-#define _Nullable
-#define _Nonnull
+#if !__has_feature(nullability)
 #define nullable
 #define nonnull
-#endif
-
-#if !__has_feature(nullability)
 #define __nullable
+#define __nonnull
 #endif

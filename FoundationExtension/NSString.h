@@ -210,9 +210,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (RegularExpression)
 
-#define _Nullable
-
-- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError * _Nullable __autoreleasing * _Nullable)error;
+- (nullable NSString *)stringByReplacingRegularExpressionWithPattern:pattern withTemplate:(nonnull NSString *)templ error:(NSError * __nullable __autoreleasing *)error;
 
 @end
 

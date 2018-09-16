@@ -13,86 +13,9 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/cl/NSMutableURLRequest
  */
 
-/*!
- *  @brief NSURLRequest property shortcuts for legacy compilers.
- */
-@interface NSURLRequest (Properties)
+@import Foundation;
 
-@property(readonly) NSURL *URL;
-@property(readonly) NSURLRequestCachePolicy cachePolicy;
-@property(readonly) NSTimeInterval timeoutInterval;
-#if TARGET_OS_IPHONE
-@property(readonly) NSURLRequestNetworkServiceType networkServiceType;
-#endif
-@property(readonly) NSURL *mainDocumentURL;
-
-@property(readonly) NSDictionary *allHTTPHeaderFields;
-@property(readonly) NSString *HTTPMethod;
-@property(readonly) NSData *HTTPBody;
-#if MAC_OS_X_VERSION_10_4 <= MAC_OS_X_VERSION_MAX_ALLOWED || __IPHONE_2_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
-@property(readonly) NSInputStream *HTTPBodyStream;
-#endif
-@property(readonly) BOOL HTTPShouldHandleCookies;
-@property(readonly) BOOL HTTPShouldUsePipelining;
-
-@end
-
-/*!
- *  @brief Deprecated creation shortcuts
- *  @deprecated Use [NSURLRequest initWithURL:](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSURLRequest/initWithURL:), @ref NSString(Shortcuts) and @ref NSURL(Creations)
- */
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-__deprecated @interface NSURLRequest (Creations_deprecated)
-#pragma clang diagnostic pop
-
-//! @deprecated
-- (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-- (id)initWithFilePath:(NSString *)filePath __deprecated;
-//! @deprecated
-- (id)initWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-- (id)initWithAbstractPath:(NSString *)filePath __deprecated;
-//! @deprecated
-- (id)initWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-
-//! @deprecated
-+ (id)URLRequestWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-+ (id)URLRequestWithFilePath:(NSString *)filepath __deprecated;
-//! @deprecated
-+ (id)URLRequestWithFilePathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-+ (id)URLRequestWithAbstractPath:(NSString *)filePath __deprecated;
-//! @deprecated
-+ (id)URLRequestWithAbstractPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-
-@end
-
-/*!
- *  @brief NSURLRequest property shortcuts for legacy compilers.
- */
-@interface NSMutableURLRequest (Properties)
-
-@property(retain) NSURL *URL;
-@property NSURLRequestCachePolicy cachePolicy;
-@property NSTimeInterval timeoutInterval;
-#if TARGET_OS_IPHONE
-@property NSURLRequestNetworkServiceType networkServiceType;
-#endif
-@property(retain) NSURL *mainDocumentURL;
-
-@property(retain) NSDictionary *allHTTPHeaderFields;
-@property(retain) NSString *HTTPMethod;
-@property(retain) NSData *HTTPBody;
-#if MAC_OS_X_VERSION_10_4 <= MAC_OS_X_VERSION_MAX_ALLOWED || __IPHONE_2_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
-@property(retain) NSInputStream *HTTPBodyStream;
-#endif
-@property BOOL HTTPShouldHandleCookies;
-@property BOOL HTTPShouldUsePipelining;
-
-@end
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSMutableURLRequest POST extension
@@ -197,3 +120,38 @@ NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -setHTTPPostBody: instead, which alway
 - (void)setHTTPMultiPartFormPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
 
 @end
+
+/*!
+ *  @brief Deprecated creation shortcuts
+ *  @deprecated Use [NSURLRequest initWithURL:](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSURLRequest/initWithURL:), @ref NSString(Shortcuts) and @ref NSURL(Creations)
+ */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+__deprecated @interface NSURLRequest (Creations_deprecated)
+#pragma clang diagnostic pop
+
+//! @deprecated
+- (nullable id)initWithURLFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated
+- (nullable id)initWithFilePath:(NSString *_Nonnull)filePath __deprecated;
+//! @deprecated
+- (nullable id)initWithFilePathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated
+- (nullable id)initWithAbstractPath:(NSString *_Nonnull)filePath __deprecated;
+//! @deprecated
+- (nullable id)initWithAbstractPathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+
+//! @deprecated
++ (nullable id)URLRequestWithURLFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated
++ (nullable id)URLRequestWithFilePath:(NSString *_Nonnull)filepath __deprecated;
+//! @deprecated
++ (nullable id)URLRequestWithFilePathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated
++ (nullable id)URLRequestWithAbstractPath:(NSString *_Nonnull)filePath __deprecated;
+//! @deprecated
++ (nullable id)URLRequestWithAbstractPathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -194,11 +194,11 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
     return multivalue;
 }
 
-- (BOOL)setValue:(id)value forProperty:(ABPropertyID)property error:(NSError **)error {
+- (BOOL)setValue:(id)value forProperty:(ABPropertyID)property error:(out NSError **)error {
     return ABRecordSetValue(self->_ref, property, value, (CFErrorRef *)error);
 }
 
-- (BOOL)removeValueForProperty:(ABPropertyID)property error:(NSError **)error {
+- (BOOL)removeValueForProperty:(ABPropertyID)property error:(out NSError **)error {
     return ABRecordRemoveValue(self->_ref, property, (CFErrorRef *)error);
 }
 
@@ -234,11 +234,11 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
     return _ABArrayOfPersonRefToPerson(obj);
 }
 
-- (BOOL)addMember:(ABPerson *)person error:(NSError **)error {
+- (BOOL)addMember:(ABPerson *)person error:(out NSError **)error {
     return ABGroupAddMember(self.ref, person.ref, (CFErrorRef *)error);
 }
 
-- (BOOL)removeMember:(ABPerson *)person error:(NSError **)error {
+- (BOOL)removeMember:(ABPerson *)person error:(out NSError **)error {
     return ABGroupRemoveMember(self.ref, person.ref, (CFErrorRef *)error);
 }
 
@@ -283,7 +283,7 @@ NSArray *_ABArrayOfPersonRefToPerson(CFArrayRef rawPeople) {
     [self setImageData:imageData error:NULL];
 }
 
-- (BOOL)setImageData:(NSData *)imageData error:(NSError **)error {
+- (BOOL)setImageData:(NSData *)imageData error:(out NSError **)error {
     if (imageData == nil) {
         return ABPersonRemoveImageData(self.ref, (CFErrorRef *)error);
     } else {

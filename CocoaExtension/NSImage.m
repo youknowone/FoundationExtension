@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <cdebug/debug.h>
 
 #import "NSImage.h"

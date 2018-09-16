@@ -12,7 +12,7 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/CC_MD5.3cc.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  @brief Shortcuts for CommonCrypto digest.

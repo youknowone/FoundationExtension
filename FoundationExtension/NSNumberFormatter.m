@@ -8,6 +8,8 @@
 
 #import "NSNumberFormatter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSNumberFormatter (Shortcuts)
 @dynamic numberStyle;
 @dynamic generatesDecimalNumbers;
@@ -38,3 +40,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

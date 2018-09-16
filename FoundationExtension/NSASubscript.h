@@ -14,7 +14,9 @@
  *      Because Foundation doesn't suggest any protocols to implement subscription, this is a kind of hidden protocol.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief The indexed subscript getter protocol @ref NSAIndexedSubscript must be adopted and implemented by immutable objects used for indexed subscript in modern Objective-C.
@@ -59,7 +61,7 @@
  *  @return The value associated with key, or nil if no value is associated with key.
  *  @details This method is expected to be identical to objectForKey:.
  */
-- (id)objectForKeyedSubscript:(id)key;
+- (nullable id)objectForKeyedSubscript:(id)key;
 
 @end
 
@@ -77,3 +79,5 @@
 - (void)setObject:(id)object forKeyedSubscript:(id <NSCopying>)key;
 
 @end
+
+NS_ASSUME_NONNULL_END

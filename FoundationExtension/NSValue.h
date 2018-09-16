@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSValue_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSObject extension cateogory collection for [NSValue][0].
@@ -27,3 +29,5 @@
 - (NSValue *)valueForObject;
 
 @end
+
+NS_ASSUME_NONNULL_END

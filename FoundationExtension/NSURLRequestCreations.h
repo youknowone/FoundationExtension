@@ -11,7 +11,9 @@
  *  @brief Creation category extension for various objects using NSURLRequest
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief Creation methods extension using NSURLRequest
@@ -25,12 +27,12 @@
  *  @see initWithContentsOfURLRequest:error:
  *  @see dataWithContentsOfURLRequest:error:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request;
++ (nullable instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated data object initialized with the data from the result specified by a given request.
@@ -40,23 +42,23 @@
  *  @see initWithContentsOfURLRequest:
  *  @see dataWithContentsOfURLRequest:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(out NSError **)errorPtr;
 /*!
  *  @brief Returns a data object with the data from the result specified by a given request.
  *  @see initWithContentsOfURLRequest:error:
  */
-+ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)errorPtr;
++ (nullable instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(out NSError **)errorPtr;
 
 /*! @name Deprecated */
 
 /*!
  *  @deprecated Use initWithContentsOfURLRequest: with NSMutableURLRequest
  */
-- (instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
+- (nullable instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 /*!
  *  @deprecated Use dataWithContentsOfURLRequest: with NSMutableURLRequest
  */
-+ (instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
++ (nullable instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 
 @end
 
@@ -73,12 +75,12 @@
  *  @see initWithContentsOfURLRequest:format:error:
  *  @see arrayWithContentsOfURLRequest:format:error:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Creates and returns an array containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request;
++ (nullable instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated array with the contents of the result specified by a given request.
@@ -89,12 +91,12 @@
  *  @see initWithContentsOfURLRequest:
  *  @see arrayWithContentsOfURLRequest:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 /*!
  *  @brief Creates and returns an array containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:format:error:
  */
-+ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (nullable instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 @end
 
@@ -111,12 +113,12 @@
  *  @see initWithContentsOfURLRequest:format:error:
  *  @see dictionaryWithContentsOfURLRequest:format:error:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:
  */
-+ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request;
++ (nullable instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request;
 
 /*!
  *  @brief Initializes a newly allocated dictionary with the contents of the result specified by a given request.
@@ -127,11 +129,13 @@
  *  @see initWithContentsOfURLRequest:
  *  @see dictionaryWithContentsOfURLRequest:
  */
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 /*!
  *  @brief Creates and returns a dictionary containing the contents of the result specified by a given request.
  *  @see initWithContentsOfURLRequest:format:error:
  */
-+ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (nullable instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 @end
+
+NS_ASSUME_NONNULL_END

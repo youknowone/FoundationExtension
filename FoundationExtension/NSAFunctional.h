@@ -43,7 +43,7 @@
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #import <FoundationExtension/NSMacro.h>
 

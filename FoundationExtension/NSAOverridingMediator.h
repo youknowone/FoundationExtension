@@ -11,7 +11,7 @@
  *  @brief Tool for partial method implementation.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  @brief A mediator to select origin or overrided method. Useful for partial protocol implementation.

@@ -16,6 +16,8 @@
 
 #include "debug.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSURL (Creations)
 
 - (instancetype)initResourceURLWithPath:(NSString *)path {
@@ -92,6 +94,78 @@
     return [[self alloc] initSmartURLWithPath:path];
 }
 
+@end
+
+@implementation NSURL (CFURL)
+
+- (BOOL)hasDirectoryPath {
+    return CFURLHasDirectoryPath((CFURLRef)self);
+}
+
+@end
+
+
+@implementation NSString (NSURL)
+
+- (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters {
+    NSCharacterSet *characterSet = [NSCharacterSet emptyCharacterSet];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+}
+
+- (NSString *)stringByAddingPercentEncodingForURLQuery {
+    NSCharacterSet *characterSet = [NSCharacterSet URLQueryAllowedCharacterSet];
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
+}
+
+- (BOOL)hasHTTPPrefix {
+    NSString *regexkey = @"^https?://.*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
+    return [predicate evaluateWithObject:self];
+}
+
+- (BOOL)hasSmartURLPrefix {
+    return [self hasHTTPPrefix] || [self hasPrefix:@"res://"] || [self hasPrefix:@"conf://"];
+}
+
+- (nullable NSString *)URLProtocol {
+    NSString *regexkey = @"^[a-zA-Z]*://.*";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
+    if (![predicate evaluateWithObject:self])
+        return nil;
+    NSRange delemeterRange = [self rangeOfString:@"://"];
+    return [self substringFromIndex:0 length:delemeterRange.location];
+}
+
+- (nullable NSURL *)URL {
+    return [NSURL URLWithString:self];
+}
+
+- (nullable NSURL *)fileURL {
+    return [NSURL fileURLWithPath:self];
+}
+
+- (nullable NSURL *)resourceURL {
+    return [NSURL resourceURLWithPath:self];
+}
+
+- (nullable NSURL *)configurationURL {
+    return [NSURL configurationURLWithPath:self];
+}
+
+- (nullable NSURL *)temporaryURL {
+    return [NSURL temporaryURLWithPath:self];
+}
+
+- (nullable NSURL *)smartURL {
+    return [NSURL smartURLWithPath:self];
+}
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+@implementation NSURL (Deprecated)
+
 // deprecated methods
 
 - (id)initWithAbstractPath:(NSString *)path {
@@ -152,69 +226,11 @@
 
 @end
 
-@implementation NSURL (CFURL)
 
-- (BOOL)hasDirectoryPath {
-    return CFURLHasDirectoryPath((CFURLRef)self);
-}
-
-@end
-
-
-@implementation NSString (NSURL)
-
-- (NSString *)stringByAddingPercentEncodingWithoutAllowedCharacters {
-    NSCharacterSet *characterSet = [NSCharacterSet emptyCharacterSet];
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
-}
-
-- (NSString *)stringByAddingPercentEncodingForURLQuery {
-    NSCharacterSet *characterSet = [NSCharacterSet URLQueryAllowedCharacterSet];
-    return [self stringByAddingPercentEncodingWithAllowedCharacters:characterSet];
-}
-
-- (BOOL)hasHTTPPrefix {
-    NSString *regexkey = @"^https?://.*";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
-    return [predicate evaluateWithObject:self];
-}
-
-- (BOOL)hasSmartURLPrefix {
-    return [self hasHTTPPrefix] || [self hasPrefix:@"res://"] || [self hasPrefix:@"conf://"];
-}
-
-- (NSString *)URLProtocol {
-    NSString *regexkey = @"^[a-zA-Z]*://.*";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regexkey];
-    if (![predicate evaluateWithObject:self])
-        return nil;
-    NSRange delemeterRange = [self rangeOfString:@"://"];
-    return [self substringFromIndex:0 length:delemeterRange.location];
-}
-
-- (NSURL *)URL {
-    return [NSURL URLWithString:self];
-}
-
-- (NSURL *)fileURL {
-    return [NSURL fileURLWithPath:self];
-}
-
-- (NSURL *)resourceURL {
-    return [NSURL resourceURLWithPath:self];
-}
-
-- (NSURL *)configurationURL {
-    return [NSURL configurationURLWithPath:self];
-}
-
-- (NSURL *)temporaryURL {
-    return [NSURL temporaryURLWithPath:self];
-}
-
-- (NSURL *)smartURL {
-    return [NSURL smartURLWithPath:self];
-}
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+@implementation NSString (NSURL_deprecated)
+#pragma clang diagnostic pop
 
 // deprecated methods
 
@@ -229,13 +245,6 @@
 - (NSURL *)abstractURL {
     return [self smartURL];
 }
-
-@end
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-@implementation NSString (NSURL_deprecated)
-#pragma clang diagnostic pop
 
 - (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
     return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -260,11 +269,11 @@
     return [[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];
 }
 
-- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
+- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(out NSError **)error {
     return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
 }
 
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error {
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(out NSError **)error {
     return [[self alloc] initWithContentsOfURL:[NSURL URLWithAbstractPath:path] options:opt error:error];
 }
 

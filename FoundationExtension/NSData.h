@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSData serialization/deserialization extension collection.
@@ -29,7 +31,7 @@
  *  @see [NSPropertyListSerialization propertyListWithData:options:format:error:] [0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSPropertyListSerialization_Class/Reference/Reference.html#//apple_ref/occ/clm/NSPropertyListSerialization/propertyListWithData:options:format:error:
  */
-- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error;
+- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 
 /*! @name Hexadecimal */
@@ -52,6 +54,7 @@
 
 @end
 
+NS_ASSUME_NONNULL_END
 
 @interface NSData (Deprecation)
 

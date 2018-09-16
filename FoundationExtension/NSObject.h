@@ -13,8 +13,10 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <objc/runtime.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @class NSAMethod;
 
@@ -45,7 +47,7 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:withObject:
  */
-- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3;
+- (nullable id)performSelector:(SEL)sel withObject:(nullable id)obj1 withObject:(nullable id)obj2 withObject:(nullable id)obj3;
 
 /*!
  *  @brief Invokes a method of the receiver with 4 parameter
@@ -60,7 +62,7 @@
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:
  *      [2]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html#//apple_ref/occ/intfm/NSObject/performSelector:withObject:withObject:
  */
-- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 withObject:(id)obj4;
+- (nullable id)performSelector:(SEL)sel withObject:(nullable id)obj1 withObject:(nullable id)obj2 withObject:(nullable id)obj3 withObject:(nullable id)obj4;
 
 /*!
  *  @name Associative References
@@ -73,7 +75,7 @@
  *  @see [objc_getAssociatedObject][0]
  *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_getAssociatedObject
  */
-- (id)associatedObjectForKey:(void *)key;
+- (nullable id)associatedObjectForKey:(void *)key;
 
 /*!
  *  @brief Sets an associated value for a given object using a given key. Association policy is `retain`.
@@ -82,7 +84,7 @@
  *  @see [objc_setAssociatedObject][0]
  *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
  */
-- (void)setAssociatedObject:(id)object forKey:(void *)key;
+- (void)setAssociatedObject:(nullable id)object forKey:(void *)key;
 
 /*!
  *  @brief Sets an associated value for a given object using a given key and association policy.
@@ -93,7 +95,7 @@
  *      [0]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/objc_setAssociatedObject
  *      [1]: http://developer.apple.com/library/ios/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/doc/constant_group/Associative_Object_Behaviors
  */
-- (void)setAssociatedObject:(id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy;
+- (void)setAssociatedObject:(nullable id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy;
 
 /*!
  *  @brief Removes all associations for a given object. Association policy is `retain`.
@@ -230,7 +232,7 @@
  *  @see [method_getTypeEncoding][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_getTypeEncoding
  */
-@property(weak, nonatomic, readonly) NSString *typeEncoding;
+@property(weak, nonatomic, readonly, nullable) NSString *typeEncoding;
 
 /*!
  *  @brief Exchanges the implementation of tho methods.
@@ -241,3 +243,5 @@
 - (void)exchangeImplementationWith:(NSAMethod *)method;
 
 @end
+
+NS_ASSUME_NONNULL_END

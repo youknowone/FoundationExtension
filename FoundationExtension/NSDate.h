@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDate_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSDate common shortcuts.
@@ -23,3 +25,5 @@
 @property(readonly) NSDateComponents *components __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END

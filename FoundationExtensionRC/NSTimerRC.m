@@ -8,6 +8,7 @@
 
 #import "NSTimerRC.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSTimer ()
 
@@ -46,3 +47,5 @@ static void _NSATimerDelegateCallback(CFRunLoopTimerRef timer, void *info) {
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

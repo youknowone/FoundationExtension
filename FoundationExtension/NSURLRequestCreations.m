@@ -13,10 +13,11 @@
 #import "NSURLRequest.h"
 #import "NSURLRequestCreations.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSData (NSURLRequest)
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
     NSError *error = nil;
     NSData *data = [self initWithContentsOfURLRequest:request error:&error];
     if (error) {
@@ -25,11 +26,11 @@
     return data;
 }
 
-+ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request {
++ (nullable instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request {
     return [[self alloc] initWithContentsOfURLRequest:request];
 }
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request error:(out NSError **)error {
     NSURLSession *session = [NSURLSession sharedSession];
     __block NSData *data = nil;
     __block NSError *block_error = nil;
@@ -47,18 +48,18 @@
     return [self initWithData:data];
 }
 
-+ (instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(NSError **)error {
++ (nullable instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(out NSError **)error {
     return [[self alloc] initWithContentsOfURLRequest:request error:error];
 }
 
-- (instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
+- (nullable instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
     [request setHTTPPostBody:bodyDictionary encoding:encoding];
     id result = [self initWithContentsOfURLRequest:request];
     return result;
 }
 
-+ (instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
++ (nullable instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
     return [[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding];
 }
 
@@ -67,15 +68,15 @@
 
 @implementation NSArray (NSURLRequest)
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
     return [self initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
-+ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request {
++ (nullable instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request {
     return [[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:request error:error];
     if (data == nil) {
         return nil;
@@ -83,7 +84,7 @@
     return [self initWithData:data format:format error:error];
 }
 
-+ (instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (nullable instancetype)arrayWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     return [[self alloc] initWithContentsOfURLRequest:request format:format error:error];
 }
 
@@ -92,15 +93,15 @@
 
 @implementation NSDictionary (NSURLRequest)
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request {
     return [self initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
-+ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request {
++ (nullable instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request {
     return [[self alloc] initWithContentsOfURLRequest:request format:NULL error:NULL];
 }
 
-- (instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (nullable instancetype)initWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:request error:error];
     if (data == nil) {
         return nil;
@@ -108,8 +109,10 @@
     return [self initWithData:data format:format error:error];
 }
 
-+ (instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (nullable instancetype)dictionaryWithContentsOfURLRequest:(NSURLRequest *)request format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     return [[self alloc] initWithContentsOfURLRequest:request format:format error:error];
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

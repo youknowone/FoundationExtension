@@ -13,7 +13,7 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  @brief Immutable ordered dictionary.

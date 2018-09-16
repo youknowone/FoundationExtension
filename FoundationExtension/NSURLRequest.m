@@ -11,39 +11,7 @@
 #import "NSURL.h"
 #import "NSURLRequest.h"
 
-@implementation NSURLRequest (Properties)
-
-@dynamic cachePolicy, timeoutInterval;
-#if TARGET_OS_IPHONE
-@dynamic networkServiceType;
-#endif
-@dynamic URL, mainDocumentURL;
-
-@dynamic allHTTPHeaderFields, HTTPMethod, HTTPBody;
-#if MAC_OS_X_VERSION_10_4 <= MAC_OS_X_VERSION_MAX_ALLOWED || __IPHONE_2_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
-@dynamic HTTPBodyStream;
-#endif
-@dynamic HTTPShouldHandleCookies, HTTPShouldUsePipelining;
-
-@end
-
-
-@implementation NSMutableURLRequest (Properties)
-
-@dynamic cachePolicy, timeoutInterval;
-#if TARGET_OS_IPHONE
-@dynamic networkServiceType;
-#endif
-@dynamic URL, mainDocumentURL;
-
-@dynamic allHTTPHeaderFields, HTTPMethod, HTTPBody;
-#if MAC_OS_X_VERSION_10_4 <= MAC_OS_X_VERSION_MAX_ALLOWED || __IPHONE_2_0 <= __IPHONE_OS_VERSION_MAX_ALLOWED
-@dynamic HTTPBodyStream;
-#endif
-@dynamic HTTPShouldHandleCookies, HTTPShouldUsePipelining;
-
-@end
-
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSMutableURLRequest (HTTPMethod)
 
@@ -187,13 +155,12 @@
 
 @end
 
-
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSURLRequest (Creations_deprecated)
 #pragma clang diagnostic pop
 
-- (id)initWithURLFormat:(NSString *)format, ... {
+- (nullable id)initWithURLFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     self = [self initWithURL:[[NSString stringWithFormat:format arguments:args] URL]];
@@ -201,11 +168,11 @@
     return self;
 }
 
-- (id)initWithFilePath:(NSString *)filePath {
+- (nullable id)initWithFilePath:(NSString *_Nonnull)filePath {
     return [self initWithURL:[NSURL fileURLWithPath:filePath]];
 }
 
-- (id)initWithFilePathFormat:(NSString *)format, ... {
+- (nullable id)initWithFilePathFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     self = [self initWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:format arguments:args]]];
@@ -213,11 +180,11 @@
     return self;
 }
 
-- (id)initWithAbstractPath:(NSString *)filePath {
+- (nullable id)initWithAbstractPath:(NSString *_Nonnull)filePath {
     return [self initWithURL:[NSURL URLWithAbstractPath:filePath]];
 }
 
-- (id)initWithAbstractPathFormat:(NSString *)format, ... {
+- (nullable id)initWithAbstractPathFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     self = [self initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
@@ -225,7 +192,7 @@
     return self;
 }
 
-+ (id)URLRequestWithURLFormat:(NSString *)format, ... {
++ (nullable id)URLRequestWithURLFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:format arguments:args]]];
@@ -233,11 +200,11 @@
     return request;
 }
 
-+ (id)URLRequestWithFilePath:(NSString *)filePath {
++ (nullable id)URLRequestWithFilePath:(NSString *_Nonnull)filePath {
     return [self requestWithURL:[NSURL fileURLWithPath:filePath]];
 }
 
-+ (id)URLRequestWithFilePathFormat:(NSString *)format, ... {
++ (nullable id)URLRequestWithFilePathFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL fileURLWithPath:[NSString stringWithFormat:format arguments:args]]];
@@ -245,11 +212,11 @@
     return request;
 }
 
-+ (id)URLRequestWithAbstractPath:(NSString *)filePath {
++ (nullable id)URLRequestWithAbstractPath:(NSString *_Nonnull)filePath {
     return [self requestWithURL:[NSURL URLWithAbstractPath:filePath]];
 }
 
-+ (id)URLRequestWithAbstractPathFormat:(NSString *)format, ... {
++ (nullable id)URLRequestWithAbstractPathFormat:(NSString *_Nonnull)format, ... {
     va_list args;
     va_start(args, format);
     NSURLRequest *request = [[self alloc] initWithURL:[NSURL URLWithAbstractPath:[NSString stringWithFormat:format arguments:args]]];
@@ -258,3 +225,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

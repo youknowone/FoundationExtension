@@ -8,11 +8,13 @@
 
 #import "NSData.h"
 
-#include "debug.h"
+#include <cdebug/debug.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSData (Serialization)
 
-- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *)format error:(NSError **)error {
+- (id)propertyListObjectUsingFormat:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     if ([NSPropertyListSerialization respondsToSelector:@selector(propertyListWithData:options:format:error:)]) {
         return [NSPropertyListSerialization propertyListWithData:self options:0 format:format error:error];
     }
@@ -75,6 +77,7 @@ static const char NSDataHexadecimalDecodingTable[0x80] =
 
 @end
 
+NS_ASSUME_NONNULL_END
 
 @implementation NSData (Deprecation)
 

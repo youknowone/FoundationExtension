@@ -10,6 +10,8 @@
 
 #import "NSPathUtilities.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 NSString *NSPathForUserDirectory(NSSearchPathDirectory directory) {
     return NSSearchPathForDirectoriesInDomains(directory,  NSUserDomainMask, YES)[0];
 }
@@ -54,3 +56,5 @@ NSString *NSPathForTemporaryFile(NSString *filename) {
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

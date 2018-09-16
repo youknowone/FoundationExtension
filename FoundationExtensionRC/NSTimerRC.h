@@ -12,8 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSTimer delegate interface protocol
@@ -66,3 +67,5 @@
 + (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
 
 @end
+
+NS_ASSUME_NONNULL_END

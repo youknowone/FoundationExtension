@@ -13,7 +13,7 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableString_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #import <FoundationExtension/NSMacro.h>
 

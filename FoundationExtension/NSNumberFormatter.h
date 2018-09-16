@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNumberFormatter_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief Common shortcuts
@@ -60,3 +62,5 @@
 @property(assign) NSLocale *locale;
 
 @end
+
+NS_ASSUME_NONNULL_END

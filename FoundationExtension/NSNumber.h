@@ -13,6 +13,8 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDecimalNumber_Class/Reference/Reference.html
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief NSNumber description method extension
  */
@@ -39,3 +41,5 @@
 - (NSString *)typeFormedDescription;
 
 @end
+
+NS_ASSUME_NONNULL_END

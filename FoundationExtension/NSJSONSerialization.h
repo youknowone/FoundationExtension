@@ -15,17 +15,21 @@
 
 #if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1070 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 50000
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief [NSJSONSerialization][0] shortcuts
  *      [0]: http://developer.apple.com/library/mac/#documentation/Foundation/Reference/NSJSONSerialization_Class/Reference/Reference.html
  */
 @interface NSJSONSerialization (Shortcuts)
 
-+ (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error;
-+ (NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error;
-+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(NSError **)error;
-+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(NSError **)error;
++ (nullable id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(out NSError **)error;
++ (nullable NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(out NSError **)error;
++ (nullable id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(out NSError **)error;
++ (nullable id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(out NSError **)error;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif

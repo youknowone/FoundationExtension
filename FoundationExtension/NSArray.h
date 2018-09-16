@@ -13,7 +13,9 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSArray shortcut methods extension.
@@ -56,7 +58,7 @@
  *  @see arrayWithData:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSPropertyListSerialization_Class/Reference/Reference.html#//apple_ref/c/tdef/NSPropertyListFormat
  */
-- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 /*!
  *  @brief Initializes a newly allocated array by placing in it the objects enumerated in a given enumerator.
@@ -92,7 +94,7 @@
  *  @brief Creates and returns an array containing the contents of data. Data must be property list.
  *  @see initWithData:format:error:
  */
-+ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 /*!
  *  @brief Creates and returns an array containing the objects enumerated in a given enumerator.
@@ -250,3 +252,5 @@
 - (id)popRandomObject __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END

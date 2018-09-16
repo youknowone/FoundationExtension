@@ -11,7 +11,7 @@
  *  @brief See @ref CoreFoundation-Subclass for concept of these objects.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  @brief [NSString][0] subclass-available implementation.

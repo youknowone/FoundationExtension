@@ -12,6 +12,10 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html
  */
 
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief Creation method extension
  */
@@ -75,26 +79,6 @@
  */
 + (instancetype)smartURLWithPath:(NSString *)path;
 
-/*! @name Deprecated */
-
-//! @deprecated Use @link initSmartURLWithPath: @endlink
-- (id)initWithAbstractPath:(NSString *)path __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::smartURL and @ref NSString(Shortcuts)::format:
-- (id)initWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::URL and @ref NSString(Shortcuts)::format:
-- (id)initWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::fileURL and @ref NSString(Shortcuts)::format:
-- (id)initFileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-
-//! @deprecated Use @ref NSString(NSURL)::smartURL
-+ (NSURL *)URLWithAbstractPath:(NSString *)path __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::smartURL and @ref NSString(Shortcuts)::format:
-+ (NSURL *)URLWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::URL and @ref NSString(Shortcuts)::format:
-+ (NSURL *)URLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated Use @ref NSString(NSURL)::fileURL and @ref NSString(Shortcuts)::format:
-+ (NSURL *)fileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-
 @end
 
 /*!
@@ -152,7 +136,7 @@
 /*!
  *  @brief Returns a String value that prefix matches "(^[a-zA-Z]*)://.*" or nil
  */
-- (NSString *)URLProtocol;
+- (nullable NSString *)URLProtocol;
 
 /*! @name Creating an URL */
 
@@ -161,39 +145,69 @@
  *  @return Result of [NSURL -URLWithString:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURL/URLWithString:
  */
-- (NSURL *)URL;
+- (nullable NSURL *)URL;
 
 /*!
  *  @brief Returns a file URL from self value.
  *  @return Result of [NSURL -fileURLWithPath:][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURL/fileURLWithPath:
  */
-- (NSURL *)fileURL;
+- (nullable NSURL *)fileURL;
 
 /*!
  *  @brief Returns a resource URL from self value.
  *  @return Result of @ref NSURL(Creations)::resourceURLWithPath:
  */
-- (NSURL *)resourceURL;
+- (nullable NSURL *)resourceURL;
 
 /*!
  *  @brief Returns a configuration URL from self value.
  *  @return Result of @ref NSURL(Creations)::configurationURLWithPath:
  */
-- (NSURL *)configurationURL;
+- (nullable NSURL *)configurationURL;
 
 /*!
  *  @brief Returns a temporary URL from self value.
  *  @return Result of @ref NSURL(Creations)::temporaryURLWithPath:
  */
-- (NSURL *)temporaryURL;
+- (nullable NSURL *)temporaryURL;
 
 /*!
  *  @brief Returns a smart URL from self value.
  *  @return Result of @ref NSURL(Creations)::smartURLWithPath:
  */
-- (NSURL *)smartURL;
+- (nullable NSURL *)smartURL;
 
+@end
+
+NS_ASSUME_NONNULL_END
+
+@interface NSURL (Deprecated)
+
+/*! @name Deprecated */
+
+//! @deprecated Use @link initSmartURLWithPath: @endlink
+- (id)initWithAbstractPath:(NSString *)path __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::smartURL and @ref NSString(Shortcuts)::format:
+- (id)initWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::URL and @ref NSString(Shortcuts)::format:
+- (id)initWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::fileURL and @ref NSString(Shortcuts)::format:
+- (id)initFileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+
+//! @deprecated Use @ref NSString(NSURL)::smartURL
++ (NSURL *)URLWithAbstractPath:(NSString *)path __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::smartURL and @ref NSString(Shortcuts)::format:
++ (NSURL *)URLWithAbstractFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::URL and @ref NSString(Shortcuts)::format:
++ (NSURL *)URLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+//! @deprecated Use @ref NSString(NSURL)::fileURL and @ref NSString(Shortcuts)::format:
++ (NSURL *)fileURLWithFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
+
+@end
+
+
+@interface NSString (NSURL_deprecated)
 
 /*! @name Deprecated */
 
@@ -205,11 +219,6 @@
 
 //! @deprecated Use @link URLProtocol @endlink
 - (NSString *)pathProtocol __deprecated;
-
-@end
-
-
-@interface NSString (NSURL_deprecated)
 
 /*!
  *  @brief Returns a representation of the receiver using UTF8 encoding to determine the percent escapes necessary to convert the receiver into a legal URL string.
@@ -249,8 +258,8 @@ __deprecated @interface NSData (NSURL_deprecated)
 + (NSData *)dataWithContentsOfAbstractPath:(NSString *)path __deprecated;
 
 /// @deprecated Use initWithContentOfURL:options:error and @ref NSString(NSURL)::smartURL
-- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
+- (id)initWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(out NSError **)error __deprecated;
 /// @deprecated Use dataWithContentOfURL:options:error and @ref NSString(NSURL)::smartURL
-+ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(NSError **)error __deprecated;
++ (NSData *)dataWithContentsOfAbstractPath:(NSString *)path options:(NSDataReadingOptions)opt error:(out NSError **)error __deprecated;
 
 @end

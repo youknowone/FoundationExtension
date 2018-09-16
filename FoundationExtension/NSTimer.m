@@ -26,7 +26,7 @@
     [self scheduleWithRunLoop:[NSRunLoop currentRunLoop] mode:NSDefaultRunLoopMode];
 }
 
-- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode {
+- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSRunLoopMode)mode {
     [[NSRunLoop currentRunLoop] addTimer:self forMode:mode];
 }
 

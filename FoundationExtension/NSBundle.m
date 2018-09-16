@@ -8,6 +8,8 @@
 
 #import "NSBundle.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 NSString *NSMainBundleResourceDirectory(void) {
     return [[NSBundle mainBundle] resourcePath];
 }
@@ -27,3 +29,5 @@ NSString *NSMainBundleResourcePathForFile(NSString *filename) {
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 #import "NSDate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSDate (Shortcuts)
 
 - (NSDateComponents *)components {
@@ -20,3 +22,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

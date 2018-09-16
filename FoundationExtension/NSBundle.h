@@ -12,20 +12,22 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief Returns directory path for main bundle.
  *  @return [[NSBundle mainBundle] resourcePath]
  */
-FOUNDATION_EXTERN NSString *NSMainBundleResourceDirectory(void);
+FOUNDATION_EXTERN NSString *NSMainBundleResourceDirectory(void) __deprecated;
 /*!
  *  @brief Returns file path in resource directory for main bundle.
  *  @param filename Resource file name.
  *  @return NSMainBundleResourceDirectory() result with appended filename.
  *  @warning This implementation is not suitable for localized resource.
  */
-FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename);
+FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename) __deprecated;
 
 /*!
  *  @brief NSBundle extensions
@@ -43,3 +45,5 @@ FOUNDATION_EXTERN NSString *NSMainBundleResourcePathForFile(NSString *filename);
 - (NSString *)pathForResource:(NSString *)filename __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END

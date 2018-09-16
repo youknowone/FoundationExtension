@@ -6,8 +6,9 @@
 //  Copyright © 2016 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (CreationRC)
 
@@ -38,3 +39,5 @@
 
 
 @end
+
+NS_ASSUME_NONNULL_END

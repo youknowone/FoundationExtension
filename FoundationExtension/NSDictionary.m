@@ -10,17 +10,19 @@
 
 #import "NSDictionary.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSDictionary (Shortcuts)
 
 - (BOOL)containsKey:(id)key {
     return [self.allKeys containsObject:key];
 }
 
-- (id)anyKey {
+- (nullable id)anyKey {
     return [self.keyEnumerator nextObject];
 }
 
-- (id)anyObject {
+- (nullable id)anyObject {
     return [self.objectEnumerator nextObject];
 }
 
@@ -37,7 +39,7 @@
     return [[self alloc] initWithData:data];
 }
 
-- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     NSDictionary *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
         return nil;
@@ -45,7 +47,7 @@
     return [self initWithDictionary:contents];
 }
 
-+ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     return [[self alloc] initWithData:data format:format error:error];
 }
 
@@ -54,8 +56,10 @@
 
 @implementation NSDictionary (Deprecated)
 
-- (id):(id)key {
+- (nullable id):(id)key {
     return self[key];
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

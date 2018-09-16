@@ -14,18 +14,24 @@
 
 #if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1070 || __IPHONE_OS_VERSION_MAX_ALLOWED >= 50000
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSJSONSerialization (Shortcuts)
 
-+ (id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(NSError **)error {
++ (nullable id)JSONObjectWithString:(NSString *)string options:(NSJSONReadingOptions)opt error:(out NSError **)error {
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     return [self JSONObjectWithData:data options:opt error:error];
 }
 
-+ (NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(NSError **)error {
-    return [NSString stringWithUTF8Data:[self dataWithJSONObject:obj options:opt error:error]];
++ (nullable NSString *)stringWithJSONObject:(id)obj options:(NSJSONWritingOptions)opt error:(out NSError **)error {
+    NSData *data = [self dataWithJSONObject:obj options:opt error:error];
+    if (data == nil) {
+        return nil;
+    }
+    return [NSString stringWithUTF8Data:data];
 }
 
-+ (id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(NSError **)error {
++ (nullable id)JSONObjectWithURLRequest:(NSURLRequest *)URLRequest options:(NSJSONReadingOptions)opt error:(out NSError **)error {
     NSData *data = [NSData dataWithContentsOfURLRequest:URLRequest error:error];
     if (data == nil) {
         return nil;
@@ -33,7 +39,7 @@
     return [self JSONObjectWithData:data options:opt error:error];
 }
 
-+ (id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(NSError **)error {
++ (nullable id)JSONObjectWithURL:(NSURL *)URL options:(NSJSONReadingOptions)opt error:(out NSError **)error {
     NSData *data = [NSData dataWithContentsOfURL:URL options:0 error:error];
     if (data == nil) {
         return nil;
@@ -42,5 +48,7 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif

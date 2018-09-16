@@ -11,6 +11,8 @@
 
 #import "NSObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSAMethod ()
 
 - (instancetype)initWithMethod:(Method)method;
@@ -25,25 +27,25 @@
     return @(object_getClassName(self));
 }
 
-- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 {
+- (nullable id)performSelector:(SEL)sel withObject:(nullable id)obj1 withObject:(nullable id)obj2 withObject:(nullable id)obj3 {
     if (!sel) [self doesNotRecognizeSelector:sel];
     return ((id(*)(id, SEL, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3);
 }
 
-- (id)performSelector:(SEL)sel withObject:(id)obj1 withObject:(id)obj2 withObject:(id)obj3 withObject:(id)obj4 {
+- (nullable id)performSelector:(SEL)sel withObject:(nullable id)obj1 withObject:(nullable id)obj2 withObject:(nullable id)obj3 withObject:(nullable id)obj4 {
     if (!sel) [self doesNotRecognizeSelector:sel];
     return ((id(*)(id, SEL, id, id, id, id))objc_msgSend)(self, sel, obj1, obj2, obj3, obj4);
 }
 
-- (id)associatedObjectForKey:(void *)key {
+- (nullable id)associatedObjectForKey:(void *)key {
     return objc_getAssociatedObject(self, key);
 }
 
-- (void)setAssociatedObject:(id)object forKey:(void *)key {
+- (void)setAssociatedObject:(nullable id)object forKey:(void *)key {
     [self setAssociatedObject:object forKey:key policy:OBJC_ASSOCIATION_RETAIN];
 }
 
-- (void)setAssociatedObject:(id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy {
+- (void)setAssociatedObject:(nullable id)object forKey:(void *)key policy:(objc_AssociationPolicy)policy {
     objc_setAssociatedObject(self, key, object, policy);
 }
 
@@ -134,7 +136,7 @@
     method_setImplementation(self->_method, implementation);
 }
 
-- (NSString *)typeEncoding {
+- (NSString *_Nullable)typeEncoding {
     return @(method_getTypeEncoding(self->_method));
 }
 
@@ -160,3 +162,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

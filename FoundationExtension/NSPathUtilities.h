@@ -11,6 +11,8 @@
  *  @brief NSPathUtilities.h extension function collection
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*! @name Path utilities */
 
 /*!
@@ -82,3 +84,5 @@ FOUNDATION_EXTERN NSString *NSPathForTemporaryFile(NSString *filename);
 - (NSString *)stringByAppendingPathFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1, 2);
 
 @end
+
+NS_ASSUME_NONNULL_END

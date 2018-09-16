@@ -10,7 +10,7 @@
  *  @file
  *  @brief Tool for system version
  */
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSAVersion : NSObject {
     NSString *_string;

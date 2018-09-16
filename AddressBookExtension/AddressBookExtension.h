@@ -7,7 +7,7 @@
 //
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 //! Project version number for AddressBookExtension.
 FOUNDATION_EXPORT double AddressBookExtensionVersionNumber;

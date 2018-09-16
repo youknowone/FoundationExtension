@@ -8,6 +8,8 @@
 
 #import "NSString.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSString (Creations)
 
 - (instancetype)initWithInteger:(NSInteger)value {
@@ -238,3 +240,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -67,11 +67,11 @@
     return ABAddressBookSave(self->_ref, (CFErrorRef *)error);
 }
 
-- (BOOL)addRecord:(ABRecord *)record error:(NSError **)error {
+- (BOOL)addRecord:(ABRecord *)record error:(out NSError **)error {
     return ABAddressBookAddRecord(self->_ref, record.ref, (CFErrorRef *)error);
 }
 
-- (BOOL)removeRecord:(ABRecord *)record error:(NSError **)error {
+- (BOOL)removeRecord:(ABRecord *)record error:(out NSError **)error {
     return ABAddressBookRemoveRecord(self->_ref, record.ref, (CFErrorRef *)error);
 }
 

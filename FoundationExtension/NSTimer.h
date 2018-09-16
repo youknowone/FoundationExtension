@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief NSTimer extension for [NSRunLoop][0] shortcuts.
@@ -31,7 +33,7 @@
  *  @param mode runLoop mode.
  *  @see schedule
  */
-- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSString *)mode;
+- (void)scheduleWithRunLoop:(NSRunLoop *)runLoop mode:(NSRunLoopMode)mode;
 
 @end
 
@@ -66,3 +68,5 @@ typedef void (^NSATimerBlock)(void);
 + (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector;
 
 @end
+
+NS_ASSUME_NONNULL_END

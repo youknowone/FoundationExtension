@@ -12,7 +12,9 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSNull_Class/Reference/Reference.html
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief [NSNull][0] tools.
@@ -23,21 +25,23 @@
 /*
  *  @brief YES if obj is NSNull; otherwise NO.
  */
-+ (BOOL)objectIsNull:(id)obj;
++ (BOOL)objectIsNull:(id _Nullable)obj;
 
 /*
  *  @brief YES if obj is nil or NSNull; otherwise NO.
  */
-+ (BOOL)objectIsNilOrNull:(id)obj;
++ (BOOL)objectIsNilOrNull:(id _Nullable)obj;
 
 /*
  *  @brief Returns NSNull if obj is nil; otherwise obj.
  */
-+ (id)nullIfObjectIsNil:(id)obj;
++ (id)nullIfObjectIsNil:(id _Nullable)obj;
 
 /*
  *  @brief Returns nil if obj is NSNull; otherwise obj.
  */
-+ (id)nilIfObjectIsNull:(id)obj;
++ (id)nilIfObjectIsNull:(id _Nullable)obj;
 
 @end
+
+NS_ASSUME_NONNULL_END

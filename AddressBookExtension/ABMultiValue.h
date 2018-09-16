@@ -6,7 +6,7 @@
 //  Copyright (c) 2014년 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <AddressBook/AddressBook.h>
 
 @interface ABMultiValue : NSObject<NSCopying, NSMutableCopying>

@@ -8,6 +8,8 @@
 
 #import "NSCharacterSet.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSCharacterSet (Shortcut)
 
 + (instancetype)emptyCharacterSet {
@@ -19,3 +21,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -6,7 +6,9 @@
 //  Copyright (c) 2014 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @file
@@ -26,3 +28,5 @@
 + (instancetype)emptyCharacterSet;
 
 @end
+
+NS_ASSUME_NONNULL_END

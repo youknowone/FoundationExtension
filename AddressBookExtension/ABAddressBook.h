@@ -6,7 +6,7 @@
 //  Copyright (c) 2014년 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <AddressBook/AddressBook.h>
 
 @class ABRecord;
@@ -27,8 +27,8 @@ typedef void (^ABAAddressBookRequestAccessCompletionHandler) (bool granted, NSEr
 
 - (void)revert;
 - (BOOL)save:(NSError **)error;
-- (BOOL)addRecord:(ABRecord *)record error:(NSError **)error;
-- (BOOL)removeRecord:(ABRecord *)record error:(NSError **)error;
+- (BOOL)addRecord:(ABRecord *)record error:(out NSError **)error;
+- (BOOL)removeRecord:(ABRecord *)record error:(out NSError **)error;
 
 //- (void)registerExternalChangeCallback
 //- (void)unregisterExternalChangeCallback

@@ -33,7 +33,7 @@
  */
 
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 //! Project version number for FoundationExtension.
 FOUNDATION_EXPORT double FoundationExtensionVersionNumber;

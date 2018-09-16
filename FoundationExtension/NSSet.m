@@ -10,6 +10,8 @@
 
 #import "NSSet.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSSet (Enumerator)
 
 - (instancetype)initWithEnumerator:(id<NSFastEnumeration>)enumerator {
@@ -18,3 +20,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

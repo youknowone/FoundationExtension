@@ -13,6 +13,8 @@
  *  @details This table is made by OS X runtime table.
  */
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief Appendix for [NSStringEncoding][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSStringEncoding
@@ -209,3 +211,5 @@ enum {
     NSEBCDICUSStringEncoding                = 0x80000C01,  /* basic EBCDIC-US */
     NSEBCDICCP037StringEncoding             = 0x80000C02,  /* code page 037, extended EBCDIC (Latin-1 set) for US,Canada... */
 };
+
+NS_ASSUME_NONNULL_END

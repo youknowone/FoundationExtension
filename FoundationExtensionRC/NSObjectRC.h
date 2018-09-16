@@ -6,7 +6,7 @@
 //  Copyright © 2016년 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 
 @interface NSObject (AntiARC)

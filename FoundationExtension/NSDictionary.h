@@ -12,6 +12,10 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html
  */
 
+@import Foundation;
+
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  @brief NSDictionary shortcut methods extension.
  */
@@ -28,13 +32,13 @@
  *  @brief Returns one of the keys in the dictionary, or nil if the dictionary contains no objects.
  *  @return One of the keys in the dictionary, or nil if the dictionary contains no objects. The key returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random.
  */
-- (id)anyKey;
+- (nullable id)anyKey;
 
 /*!
  *  @brief Returns one of the objects in the dictionary, or nil if the dictionary contains no objects.
  *  @return One of the objects in the dictionary, or nil if the dictionary contains no objects. The object returned is chosen at the dictionary's convenience—the selection is not guaranteed to be random.
  */
-- (id)anyObject;
+- (nullable id)anyObject;
 
 @end
 
@@ -66,7 +70,7 @@
  *  @see dictionaryWithData:format:error:
  *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSPropertyListSerialization_Class/Reference/Reference.html#//apple_ref/c/tdef/NSPropertyListFormat
  */
-- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 /*! @name Creating a Dictionary */
 
@@ -80,7 +84,7 @@
  *  @brief Creates and returns a dictionary containing the contents of data. Data must be property list.
  *  @see initWithData:format:error:
  */
-+ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error;
++ (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
 
 @end
 
@@ -94,6 +98,8 @@
  *  @brief Extreme short form of 'ObjectForKey:'
  *  @deprecated Use (array)[key] syntax of Modern Objective-C instead of this method.
  */
-- (id):(id)key __deprecated;
+- (nullable id):(id)key __deprecated;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,7 +11,7 @@
  *  @brief Enumerators for convinience.
  */
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /*!
  *  @brief  Infinite loop

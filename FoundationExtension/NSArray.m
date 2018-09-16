@@ -10,6 +10,8 @@
 
 #import "NSData.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSArray (Shortcuts)
 
 - (BOOL)hasIndex:(NSUInteger)index {
@@ -29,7 +31,7 @@
     return [[self alloc] initWithData:data];
 }
 
-- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
+- (instancetype)initWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     NSArray *contents = [data propertyListObjectUsingFormat:format error:error];
     if (contents == nil) {
         return nil;
@@ -37,7 +39,7 @@
     return [self initWithArray:contents];
 }
 
-+ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *)format error:(NSError **)error {
++ (instancetype)arrayWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error {
     return [[self alloc] initWithData:data format:format error:error];
 }
 
@@ -180,3 +182,5 @@
 }
 
 @end
+
+NS_ASSUME_NONNULL_END

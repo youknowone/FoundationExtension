@@ -6,7 +6,7 @@
 //  Copyright (c) 2014년 youknowone.org. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 #import <AddressBook/AddressBook.h>
 #import <AddressBookExtension/ABAddressBook.h>
 
@@ -25,8 +25,8 @@
 @property(readonly,nonatomic) NSString *compositeName;
 - (id)valueForProperty:(ABPropertyID)property;
 - (ABMultiValue *)multivalueForProperty:(ABPropertyID)property;
-- (BOOL)setValue:(id)value forProperty:(ABPropertyID)property error:(NSError **)error;
-- (BOOL)removeValueForProperty:(ABPropertyID)property error:(NSError **)error;
+- (BOOL)setValue:(id)value forProperty:(ABPropertyID)property error:(out NSError **)error;
+- (BOOL)removeValueForProperty:(ABPropertyID)property error:(out NSError **)error;
 
 @end
 
@@ -44,8 +44,8 @@
 @property(readonly,nonatomic) NSArray *allMembers;
 - (NSArray *)allSortedMembersUsingOrdering:(ABPersonSortOrdering)ordering;
 
-- (BOOL)addMember:(ABPerson *)person error:(NSError **)error;
-- (BOOL)removeMember:(ABPerson *)person error:(NSError **)error;
+- (BOOL)addMember:(ABPerson *)person error:(out NSError **)error;
+- (BOOL)removeMember:(ABPerson *)person error:(out NSError **)error;
 
 @end
 
@@ -61,7 +61,7 @@
 
 @property(copy,nonatomic) NSData *imageData;
 - (NSData *)imageDataWithFormat:(ABPersonImageFormat)format;
-- (BOOL)setImageData:(NSData *)imageData error:(NSError **)error;
+- (BOOL)setImageData:(NSData *)imageData error:(out NSError **)error;
 @property(readonly,nonatomic) BOOL hasImageData;
 // - (BOOL)removeImageData; // user setImageData:nil
 

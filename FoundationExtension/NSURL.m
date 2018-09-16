@@ -232,8 +232,10 @@
 
 @end
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSString (NSURL_deprecated)
+#pragma clang diagnostic pop
 
 - (NSString *)stringByAddingPercentEscapesUsingUTF8Encoding {
     return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -245,8 +247,10 @@
 
 @end
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSData (NSURL_deprecated)
+#pragma clang diagnostic pop
 
 - (id)initWithContentsOfAbstractPath:(NSString *)path {
     return [self initWithContentsOfURL:[NSURL URLWithAbstractPath:path]];

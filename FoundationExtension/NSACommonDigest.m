@@ -53,25 +53,6 @@ static NSData *NSDataCommonCryptoDigest(NSData *data, CC_DIGEST_FUNCTION digest,
     return NSDataCommonCryptoDigest(self, CC_SHA512, CC_SHA512_DIGEST_LENGTH);
 }
 
-- (NSString *)digestStringByMD5 {
-    unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
-    CC_MD5([self bytes], (CC_LONG)[self length], hashedChars);
-    NSMutableString *result = [[NSMutableString alloc] init];
-    for ( int i = 0; i<CC_MD5_DIGEST_LENGTH; i++ )
-        [result appendFormat:@"%02x", *(hashedChars+i)];
-    return result;
-}
-
-- (NSString *)digestStringBySHA1 {
-    unsigned char hashedChars[CC_SHA1_DIGEST_LENGTH];
-    CC_SHA1([self bytes], (CC_LONG)[self length], hashedChars);
-    NSMutableString *result = [[NSMutableString alloc] init];
-    for ( int i = 0; i<CC_SHA1_DIGEST_LENGTH; i++ ) {
-        [result appendFormat:@"%02x", *(hashedChars+i)];
-    }
-    return result;
-}
-
 @end
 
 @implementation NSString (CommonCrypto)
@@ -112,6 +93,41 @@ static NSData *NSStringCommonCryptoDigest(NSString *string, NSStringEncoding enc
 - (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding {
     return NSStringCommonCryptoDigest(self, encoding, CC_SHA512, CC_SHA512_DIGEST_LENGTH);
 }
+
+@end
+
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+@implementation NSData (CommonCryptoDeprecated)
+#pragma clang diagnostic pop
+
+- (NSString *)digestStringByMD5 {
+    unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
+    CC_MD5([self bytes], (CC_LONG)[self length], hashedChars);
+    NSMutableString *result = [[NSMutableString alloc] init];
+    for ( int i = 0; i<CC_MD5_DIGEST_LENGTH; i++ )
+        [result appendFormat:@"%02x", *(hashedChars+i)];
+    return result;
+}
+
+- (NSString *)digestStringBySHA1 {
+    unsigned char hashedChars[CC_SHA1_DIGEST_LENGTH];
+    CC_SHA1([self bytes], (CC_LONG)[self length], hashedChars);
+    NSMutableString *result = [[NSMutableString alloc] init];
+    for ( int i = 0; i<CC_SHA1_DIGEST_LENGTH; i++ ) {
+        [result appendFormat:@"%02x", *(hashedChars+i)];
+    }
+    return result;
+}
+
+@end
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+@implementation NSString (CommonCryptoDeprecated)
+#pragma clang diagnostic pop
+
 
 - (NSData *)digestByMD5 {
     return [self digestByMD5UsingEncoding:NSUTF8StringEncoding];

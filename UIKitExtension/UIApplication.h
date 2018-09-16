@@ -12,7 +12,7 @@
  *      [0]: http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIApplication_Class/Reference/Reference.html
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 

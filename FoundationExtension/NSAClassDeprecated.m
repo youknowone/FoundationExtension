@@ -18,7 +18,10 @@
 @end
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSAClass
+#pragma clang diagnostic pop
 
 @synthesize class=_class;
 
@@ -53,8 +56,10 @@
 
 @end
 
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSObject (NSAClass)
+#pragma clang diagnostic pop
 
 - (NSAClass *)classObject {
     return [NSAClass classWithClass:self.class];

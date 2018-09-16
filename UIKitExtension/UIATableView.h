@@ -6,7 +6,7 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 

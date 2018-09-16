@@ -50,6 +50,16 @@
     }
 }
 
+- (void)didReceiveMemoryWarning {
+    for (id view in self.subviews) {
+        if ([view respondsToSelector:@selector(didReceiveMemoryWarning)]) {
+            [view didReceiveMemoryWarning];
+        }
+    }
+}
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)viewWillUnload {
     for (id view in self.subviews) {
         if ([view respondsToSelector:@selector(viewWillUnload)]) {
@@ -65,13 +75,6 @@
         }
     }
 }
-
-- (void)didReceiveMemoryWarning {
-    for (id view in self.subviews) {
-        if ([view respondsToSelector:@selector(didReceiveMemoryWarning)]) {
-            [view didReceiveMemoryWarning];
-        }
-    }
-}
+#pragma clang diagnostic pop
 
 @end

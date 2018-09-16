@@ -75,10 +75,6 @@
     return nil;
 }
 
-- (id):(NSUInteger)index {
-    return [self objectAtIndex:index];
-}
-
 - (NSUInteger)indexOfObject:(id)anObject {
     if ([anObject isEqual:self->_first]) {
         return 0;
@@ -123,6 +119,13 @@
     buffer[1] = self->_second;
     return 2;
 }
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+- (id):(NSUInteger)index {
+    return [self objectAtIndex:index];
+}
+#pragma clang diagnostic pop
 
 @end
 
@@ -248,9 +251,12 @@
     return nil;
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (id):(NSUInteger)index {
     return [self objectAtIndex:index];
 }
+#pragma clang diagnostic pop
 
 - (NSUInteger)indexOfObject:(id)anObject {
     if ([anObject isEqual:self->_first]) {

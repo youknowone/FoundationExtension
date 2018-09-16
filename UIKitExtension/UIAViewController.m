@@ -51,6 +51,15 @@
     [super viewDidDisappear:animated];
 }
 
+- (void)didReceiveMemoryWarning {
+    if ([self.view respondsToSelector:@selector(didReceiveMemoryWarning)]) {
+        [self.view didReceiveMemoryWarning];
+    }
+    [super didReceiveMemoryWarning];
+}
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 - (void)viewWillUnload __deprecated {
     if ([self.view respondsToSelector:@selector(viewWillUnload)]) {
         [self.view viewWillUnload];
@@ -64,12 +73,6 @@
     }
     [super viewDidUnload];
 }
-
-- (void)didReceiveMemoryWarning {
-    if ([self.view respondsToSelector:@selector(didReceiveMemoryWarning)]) {
-        [self.view didReceiveMemoryWarning];
-    }
-    [super didReceiveMemoryWarning];
-}
+#pragma clang diagnostic pop
 
 @end

@@ -18,7 +18,7 @@
  *  Before iOS 6.0, use CoreText.
  */
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000

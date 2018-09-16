@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #import "UITAppDelegate.h"
 

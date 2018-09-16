@@ -37,7 +37,7 @@
 
 
 #if NS_BLOCKS_AVAILABLE
-typedef void (^NSATimerBlock)();
+typedef void (^NSATimerBlock)(void);
 /*!
  *  @brief [dispatch][0] Shortcuts, not really NSTimer-related implementation.
  *  @warning This impelentation is testing.

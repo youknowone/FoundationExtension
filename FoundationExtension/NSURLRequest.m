@@ -188,7 +188,10 @@
 @end
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation NSURLRequest (Creations_deprecated)
+#pragma clang diagnostic pop
 
 - (id)initWithURLFormat:(NSString *)format, ... {
     va_list args;

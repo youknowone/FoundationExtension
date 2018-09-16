@@ -44,7 +44,7 @@
  *  @param index The index of the object to be replaced. This value is expected not to exceed the bounds of the container.
  *  @details If the index is equal to size of the container the element is expected to be added to the end of the container, growing the container.
  */
-- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)index;
+- (void)setObject:(id)anObject atIndexedSubscript:(NSUInteger)index;
 
 @end
 
@@ -74,6 +74,6 @@
  *  @param key The key for value. The key should be copied (using copyWithZone:; keys must conform to the NSCopying protocol). Raise an NSInvalidArgumentException if key is nil. If key already exists in the container object takes its place.
  *  @details This method is expected to be identical to setObject:forKey:.
  */
-- (void)setObject:(id)obj forKeyedSubscript:(id <NSCopying>)key;
+- (void)setObject:(id)object forKeyedSubscript:(id <NSCopying>)key;
 
 @end

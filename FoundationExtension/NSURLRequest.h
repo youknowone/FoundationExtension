@@ -41,7 +41,10 @@
  *  @brief Deprecated creation shortcuts
  *  @deprecated Use [NSURLRequest initWithURL:](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSURLRequest/initWithURL:), @ref NSString(Shortcuts) and @ref NSURL(Creations)
  */
-@interface NSURLRequest (Creations_deprecated)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
+__deprecated @interface NSURLRequest (Creations_deprecated)
+#pragma clang diagnostic pop
 
 //! @deprecated
 - (id)initWithURLFormat:(NSString *)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;

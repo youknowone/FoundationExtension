@@ -27,7 +27,7 @@ FOUNDATION_EXPORT double UIKitExtensionVersionNumber;
 FOUNDATION_EXPORT const unsigned char UIKitExtensionVersionString[];
 
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 // depenency level 0
 #import <UIKitExtension/NSAttributedString+UIKit.h>         // level: 0 / deps(1): NSADictionary / internal(0):
 #import <UIKitExtension/UIActivityIndicatorView.h>          // level: 0 / deps(0):  / internal(0):

@@ -186,7 +186,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 /*!
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @see NSAFunctional.h
- *  @see @ref NSMutableArray(Functional)
+ *  @ref NSMutableArray(Functional)
  */
 @interface NSEnumerator (Functional)
 
@@ -273,7 +273,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 /*!
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @see NSAFunctional.h
- *  @see @ref NSMutableArray(Functional)
+ *  @ref NSMutableArray(Functional)
  */
 @interface NSArray (Functional)
 
@@ -368,7 +368,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
 /*!
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @see NSAFunctional.h
- *  @see @ref NSArray(Functional)
+ *  @ref NSArray(Functional)
  */
 @interface NSMutableArray (Functional)
 
@@ -415,7 +415,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @details Dictionary is not fit for this functional tools. But this implementation takes concept of them.
  *  @see NSAFunctional.h
- *  @see @ref NSMutableDictionary(Functional)
+ *  @ref NSMutableDictionary(Functional)
  */
 @interface NSDictionary (Functional)
 
@@ -496,7 +496,7 @@ FOUNDATION_EXTERN id NSAReduceWithInitialObject(id<NSFastEnumeration> enumerator
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  *  @details Dictionary is not fit for this functional tools. But this implementation takes concept of them.
  *  @see NSAFunctional.h
- *  @see @ref NSDictionary(Functional)
+ *  @ref NSDictionary(Functional)
  */
 @interface NSMutableDictionary (Functional)
 

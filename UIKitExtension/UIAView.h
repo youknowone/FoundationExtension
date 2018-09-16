@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import <UIKitExtension/UIAViewController.h>
 
 /*!

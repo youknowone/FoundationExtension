@@ -12,9 +12,10 @@
     #define UILog(TAG, ...)
 #endif
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
+#if !(defined(__has_feature) && __has_feature(attribute_availability_app_extension))
 
 @interface UIAlertView (Shortcuts)
 
@@ -25,4 +26,5 @@
 
 @end
 
+#endif
 #endif

@@ -52,14 +52,8 @@
  */
 - (NSData *)digestBySHA512;
 
-/*! @name Deprecated */
-
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringByMD5 __deprecated;
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringBySHA1 __deprecated;
-
 @end
+
 
 /*!
  *  @brief Shortcuts for CommonCrypto digest.
@@ -99,7 +93,19 @@
  */
 - (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding;
 
-/*! @name Deprecated */
+@end
+
+
+__deprecated @interface NSData (CommonCryptoDeprecated)
+
+//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
+- (NSString *)digestStringByMD5 __deprecated;
+//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
+- (NSString *)digestStringBySHA1 __deprecated;
+
+@end
+
+__deprecated @interface NSString (CommonCryptoDeprecated)
 
 //! @deprecated Use -digestByMD5:encoding:
 - (NSData *)digestByMD5 __deprecated;

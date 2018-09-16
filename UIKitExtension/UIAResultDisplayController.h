@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #if NS_BLOCKS_AVAILABLE
 @protocol UIADimmingViewDelegate;

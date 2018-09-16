@@ -65,7 +65,7 @@ __deprecated @interface NSAClass: NSObject {
 
 @end
 
-@interface NSAClass (Deprecated)
+__deprecated @interface NSAClass (Deprecated)
 
 /*!
  *  @brief Returns class name in c format.
@@ -135,7 +135,7 @@ __deprecated @interface NSAClass: NSObject {
  *  @brief NSObject extension for NSAClass shortcut.
  *  @deprecated This category is deprecated.
  */
-@interface NSObject (NSAClass)
+__deprecated @interface NSObject (NSAClass)
 
 /*!
  *  @brief Class object representation.

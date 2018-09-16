@@ -204,7 +204,7 @@
 - (BOOL)hasURLPrefix __deprecated;
 
 //! @deprecated Use @link URLProtocol @endlink
-- (NSString *)pathProtocol;
+- (NSString *)pathProtocol __deprecated;
 
 @end
 
@@ -241,7 +241,7 @@ NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -stringByRemovingPercentEncoding:")
  *  @brief NSData creation shortcuts from URL.
  *  @deprecated This category is deprecated. See each method deprecated section about replacement.
  */
-@interface NSData (NSURL_deprecated)
+__deprecated @interface NSData (NSURL_deprecated)
 
 /// @deprecated Use initWithContentOfURL: and @ref NSString(NSURL)::smartURL
 - (id)initWithContentsOfAbstractPath:(NSString *)path __deprecated;

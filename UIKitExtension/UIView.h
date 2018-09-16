@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 #define UIViewAutoresizingFlexibleVertical (UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleRightMargin)
 #define UIViewAutoresizingFlexibleHorizontal (UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleBottomMargin)
@@ -23,7 +23,7 @@ FOUNDATION_EXTERN const NSTimeInterval UIAViewAnimationDefaultDuraton;
 /*!
  *  @brief Animation block signature for UIView animation methods.
  */
-typedef void (^UIAViewAnimationBlock)();
+typedef void (^UIAViewAnimationBlock)(void);
 /*!
  *  @brief Animation completion block signature for UIView animation methods.
  */

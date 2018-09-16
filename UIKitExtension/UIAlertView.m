@@ -9,8 +9,12 @@
 #import "UIAlertView.h"
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
+#if !(defined(__has_feature) && __has_feature(attribute_availability_app_extension))
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-implementations"
 @implementation UIAlertView (Shortcuts)
+#pragma clang diagnostic pop
 
 + (instancetype)showLog:(NSString *)log file:(char *)filename line:(int)line {
     UIAlertView *alertView = [[self alloc] initWithTitle:[NSString stringWithFormat:@"%@:%d", @(filename), line]
@@ -36,4 +40,5 @@
 
 @end
 
+#endif
 #endif

@@ -56,12 +56,15 @@ typedef NSInteger NSWritingDirectionFormatType;
  *  @see [NSWritingDirectionAttributeName][0]
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSAttributedString_AppKitAdditions/Reference/Reference.html#//apple_ref/doc/c_ref/NSWritingDirectionAttributeName
  */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
 enum {
     NSWritingDirectionAttributeLRE = 1 << (NSWritingDirectionLeftToRight | NSWritingDirectionEmbedding),
     NSWritingDirectionAttributeRLE = 1 << (NSWritingDirectionRightToLeft | NSWritingDirectionEmbedding),
     NSWritingDirectionAttributeLRO = 1 << (NSWritingDirectionLeftToRight | NSWritingDirectionOverride),
     NSWritingDirectionAttributeRLO = 1 << (NSWritingDirectionRightToLeft | NSWritingDirectionOverride),
 };
+#pragma clang diagnostic pop
 /*!
  *  @brief Type for writing direction.
  *  @see [NSWritingDirectionAttributeName][0]

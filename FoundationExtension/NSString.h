@@ -78,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief Returns a string made by using self as a format string template into which the argument values are substituted.
- *  @param first, ... A comma-separated list of arguments to substitute into format. first should be id type.
+ *  @param first ... A comma-separated list of arguments to substitute into format. first should be id type.
  *  @return A string created by using self as a template into which the argument values are substituted according to the canonical locale.
  *  @details This requires first argument type to be id. To avoid this problems, use @link format0: @endlink.
  *  @warning Implementation of this method is not optimized enough so this is slow for some case.
@@ -167,7 +167,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
- *  @see @ref NSString(Creations)::stringWithData:encoding:
+ *  @ref NSString(Creations)::stringWithData:encoding:
  */
 + (instancetype)stringWithUTF8Data:(NSData *)data;
 
@@ -223,7 +223,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  @brief Creates and returns an NSString object initialized by converting given data into Unicode characters using UTF8 encoding.
  *  @details For other encodings, see @ref NSString(Creations)::stringWithData:encoding:
- *  @see @ref NSString(Creations)::stringWithData:encoding:
+ *  @ref NSString(Creations)::stringWithData:encoding:
  */
 @property(nonatomic, readonly) NSString *stringUsingUTF8Encoding;
 

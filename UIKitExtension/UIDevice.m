@@ -22,16 +22,6 @@
     return [NSAVersion versionWithString:self.systemVersion];
 }
 
-+ (UIADeviceType)currentDeviceType {
-    switch ([[self currentDevice] userInterfaceIdiom]) {
-        case UIUserInterfaceIdiomPad:
-            return UIADeviceTypePad;
-        default:
-            break;
-    }
-    return UIADeviceTypePhone;
-}
-
 - (NSString *)uniqueToken {
     NSString *token = nil;
     if ([self respondsToSelector:@selector(identifierForVendor)]) {
@@ -91,6 +81,20 @@
     }
     const unsigned char *m = MACData.bytes;
     return [NSString stringWithFormat:@"%02x:%02x:%02x:%02x:%02x:%02x", m[0], m[1], m[2], m[3], m[4], m[5], nil];
+}
+
+@end
+
+@implementation UIDevice (Deprecated)
+
++ (UIADeviceType)currentDeviceType {
+    switch ([[self currentDevice] userInterfaceIdiom]) {
+        case UIUserInterfaceIdiomPad:
+            return UIADeviceTypePad;
+        default:
+            break;
+    }
+    return UIADeviceTypePhone;
 }
 
 @end

@@ -9,6 +9,8 @@
 #import <cdebug/debug.h>
 #import "NSAttributedString+Cocoa.h"
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
 static NSArray *__NSWritingDirectionAttributeArrayFromAttributes(NSWritingDirectionAttributes writingDirection) {
     NSMutableArray *array = [NSMutableArray array];
     if (writingDirection & NSWritingDirectionAttributeLRE) {
@@ -33,6 +35,7 @@ static NSArray *__NSWritingDirectionAttributeArrayFromAttributes(NSWritingDirect
     }
     return array;
 }
+#pragma clang diagnostic pop
 
 @implementation NSMutableAttributedString (AttributeProperties)
 

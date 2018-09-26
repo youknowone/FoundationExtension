@@ -16,7 +16,7 @@ matrix:
       xcode_sdk: appletvsimulator
       xcode_scheme: UIKitExtension
       xcode_destination: platform=tvOS Simulator,OS=11.3,name=Apple TV 4K
-    - osx_image: xcode8  # legacy support
+    - osx_image: xcode7  # legacy support
       xcode_scheme: CocoaExtension
       xcode_destination: platform=macOS
   allow_failures:

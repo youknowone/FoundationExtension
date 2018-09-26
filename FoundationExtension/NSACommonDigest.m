@@ -6,7 +6,7 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-@import CommonCrypto;
+#import <CommonCrypto/CommonCrypto.h>
 
 #import "debug.h"
 

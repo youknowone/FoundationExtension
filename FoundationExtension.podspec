@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
   s.social_media_url   = "http://twitter.com/youknowone_"
   s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => "2.0.0" }
-  s.dependency "cdebug", "~> 1.1"
+  s.dependency "cdebug", "~> 1.2"
   s.requires_arc = true
   s.osx.deployment_target = '10.9'
   s.ios.deployment_target = '9.0'

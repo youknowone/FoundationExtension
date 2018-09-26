@@ -13,7 +13,12 @@
  *      [1]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UITableViewCell_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
 #define UITableViewCellAccessoryDetailButton (UITableViewCellAccessoryCheckmark + 1)

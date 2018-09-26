@@ -165,22 +165,38 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@implementation NSArray (CreationRC)
 
-@implementation NSArray (Deprecated)
+- (instancetype)initWithObject:(id)object count:(NSUInteger)count {
+    id objects[count];
+    for (NSUInteger i = 0; i < count; i++) {
+        objects[i] = object;
+    }
+    self = [self initWithObjects:objects count:count];
+    return self;
+}
 
-- (id):(NSUInteger)index {
-    return self[index];
++ (instancetype)arrayWithObject:(id)object count:(NSUInteger)count {
+    return [[self alloc] initWithObject:object count:count];
+}
+
+- (instancetype)initWithObjectCopy:(id)object count:(NSUInteger)count mutable:(BOOL)flag {
+    id objects[count];
+    if (flag) {
+        for (NSUInteger i = 0; i < count; i++) {
+            objects[i] = [object mutableCopy];
+        }
+    } else {
+        for (NSUInteger i = 0; i < count; i++) {
+            objects[i] = [object copy];
+        }
+    }
+    typeof(self) result = [self initWithObjects:objects count:count];
+    return result;
+    
 }
 
 @end
 
-
-@implementation NSMutableArray (Deprecated)
-
-- (id)popRandomObject {
-    return [self removeRandomObject];
-}
-
-@end
 
 NS_ASSUME_NONNULL_END

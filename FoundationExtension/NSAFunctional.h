@@ -43,7 +43,12 @@
  *  @brief See @ref Map/Filter/Reduce for concept of functional tools.
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
+
 
 #import <FoundationExtension/NSMacro.h>
 

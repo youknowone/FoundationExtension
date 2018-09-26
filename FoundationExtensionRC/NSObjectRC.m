@@ -6,27 +6,10 @@
 //  Copyright © 2016년 youknowone.org. All rights reserved.
 //
 
-#import <objc/runtime.h>
-#import <objc/message.h>
+@import ObjectiveC.runtime;
+@import ObjectiveC.message;
 
 #import "NSObjectRC.h"
-
-
-@implementation NSObject (AntiARC)
-
-- (instancetype)_retain {
-    return [self retain];
-}
-
-- (oneway void)_release {
-    [self release];
-}
-
-- (instancetype)_autorelease {
-    return [self autorelease];
-}
-
-@end
 
 
 @implementation NSObject (ObjCRuntimeRC)
@@ -37,13 +20,17 @@
     return value;
 }
 
+#if !__has_feature(objc_arc)
 - (void)getVariable:(void **)outValue forName:(NSString *)name {
     object_getInstanceVariable(self, name.UTF8String, outValue);
 }
+#endif
 
+#if !__has_feature(objc_arc)
 - (void)setVariable:(void *)value forName:(NSString *)name {
     object_setInstanceVariable(self, name.UTF8String, value);
 }
+#endif
 
 #if !__has_feature(objc_arc)
 - (void)setAndRetainVariable:(id)value forName:(NSString *)name {

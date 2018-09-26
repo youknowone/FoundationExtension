@@ -11,7 +11,11 @@
  *  @brief Creation category extension for various objects using NSURLRequest
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -48,17 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @see initWithContentsOfURLRequest:error:
  */
 + (nullable instancetype)dataWithContentsOfURLRequest:(NSURLRequest *)request error:(out NSError **)errorPtr;
-
-/*! @name Deprecated */
-
-/*!
- *  @deprecated Use initWithContentsOfURLRequest: with NSMutableURLRequest
- */
-- (nullable instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
-/*!
- *  @deprecated Use dataWithContentsOfURLRequest: with NSMutableURLRequest
- */
-+ (nullable instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding __deprecated;
 
 @end
 

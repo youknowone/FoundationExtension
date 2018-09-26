@@ -6,8 +6,9 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <CocoaExtension/CocoaExtension.h>
+@import XCTest;
+@import CocoaExtension;
+
 
 @interface CocoaExtensionTests : XCTestCase<FSEventStreamDelegate> {
     NSURL *tmpURL;

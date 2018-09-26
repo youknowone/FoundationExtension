@@ -13,7 +13,11 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableURLRequest_Class/Reference/Reference.html#//apple_ref/occ/cl/NSMutableURLRequest
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -118,39 +122,6 @@ NS_DEPRECATED(10_0, 10_11, 2_0, 9_0, "Use -setHTTPPostBody: instead, which alway
  *  @see NSAURLRequestHTTPBodyMultiPartFormPostFormatter
  */
 - (void)setHTTPMultiPartFormPostBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding;
-
-@end
-
-/*!
- *  @brief Deprecated creation shortcuts
- *  @deprecated Use [NSURLRequest initWithURL:](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/Reference/Reference.html#//apple_ref/occ/instm/NSURLRequest/initWithURL:), @ref NSString(Shortcuts) and @ref NSURL(Creations)
- */
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-__deprecated @interface NSURLRequest (Creations_deprecated)
-#pragma clang diagnostic pop
-
-//! @deprecated
-- (nullable id)initWithURLFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-- (nullable id)initWithFilePath:(NSString *_Nonnull)filePath __deprecated;
-//! @deprecated
-- (nullable id)initWithFilePathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-- (nullable id)initWithAbstractPath:(NSString *_Nonnull)filePath __deprecated;
-//! @deprecated
-- (nullable id)initWithAbstractPathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-
-//! @deprecated
-+ (nullable id)URLRequestWithURLFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-+ (nullable id)URLRequestWithFilePath:(NSString *_Nonnull)filepath __deprecated;
-//! @deprecated
-+ (nullable id)URLRequestWithFilePathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
-//! @deprecated
-+ (nullable id)URLRequestWithAbstractPath:(NSString *_Nonnull)filePath __deprecated;
-//! @deprecated
-+ (nullable id)URLRequestWithAbstractPathFormat:(NSString *_Nonnull)format, ... NS_FORMAT_FUNCTION(1,2) __deprecated;
 
 @end
 

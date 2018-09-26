@@ -84,17 +84,3 @@
 }
 
 @end
-
-@implementation UIDevice (Deprecated)
-
-+ (UIADeviceType)currentDeviceType {
-    switch ([[self currentDevice] userInterfaceIdiom]) {
-        case UIUserInterfaceIdiomPad:
-            return UIADeviceTypePad;
-        default:
-            break;
-    }
-    return UIADeviceTypePhone;
-}
-
-@end

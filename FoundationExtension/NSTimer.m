@@ -8,6 +8,8 @@
 
 #import "NSTimer.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #if NS_BLOCKS_AVAILABLE
 @implementation NSTimer (dispatch)
 
@@ -56,3 +58,45 @@
 }
 
 @end
+
+
+@interface NSTimer ()
+
+- (void)schedule; // Defined in FoundationExtension
+
+@end
+
+
+@implementation NSTimer (DelegateRC)
+
+static void _NSATimerDelegateCallback(CFRunLoopTimerRef _timer, void *info) {
+    id<NSTimerDelegate> delegate = (__bridge id<NSTimerDelegate>)info;
+    NSTimer *timer = (__bridge NSTimer *)_timer;
+    [delegate timerHasFired:timer];
+    if (![delegate timerShouldRepeat:timer]) {
+        [timer invalidate];
+    };
+}
+
+- (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
+    self = [self init];
+    CFRunLoopTimerContext context = {0, (__bridge void *)delegate, NULL, NULL, NULL};
+    self = (__bridge NSTimer *)CFRunLoopTimerCreate(kCFAllocatorDefault, [date timeIntervalSinceReferenceDate], ti, 0, 0, &_NSATimerDelegateCallback, &context);
+    return self;
+}
+
++ (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
+    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:ti];
+    NSTimer *timer = [[self alloc] initWithFireDate:fireDate interval:ti delegate:delegate];
+    return timer;
+}
+
++ (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate {
+    NSTimer *timer = [self timerWithTimeInterval:ti delegate:delegate];
+    [timer schedule];
+    return timer;
+}
+
+@end
+
+NS_ASSUME_NONNULL_END

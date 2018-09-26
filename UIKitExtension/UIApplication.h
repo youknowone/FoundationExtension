@@ -12,7 +12,12 @@
  *      [0]: http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UIApplication_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 
@@ -41,16 +46,6 @@
  *  @param orientation The orientation to calculate status bar frame.
  */
 - (CGRect)statusBarFrameForOrientation:(UIInterfaceOrientation)orientation;
-
-@end
-
-
-@interface UIApplication (Deprecated)
-
-//! @deprecated Use statusBarFrameForCurrentOrientation
-- (CGSize)statusBarOrientationReducedSize __deprecated;
-//! @deprecated Use statusBarFrameForOrientation:
-- (CGSize)statusBarSizeForOrientation:(UIInterfaceOrientation)orientation __deprecated;
 
 @end
 

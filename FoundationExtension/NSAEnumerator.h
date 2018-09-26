@@ -11,7 +11,12 @@
  *  @brief Enumerators for convinience.
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
+
 
 /*!
  *  @brief  Infinite loop

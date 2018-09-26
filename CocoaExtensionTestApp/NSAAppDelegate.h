@@ -6,6 +6,9 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
+@import Cocoa;
+@import CocoaExtension;
+
 @interface NSAAppDelegate : NSObject <NSApplicationDelegate>
 
 @property(nonatomic, assign) IBOutlet NSWindow *window;

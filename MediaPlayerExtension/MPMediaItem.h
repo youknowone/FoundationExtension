@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <MediaPlayer/MediaPlayer.h>
+@import MediaPlayer;
 
 @interface MPMediaItem (Shortcuts)
 

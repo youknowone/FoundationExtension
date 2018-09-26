@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <UIKitExtension/UIKitExtension.h>
+@import UIKitExtension;
 
 #import "UITDetailViewController.h"
 
@@ -49,7 +49,6 @@
     self.drawView.image = [path imageWithStrokeColor:[UIColor greenColor]];
 
     CGRect frame = [UIApplication sharedApplication].statusBarFrameForCurrentOrientation;
-    UILog(1, @"%.0f %.0f %.0f %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning

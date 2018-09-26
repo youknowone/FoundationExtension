@@ -102,14 +102,6 @@
     self->_placeholderTextView.text = placeholderString;
 }
 
-- (UIColor *)placeholderColor {
-    return self->_placeholderTextView.textColor;
-}
-
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    self->_placeholderTextView.textColor = placeholderColor;
-}
-
 - (UITextView *)placeholderTextView {
     return self->_placeholderTextView;
 }

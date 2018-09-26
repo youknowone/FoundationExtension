@@ -6,7 +6,12 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 

@@ -6,7 +6,11 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
 
 /*!
  *  @brief A table view using rrepared cells instead of data source.

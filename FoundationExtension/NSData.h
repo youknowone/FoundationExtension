@@ -12,7 +12,11 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -55,38 +59,3 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
-
-@interface NSData (Deprecation)
-
-/*! @name base64 */
-
-/*!
- *  @brief Serialized string in base64 format.
- *  @return base64 string.
- *  @see initWithBase64String:
- *  @see dataWithBase64String:
- *  @deprecated [base64EncodedStringWithOptions:] [0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html#//apple_ref/occ/instm/NSData/base64EncodedStringWithOptions:
- */
-- (NSString *)base64String __deprecated;
-
-/*!
- *  @brief Initialize with deserialized data from base64 string.
- *  @param base64 base64 string.
- *  @return Initialized data object.
- *  @see base64String
- *  @deprecated [initWithBase64EncodedString:options:] [0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html#//apple_ref/occ/instm/NSData/initWithBase64EncodedString:options:
- */
-- (instancetype)initWithBase64String:(NSString *)base64 __deprecated;
-/*!
- *  @brief Creates and returns deserialized data from base64 string.
- *  @return Created data object.
- *  @see initWithBase64String:
- *  @see base64String
- *  @deprecated [initWithBase64EncodedString:options:] [0]
- *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html#//apple_ref/occ/instm/NSData/initWithBase64EncodedString:options:
- */
-+ (instancetype)dataWithBase64String:(NSString *)base64 __deprecated;
-
-@end

@@ -12,7 +12,12 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS
 
@@ -27,9 +32,6 @@
  *      [1]: http://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instm/UIWebView/loadRequest:
  */
 - (void)loadRequestForURL:(NSURL *)URL;
-
-//! @deprecated use @ref NSString(NSURL)::fileURL
-- (void)loadRequestForFilePath:(NSString *)filePath __deprecated;
 
 @end
 

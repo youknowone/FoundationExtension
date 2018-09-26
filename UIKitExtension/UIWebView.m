@@ -16,10 +16,6 @@
     [self loadRequest:[NSURLRequest requestWithURL:URL]];
 }
 
-- (void)loadRequestForFilePath:(NSString *)filePath {
-    [self loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]];
-}
-
 @end
 
 #endif

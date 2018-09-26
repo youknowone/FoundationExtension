@@ -7,8 +7,8 @@
 //
 
 @import Foundation;
-#import <cdebug/debug.h>
 
+#import "debug.h"
 #import "NSImage.h"
 
 @implementation NSImage (Shortcuts)

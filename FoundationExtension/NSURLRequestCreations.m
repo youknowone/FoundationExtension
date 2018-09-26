@@ -52,17 +52,6 @@ NS_ASSUME_NONNULL_BEGIN
     return [[self alloc] initWithContentsOfURLRequest:request error:error];
 }
 
-- (nullable instancetype)initWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    [request setHTTPPostBody:bodyDictionary encoding:encoding];
-    id result = [self initWithContentsOfURLRequest:request];
-    return result;
-}
-
-+ (nullable instancetype)dataWithContentsOfURL:(NSURL *)url postBody:(NSDictionary *)bodyDictionary encoding:(NSStringEncoding)encoding {
-    return [[self alloc] initWithContentsOfURL:url postBody:bodyDictionary encoding:encoding];
-}
-
 @end
 
 

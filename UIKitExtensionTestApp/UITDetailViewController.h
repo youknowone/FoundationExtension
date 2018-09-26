@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <UIKitExtension/UIKitExtension.h>
+@import UIKitExtension;
 
 @interface UITDetailViewController : UIViewController
 

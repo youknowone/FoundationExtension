@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <UIKitExtension/UIKitExtension.h>
+@import UIKitExtension;
 
 @interface UITSubviewTableViewController : UIViewController<UIASubviewTableSubviewSource, UITableViewDelegate> {
     IBOutlet UIASubviewTableView *tableView;

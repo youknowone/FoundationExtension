@@ -12,8 +12,13 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/uikit/reference/UIDevice_Class/Reference/UIDevice.html
  */
 
+#if __has_feature(modules)
 @import UIKit;
+@import FoundationExtension;
+#else
+#import <UIKit/UIKit.h>
 #import <FoundationExtension/NSAVersion.h>
+#endif
 
 /*!
  *  @brief [UIDevice][0] shortcuts.
@@ -50,29 +55,5 @@
  *  @return MAC address formed as 'xx:xx:xx:xx:xx:xx'
  */
 - (NSString *)MACAddress;
-
-@end
-
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdocumentation-deprecated-sync"
-//! @deprecated Use UIUserInterfaceIdiom
-typedef enum {
-    UIADeviceTypeUnknown = 0,
-    UIADeviceTypePad    = 1,
-    UIADeviceTypePhone  = 2,
-    UIADeviceTypePod    = 3,
-}   UIADeviceType;
-#pragma clang diagnostic pop
-
-//! @deprecated Use UIUserInterfaceIdiom
-#define UIADeviceTypeIsIPhoneOrIPodMask 2
-//! @deprecated Use UIUserInterfaceIdiom
-#define UIADeviceTypeIsIPhoneOrIPod(deviceType) ((deviceType & UIADeviceTypeIsIPhoneOrIPodMask)>>1)
-
-@interface UIDevice (Deprecated)
-
-//! @deprecated Use -userInterfaceIdiom
-+ (UIADeviceType)currentDeviceType __deprecated;
 
 @end

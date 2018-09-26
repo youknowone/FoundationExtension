@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
+@import QuartzCore;
 #import "UIView.h"
 
 const NSTimeInterval UIAViewAnimationDefaultDuraton = 0.2;

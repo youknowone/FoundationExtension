@@ -13,7 +13,11 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSMutableArray_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -227,30 +231,35 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-/*!
- *  @brief Deprecated methods of NSArray extensions.
- */
-@interface NSArray (Deprecated)
+@interface NSArray (CreationRC)
 
 /*!
- *  @brief Extreme short form of 'ObjectAtIndex:'
- *  @deprecated Use (array)[index] syntax of Modern Objective-C instead of this method.
+ *  @brief Initializes a newly allocated array to include a given number of retained given object.
+ *  @param object An object to retain.
+ *  @param count The number of values.
+ *  @return A newly allocated array including the count objects from object. The returned object might be different than the original receiver.
  */
-- (id):(NSUInteger)index __deprecated;
+- (instancetype)initWithObject:(id)object count:(NSUInteger)count;
+
+/*!
+ *  @brief Returns a newly allocated array to include a given number of retained given object.
+ *  @param object An object to retain.
+ *  @param count The number of values.
+ *  @return A newly allocated array including the count objects from object. The returned object might be different than the original receiver.
+ */
++ (instancetype)arrayWithObject:(id)object count:(NSUInteger)count;
+
+/*!
+ *  @brief Initializes a newly allocated array to include a given number of copied given object.
+ *  @param object An object to copy.
+ *  @param count The number of values.
+ *  @param flag A flag to notice mutable or immutable copy.
+ *  @return A newly allocated array including the count objects from object. The returned object might be different than the original receiver.
+ */
+- (instancetype)initWithObjectCopy:(id)object count:(NSUInteger)count mutable:(BOOL)flag;
+
 
 @end
 
-/*!
- *  @brief Deprecated methods of NSMutableArray extensions.
- */
-@interface NSMutableArray (Deprecated)
-
-/*!
- *  @brief Pop random object from NSArray.
- *  @deprecated Use @ref removeRandomObject
- */
-- (id)popRandomObject __deprecated;
-
-@end
 
 NS_ASSUME_NONNULL_END

@@ -6,17 +6,11 @@
 //  Copyright © 2016년 youknowone.org. All rights reserved.
 //
 
+#if __has_feature(modules)
 @import Foundation;
-
-
-@interface NSObject (AntiARC)
-
-- (instancetype)_retain;
-- (oneway void)_release;
-- (instancetype)_autorelease;
-
-@end
-
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 /*!
  *  @brief NSObject [<objc/runtime.h>][0] extensions without ARC

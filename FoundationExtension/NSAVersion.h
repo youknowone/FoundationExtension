@@ -10,7 +10,11 @@
  *  @file
  *  @brief Tool for system version
  */
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 @interface NSAVersion : NSObject {
     NSString *_string;

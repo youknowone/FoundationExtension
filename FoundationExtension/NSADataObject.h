@@ -15,7 +15,7 @@
  *      These classes may be not very useful. Consider to use above short expressions.
  */
 
-#import <FoundationExtension/NSASubscript.h>
+#import "NSASubscript.h"
 
 /*!
  *  @brief This protocol defines NSArray-like interface methods for data objects.
@@ -50,15 +50,6 @@
  *  @return YES if anObject is present in the array, otherwise NO.
  */
 - (BOOL)containsObject:(id)anObject;
-
-/*!
- *  @brief Returns the object located at index. Shortcut of @ref objectAtIndex:
- *  @param index
- *      An index within the bounds of data object.
- *  @return The object located at index.
- *  @deprecated Use (obj)[index] syntax of Modern Objective-C instead of this method.
- */
-- (id):(NSUInteger)index __deprecated;
 
 /*!
  *  @brief Returns an array containing the container’s members, or an empty array if the container has no members.

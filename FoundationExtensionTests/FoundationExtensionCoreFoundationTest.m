@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <FoundationExtension/FoundationExtension.h>
+@import XCTest;
+@import FoundationExtension;
 
 
 @interface FoundationExtensionCoreFoundationTest : XCTestCase

@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "FoundationExtension"
+  s.name         = "UIKitExtension"
   s.version      = "2.0.0"
   s.summary      = "Foundation/UIKit extension kit. It is category based and looks familiar to Foundation/UIKit. It includes many common snippets as shortcut."
   s.description  = <<-DESC
@@ -22,18 +22,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
-  s.header_dir = "FoundationExtension"
 
-  s.subspec "FoundationExtensionRC" do |ss|
-    ss.source_files = "FoundationExtension/*RC.h", "FoundationExtensionRC/*.m"
-    ss.public_header_files = "FoundationExtension/*RC.h"
-    ss.requires_arc = false
-  end
-
-  s.subspec "FoundationExtension" do |ss|
-    ss.source_files = "FoundationExtension/*.{h,m}"
-    ss.public_header_files = "FoundationExtension/*.h"
-    ss.header_dir = "FoundationExtension"
-    ss.dependency "FoundationExtension/FoundationExtensionRC"
+  s.subspec "UIKitExtension" do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.tvos.deployment_target = '9.0'
+    ss.source_files = "UIKitExtension/*.{h,m}"
+    ss.public_header_files = "UIKitExtension/*.h"
+    ss.header_dir = "UIKitExtension"
+    ss.frameworks = "UIKit", "QuartzCore"
+    ss.dependency "FoundationExtension/FoundationExtension"
   end
 end

@@ -12,7 +12,11 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -85,20 +89,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @see initWithData:format:error:
  */
 + (instancetype)dictionaryWithData:(NSData *)data format:(NSPropertyListFormat *_Nullable)format error:(out NSError **)error;
-
-@end
-
-
-/*!
- *  @brief Deprecated methods of NSDictionary extensions.
- */
-@interface NSDictionary (Deprecated)
-
-/*!
- *  @brief Extreme short form of 'ObjectForKey:'
- *  @deprecated Use (array)[key] syntax of Modern Objective-C instead of this method.
- */
-- (nullable id):(id)key __deprecated;
 
 @end
 

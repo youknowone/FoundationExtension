@@ -12,7 +12,12 @@
  *      [0]: http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIImage_Class/Reference/Reference.html
  */
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 /*!
  *  @brief [UIImage][0] convinient creations methods.

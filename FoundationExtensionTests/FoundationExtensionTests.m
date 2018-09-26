@@ -6,8 +6,8 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
-#import <FoundationExtension/FoundationExtension.h>
+@import XCTest;
+@import FoundationExtension;
 
 
 @interface TestObject : NSObject {
@@ -98,10 +98,10 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     [super tearDown];
 }
 
-//- (void)testClassName {
-//    id className = [[[self class] name] copy];
-//    XCTAssertTrue([className isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", className); // causes error
-//}
+- (void)testClassName {
+    id className = self.class.name;
+    XCTAssertTrue([className isEqualToString:@"FoundationExtensionTests"], @"Taken name is: %@", className); // causes error
+}
 
 - (void)testClassObject {
     NSAString *string = [[NSAString alloc] initWithString:@"blah"];
@@ -162,11 +162,6 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     XCTAssertEqualObjects(p3, @3);
     id p4 = [obj methodWithParam1:@1 param2:@2 param3:@3 param4:@4];
     XCTAssertEqualObjects(p4, @4);
-}
-
-
-- (void)testHasString __deprecated {
-    XCTAssertEqual([@"Hello, World" hasSubstring:@""], NO, @"");
 }
 
 - (void)testStringFormat {
@@ -238,19 +233,6 @@ NSAPropertyCopySetter(setObj3, @"obj3")
     NSData *data = [NSData dataWithBytes:"\0aa\0" length:4];
     NSString *result = [data hexadecimalString];
     XCTAssertTrue([result isEqualToString:@"00616100"], @"");
-}
-
-- (void)testBase64String __deprecated {
-    // test from http://en.wikipedia.org/wiki/Base64#Examples
-    NSData *data = [@"Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure." dataUsingUTF8Encoding];
-    NSString *solution = @"TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=";
-    NSString *encode = [data base64String];
-    XCTAssertEqual(encode.length, solution.length, @"length: %luu expected: %lu",(unsigned long) (unsigned long)encode.length, (unsigned long)solution.length);
-    XCTAssertTrue([encode isEqualToString:solution], @"result: %@", encode);
-
-    NSData *decode = [NSData dataWithBase64String:solution];
-    XCTAssertEqual(decode.length, data.length, @"length: %lu expected: %lu", (unsigned long)decode.length, (unsigned long)data.length);
-    XCTAssertTrue([decode isEqualToData:data], @"result: %@ expected: %@", [NSString stringWithUTF8Data:decode], [NSString stringWithUTF8Data:data]);
 }
 
 - (void)testHexadecimal

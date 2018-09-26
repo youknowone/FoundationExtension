@@ -8,7 +8,7 @@
 
 #import "UIKitExtensionTests.h"
 
-#import <UIKitExtension/UIKitExtension.h>
+@import UIKitExtension;
 
 @implementation UIKitExtensionTests
 

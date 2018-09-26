@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import <FoundationExtension/FoundationExtension.h>
+@import FoundationExtension;
 
 #import "NSObject.h"
 #import "UITableView.h"

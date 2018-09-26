@@ -12,7 +12,12 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man3/CC_MD5.3cc.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
+
 
 /*!
  *  @brief Shortcuts for CommonCrypto digest.
@@ -92,28 +97,5 @@
  *  @brief SSH512 digest.
  */
 - (NSData *)digestBySHA512UsingEncoding:(NSStringEncoding)encoding;
-
-@end
-
-
-__deprecated @interface NSData (CommonCryptoDeprecated)
-
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringByMD5 __deprecated;
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringBySHA1 __deprecated;
-
-@end
-
-__deprecated @interface NSString (CommonCryptoDeprecated)
-
-//! @deprecated Use -digestByMD5:encoding:
-- (NSData *)digestByMD5 __deprecated;
-//! @deprecated Use -digestBySHA1:encoding:
-- (NSData *)digestBySHA1 __deprecated;
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringByMD5 __deprecated;
-//! @deprecated Use @ref NSData(Serialization)::hexadecimalString
-- (NSString *)digestStringBySHA1 __deprecated;
 
 @end

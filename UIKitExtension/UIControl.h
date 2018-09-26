@@ -6,7 +6,12 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
+#if __has_feature(modules)
 @import UIKit;
+#else
+#import <UIKit/UIKit.h>
+#endif
+
 
 @interface UIControl (Shortcuts)
 

@@ -11,7 +11,12 @@
  *  @brief See @ref CoreFoundation-Subclass for concept of these objects.
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
+
 
 /*!
  *  @brief [NSString][0] subclass-available implementation.

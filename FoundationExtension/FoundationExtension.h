@@ -32,17 +32,17 @@
  *  @see @ref FoundationExtension
  */
 
-
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 //! Project version number for FoundationExtension.
 FOUNDATION_EXPORT double FoundationExtensionVersionNumber;
 
 //! Project version string for FoundationExtension.
 FOUNDATION_EXPORT const unsigned char FoundationExtensionVersionString[];
-
-
-#import <FoundationExtensionRC/FoundationExtensionRC.h>
 
 // depenency level 0
 #import <FoundationExtension/NSArray.h>                     // level: 0 / deps(0):  / internal(1): NSData
@@ -57,6 +57,7 @@ FOUNDATION_EXPORT const unsigned char FoundationExtensionVersionString[];
 #import <FoundationExtension/NSNumber.h>                    // level: 0 / deps(0):  / internal(2): NSObject, NSString
 #import <FoundationExtension/NSNumberFormatter.h>           // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSObject.h>                    // level: 0 / deps(0):  / internal(0):
+#import <FoundationExtension/NSObjectRC.h>                  // level: 0 / deps(0):  / internal(0):
 #import <FoundationExtension/NSPathUtilities.h>             // level: 0 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSSet.h>                       // level: 0 / deps(0):  / internal(1): NSArray
 #import <FoundationExtension/NSString.h>                    // level: 0 / deps(0):  / internal(0):
@@ -67,9 +68,9 @@ FOUNDATION_EXPORT const unsigned char FoundationExtensionVersionString[];
 #import <FoundationExtension/NSTimer.h>
 // depenency level 20
 #import <FoundationExtension/NSAArray.h>                    // level: 20 / deps(0):  / internal(0):
-#import <FoundationExtension/NSAClassDeprecated.h>          // level: 20 / deps(0):  / internal(1): NSObject
 #import <FoundationExtension/NSACommonCrypto.h>             // level: 20 / deps(0):  / internal(1): NSString
 #import <FoundationExtension/NSACommonDigest.h>             // level: 20 / deps(0):  / internal(0):
+#import <FoundationExtension/NSASubscript.h>
 #import <FoundationExtension/NSADataObject.h>               // level: 20 / deps(1): NSASubscript / internal(1): NSArray
 #import <FoundationExtension/NSADictionary.h>               // level: 20 / deps(0):  / internal(0):
 #import <FoundationExtension/NSAEnumerator.h>               // level: 20 / deps(0):  / internal(0):

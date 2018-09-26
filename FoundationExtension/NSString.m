@@ -232,13 +232,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@implementation NSString (Deprecation)
-
-- (BOOL)hasSubstring:(NSString *)aString {
-    return [self rangeOfString:aString].location != NSNotFound;
-}
-
-@end
-
 NS_ASSUME_NONNULL_END

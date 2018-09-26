@@ -120,13 +120,6 @@
     return 2;
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-- (id):(NSUInteger)index {
-    return [self objectAtIndex:index];
-}
-#pragma clang diagnostic pop
-
 @end
 
 
@@ -250,13 +243,6 @@
     @throw NSRangeException;
     return nil;
 }
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-implementations"
-- (id):(NSUInteger)index {
-    return [self objectAtIndex:index];
-}
-#pragma clang diagnostic pop
 
 - (NSUInteger)indexOfObject:(id)anObject {
     if ([anObject isEqual:self->_first]) {

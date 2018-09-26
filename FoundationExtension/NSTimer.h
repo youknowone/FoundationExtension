@@ -12,7 +12,11 @@
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSTimer_Class/Reference/NSTimer.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+#else
+#import <Foundation/Foundation.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -68,5 +72,49 @@ typedef void (^NSATimerBlock)(void);
 + (NSTimer *)delayedTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector;
 
 @end
+
+
+/*!
+ *  @brief NSTimer delegate interface protocol
+ */
+@protocol NSTimerDelegate
+
+/*!
+ *  @brief Fired event.
+ *  @param timer Fired timer.
+ */
+- (void)timerHasFired:(NSTimer *)timer;
+
+/*!
+ *  @brief Timer should repeat or not.
+ *  @param timer Fired timer.
+ *  @return YES, timer will be repeated. NO, timer is invalidated.
+ */
+- (BOOL)timerShouldRepeat:(NSTimer *)timer;
+
+@end
+
+
+/*!
+ *  @brief NSTimer delegate interface
+ *  @details Add delegate to NSTimer. With this extension, NSTimer is controllable by delegate pattern.
+ */
+@interface NSTimer (DelegateRC)
+
+/*!
+ *  @brief Initialize timer with delegate.
+ */
+- (id)initWithFireDate:(NSDate *)date interval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
+/*!
+ *  @brief Creates and returns timer with delegate.
+ */
++ (id)timerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
+/*!
+ *  @brief Creates, schedules and returns timer with delegate.
+ */
++ (id)scheduledTimerWithTimeInterval:(NSTimeInterval)ti delegate:(id<NSTimerDelegate>)delegate;
+
+@end
+
 
 NS_ASSUME_NONNULL_END

@@ -13,8 +13,14 @@
  *      [1]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Protocols/NSObject_Protocol/Reference/NSObject.html
  */
 
+#if __has_feature(modules)
 @import Foundation;
+@import ObjectiveC.runtime;
+#else
+#import <Foundation/Foundation.h>
 #import <objc/runtime.h>
+#endif
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,13 +31,6 @@ NS_ASSUME_NONNULL_BEGIN
  *      [0]: https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html
  */
 @interface NSObject (ObjCRuntime)
-
-/*!
- *  @brief Class name of object.
- *  @see [object_getClassName][1]
- *      [1]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/object_getClassName
- */
-@property(nonatomic, readonly) NSString *className;
 
 /*! @name performSelector */
 
@@ -194,12 +193,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)addClassMethodForSelector:(SEL)selector implementation:(IMP)implementation types:(NSString *)implementationTypes;
 
-/*!
- *  @brief Returns name of class.
- *  @deprecated Renamed to name
- */
-+ (NSString *)className __deprecated;
-
 @end
 
 
@@ -241,6 +234,14 @@ NS_ASSUME_NONNULL_BEGIN
  *      [0]: https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ObjCRuntimeRef/Reference/reference.html#//apple_ref/c/func/method_exchangeImplementations
  */
 - (void)exchangeImplementationWith:(NSAMethod *)method;
+
+@end
+
+@interface NSObject (AntiARC)
+
+- (instancetype)_retain;
+- (oneway void)_release;
+- (instancetype)_autorelease;
 
 @end
 

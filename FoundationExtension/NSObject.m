@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 youknowone.org All rights reserved.
 //
 
-#import <objc/runtime.h>
-#import <objc/message.h>
+@import ObjectiveC.runtime;
+@import ObjectiveC.message;
 
 #import "NSObject.h"
 
@@ -22,10 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @implementation NSObject (ObjCRuntime)
-
-- (NSString *)className {
-    return @(object_getClassName(self));
-}
 
 - (nullable id)performSelector:(SEL)sel withObject:(nullable id)obj1 withObject:(nullable id)obj2 withObject:(nullable id)obj3 {
     if (!sel) [self doesNotRecognizeSelector:sel];
@@ -64,10 +60,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSString *)name {
     return @(class_getName(self));
-}
-
-+ (NSString *)className {
-    return [self name];
 }
 
 + (Method)methodValueForSelector:(SEL)selector {
@@ -159,6 +151,24 @@ NS_ASSUME_NONNULL_BEGIN
         return [self isEqualToMethod:object];
     }
     return NO;
+}
+
+@end
+
+@implementation NSObject (AntiARC)
+
+- (instancetype)_retain {
+    CFRetain((__bridge CFTypeRef)self);
+    return self;
+}
+
+- (oneway void)_release {
+    CFRelease((__bridge CFTypeRef)self);
+}
+
+- (instancetype)_autorelease {
+    CFAutorelease((__bridge CFTypeRef)self);
+    return self;
 }
 
 @end

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation NSNumber (Description)
 
 - (NSString *)typeFormedDescription {
-    if ([self.className isEqualToString:@"__NSCFNumber"]) {
+    if ([self.class.name isEqualToString:@"__NSCFNumber"]) {
         NSString *defaultDescription = [self description];
         if (strcmp(self.objCType, @encode(float)) == 0 || strcmp(self.objCType, @encode(double)) == 0) {
             if ([defaultDescription rangeOfString:@"."].location == NSNotFound) {
@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
             }
         }
         return defaultDescription;
-    } else if ([self.className isEqualToString:@"__NSCFBoolean"]) {
+    } else if ([self.class.name isEqualToString:@"__NSCFBoolean"]) {
         return [self boolValue] ? @"YES" : @"NO";
     }
     return [self description];

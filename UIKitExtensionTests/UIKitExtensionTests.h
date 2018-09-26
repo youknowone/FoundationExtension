@@ -6,7 +6,7 @@
 //  Copyright 2011 youknowone.org All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import XCTest;
 
 
 @interface UIKitExtensionTests : XCTestCase {

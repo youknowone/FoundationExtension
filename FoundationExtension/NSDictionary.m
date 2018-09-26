@@ -53,13 +53,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
-@implementation NSDictionary (Deprecated)
-
-- (nullable id):(id)key {
-    return self[key];
-}
-
-@end
-
 NS_ASSUME_NONNULL_END

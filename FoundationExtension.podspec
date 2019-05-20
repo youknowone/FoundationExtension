@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
                     For iOS, UIKitExtension is available too.
                    DESC
   s.homepage     = "https://github.com/youknowone/FoundationExtension"
-  s.license      = "2-clause BSD"
+  s.license      = { :type => '2-clause BSD', :file => 'LICENSE' }
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
   s.social_media_url   = "http://twitter.com/youknowone_"
   s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => s.version }
-  s.dependency "cdebug", "~> 1.2"
+  s.dependency "cdebug", "~> 1.3"
   s.requires_arc = true
   s.static_framework = true
   s.osx.deployment_target = '10.9'

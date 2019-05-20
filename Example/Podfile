@@ -14,7 +14,7 @@ abstract_target 'Example' do
   target 'CocoaExtensionTestApp' do
     pod 'CocoaExtension', :path => '../'
     target 'CocoaExtensionTests' do
-    end 
+    end
   end
 
   target 'UIKitExtensionTestApp' do

@@ -16,21 +16,15 @@ Pod::Spec.new do |s|
   s.author       = { "Jeong YunWon" => "jeong@youknowone.org" }
   s.social_media_url   = "http://twitter.com/youknowone_"
   s.source       = { :git => "https://github.com/youknowone/FoundationExtension.git", :tag => s.version }
-  s.dependency "cdebug", "~> 1.2"
+  s.dependency "cdebug", "~> 1.3"
   s.requires_arc = true
   s.static_framework = true
-  s.osx.deployment_target = '10.9'
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
 
-  s.subspec "UIKitExtension" do |ss|
-    ss.ios.deployment_target = '9.0'
-    ss.tvos.deployment_target = '9.0'
-    ss.source_files = "UIKitExtension/*.{h,m}"
-    ss.public_header_files = "UIKitExtension/*.h"
-    ss.header_dir = "UIKitExtension"
-    ss.frameworks = "UIKit", "QuartzCore"
-    ss.dependency "FoundationExtension/FoundationExtension"
-  end
+  s.source_files = "UIKitExtension/*.{h,m}"
+  s.public_header_files = "UIKitExtension/*.h"
+  s.header_dir = "UIKitExtension"
+  s.frameworks = "UIKit", "QuartzCore"
+  s.dependency "FoundationExtension", "~> 2.1.0"
 end

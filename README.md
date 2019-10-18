@@ -15,7 +15,7 @@ See document on [Github] (http://youknowone.github.com/FoundationExtension)
   2. Add FoundationExtension or UIKitExtension target as dependency
 * Directy source
   1. Add files what you need to your project
-* CocoaPod
+* CocoaPod ~> 1.7.5
   1. Visit and follow http://cocoapods.org/
 
 If your compiler is gcc or old clang, add '-force\_load' to static library.

@@ -14,7 +14,7 @@
 #import "NSString.h"
 #import "NSURL.h"
 
-#include "debug.h"
+#import <cdebug/debug.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

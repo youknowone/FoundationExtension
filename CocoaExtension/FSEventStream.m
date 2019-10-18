@@ -8,7 +8,7 @@
 
 #import "FSEventStream.h"
 
-#include "debug.h"
+#import <cdebug/debug.h>
 
 @interface FSEventStream ()
 

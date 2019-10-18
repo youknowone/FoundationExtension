@@ -8,7 +8,7 @@
 
 #import "NSAString.h"
 
-#include "debug.h"
+#import <cdebug/debug.h>
 
 @interface NSAString ()
 

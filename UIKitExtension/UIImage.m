@@ -6,7 +6,7 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#import "NSURLRequestCreations.h"
+@import FoundationExtension;
 #import "UIImage.h"
 
 @implementation UIImage (Creations)

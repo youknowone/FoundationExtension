@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 youknowone.org. All rights reserved.
 //
 
-#import "debug.h"
+#import <cdebug/debug.h>
 #import "UIAPreparedCellTableView.h"
 
 @interface UIAPreparedCellTableView () {

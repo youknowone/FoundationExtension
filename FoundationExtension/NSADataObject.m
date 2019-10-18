@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 youknowone.org. All rights reserved.
 //
 
-#include "debug.h"
+#import <cdebug/debug.h>
 
 #import "NSArray.h"
 #import "NSADataObject.h"

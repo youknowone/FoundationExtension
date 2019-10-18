@@ -19,3 +19,7 @@
 build
 include
 docs
+
+*/DerivedData/
+*/Pods/
+*/.bundle/

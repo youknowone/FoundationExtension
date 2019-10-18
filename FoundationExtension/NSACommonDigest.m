@@ -8,7 +8,7 @@
 
 #import <CommonCrypto/CommonCrypto.h>
 
-#import "debug.h"
+#import <cdebug/debug.h>
 
 #import "NSACommonDigest.h"
 

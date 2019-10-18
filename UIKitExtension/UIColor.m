@@ -6,8 +6,7 @@
 //  Copyright 2010 youknowone.org All rights reserved.
 //
 
-#import "NSString.h"
-
+@import FoundationExtension;
 #import "UIColor.h"
 
 

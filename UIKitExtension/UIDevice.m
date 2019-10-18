@@ -13,8 +13,8 @@
 
 #import "UIDevice.h"
 
-#import "NSString.h"
-#import "debug.h"
+@import FoundationExtension;
+#import <cdebug/debug.h>
 
 @implementation UIDevice (Shortcuts)
 

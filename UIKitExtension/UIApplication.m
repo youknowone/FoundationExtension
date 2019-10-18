@@ -7,9 +7,7 @@
 //
 
 @import FoundationExtension;
-
 #import "UIApplication.h"
-#import "NSObject.h"
 
 
 #if !defined(TARGET_OS_IOS) || TARGET_OS_IOS

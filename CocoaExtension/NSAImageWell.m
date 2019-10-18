@@ -8,7 +8,7 @@
 
 @import FoundationExtension;
 
-#import "debug.h"
+#import <cdebug/debug.h>
 
 #import "NSGeometry.h"
 #import "NSImage.h"

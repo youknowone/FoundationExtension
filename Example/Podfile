@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+install! 'cocoapods',
+:generate_multiple_pod_projects => true
+use_frameworks!
+
+
+abstract_target 'Example' do
+  # Pods for CocoaExtensionTestApp
+  pod 'FoundationExtension', :path => '../'
+   pod 'cdebug', :path => '../cdebug/'
+
+  target 'CocoaExtensionTestApp' do
+    pod 'CocoaExtension', :path => '../'
+    target 'CocoaExtensionTests' do
+    end 
+  end
+
+  target 'UIKitExtensionTestApp' do
+    pod 'UIKitExtension', :path => '../'
+
+    target 'UIKitExtensionTests' do
+    end
+
+    target 'FoundationExtensionTests' do
+    end
+  end
+end

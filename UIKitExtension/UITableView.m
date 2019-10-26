@@ -7,8 +7,6 @@
 //
 
 @import FoundationExtension;
-
-#import "NSObject.h"
 #import "UITableView.h"
 
 @implementation UITableViewCell (Shortcuts)

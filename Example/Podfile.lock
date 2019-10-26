@@ -2,10 +2,7 @@ PODS:
   - cdebug (1.3)
   - CocoaExtension (2.1.0):
     - cdebug (~> 1.3)
-    - CocoaExtension/CocoaExtension (= 2.1.0)
-  - CocoaExtension/CocoaExtension (2.1.0):
-    - cdebug (~> 1.3)
-    - FoundationExtension
+    - FoundationExtension (~> 2.1.0)
   - FoundationExtension (2.1.0):
     - cdebug (~> 1.3)
     - FoundationExtension/FoundationExtension (= 2.1.0)
@@ -17,17 +14,19 @@ PODS:
     - cdebug (~> 1.3)
   - UIKitExtension (2.1.0):
     - cdebug (~> 1.3)
-    - FoundationExtension
+    - FoundationExtension (~> 2.1.0)
 
 DEPENDENCIES:
-  - cdebug (from `../cdebug/`)
+  - cdebug (~> 1.3)
   - CocoaExtension (from `../`)
   - FoundationExtension (from `../`)
   - UIKitExtension (from `../`)
 
+SPEC REPOS:
+  trunk:
+    - cdebug
+
 EXTERNAL SOURCES:
-  cdebug:
-    :path: "../cdebug/"
   CocoaExtension:
     :path: "../"
   FoundationExtension:
@@ -37,10 +36,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   cdebug: 0d0b7207fa996236ee9e07e5988e5e39a1d94a28
-  CocoaExtension: 4e1aeee0439faa5e947dc82c61faab7af5079d8c
+  CocoaExtension: ce8f6829cbf5da6e5088de5366d369b415231dc0
   FoundationExtension: 56c1c923c9a3bc69c5a5ac08c47c8f2f57b06288
-  UIKitExtension: a72dc86b9ec2ddf721b4c4874530b530e968165c
+  UIKitExtension: 0bd97dd39413c5d88d0aaccd631e90e4879af704
 
-PODFILE CHECKSUM: de32413ee36d1306eb7c5c310f61097e63c7c781
+PODFILE CHECKSUM: 3ae7d9bd1ac21b0f3688b5674cd622ef379906ca
 
 COCOAPODS: 1.8.4

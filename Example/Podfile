@@ -6,24 +6,26 @@ install! 'cocoapods',
 use_frameworks!
 
 
-abstract_target 'Example' do
-  # Pods for CocoaExtensionTestApp
-  pod 'FoundationExtension', :path => '../'
-   pod 'cdebug', :path => '../cdebug/'
+pod 'cdebug', '~> 1.3'
+pod 'FoundationExtension', :path => '../'
+
+target 'FoundationExtensionTests' do
+end
+
+abstract_target 'Cocoa' do
+  pod 'CocoaExtension', :path => '../'
 
   target 'CocoaExtensionTestApp' do
-    pod 'CocoaExtension', :path => '../'
-    target 'CocoaExtensionTests' do
-    end
   end
+  target 'CocoaExtensionTests' do
+  end
+end
+
+abstract_target 'UIKit' do
+  pod 'UIKitExtension', :path => '../'
 
   target 'UIKitExtensionTestApp' do
-    pod 'UIKitExtension', :path => '../'
-
-    target 'UIKitExtensionTests' do
-    end
-
-    target 'FoundationExtensionTests' do
-    end
+  end
+  target 'UIKitExtensionTests' do
   end
 end

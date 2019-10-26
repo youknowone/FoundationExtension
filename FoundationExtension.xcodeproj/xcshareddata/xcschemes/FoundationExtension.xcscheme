@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3855B03B163CF2B1005584CD"
-               BuildableName = "CocoaExtensionTests.xctest"
-               BlueprintName = "CocoaExtensionTests"
+               BlueprintIdentifier = "38C7A9711495181800381910"
+               BuildableName = "FoundationExtension.framework"
+               BlueprintName = "FoundationExtension"
                ReferencedContainer = "container:FoundationExtension.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,13 +29,12 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3855B03B163CF2B1005584CD"
-               BuildableName = "CocoaExtensionTests.xctest"
-               BlueprintName = "CocoaExtensionTests"
+               BlueprintIdentifier = "38E48AC119CDA45700EE7FFC"
+               BuildableName = "FoundationExtensionTests.xctest"
+               BlueprintName = "FoundationExtensionTests"
                ReferencedContainer = "container:FoundationExtension.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -61,9 +60,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3855B03B163CF2B1005584CD"
-            BuildableName = "CocoaExtensionTests.xctest"
-            BlueprintName = "CocoaExtensionTests"
+            BlueprintIdentifier = "38C7A9711495181800381910"
+            BuildableName = "FoundationExtension.framework"
+            BlueprintName = "FoundationExtension"
             ReferencedContainer = "container:FoundationExtension.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

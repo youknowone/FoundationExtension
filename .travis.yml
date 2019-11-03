@@ -1,22 +1,25 @@
 language: objective-c
 sudo: false
-xcode_project: FoundationExtension.xcodeproj
-osx_image: xcode9.4
+xcode_workspace: FoundationExtension.xcworkspace
+osx_image: xcode11.2
+before_install:
+  - cd Example
+install:
+  - gem update cocoapods
+  - pod install --repo-update
 matrix:
   include:
-    - osx_image: xcode10
-      xcode_sdk: macosx
-      xcode_scheme: CocoaExtension
-      xcode_destination: platform=macOS
-    - osx_image: xcode10
-      xcode_sdk: iphonesimulator
+    - xcode_scheme: CocoaExtension
+      script: xcodebuild -workspace FoundationExtension.xcworkspace -scheme CocoaExtension test
+    - xcode_sdk: iphonesimulator
       xcode_scheme: UIKitExtension
-      xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
-    - osx_image: xcode10
-      xcode_sdk: appletvsimulator
+      xcode_destination: platform=iOS Simulator,OS=13.2,name=iPhone 11
+      # - xcodebuild -workspace FoundationExtension.xcworkspace -scheme UIKitExtension -destination 'platform=iOS Simulator,OS=13.1,name=iPhone 11' test
+    - xcode_sdk: appletvsimulator
       xcode_scheme: UIKitExtension
-      xcode_destination: platform=tvOS Simulator,OS=11.3,name=Apple TV 4K
-    - osx_image: xcode7  # legacy support
+      xcode_destination: platform=tvOS Simulator,OS=13.2,name=Apple TV 4K
+      #- xcodebuild -workspace FoundationExtension.xcworkspace -scheme UIKitExtension -destination 'platform=iOS Simulator,OS=13.1,name=Apple TV 4K' test
+    - osx_image: xcode8  legacy support
       xcode_scheme: CocoaExtension
       xcode_destination: platform=macOS
   allow_failures:
